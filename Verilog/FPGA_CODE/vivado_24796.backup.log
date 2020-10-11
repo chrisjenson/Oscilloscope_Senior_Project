@@ -2,10 +2,10 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Thu Oct  8 22:31:42 2020
-# Process ID: 21176
+# Start of session at: Mon Oct  5 11:37:29 2020
+# Process ID: 24796
 # Current directory: C:/Users/Brian Worts/Desktop/Senior Project/Oscilloscope_Senior_Project/Verilog/FPGA_CODE
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent12432 C:\Users\Brian Worts\Desktop\Senior Project\Oscilloscope_Senior_Project\Verilog\FPGA_CODE\FPGA_CODE.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent16396 C:\Users\Brian Worts\Desktop\Senior Project\Oscilloscope_Senior_Project\Verilog\FPGA_CODE\FPGA_CODE.xpr
 # Log file: C:/Users/Brian Worts/Desktop/Senior Project/Oscilloscope_Senior_Project/Verilog/FPGA_CODE/vivado.log
 # Journal file: C:/Users/Brian Worts/Desktop/Senior Project/Oscilloscope_Senior_Project/Verilog/FPGA_CODE\vivado.jou
 #-----------------------------------------------------------
@@ -19,12 +19,7 @@ WARNING: [filemgmt 56-3] IPUserFilesDir: Could not find the directory 'C:/Users/
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2019.1/data/ip'.
-open_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:08 . Memory (MB): peak = 655.641 ; gain = 45.613
+open_project: Time (s): cpu = 00:00:19 ; elapsed = 00:00:11 . Memory (MB): peak = 648.469 ; gain = 40.793
 update_compile_order -fileset sources_1
-update_compile_order -fileset sources_1
-update_compile_order -fileset sources_1
-close [ open {C:/Users/Brian Worts/Desktop/Senior Project/Oscilloscope_Senior_Project/Verilog/FPGA_CODE/FPGA_CODE.srcs/sources_1/new/AddrGen.v} w ]
-add_files {{C:/Users/Brian Worts/Desktop/Senior Project/Oscilloscope_Senior_Project/Verilog/FPGA_CODE/FPGA_CODE.srcs/sources_1/new/AddrGen.v}}
-close [ open {C:/Users/Brian Worts/Desktop/Senior Project/Oscilloscope_Senior_Project/Verilog/FPGA_CODE/FPGA_CODE.srcs/sources_1/new/TriggerManagement.v} w ]
-add_files {{C:/Users/Brian Worts/Desktop/Senior Project/Oscilloscope_Senior_Project/Verilog/FPGA_CODE/FPGA_CODE.srcs/sources_1/new/TriggerManagement.v}}
-update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Oct  5 13:46:17 2020...
