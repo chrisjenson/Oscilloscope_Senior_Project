@@ -3,26 +3,51 @@ module TriggerManagement(
     input           Regs_TriggerSlope,
     input [7:0]     Buffer_DataIn,
     
-    output          RAMW_WriteEn,
-    output          triggered,
+    output reg      Trigger_Triggered,
+    input           Trigger_LookForTrigger,
     
-    input           ADC_Sampleclock,
+    input           clk,
     input           reset
 );
-
-    always @(posedge ADC_Sampleclock) //Needs some work
+    reg [7:0] dataIn_previous;
+    
+    always @(posedge clk) //Needs some work
     begin
-        if (Regs_TriggerSlope) //pos edge
+        if (reset)
         begin
-            if (Buffer_DataIn > Regs_Trigger)
+            dataIn_previous <= 0;
+            Trigger_Triggered <= 0;
+        end
+    
+        if (Trigger_LookForTrigger)
+        begin
+            if (Regs_TriggerSlope) //pos edge
             begin
-            
+                if (Buffer_DataIn > Regs_Trigger)
+                begin
+                    if (Buffer_DataIn > dataIn_previous) //using old values is called hysteresis
+                    begin
+                        Trigger_Triggered <= 1;
+                        //Rising edge, good to increment read
+                    end
+                end
             end
-        end
-        else if (!Regs_TriggerSlope) //neg edge
-        begin
+            else if (!Regs_TriggerSlope) //neg edge
+            begin
+                if (Buffer_DataIn < Regs_Trigger)
+                begin
+                    if (Buffer_DataIn < dataIn_previous)
+                    begin
+                        Trigger_Triggered <= 1;
+                        //Falling edge, good to increment read
+                    end
+                end
+            end
             
-        end
+            dataIn_previous <= Buffer_DataIn; //IS THIS USING OLD VALUE?????
+        end 
     end
+
+
 
 endmodule

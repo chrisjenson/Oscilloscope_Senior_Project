@@ -4,11 +4,13 @@ module AddrGen(
     
     input               RAMW_WriteEn,
     
-    input               ADC_Sampleclock,
+    input               Trigger_Triggered,
+    
+    input               clk,
     input               reset
 );
 
-    always @(posedge ADC_Sampleclock)
+    always @(posedge clk)
     begin
         if (reset)
         begin
@@ -17,6 +19,12 @@ module AddrGen(
         end
         else
         begin
+            if (Trigger_Triggered)
+            begin
+                RAMR_ReadAddr <= RAMR_ReadAddr + 1;
+            end
+        
+        
             //If read line, inc addr by 1
             //If wrote line, inc addr by 1
         end

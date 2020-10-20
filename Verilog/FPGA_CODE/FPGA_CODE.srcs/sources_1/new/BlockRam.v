@@ -15,16 +15,17 @@ module BlockRAM
     input           clk,
     input           reset
 );
-
-    reg [7:0]       storage[(1<<19)-1:0];   // 2^19 = 524288
+    //This may be delayed by a cycle- look into this
+    //Use the block Ram Wizard
+    reg [7:0]       RAM[(1<<19)-1:0];   // 2^19 = 524288
     
-    assign RAMR_ReadData = storage[RAMR_ReadAddr];  //Always read
+    assign RAMR_ReadData = RAM[RAMR_ReadAddr];  //Always read
     
     always @ (posedge clk)
     begin
         if (RAMW_WriteEn)
         begin
-            storage[RAMW_WriteAddr]   <= RAMW_WriteData;             
+            RAM[RAMW_WriteAddr]   <= RAMW_WriteData;             
         end
     end
 endmodule
