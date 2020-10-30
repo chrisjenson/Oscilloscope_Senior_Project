@@ -12,10 +12,10 @@ module Regs(
     
     reg [7:0] registers [1:0];
     
-    assign registers[0] = 8'b10101010;
-    assign registers[1] = 8'b01010101;
-    assign registers[2] = 8'b00001111;
-    assign registers[3] = 8'b11110000;
+    assign registers[0] = 8'b01000010; //B
+    assign registers[1] = 8'b01000011; //C
+    assign registers[2] = 8'b01010011; //S
+    assign registers[3] = 8'b00000001; //RevId
     
     always @(*)
     begin
@@ -27,8 +27,6 @@ module Regs(
         begin
             Read_Data = registers[Read_Addr];
         end
-        
     end
-    
     
 endmodule
