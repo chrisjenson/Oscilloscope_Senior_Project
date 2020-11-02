@@ -21,7 +21,7 @@
 
 
 module tb();
-    
+
     reg clk;
     reg SCLK;
     reg [1:0] SCLKCount;
@@ -30,8 +30,6 @@ module tb();
     reg MOSI;
     reg SlaveSel;
 
-    
-    
     initial
     begin
         clk = 0;
@@ -46,7 +44,7 @@ module tb();
     always @(posedge clk)
     begin
         SCLKCount <= SCLKCount + 1;
-        if (SCLKCount == 2'b11)
+        if (SCLKCount == 2'b01)
         begin
             SCLK = ~SCLK;
         end
@@ -67,10 +65,13 @@ module tb();
         end
     end
     
-    
+    integer SlaveCount = 0;
     initial begin
-        SPIWord = 16'b0010000100000000;
-        #100 SlaveSel = 0;
+        //SPIWord = 16'b0100000111111111; //0100000111111111 
+        #20 
+        SlaveSel = 0;
+        SPIWord = 16'b0100000111111111;
+        
     end
     
     
@@ -78,10 +79,10 @@ module tb();
     
     SPI u_SPI(
         .MISO(),
-        .MOSI(MOSI),
+        .MOSI_Raw(MOSI),
         .SlaveSel(SlaveSel),
         .clk(clk),
-        .SCLK(SCLK) //DEBUG Generate Slave Clock???
+        .SCLK_Raw(SCLK) //DEBUG Generate Slave Clock???
     );
     
 endmodule

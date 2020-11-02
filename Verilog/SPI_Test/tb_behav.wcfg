@@ -12,14 +12,14 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="39400001fs"></ZoomEndTime>
-      <Cursor1Time time="1000000000fs"></Cursor1Time>
+      <ZoomEndTime time="56176205fs"></ZoomEndTime>
+      <Cursor1Time time="12078000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="142"></NameColumnWidth>
-      <ValueColumnWidth column_width="101"></ValueColumnWidth>
+      <ValueColumnWidth column_width="89"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="26" />
+   <WVObjectSize size="36" />
    <wvobject fp_name="/tb/clk" type="logic">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -32,13 +32,29 @@
       <obj_property name="ElementShortName">SCLKCount[1:0]</obj_property>
       <obj_property name="ObjectShortName">SCLKCount[1:0]</obj_property>
    </wvobject>
+   <wvobject fp_name="/tb/MOSI" type="logic">
+      <obj_property name="ElementShortName">MOSI</obj_property>
+      <obj_property name="ObjectShortName">MOSI</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/SlaveSel" type="logic">
+      <obj_property name="ElementShortName">SlaveSel</obj_property>
+      <obj_property name="ObjectShortName">SlaveSel</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/SPIWord" type="array">
+      <obj_property name="ElementShortName">SPIWord[15:0]</obj_property>
+      <obj_property name="ObjectShortName">SPIWord[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/MOSICount" type="array">
+      <obj_property name="ElementShortName">MOSICount[3:0]</obj_property>
+      <obj_property name="ObjectShortName">MOSICount[3:0]</obj_property>
+   </wvobject>
    <wvobject fp_name="/tb/u_SPI/MISO" type="logic">
       <obj_property name="ElementShortName">MISO</obj_property>
       <obj_property name="ObjectShortName">MISO</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb/u_SPI/MOSI" type="logic">
-      <obj_property name="ElementShortName">MOSI</obj_property>
-      <obj_property name="ObjectShortName">MOSI</obj_property>
+   <wvobject fp_name="/tb/u_SPI/MOSI_Raw" type="logic">
+      <obj_property name="ElementShortName">MOSI_Raw</obj_property>
+      <obj_property name="ObjectShortName">MOSI_Raw</obj_property>
    </wvobject>
    <wvobject fp_name="/tb/u_SPI/SlaveSel" type="logic">
       <obj_property name="ElementShortName">SlaveSel</obj_property>
@@ -48,9 +64,9 @@
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb/u_SPI/SCLK" type="logic">
-      <obj_property name="ElementShortName">SCLK</obj_property>
-      <obj_property name="ObjectShortName">SCLK</obj_property>
+   <wvobject fp_name="/tb/u_SPI/SCLK_Raw" type="logic">
+      <obj_property name="ElementShortName">SCLK_Raw</obj_property>
+      <obj_property name="ObjectShortName">SCLK_Raw</obj_property>
    </wvobject>
    <wvobject fp_name="/tb/u_SPI/Reg_WrEn" type="logic">
       <obj_property name="ElementShortName">Reg_WrEn</obj_property>
@@ -95,6 +111,30 @@
    <wvobject fp_name="/tb/u_SPI/Reg_DataIn" type="array">
       <obj_property name="ElementShortName">Reg_DataIn[7:0]</obj_property>
       <obj_property name="ObjectShortName">Reg_DataIn[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/u_SPI/sck" type="logic">
+      <obj_property name="ElementShortName">sck</obj_property>
+      <obj_property name="ObjectShortName">sck</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/u_SPI/sck_p1" type="logic">
+      <obj_property name="ElementShortName">sck_p1</obj_property>
+      <obj_property name="ObjectShortName">sck_p1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/u_SPI/sck_raw_p1" type="logic">
+      <obj_property name="ElementShortName">sck_raw_p1</obj_property>
+      <obj_property name="ObjectShortName">sck_raw_p1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/u_SPI/MOSI_raw_p1" type="logic">
+      <obj_property name="ElementShortName">MOSI_raw_p1</obj_property>
+      <obj_property name="ObjectShortName">MOSI_raw_p1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/u_SPI/MOSI" type="logic">
+      <obj_property name="ElementShortName">MOSI</obj_property>
+      <obj_property name="ObjectShortName">MOSI</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/u_SPI/sck_posedge_pulse" type="logic">
+      <obj_property name="ElementShortName">sck_posedge_pulse</obj_property>
+      <obj_property name="ObjectShortName">sck_posedge_pulse</obj_property>
    </wvobject>
    <wvobject fp_name="/tb/u_SPI/u_REGS/Write_Data" type="array">
       <obj_property name="ElementShortName">Write_Data[7:0]</obj_property>
