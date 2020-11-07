@@ -1,0 +1,44 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Fri Nov  6 18:20:50 2020
+# Process ID: 26768
+# Current directory: D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/SPI_Test/SPI_Test.runs/impl_1
+# Command line: vivado.exe -log SPI.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source SPI.tcl -notrace
+# Log file: D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/SPI_Test/SPI_Test.runs/impl_1/SPI.vdi
+# Journal file: D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/SPI_Test/SPI_Test.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source SPI.tcl -notrace
+Command: link_design -top SPI -part xc7a100tcsg324-1
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-479] Netlist was created with Vivado 2019.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 625.504 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+4 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 654.344 ; gain = 363.363
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 2 threads
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net MISO_OBUF has multiple drivers: MISO_reg__0/Q, and MISO_reg/Q.
+INFO: [Project 1-461] DRC finished with 1 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+ERROR: [Vivado_Tcl 4-78] Error(s) found during DRC. Opt_design not run.
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.137 . Memory (MB): peak = 655.297 ; gain = 0.953
+INFO: [Common 17-83] Releasing license: Implementation
+9 Infos, 0 Warnings, 0 Critical Warnings and 2 Errors encountered.
+opt_design failed
+ERROR: [Common 17-39] 'opt_design' failed due to earlier errors.
+
+INFO: [Common 17-206] Exiting Vivado at Fri Nov  6 18:21:01 2020...

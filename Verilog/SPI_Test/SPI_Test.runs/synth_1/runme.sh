@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/Brian Worts/Desktop/Senior Project/Oscilloscope_Senior_Project/Verilog/SPI_Test/SPI_Test.runs/synth_1'
+HD_PWD='D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/SPI_Test/SPI_Test.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

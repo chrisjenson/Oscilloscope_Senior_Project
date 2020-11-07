@@ -5,18 +5,24 @@ module SPI(
         input MOSI_Raw,
         input SlaveSel,
         input clk,
-        input SCLK_Raw
+        input SCLK_Raw,
+        
+        //For RAM
+        input [7:0] Buffer_DataIn 
     );
     
     reg Reg_WrEn;
     reg Reg_RdEn;
+    reg Buffer_RdEn;
     
     reg [3:0] SPI_OutSixteenCount;
     reg [3:0] SPI_InSixteenCount;
     
-    reg [2:0] SPI_Cmd;
-    reg [4:0] SPI_Params;
-    reg [7:0] SPI_Data;
+    reg [2:0] SPI_OutEightCount;
+    
+    wire [2:0] SPI_Cmd;
+    wire [4:0] SPI_Params;
+    wire [7:0] SPI_Data;
     
     reg [15:0] SPIWord; //spiword is valid on the last possckposedgepulse of the word
     reg [15:0] SPI_DataIn;
@@ -24,7 +30,7 @@ module SPI(
     assign SPI_Params = SPIWord[12:8];
     assign SPI_Data = SPIWord[7:0];
         
-    reg [7:0] Reg_DataOut;
+    wire [7:0] Reg_DataOut;//Wires between modules are always modules
     reg [7:0] Reg_DataIn;
     
     reg sck;
@@ -32,8 +38,8 @@ module SPI(
     reg sck_raw_p1;
     reg MOSI_raw_p1;
     reg MOSI;
-    reg sck_posedge_pulse;
-    reg sck_negedge_pulse;
+    wire sck_posedge_pulse;
+    wire sck_negedge_pulse;
     
     
     reg new_word_strobe;
@@ -41,20 +47,23 @@ module SPI(
     always @(*)
     begin
         case (SPI_Cmd)
-            3'b001: //ReadReg- MISO //DEBUG 000 MAY CAUSE ISSUES SINCE DEFAULT IS 000
+            3'b001: //ReadReg- MISO //32 bits
             begin
                 Reg_RdEn = 1;
                 Reg_WrEn = 0;
+                Buffer_RdEn = 0;
             end
-            3'b010: //Write- MOSI
+            3'b010: //Write- MOSI 16bits
             begin
                 Reg_RdEn = 0;
                 Reg_WrEn = 1;
+                Buffer_RdEn = 0;
             end
-            3'b011: //ReadData- MISO RAM Read
+            3'b011: //ReadData- MISO RAM Read- this is default mode //8 bits
             begin
                 Reg_RdEn = 0;
                 Reg_WrEn = 0;
+                Buffer_RdEn = 1;
             end
         endcase
     end
@@ -88,7 +97,6 @@ module SPI(
 
             Reg_RdEn <= 0;//DEBUG should these go here?
             Reg_WrEn <= 0;
-            
         end
         else
         begin
@@ -131,6 +139,33 @@ module SPI(
                 end
             end
         end
+    end
+    
+    always @(posedge clk) //RAM Read
+    begin
+        if (SlaveSel) //SS active low, reset if high
+        begin
+            Buffer_RdEn <= 0;
+            SPI_OutEightCount <= 7;
+        end
+        else
+        begin
+            if (sck_negedge_pulse) //Put data into FIFO? Read data and keep it full. Need to use internal clock for ram read, not sclk
+            begin
+                if (Buffer_RdEn) //DEBUG: Should we have a counter here from 0 to Params? so params = 1111 send 15 data values then wait?
+                begin
+                    MISO <= Buffer_DataIn[SPI_OutEightCount];
+                    if (SPI_OutEightCount == 0) //One spi transfer is two bytes so need 2 eight counts or 1 16 count
+                    begin//Check with chris if can handle slave select low for long time
+                    //Need a ready to recieve from fifo between ram and SPI.
+                    //Going to need diagram to show state machine - send them to pearlstein for verifacation
+                        //DEBUG: Get next word here by sending a flag back (Will lose a clock cycle) or auto send by outputting sck to buffer?
+                    end
+                    SPI_OutEightCount <= SPI_OutEightCount - 1;
+                end
+            end
+        end
+    
     end
     
     

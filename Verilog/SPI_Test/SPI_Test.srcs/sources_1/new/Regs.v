@@ -10,14 +10,16 @@ module Regs(
     output reg [7:0] Read_Data
     );
     
-    reg [7:0] registers [1:0];
-    
-    assign registers[0] = 8'b01000010; //B
-    assign registers[1] = 8'b01000011; //C
-    assign registers[2] = 8'b01010011; //S
-    assign registers[3] = 8'b00000001; //RevId
-    assign registers[4] = 8'b01010010; //scratch R/W reg
-    
+    reg [7:0] registers [4:0];
+    //Make these 'define
+    initial //This is bad form
+    begin
+        registers[0] = 8'b01000010; //B
+        registers[1] = 8'b01000011; //C
+        registers[2] = 8'b01010011; //S
+        registers[3] = 8'b00000001; //RevId
+        registers[4] = 8'b01010010; //scratch R/W reg
+    end
     always @(posedge clk)
     begin
         if (WrEn)

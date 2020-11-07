@@ -1,0 +1,226 @@
+/*
+
+Xilinx Vivado v2019.1 (64-bit) [Major: 2019, Minor: 1]
+SW Build: 2552052 on Fri May 24 14:49:42 MDT 2019
+IP Build: 2548770 on Fri May 24 18:01:18 MDT 2019
+
+Process ID (PID): 23204
+License: Customer
+
+Current time: 	Sat Nov 07 14:38:35 EST 2020
+Time zone: 	Eastern Standard Time (America/New_York)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 8
+
+Screen size: 1920x1080
+Screen resolution (DPI): 100
+Available screens: 2
+Available disk space: 63 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	9.0.4 64-bit
+Java home: 	D:/Xilinx/Vivado/2019.1/tps/win64/jre9.0.4
+Java executable location: 	D:/Xilinx/Vivado/2019.1/tps/win64/jre9.0.4/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	Brian Worts
+User home directory: C:/Users/Brian Worts
+User working directory: D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/SPI_Test
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: D:/Xilinx/Vivado
+HDI_APPROOT: D:/Xilinx/Vivado/2019.1
+RDI_DATADIR: D:/Xilinx/Vivado/2019.1/data
+RDI_BINDIR: D:/Xilinx/Vivado/2019.1/bin
+
+Vivado preferences file location: C:/Users/Brian Worts/AppData/Roaming/Xilinx/Vivado/2019.1/vivado.xml
+Vivado preferences directory: C:/Users/Brian Worts/AppData/Roaming/Xilinx/Vivado/2019.1/
+Vivado layouts directory: C:/Users/Brian Worts/AppData/Roaming/Xilinx/Vivado/2019.1/layouts
+PlanAhead jar file location: 	D:/Xilinx/Vivado/2019.1/lib/classes/planAhead.jar
+Vivado log file location: 	D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/SPI_Test/vivado.log
+Vivado journal file location: 	D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/SPI_Test/vivado.jou
+Engine tmp dir: 	D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/SPI_Test/.Xil/Vivado-23204-MSI
+
+Xilinx Environment Variables
+----------------------------
+XILINX: D:/Xilinx/Vivado/2019.1/ids_lite/ISE
+XILINX_DSP: D:/Xilinx/Vivado/2019.1/ids_lite/ISE
+XILINX_PLANAHEAD: D:/Xilinx/Vivado/2019.1
+XILINX_SDK: D:/Xilinx/SDK/2019.1
+XILINX_VIVADO: D:/Xilinx/Vivado/2019.1
+XILINX_VIVADO_HLS: D:/Xilinx/Vivado/2019.1
+
+
+GUI allocated memory:	154 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 590 MB
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// by (cl):  Open Project : addNotify
+// Opening Vivado Project: D:\SeniorProject\Oscilloscope_Senior_Project\Verilog\SPI_Test\SPI_Test.xpr. Version: Vivado v2019.1 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/SPI_Test/SPI_Test.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_FAILED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/SPI_Test/SPI_Test.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 72 MB (+72593kb) [00:00:14]
+// [Engine Memory]: 641 MB (+520657kb) [00:00:14]
+// [GUI Memory]: 87 MB (+12470kb) [00:00:14]
+// [GUI Memory]: 113 MB (+22670kb) [00:00:15]
+// WARNING: HEventQueue.dispatchEvent() is taking  3326 ms.
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2019.1/data/ip'. 
+// HMemoryUtils.trashcanNow. Engine heap size: 658 MB. GUI used memory: 53 MB. Current time: 11/7/20, 2:38:40 PM EST
+// Tcl Message: open_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:06 . Memory (MB): peak = 689.719 ; gain = 87.637 
+// [Engine Memory]: 691 MB (+18558kb) [00:00:17]
+// Project name: SPI_Test; location: D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/SPI_Test; part: xc7a100tcsg324-1
+dismissDialog("Open Project"); // by (cl)
+// Tcl Message: update_compile_order -fileset sources_1 
+// PAPropertyPanels.initPanels (SPI.v) elapsed time: 0.2s
+// Elapsed time: 388 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, SPI (SPI.v)]", 1, true); // B (F, cl) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, SPI (SPI.v)]", 1, true, false, false, false, false, true); // B (F, cl) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, SPI (SPI.v), u_REGS : Regs (Regs.v)]", 2, false); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, SPI (SPI.v), u_REGS : Regs (Regs.v)]", 2, false, false, false, false, false, true); // B (F, cl) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 4, true); // B (F, cl) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 4, true, false, false, false, false, true); // B (F, cl) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1]", 5, true); // B (F, cl) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1]", 5, true, false, false, false, false, true); // B (F, cl) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb (tb.v)]", 6, true); // B (F, cl) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb (tb.v)]", 6, true, false, false, false, false, true); // B (F, cl) - Double Click - Node
+// Elapsed time: 11 seconds
+selectCodeEditor("tb.v", 401, 168); // cl (w, cl)
+// Elapsed time: 33 seconds
+selectCodeEditor("tb.v", 186, 176); // cl (w, cl)
+selectCodeEditor("tb.v", 80, 271); // cl (w, cl)
+selectCodeEditor("tb.v", 90, 280); // cl (w, cl)
+selectCodeEditor("tb.v", 129, 266); // cl (w, cl)
+selectCodeEditor("tb.v", 122, 279); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 38 seconds
+selectCodeEditor("tb.v", 627, 310); // cl (w, cl)
+selectCodeEditor("tb.v", 188, 198); // cl (w, cl)
+selectCodeEditor("tb.v", 106, 184); // cl (w, cl)
+selectCodeEditor("tb.v", 106, 184, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("tb.v", 369, 157); // cl (w, cl)
+selectCodeEditor("tb.v", 368, 157, false, false, false, false, true); // cl (w, cl) - Double Click
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 40 seconds
+selectCodeEditor("tb.v", 274, 247); // cl (w, cl)
+selectCodeEditor("tb.v", 207, 277); // cl (w, cl)
+selectCodeEditor("tb.v", 207, 277, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("tb.v", 208, 266); // cl (w, cl)
+selectCodeEditor("tb.v", 208, 266, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("tb.v", 258, 316); // cl (w, cl)
+selectCodeEditor("tb.v", 258, 316, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("tb.v", 213, 205); // cl (w, cl)
+selectCodeEditor("tb.v", 213, 205, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("tb.v", 182, 249); // cl (w, cl)
+selectCodeEditor("tb.v", 182, 249, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("tb.v", 181, 249); // cl (w, cl)
+selectCodeEditor("tb.v", 181, 249, false, false, false, false, true); // cl (w, cl) - Double Click
+// Elapsed time: 12 seconds
+selectCodeEditor("tb.v", 216, 319); // cl (w, cl)
+selectCodeEditor("tb.v", 216, 319, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("tb.v", 190, 245); // cl (w, cl)
+selectCodeEditor("tb.v", 190, 245, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("tb.v", 250, 365); // cl (w, cl)
+selectCodeEditor("tb.v", 261, 361); // cl (w, cl)
+selectCodeEditor("tb.v", 261, 361, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("tb.v", 268, 357); // cl (w, cl)
+selectCodeEditor("tb.v", 268, 357, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("tb.v", 273, 351); // cl (w, cl)
+selectCodeEditor("tb.v", 273, 351, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("tb.v", 92, 73); // cl (w, cl)
+selectCodeEditor("tb.v", 318, 258); // cl (w, cl)
+// Elapsed time: 38 seconds
+selectCodeEditor("tb.v", 422, 200); // cl (w, cl)
+selectCodeEditor("tb.v", 413, 289); // cl (w, cl)
+selectCodeEditor("tb.v", 759, 318); // cl (w, cl)
+// Elapsed time: 32 seconds
+selectCodeEditor("tb.v", 309, 300); // cl (w, cl)
+selectCodeEditor("tb.v", 301, 244); // cl (w, cl)
+selectCodeEditor("tb.v", 121, 284); // cl (w, cl)
+selectCodeEditor("tb.v", 121, 284, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("tb.v", 129, 237); // cl (w, cl)
+selectCodeEditor("tb.v", 129, 237, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("tb.v", 122, 239); // cl (w, cl)
+selectCodeEditor("tb.v", 122, 239, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("tb.v", 80, 252); // cl (w, cl)
+// Elapsed time: 13 seconds
+selectCodeEditor("tb.v", 221, 153); // cl (w, cl)
+selectCodeEditor("tb.v", 219, 142); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 13 seconds
+selectCodeEditor("tb.v", 360, 352); // cl (w, cl)
+selectCodeEditor("tb.v", 106, 203); // cl (w, cl)
+selectCodeEditor("tb.v", 106, 203, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("tb.v", 106, 227); // cl (w, cl)
+selectCodeEditor("tb.v", 106, 227, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("tb.v", 153, 263); // cl (w, cl)
+selectCodeEditor("tb.v", 153, 263, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("tb.v", 163, 191); // cl (w, cl)
+selectCodeEditor("tb.v", 163, 191, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("tb.v", 150, 218); // cl (w, cl)
+selectCodeEditor("tb.v", 148, 221, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("tb.v", 105, 239); // cl (w, cl)
+selectCodeEditor("tb.v", 105, 239, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("tb.v", 106, 235); // cl (w, cl)
+selectCodeEditor("tb.v", 106, 235); // cl (w, cl)
+selectCodeEditor("tb.v", 102, 263); // cl (w, cl)
+selectCodeEditor("tb.v", 102, 263, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("tb.v", 117, 235); // cl (w, cl)
+selectCodeEditor("tb.v", 117, 235, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("tb.v", 169, 200); // cl (w, cl)
+selectCodeEditor("tb.v", 212, 401); // cl (w, cl)
+selectCodeEditor("tb.v", 126, 277); // cl (w, cl)
+selectCodeEditor("tb.v", 126, 277, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("tb.v", 210, 337); // cl (w, cl)
+selectCodeEditor("tb.v", 210, 337, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("tb.v", 206, 344); // cl (w, cl)
+selectCodeEditor("tb.v", 206, 344, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("tb.v", 259, 396); // cl (w, cl)
+selectCodeEditor("tb.v", 259, 396, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("tb.v", 214, 168); // cl (w, cl)
+selectCodeEditor("tb.v", 211, 168, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("tb.v", 24, 194); // cl (w, cl)
+selectCodeEditor("tb.v", 370, 210); // cl (w, cl)

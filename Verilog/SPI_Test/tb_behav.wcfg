@@ -12,14 +12,14 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="56176205fs"></ZoomEndTime>
-      <Cursor1Time time="12078000fs"></Cursor1Time>
+      <ZoomEndTime time="401000001fs"></ZoomEndTime>
+      <Cursor1Time time="705000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="142"></NameColumnWidth>
-      <ValueColumnWidth column_width="89"></ValueColumnWidth>
+      <ValueColumnWidth column_width="85"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="36" />
+   <WVObjectSize size="38" />
    <wvobject fp_name="/tb/clk" type="logic">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -163,5 +163,13 @@
    <wvobject fp_name="/tb/u_SPI/u_REGS/registers" type="array">
       <obj_property name="ElementShortName">registers[1:0][7:0]</obj_property>
       <obj_property name="ObjectShortName">registers[1:0][7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/u_SPI/new_word_strobe" type="logic">
+      <obj_property name="ElementShortName">new_word_strobe</obj_property>
+      <obj_property name="ObjectShortName">new_word_strobe</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/u_SPI/sck_negedge_pulse" type="logic">
+      <obj_property name="ElementShortName">sck_negedge_pulse</obj_property>
+      <obj_property name="ObjectShortName">sck_negedge_pulse</obj_property>
    </wvobject>
 </wave_config>
