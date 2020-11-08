@@ -8,7 +8,8 @@ module SPI(
         input SCLK_Raw,
         
         //For RAM
-        input [7:0] Buffer_DataIn 
+        input [7:0] Buffer_DataIn, 
+        output FIFO_OutRTR
     );
     
     reg Reg_WrEn;
@@ -141,12 +142,15 @@ module SPI(
         end
     end
     
+    reg [3:0] SPI_RamReadOutSixteenCount;
+    
     always @(posedge clk) //RAM Read
     begin
         if (SlaveSel) //SS active low, reset if high
         begin
             Buffer_RdEn <= 0;
             SPI_OutEightCount <= 7;
+            SPI_RamReadOutSixteenCount <= 0;
         end
         else
         begin
@@ -160,8 +164,18 @@ module SPI(
                     //Need a ready to recieve from fifo between ram and SPI.
                     //Going to need diagram to show state machine - send them to pearlstein for verifacation
                         //DEBUG: Get next word here by sending a flag back (Will lose a clock cycle) or auto send by outputting sck to buffer?
+                        if (SPI_RamReadOutSixteenCount == 16)
+                        begin
+                            //RTR
+                        end
+                        else
+                        begin
+                            SPI_OutEightCount <= 7;
+                        end
                     end
                     SPI_OutEightCount <= SPI_OutEightCount - 1;
+                    SPI_RamReadOutSixteenCount <= SPI_RamReadOutSixteenCount + 1;
+                    
                 end
             end
         end

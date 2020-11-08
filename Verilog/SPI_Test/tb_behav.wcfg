@@ -12,14 +12,14 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="401000001fs"></ZoomEndTime>
-      <Cursor1Time time="705000000fs"></Cursor1Time>
+      <ZoomEndTime time="452525141fs"></ZoomEndTime>
+      <Cursor1Time time="666248000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="142"></NameColumnWidth>
-      <ValueColumnWidth column_width="85"></ValueColumnWidth>
+      <ValueColumnWidth column_width="81"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="38" />
+   <WVObjectSize size="54" />
    <wvobject fp_name="/tb/clk" type="logic">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -43,10 +43,6 @@
    <wvobject fp_name="/tb/SPIWord" type="array">
       <obj_property name="ElementShortName">SPIWord[15:0]</obj_property>
       <obj_property name="ObjectShortName">SPIWord[15:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb/MOSICount" type="array">
-      <obj_property name="ElementShortName">MOSICount[3:0]</obj_property>
-      <obj_property name="ObjectShortName">MOSICount[3:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/tb/u_SPI/MISO" type="logic">
       <obj_property name="ElementShortName">MISO</obj_property>
@@ -140,10 +136,6 @@
       <obj_property name="ElementShortName">Write_Data[7:0]</obj_property>
       <obj_property name="ObjectShortName">Write_Data[7:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb/u_SPI/u_REGS/Write_Addr" type="array">
-      <obj_property name="ElementShortName">Write_Addr[4:0]</obj_property>
-      <obj_property name="ObjectShortName">Write_Addr[4:0]</obj_property>
-   </wvobject>
    <wvobject fp_name="/tb/u_SPI/u_REGS/WrEn" type="logic">
       <obj_property name="ElementShortName">WrEn</obj_property>
       <obj_property name="ObjectShortName">WrEn</obj_property>
@@ -152,17 +144,13 @@
       <obj_property name="ElementShortName">RdEn</obj_property>
       <obj_property name="ObjectShortName">RdEn</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb/u_SPI/u_REGS/Read_Addr" type="array">
-      <obj_property name="ElementShortName">Read_Addr[4:0]</obj_property>
-      <obj_property name="ObjectShortName">Read_Addr[4:0]</obj_property>
-   </wvobject>
    <wvobject fp_name="/tb/u_SPI/u_REGS/Read_Data" type="array">
       <obj_property name="ElementShortName">Read_Data[7:0]</obj_property>
       <obj_property name="ObjectShortName">Read_Data[7:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/tb/u_SPI/u_REGS/registers" type="array">
-      <obj_property name="ElementShortName">registers[1:0][7:0]</obj_property>
-      <obj_property name="ObjectShortName">registers[1:0][7:0]</obj_property>
+      <obj_property name="ElementShortName">registers[4:0][7:0]</obj_property>
+      <obj_property name="ObjectShortName">registers[4:0][7:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/tb/u_SPI/new_word_strobe" type="logic">
       <obj_property name="ElementShortName">new_word_strobe</obj_property>
@@ -171,5 +159,79 @@
    <wvobject fp_name="/tb/u_SPI/sck_negedge_pulse" type="logic">
       <obj_property name="ElementShortName">sck_negedge_pulse</obj_property>
       <obj_property name="ObjectShortName">sck_negedge_pulse</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider77">
+   </wvobject>
+   <wvobject fp_name="/tb/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/SCLK" type="logic">
+      <obj_property name="ElementShortName">SCLK</obj_property>
+      <obj_property name="ObjectShortName">SCLK</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/SCLKCount" type="array">
+      <obj_property name="ElementShortName">SCLKCount[1:0]</obj_property>
+      <obj_property name="ObjectShortName">SCLKCount[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/MISO" type="logic">
+      <obj_property name="ElementShortName">MISO</obj_property>
+      <obj_property name="ObjectShortName">MISO</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/MOSI" type="logic">
+      <obj_property name="ElementShortName">MOSI</obj_property>
+      <obj_property name="ObjectShortName">MOSI</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/SlaveSel" type="logic">
+      <obj_property name="ElementShortName">SlaveSel</obj_property>
+      <obj_property name="ObjectShortName">SlaveSel</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/SPITransferDone" type="logic">
+      <obj_property name="ElementShortName">SPITransferDone</obj_property>
+      <obj_property name="ObjectShortName">SPITransferDone</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/SPIWordArray" type="array">
+      <obj_property name="ElementShortName">SPIWordArray[7:0][15:0]</obj_property>
+      <obj_property name="ObjectShortName">SPIWordArray[7:0][15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/SPIWord" type="array">
+      <obj_property name="ElementShortName">SPIWord[15:0]</obj_property>
+      <obj_property name="ObjectShortName">SPIWord[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/SPI_Cmd" type="array">
+      <obj_property name="ElementShortName">SPI_Cmd[2:0]</obj_property>
+      <obj_property name="ObjectShortName">SPI_Cmd[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/SPI_Params" type="array">
+      <obj_property name="ElementShortName">SPI_Params[4:0]</obj_property>
+      <obj_property name="ObjectShortName">SPI_Params[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/SPI_Data" type="array">
+      <obj_property name="ElementShortName">SPI_Data[7:0]</obj_property>
+      <obj_property name="ObjectShortName">SPI_Data[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/SPIWordIn" type="array">
+      <obj_property name="ElementShortName">SPIWordIn[15:0]</obj_property>
+      <obj_property name="ObjectShortName">SPIWordIn[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/SixteenCountIn" type="array">
+      <obj_property name="ElementShortName">SixteenCountIn[2:0]</obj_property>
+      <obj_property name="ObjectShortName">SixteenCountIn[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/SixteenCountOut" type="array">
+      <obj_property name="ElementShortName">SixteenCountOut[2:0]</obj_property>
+      <obj_property name="ObjectShortName">SixteenCountOut[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/SixteenCount" type="array">
+      <obj_property name="ElementShortName">SixteenCount[3:0]</obj_property>
+      <obj_property name="ObjectShortName">SixteenCount[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/ThirtyTwoCount" type="array">
+      <obj_property name="ElementShortName">ThirtyTwoCount[4:0]</obj_property>
+      <obj_property name="ObjectShortName">ThirtyTwoCount[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/SlaveCount" type="logic">
+      <obj_property name="ElementShortName">SlaveCount</obj_property>
+      <obj_property name="ObjectShortName">SlaveCount</obj_property>
    </wvobject>
 </wave_config>
