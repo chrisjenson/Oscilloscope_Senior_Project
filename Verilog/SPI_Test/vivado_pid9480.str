@@ -1,0 +1,2976 @@
+/*
+
+Xilinx Vivado v2019.1 (64-bit) [Major: 2019, Minor: 1]
+SW Build: 2552052 on Fri May 24 14:49:42 MDT 2019
+IP Build: 2548770 on Fri May 24 18:01:18 MDT 2019
+
+Process ID (PID): 9480
+License: Customer
+
+Current time: 	Fri Nov 13 11:19:23 EST 2020
+Time zone: 	Eastern Standard Time (America/New_York)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 8
+
+Screen size: 1920x1080
+Screen resolution (DPI): 100
+Available screens: 2
+Available disk space: 61 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	9.0.4 64-bit
+Java home: 	D:/Xilinx/Vivado/2019.1/tps/win64/jre9.0.4
+Java executable location: 	D:/Xilinx/Vivado/2019.1/tps/win64/jre9.0.4/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	Brian Worts
+User home directory: C:/Users/Brian Worts
+User working directory: D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/SPI_Test
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: D:/Xilinx/Vivado
+HDI_APPROOT: D:/Xilinx/Vivado/2019.1
+RDI_DATADIR: D:/Xilinx/Vivado/2019.1/data
+RDI_BINDIR: D:/Xilinx/Vivado/2019.1/bin
+
+Vivado preferences file location: C:/Users/Brian Worts/AppData/Roaming/Xilinx/Vivado/2019.1/vivado.xml
+Vivado preferences directory: C:/Users/Brian Worts/AppData/Roaming/Xilinx/Vivado/2019.1/
+Vivado layouts directory: C:/Users/Brian Worts/AppData/Roaming/Xilinx/Vivado/2019.1/layouts
+PlanAhead jar file location: 	D:/Xilinx/Vivado/2019.1/lib/classes/planAhead.jar
+Vivado log file location: 	D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/SPI_Test/vivado.log
+Vivado journal file location: 	D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/SPI_Test/vivado.jou
+Engine tmp dir: 	D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/SPI_Test/.Xil/Vivado-9480-MSI
+
+Xilinx Environment Variables
+----------------------------
+XILINX: D:/Xilinx/Vivado/2019.1/ids_lite/ISE
+XILINX_DSP: D:/Xilinx/Vivado/2019.1/ids_lite/ISE
+XILINX_PLANAHEAD: D:/Xilinx/Vivado/2019.1
+XILINX_SDK: D:/Xilinx/SDK/2019.1
+XILINX_VIVADO: D:/Xilinx/Vivado/2019.1
+XILINX_VIVADO_HLS: D:/Xilinx/Vivado/2019.1
+
+
+GUI allocated memory:	128 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 569 MB
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// by (cl):  Open Project : addNotify
+// Opening Vivado Project: D:\SeniorProject\Oscilloscope_Senior_Project\Verilog\SPI_Test\SPI_Test.xpr. Version: Vivado v2019.1 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/SPI_Test/SPI_Test.xpr 
+// HMemoryUtils.trashcanNow. Engine heap size: 569 MB. GUI used memory: 49 MB. Current time: 11/13/20, 11:19:25 AM EST
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_FAILED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/SPI_Test/SPI_Test.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 63 MB (+63307kb) [00:00:35]
+// [Engine Memory]: 613 MB (+491780kb) [00:00:35]
+// [GUI Memory]: 78 MB (+12411kb) [00:00:36]
+// [GUI Memory]: 104 MB (+23161kb) [00:00:38]
+// WARNING: HEventQueue.dispatchEvent() is taking  7300 ms.
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2019.1/data/ip'. 
+// Tcl Message: open_project: Time (s): cpu = 00:00:21 ; elapsed = 00:00:15 . Memory (MB): peak = 671.246 ; gain = 71.582 
+// [Engine Memory]: 662 MB (+19125kb) [00:00:41]
+// Project name: SPI_Test; location: D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/SPI_Test; part: xc7a100tcsg324-1
+// [GUI Memory]: 111 MB (+2296kb) [00:00:41]
+dismissDialog("Open Project"); // by (cl)
+// Tcl Message: update_compile_order -fileset sources_1 
+// HMemoryUtils.trashcanNow. Engine heap size: 686 MB. GUI used memory: 53 MB. Current time: 11/13/20, 11:19:45 AM EST
+// PAPropertyPanels.initPanels (SPI.v) elapsed time: 0.3s
+// Elapsed time: 154 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, SPI (SPI.v)]", 1, true); // B (F, cl) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, SPI (SPI.v)]", 1, true, false, false, false, false, true); // B (F, cl) - Double Click - Node
+// Elapsed time: 263 seconds
+selectCodeEditor("SPI.v", 640, 256); // cl (w, cl)
+// Elapsed time: 11 seconds
+selectCodeEditor("SPI.v", 412, 256); // cl (w, cl)
+// Elapsed time: 107 seconds
+selectCodeEditor("SPI.v", 436, 163); // cl (w, cl)
+selectCodeEditor("SPI.v", 297, 237); // cl (w, cl)
+selectCodeEditor("SPI.v", 297, 237, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 286, 239); // cl (w, cl)
+selectCodeEditor("SPI.v", 286, 239, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 328, 229); // cl (w, cl)
+// Elapsed time: 124 seconds
+selectCodeEditor("SPI.v", 234, 326); // cl (w, cl)
+selectCodeEditor("SPI.v", 314, 254); // cl (w, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Buffer_FIFO (Buffer_FIFO.v)]", 3, true); // B (F, cl) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Buffer_FIFO (Buffer_FIFO.v)]", 3, true, false, false, false, false, true); // B (F, cl) - Double Click - Node
+selectCodeEditor("Buffer_FIFO.v", 159, 168); // cl (w, cl)
+// Elapsed time: 309 seconds
+selectCodeEditor("Buffer_FIFO.v", 421, 242); // cl (w, cl)
+selectCodeEditor("Buffer_FIFO.v", 380, 262); // cl (w, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Buffer_FIFO (Buffer_FIFO.v), u_FIFO_Ram : FIFO_Ram (FIFO_Ram.v)]", 4, false); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Buffer_FIFO (Buffer_FIFO.v), u_FIFO_Ram : FIFO_Ram (FIFO_Ram.v)]", 4, false, false, false, false, false, true); // B (F, cl) - Double Click
+selectCodeEditor("FIFO_Ram.v", 343, 169); // cl (w, cl)
+selectCodeEditor("FIFO_Ram.v", 73, 212); // cl (w, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Buffer_FIFO.v", 2); // k (j, cl)
+// Elapsed time: 29 seconds
+selectCodeEditor("Buffer_FIFO.v", 236, 285); // cl (w, cl)
+// Elapsed time: 33 seconds
+selectCodeEditor("Buffer_FIFO.v", 378, 310); // cl (w, cl)
+selectCodeEditor("Buffer_FIFO.v", 261, 224); // cl (w, cl)
+selectCodeEditor("Buffer_FIFO.v", 145, 371); // cl (w, cl)
+selectCodeEditor("Buffer_FIFO.v", 146, 377); // cl (w, cl)
+selectCodeEditor("Buffer_FIFO.v", 282, 381); // cl (w, cl)
+// Elapsed time: 15 seconds
+selectCodeEditor("Buffer_FIFO.v", 248, 343); // cl (w, cl)
+// Elapsed time: 18 seconds
+selectCodeEditor("Buffer_FIFO.v", 193, 345); // cl (w, cl)
+selectCodeEditor("Buffer_FIFO.v", 156, 379); // cl (w, cl)
+// Elapsed time: 19 seconds
+selectCodeEditor("Buffer_FIFO.v", 292, 456); // cl (w, cl)
+selectCodeEditor("Buffer_FIFO.v", 126, 275); // cl (w, cl)
+selectCodeEditor("Buffer_FIFO.v", 126, 275, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("Buffer_FIFO.v", 127, 149); // cl (w, cl)
+selectCodeEditor("Buffer_FIFO.v", 139, 157); // cl (w, cl)
+selectCodeEditor("Buffer_FIFO.v", 139, 157, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("Buffer_FIFO.v", 299, 294); // cl (w, cl)
+// Elapsed time: 10 seconds
+selectCodeEditor("Buffer_FIFO.v", 164, 182); // cl (w, cl)
+selectCodeEditor("Buffer_FIFO.v", 164, 182, false, false, false, false, true); // cl (w, cl) - Double Click
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "SPI.v", 1); // k (j, cl)
+selectCodeEditor("SPI.v", 239, 161); // cl (w, cl)
+selectCodeEditor("SPI.v", 164, 184); // cl (w, cl)
+selectCodeEditor("SPI.v", 164, 184, false, false, false, false, true); // cl (w, cl) - Double Click
+// Elapsed time: 10 seconds
+selectCodeEditor("SPI.v", 114, 124); // cl (w, cl)
+selectCodeEditor("SPI.v", 277, 125); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 43 seconds
+selectCodeEditor("SPI.v", 438, 182); // cl (w, cl)
+// [Engine Memory]: 697 MB (+2047kb) [00:21:03]
+selectCodeEditor("SPI.v", 169, 120); // cl (w, cl)
+selectCodeEditor("SPI.v", 169, 120, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 427, 265); // cl (w, cl)
+selectCodeEditor("SPI.v", 427, 265, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 545, 160); // cl (w, cl)
+selectCodeEditor("SPI.v", 533, 179); // cl (w, cl)
+selectCodeEditor("SPI.v", 123, 178); // cl (w, cl)
+selectCodeEditor("SPI.v", 114, 180); // cl (w, cl)
+selectCodeEditor("SPI.v", 468, 170); // cl (w, cl)
+selectCodeEditor("SPI.v", 528, 177); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 15 seconds
+selectCodeEditor("SPI.v", 190, 221); // cl (w, cl)
+// Elapsed time: 10 seconds
+selectCodeEditor("SPI.v", 150, 181); // cl (w, cl)
+selectCodeEditor("SPI.v", 150, 181, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 243, 208); // cl (w, cl)
+selectCodeEditor("SPI.v", 243, 208, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 347, 211); // cl (w, cl)
+selectCodeEditor("SPI.v", 347, 211, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 255, 243); // cl (w, cl)
+selectCodeEditor("SPI.v", 255, 243, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 191, 274); // cl (w, cl)
+selectCodeEditor("SPI.v", 191, 274, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 225, 304); // cl (w, cl)
+selectCodeEditor("SPI.v", 225, 304, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 225, 310); // cl (w, cl)
+selectCodeEditor("SPI.v", 225, 310, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 418, 310); // cl (w, cl)
+selectCodeEditor("SPI.v", 418, 310, false, false, false, false, true); // cl (w, cl) - Double Click
+// Elapsed time: 23 seconds
+selectCodeEditor("SPI.v", 512, 263); // cl (w, cl)
+// Elapsed time: 190 seconds
+selectCodeEditor("SPI.v", 259, 232); // cl (w, cl)
+selectCodeEditor("SPI.v", 261, 245); // cl (w, cl)
+selectCodeEditor("SPI.v", 317, 361); // cl (w, cl)
+selectCodeEditor("SPI.v", 144, 320); // cl (w, cl)
+selectCodeEditor("SPI.v", 144, 320, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 171, 312); // cl (w, cl)
+selectCodeEditor("SPI.v", 167, 294); // cl (w, cl)
+selectCodeEditor("SPI.v", 167, 294, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 160, 328); // cl (w, cl)
+selectCodeEditor("SPI.v", 160, 328, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 198, 353); // cl (w, cl)
+selectCodeEditor("SPI.v", 198, 353, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 328, 343); // cl (w, cl)
+selectCodeEditor("SPI.v", 203, 376); // cl (w, cl)
+selectCodeEditor("SPI.v", 224, 347); // cl (w, cl)
+selectCodeEditor("SPI.v", 224, 347, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 242, 344); // cl (w, cl)
+selectCodeEditor("SPI.v", 233, 359); // cl (w, cl)
+selectCodeEditor("SPI.v", 191, 393); // cl (w, cl)
+selectCodeEditor("SPI.v", 191, 393, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 204, 385); // cl (w, cl)
+selectCodeEditor("SPI.v", 204, 385, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 315, 386); // cl (w, cl)
+selectCodeEditor("SPI.v", 305, 386); // cl (w, cl)
+selectCodeEditor("SPI.v", 211, 375); // cl (w, cl)
+selectCodeEditor("SPI.v", 211, 375, false, false, false, false, true); // cl (w, cl) - Double Click
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Buffer_FIFO.v", 2); // k (j, cl)
+// Elapsed time: 72 seconds
+selectCodeEditor("Buffer_FIFO.v", 377, 68); // cl (w, cl)
+selectCodeEditor("Buffer_FIFO.v", 345, 222); // cl (w, cl)
+selectCodeEditor("Buffer_FIFO.v", 152, 224); // cl (w, cl)
+selectCodeEditor("Buffer_FIFO.v", 152, 224, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("Buffer_FIFO.v", 233, 229); // cl (w, cl)
+selectCodeEditor("Buffer_FIFO.v", 233, 229, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("Buffer_FIFO.v", 262, 245); // cl (w, cl)
+selectCodeEditor("Buffer_FIFO.v", 262, 245, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("Buffer_FIFO.v", 131, 246); // cl (w, cl)
+selectCodeEditor("Buffer_FIFO.v", 131, 246, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("Buffer_FIFO.v", 164, 268); // cl (w, cl)
+selectCodeEditor("Buffer_FIFO.v", 70, 285); // cl (w, cl)
+selectCodeEditor("Buffer_FIFO.v", 70, 285, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("Buffer_FIFO.v", 108, 283); // cl (w, cl)
+// Elapsed time: 14 seconds
+selectCodeEditor("Buffer_FIFO.v", 539, 327); // cl (w, cl)
+selectCodeEditor("Buffer_FIFO.v", 362, 333); // cl (w, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "SPI.v", 1); // k (j, cl)
+selectCodeEditor("SPI.v", 238, 269); // cl (w, cl)
+selectCodeEditor("SPI.v", 205, 389); // cl (w, cl)
+selectCodeEditor("SPI.v", 205, 389, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 321, 386); // cl (w, cl)
+selectCodeEditor("SPI.v", 187, 380); // cl (w, cl)
+selectCodeEditor("SPI.v", 187, 380, false, false, false, false, true); // cl (w, cl) - Double Click
+// Elapsed time: 13 seconds
+selectCodeEditor("SPI.v", 352, 490); // cl (w, cl)
+selectCodeEditor("SPI.v", 350, 421); // cl (w, cl)
+// Elapsed time: 55 seconds
+selectCodeEditor("SPI.v", 162, 331); // cl (w, cl)
+selectCodeEditor("SPI.v", 162, 331, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 367, 347); // cl (w, cl)
+selectCodeEditor("SPI.v", 173, 309); // cl (w, cl)
+selectCodeEditor("SPI.v", 185, 295); // cl (w, cl)
+selectCodeEditor("SPI.v", 185, 295, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 159, 309); // cl (w, cl)
+selectCodeEditor("SPI.v", 159, 309, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 283, 341); // cl (w, cl)
+selectCodeEditor("SPI.v", 253, 292); // cl (w, cl)
+selectCodeEditor("SPI.v", 253, 292, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 332, 303); // cl (w, cl)
+selectCodeEditor("SPI.v", 322, 325); // cl (w, cl)
+selectCodeEditor("SPI.v", 235, 330); // cl (w, cl)
+selectCodeEditor("SPI.v", 235, 330, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 311, 340); // cl (w, cl)
+selectCodeEditor("SPI.v", 221, 295); // cl (w, cl)
+selectCodeEditor("SPI.v", 221, 295, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 233, 329); // cl (w, cl)
+selectCodeEditor("SPI.v", 233, 329, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 374, 252); // cl (w, cl)
+selectCodeEditor("SPI.v", 374, 252, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 360, 285); // cl (w, cl)
+selectCodeEditor("SPI.v", 371, 273); // cl (w, cl)
+selectCodeEditor("SPI.v", 371, 273, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 374, 266); // cl (w, cl)
+selectCodeEditor("SPI.v", 374, 266, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 259, 262); // cl (w, cl)
+selectCodeEditor("SPI.v", 259, 262, false, false, false, false, true); // cl (w, cl) - Double Click
+// Elapsed time: 16 seconds
+selectCodeEditor("SPI.v", 248, 259); // cl (w, cl)
+selectCodeEditor("SPI.v", 254, 249); // cl (w, cl)
+selectCodeEditor("SPI.v", 254, 249, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 237, 302); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 12 seconds
+selectCodeEditor("SPI.v", 141, 388); // cl (w, cl)
+selectCodeEditor("SPI.v", 256, 343); // cl (w, cl)
+typeControlKey((HResource) null, "SPI.v", 'v'); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("SPI.v", 256, 343); // cl (w, cl)
+// HMemoryUtils.trashcanNow. Engine heap size: 724 MB. GUI used memory: 57 MB. Current time: 11/13/20, 11:49:36 AM EST
+// Elapsed time: 12 seconds
+selectCodeEditor("SPI.v", 652, 211); // cl (w, cl)
+selectCodeEditor("SPI.v", 412, 212); // cl (w, cl)
+selectCodeEditor("SPI.v", 412, 212, false, false, false, false, true); // cl (w, cl) - Double Click
+// Elapsed time: 11 seconds
+selectCodeEditor("SPI.v", 406, 246); // cl (w, cl)
+selectCodeEditor("SPI.v", 402, 235); // cl (w, cl)
+selectCodeEditor("SPI.v", 238, 237); // cl (w, cl)
+selectCodeEditor("SPI.v", 213, 249); // cl (w, cl)
+selectCodeEditor("SPI.v", 213, 249, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 203, 297); // cl (w, cl)
+selectCodeEditor("SPI.v", 218, 278); // cl (w, cl)
+selectCodeEditor("SPI.v", 218, 278, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 350, 213); // cl (w, cl)
+selectCodeEditor("SPI.v", 350, 213, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 208, 217); // cl (w, cl)
+selectCodeEditor("SPI.v", 208, 217, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 233, 237); // cl (w, cl)
+selectCodeEditor("SPI.v", 226, 251); // cl (w, cl)
+selectCodeEditor("SPI.v", 226, 251, false, false, false, false, true); // cl (w, cl) - Double Click
+// Elapsed time: 53 seconds
+selectCodeEditor("SPI.v", 623, 273); // cl (w, cl)
+selectCodeEditor("SPI.v", 384, 213); // cl (w, cl)
+selectCodeEditor("SPI.v", 384, 213, false, false, false, false, true); // cl (w, cl) - Double Click
+// Elapsed time: 21 seconds
+selectCodeEditor("SPI.v", 558, 330); // cl (w, cl)
+selectCodeEditor("SPI.v", 163, 330); // cl (w, cl)
+selectCodeEditor("SPI.v", 337, 328); // cl (w, cl)
+selectCodeEditor("SPI.v", 291, 344); // cl (w, cl)
+selectCodeEditor("SPI.v", 291, 344, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 188, 382); // cl (w, cl)
+selectCodeEditor("SPI.v", 188, 382, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 211, 439); // cl (w, cl)
+selectCodeEditor("SPI.v", 208, 454); // cl (w, cl)
+selectCodeEditor("SPI.v", 208, 454, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 476, 460); // cl (w, cl)
+selectCodeEditor("SPI.v", 476, 460, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 484, 455); // cl (w, cl)
+selectCodeEditor("SPI.v", 484, 455, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 568, 397); // cl (w, cl)
+selectCodeEditor("SPI.v", 353, 300); // cl (w, cl)
+selectCodeEditor("SPI.v", 346, 308); // cl (w, cl)
+selectCodeEditor("SPI.v", 346, 308, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 181, 310); // cl (w, cl)
+selectCodeEditor("SPI.v", 219, 313); // cl (w, cl)
+selectCodeEditor("SPI.v", 219, 313, false, false, false, false, true); // cl (w, cl) - Double Click
+// Elapsed time: 14 seconds
+selectCodeEditor("SPI.v", 377, 323); // cl (w, cl)
+selectCodeEditor("SPI.v", 383, 316); // cl (w, cl)
+selectCodeEditor("SPI.v", 383, 316, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 882, 322); // cl (w, cl)
+selectCodeEditor("SPI.v", 844, 347); // cl (w, cl)
+// Elapsed time: 100 seconds
+selectCodeEditor("SPI.v", 337, 222); // cl (w, cl)
+selectCodeEditor("SPI.v", 333, 268); // cl (w, cl)
+selectCodeEditor("SPI.v", 219, 334); // cl (w, cl)
+// Elapsed time: 23 seconds
+selectCodeEditor("SPI.v", 220, 282); // cl (w, cl)
+selectCodeEditor("SPI.v", 217, 295); // cl (w, cl)
+selectCodeEditor("SPI.v", 207, 338); // cl (w, cl)
+selectCodeEditor("SPI.v", 207, 338, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 213, 401); // cl (w, cl)
+selectCodeEditor("SPI.v", 213, 401, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 421, 410); // cl (w, cl)
+selectCodeEditor("SPI.v", 438, 396); // cl (w, cl)
+selectCodeEditor("SPI.v", 438, 396, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 295, 310); // cl (w, cl)
+selectCodeEditor("SPI.v", 154, 268); // cl (w, cl)
+selectCodeEditor("SPI.v", 154, 268, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 223, 262); // cl (w, cl)
+selectCodeEditor("SPI.v", 223, 262, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 389, 262); // cl (w, cl)
+selectCodeEditor("SPI.v", 389, 262, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 426, 336); // cl (w, cl)
+selectCodeEditor("SPI.v", 234, 335); // cl (w, cl)
+selectCodeEditor("SPI.v", 234, 335, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 235, 300); // cl (w, cl)
+selectCodeEditor("SPI.v", 183, 284); // cl (w, cl)
+selectCodeEditor("SPI.v", 183, 284, false, false, false, false, true); // cl (w, cl) - Double Click
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Buffer_FIFO.v", 2); // k (j, cl)
+selectCodeEditor("Buffer_FIFO.v", 176, 174); // cl (w, cl)
+selectCodeEditor("Buffer_FIFO.v", 120, 67); // cl (w, cl)
+selectCodeEditor("Buffer_FIFO.v", 120, 67, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("Buffer_FIFO.v", 132, 77); // cl (w, cl)
+selectCodeEditor("Buffer_FIFO.v", 132, 77, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("Buffer_FIFO.v", 210, 151); // cl (w, cl)
+selectCodeEditor("Buffer_FIFO.v", 102, 262); // cl (w, cl)
+selectCodeEditor("Buffer_FIFO.v", 102, 262, false, false, false, false, true); // cl (w, cl) - Double Click
+// Elapsed time: 41 seconds
+selectCodeEditor("Buffer_FIFO.v", 290, 129); // cl (w, cl)
+selectCodeEditor("Buffer_FIFO.v", 264, 169); // cl (w, cl)
+// WARNING: HEventQueue.dispatchEvent() is taking  514414 ms.
+// Elapsed time: 1265 seconds
+selectCodeEditor("Buffer_FIFO.v", 227, 195); // cl (w, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "SPI.v", 1); // k (j, cl)
+selectCodeEditor("SPI.v", 316, 125); // cl (w, cl)
+selectCodeEditor("SPI.v", 258, 154); // cl (w, cl)
+selectCodeEditor("SPI.v", 259, 327); // cl (w, cl)
+// HMemoryUtils.trashcanNow. Engine heap size: 724 MB. GUI used memory: 52 MB. Current time: 11/13/20, 12:19:38 PM EST
+// Elapsed time: 142 seconds
+selectCodeEditor("SPI.v", 226, 335); // cl (w, cl)
+selectCodeEditor("SPI.v", 226, 335, false, false, false, false, true); // cl (w, cl) - Double Click
+typeControlKey((HResource) null, "SPI.v", 'c'); // cl (w, cl)
+selectCodeEditor("SPI.v", 388, 115); // cl (w, cl)
+selectCodeEditor("SPI.v", 352, 90); // cl (w, cl)
+typeControlKey((HResource) null, "SPI.v", 'v'); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("SPI.v", 265, 177); // cl (w, cl)
+// Elapsed time: 18 seconds
+selectCodeEditor("SPI.v", 81, 110); // cl (w, cl)
+// WARNING: HEventQueue.dispatchEvent() is taking  896079 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 896623 ms. Increasing delay to 2689869 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  3644746 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 724 MB. GUI used memory: 52 MB. Current time: 11/13/20, 1:46:48 PM EST
+// WARNING: HEventQueue.dispatchEvent() is taking  1031 ms.
+// Elapsed time: 5214 seconds
+selectCodeEditor("SPI.v", 586, 257); // cl (w, cl)
+selectCodeEditor("SPI.v", 417, 276); // cl (w, cl)
+selectCodeEditor("SPI.v", 417, 276, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 267, 306); // cl (w, cl)
+selectCodeEditor("SPI.v", 267, 306, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 247, 334); // cl (w, cl)
+selectCodeEditor("SPI.v", 229, 340); // cl (w, cl)
+selectCodeEditor("SPI.v", 229, 341, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 229, 341); // cl (w, cl)
+selectCodeEditor("SPI.v", 233, 377); // cl (w, cl)
+// Elapsed time: 14 seconds
+selectCodeEditor("SPI.v", 407, 281); // cl (w, cl)
+selectCodeEditor("SPI.v", 407, 281, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 258, 279); // cl (w, cl)
+selectCodeEditor("SPI.v", 258, 279, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 254, 309); // cl (w, cl)
+selectCodeEditor("SPI.v", 254, 309, false, false, false, false, true); // cl (w, cl) - Double Click
+// Elapsed time: 21 seconds
+selectCodeEditor("SPI.v", 422, 325); // cl (w, cl)
+selectCodeEditor("SPI.v", 252, 311); // cl (w, cl)
+selectCodeEditor("SPI.v", 252, 311, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 256, 343); // cl (w, cl)
+selectCodeEditor("SPI.v", 208, 348); // cl (w, cl)
+selectCodeEditor("SPI.v", 208, 348, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 325, 342); // cl (w, cl)
+// Elapsed time: 10 seconds
+selectCodeEditor("SPI.v", 93, 112); // cl (w, cl)
+selectCodeEditor("SPI.v", 95, 111, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 95, 111); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("SPI.v", 106, 108); // cl (w, cl)
+selectCodeEditor("SPI.v", 106, 108, false, false, false, false, true); // cl (w, cl) - Double Click
+// Elapsed time: 11 seconds
+selectCodeEditor("SPI.v", 183, 109); // cl (w, cl)
+selectCodeEditor("SPI.v", 183, 109, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 183, 109); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("SPI.v", 206, 328); // cl (w, cl)
+selectCodeEditor("SPI.v", 206, 328, false, false, false, false, true); // cl (w, cl) - Double Click
+// Elapsed time: 155 seconds
+selectCodeEditor("SPI.v", 438, 387); // cl (w, cl)
+selectCodeEditor("SPI.v", 258, 325); // cl (w, cl)
+selectCodeEditor("SPI.v", 319, 173); // cl (w, cl)
+selectCodeEditor("SPI.v", 307, 184); // cl (w, cl)
+selectCodeEditor("SPI.v", 297, 189); // cl (w, cl)
+selectCodeEditor("SPI.v", 511, 184); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 16 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Buffer_FIFO.v", 2); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "SPI.v", 1); // k (j, cl)
+selectCodeEditor("SPI.v", 272, 137); // cl (w, cl)
+selectCodeEditor("SPI.v", 170, 173); // cl (w, cl)
+selectCodeEditor("SPI.v", 163, 191); // cl (w, cl)
+selectCodeEditor("SPI.v", 163, 191, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 154, 212); // cl (w, cl)
+selectCodeEditor("SPI.v", 154, 212, false, false, false, false, true); // cl (w, cl) - Double Click
+typeControlKey((HResource) null, "SPI.v", 'c'); // cl (w, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Buffer_FIFO.v", 2); // k (j, cl)
+selectCodeEditor("Buffer_FIFO.v", 269, 163); // cl (w, cl)
+selectCodeEditor("Buffer_FIFO.v", 253, 184); // cl (w, cl)
+selectCodeEditor("Buffer_FIFO.v", 183, 146); // cl (w, cl)
+selectCodeEditor("Buffer_FIFO.v", 199, 131); // cl (w, cl)
+selectCodeEditor("Buffer_FIFO.v", 216, 60); // cl (w, cl)
+selectCodeEditor("Buffer_FIFO.v", 212, 73); // cl (w, cl)
+selectCodeEditor("Buffer_FIFO.v", 169, 265); // cl (w, cl)
+selectCodeEditor("Buffer_FIFO.v", 185, 91); // cl (w, cl)
+selectCodeEditor("Buffer_FIFO.v", 178, 149); // cl (w, cl)
+selectCodeEditor("Buffer_FIFO.v", 168, 209); // cl (w, cl)
+selectCodeEditor("Buffer_FIFO.v", 168, 228); // cl (w, cl)
+selectCodeEditor("Buffer_FIFO.v", 178, 191); // cl (w, cl)
+typeControlKey((HResource) null, "Buffer_FIFO.v", 'v'); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("Buffer_FIFO.v", 397, 170); // cl (w, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "FIFO_Ram.v", 3); // k (j, cl)
+selectCodeEditor("FIFO_Ram.v", 312, 255); // cl (w, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Buffer_FIFO.v", 2); // k (j, cl)
+// Elapsed time: 13 seconds
+selectCodeEditor("Buffer_FIFO.v", 185, 236); // cl (w, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "FIFO_Ram.v", 3); // k (j, cl)
+selectCodeEditor("FIFO_Ram.v", 192, 217); // cl (w, cl)
+selectCodeEditor("FIFO_Ram.v", 75, 205); // cl (w, cl)
+selectCodeEditor("FIFO_Ram.v", 75, 209, false, false, false, false, true); // cl (w, cl) - Double Click
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("FIFO_Ram.v", 150, 228); // cl (w, cl)
+selectCodeEditor("FIFO_Ram.v", 149, 208); // cl (w, cl)
+selectCodeEditor("FIFO_Ram.v", 149, 208, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("FIFO_Ram.v", 325, 258); // cl (w, cl)
+selectCodeEditor("FIFO_Ram.v", 325, 257, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("FIFO_Ram.v", 326, 254); // cl (w, cl)
+selectCodeEditor("FIFO_Ram.v", 326, 254); // cl (w, cl)
+selectCodeEditor("FIFO_Ram.v", 325, 254); // cl (w, cl)
+selectCodeEditor("FIFO_Ram.v", 322, 254, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("FIFO_Ram.v", 304, 347); // cl (w, cl)
+selectCodeEditor("FIFO_Ram.v", 311, 347); // cl (w, cl)
+selectCodeEditor("FIFO_Ram.v", 311, 347); // cl (w, cl)
+selectCodeEditor("FIFO_Ram.v", 311, 347, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("FIFO_Ram.v", 254, 156); // cl (w, cl)
+selectCodeEditor("FIFO_Ram.v", 79, 211); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("FIFO_Ram.v", 290, 128); // cl (w, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Buffer_FIFO.v", 2); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "SPI.v", 1); // k (j, cl)
+// Elapsed time: 103 seconds
+selectCodeEditor("SPI.v", 448, 133); // cl (w, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Buffer_FIFO.v", 2); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "FIFO_Ram.v", 3); // k (j, cl)
+selectCodeEditor("FIFO_Ram.v", 224, 249); // cl (w, cl)
+selectCodeEditor("FIFO_Ram.v", 180, 357); // cl (w, cl)
+selectCodeEditor("FIFO_Ram.v", 184, 352); // cl (w, cl)
+selectCodeEditor("FIFO_Ram.v", 185, 352, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("FIFO_Ram.v", 144, 345); // cl (w, cl)
+selectCodeEditor("FIFO_Ram.v", 144, 345, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("FIFO_Ram.v", 111, 246); // cl (w, cl)
+selectCodeEditor("FIFO_Ram.v", 111, 246, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("FIFO_Ram.v", 113, 348); // cl (w, cl)
+selectCodeEditor("FIFO_Ram.v", 113, 348, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("FIFO_Ram.v", 191, 350); // cl (w, cl)
+selectCodeEditor("FIFO_Ram.v", 191, 350, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("FIFO_Ram.v", 306, 343); // cl (w, cl)
+selectCodeEditor("FIFO_Ram.v", 306, 343, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("FIFO_Ram.v", 310, 251); // cl (w, cl)
+selectCodeEditor("FIFO_Ram.v", 310, 251, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("FIFO_Ram.v", 202, 246); // cl (w, cl)
+selectCodeEditor("FIFO_Ram.v", 154, 252); // cl (w, cl)
+selectCodeEditor("FIFO_Ram.v", 154, 252, false, false, false, false, true); // cl (w, cl) - Double Click
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Buffer_FIFO.v", 2); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "FIFO_Ram.v", 3); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Buffer_FIFO.v", 2); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "FIFO_Ram.v", 3); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Buffer_FIFO.v", 2); // k (j, cl)
+// Elapsed time: 37 seconds
+selectCodeEditor("Buffer_FIFO.v", 114, 213); // cl (w, cl)
+selectCodeEditor("Buffer_FIFO.v", 114, 213, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("Buffer_FIFO.v", 123, 223); // cl (w, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "SPI.v", 1); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "FIFO_Ram.v", 3); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "SPI.v", 1); // k (j, cl)
+selectCodeEditor("SPI.v", 251, 319); // cl (w, cl)
+selectCodeEditor("SPI.v", 178, 349); // cl (w, cl)
+selectCodeEditor("SPI.v", 178, 349, false, false, false, false, true); // cl (w, cl) - Double Click
+// Elapsed time: 47 seconds
+selectCodeEditor("SPI.v", 145, 313); // cl (w, cl)
+selectCodeEditor("SPI.v", 145, 313, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 223, 330); // cl (w, cl)
+selectCodeEditor("SPI.v", 223, 330, false, false, false, false, true); // cl (w, cl) - Double Click
+// Elapsed time: 41 seconds
+selectCodeEditor("SPI.v", 209, 163); // cl (w, cl)
+// Elapsed time: 65 seconds
+selectCodeEditor("SPI.v", 629, 144); // cl (w, cl)
+// Elapsed time: 123 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "FIFO_Ram.v", 3); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Buffer_FIFO.v", 2); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Project Summary", 0); // k (j, cl)
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Buffer_FIFO.v", 1); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "FIFO_Ram.v", 2); // k (j, cl)
+selectCodeEditor("FIFO_Ram.v", 317, 337); // cl (w, cl)
+selectCodeEditor("FIFO_Ram.v", 192, 358); // cl (w, cl)
+selectCodeEditor("FIFO_Ram.v", 192, 358, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("FIFO_Ram.v", 195, 355); // cl (w, cl)
+selectCodeEditor("FIFO_Ram.v", 195, 355); // cl (w, cl)
+selectCodeEditor("FIFO_Ram.v", 228, 368); // cl (w, cl)
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking 276ms to process. Increasing delay to 2000 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 724 MB. GUI used memory: 52 MB. Current time: 11/13/20, 2:16:47 PM EST
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 1 ms. Decreasing delay to 2001 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 724 MB. GUI used memory: 52 MB. Current time: 11/13/20, 2:46:47 PM EST
+// Elapsed time: 4459 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Buffer_FIFO.v", 1); // k (j, cl)
+// Elapsed time: 61 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "FIFO_Ram.v", 2); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "SPI.v", 0); // k (j, cl)
+selectCodeEditor("SPI.v", 392, 368); // cl (w, cl)
+// HMemoryUtils.trashcanNow. Engine heap size: 724 MB. GUI used memory: 51 MB. Current time: 11/13/20, 3:16:48 PM EST
+// Elapsed time: 25 seconds
+selectCodeEditor("SPI.v", 171, 352); // cl (w, cl)
+typeControlKey((HResource) null, "SPI.v", 'c'); // cl (w, cl)
+selectCodeEditor("SPI.v", 196, 116); // cl (w, cl)
+typeControlKey((HResource) null, "SPI.v", 'v'); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 11 seconds
+selectCodeEditor("SPI.v", 121, 126); // cl (w, cl)
+selectCodeEditor("SPI.v", 121, 126, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 170, 135); // cl (w, cl)
+selectCodeEditor("SPI.v", 123, 246); // cl (w, cl)
+selectCodeEditor("SPI.v", 123, 246, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 135, 281); // cl (w, cl)
+selectCodeEditor("SPI.v", 135, 281, false, false, false, false, true); // cl (w, cl) - Double Click
+// Elapsed time: 15 seconds
+selectCodeEditor("SPI.v", 202, 425); // cl (w, cl)
+selectCodeEditor("SPI.v", 202, 425, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 312, 283); // cl (w, cl)
+selectCodeEditor("SPI.v", 223, 136); // cl (w, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Buffer_FIFO.v", 1); // k (j, cl)
+selectCodeEditor("Buffer_FIFO.v", 205, 158); // cl (w, cl)
+selectCodeEditor("Buffer_FIFO.v", 101, 256); // cl (w, cl)
+selectCodeEditor("Buffer_FIFO.v", 101, 256, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("Buffer_FIFO.v", 626, 240); // cl (w, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "FIFO_Ram.v", 2); // k (j, cl)
+selectCodeEditor("FIFO_Ram.v", 389, 210); // cl (w, cl)
+// Elapsed time: 1076 seconds
+selectCodeEditor("FIFO_Ram.v", 660, 186); // cl (w, cl)
+selectCodeEditor("FIFO_Ram.v", 39, 134); // cl (w, cl)
+selectCodeEditor("FIFO_Ram.v", 302, 140); // cl (w, cl)
+// Elapsed time: 66 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Buffer_FIFO.v", 1); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "SPI.v", 0); // k (j, cl)
+selectCodeEditor("SPI.v", 359, 351); // cl (w, cl)
+selectCodeEditor("SPI.v", 328, 321); // cl (w, cl)
+selectCodeEditor("SPI.v", 285, 337); // cl (w, cl)
+selectCodeEditor("SPI.v", 285, 337, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 285, 337); // cl (w, cl)
+selectCodeEditor("SPI.v", 268, 200); // cl (w, cl)
+selectCodeEditor("SPI.v", 204, 316); // cl (w, cl)
+selectCodeEditor("SPI.v", 204, 316, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 200, 351); // cl (w, cl)
+selectCodeEditor("SPI.v", 200, 351, false, false, false, false, true); // cl (w, cl) - Double Click
+// Elapsed time: 106 seconds
+selectCodeEditor("SPI.v", 365, 181); // cl (w, cl)
+selectCodeEditor("SPI.v", 365, 181, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 471, 217); // cl (w, cl)
+selectCodeEditor("SPI.v", 411, 197); // cl (w, cl)
+selectCodeEditor("SPI.v", 411, 197, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 699, 187); // cl (w, cl)
+// Elapsed time: 12 seconds
+selectCodeEditor("SPI.v", 184, 214); // cl (w, cl)
+selectCodeEditor("SPI.v", 184, 214, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 311, 313); // cl (w, cl)
+// Elapsed time: 13 seconds
+selectCodeEditor("SPI.v", 271, 231); // cl (w, cl)
+selectCodeEditor("SPI.v", 142, 246); // cl (w, cl)
+selectCodeEditor("SPI.v", 142, 246, false, false, false, false, true); // cl (w, cl) - Double Click
+// Elapsed time: 208 seconds
+selectCodeEditor("SPI.v", 571, 320); // cl (w, cl)
+selectCodeEditor("SPI.v", 206, 350); // cl (w, cl)
+selectCodeEditor("SPI.v", 206, 350, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 206, 350); // cl (w, cl)
+selectCodeEditor("SPI.v", 325, 360); // cl (w, cl)
+selectCodeEditor("SPI.v", 170, 307); // cl (w, cl)
+selectCodeEditor("SPI.v", 182, 291); // cl (w, cl)
+selectCodeEditor("SPI.v", 182, 291, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 193, 405); // cl (w, cl)
+selectCodeEditor("SPI.v", 193, 405, false, false, false, false, true); // cl (w, cl) - Double Click
+// Elapsed time: 22 seconds
+selectCodeEditor("SPI.v", 250, 269); // cl (w, cl)
+selectCodeEditor("SPI.v", 196, 181); // cl (w, cl)
+selectCodeEditor("SPI.v", 196, 181, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 301, 362); // cl (w, cl)
+selectCodeEditor("SPI.v", 243, 280); // cl (w, cl)
+selectCodeEditor("SPI.v", 243, 280, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 278, 279); // cl (w, cl)
+// Elapsed time: 32 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Buffer_FIFO.v", 1); // k (j, cl)
+selectCodeEditor("Buffer_FIFO.v", 292, 181); // cl (w, cl)
+// Elapsed time: 14 seconds
+selectCodeEditor("Buffer_FIFO.v", 99, 76); // cl (w, cl)
+selectCodeEditor("Buffer_FIFO.v", 109, 52); // cl (w, cl)
+selectCodeEditor("Buffer_FIFO.v", 109, 52, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("Buffer_FIFO.v", 297, 381); // cl (w, cl)
+selectCodeEditor("Buffer_FIFO.v", 79, 62); // cl (w, cl)
+selectCodeEditor("Buffer_FIFO.v", 79, 62, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("Buffer_FIFO.v", 97, 72); // cl (w, cl)
+selectCodeEditor("Buffer_FIFO.v", 97, 72, false, false, false, false, true); // cl (w, cl) - Double Click
+// Elapsed time: 14 seconds
+selectCodeEditor("Buffer_FIFO.v", 206, 125); // cl (w, cl)
+selectCodeEditor("Buffer_FIFO.v", 266, 299); // cl (w, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "FIFO_Ram.v", 2); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Buffer_FIFO.v", 1); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "SPI.v", 0); // k (j, cl)
+selectCodeEditor("SPI.v", 523, 319); // cl (w, cl)
+selectCodeEditor("SPI.v", 80, 54); // cl (w, cl)
+selectCodeEditor("SPI.v", 196, 83); // cl (w, cl)
+selectCodeEditor("SPI.v", 183, 184); // cl (w, cl)
+selectCodeEditor("SPI.v", 225, 280); // cl (w, cl)
+selectCodeEditor("SPI.v", 176, 270); // cl (w, cl)
+selectCodeEditor("SPI.v", 169, 332); // cl (w, cl)
+selectCodeEditor("SPI.v", 169, 332, false, false, false, false, true); // cl (w, cl) - Double Click
+// Elapsed time: 24 seconds
+selectCodeEditor("SPI.v", 110, 198); // cl (w, cl)
+// Elapsed time: 11 seconds
+selectCodeEditor("SPI.v", 391, 295); // cl (w, cl)
+selectCodeEditor("SPI.v", 391, 295, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 402, 282); // cl (w, cl)
+selectCodeEditor("SPI.v", 402, 282, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 245, 336); // cl (w, cl)
+selectCodeEditor("SPI.v", 245, 336, false, false, false, false, true); // cl (w, cl) - Double Click
+// HMemoryUtils.trashcanNow. Engine heap size: 724 MB. GUI used memory: 51 MB. Current time: 11/13/20, 3:46:48 PM EST
+selectCodeEditor("SPI.v", 395, 248); // cl (w, cl)
+// Elapsed time: 150 seconds
+selectCodeEditor("SPI.v", 560, 271); // cl (w, cl)
+selectCodeEditor("SPI.v", 590, 250); // cl (w, cl)
+selectCodeEditor("SPI.v", 590, 250, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 669, 246); // cl (w, cl)
+selectCodeEditor("SPI.v", 669, 246, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 750, 243); // cl (w, cl)
+selectCodeEditor("SPI.v", 710, 284); // cl (w, cl)
+selectCodeEditor("SPI.v", 253, 282); // cl (w, cl)
+selectCodeEditor("SPI.v", 255, 282, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 276, 330); // cl (w, cl)
+selectCodeEditor("SPI.v", 178, 319); // cl (w, cl)
+selectCodeEditor("SPI.v", 178, 319, false, false, false, false, true); // cl (w, cl) - Double Click
+// Elapsed time: 40 seconds
+selectCodeEditor("SPI.v", 227, 438); // cl (w, cl)
+selectCodeEditor("SPI.v", 227, 438, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 190, 214); // cl (w, cl)
+selectCodeEditor("SPI.v", 190, 214, false, false, false, false, true); // cl (w, cl) - Double Click
+// Elapsed time: 10 seconds
+selectCodeEditor("SPI.v", 304, 310); // cl (w, cl)
+// Elapsed time: 655 seconds
+selectCodeEditor("SPI.v", 164, 428); // cl (w, cl)
+selectCodeEditor("SPI.v", 273, 217); // cl (w, cl)
+selectCodeEditor("SPI.v", 273, 207); // cl (w, cl)
+selectCodeEditor("SPI.v", 395, 374); // cl (w, cl)
+selectCodeEditor("SPI.v", 395, 374); // cl (w, cl)
+selectCodeEditor("SPI.v", 390, 365); // cl (w, cl)
+selectCodeEditor("SPI.v", 389, 339); // cl (w, cl)
+// Elapsed time: 12 seconds
+selectCodeEditor("SPI.v", 335, 201); // cl (w, cl)
+selectCodeEditor("SPI.v", 305, 212); // cl (w, cl)
+selectCodeEditor("SPI.v", 303, 228); // cl (w, cl)
+// Elapsed time: 571 seconds
+selectCodeEditor("SPI.v", 232, 254); // cl (w, cl)
+selectCodeEditor("SPI.v", 186, 268); // cl (w, cl)
+// Elapsed time: 64 seconds
+selectCodeEditor("SPI.v", 105, 57); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("SPI.v", 250, 49); // cl (w, cl)
+selectCodeEditor("SPI.v", 216, 76); // cl (w, cl)
+selectCodeEditor("SPI.v", 240, 57); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 36 seconds
+selectCodeEditor("SPI.v", 203, 161); // cl (w, cl)
+selectCodeEditor("SPI.v", 30, 159); // cl (w, cl)
+selectCodeEditor("SPI.v", 35, 155); // cl (w, cl)
+selectCodeEditor("SPI.v", 30, 161); // cl (w, cl)
+typeControlKey((HResource) null, "SPI.v", 'c'); // cl (w, cl)
+selectCodeEditor("SPI.v", 229, 141); // cl (w, cl)
+typeControlKey((HResource) null, "SPI.v", 'v'); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("SPI.v", 139, 189); // cl (w, cl)
+selectCodeEditor("SPI.v", 139, 189, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 151, 170); // cl (w, cl)
+selectCodeEditor("SPI.v", 151, 170, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 345, 273); // cl (w, cl)
+// Elapsed time: 42 seconds
+selectCodeEditor("SPI.v", 231, 231); // cl (w, cl)
+// HMemoryUtils.trashcanNow. Engine heap size: 724 MB. GUI used memory: 52 MB. Current time: 11/13/20, 4:16:48 PM EST
+// Elapsed time: 176 seconds
+selectCodeEditor("SPI.v", 164, 252); // cl (w, cl)
+selectCodeEditor("SPI.v", 159, 279); // cl (w, cl)
+selectCodeEditor("SPI.v", 190, 264); // cl (w, cl)
+// Elapsed time: 20 seconds
+selectCodeEditor("SPI.v", 524, 326); // cl (w, cl)
+selectCodeEditor("SPI.v", 476, 288); // cl (w, cl)
+selectCodeEditor("SPI.v", 448, 265); // cl (w, cl)
+// Elapsed time: 20 seconds
+selectCodeEditor("SPI.v", 272, 419); // cl (w, cl)
+// Elapsed time: 24 seconds
+selectCodeEditor("SPI.v", 206, 239); // cl (w, cl)
+selectCodeEditor("SPI.v", 113, 299); // cl (w, cl)
+selectCodeEditor("SPI.v", 113, 299, false, false, false, false, true); // cl (w, cl) - Double Click
+typeControlKey((HResource) null, "SPI.v", 'c'); // cl (w, cl)
+selectCodeEditor("SPI.v", 85, 139); // cl (w, cl)
+selectCodeEditor("SPI.v", 96, 134); // cl (w, cl)
+selectCodeEditor("SPI.v", 96, 134, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 188, 282); // cl (w, cl)
+selectCodeEditor("SPI.v", 184, 282); // cl (w, cl)
+typeControlKey((HResource) null, "SPI.v", 'v'); // cl (w, cl)
+selectCodeEditor("SPI.v", 367, 281); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// Elapsed time: 16 seconds
+selectCodeEditor("SPI.v", 198, 378); // cl (w, cl)
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+typeControlKey((HResource) null, "SPI.v", 'c'); // cl (w, cl)
+selectCodeEditor("SPI.v", 275, 372); // cl (w, cl)
+selectCodeEditor("SPI.v", 272, 372, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 272, 373); // cl (w, cl)
+selectCodeEditor("SPI.v", 266, 373); // cl (w, cl)
+selectCodeEditor("SPI.v", 262, 378); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("SPI.v", 236, 346); // cl (w, cl)
+// Elapsed time: 14 seconds
+selectCodeEditor("SPI.v", 133, 105); // cl (w, cl)
+selectCodeEditor("SPI.v", 133, 105, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 154, 95); // cl (w, cl)
+selectCodeEditor("SPI.v", 154, 95, false, false, false, false, true); // cl (w, cl) - Double Click
+typeControlKey((HResource) null, "SPI.v", 'c'); // cl (w, cl)
+selectCodeEditor("SPI.v", 241, 401); // cl (w, cl)
+typeControlKey((HResource) null, "SPI.v", 'v'); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 18 seconds
+selectCodeEditor("SPI.v", 202, 313); // cl (w, cl)
+selectCodeEditor("SPI.v", 196, 313); // cl (w, cl)
+typeControlKey((HResource) null, "SPI.v", 'v'); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("SPI.v", 297, 332); // cl (w, cl)
+selectCodeEditor("SPI.v", 194, 333); // cl (w, cl)
+typeControlKey((HResource) null, "SPI.v", 'c'); // cl (w, cl)
+selectCodeEditor("SPI.v", 210, 343); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 23 seconds
+selectCodeEditor("SPI.v", 238, 458); // cl (w, cl)
+typeControlKey((HResource) null, "SPI.v", 'c'); // cl (w, cl)
+selectCodeEditor("SPI.v", 245, 457); // cl (w, cl)
+typeControlKey((HResource) null, "SPI.v", 'v'); // cl (w, cl)
+typeControlKey((HResource) null, "SPI.v", 'v'); // cl (w, cl)
+typeControlKey((HResource) null, "SPI.v", 'v'); // cl (w, cl)
+typeControlKey((HResource) null, "SPI.v", 'v'); // cl (w, cl)
+selectCodeEditor("SPI.v", 295, 253); // cl (w, cl)
+selectCodeEditor("SPI.v", 295, 265); // cl (w, cl)
+typeControlKey((HResource) null, "SPI.v", 'v'); // cl (w, cl)
+typeControlKey(null, null, 'z');
+selectCodeEditor("SPI.v", 198, 215); // cl (w, cl)
+typeControlKey((HResource) null, "SPI.v", 'c'); // cl (w, cl)
+selectCodeEditor("SPI.v", 233, 285); // cl (w, cl)
+typeControlKey((HResource) null, "SPI.v", 'v'); // cl (w, cl)
+selectCodeEditor("SPI.v", 231, 322); // cl (w, cl)
+selectCodeEditor("SPI.v", 231, 352); // cl (w, cl)
+selectCodeEditor("SPI.v", 252, 327); // cl (w, cl)
+typeControlKey((HResource) null, "SPI.v", 'v'); // cl (w, cl)
+typeControlKey((HResource) null, "SPI.v", 'v'); // cl (w, cl)
+typeControlKey((HResource) null, "SPI.v", 'v'); // cl (w, cl)
+selectCodeEditor("SPI.v", 215, 422); // cl (w, cl)
+selectCodeEditor("SPI.v", 240, 432); // cl (w, cl)
+typeControlKey((HResource) null, "SPI.v", 'v'); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("SPI.v", 347, 230); // cl (w, cl)
+// Elapsed time: 20 seconds
+selectCodeEditor("SPI.v", 340, 165); // cl (w, cl)
+selectCodeEditor("SPI.v", 340, 165, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 538, 171); // cl (w, cl)
+selectCodeEditor("SPI.v", 523, 166); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 12 seconds
+selectCodeEditor("SPI.v", 416, 240); // cl (w, cl)
+selectCodeEditor("SPI.v", 448, 204); // cl (w, cl)
+selectCodeEditor("SPI.v", 438, 234); // cl (w, cl)
+// Elapsed time: 26 seconds
+selectCodeEditor("SPI.v", 344, 232); // cl (w, cl)
+selectCodeEditor("SPI.v", 344, 232, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 454, 231); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("SPI.v", 285, 159); // cl (w, cl)
+selectCodeEditor("SPI.v", 285, 159, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 370, 237); // cl (w, cl)
+selectCodeEditor("SPI.v", 344, 244); // cl (w, cl)
+selectCodeEditor("SPI.v", 344, 244, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 357, 309); // cl (w, cl)
+selectCodeEditor("SPI.v", 357, 309, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 348, 248); // cl (w, cl)
+selectCodeEditor("SPI.v", 348, 248, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 352, 321); // cl (w, cl)
+selectCodeEditor("SPI.v", 352, 321, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 335, 388); // cl (w, cl)
+selectCodeEditor("SPI.v", 335, 388, false, false, false, false, true); // cl (w, cl) - Double Click
+// Elapsed time: 10 seconds
+selectCodeEditor("SPI.v", 345, 441); // cl (w, cl)
+selectCodeEditor("SPI.v", 345, 441, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 341, 453); // cl (w, cl)
+selectCodeEditor("SPI.v", 341, 453, false, false, false, false, true); // cl (w, cl) - Double Click
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("SPI.v", 694, 384); // cl (w, cl)
+selectCodeEditor("SPI.v", 235, 205); // cl (w, cl)
+selectCodeEditor("SPI.v", 203, 214); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 12 seconds
+selectCodeEditor("SPI.v", 355, 407); // cl (w, cl)
+selectCodeEditor("SPI.v", 234, 418); // cl (w, cl)
+typeControlKey((HResource) null, "SPI.v", 'c'); // cl (w, cl)
+selectCodeEditor("SPI.v", 263, 405); // cl (w, cl)
+selectCodeEditor("SPI.v", 261, 406, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 247, 415); // cl (w, cl)
+typeControlKey((HResource) null, "SPI.v", 'v'); // cl (w, cl)
+typeControlKey((HResource) null, "SPI.v", 'v'); // cl (w, cl)
+typeControlKey((HResource) null, "SPI.v", 'v'); // cl (w, cl)
+selectCodeEditor("SPI.v", 243, 293); // cl (w, cl)
+selectCodeEditor("SPI.v", 213, 478); // cl (w, cl)
+selectCodeEditor("SPI.v", 342, 344); // cl (w, cl)
+selectCodeEditor("SPI.v", 342, 330); // cl (w, cl)
+selectCodeEditor("SPI.v", 398, 261); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("SPI.v", 500, 237); // cl (w, cl)
+selectCodeEditor("SPI.v", 467, 313); // cl (w, cl)
+selectCodeEditor("SPI.v", 390, 263); // cl (w, cl)
+selectCodeEditor("SPI.v", 384, 329); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("SPI.v", 416, 402); // cl (w, cl)
+selectCodeEditor("SPI.v", 351, 328); // cl (w, cl)
+selectCodeEditor("SPI.v", 351, 328, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 427, 327); // cl (w, cl)
+selectCodeEditor("SPI.v", 454, 396); // cl (w, cl)
+selectCodeEditor("SPI.v", 340, 405); // cl (w, cl)
+selectCodeEditor("SPI.v", 340, 405, false, false, false, false, true); // cl (w, cl) - Double Click
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("SPI.v", 398, 371); // cl (w, cl)
+selectCodeEditor("SPI.v", 423, 316); // cl (w, cl)
+// Elapsed time: 15 seconds
+selectCodeEditor("SPI.v", 397, 169); // cl (w, cl)
+selectCodeEditor("SPI.v", 223, 141); // cl (w, cl)
+selectCodeEditor("SPI.v", 227, 123); // cl (w, cl)
+selectCodeEditor("SPI.v", 227, 123, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 408, 247); // cl (w, cl)
+selectCodeEditor("SPI.v", 255, 233); // cl (w, cl)
+selectCodeEditor("SPI.v", 255, 233, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 158, 269); // cl (w, cl)
+selectCodeEditor("SPI.v", 158, 269, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 270, 244); // cl (w, cl)
+selectCodeEditor("SPI.v", 270, 244, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 439, 302); // cl (w, cl)
+selectCodeEditor("SPI.v", 285, 313); // cl (w, cl)
+selectCodeEditor("SPI.v", 237, 325); // cl (w, cl)
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // B (f, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("SPI.v", 407, 69); // cl (w, cl)
+// Elapsed time: 14 seconds
+selectCodeEditor("SPI.v", 384, 213); // cl (w, cl)
+selectCodeEditor("SPI.v", 380, 136); // cl (w, cl)
+selectCodeEditor("SPI.v", 185, 193); // cl (w, cl)
+selectCodeEditor("SPI.v", 113, 293); // cl (w, cl)
+selectCodeEditor("SPI.v", 116, 106); // cl (w, cl)
+selectCodeEditor("SPI.v", 136, 132); // cl (w, cl)
+selectCodeEditor("SPI.v", 149, 132); // cl (w, cl)
+selectCodeEditor("SPI.v", 139, 131); // cl (w, cl)
+selectCodeEditor("SPI.v", 391, 331); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("SPI.v", 432, 278); // cl (w, cl)
+selectCodeEditor("SPI.v", 218, 449); // cl (w, cl)
+selectCodeEditor("SPI.v", 218, 449, false, false, false, false, true); // cl (w, cl) - Double Click
+// Elapsed time: 15 seconds
+selectCodeEditor("SPI.v", 239, 290); // cl (w, cl)
+selectCodeEditor("SPI.v", 247, 316); // cl (w, cl)
+selectCodeEditor("SPI.v", 246, 339); // cl (w, cl)
+selectCodeEditor("SPI.v", 187, 240); // cl (w, cl)
+selectCodeEditor("SPI.v", 187, 240, false, false, false, false, true); // cl (w, cl) - Double Click
+typeControlKey((HResource) null, "SPI.v", 'c'); // cl (w, cl)
+selectCodeEditor("SPI.v", 175, 327); // cl (w, cl)
+selectCodeEditor("SPI.v", 175, 327, false, false, false, false, true); // cl (w, cl) - Double Click
+typeControlKey((HResource) null, "SPI.v", 'c'); // cl (w, cl)
+selectCodeEditor("SPI.v", 144, 247); // cl (w, cl)
+typeControlKey((HResource) null, "SPI.v", 'v'); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("SPI.v", 146, 151); // cl (w, cl)
+selectCodeEditor("SPI.v", 135, 165); // cl (w, cl)
+selectCodeEditor("SPI.v", 135, 165, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 436, 168); // cl (w, cl)
+selectCodeEditor("SPI.v", 88, 161); // cl (w, cl)
+selectCodeEditor("SPI.v", 87, 161); // cl (w, cl)
+selectCodeEditor("SPI.v", 295, 150); // cl (w, cl)
+selectCodeEditor("SPI.v", 272, 172); // cl (w, cl)
+selectCodeEditor("SPI.v", 296, 163); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 28 seconds
+selectCodeEditor("SPI.v", 396, 319); // cl (w, cl)
+selectCodeEditor("SPI.v", 189, 163); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 12 seconds
+selectCodeEditor("SPI.v", 274, 290); // cl (w, cl)
+selectCodeEditor("SPI.v", 125, 252); // cl (w, cl)
+selectCodeEditor("SPI.v", 120, 200); // cl (w, cl)
+selectCodeEditor("SPI.v", 120, 200, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 121, 241); // cl (w, cl)
+selectCodeEditor("SPI.v", 227, 335); // cl (w, cl)
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 15 seconds
+selectCodeEditor("SPI.v", 240, 213); // cl (w, cl)
+selectCodeEditor("SPI.v", 199, 225); // cl (w, cl)
+selectCodeEditor("SPI.v", 147, 214); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("SPI.v", 232, 194); // cl (w, cl)
+selectCodeEditor("SPI.v", 325, 231); // cl (w, cl)
+selectCodeEditor("SPI.v", 155, 187); // cl (w, cl)
+selectCodeEditor("SPI.v", 155, 189, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 155, 189); // cl (w, cl)
+selectCodeEditor("SPI.v", 361, 202); // cl (w, cl)
+selectCodeEditor("SPI.v", 102, 200); // cl (w, cl)
+selectCodeEditor("SPI.v", 102, 200, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 290, 327); // cl (w, cl)
+selectCodeEditor("SPI.v", 217, 328); // cl (w, cl)
+selectCodeEditor("SPI.v", 217, 328, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 336, 317); // cl (w, cl)
+selectCodeEditor("SPI.v", 336, 327); // cl (w, cl)
+selectCodeEditor("SPI.v", 336, 327, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 232, 337); // cl (w, cl)
+selectCodeEditor("SPI.v", 234, 320); // cl (w, cl)
+// Elapsed time: 15 seconds
+typeControlKey((HResource) null, "SPI.v", 'v'); // cl (w, cl)
+typeControlKey((HResource) null, "SPI.v", 'v'); // cl (w, cl)
+selectCodeEditor("SPI.v", 196, 437); // cl (w, cl)
+selectCodeEditor("SPI.v", 142, 110); // cl (w, cl)
+selectCodeEditor("SPI.v", 143, 109); // cl (w, cl)
+selectCodeEditor("SPI.v", 223, 435); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("SPI.v", 264, 79); // cl (w, cl)
+selectCodeEditor("SPI.v", 264, 79, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 259, 268); // cl (w, cl)
+selectCodeEditor("SPI.v", 319, 182); // cl (w, cl)
+selectCodeEditor("SPI.v", 319, 182, false, false, false, false, true); // cl (w, cl) - Double Click
+// Elapsed time: 19 seconds
+selectCodeEditor("SPI.v", 318, 342); // cl (w, cl)
+selectCodeEditor("SPI.v", 318, 342, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 373, 280); // cl (w, cl)
+selectCodeEditor("SPI.v", 220, 288); // cl (w, cl)
+selectCodeEditor("SPI.v", 220, 288, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 284, 244); // cl (w, cl)
+selectCodeEditor("SPI.v", 284, 244, false, false, false, false, true); // cl (w, cl) - Double Click
+// Elapsed time: 26 seconds
+selectCodeEditor("SPI.v", 299, 252); // cl (w, cl)
+selectCodeEditor("SPI.v", 306, 237); // cl (w, cl)
+selectCodeEditor("SPI.v", 300, 242); // cl (w, cl)
+selectCodeEditor("SPI.v", 300, 242, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 229, 272); // cl (w, cl)
+selectCodeEditor("SPI.v", 229, 272, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 394, 215); // cl (w, cl)
+selectCodeEditor("SPI.v", 394, 215, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 295, 250); // cl (w, cl)
+selectCodeEditor("SPI.v", 295, 250, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 225, 276); // cl (w, cl)
+selectCodeEditor("SPI.v", 225, 276, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 344, 298); // cl (w, cl)
+selectCodeEditor("SPI.v", 242, 198); // cl (w, cl)
+selectCodeEditor("SPI.v", 251, 279); // cl (w, cl)
+selectCodeEditor("SPI.v", 329, 185); // cl (w, cl)
+selectCodeEditor("SPI.v", 329, 185, false, false, false, false, true); // cl (w, cl) - Double Click
+// Elapsed time: 10 seconds
+selectCodeEditor("SPI.v", 138, 163); // cl (w, cl)
+selectCodeEditor("SPI.v", 152, 142); // cl (w, cl)
+typeControlKey((HResource) null, "SPI.v", 'v'); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 18 seconds
+selectCodeEditor("SPI.v", 291, 317); // cl (w, cl)
+selectCodeEditor("SPI.v", 244, 218); // cl (w, cl)
+selectCodeEditor("SPI.v", 145, 162); // cl (w, cl)
+selectCodeEditor("SPI.v", 145, 162, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 412, 154); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("SPI.v", 363, 196); // cl (w, cl)
+selectCodeEditor("SPI.v", 331, 165); // cl (w, cl)
+selectCodeEditor("SPI.v", 178, 249); // cl (w, cl)
+selectCodeEditor("SPI.v", 984, 267); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("SPI.v", 278, 283); // cl (w, cl)
+selectCodeEditor("SPI.v", 217, 300); // cl (w, cl)
+selectCodeEditor("SPI.v", 217, 300, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 305, 297); // cl (w, cl)
+selectCodeEditor("SPI.v", 305, 297, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 493, 270); // cl (w, cl)
+selectCodeEditor("SPI.v", 167, 221); // cl (w, cl)
+selectCodeEditor("SPI.v", 180, 376); // cl (w, cl)
+selectCodeEditor("SPI.v", 180, 361); // cl (w, cl)
+selectCodeEditor("SPI.v", 145, 481); // cl (w, cl)
+selectCodeEditor("SPI.v", 147, 462); // cl (w, cl)
+selectCodeEditor("SPI.v", 158, 439); // cl (w, cl)
+selectCodeEditor("SPI.v", 147, 452); // cl (w, cl)
+selectCodeEditor("SPI.v", 147, 452, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 198, 404); // cl (w, cl)
+selectCodeEditor("SPI.v", 177, 320); // cl (w, cl)
+selectCodeEditor("SPI.v", 182, 316); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 69 seconds
+selectCodeEditor("SPI.v", 482, 439); // cl (w, cl)
+selectCodeEditor("SPI.v", 492, 405); // cl (w, cl)
+selectCodeEditor("SPI.v", 766, 349); // cl (w, cl)
+selectCodeEditor("SPI.v", 766, 349, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 766, 349); // cl (w, cl)
+selectCodeEditor("SPI.v", 879, 349); // cl (w, cl)
+selectCodeEditor("SPI.v", 879, 349, false, false, false, false, true); // cl (w, cl) - Double Click
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("SPI.v", 564, 312); // cl (w, cl)
+selectCodeEditor("SPI.v", 564, 312, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 564, 312); // cl (w, cl)
+selectCodeEditor("SPI.v", 280, 333); // cl (w, cl)
+selectCodeEditor("SPI.v", 290, 326); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("SPI.v", 335, 356); // cl (w, cl)
+selectCodeEditor("SPI.v", 335, 356, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 335, 356); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 52 seconds
+selectCodeEditor("SPI.v", 280, 190); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("SPI.v", 458, 304); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+selectCodeEditor("SPI.v", 331, 177); // cl (w, cl)
+selectCodeEditor("SPI.v", 310, 201); // cl (w, cl)
+selectCodeEditor("SPI.v", 310, 201, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 226, 264); // cl (w, cl)
+selectCodeEditor("SPI.v", 433, 193); // cl (w, cl)
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 18 seconds
+selectCodeEditor("SPI.v", 568, 196); // cl (w, cl)
+selectCodeEditor("SPI.v", 568, 196, false, false, false, false, true); // cl (w, cl) - Double Click
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("SPI.v", 763, 229); // cl (w, cl)
+selectCodeEditor("SPI.v", 567, 192); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 12 seconds
+selectCodeEditor("SPI.v", 290, 441); // cl (w, cl)
+// Elapsed time: 13 seconds
+selectCodeEditor("SPI.v", 237, 138); // cl (w, cl)
+selectCodeEditor("SPI.v", 237, 138, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 353, 193); // cl (w, cl)
+selectCodeEditor("SPI.v", 353, 193, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 241, 105); // cl (w, cl)
+selectCodeEditor("SPI.v", 241, 105, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 242, 100); // cl (w, cl)
+selectCodeEditor("SPI.v", 242, 100, false, false, false, false, true); // cl (w, cl) - Double Click
+// Elapsed time: 14 seconds
+selectCodeEditor("SPI.v", 240, 311); // cl (w, cl)
+selectCodeEditor("SPI.v", 240, 311, false, false, false, false, true); // cl (w, cl) - Double Click
+typeControlKey((HResource) null, "SPI.v", 'c'); // cl (w, cl)
+selectCodeEditor("SPI.v", 347, 360); // cl (w, cl)
+selectCodeEditor("SPI.v", 358, 355); // cl (w, cl)
+typeControlKey((HResource) null, "SPI.v", 'v'); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 11 seconds
+selectCodeEditor("SPI.v", 301, 220); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 15 seconds
+selectCodeEditor("SPI.v", 389, 334); // cl (w, cl)
+selectCodeEditor("SPI.v", 336, 231); // cl (w, cl)
+selectCodeEditor("SPI.v", 319, 232); // cl (w, cl)
+selectCodeEditor("SPI.v", 185, 232); // cl (w, cl)
+selectCodeEditor("SPI.v", 190, 221); // cl (w, cl)
+selectCodeEditor("SPI.v", 190, 221, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 201, 205); // cl (w, cl)
+selectCodeEditor("SPI.v", 201, 205, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 250, 257); // cl (w, cl)
+selectCodeEditor("SPI.v", 331, 255); // cl (w, cl)
+selectCodeEditor("SPI.v", 356, 365); // cl (w, cl)
+selectCodeEditor("SPI.v", 341, 382); // cl (w, cl)
+selectCodeEditor("SPI.v", 344, 382, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 229, 388); // cl (w, cl)
+selectCodeEditor("SPI.v", 287, 387); // cl (w, cl)
+selectCodeEditor("SPI.v", 287, 387, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 362, 382); // cl (w, cl)
+selectCodeEditor("SPI.v", 362, 382, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 273, 388); // cl (w, cl)
+selectCodeEditor("SPI.v", 234, 416); // cl (w, cl)
+selectCodeEditor("SPI.v", 195, 346); // cl (w, cl)
+typeControlKey((HResource) null, "SPI.v", 'c'); // cl (w, cl)
+selectCodeEditor("SPI.v", 238, 420); // cl (w, cl)
+typeControlKey((HResource) null, "SPI.v", 'v'); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 229 seconds
+selectCodeEditor("SPI.v", 110, 445); // cl (w, cl)
+selectCodeEditor("SPI.v", 181, 270); // cl (w, cl)
+selectCodeEditor("SPI.v", 181, 270, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 171, 252); // cl (w, cl)
+selectCodeEditor("SPI.v", 111, 163); // cl (w, cl)
+selectCodeEditor("SPI.v", 109, 171); // cl (w, cl)
+selectCodeEditor("SPI.v", 109, 171, false, false, false, false, true); // cl (w, cl) - Double Click
+// Elapsed time: 183 seconds
+selectCodeEditor("SPI.v", 389, 321); // cl (w, cl)
+// Elapsed time: 74 seconds
+selectCodeEditor("SPI.v", 230, 241); // cl (w, cl)
+selectCodeEditor("SPI.v", 134, 283); // cl (w, cl)
+selectCodeEditor("SPI.v", 139, 277); // cl (w, cl)
+selectCodeEditor("SPI.v", 166, 267); // cl (w, cl)
+selectCodeEditor("SPI.v", 166, 267, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 162, 251); // cl (w, cl)
+selectCodeEditor("SPI.v", 157, 251); // cl (w, cl)
+selectCodeEditor("SPI.v", 157, 251, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 157, 251); // cl (w, cl)
+selectCodeEditor("SPI.v", 152, 234); // cl (w, cl)
+selectCodeEditor("SPI.v", 152, 234, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 150, 219); // cl (w, cl)
+selectCodeEditor("SPI.v", 150, 219, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 236, 334); // cl (w, cl)
+selectCodeEditor("SPI.v", 412, 292); // cl (w, cl)
+selectCodeEditor("SPI.v", 454, 247); // cl (w, cl)
+selectCodeEditor("SPI.v", 387, 309); // cl (w, cl)
+selectCodeEditor("SPI.v", 387, 309, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 428, 290); // cl (w, cl)
+selectCodeEditor("SPI.v", 428, 290, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 428, 290); // cl (w, cl)
+selectCodeEditor("SPI.v", 543, 313); // cl (w, cl)
+selectCodeEditor("SPI.v", 287, 313); // cl (w, cl)
+selectCodeEditor("SPI.v", 287, 313, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 229, 343); // cl (w, cl)
+selectCodeEditor("SPI.v", 229, 343, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 232, 363); // cl (w, cl)
+selectCodeEditor("SPI.v", 232, 363, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 355, 378); // cl (w, cl)
+selectCodeEditor("SPI.v", 251, 403); // cl (w, cl)
+selectCodeEditor("SPI.v", 251, 403, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 251, 391); // cl (w, cl)
+selectCodeEditor("SPI.v", 251, 391, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 429, 152); // cl (w, cl)
+selectCodeEditor("SPI.v", 150, 129); // cl (w, cl)
+selectCodeEditor("SPI.v", 150, 129, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 247, 179); // cl (w, cl)
+selectCodeEditor("SPI.v", 304, 193); // cl (w, cl)
+selectCodeEditor("SPI.v", 304, 193, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 281, 232); // cl (w, cl)
+selectCodeEditor("SPI.v", 337, 226); // cl (w, cl)
+selectCodeEditor("SPI.v", 337, 226, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 210, 192); // cl (w, cl)
+selectCodeEditor("SPI.v", 210, 192, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 350, 198); // cl (w, cl)
+selectCodeEditor("SPI.v", 350, 198, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 242, 434); // cl (w, cl)
+selectCodeEditor("SPI.v", 241, 454); // cl (w, cl)
+selectCodeEditor("SPI.v", 241, 477); // cl (w, cl)
+selectCodeEditor("SPI.v", 245, 472); // cl (w, cl)
+// Elapsed time: 18 seconds
+selectCodeEditor("SPI.v", 167, 181); // cl (w, cl)
+typeControlKey((HResource) null, "SPI.v", 'c'); // cl (w, cl)
+selectCodeEditor("SPI.v", 215, 455); // cl (w, cl)
+selectCodeEditor("SPI.v", 215, 469); // cl (w, cl)
+typeControlKey((HResource) null, "SPI.v", 'v'); // cl (w, cl)
+selectCodeEditor("SPI.v", 274, 326); // cl (w, cl)
+selectCodeEditor("SPI.v", 274, 326, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 331, 357); // cl (w, cl)
+selectCodeEditor("SPI.v", 323, 407); // cl (w, cl)
+selectCodeEditor("SPI.v", 327, 376); // cl (w, cl)
+selectCodeEditor("SPI.v", 482, 368); // cl (w, cl)
+selectCodeEditor("SPI.v", 481, 389); // cl (w, cl)
+// Elapsed time: 12 seconds
+selectCodeEditor("SPI.v", 301, 311); // cl (w, cl)
+selectCodeEditor("SPI.v", 311, 311); // cl (w, cl)
+// Elapsed time: 24 seconds
+selectCodeEditor("SPI.v", 271, 284); // cl (w, cl)
+selectCodeEditor("SPI.v", 271, 284, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 289, 255); // cl (w, cl)
+selectCodeEditor("SPI.v", 289, 255, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 295, 251); // cl (w, cl)
+selectCodeEditor("SPI.v", 295, 251, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 255, 372); // cl (w, cl)
+selectCodeEditor("SPI.v", 255, 372, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 311, 415); // cl (w, cl)
+// Elapsed time: 12 seconds
+selectCodeEditor("SPI.v", 266, 298); // cl (w, cl)
+selectCodeEditor("SPI.v", 266, 298, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 181, 297); // cl (w, cl)
+selectCodeEditor("SPI.v", 181, 297, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 286, 298); // cl (w, cl)
+selectCodeEditor("SPI.v", 286, 298, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 352, 299); // cl (w, cl)
+selectCodeEditor("SPI.v", 352, 299, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 307, 331); // cl (w, cl)
+selectCodeEditor("SPI.v", 307, 331, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 289, 381); // cl (w, cl)
+selectCodeEditor("SPI.v", 251, 366); // cl (w, cl)
+selectCodeEditor("SPI.v", 251, 366, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 277, 386); // cl (w, cl)
+selectCodeEditor("SPI.v", 277, 386, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 485, 382); // cl (w, cl)
+selectCodeEditor("SPI.v", 485, 382, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 338, 382); // cl (w, cl)
+selectCodeEditor("SPI.v", 252, 298); // cl (w, cl)
+selectCodeEditor("SPI.v", 255, 277); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 19 seconds
+selectCodeEditor("SPI.v", 280, 278); // cl (w, cl)
+selectCodeEditor("SPI.v", 280, 278, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 386, 248); // cl (w, cl)
+selectCodeEditor("SPI.v", 386, 248, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 270, 440); // cl (w, cl)
+selectCodeEditor("SPI.v", 273, 426); // cl (w, cl)
+selectCodeEditor("SPI.v", 286, 323); // cl (w, cl)
+selectCodeEditor("SPI.v", 199, 166); // cl (w, cl)
+selectCodeEditor("SPI.v", 193, 140); // cl (w, cl)
+selectCodeEditor("SPI.v", 193, 140, false, false, false, false, true); // cl (w, cl) - Double Click
+typeControlKey((HResource) null, "SPI.v", 'c'); // cl (w, cl)
+typeControlKey((HResource) null, "SPI.v", 'c'); // cl (w, cl)
+selectCodeEditor("SPI.v", 236, 289); // cl (w, cl)
+selectCodeEditor("SPI.v", 262, 222); // cl (w, cl)
+selectCodeEditor("SPI.v", 313, 365); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+typeControlKey((HResource) null, "SPI.v", 'v'); // cl (w, cl)
+// HMemoryUtils.trashcanNow. Engine heap size: 724 MB. GUI used memory: 52 MB. Current time: 11/13/20, 4:46:49 PM EST
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 13 seconds
+selectCodeEditor("SPI.v", 504, 336); // cl (w, cl)
+selectCodeEditor("SPI.v", 486, 350); // cl (w, cl)
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking 742351ms to process. Increasing delay to 2000 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  742372 ms.
+// Elapsed time: 1409 seconds
+selectCodeEditor("SPI.v", 215, 248); // cl (w, cl)
+// HMemoryUtils.trashcanNow. Engine heap size: 724 MB. GUI used memory: 52 MB. Current time: 11/13/20, 5:16:52 PM EST
+// Elapsed time: 452 seconds
+selectCodeEditor("SPI.v", 392, 399); // cl (w, cl)
+selectCodeEditor("SPI.v", 204, 334); // cl (w, cl)
+selectCodeEditor("SPI.v", 204, 334, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 186, 370); // cl (w, cl)
+selectCodeEditor("SPI.v", 186, 370, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 234, 399); // cl (w, cl)
+selectCodeEditor("SPI.v", 234, 399, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 187, 122); // cl (w, cl)
+selectCodeEditor("SPI.v", 121, 90); // cl (w, cl)
+selectCodeEditor("SPI.v", 125, 117); // cl (w, cl)
+selectCodeEditor("SPI.v", 125, 117, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 179, 151); // cl (w, cl)
+selectCodeEditor("SPI.v", 179, 151, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 179, 368); // cl (w, cl)
+selectCodeEditor("SPI.v", 179, 368, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 165, 49); // cl (w, cl)
+selectCodeEditor("SPI.v", 165, 49, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 207, 207); // cl (w, cl)
+selectCodeEditor("SPI.v", 207, 207, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 235, 364); // cl (w, cl)
+selectCodeEditor("SPI.v", 235, 364, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 272, 313); // cl (w, cl)
+selectCodeEditor("SPI.v", 272, 313, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 319, 153); // cl (w, cl)
+selectCodeEditor("SPI.v", 118, 100); // cl (w, cl)
+selectCodeEditor("SPI.v", 140, 93); // cl (w, cl)
+selectCodeEditor("SPI.v", 99, 99); // cl (w, cl)
+selectCodeEditor("SPI.v", 99, 99, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 278, 322); // cl (w, cl)
+selectCodeEditor("SPI.v", 417, 286); // cl (w, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Utility Sources]", 6, true); // B (F, cl) - Node
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 5); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1]", 6, true); // B (F, cl) - Node
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1]", 6); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb (tb.v)]", 7, true); // B (F, cl) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb (tb.v)]", 7, true, false, false, false, false, true); // B (F, cl) - Double Click - Node
+selectCodeEditor("tb.v", 284, 200); // cl (w, cl)
+selectCodeEditor("tb.v", 418, 423); // cl (w, cl)
+selectCodeEditor("tb.v", 168, 212); // cl (w, cl)
+selectCodeEditor("tb.v", 199, 245); // cl (w, cl)
+// WARNING: HEventQueue.dispatchEvent() is taking  61382 ms.
+// Elapsed time: 723 seconds
+selectCodeEditor("tb.v", 231, 305); // cl (w, cl)
+selectCodeEditor("tb.v", 168, 287); // cl (w, cl)
+selectCodeEditor("tb.v", 136, 305); // cl (w, cl)
+selectCodeEditor("tb.v", 132, 325); // cl (w, cl)
+selectCodeEditor("tb.v", 132, 325, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("tb.v", 122, 327); // cl (w, cl)
+selectCodeEditor("tb.v", 122, 327, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("tb.v", 136, 342); // cl (w, cl)
+selectCodeEditor("tb.v", 136, 342, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("tb.v", 341, 393); // cl (w, cl)
+selectCodeEditor("tb.v", 172, 372); // cl (w, cl)
+selectCodeEditor("tb.v", 336, 196); // cl (w, cl)
+// Elapsed time: 22 seconds
+selectCodeEditor("tb.v", 416, 307); // cl (w, cl)
+selectCodeEditor("tb.v", 472, 323); // cl (w, cl)
+selectCodeEditor("tb.v", 408, 288); // cl (w, cl)
+// Elapsed time: 11 seconds
+selectCodeEditor("tb.v", 365, 347); // cl (w, cl)
+selectCodeEditor("tb.v", 326, 221); // cl (w, cl)
+// Elapsed time: 285 seconds
+selectCodeEditor("tb.v", 232, 163); // cl (w, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "SPI.v", 0); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Buffer_FIFO.v", 1); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "SPI.v", 0); // k (j, cl)
+selectCodeEditor("SPI.v", 369, 299); // cl (w, cl)
+selectCodeEditor("SPI.v", 195, 88); // cl (w, cl)
+selectCodeEditor("SPI.v", 281, 90); // cl (w, cl)
+selectCodeEditor("SPI.v", 89, 123); // cl (w, cl)
+selectCodeEditor("SPI.v", 89, 123, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 129, 117); // cl (w, cl)
+selectCodeEditor("SPI.v", 129, 117, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 175, 206); // cl (w, cl)
+selectCodeEditor("SPI.v", 175, 206, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 82, 127); // cl (w, cl)
+selectCodeEditor("SPI.v", 209, 254); // cl (w, cl)
+selectCodeEditor("SPI.v", 209, 254, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 154, 232); // cl (w, cl)
+selectCodeEditor("SPI.v", 154, 232, false, false, false, false, true); // cl (w, cl) - Double Click
+// Elapsed time: 17 seconds
+selectCodeEditor("SPI.v", 236, 255); // cl (w, cl)
+selectCodeEditor("SPI.v", 236, 255, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 246, 244); // cl (w, cl)
+selectCodeEditor("SPI.v", 246, 244, false, false, false, false, true); // cl (w, cl) - Double Click
+// Elapsed time: 10 seconds
+selectCodeEditor("SPI.v", 171, 110); // cl (w, cl)
+selectCodeEditor("SPI.v", 171, 110, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 300, 361); // cl (w, cl)
+selectCodeEditor("SPI.v", 143, 207); // cl (w, cl)
+selectCodeEditor("SPI.v", 143, 207, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 143, 207); // cl (w, cl)
+selectCodeEditor("SPI.v", 143, 207); // cl (w, cl)
+selectCodeEditor("SPI.v", 143, 207); // cl (w, cl)
+selectCodeEditor("SPI.v", 111, 177); // cl (w, cl)
+selectCodeEditor("SPI.v", 111, 177, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 139, 205); // cl (w, cl)
+selectCodeEditor("SPI.v", 139, 205, false, false, false, false, true); // cl (w, cl) - Double Click
+// Elapsed time: 49 seconds
+selectCodeEditor("SPI.v", 586, 282); // cl (w, cl)
+selectCodeEditor("SPI.v", 370, 388); // cl (w, cl)
+// Elapsed time: 11 seconds
+selectCodeEditor("SPI.v", 146, 232); // cl (w, cl)
+selectCodeEditor("SPI.v", 146, 232, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 115, 241); // cl (w, cl)
+selectCodeEditor("SPI.v", 115, 241, false, false, false, false, true); // cl (w, cl) - Double Click
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "tb.v", 3); // k (j, cl)
+selectCodeEditor("tb.v", 448, 242); // cl (w, cl)
+// Elapsed time: 178 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "SPI.v", 0); // k (j, cl)
+selectCodeEditor("SPI.v", 249, 263); // cl (w, cl)
+selectCodeEditor("SPI.v", 166, 129); // cl (w, cl)
+selectCodeEditor("SPI.v", 166, 129, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 127, 149); // cl (w, cl)
+selectCodeEditor("SPI.v", 127, 149, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 258, 383); // cl (w, cl)
+selectCodeEditor("SPI.v", 258, 383, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 242, 280); // cl (w, cl)
+selectCodeEditor("SPI.v", 242, 280, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 216, 269); // cl (w, cl)
+selectCodeEditor("SPI.v", 216, 269, false, false, false, false, true); // cl (w, cl) - Double Click
+// Elapsed time: 11 seconds
+selectCodeEditor("SPI.v", 194, 355); // cl (w, cl)
+selectCodeEditor("SPI.v", 194, 355, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 174, 387); // cl (w, cl)
+selectCodeEditor("SPI.v", 174, 387); // cl (w, cl)
+// Elapsed time: 93 seconds
+selectCodeEditor("SPI.v", 170, 360); // cl (w, cl)
+selectCodeEditor("SPI.v", 292, 366); // cl (w, cl)
+selectCodeEditor("SPI.v", 292, 366); // cl (w, cl)
+// Elapsed time: 27 seconds
+selectCodeEditor("SPI.v", 495, 280); // cl (w, cl)
+selectCodeEditor("SPI.v", 495, 280); // cl (w, cl)
+// Elapsed time: 11 seconds
+selectCodeEditor("SPI.v", 619, 234); // cl (w, cl)
+selectCodeEditor("SPI.v", 437, 228); // cl (w, cl)
+selectCodeEditor("SPI.v", 150, 151); // cl (w, cl)
+// Elapsed time: 10 seconds
+selectCodeEditor("SPI.v", 203, 152); // cl (w, cl)
+selectCodeEditor("SPI.v", 242, 151); // cl (w, cl)
+selectCodeEditor("SPI.v", 135, 184); // cl (w, cl)
+selectCodeEditor("SPI.v", 135, 184, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 242, 184); // cl (w, cl)
+selectCodeEditor("SPI.v", 148, 216); // cl (w, cl)
+selectCodeEditor("SPI.v", 148, 216, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 139, 224); // cl (w, cl)
+selectCodeEditor("SPI.v", 139, 224, false, false, false, false, true); // cl (w, cl) - Double Click
+// Elapsed time: 13 seconds
+selectCodeEditor("SPI.v", 112, 251); // cl (w, cl)
+selectCodeEditor("SPI.v", 112, 251, false, false, false, false, true); // cl (w, cl) - Double Click
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Buffer_FIFO.v", 1); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "SPI.v", 0); // k (j, cl)
+selectCodeEditor("SPI.v", 321, 181); // cl (w, cl)
+selectCodeEditor("SPI.v", 166, 187); // cl (w, cl)
+selectCodeEditor("SPI.v", 116, 205); // cl (w, cl)
+selectCodeEditor("SPI.v", 128, 199); // cl (w, cl)
+selectCodeEditor("SPI.v", 128, 199, false, false, false, false, true); // cl (w, cl) - Double Click
+// Elapsed time: 14 seconds
+selectCodeEditor("SPI.v", 187, 211); // cl (w, cl)
+selectCodeEditor("SPI.v", 187, 211, false, false, false, false, true); // cl (w, cl) - Double Click
+// Elapsed time: 19 seconds
+selectCodeEditor("SPI.v", 277, 216); // cl (w, cl)
+selectCodeEditor("SPI.v", 214, 183); // cl (w, cl)
+selectCodeEditor("SPI.v", 214, 183, false, false, false, false, true); // cl (w, cl) - Double Click
+// Elapsed time: 24 seconds
+selectCodeEditor("SPI.v", 245, 192); // cl (w, cl)
+// HMemoryUtils.trashcanNow. Engine heap size: 724 MB. GUI used memory: 53 MB. Current time: 11/13/20, 5:46:53 PM EST
+// Elapsed time: 190 seconds
+selectCodeEditor("SPI.v", 334, 237); // cl (w, cl)
+// Elapsed time: 47 seconds
+selectCodeEditor("SPI.v", 358, 245); // cl (w, cl)
+// Elapsed time: 10 seconds
+selectCodeEditor("SPI.v", 266, 275); // cl (w, cl)
+selectCodeEditor("SPI.v", 160, 271); // cl (w, cl)
+selectCodeEditor("SPI.v", 164, 270, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 187, 291); // cl (w, cl)
+selectCodeEditor("SPI.v", 193, 266); // cl (w, cl)
+selectCodeEditor("SPI.v", 193, 266, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 86, 220); // cl (w, cl)
+selectCodeEditor("SPI.v", 368, 277); // cl (w, cl)
+selectCodeEditor("SPI.v", 374, 276); // cl (w, cl)
+selectCodeEditor("SPI.v", 387, 258); // cl (w, cl)
+selectCodeEditor("SPI.v", 232, 215); // cl (w, cl)
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // B (f, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("SPI.v", 168, 231); // cl (w, cl)
+selectCodeEditor("SPI.v", 168, 231, false, false, false, false, true); // cl (w, cl) - Double Click
+// Elapsed time: 12 seconds
+selectCodeEditor("SPI.v", 177, 162); // cl (w, cl)
+selectCodeEditor("SPI.v", 177, 162, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 187, 294); // cl (w, cl)
+selectCodeEditor("SPI.v", 187, 294, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 366, 252); // cl (w, cl)
+selectCodeEditor("SPI.v", 366, 252, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 325, 262); // cl (w, cl)
+selectCodeEditor("SPI.v", 175, 283); // cl (w, cl)
+selectCodeEditor("SPI.v", 175, 283, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 267, 277); // cl (w, cl)
+selectCodeEditor("SPI.v", 267, 277, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 361, 275); // cl (w, cl)
+selectCodeEditor("SPI.v", 361, 275, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 204, 319); // cl (w, cl)
+selectCodeEditor("SPI.v", 391, 305); // cl (w, cl)
+selectCodeEditor("SPI.v", 311, 307); // cl (w, cl)
+selectCodeEditor("SPI.v", 289, 320); // cl (w, cl)
+selectCodeEditor("SPI.v", 289, 320, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 238, 345); // cl (w, cl)
+selectCodeEditor("SPI.v", 238, 345, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 297, 357); // cl (w, cl)
+selectCodeEditor("SPI.v", 288, 360); // cl (w, cl)
+selectCodeEditor("SPI.v", 288, 360, false, false, false, false, true); // cl (w, cl) - Double Click
+// Elapsed time: 17 seconds
+selectCodeEditor("SPI.v", 222, 314); // cl (w, cl)
+selectCodeEditor("SPI.v", 222, 314, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 225, 343); // cl (w, cl)
+selectCodeEditor("SPI.v", 225, 343, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 344, 312); // cl (w, cl)
+selectCodeEditor("SPI.v", 344, 312, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 231, 402); // cl (w, cl)
+selectCodeEditor("SPI.v", 231, 402, false, false, false, false, true); // cl (w, cl) - Double Click
+// Elapsed time: 16 seconds
+selectCodeEditor("SPI.v", 300, 259); // cl (w, cl)
+selectCodeEditor("SPI.v", 306, 259); // cl (w, cl)
+selectCodeEditor("SPI.v", 306, 259, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 414, 261); // cl (w, cl)
+selectCodeEditor("SPI.v", 423, 260); // cl (w, cl)
+selectCodeEditor("SPI.v", 306, 156); // cl (w, cl)
+selectCodeEditor("SPI.v", 273, 226); // cl (w, cl)
+selectCodeEditor("SPI.v", 253, 222); // cl (w, cl)
+selectCodeEditor("SPI.v", 253, 228); // cl (w, cl)
+selectCodeEditor("SPI.v", 320, 340); // cl (w, cl)
+selectCodeEditor("SPI.v", 309, 309); // cl (w, cl)
+// Elapsed time: 13 seconds
+selectCodeEditor("SPI.v", 591, 187); // cl (w, cl)
+selectCodeEditor("SPI.v", 627, 244); // cl (w, cl)
+selectCodeEditor("SPI.v", 424, 358); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("SPI.v", 581, 345); // cl (w, cl)
+// Elapsed time: 189 seconds
+selectCodeEditor("SPI.v", 148, 221); // cl (w, cl)
+selectCodeEditor("SPI.v", 148, 221, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 149, 191); // cl (w, cl)
+selectCodeEditor("SPI.v", 135, 208); // cl (w, cl)
+selectCodeEditor("SPI.v", 135, 208, false, false, false, false, true); // cl (w, cl) - Double Click
+// Elapsed time: 87 seconds
+selectCodeEditor("SPI.v", 673, 156); // cl (w, cl)
+// HMemoryUtils.trashcanNow. Engine heap size: 724 MB. GUI used memory: 53 MB. Current time: 11/13/20, 6:16:54 PM EST
+// Elapsed time: 1144 seconds
+selectCodeEditor("SPI.v", 109, 221); // cl (w, cl)
+selectCodeEditor("SPI.v", 259, 248); // cl (w, cl)
+selectCodeEditor("SPI.v", 259, 248, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 175, 216); // cl (w, cl)
+selectCodeEditor("SPI.v", 175, 216, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 175, 216); // cl (w, cl)
+selectCodeEditor("SPI.v", 76, 210); // cl (w, cl)
+selectCodeEditor("SPI.v", 14, 365); // cl (w, cl)
+selectCodeEditor("SPI.v", 110, 161); // cl (w, cl)
+selectCodeEditor("SPI.v", 37, 430); // cl (w, cl)
+// Elapsed time: 34 seconds
+selectCodeEditor("SPI.v", 264, 307); // cl (w, cl)
+selectCodeEditor("SPI.v", 142, 302); // cl (w, cl)
+selectCodeEditor("SPI.v", 142, 302, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 181, 370); // cl (w, cl)
+selectCodeEditor("SPI.v", 181, 370, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 296, 330); // cl (w, cl)
+selectCodeEditor("SPI.v", 553, 313); // cl (w, cl)
+selectCodeEditor("SPI.v", 136, 233); // cl (w, cl)
+selectCodeEditor("SPI.v", 136, 233, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 219, 200); // cl (w, cl)
+selectCodeEditor("SPI.v", 219, 200, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 219, 200); // cl (w, cl)
+selectCodeEditor("SPI.v", 219, 200, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 219, 200); // cl (w, cl)
+selectCodeEditor("SPI.v", 224, 217); // cl (w, cl)
+selectCodeEditor("SPI.v", 135, 403); // cl (w, cl)
+selectCodeEditor("SPI.v", 163, 301); // cl (w, cl)
+selectCodeEditor("SPI.v", 197, 109); // cl (w, cl)
+selectCodeEditor("SPI.v", 184, 453); // cl (w, cl)
+selectCodeEditor("SPI.v", 669, 414); // cl (w, cl)
+// WARNING: HEventQueue.dispatchEvent() is taking  1120 ms.
+selectCodeEditor("SPI.v", 393, 232); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("SPI.v", 399, 277); // cl (w, cl)
+selectCodeEditor("SPI.v", 253, 151); // cl (w, cl)
+selectCodeEditor("SPI.v", 181, 79); // cl (w, cl)
+selectCodeEditor("SPI.v", 316, 60); // cl (w, cl)
+// Elapsed time: 23 seconds
+selectCodeEditor("SPI.v", 136, 285); // cl (w, cl)
+selectCodeEditor("SPI.v", 136, 285, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 86, 97); // cl (w, cl)
+selectCodeEditor("SPI.v", 107, 117); // cl (w, cl)
+selectCodeEditor("SPI.v", 107, 117, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 107, 121); // cl (w, cl)
+selectCodeEditor("SPI.v", 107, 121); // cl (w, cl)
+selectCodeEditor("SPI.v", 107, 125); // cl (w, cl)
+selectCodeEditor("SPI.v", 107, 125, false, false, false, false, true); // cl (w, cl) - Double Click
+typeControlKey((HResource) null, "SPI.v", 'c'); // cl (w, cl)
+selectCodeEditor("SPI.v", 105, 84); // cl (w, cl)
+selectCodeEditor("SPI.v", 105, 84, false, false, false, false, true); // cl (w, cl) - Double Click
+typeControlKey((HResource) null, "SPI.v", 'v'); // cl (w, cl)
+selectCodeEditor("SPI.v", 161, 272); // cl (w, cl)
+selectCodeEditor("SPI.v", 161, 272, false, false, false, false, true); // cl (w, cl) - Double Click
+typeControlKey((HResource) null, "SPI.v", 'c'); // cl (w, cl)
+selectCodeEditor("SPI.v", 111, 107); // cl (w, cl)
+selectCodeEditor("SPI.v", 111, 100); // cl (w, cl)
+typeControlKey((HResource) null, "SPI.v", 'v'); // cl (w, cl)
+// Elapsed time: 11 seconds
+selectCodeEditor("SPI.v", 119, 267); // cl (w, cl)
+selectCodeEditor("SPI.v", 119, 267, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 253, 429); // cl (w, cl)
+selectCodeEditor("SPI.v", 253, 429, false, false, false, false, true); // cl (w, cl) - Double Click
+typeControlKey((HResource) null, "SPI.v", 'c'); // cl (w, cl)
+selectCodeEditor("SPI.v", 143, 163); // cl (w, cl)
+typeControlKey((HResource) null, "SPI.v", 'v'); // cl (w, cl)
+// Run Command: RDIResourceCommand.RDICommands_UNSELECT_ALL
+selectCodeEditor("SPI.v", 345, 157); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("SPI.v", 157, 298); // cl (w, cl)
+selectCodeEditor("SPI.v", 157, 298, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 507, 378); // cl (w, cl)
+selectCodeEditor("SPI.v", 124, 284); // cl (w, cl)
+selectCodeEditor("SPI.v", 124, 284, false, false, false, false, true); // cl (w, cl) - Double Click
+typeControlKey((HResource) null, "SPI.v", 'c'); // cl (w, cl)
+selectCodeEditor("SPI.v", 215, 174); // cl (w, cl)
+typeControlKey((HResource) null, "SPI.v", 'v'); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("SPI.v", 136, 174); // cl (w, cl)
+selectCodeEditor("SPI.v", 136, 174, false, false, false, false, true); // cl (w, cl) - Double Click
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 58 seconds
+selectCodeEditor("SPI.v", 193, 228); // cl (w, cl)
+selectCodeEditor("SPI.v", 145, 304); // cl (w, cl)
+selectCodeEditor("SPI.v", 145, 304, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 143, 312); // cl (w, cl)
+selectCodeEditor("SPI.v", 143, 312, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 114, 165); // cl (w, cl)
+selectCodeEditor("SPI.v", 94, 174); // cl (w, cl)
+selectCodeEditor("SPI.v", 94, 174, false, false, false, false, true); // cl (w, cl) - Double Click
+// Elapsed time: 11 seconds
+selectCodeEditor("SPI.v", 86, 277); // cl (w, cl)
+selectCodeEditor("SPI.v", 81, 250); // cl (w, cl)
+selectCodeEditor("SPI.v", 84, 286); // cl (w, cl)
+selectCodeEditor("SPI.v", 129, 211); // cl (w, cl)
+selectCodeEditor("SPI.v", 129, 211, false, false, false, false, true); // cl (w, cl) - Double Click
+// Elapsed time: 11 seconds
+selectCodeEditor("SPI.v", 142, 255); // cl (w, cl)
+selectCodeEditor("SPI.v", 73, 282); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("SPI.v", 86, 277); // cl (w, cl)
+selectCodeEditor("SPI.v", 217, 280); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 30 seconds
+selectCodeEditor("SPI.v", 80, 279); // cl (w, cl)
+// Elapsed time: 15 seconds
+selectCodeEditor("SPI.v", 129, 181); // cl (w, cl)
+selectCodeEditor("SPI.v", 125, 275); // cl (w, cl)
+selectCodeEditor("SPI.v", 125, 275, false, false, false, false, true); // cl (w, cl) - Double Click
+typeControlKey((HResource) null, "SPI.v", 'c'); // cl (w, cl)
+selectCodeEditor("SPI.v", 129, 176); // cl (w, cl)
+typeControlKey((HResource) null, "SPI.v", 'v'); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 12 seconds
+selectCodeEditor("SPI.v", 172, 303); // cl (w, cl)
+selectCodeEditor("SPI.v", 164, 312); // cl (w, cl)
+selectCodeEditor("SPI.v", 164, 312, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 111, 82); // cl (w, cl)
+selectCodeEditor("SPI.v", 111, 82, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 122, 293); // cl (w, cl)
+selectCodeEditor("SPI.v", 122, 293, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 186, 274); // cl (w, cl)
+selectCodeEditor("SPI.v", 184, 382); // cl (w, cl)
+selectCodeEditor("SPI.v", 184, 382, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 214, 444); // cl (w, cl)
+selectCodeEditor("SPI.v", 240, 430); // cl (w, cl)
+selectCodeEditor("SPI.v", 240, 430, false, false, false, false, true); // cl (w, cl) - Double Click
+typeControlKey((HResource) null, "SPI.v", 'c'); // cl (w, cl)
+selectCodeEditor("SPI.v", 252, 223); // cl (w, cl)
+selectCodeEditor("SPI.v", 256, 216); // cl (w, cl)
+typeControlKey((HResource) null, "SPI.v", 'v'); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("SPI.v", 317, 102); // cl (w, cl)
+typeControlKey((HResource) null, "SPI.v", 'v'); // cl (w, cl)
+// Elapsed time: 43 seconds
+selectCodeEditor("SPI.v", 246, 272); // cl (w, cl)
+selectCodeEditor("SPI.v", 169, 292); // cl (w, cl)
+selectCodeEditor("SPI.v", 94, 125); // cl (w, cl)
+selectCodeEditor("SPI.v", 104, 118); // cl (w, cl)
+selectCodeEditor("SPI.v", 163, 282); // cl (w, cl)
+selectCodeEditor("SPI.v", 206, 258); // cl (w, cl)
+selectCodeEditor("SPI.v", 209, 242); // cl (w, cl)
+selectCodeEditor("SPI.v", 161, 197); // cl (w, cl)
+selectCodeEditor("SPI.v", 161, 197, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 152, 91); // cl (w, cl)
+selectCodeEditor("SPI.v", 150, 76); // cl (w, cl)
+selectCodeEditor("SPI.v", 150, 76, false, false, false, false, true); // cl (w, cl) - Double Click
+// Elapsed time: 21 seconds
+selectCodeEditor("SPI.v", 109, 299); // cl (w, cl)
+selectCodeEditor("SPI.v", 109, 299, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 117, 310); // cl (w, cl)
+selectCodeEditor("SPI.v", 117, 310, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 122, 299); // cl (w, cl)
+selectCodeEditor("SPI.v", 122, 299, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 122, 318); // cl (w, cl)
+selectCodeEditor("SPI.v", 122, 318, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 122, 296); // cl (w, cl)
+selectCodeEditor("SPI.v", 122, 296, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 225, 417); // cl (w, cl)
+selectCodeEditor("SPI.v", 225, 417, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 95, 200); // cl (w, cl)
+selectCodeEditor("SPI.v", 95, 200, false, false, false, false, true); // cl (w, cl) - Double Click
+// Elapsed time: 163 seconds
+selectCodeEditor("SPI.v", 190, 354); // cl (w, cl)
+selectCodeEditor("SPI.v", 73, 190); // cl (w, cl)
+selectCodeEditor("SPI.v", 109, 84); // cl (w, cl)
+selectCodeEditor("SPI.v", 109, 84, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 147, 59); // cl (w, cl)
+selectCodeEditor("SPI.v", 147, 59, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 257, 248); // cl (w, cl)
+// Elapsed time: 20 seconds
+selectCodeEditor("SPI.v", 217, 310); // cl (w, cl)
+// Elapsed time: 13 seconds
+selectCodeEditor("SPI.v", 355, 292); // cl (w, cl)
+selectCodeEditor("SPI.v", 355, 292); // cl (w, cl)
+selectCodeEditor("SPI.v", 106, 391); // cl (w, cl)
+selectCodeEditor("SPI.v", 106, 391, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 181, 383); // cl (w, cl)
+selectCodeEditor("SPI.v", 306, 383); // cl (w, cl)
+selectCodeEditor("SPI.v", 174, 357); // cl (w, cl)
+selectCodeEditor("SPI.v", 276, 354); // cl (w, cl)
+// Elapsed time: 17 seconds
+selectCodeEditor("SPI.v", 282, 269); // cl (w, cl)
+selectCodeEditor("SPI.v", 282, 269); // cl (w, cl)
+selectCodeEditor("SPI.v", 282, 269); // cl (w, cl)
+selectCodeEditor("SPI.v", 282, 269); // cl (w, cl)
+selectCodeEditor("SPI.v", 182, 327); // cl (w, cl)
+selectCodeEditor("SPI.v", 210, 334); // cl (w, cl)
+// Elapsed time: 19 seconds
+selectCodeEditor("SPI.v", 134, 82); // cl (w, cl)
+selectCodeEditor("SPI.v", 134, 82, false, false, false, false, true); // cl (w, cl) - Double Click
+// Elapsed time: 10 seconds
+selectCodeEditor("SPI.v", 172, 82); // cl (w, cl)
+selectCodeEditor("SPI.v", 172, 82, false, false, false, false, true); // cl (w, cl) - Double Click
+// Elapsed time: 177 seconds
+selectCodeEditor("SPI.v", 285, 326); // cl (w, cl)
+selectCodeEditor("SPI.v", 267, 372); // cl (w, cl)
+selectCodeEditor("SPI.v", 252, 400); // cl (w, cl)
+selectCodeEditor("SPI.v", 252, 400, false, false, false, false, true); // cl (w, cl) - Double Click
+// Elapsed time: 11 seconds
+selectCodeEditor("SPI.v", 273, 340); // cl (w, cl)
+selectCodeEditor("SPI.v", 273, 340, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 217, 390); // cl (w, cl)
+selectCodeEditor("SPI.v", 217, 390, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 211, 400); // cl (w, cl)
+selectCodeEditor("SPI.v", 211, 400, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 106, 402); // cl (w, cl)
+selectCodeEditor("SPI.v", 106, 402, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 254, 402); // cl (w, cl)
+selectCodeEditor("SPI.v", 254, 402, false, false, false, false, true); // cl (w, cl) - Double Click
+// Elapsed time: 19 seconds
+selectCodeEditor("SPI.v", 365, 292); // cl (w, cl)
+selectCodeEditor("SPI.v", 307, 308); // cl (w, cl)
+// Elapsed time: 30 seconds
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // B (f, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 23 seconds
+selectCodeEditor("SPI.v", 510, 294); // cl (w, cl)
+// Elapsed time: 13 seconds
+selectCodeEditor("SPI.v", 527, 323); // cl (w, cl)
+selectCodeEditor("SPI.v", 267, 312); // cl (w, cl)
+selectCodeEditor("SPI.v", 410, 304); // cl (w, cl)
+// Elapsed time: 119 seconds
+selectCodeEditor("SPI.v", 152, 391); // cl (w, cl)
+// Elapsed time: 61 seconds
+selectCodeEditor("SPI.v", 241, 319); // cl (w, cl)
+selectCodeEditor("SPI.v", 263, 372); // cl (w, cl)
+selectCodeEditor("SPI.v", 208, 347); // cl (w, cl)
+selectCodeEditor("SPI.v", 160, 156); // cl (w, cl)
+selectCodeEditor("SPI.v", 160, 156, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 157, 150); // cl (w, cl)
+selectCodeEditor("SPI.v", 135, 225); // cl (w, cl)
+selectCodeEditor("SPI.v", 135, 225, false, false, false, false, true); // cl (w, cl) - Double Click
+// Elapsed time: 14 seconds
+selectCodeEditor("SPI.v", 222, 214); // cl (w, cl)
+selectCodeEditor("SPI.v", 222, 230); // cl (w, cl)
+selectCodeEditor("SPI.v", 204, 251); // cl (w, cl)
+selectCodeEditor("SPI.v", 135, 226); // cl (w, cl)
+selectCodeEditor("SPI.v", 135, 226, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 127, 180); // cl (w, cl)
+selectCodeEditor("SPI.v", 127, 180, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 179, 235); // cl (w, cl)
+selectCodeEditor("SPI.v", 179, 235, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 99, 235); // cl (w, cl)
+selectCodeEditor("SPI.v", 99, 235, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 130, 327); // cl (w, cl)
+selectCodeEditor("SPI.v", 130, 327, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 131, 432); // cl (w, cl)
+selectCodeEditor("SPI.v", 131, 432, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 119, 401); // cl (w, cl)
+selectCodeEditor("SPI.v", 119, 401, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 131, 443); // cl (w, cl)
+selectCodeEditor("SPI.v", 131, 443, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 166, 421); // cl (w, cl)
+selectCodeEditor("SPI.v", 149, 434); // cl (w, cl)
+selectCodeEditor("SPI.v", 149, 434, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 169, 355); // cl (w, cl)
+selectCodeEditor("SPI.v", 169, 355, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 240, 335); // cl (w, cl)
+selectCodeEditor("SPI.v", 252, 357); // cl (w, cl)
+// Elapsed time: 28 seconds
+selectCodeEditor("SPI.v", 361, 281); // cl (w, cl)
+selectCodeEditor("SPI.v", 241, 368); // cl (w, cl)
+// Elapsed time: 13 seconds
+selectCodeEditor("SPI.v", 129, 124); // cl (w, cl)
+selectCodeEditor("SPI.v", 129, 124, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 382, 135); // cl (w, cl)
+selectCodeEditor("SPI.v", 120, 172); // cl (w, cl)
+selectCodeEditor("SPI.v", 120, 172, false, false, false, false, true); // cl (w, cl) - Double Click
+// Elapsed time: 11 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb (tb.v), u_SPI : SPI (SPI.v)]", 8, true, false, false, false, true, false); // B (F, cl) - Popup Trigger - Node
+selectCodeEditor("SPI.v", 205, 174); // cl (w, cl)
+selectCodeEditor("SPI.v", 246, 216); // cl (w, cl)
+selectCodeEditor("SPI.v", 301, 274); // cl (w, cl)
+selectCodeEditor("SPI.v", 312, 271); // cl (w, cl)
+selectCodeEditor("SPI.v", 142, 171); // cl (w, cl)
+selectCodeEditor("SPI.v", 124, 179); // cl (w, cl)
+selectCodeEditor("SPI.v", 124, 179, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 86, 193); // cl (w, cl)
+selectCodeEditor("SPI.v", 85, 150); // cl (w, cl)
+selectCodeEditor("SPI.v", 85, 150, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 95, 148); // cl (w, cl)
+selectCodeEditor("SPI.v", 95, 148, false, false, false, false, true); // cl (w, cl) - Double Click
+// Elapsed time: 25 seconds
+selectCodeEditor("SPI.v", 192, 315); // cl (w, cl)
+selectCodeEditor("SPI.v", 203, 315); // cl (w, cl)
+selectCodeEditor("SPI.v", 203, 315, false, false, false, false, true); // cl (w, cl) - Double Click
+// Elapsed time: 22 seconds
+selectCodeEditor("SPI.v", 239, 320); // cl (w, cl)
+selectCodeEditor("SPI.v", 239, 320, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 194, 318); // cl (w, cl)
+selectCodeEditor("SPI.v", 284, 256); // cl (w, cl)
+selectCodeEditor("SPI.v", 321, 195); // cl (w, cl)
+selectCodeEditor("SPI.v", 321, 195, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 232, 319); // cl (w, cl)
+// Elapsed time: 11 seconds
+selectCodeEditor("SPI.v", 126, 192); // cl (w, cl)
+selectCodeEditor("SPI.v", 126, 192, false, false, false, false, true); // cl (w, cl) - Double Click
+// Elapsed time: 14 seconds
+selectCodeEditor("SPI.v", 196, 266); // cl (w, cl)
+selectCodeEditor("SPI.v", 196, 266, false, false, false, false, true); // cl (w, cl) - Double Click
+// Elapsed time: 18 seconds
+selectCodeEditor("SPI.v", 428, 299); // cl (w, cl)
+selectCodeEditor("SPI.v", 428, 299, false, false, false, false, true); // cl (w, cl) - Double Click
+// Elapsed time: 11 seconds
+selectCodeEditor("SPI.v", 223, 215); // cl (w, cl)
+selectCodeEditor("SPI.v", 223, 215, false, false, false, false, true); // cl (w, cl) - Double Click
+// Elapsed time: 12 seconds
+selectCodeEditor("SPI.v", 428, 254); // cl (w, cl)
+selectCodeEditor("SPI.v", 428, 254, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 292, 252); // cl (w, cl)
+selectCodeEditor("SPI.v", 292, 252, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 415, 250); // cl (w, cl)
+selectCodeEditor("SPI.v", 415, 250, false, false, false, false, true); // cl (w, cl) - Double Click
+// Elapsed time: 14 seconds
+selectCodeEditor("SPI.v", 197, 414); // cl (w, cl)
+selectCodeEditor("SPI.v", 197, 414, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 213, 412); // cl (w, cl)
+selectCodeEditor("SPI.v", 213, 412, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 333, 410); // cl (w, cl)
+selectCodeEditor("SPI.v", 333, 410, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 193, 311); // cl (w, cl)
+selectCodeEditor("SPI.v", 193, 311, false, false, false, false, true); // cl (w, cl) - Double Click
+// Elapsed time: 81 seconds
+selectCodeEditor("SPI.v", 259, 403); // cl (w, cl)
+selectCodeEditor("SPI.v", 218, 475); // cl (w, cl)
+selectCodeEditor("SPI.v", 218, 475, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 274, 358); // cl (w, cl)
+selectCodeEditor("SPI.v", 274, 358, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 229, 249); // cl (w, cl)
+selectCodeEditor("SPI.v", 229, 249, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 211, 205); // cl (w, cl)
+selectCodeEditor("SPI.v", 211, 205, false, false, false, false, true); // cl (w, cl) - Double Click
+// Elapsed time: 13 seconds
+selectCodeEditor("SPI.v", 212, 309); // cl (w, cl)
+selectCodeEditor("SPI.v", 212, 309, false, false, false, false, true); // cl (w, cl) - Double Click
+// Elapsed time: 29 seconds
+selectCodeEditor("SPI.v", 780, 349); // cl (w, cl)
+selectCodeEditor("SPI.v", 408, 245); // cl (w, cl)
+// HMemoryUtils.trashcanNow. Engine heap size: 724 MB. GUI used memory: 54 MB. Current time: 11/13/20, 6:46:54 PM EST
+// Elapsed time: 17 seconds
+selectCodeEditor("SPI.v", 1121, 309); // cl (w, cl)
+selectCodeEditor("SPI.v", 624, 241); // cl (w, cl)
+selectCodeEditor("SPI.v", 497, 272); // cl (w, cl)
+selectCodeEditor("SPI.v", 268, 289); // cl (w, cl)
+selectCodeEditor("SPI.v", 315, 292); // cl (w, cl)
+// Elapsed time: 10 seconds
+selectCodeEditor("SPI.v", 398, 286); // cl (w, cl)
+selectCodeEditor("SPI.v", 343, 279); // cl (w, cl)
+// WARNING: HEventQueue.dispatchEvent() is taking  900019 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  2989921 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1093 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 724 MB. GUI used memory: 54 MB. Current time: 11/13/20, 8:02:43 PM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 724 MB. GUI used memory: 53 MB. Current time: 11/13/20, 8:32:42 PM EST
+// WARNING: HEventQueue.dispatchEvent() is taking  200639 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 724 MB. GUI used memory: 53 MB. Current time: 11/13/20, 9:02:42 PM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 724 MB. GUI used memory: 53 MB. Current time: 11/13/20, 9:32:43 PM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 724 MB. GUI used memory: 53 MB. Current time: 11/13/20, 10:17:20 PM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 724 MB. GUI used memory: 53 MB. Current time: 11/13/20, 10:47:21 PM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 724 MB. GUI used memory: 53 MB. Current time: 11/13/20, 11:17:21 PM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 724 MB. GUI used memory: 53 MB. Current time: 11/13/20, 11:47:21 PM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 724 MB. GUI used memory: 53 MB. Current time: 11/14/20, 12:17:21 AM EST
+// WARNING: HEventQueue.dispatchEvent() is taking  213095 ms.
+// Elapsed time: 21295 seconds
+selectCodeEditor("SPI.v", 348, 333); // cl (w, cl)
+// HMemoryUtils.trashcanNow. Engine heap size: 724 MB. GUI used memory: 53 MB. Current time: 11/14/20, 1:01:18 AM EST
+// WARNING: HEventQueue.dispatchEvent() is taking  31360764 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 724 MB. GUI used memory: 53 MB. Current time: 11/14/20, 9:44:06 AM EST
+// WARNING: HEventQueue.dispatchEvent() is taking  1265 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 724 MB. GUI used memory: 53 MB. Current time: 11/14/20, 10:14:07 AM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 724 MB. GUI used memory: 53 MB. Current time: 11/14/20, 10:44:07 AM EST
+// WARNING: HEventQueue.dispatchEvent() is taking  900079 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  405484 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 724 MB. GUI used memory: 53 MB. Current time: 11/14/20, 11:14:07 AM EST
+// WARNING: HEventQueue.dispatchEvent() is taking  899530 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 724 MB. GUI used memory: 53 MB. Current time: 11/14/20, 12:19:23 PM EST
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 1407 ms. Increasing delay to 4221 ms.
+// Elapsed time: 42398 seconds
+selectCodeEditor("SPI.v", 358, 244); // cl (w, cl)
+selectCodeEditor("SPI.v", 153, 269); // cl (w, cl)
+selectCodeEditor("SPI.v", 140, 332); // cl (w, cl)
+selectCodeEditor("SPI.v", 139, 319); // cl (w, cl)
+// Elapsed time: 366 seconds
+selectCodeEditor("SPI.v", 252, 256); // cl (w, cl)
+selectCodeEditor("SPI.v", 153, 170); // cl (w, cl)
+selectCodeEditor("SPI.v", 176, 170); // cl (w, cl)
+selectCodeEditor("SPI.v", 176, 170, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 183, 174); // cl (w, cl)
+// Elapsed time: 83 seconds
+selectCodeEditor("SPI.v", 309, 159); // cl (w, cl)
+// Elapsed time: 84 seconds
+selectCodeEditor("SPI.v", 535, 302); // cl (w, cl)
+// Elapsed time: 179 seconds
+selectCodeEditor("SPI.v", 258, 233); // cl (w, cl)
+// Elapsed time: 10 seconds
+selectCodeEditor("SPI.v", 176, 191); // cl (w, cl)
+selectCodeEditor("SPI.v", 95, 232); // cl (w, cl)
+selectCodeEditor("SPI.v", 95, 232, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 223, 271); // cl (w, cl)
+// Elapsed time: 23 seconds
+selectCodeEditor("SPI.v", 310, 166); // cl (w, cl)
+selectCodeEditor("SPI.v", 146, 172); // cl (w, cl)
+selectCodeEditor("SPI.v", 146, 172, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 157, 156); // cl (w, cl)
+selectCodeEditor("SPI.v", 157, 156, false, false, false, false, true); // cl (w, cl) - Double Click
+// Elapsed time: 33 seconds
+selectCodeEditor("SPI.v", 160, 291); // cl (w, cl)
+selectCodeEditor("SPI.v", 160, 291, false, false, false, false, true); // cl (w, cl) - Double Click
+// Elapsed time: 12 seconds
+selectCodeEditor("SPI.v", 284, 308); // cl (w, cl)
+// Elapsed time: 10 seconds
+selectCodeEditor("SPI.v", 158, 301); // cl (w, cl)
+selectCodeEditor("SPI.v", 131, 188); // cl (w, cl)
+selectCodeEditor("SPI.v", 131, 188, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 130, 185); // cl (w, cl)
+selectCodeEditor("SPI.v", 129, 185, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 121, 254); // cl (w, cl)
+selectCodeEditor("SPI.v", 123, 264); // cl (w, cl)
+selectCodeEditor("SPI.v", 123, 264, false, false, false, false, true); // cl (w, cl) - Double Click
+// Elapsed time: 32 seconds
+selectCodeEditor("SPI.v", 175, 268); // cl (w, cl)
+selectCodeEditor("SPI.v", 144, 285); // cl (w, cl)
+selectCodeEditor("SPI.v", 153, 282); // cl (w, cl)
+selectCodeEditor("SPI.v", 153, 282, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 456, 277); // cl (w, cl)
+// Elapsed time: 14 seconds
+selectCodeEditor("SPI.v", 191, 223); // cl (w, cl)
+selectCodeEditor("SPI.v", 177, 190); // cl (w, cl)
+selectCodeEditor("SPI.v", 177, 190, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 175, 167); // cl (w, cl)
+selectCodeEditor("SPI.v", 169, 171); // cl (w, cl)
+selectCodeEditor("SPI.v", 169, 171, false, false, false, false, true); // cl (w, cl) - Double Click
+// Elapsed time: 11 seconds
+selectCodeEditor("SPI.v", 230, 267); // cl (w, cl)
+selectCodeEditor("SPI.v", 230, 267, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 236, 323); // cl (w, cl)
+selectCodeEditor("SPI.v", 268, 305); // cl (w, cl)
+selectCodeEditor("SPI.v", 271, 323); // cl (w, cl)
+selectCodeEditor("SPI.v", 283, 315); // cl (w, cl)
+selectCodeEditor("SPI.v", 283, 315, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 371, 311); // cl (w, cl)
+selectCodeEditor("SPI.v", 371, 311, false, false, false, false, true); // cl (w, cl) - Double Click
+// Elapsed time: 123 seconds
+selectCodeEditor("SPI.v", 371, 311); // cl (w, cl)
+// Elapsed time: 18 seconds
+selectCodeEditor("SPI.v", 240, 306); // cl (w, cl)
+selectCodeEditor("SPI.v", 240, 306, false, false, false, false, true); // cl (w, cl) - Double Click
+// Elapsed time: 60 seconds
+selectCodeEditor("SPI.v", 346, 229); // cl (w, cl)
+selectCodeEditor("SPI.v", 334, 196); // cl (w, cl)
+selectCodeEditor("SPI.v", 334, 196, false, false, false, false, true); // cl (w, cl) - Double Click
+// HMemoryUtils.trashcanNow. Engine heap size: 724 MB. GUI used memory: 53 MB. Current time: 11/14/20, 12:49:22 PM EST
+// Elapsed time: 160 seconds
+selectCodeEditor("SPI.v", 288, 400); // cl (w, cl)
+selectCodeEditor("SPI.v", 240, 408); // cl (w, cl)
+selectCodeEditor("SPI.v", 240, 408, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 241, 395); // cl (w, cl)
+selectCodeEditor("SPI.v", 241, 395, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 333, 422); // cl (w, cl)
+selectCodeEditor("SPI.v", 333, 422, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 271, 464); // cl (w, cl)
+// WARNING: HEventQueue.dispatchEvent() is taking  434211 ms.
+// Elapsed time: 1442 seconds
+selectCodeEditor("SPI.v", 461, 262); // cl (w, cl)
+// Elapsed time: 231 seconds
+selectCodeEditor("SPI.v", 346, 272); // cl (w, cl)
+// HMemoryUtils.trashcanNow. Engine heap size: 724 MB. GUI used memory: 53 MB. Current time: 11/14/20, 1:19:23 PM EST
+// Elapsed time: 564 seconds
+selectCodeEditor("SPI.v", 408, 305); // cl (w, cl)
+selectCodeEditor("SPI.v", 563, 343); // cl (w, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Buffer_FIFO.v", 1); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "FIFO_Ram.v", 2); // k (j, cl)
+selectCodeEditor("FIFO_Ram.v", 288, 109); // cl (w, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Buffer_FIFO.v", 1); // k (j, cl)
+selectCodeEditor("Buffer_FIFO.v", 289, 180); // cl (w, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "SPI.v", 0); // k (j, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, SPI (SPI.v)]", 3, true); // B (F, cl) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, SPI (SPI.v)]", 3, true, false, false, false, false, true); // B (F, cl) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, SPI (SPI.v), u_REGS : Regs (Regs.v)]", 4, false); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, SPI (SPI.v), u_REGS : Regs (Regs.v)]", 4, false, false, false, false, false, true); // B (F, cl) - Double Click
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "SPI.v", 0); // k (j, cl)
+// Elapsed time: 1022 seconds
+selectCodeEditor("SPI.v", 161, 321); // cl (w, cl)
+selectCodeEditor("SPI.v", 119, 197); // cl (w, cl)
+selectCodeEditor("SPI.v", 137, 235); // cl (w, cl)
+selectCodeEditor("SPI.v", 137, 235, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 252, 309); // cl (w, cl)
+selectCodeEditor("SPI.v", 277, 266); // cl (w, cl)
+selectCodeEditor("SPI.v", 277, 266, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 312, 323); // cl (w, cl)
+selectCodeEditor("SPI.v", 312, 323, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 321, 319); // cl (w, cl)
+selectCodeEditor("SPI.v", 321, 319, false, false, false, false, true); // cl (w, cl) - Double Click
+// Elapsed time: 33 seconds
+selectCodeEditor("SPI.v", 484, 93); // cl (w, cl)
+// HMemoryUtils.trashcanNow. Engine heap size: 724 MB. GUI used memory: 53 MB. Current time: 11/14/20, 1:49:24 PM EST
+// Elapsed time: 651 seconds
+selectCodeEditor("SPI.v", 140, 225); // cl (w, cl)
+// Elapsed time: 14 seconds
+selectCodeEditor("SPI.v", 284, 341); // cl (w, cl)
+selectCodeEditor("SPI.v", 298, 282); // cl (w, cl)
+selectCodeEditor("SPI.v", 139, 112); // cl (w, cl)
+selectCodeEditor("SPI.v", 139, 112, false, false, false, false, true); // cl (w, cl) - Double Click
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 724 MB. GUI used memory: 53 MB. Current time: 11/14/20, 2:19:23 PM EST
+// Elapsed time: 2041 seconds
+selectCodeEditor("SPI.v", 421, 291); // cl (w, cl)
+// Elapsed time: 170 seconds
+selectCodeEditor("SPI.v", 208, 359); // cl (w, cl)
+selectCodeEditor("SPI.v", 213, 367); // cl (w, cl)
+selectCodeEditor("SPI.v", 281, 361); // cl (w, cl)
+selectCodeEditor("SPI.v", 142, 320); // cl (w, cl)
+selectCodeEditor("SPI.v", 123, 328); // cl (w, cl)
+selectCodeEditor("SPI.v", 123, 328, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 147, 309); // cl (w, cl)
+selectCodeEditor("SPI.v", 147, 309, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 76, 281); // cl (w, cl)
+selectCodeEditor("SPI.v", 70, 303); // cl (w, cl)
+selectCodeEditor("SPI.v", 189, 350); // cl (w, cl)
+selectCodeEditor("SPI.v", 189, 350, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 116, 188); // cl (w, cl)
+selectCodeEditor("SPI.v", 116, 188, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 143, 409); // cl (w, cl)
+selectCodeEditor("SPI.v", 143, 409, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 141, 346); // cl (w, cl)
+selectCodeEditor("SPI.v", 141, 346, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 198, 298); // cl (w, cl)
+selectCodeEditor("SPI.v", 367, 298); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 724 MB. GUI used memory: 53 MB. Current time: 11/14/20, 2:49:24 PM EST
+// WARNING: HEventQueue.dispatchEvent() is taking  899852 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 724 MB. GUI used memory: 54 MB. Current time: 11/14/20, 6:07:15 PM EST
+// WARNING: HEventQueue.dispatchEvent() is taking  3143 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  899564 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  3731 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 724 MB. GUI used memory: 53 MB. Current time: 11/14/20, 6:38:06 PM EST
+// WARNING: HEventQueue.dispatchEvent() is taking  5973656 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 724 MB. GUI used memory: 53 MB. Current time: 11/14/20, 8:17:45 PM EST
+// WARNING: HEventQueue.dispatchEvent() is taking  899551 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  34810 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 35415 ms. Increasing delay to 106245 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 724 MB. GUI used memory: 53 MB. Current time: 11/14/20, 8:47:45 PM EST
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 2 ms. Decreasing delay to 2002 ms.
+// Elapsed time: 22777 seconds
+selectCodeEditor("SPI.v", 382, 185); // cl (w, cl)
+// Elapsed time: 16 seconds
+selectCodeEditor("SPI.v", 294, 412); // cl (w, cl)
+// Elapsed time: 17 seconds
+selectCodeEditor("SPI.v", 252, 273); // cl (w, cl)
+selectCodeEditor("SPI.v", 259, 340); // cl (w, cl)
+selectCodeEditor("SPI.v", 271, 315); // cl (w, cl)
+selectCodeEditor("SPI.v", 133, 137); // cl (w, cl)
+selectCodeEditor("SPI.v", 292, 138); // cl (w, cl)
+selectCodeEditor("SPI.v", 233, 150); // cl (w, cl)
+selectCodeEditor("SPI.v", 205, 181); // cl (w, cl)
+selectCodeEditor("SPI.v", 262, 285); // cl (w, cl)
+selectCodeEditor("SPI.v", 254, 305); // cl (w, cl)
+selectCodeEditor("SPI.v", 228, 296); // cl (w, cl)
+selectCodeEditor("SPI.v", 228, 296, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 364, 331); // cl (w, cl)
+selectCodeEditor("SPI.v", 338, 215); // cl (w, cl)
+selectCodeEditor("SPI.v", 183, 199); // cl (w, cl)
+selectCodeEditor("SPI.v", 183, 199, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 93, 190); // cl (w, cl)
+selectCodeEditor("SPI.v", 103, 170); // cl (w, cl)
+selectCodeEditor("SPI.v", 130, 243); // cl (w, cl)
+selectCodeEditor("SPI.v", 217, 259); // cl (w, cl)
+selectCodeEditor("SPI.v", 203, 348); // cl (w, cl)
+selectCodeEditor("SPI.v", 215, 436); // cl (w, cl)
+selectCodeEditor("SPI.v", 216, 391); // cl (w, cl)
+selectCodeEditor("SPI.v", 87, 293); // cl (w, cl)
+selectCodeEditor("SPI.v", 33, 213); // cl (w, cl)
+selectCodeEditor("SPI.v", 25, 206); // cl (w, cl)
+typeControlKey((HResource) null, "SPI.v", 'c'); // cl (w, cl)
+selectCodeEditor("SPI.v", 86, 122); // cl (w, cl)
+typeControlKey((HResource) null, "SPI.v", 'v'); // cl (w, cl)
+selectCodeEditor("SPI.v", 207, 131); // cl (w, cl)
+selectCodeEditor("SPI.v", 207, 131, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 272, 125); // cl (w, cl)
+selectCodeEditor("SPI.v", 229, 130); // cl (w, cl)
+selectCodeEditor("SPI.v", 250, 126); // cl (w, cl)
+selectCodeEditor("SPI.v", 250, 126, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 207, 160); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("SPI.v", 201, 99); // cl (w, cl)
+// Elapsed time: 237 seconds
+selectCodeEditor("SPI.v", 161, 142); // cl (w, cl)
+selectCodeEditor("SPI.v", 132, 181); // cl (w, cl)
+selectCodeEditor("SPI.v", 137, 168); // cl (w, cl)
+// Elapsed time: 18 seconds
+selectCodeEditor("SPI.v", 307, 310); // cl (w, cl)
+selectCodeEditor("SPI.v", 288, 319); // cl (w, cl)
+selectCodeEditor("SPI.v", 146, 203); // cl (w, cl)
+selectCodeEditor("SPI.v", 254, 171); // cl (w, cl)
+selectCodeEditor("SPI.v", 252, 199); // cl (w, cl)
+selectCodeEditor("SPI.v", 230, 238); // cl (w, cl)
+selectCodeEditor("SPI.v", 206, 317); // cl (w, cl)
+selectCodeEditor("SPI.v", 237, 314); // cl (w, cl)
+selectCodeEditor("SPI.v", 168, 325); // cl (w, cl)
+selectCodeEditor("SPI.v", 263, 298); // cl (w, cl)
+selectCodeEditor("SPI.v", 250, 310); // cl (w, cl)
+selectCodeEditor("SPI.v", 326, 269); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("SPI.v", 245, 308); // cl (w, cl)
+selectCodeEditor("SPI.v", 169, 397); // cl (w, cl)
+selectCodeEditor("SPI.v", 187, 363); // cl (w, cl)
+selectCodeEditor("SPI.v", 100, 210); // cl (w, cl)
+selectCodeEditor("SPI.v", 67, 308); // cl (w, cl)
+typeControlKey((HResource) null, "SPI.v", 'c'); // cl (w, cl)
+selectCodeEditor("SPI.v", 49, 229); // cl (w, cl)
+selectCodeEditor("SPI.v", 52, 218); // cl (w, cl)
+typeControlKey((HResource) null, "SPI.v", 'v'); // cl (w, cl)
+selectCodeEditor("SPI.v", 146, 242); // cl (w, cl)
+selectCodeEditor("SPI.v", 345, 211); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("SPI.v", 246, 289); // cl (w, cl)
+selectCodeEditor("SPI.v", 200, 210); // cl (w, cl)
+selectCodeEditor("SPI.v", 305, 181); // cl (w, cl)
+selectCodeEditor("SPI.v", 340, 179); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+selectCodeEditor("SPI.v", 389, 253); // cl (w, cl)
+selectCodeEditor("SPI.v", 278, 227); // cl (w, cl)
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 55 seconds
+selectCodeEditor("SPI.v", 415, 314); // cl (w, cl)
+selectCodeEditor("SPI.v", 328, 272); // cl (w, cl)
+selectCodeEditor("SPI.v", 328, 269, false, false, false, false, true); // cl (w, cl) - Double Click
+// Elapsed time: 37 seconds
+selectCodeEditor("SPI.v", 403, 460); // cl (w, cl)
+selectCodeEditor("SPI.v", 314, 355); // cl (w, cl)
+selectCodeEditor("SPI.v", 317, 271); // cl (w, cl)
+// Elapsed time: 24 seconds
+selectCodeEditor("SPI.v", 352, 315); // cl (w, cl)
+selectCodeEditor("SPI.v", 344, 226); // cl (w, cl)
+selectCodeEditor("SPI.v", 96, 324); // cl (w, cl)
+selectCodeEditor("SPI.v", 105, 314); // cl (w, cl)
+// Elapsed time: 12 seconds
+selectCodeEditor("SPI.v", 54, 285); // cl (w, cl)
+typeControlKey((HResource) null, "SPI.v", 'c'); // cl (w, cl)
+selectCodeEditor("SPI.v", 158, 275); // cl (w, cl)
+selectCodeEditor("SPI.v", 163, 253); // cl (w, cl)
+selectCodeEditor("SPI.v", 161, 259); // cl (w, cl)
+typeControlKey((HResource) null, "SPI.v", 'v'); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("SPI.v", 280, 356); // cl (w, cl)
+selectCodeEditor("SPI.v", 160, 373); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 11 seconds
+selectCodeEditor("SPI.v", 172, 349); // cl (w, cl)
+selectCodeEditor("SPI.v", 253, 335); // cl (w, cl)
+selectCodeEditor("SPI.v", 239, 286); // cl (w, cl)
+selectCodeEditor("SPI.v", 239, 286, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 270, 330); // cl (w, cl)
+selectCodeEditor("SPI.v", 136, 350); // cl (w, cl)
+selectCodeEditor("SPI.v", 211, 216); // cl (w, cl)
+selectCodeEditor("SPI.v", 204, 182); // cl (w, cl)
+// Elapsed time: 10 seconds
+selectCodeEditor("SPI.v", 286, 174); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("SPI.v", 222, 360); // cl (w, cl)
+selectCodeEditor("SPI.v", 280, 298); // cl (w, cl)
+selectCodeEditor("SPI.v", 202, 317); // cl (w, cl)
+selectCodeEditor("SPI.v", 202, 317, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 271, 311); // cl (w, cl)
+selectCodeEditor("SPI.v", 271, 311, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 409, 311); // cl (w, cl)
+selectCodeEditor("SPI.v", 409, 311, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 215, 319); // cl (w, cl)
+selectCodeEditor("SPI.v", 215, 319, false, false, false, false, true); // cl (w, cl) - Double Click
+// Elapsed time: 115 seconds
+selectCodeEditor("SPI.v", 371, 321); // cl (w, cl)
+selectCodeEditor("SPI.v", 265, 283); // cl (w, cl)
+selectCodeEditor("SPI.v", 200, 150); // cl (w, cl)
+selectCodeEditor("SPI.v", 202, 135); // cl (w, cl)
+selectCodeEditor("SPI.v", 216, 219); // cl (w, cl)
+selectCodeEditor("SPI.v", 82, 143); // cl (w, cl)
+typeControlKey((HResource) null, "SPI.v", 'c'); // cl (w, cl)
+selectCodeEditor("SPI.v", 169, 367); // cl (w, cl)
+typeControlKey((HResource) null, "SPI.v", 'c'); // cl (w, cl)
+selectCodeEditor("SPI.v", 152, 325); // cl (w, cl)
+selectCodeEditor("SPI.v", 146, 348); // cl (w, cl)
+selectCodeEditor("SPI.v", 135, 361); // cl (w, cl)
+typeControlKey((HResource) null, "SPI.v", 'v'); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 32 seconds
+selectCodeEditor("SPI.v", 210, 247); // cl (w, cl)
+selectCodeEditor("SPI.v", 287, 348); // cl (w, cl)
+selectCodeEditor("SPI.v", 192, 275); // cl (w, cl)
+selectCodeEditor("SPI.v", 192, 275, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 309, 290); // cl (w, cl)
+// Elapsed time: 10 seconds
+selectCodeEditor("SPI.v", 255, 303); // cl (w, cl)
+selectCodeEditor("SPI.v", 208, 235); // cl (w, cl)
+selectCodeEditor("SPI.v", 197, 249); // cl (w, cl)
+// Elapsed time: 15 seconds
+selectCodeEditor("SPI.v", 355, 380); // cl (w, cl)
+// Elapsed time: 19 seconds
+selectCodeEditor("SPI.v", 297, 273); // cl (w, cl)
+selectCodeEditor("SPI.v", 223, 312); // cl (w, cl)
+selectCodeEditor("SPI.v", 163, 354); // cl (w, cl)
+selectCodeEditor("SPI.v", 190, 263); // cl (w, cl)
+selectCodeEditor("SPI.v", 190, 263, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 313, 260); // cl (w, cl)
+selectCodeEditor("SPI.v", 313, 260, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 335, 324); // cl (w, cl)
+selectCodeEditor("SPI.v", 242, 330); // cl (w, cl)
+selectCodeEditor("SPI.v", 247, 289); // cl (w, cl)
+// Elapsed time: 36 seconds
+selectCodeEditor("SPI.v", 194, 300); // cl (w, cl)
+// Elapsed time: 13 seconds
+selectCodeEditor("SPI.v", 207, 234); // cl (w, cl)
+selectCodeEditor("SPI.v", 207, 234, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 314, 335); // cl (w, cl)
+selectCodeEditor("SPI.v", 289, 312); // cl (w, cl)
+selectCodeEditor("SPI.v", 233, 344); // cl (w, cl)
+selectCodeEditor("SPI.v", 225, 445); // cl (w, cl)
+selectCodeEditor("SPI.v", 229, 434); // cl (w, cl)
+selectCodeEditor("SPI.v", 211, 103); // cl (w, cl)
+selectCodeEditor("SPI.v", 323, 227); // cl (w, cl)
+selectCodeEditor("SPI.v", 275, 280); // cl (w, cl)
+selectCodeEditor("SPI.v", 246, 292); // cl (w, cl)
+selectCodeEditor("SPI.v", 425, 211); // cl (w, cl)
+selectCodeEditor("SPI.v", 433, 186); // cl (w, cl)
+selectCodeEditor("SPI.v", 415, 196); // cl (w, cl)
+selectCodeEditor("SPI.v", 170, 216); // cl (w, cl)
+selectCodeEditor("SPI.v", 170, 216, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 146, 243); // cl (w, cl)
+selectCodeEditor("SPI.v", 156, 233); // cl (w, cl)
+selectCodeEditor("SPI.v", 156, 233, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 317, 169); // cl (w, cl)
+selectCodeEditor("SPI.v", 290, 191); // cl (w, cl)
+selectCodeEditor("SPI.v", 304, 183); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 13 seconds
+selectCodeEditor("SPI.v", 125, 194); // cl (w, cl)
+selectCodeEditor("SPI.v", 125, 194, false, false, false, false, true); // cl (w, cl) - Double Click
+typeControlKey((HResource) null, "SPI.v", 'c'); // cl (w, cl)
+selectCodeEditor("SPI.v", 180, 323); // cl (w, cl)
+selectCodeEditor("SPI.v", 196, 302); // cl (w, cl)
+selectCodeEditor("SPI.v", 184, 307); // cl (w, cl)
+typeControlKey((HResource) null, "SPI.v", 'v'); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("SPI.v", 281, 397); // cl (w, cl)
+selectCodeEditor("SPI.v", 249, 423); // cl (w, cl)
+// Elapsed time: 12 seconds
+selectCodeEditor("SPI.v", 205, 326); // cl (w, cl)
+selectCodeEditor("SPI.v", 205, 326, false, false, false, false, true); // cl (w, cl) - Double Click
+typeControlKey((HResource) null, "SPI.v", 'c'); // cl (w, cl)
+selectCodeEditor("SPI.v", 253, 339); // cl (w, cl)
+selectCodeEditor("SPI.v", 347, 371); // cl (w, cl)
+selectCodeEditor("SPI.v", 208, 230); // cl (w, cl)
+selectCodeEditor("SPI.v", 236, 140); // cl (w, cl)
+selectCodeEditor("SPI.v", 338, 157); // cl (w, cl)
+selectCodeEditor("SPI.v", 381, 163); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 22 seconds
+selectCodeEditor("SPI.v", 52, 178); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 50 seconds
+selectCodeEditor("SPI.v", 154, 173); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("SPI.v", 161, 178); // cl (w, cl)
+selectCodeEditor("SPI.v", 210, 178); // cl (w, cl)
+selectCodeEditor("SPI.v", 164, 173); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("SPI.v", 104, 186); // cl (w, cl)
+selectCodeEditor("SPI.v", 104, 186, false, false, false, false, true); // cl (w, cl) - Double Click
+typeControlKey((HResource) null, "SPI.v", 'c'); // cl (w, cl)
+selectCodeEditor("SPI.v", 210, 270); // cl (w, cl)
+selectCodeEditor("SPI.v", 306, 283); // cl (w, cl)
+typeControlKey((HResource) null, "SPI.v", 'v'); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 16 seconds
+selectCodeEditor("SPI.v", 158, 361); // cl (w, cl)
+selectCodeEditor("SPI.v", 189, 343); // cl (w, cl)
+selectCodeEditor("SPI.v", 102, 251); // cl (w, cl)
+selectCodeEditor("SPI.v", 102, 251, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 222, 241); // cl (w, cl)
+selectCodeEditor("SPI.v", 129, 237); // cl (w, cl)
+selectCodeEditor("SPI.v", 129, 237, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 108, 250); // cl (w, cl)
+selectCodeEditor("SPI.v", 108, 250, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 205, 250); // cl (w, cl)
+selectCodeEditor("SPI.v", 126, 251); // cl (w, cl)
+selectCodeEditor("SPI.v", 126, 251, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 122, 251); // cl (w, cl)
+selectCodeEditor("SPI.v", 122, 251); // cl (w, cl)
+selectCodeEditor("SPI.v", 124, 250); // cl (w, cl)
+selectCodeEditor("SPI.v", 130, 250); // cl (w, cl)
+selectCodeEditor("SPI.v", 130, 250); // cl (w, cl)
+selectCodeEditor("SPI.v", 204, 249); // cl (w, cl)
+selectCodeEditor("SPI.v", 130, 251); // cl (w, cl)
+selectCodeEditor("SPI.v", 130, 251); // cl (w, cl)
+selectCodeEditor("SPI.v", 130, 251, false, false, false, false, true); // cl (w, cl) - Double Click
+typeControlKey((HResource) null, "SPI.v", 'c'); // cl (w, cl)
+selectCodeEditor("SPI.v", 102, 126); // cl (w, cl)
+selectCodeEditor("SPI.v", 102, 126, false, false, false, false, true); // cl (w, cl) - Double Click
+typeControlKey((HResource) null, "SPI.v", 'v'); // cl (w, cl)
+selectCodeEditor("SPI.v", 254, 142); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("SPI.v", 291, 200); // cl (w, cl)
+selectCodeEditor("SPI.v", 235, 248); // cl (w, cl)
+selectCodeEditor("SPI.v", 188, 345); // cl (w, cl)
+typeControlKey((HResource) null, "SPI.v", 'v'); // cl (w, cl)
+selectCodeEditor("SPI.v", 152, 187); // cl (w, cl)
+selectCodeEditor("SPI.v", 152, 180); // cl (w, cl)
+selectCodeEditor("SPI.v", 152, 180, false, false, false, false, true); // cl (w, cl) - Double Click
+typeControlKey((HResource) null, "SPI.v", 'v'); // cl (w, cl)
+typeControlKey(null, null, 'z');
+selectCodeEditor("SPI.v", 152, 177); // cl (w, cl)
+selectCodeEditor("SPI.v", 152, 177, false, false, false, false, true); // cl (w, cl) - Double Click
+typeControlKey((HResource) null, "SPI.v", 'c'); // cl (w, cl)
+selectCodeEditor("SPI.v", 184, 295); // cl (w, cl)
+selectCodeEditor("SPI.v", 192, 295); // cl (w, cl)
+typeControlKey((HResource) null, "SPI.v", 'v'); // cl (w, cl)
+selectCodeEditor("SPI.v", 384, 298); // cl (w, cl)
+selectCodeEditor("SPI.v", 426, 269); // cl (w, cl)
+selectCodeEditor("SPI.v", 426, 269, false, false, false, false, true); // cl (w, cl) - Double Click
+typeControlKey((HResource) null, "SPI.v", 'c'); // cl (w, cl)
+selectCodeEditor("SPI.v", 387, 151); // cl (w, cl)
+typeControlKey((HResource) null, "SPI.v", 'v'); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("SPI.v", 317, 152); // cl (w, cl)
+selectCodeEditor("SPI.v", 317, 152, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 310, 159); // cl (w, cl)
+selectCodeEditor("SPI.v", 116, 241); // cl (w, cl)
+selectCodeEditor("SPI.v", 116, 241, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 147, 356); // cl (w, cl)
+selectCodeEditor("SPI.v", 182, 312); // cl (w, cl)
+selectCodeEditor("SPI.v", 182, 312, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 192, 351); // cl (w, cl)
+selectCodeEditor("SPI.v", 239, 345); // cl (w, cl)
+selectCodeEditor("SPI.v", 239, 345, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 413, 337); // cl (w, cl)
+// Elapsed time: 24 seconds
+selectCodeEditor("SPI.v", 232, 380); // cl (w, cl)
+selectCodeEditor("SPI.v", 232, 380, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 233, 353); // cl (w, cl)
+selectCodeEditor("SPI.v", 150, 360); // cl (w, cl)
+selectCodeEditor("SPI.v", 150, 360, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 233, 353); // cl (w, cl)
+selectCodeEditor("SPI.v", 233, 353, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 362, 349); // cl (w, cl)
+selectCodeEditor("SPI.v", 362, 349, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 389, 346); // cl (w, cl)
+selectCodeEditor("SPI.v", 363, 401); // cl (w, cl)
+selectCodeEditor("SPI.v", 458, 400); // cl (w, cl)
+// Elapsed time: 10 seconds
+selectCodeEditor("SPI.v", 307, 317); // cl (w, cl)
+selectCodeEditor("SPI.v", 307, 317, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 308, 370); // cl (w, cl)
+selectCodeEditor("SPI.v", 304, 379); // cl (w, cl)
+selectCodeEditor("SPI.v", 304, 379, false, false, false, false, true); // cl (w, cl) - Double Click
+// Elapsed time: 41 seconds
+selectCodeEditor("SPI.v", 402, 374); // cl (w, cl)
+selectCodeEditor("SPI.v", 312, 420); // cl (w, cl)
+selectCodeEditor("SPI.v", 195, 382); // cl (w, cl)
+typeControlKey((HResource) null, "SPI.v", 'c'); // cl (w, cl)
+selectCodeEditor("SPI.v", 269, 180); // cl (w, cl)
+selectCodeEditor("SPI.v", 487, 206); // cl (w, cl)
+selectCodeEditor("SPI.v", 474, 185); // cl (w, cl)
+selectCodeEditor("SPI.v", 473, 188); // cl (w, cl)
+// Elapsed time: 14 seconds
+selectCodeEditor("SPI.v", 212, 303); // cl (w, cl)
+selectCodeEditor("SPI.v", 212, 303, false, false, false, false, true); // cl (w, cl) - Double Click
+typeControlKey((HResource) null, "SPI.v", 'c'); // cl (w, cl)
+selectCodeEditor("SPI.v", 143, 313); // cl (w, cl)
+typeControlKey((HResource) null, "SPI.v", 'v'); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("SPI.v", 344, 333); // cl (w, cl)
+selectCodeEditor("SPI.v", 282, 340); // cl (w, cl)
+selectCodeEditor("SPI.v", 196, 403); // cl (w, cl)
+selectCodeEditor("SPI.v", 283, 346); // cl (w, cl)
+selectCodeEditor("SPI.v", 192, 380); // cl (w, cl)
+selectCodeEditor("SPI.v", 160, 400); // cl (w, cl)
+selectCodeEditor("SPI.v", 239, 149); // cl (w, cl)
+selectCodeEditor("SPI.v", 240, 134); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 12 seconds
+selectCodeEditor("SPI.v", 150, 144); // cl (w, cl)
+selectCodeEditor("SPI.v", 150, 144, false, false, false, false, true); // cl (w, cl) - Double Click
+typeControlKey((HResource) null, "SPI.v", 'c'); // cl (w, cl)
+selectCodeEditor("SPI.v", 74, 131); // cl (w, cl)
+selectCodeEditor("SPI.v", 73, 128); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// Elapsed time: 10 seconds
+selectCodeEditor("SPI.v", 168, 131); // cl (w, cl)
+selectCodeEditor("SPI.v", 168, 130); // cl (w, cl)
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("SPI.v", 153, 75); // cl (w, cl)
+selectCodeEditor("SPI.v", 153, 75, false, false, false, false, true); // cl (w, cl) - Double Click
+typeControlKey((HResource) null, "SPI.v", 'c'); // cl (w, cl)
+selectCodeEditor("SPI.v", 138, 223); // cl (w, cl)
+selectCodeEditor("SPI.v", 131, 213); // cl (w, cl)
+selectCodeEditor("SPI.v", 131, 213, false, false, false, false, true); // cl (w, cl) - Double Click
+typeControlKey((HResource) null, "SPI.v", 'v'); // cl (w, cl)
+selectCodeEditor("SPI.v", 150, 314); // cl (w, cl)
+selectCodeEditor("SPI.v", 150, 314, false, false, false, false, true); // cl (w, cl) - Double Click
+typeControlKey((HResource) null, "SPI.v", 'v'); // cl (w, cl)
+selectCodeEditor("SPI.v", 603, 334); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("SPI.v", 386, 350); // cl (w, cl)
+selectCodeEditor("SPI.v", 354, 313); // cl (w, cl)
+selectCodeEditor("SPI.v", 354, 313, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 204, 365); // cl (w, cl)
+selectCodeEditor("SPI.v", 283, 198); // cl (w, cl)
+selectCodeEditor("SPI.v", 250, 151); // cl (w, cl)
+selectCodeEditor("SPI.v", 223, 171); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("SPI.v", 206, 224); // cl (w, cl)
+selectCodeEditor("SPI.v", 206, 224, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 195, 265); // cl (w, cl)
+selectCodeEditor("SPI.v", 195, 265, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 313, 265); // cl (w, cl)
+selectCodeEditor("SPI.v", 313, 265, false, false, false, false, true); // cl (w, cl) - Double Click
+// Elapsed time: 14 seconds
+selectCodeEditor("SPI.v", 448, 267); // cl (w, cl)
+selectCodeEditor("SPI.v", 400, 289); // cl (w, cl)
+selectCodeEditor("SPI.v", 229, 320); // cl (w, cl)
+selectCodeEditor("SPI.v", 229, 294); // cl (w, cl)
+selectCodeEditor("SPI.v", 222, 263); // cl (w, cl)
+selectCodeEditor("SPI.v", 222, 263, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 357, 264); // cl (w, cl)
+selectCodeEditor("SPI.v", 357, 264, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 436, 260); // cl (w, cl)
+selectCodeEditor("SPI.v", 436, 260, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 193, 274); // cl (w, cl)
+selectCodeEditor("SPI.v", 193, 274, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 554, 341); // cl (w, cl)
+selectCodeEditor("SPI.v", 500, 325); // cl (w, cl)
+selectCodeEditor("SPI.v", 494, 311); // cl (w, cl)
+selectCodeEditor("SPI.v", 181, 163); // cl (w, cl)
+selectCodeEditor("SPI.v", 181, 163, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 146, 36); // cl (w, cl)
+selectCodeEditor("SPI.v", 146, 36, false, false, false, false, true); // cl (w, cl) - Double Click
+typeControlKey((HResource) null, "SPI.v", 'c'); // cl (w, cl)
+selectCodeEditor("SPI.v", 194, 315); // cl (w, cl)
+selectCodeEditor("SPI.v", 197, 310); // cl (w, cl)
+typeControlKey((HResource) null, "SPI.v", 'c'); // cl (w, cl)
+selectCodeEditor("SPI.v", 216, 232); // cl (w, cl)
+selectCodeEditor("SPI.v", 219, 211); // cl (w, cl)
+typeControlKey((HResource) null, "SPI.v", 'v'); // cl (w, cl)
+selectCodeEditor("SPI.v", 171, 213); // cl (w, cl)
+selectCodeEditor("SPI.v", 171, 213, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 168, 154); // cl (w, cl)
+selectCodeEditor("SPI.v", 168, 154, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 160, 44); // cl (w, cl)
+selectCodeEditor("SPI.v", 160, 44, false, false, false, false, true); // cl (w, cl) - Double Click
+typeControlKey((HResource) null, "SPI.v", 'c'); // cl (w, cl)
+selectCodeEditor("SPI.v", 197, 291); // cl (w, cl)
+selectCodeEditor("SPI.v", 163, 292); // cl (w, cl)
+selectCodeEditor("SPI.v", 159, 306); // cl (w, cl)
+selectCodeEditor("SPI.v", 173, 312); // cl (w, cl)
+selectCodeEditor("SPI.v", 173, 312, false, false, false, false, true); // cl (w, cl) - Double Click
+typeControlKey((HResource) null, "SPI.v", 'v'); // cl (w, cl)
+selectCodeEditor("SPI.v", 368, 349); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("SPI.v", 362, 350); // cl (w, cl)
+selectCodeEditor("SPI.v", 327, 317); // cl (w, cl)
+selectCodeEditor("SPI.v", 327, 317, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 166, 163); // cl (w, cl)
+selectCodeEditor("SPI.v", 166, 163, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 172, 260); // cl (w, cl)
+selectCodeEditor("SPI.v", 172, 260, false, false, false, false, true); // cl (w, cl) - Double Click
+typeControlKey((HResource) null, "SPI.v", 'c'); // cl (w, cl)
+selectCodeEditor("SPI.v", 298, 316); // cl (w, cl)
+selectCodeEditor("SPI.v", 298, 316, false, false, false, false, true); // cl (w, cl) - Double Click
+typeControlKey((HResource) null, "SPI.v", 'v'); // cl (w, cl)
+selectCodeEditor("SPI.v", 448, 310); // cl (w, cl)
+// HMemoryUtils.trashcanNow. Engine heap size: 724 MB. GUI used memory: 53 MB. Current time: 11/14/20, 9:17:45 PM EST
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("SPI.v", 687, 345); // cl (w, cl)
+selectCodeEditor("SPI.v", 375, 326); // cl (w, cl)
+selectCodeEditor("SPI.v", 193, 208); // cl (w, cl)
+selectCodeEditor("SPI.v", 193, 208, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 216, 246); // cl (w, cl)
+selectCodeEditor("SPI.v", 234, 215); // cl (w, cl)
+selectCodeEditor("SPI.v", 234, 215, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 363, 268); // cl (w, cl)
+selectCodeEditor("SPI.v", 311, 278); // cl (w, cl)
+selectCodeEditor("SPI.v", 650, 272); // cl (w, cl)
+selectCodeEditor("SPI.v", 653, 262); // cl (w, cl)
+// Elapsed time: 11 seconds
+selectCodeEditor("SPI.v", 53, 58); // cl (w, cl)
+typeControlKey((HResource) null, "SPI.v", 'c'); // cl (w, cl)
+selectCodeEditor("SPI.v", 86, 422); // cl (w, cl)
+typeControlKey((HResource) null, "SPI.v", 'v'); // cl (w, cl)
+selectCodeEditor("SPI.v", 276, 436); // cl (w, cl)
+selectCodeEditor("SPI.v", 234, 409); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("SPI.v", 234, 409); // cl (w, cl)
+selectCodeEditor("SPI.v", 218, 421); // cl (w, cl)
+selectCodeEditor("SPI.v", 166, 469); // cl (w, cl)
+selectCodeEditor("SPI.v", 177, 392); // cl (w, cl)
+selectCodeEditor("SPI.v", 158, 420); // cl (w, cl)
+selectCodeEditor("SPI.v", 160, 417, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 163, 414); // cl (w, cl)
+selectCodeEditor("SPI.v", 183, 412); // cl (w, cl)
+selectCodeEditor("SPI.v", 341, 205); // cl (w, cl)
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // B (f, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("SPI.v", 240, 212); // cl (w, cl)
+selectCodeEditor("SPI.v", 367, 310); // cl (w, cl)
+selectCodeEditor("SPI.v", 374, 284); // cl (w, cl)
+selectCodeEditor("SPI.v", 374, 284, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 442, 286); // cl (w, cl)
+selectCodeEditor("SPI.v", 490, 354); // cl (w, cl)
+selectCodeEditor("SPI.v", 190, 276); // cl (w, cl)
+selectCodeEditor("SPI.v", 190, 276, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 363, 335); // cl (w, cl)
+selectCodeEditor("SPI.v", 204, 345); // cl (w, cl)
+selectCodeEditor("SPI.v", 202, 330); // cl (w, cl)
+selectCodeEditor("SPI.v", 202, 330, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 216, 295); // cl (w, cl)
+selectCodeEditor("SPI.v", 216, 295, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 222, 280); // cl (w, cl)
+selectCodeEditor("SPI.v", 222, 280, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 346, 280); // cl (w, cl)
+selectCodeEditor("SPI.v", 346, 280, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 200, 343); // cl (w, cl)
+selectCodeEditor("SPI.v", 199, 343, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 200, 340); // cl (w, cl)
+selectCodeEditor("SPI.v", 200, 340, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 208, 325); // cl (w, cl)
+selectCodeEditor("SPI.v", 208, 325, false, false, false, false, true); // cl (w, cl) - Double Click
+// Elapsed time: 11 seconds
+selectCodeEditor("SPI.v", 263, 348); // cl (w, cl)
+// Elapsed time: 92 seconds
+selectCodeEditor("SPI.v", 578, 219); // cl (w, cl)
+selectCodeEditor("SPI.v", 484, 366); // cl (w, cl)
+selectCodeEditor("SPI.v", 348, 333); // cl (w, cl)
+selectCodeEditor("SPI.v", 348, 333, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 551, 345); // cl (w, cl)
+selectCodeEditor("SPI.v", 570, 339); // cl (w, cl)
+selectCodeEditor("SPI.v", 765, 367); // cl (w, cl)
+selectCodeEditor("SPI.v", 697, 347); // cl (w, cl)
+selectCodeEditor("SPI.v", 194, 332); // cl (w, cl)
+selectCodeEditor("SPI.v", 117, 181); // cl (w, cl)
+selectCodeEditor("SPI.v", 117, 181, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 101, 203); // cl (w, cl)
+selectCodeEditor("SPI.v", 101, 203, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 169, 292); // cl (w, cl)
+selectCodeEditor("SPI.v", 169, 292, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 185, 390); // cl (w, cl)
+selectCodeEditor("SPI.v", 185, 390, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 327, 390); // cl (w, cl)
+selectCodeEditor("SPI.v", 580, 402); // cl (w, cl)
+selectCodeEditor("SPI.v", 588, 391); // cl (w, cl)
+selectCodeEditor("SPI.v", 596, 382); // cl (w, cl)
+// Elapsed time: 14 seconds
+selectCodeEditor("SPI.v", 61, 200); // cl (w, cl)
+selectCodeEditor("SPI.v", 61, 200); // cl (w, cl)
+selectCodeEditor("SPI.v", 61, 200, false, false, false, false, true); // cl (w, cl) - Double Click
+typeControlKey((HResource) null, "SPI.v", 'c'); // cl (w, cl)
+// Elapsed time: 22 seconds
+selectCodeEditor("SPI.v", 365, 245); // cl (w, cl)
+selectCodeEditor("SPI.v", 199, 171); // cl (w, cl)
+selectCodeEditor("SPI.v", 173, 161); // cl (w, cl)
+typeControlKey((HResource) null, "SPI.v", 'v'); // cl (w, cl)
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("SPI.v", 140, 108); // cl (w, cl)
+// Elapsed time: 94 seconds
+selectCodeEditor("SPI.v", 225, 146); // cl (w, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, SPI (SPI.v)]", 3, true, false, false, false, true, false); // B (F, cl) - Popup Trigger - Node
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // ae (an, cl)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // ae (an, cl)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // ae (an, cl)
+selectMenuItem(PAResourceQtoS.SrcMenu_SET_FILE_TYPE, "Set File Type..."); // ah (an, cl)
+// Y (cl): Set Type: addNotify
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (Y)
+dismissDialog("Set Type"); // Y (cl)
+selectCodeEditor("SPI.v", 430, 268); // cl (w, cl)
+// Elapsed time: 11 seconds
+selectCodeEditor("SPI.v", 140, 398); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("SPI.v", 253, 364); // cl (w, cl)
+selectCodeEditor("SPI.v", 186, 235); // cl (w, cl)
+selectCodeEditor("SPI.v", 243, 239); // cl (w, cl)
+selectCodeEditor("SPI.v", 299, 234); // cl (w, cl)
+selectCodeEditor("SPI.v", 185, 230); // cl (w, cl)
+selectCodeEditor("SPI.v", 185, 230, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 288, 438); // cl (w, cl)
+typeControlKey((HResource) null, "SPI.v", 'c'); // cl (w, cl)
+selectCodeEditor("SPI.v", 120, 214); // cl (w, cl)
+typeControlKey((HResource) null, "SPI.v", 'v'); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("SPI.v", 158, 224); // cl (w, cl)
+selectCodeEditor("SPI.v", 394, 135); // cl (w, cl)
+selectCodeEditor("SPI.v", 225, 168); // cl (w, cl)
+selectCodeEditor("SPI.v", 291, 287); // cl (w, cl)
+selectCodeEditor("SPI.v", 283, 352); // cl (w, cl)
+selectCodeEditor("SPI.v", 308, 360); // cl (w, cl)
+selectCodeEditor("SPI.v", 26, 94); // cl (w, cl)
+selectCodeEditor("SPI.v", 126, 329); // cl (w, cl)
+selectCodeEditor("SPI.v", 169, 305); // cl (w, cl)
+selectCodeEditor("SPI.v", 169, 311); // cl (w, cl)
+selectCodeEditor("SPI.v", 66, 231); // cl (w, cl)
+selectCodeEditor("SPI.v", 27, 215); // cl (w, cl)
+typeControlKey((HResource) null, "SPI.v", 'c'); // cl (w, cl)
+selectCodeEditor("SPI.v", 71, 187); // cl (w, cl)
+typeControlKey((HResource) null, "SPI.v", 'v'); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("SPI.v", 191, 194); // cl (w, cl)
+selectCodeEditor("SPI.v", 191, 194, false, false, false, false, true); // cl (w, cl) - Double Click
+typeControlKey((HResource) null, "SPI.v", 'c'); // cl (w, cl)
+selectCodeEditor("SPI.v", 88, 332); // cl (w, cl)
+selectCodeEditor("SPI.v", 88, 333); // cl (w, cl)
+typeControlKey((HResource) null, "SPI.v", 'v'); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("SPI.v", 214, 305); // cl (w, cl)
+selectCodeEditor("SPI.v", 217, 327); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 15 seconds
+selectCodeEditor("SPI.v", 345, 223); // cl (w, cl)
+selectCodeEditor("SPI.v", 344, 197); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("SPI.v", 344, 217); // cl (w, cl)
+selectCodeEditor("SPI.v", 241, 264); // cl (w, cl)
+selectCodeEditor("SPI.v", 238, 297); // cl (w, cl)
+// Elapsed time: 38 seconds
+selectCodeEditor("SPI.v", 252, 420); // cl (w, cl)
+selectCodeEditor("SPI.v", 283, 394); // cl (w, cl)
+selectCodeEditor("SPI.v", 278, 429); // cl (w, cl)
+selectCodeEditor("SPI.v", 278, 428, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 281, 400); // cl (w, cl)
+selectCodeEditor("SPI.v", 277, 432); // cl (w, cl)
+selectCodeEditor("SPI.v", 277, 422); // cl (w, cl)
+selectCodeEditor("SPI.v", 229, 199); // cl (w, cl)
+selectCodeEditor("SPI.v", 229, 199, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 342, 246); // cl (w, cl)
+selectCodeEditor("SPI.v", 342, 246, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 131, 51); // cl (w, cl)
+selectCodeEditor("SPI.v", 131, 56); // cl (w, cl)
+selectCodeEditor("SPI.v", 131, 56, false, false, false, false, true); // cl (w, cl) - Double Click
+typeControlKey((HResource) null, "SPI.v", 'c'); // cl (w, cl)
+selectCodeEditor("SPI.v", 135, 311); // cl (w, cl)
+typeControlKey((HResource) null, "SPI.v", 'v'); // cl (w, cl)
+selectCodeEditor("SPI.v", 207, 87); // cl (w, cl)
+selectCodeEditor("SPI.v", 207, 87, false, false, false, false, true); // cl (w, cl) - Double Click
+typeControlKey((HResource) null, "SPI.v", 'c'); // cl (w, cl)
+selectCodeEditor("SPI.v", 298, 304); // cl (w, cl)
+selectCodeEditor("SPI.v", 298, 310); // cl (w, cl)
+typeControlKey((HResource) null, "SPI.v", 'v'); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 10 seconds
+selectCodeEditor("SPI.v", 332, 256); // cl (w, cl)
+selectCodeEditor("SPI.v", 332, 256, false, false, false, false, true); // cl (w, cl) - Double Click
+// Elapsed time: 660 seconds
+selectCodeEditor("SPI.v", 181, 140); // cl (w, cl)
+selectCodeEditor("SPI.v", 181, 140, false, false, false, false, true); // cl (w, cl) - Double Click
+typeControlKey((HResource) null, "SPI.v", 'c'); // cl (w, cl)
+selectCodeEditor("SPI.v", 217, 366); // cl (w, cl)
+typeControlKey((HResource) null, "SPI.v", 'v'); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("SPI.v", 364, 374); // cl (w, cl)
+selectCodeEditor("SPI.v", 413, 360); // cl (w, cl)
+// Elapsed time: 19 seconds
+selectCodeEditor("SPI.v", 224, 247); // cl (w, cl)
+selectCodeEditor("SPI.v", 224, 247, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 337, 306); // cl (w, cl)
+selectCodeEditor("SPI.v", 113, 176); // cl (w, cl)
+selectCodeEditor("SPI.v", 113, 176, false, false, false, false, true); // cl (w, cl) - Double Click
+// Elapsed time: 10 seconds
+selectCodeEditor("SPI.v", 177, 439); // cl (w, cl)
+selectCodeEditor("SPI.v", 156, 379); // cl (w, cl)
+selectCodeEditor("SPI.v", 154, 337); // cl (w, cl)
+selectCodeEditor("SPI.v", 154, 337, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 274, 183); // cl (w, cl)
+selectCodeEditor("SPI.v", 274, 183, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 245, 185); // cl (w, cl)
+selectCodeEditor("SPI.v", 193, 119); // cl (w, cl)
+selectCodeEditor("SPI.v", 193, 119, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 193, 118); // cl (w, cl)
+selectCodeEditor("SPI.v", 193, 118); // cl (w, cl)
+selectCodeEditor("SPI.v", 193, 114); // cl (w, cl)
+selectCodeEditor("SPI.v", 193, 114, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 199, 154); // cl (w, cl)
+selectCodeEditor("SPI.v", 198, 168); // cl (w, cl)
+selectCodeEditor("SPI.v", 198, 168, false, false, false, false, true); // cl (w, cl) - Double Click
+typeControlKey((HResource) null, "SPI.v", 'c'); // cl (w, cl)
+selectCodeEditor("SPI.v", 132, 291); // cl (w, cl)
+selectCodeEditor("SPI.v", 132, 291, false, false, false, false, true); // cl (w, cl) - Double Click
+typeControlKey((HResource) null, "SPI.v", 'v'); // cl (w, cl)
+selectCodeEditor("SPI.v", 249, 141); // cl (w, cl)
+selectCodeEditor("SPI.v", 259, 129); // cl (w, cl)
+typeControlKey((HResource) null, "SPI.v", 'v'); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("SPI.v", 281, 335); // cl (w, cl)
+selectCodeEditor("SPI.v", 180, 445); // cl (w, cl)
+selectCodeEditor("SPI.v", 194, 429); // cl (w, cl)
+selectCodeEditor("SPI.v", 194, 429, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 343, 421); // cl (w, cl)
+selectCodeEditor("SPI.v", 145, 416); // cl (w, cl)
+selectCodeEditor("SPI.v", 145, 416, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 138, 449); // cl (w, cl)
+selectCodeEditor("SPI.v", 211, 236); // cl (w, cl)
+selectCodeEditor("SPI.v", 211, 236, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 108, 400); // cl (w, cl)
+selectCodeEditor("SPI.v", 108, 400, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 301, 342); // cl (w, cl)
+selectCodeEditor("SPI.v", 150, 364); // cl (w, cl)
+selectCodeEditor("SPI.v", 280, 416); // cl (w, cl)
+selectCodeEditor("SPI.v", 326, 390); // cl (w, cl)
+selectCodeEditor("SPI.v", 216, 374); // cl (w, cl)
+selectCodeEditor("SPI.v", 348, 375); // cl (w, cl)
+selectCodeEditor("SPI.v", 424, 378); // cl (w, cl)
+selectCodeEditor("SPI.v", 404, 348); // cl (w, cl)
+selectCodeEditor("SPI.v", 405, 332); // cl (w, cl)
+selectCodeEditor("SPI.v", 405, 322); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 27 seconds
+selectCodeEditor("SPI.v", 267, 348); // cl (w, cl)
+selectCodeEditor("SPI.v", 249, 362); // cl (w, cl)
+selectCodeEditor("SPI.v", 200, 398); // cl (w, cl)
+selectCodeEditor("SPI.v", 211, 368); // cl (w, cl)
+selectCodeEditor("SPI.v", 180, 388); // cl (w, cl)
+selectCodeEditor("SPI.v", 168, 309); // cl (w, cl)
+selectCodeEditor("SPI.v", 168, 309, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 242, 314); // cl (w, cl)
+selectCodeEditor("SPI.v", 242, 314, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 156, 285); // cl (w, cl)
+selectCodeEditor("SPI.v", 156, 285, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 125, 247); // cl (w, cl)
+selectCodeEditor("SPI.v", 160, 249); // cl (w, cl)
+selectCodeEditor("SPI.v", 160, 249, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 85, 231); // cl (w, cl)
+selectCodeEditor("SPI.v", 85, 231, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 168, 228); // cl (w, cl)
+selectCodeEditor("SPI.v", 168, 228, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 96, 233); // cl (w, cl)
+selectCodeEditor("SPI.v", 96, 233, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 131, 241); // cl (w, cl)
+selectCodeEditor("SPI.v", 131, 241, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 258, 246); // cl (w, cl)
+selectCodeEditor("SPI.v", 362, 283); // cl (w, cl)
+selectCodeEditor("SPI.v", 314, 298); // cl (w, cl)
+selectCodeEditor("SPI.v", 219, 318); // cl (w, cl)
+selectCodeEditor("SPI.v", 219, 318, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 225, 329); // cl (w, cl)
+selectCodeEditor("SPI.v", 208, 414); // cl (w, cl)
+selectCodeEditor("SPI.v", 193, 369); // cl (w, cl)
+selectCodeEditor("SPI.v", 208, 380); // cl (w, cl)
+selectCodeEditor("SPI.v", 200, 304); // cl (w, cl)
+selectCodeEditor("SPI.v", 120, 197); // cl (w, cl)
+selectCodeEditor("SPI.v", 120, 197, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 136, 199); // cl (w, cl)
+selectCodeEditor("SPI.v", 204, 371); // cl (w, cl)
+selectCodeEditor("SPI.v", 155, 400); // cl (w, cl)
+selectCodeEditor("SPI.v", 176, 381); // cl (w, cl)
+selectCodeEditor("SPI.v", 227, 369); // cl (w, cl)
+selectCodeEditor("SPI.v", 253, 357); // cl (w, cl)
+selectCodeEditor("SPI.v", 214, 362); // cl (w, cl)
+selectCodeEditor("SPI.v", 143, 328); // cl (w, cl)
+selectCodeEditor("SPI.v", 143, 328, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 231, 326); // cl (w, cl)
+selectCodeEditor("SPI.v", 231, 326, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 389, 356); // cl (w, cl)
+selectCodeEditor("SPI.v", 217, 265); // cl (w, cl)
+selectCodeEditor("SPI.v", 217, 265, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 430, 315); // cl (w, cl)
+selectCodeEditor("SPI.v", 145, 123); // cl (w, cl)
+selectCodeEditor("SPI.v", 145, 123, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 294, 300); // cl (w, cl)
+selectCodeEditor("SPI.v", 247, 302); // cl (w, cl)
+selectCodeEditor("SPI.v", 174, 328); // cl (w, cl)
+selectCodeEditor("SPI.v", 174, 328, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 403, 368); // cl (w, cl)
+selectCodeEditor("SPI.v", 114, 169); // cl (w, cl)
+selectCodeEditor("SPI.v", 114, 169, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 336, 269); // cl (w, cl)
+// Elapsed time: 11 seconds
+selectCodeEditor("SPI.v", 119, 268); // cl (w, cl)
+selectCodeEditor("SPI.v", 119, 268, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("SPI.v", 113, 250); // cl (w, cl)
+selectCodeEditor("SPI.v", 24, 227); // cl (w, cl)
+typeControlKey((HResource) null, "SPI.v", 'c'); // cl (w, cl)
+selectCodeEditor("SPI.v", 23, 231); // cl (w, cl)

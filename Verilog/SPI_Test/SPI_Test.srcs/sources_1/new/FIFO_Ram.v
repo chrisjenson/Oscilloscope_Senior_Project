@@ -3,14 +3,14 @@
 module FIFO_Ram(
     input       FIFO_WEN,
     input [1:0] FIFO_InWADR,
-    input [7:0] FIFO_InWDAT,
+    input [15:0] FIFO_InWDAT,
     input [1:0] FIFO_OutRADR,
-    output [7:0] FIFO_OutRDAT,
+    output [15:0] FIFO_OutRDAT,
     
     input       clk
     );
     
-    reg [7:0] dataBuffer[1:0];
+    reg [15:0] dataBuffer[3:0];
     
     assign FIFO_OutRDAT = dataBuffer[FIFO_OutRADR];
     

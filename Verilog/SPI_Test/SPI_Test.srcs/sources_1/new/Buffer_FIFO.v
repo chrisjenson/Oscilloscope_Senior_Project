@@ -7,13 +7,15 @@ module Buffer_FIFO(
     input FIFO_InRTS,
     output FIFO_InRTR,
     
-    input [7:0]FIFO_InData,
-    output [7:0]FIFO_OutData,
+    input [15:0]FIFO_InData,
+    output [15:0]FIFO_OutData,
+    
+    output FIFO_OutXFC,
     
     input clk,
     input reset
     );
-    wire FIFO_OutXFC;
+    
     wire FIFO_InXFC;
     
     reg [1:0] FIFO_NumInFIFO;

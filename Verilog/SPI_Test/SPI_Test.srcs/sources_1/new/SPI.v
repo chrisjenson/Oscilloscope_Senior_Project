@@ -8,8 +8,8 @@ module SPI(
         input SCLK_Raw,
         
         //For RAM
-        input [7:0] Buffer_DataIn, 
-        output FIFO_OutRTR
+        input [15:0] Buffer_DataIn, //DEBUG Changed this to 16 bits
+        output reg FIFO_OutRTR
     );
     
     reg Reg_WrEn;
@@ -18,6 +18,7 @@ module SPI(
     
     reg [3:0] SPI_OutSixteenCount;
     reg [3:0] SPI_InSixteenCount;
+    reg [2:0] SPI_InEightCounter;
     
     reg [2:0] SPI_OutEightCount;
     
@@ -27,6 +28,7 @@ module SPI(
     
     reg [15:0] SPIWord; //spiword is valid on the last possckposedgepulse of the word
     reg [15:0] SPI_DataIn;
+    
     assign SPI_Cmd = SPIWord[15:13];
     assign SPI_Params = SPIWord[12:8];
     assign SPI_Data = SPIWord[7:0];
@@ -44,8 +46,12 @@ module SPI(
     
     
     reg new_word_strobe;
-     
-    always @(*)
+    
+  //  reg [18:0] BUFFER_InCount;
+    reg [18:0] BUFFER_InAmount;// geting sent to RAM_Read_Engine
+    
+         
+    always @(*) //Handle Control values
     begin
         case (SPI_Cmd)
             3'b001: //ReadReg- MISO //32 bits
@@ -53,18 +59,54 @@ module SPI(
                 Reg_RdEn = 1;
                 Reg_WrEn = 0;
                 Buffer_RdEn = 0;
+                BUFFER_InAmount = 0;
             end
             3'b010: //Write- MOSI 16bits
             begin
                 Reg_RdEn = 0;
                 Reg_WrEn = 1;
                 Buffer_RdEn = 0;
+                BUFFER_InAmount = 0;
             end
             3'b011: //ReadData- MISO RAM Read- this is default mode //8 bits
             begin
                 Reg_RdEn = 0;
                 Reg_WrEn = 0;
                 Buffer_RdEn = 1;
+                case (SPI_Params)
+                    00000:
+                    begin
+                        BUFFER_InAmount = 524288; //2^19 = max ram size
+                    end
+                    00001:
+                    begin
+                        BUFFER_InAmount = 262144; //2^18
+                    end
+                    00010:
+                    begin
+                        BUFFER_InAmount = 131072;
+                    end
+                    00011:
+                    begin
+                        BUFFER_InAmount = 65536;
+                    end
+                    00100:
+                    begin
+                        BUFFER_InAmount = 32768;
+                    end
+                    00101:
+                    begin
+                        BUFFER_InAmount = 16384; //2^14
+                    end
+                    00110:
+                    begin
+                        BUFFER_InAmount = 8192; 
+                    end
+                    00111:
+                    begin
+                        BUFFER_InAmount = 4096;
+                    end
+                endcase
             end
         endcase
     end
@@ -85,7 +127,54 @@ module SPI(
     
     assign sck_posedge_pulse = sck & ~sck_p1;
     assign sck_negedge_pulse = ~sck & sck_p1;
+    /////////////////////////////////////////////
+    reg [7:0] SPI_InInstructionBits;
+    reg [7:0] SPI_Instruction;
+    reg new_instruction_strobe;
     
+    always @(posedge clk) //Get first 8 bits for SPI instruction
+    begin
+        new_word_strobe <= 1;
+        if (SlaveSel) 
+        begin //RESET
+            SPI_InEightCounter <= 7;
+            SPI_InInstructionBits <= 0;
+        end
+        else
+        begin
+            if (sck_posedge_pulse)
+            begin
+                SPI_InInstructionBits[SPI_InEightCounter] <= MOSI;
+                if (SPI_InEightCounter == 0)
+                begin
+                    new_instruction_strobe <= 1; //High for one clock cycle
+                end
+            end
+        end
+    end
+    
+    always @(posedge clk) //Read Instruction
+    begin
+        if (new_instruction_strobe) //Will only be high 1 cycle
+        begin
+            SPI_Instruction <= SPI_InInstructionBits;
+        end
+    end
+    
+    
+    always @(posedge clk) //Write to reg
+    begin
+        if (SlaveSel) 
+        begin //RESET
+            
+        end
+        else
+        begin
+            
+        end
+    end
+    
+    /////////////////////////////////////
     always @(posedge clk) //Read from reg
     begin
         new_word_strobe <= 0;
@@ -96,8 +185,8 @@ module SPI(
             SPI_DataIn <= 16'h0000;
             SPIWord <= 16'h0000;
 
-            Reg_RdEn <= 0;//DEBUG should these go here?
-            Reg_WrEn <= 0;
+           // Reg_RdEn <= 0;//DEBUG should these go here?
+          //  Reg_WrEn <= 0;
         end
         else
         begin
@@ -133,7 +222,7 @@ module SPI(
                         MISO <= Reg_DataOut[SPI_OutSixteenCount];
                         if (SPI_OutSixteenCount == 4'h0) //MSB first and not LSB
                         begin
-                            Reg_RdEn <= 0;
+                            //Reg_RdEn <= 0; //DONE
                         end
                     end
                     SPI_OutSixteenCount <= SPI_OutSixteenCount - 1;
@@ -145,36 +234,41 @@ module SPI(
     reg [3:0] SPI_RamReadOutSixteenCount;
     
     always @(posedge clk) //RAM Read
+    //input SlaveSel
+    //input sck_negedge_pulse
+    //input [15:0] Buffer_DataIn
+    //input Buffer_RdEn
     begin
         if (SlaveSel) //SS active low, reset if high
         begin
-            Buffer_RdEn <= 0;
-            SPI_OutEightCount <= 7;
-            SPI_RamReadOutSixteenCount <= 0;
+            //BUFFER_InCount <= 0;
+            FIFO_OutRTR <= 0;
+            //Buffer_RdEn <= 0; //This is asserted elsewhere, should not do here
+            SPI_RamReadOutSixteenCount <= 15;
         end
         else
         begin
-            if (sck_negedge_pulse) //Put data into FIFO? Read data and keep it full. Need to use internal clock for ram read, not sclk
+            if (sck_negedge_pulse)
             begin
-                if (Buffer_RdEn) //DEBUG: Should we have a counter here from 0 to Params? so params = 1111 send 15 data values then wait?
+                if (Buffer_RdEn)
                 begin
-                    MISO <= Buffer_DataIn[SPI_OutEightCount];
-                    if (SPI_OutEightCount == 0) //One spi transfer is two bytes so need 2 eight counts or 1 16 count
-                    begin//Check with chris if can handle slave select low for long time
-                    //Need a ready to recieve from fifo between ram and SPI.
-                    //Going to need diagram to show state machine - send them to pearlstein for verifacation
-                        //DEBUG: Get next word here by sending a flag back (Will lose a clock cycle) or auto send by outputting sck to buffer?
-                        if (SPI_RamReadOutSixteenCount == 16)
-                        begin
-                            //RTR
-                        end
-                        else
-                        begin
-                            SPI_OutEightCount <= 7;
-                        end
+
+                    MISO <= Buffer_DataIn[SPI_RamReadOutSixteenCount]; //Need to pack two bytes per word, can use byte in fifo as 2nd byte
+                    //Big endian format, high byte is the lower address (earlier data) byte
+                    if (SPI_RamReadOutSixteenCount == 0)
+                    begin
+                        FIFO_OutRTR <= 1;
+                        SPI_RamReadOutSixteenCount <= 15;
                     end
-                    SPI_OutEightCount <= SPI_OutEightCount - 1;
-                    SPI_RamReadOutSixteenCount <= SPI_RamReadOutSixteenCount + 1;
+                    else
+                    begin
+                        FIFO_OutRTR <= 0;
+                        SPI_RamReadOutSixteenCount <= SPI_RamReadOutSixteenCount - 1;
+                    end
+                    //Check with chris if can handle slave select low for long time
+                    //Going to need diagram to show state machine
+               
+                       
                     
                 end
             end
