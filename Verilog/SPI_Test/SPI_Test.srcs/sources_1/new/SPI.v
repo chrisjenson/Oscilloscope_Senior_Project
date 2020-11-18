@@ -55,118 +55,6 @@ module SPI(
   //  reg [18:0] BUFFER_InCount;
     reg [18:0] BUFFER_InAmount;// geting sent to RAM_Read_Engine
     
-    /*
-         
-    always @(*) //Handle Control values //combinational
-    begin //DEBUG Can be changed to sequential using new_instruction_strobe?
-        //DEBUG if slavesel high, set all to 0?
-        if (SlaveSel)
-        begin
-            Reg_RdEn = 0;
-            Reg_WrEn = 0;
-            Buffer_RdEn = 0;
-            BUFFER_InAmount = 0;
-        end
-        else
-        begin
-            case (SPI_Cmd)
-                3'b001: //ReadReg- MISO //32 bits
-                begin
-                    Reg_RdEn = 1;
-                    Reg_WrEn = 0;
-                    Buffer_RdEn = 0;
-                    BUFFER_InAmount = 0;
-                end
-                3'b010: //Write- MOSI 16bits
-                begin
-                    Reg_RdEn = 0;
-                    Reg_WrEn = 1;
-                    Buffer_RdEn = 0;
-                    BUFFER_InAmount = 0;
-                end
-                3'b011: //ReadData- MISO RAM Read- this is default mode //8 bits
-                begin
-                    Reg_RdEn = 0;
-                    Reg_WrEn = 0;
-                    Buffer_RdEn = 1;
-                    case (SPI_Params)
-                        00000:
-                        begin
-                            BUFFER_InAmount = 524288; //2^19 = max ram size
-                        end
-                        00001:
-                        begin
-                            BUFFER_InAmount = 262144; //2^18
-                        end
-                        00010:
-                        begin
-                            BUFFER_InAmount = 131072;
-                        end
-                        00011:
-                        begin
-                            BUFFER_InAmount = 65536;
-                        end
-                        00100:
-                        begin
-                            BUFFER_InAmount = 32768;
-                        end
-                        00101:
-                        begin
-                            BUFFER_InAmount = 16384; //2^14
-                        end
-                        00110:
-                        begin
-                            BUFFER_InAmount = 8192; 
-                        end
-                        00111:
-                        begin
-                            BUFFER_InAmount = 4096;
-                        end
-                        01000:
-                        begin
-                            BUFFER_InAmount = 2048;
-                        end
-                        01001:
-                        begin
-                            BUFFER_InAmount = 1024;
-                        end
-                        01010:
-                        begin
-                            BUFFER_InAmount = 512;
-                        end
-                        01011:
-                        begin
-                            BUFFER_InAmount = 256;
-                        end
-                        01100:
-                        begin
-                            BUFFER_InAmount = 128;
-                        end
-                        01101:
-                        begin
-                            BUFFER_InAmount = 64;
-                        end
-                        01110:
-                        begin
-                            BUFFER_InAmount = 32;
-                        end
-                        01111:
-                        begin
-                            BUFFER_InAmount = 16;
-                        end
-                    endcase
-                end
-                default:
-                begin
-                    Reg_RdEn = 0;
-                    Reg_WrEn = 0;
-                    Buffer_RdEn = 0;
-                    BUFFER_InAmount = 0;
-                end
-            endcase
-        end
-    end
-    */
     always @(posedge clk)
     begin
         sck_p1 <= sck; 
@@ -185,12 +73,12 @@ module SPI(
     assign sck_posedge_pulse = sck & ~sck_p1;
     assign sck_negedge_pulse = ~sck & sck_p1;
     /////////////////////////////////////////////
-    reg [7:0] SPI_InInstructionBits; //Constructs incoming MOSI into array
-    reg [7:0] SPI_Instruction; //Set to SPI_InInstructionBits after 8 MOSIs
-    reg [7:0] SPI_InDataBits; //Constructs incoming MOSI into array after 8 MOSIs if first 8 signal write command
-    reg [7:0] SPI_InData; //Bits 7:0 for a read command, set after 8 MOSIs
-    reg [2:0] SPI_InInstructionEightCounter; //Counts to 0 from 7 for SPI_InInstructionBits
-    reg [2:0] SPI_InDataEightCounter; //Counts to 0 from 7 for 
+    //reg [7:0] SPI_InInstructionBits; //Constructs incoming MOSI into array
+    //reg [7:0] SPI_Instruction; //Set to SPI_InInstructionBits after 8 MOSIs
+    //reg [7:0] SPI_InDataBits; //Constructs incoming MOSI into array after 8 MOSIs if first 8 signal write command
+    //reg [7:0] SPI_InData; //Bits 7:0 for a read command, set after 8 MOSIs
+    //reg [2:0] SPI_InInstructionEightCounter; //Counts to 0 from 7 for SPI_InInstructionBits
+    //reg [2:0] SPI_InDataEightCounter; //Counts to 0 from 7 for 
     reg new_instruction_strobe; //High for one clock cycle after 8 MOSIs
     reg new_data_strobe;
     
@@ -314,6 +202,7 @@ module SPI(
             //end
         end
     end
+    
     reg [3:0] SPI_InInstructionSixteenCounter;
     reg [15:0] SPI_InBits;
     always @(posedge clk) //Get 16 bits for SPI instruction
@@ -372,14 +261,22 @@ module SPI(
     //Inputs
         //new_instruction_strobe
         //SPI_InBits
+        //SlaveSel
     //Outputs
         //SPI_Cmd
         //SPI_Params
-        if (new_instruction_strobe) //Will only be high 1 cycle
+        if (SlaveSel)
         begin
-           //SPI_Instruction <= SPI_InBits[15:8]; 
-           SPI_Cmd <= SPI_InBits[15:13];   
-           SPI_Params <= SPI_InBits[12:8];
+        
+        end
+        else
+        begin
+            if (new_instruction_strobe) //Will only be high 1 cycle
+            begin
+               //SPI_Instruction <= SPI_InBits[15:8]; 
+               SPI_Cmd <= SPI_InBits[15:13];   
+               SPI_Params <= SPI_InBits[12:8];
+            end
         end
     end
     
@@ -392,14 +289,22 @@ module SPI(
     //Inputs
         //new_data_strobe
         //SPI_InBits
+        //SlaveSel
     //Outputs
         //SPI_Data
         //write_data_strobe- ANDed with WrEn in u_REGS
-        write_data_strobe <= 0;
-        if (new_data_strobe) //Will only be high 1 cycle
+        if (SlaveSel)
         begin
-            SPI_Data <= SPI_InBits[7:0];
-            write_data_strobe <= 1;
+        
+        end
+        else
+        begin
+            write_data_strobe <= 0;
+            if (new_data_strobe) //Will only be high 1 cycle
+            begin
+                SPI_Data <= SPI_InBits[7:0];
+                write_data_strobe <= 1;
+            end
         end
     end
     
@@ -435,6 +340,16 @@ module SPI(
             end
         end
     end
+    
+    Regs u_REGS(
+        .clk(clk),
+        .reset(reset),
+        .Write_Data(SPI_Data),
+        .Regs_Addr(SPI_Params),
+        .WrEn(Reg_WrEn & write_data_strobe),
+        .RdEn(Reg_RdEn),
+        .Read_Data(Reg_DataOut)
+    );
     
     /*
     always @(posedge clk) //Get first 8 bits for SPI instruction
@@ -558,15 +473,7 @@ module SPI(
     
     
     
-    Regs u_REGS(
-        .clk(clk),
-        .reset(reset),
-        .Write_Data(SPI_Data),
-        .Regs_Addr(SPI_Params),
-        .WrEn(Reg_WrEn & write_data_strobe),
-        .RdEn(Reg_RdEn),
-        .Read_Data(Reg_DataOut)
-    );
+    
     
     /////////////////////////////////////
     /*
@@ -670,7 +577,115 @@ module SPI(
         end
     
     end
-    
+    always @(*) //Handle Control values //combinational
+    begin //DEBUG Can be changed to sequential using new_instruction_strobe?
+        //DEBUG if slavesel high, set all to 0?
+        if (SlaveSel)
+        begin
+            Reg_RdEn = 0;
+            Reg_WrEn = 0;
+            Buffer_RdEn = 0;
+            BUFFER_InAmount = 0;
+        end
+        else
+        begin
+            case (SPI_Cmd)
+                3'b001: //ReadReg- MISO //32 bits
+                begin
+                    Reg_RdEn = 1;
+                    Reg_WrEn = 0;
+                    Buffer_RdEn = 0;
+                    BUFFER_InAmount = 0;
+                end
+                3'b010: //Write- MOSI 16bits
+                begin
+                    Reg_RdEn = 0;
+                    Reg_WrEn = 1;
+                    Buffer_RdEn = 0;
+                    BUFFER_InAmount = 0;
+                end
+                3'b011: //ReadData- MISO RAM Read- this is default mode //8 bits
+                begin
+                    Reg_RdEn = 0;
+                    Reg_WrEn = 0;
+                    Buffer_RdEn = 1;
+                    case (SPI_Params)
+                        00000:
+                        begin
+                            BUFFER_InAmount = 524288; //2^19 = max ram size
+                        end
+                        00001:
+                        begin
+                            BUFFER_InAmount = 262144; //2^18
+                        end
+                        00010:
+                        begin
+                            BUFFER_InAmount = 131072;
+                        end
+                        00011:
+                        begin
+                            BUFFER_InAmount = 65536;
+                        end
+                        00100:
+                        begin
+                            BUFFER_InAmount = 32768;
+                        end
+                        00101:
+                        begin
+                            BUFFER_InAmount = 16384; //2^14
+                        end
+                        00110:
+                        begin
+                            BUFFER_InAmount = 8192; 
+                        end
+                        00111:
+                        begin
+                            BUFFER_InAmount = 4096;
+                        end
+                        01000:
+                        begin
+                            BUFFER_InAmount = 2048;
+                        end
+                        01001:
+                        begin
+                            BUFFER_InAmount = 1024;
+                        end
+                        01010:
+                        begin
+                            BUFFER_InAmount = 512;
+                        end
+                        01011:
+                        begin
+                            BUFFER_InAmount = 256;
+                        end
+                        01100:
+                        begin
+                            BUFFER_InAmount = 128;
+                        end
+                        01101:
+                        begin
+                            BUFFER_InAmount = 64;
+                        end
+                        01110:
+                        begin
+                            BUFFER_InAmount = 32;
+                        end
+                        01111:
+                        begin
+                            BUFFER_InAmount = 16;
+                        end
+                    endcase
+                end
+                default:
+                begin
+                    Reg_RdEn = 0;
+                    Reg_WrEn = 0;
+                    Buffer_RdEn = 0;
+                    BUFFER_InAmount = 0;
+                end
+            endcase
+        end
+    end
      
     Regs u_REGS(
         .Write_Data(SPI_Data),

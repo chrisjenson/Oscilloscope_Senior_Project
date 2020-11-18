@@ -11,6 +11,91 @@ module tb();
     reg MOSI;
     reg SlaveSel;
     ////////////////////////////////////////////
+    
+ 
+ ///////////////////////////////////////////////////////////////////////////////////
+    wire [15:0] command;
+    reg [3:0] index;
+    reg commandDone;
+    reg [5:0] commandNum;
+    reg [15:0] commandArray[1:0];
+    initial
+    begin
+        commandNum <= 0;
+        rst <= 1;
+        SlaveSel <= 1;
+        clk = 0;
+        SCLK = 0;
+        SCLKCount = 0;
+        index = 15;
+        while (1)
+            #5 clk = ~clk;  // toggle clk each 5 ns (100 MHz clock frequency)
+    end
+    
+    initial
+    begin  
+        commandArray[0] = 16'b0100010011111111; //cmd = write, params = 4, data = 8'hFF
+        commandArray[1] = 16'b0010010011111111; //cmd = Read, params = 4, data = x
+    end
+    
+    always @(posedge clk) //Generate Slave Clock
+    begin
+        if (!SlaveSel)
+        begin
+            SCLKCount <= SCLKCount + 1;
+            if (SCLKCount == 2'b01)
+            begin
+                #1 SCLK = ~SCLK;
+            end
+        end
+    end
+    initial 
+    begin
+        #210
+        SlaveSel <=0;
+        rst <= 0;
+    end
+    
+    always @(posedge clk)
+    begin
+        if (commandDone)
+        begin
+            #200
+            SlaveSel <= 0;
+        end
+    end
+    
+    assign command = commandArray[commandNum];
+    
+    always @(posedge SCLK)
+    begin
+        if (!SlaveSel)
+        begin
+            MOSI <= command[index];
+            index <= index - 1;
+            if (index == 0)
+            begin
+                SlaveSel <= 1;
+                commandNum <= commandNum + 1;
+                commandDone <= 1;
+            end
+        end
+        else
+        begin
+            MOSI <= 0;
+            index <= 15;
+        end
+    end
+    
+    SPI u_SPI(
+        .reset(rst),
+        .MOSI_Raw(MOSI),
+        .SlaveSel(SlaveSel),
+        .clk(clk),
+        .SCLK_Raw(SCLK), 
+        .Buffer_DataIn()
+    );
+    /////////////////////////////////////////////////////////
     /*
     //reg SlaveSelPre;
     reg SPITransferDone;
@@ -191,66 +276,5 @@ module tb();
         .Buffer_DataIn()
     );
  */
- 
- ///////////////////////////////////////////////////////////////////////////////////
-    reg [15:0] command;
-    reg [3:0] index;
-    initial
-    begin
-        rst <= 1;
-        SlaveSel <= 1;
-        command = 16'b0010010011111111;
-        clk = 0;
-        SCLK = 0;
-        SCLKCount = 0;
-        index = 15;
-        while (1)
-            #5 clk = ~clk;  // toggle clk each 5 ns (100 MHz clock frequency)
-    end
-    always @(posedge clk) //Generate Slave Clock
-    begin
-        if (!SlaveSel)
-        begin
-            SCLKCount <= SCLKCount + 1;
-            if (SCLKCount == 2'b01)
-            begin
-                #1 SCLK = ~SCLK;
-            end
-        end
-    end
-    initial 
-    begin
-        #210
-        SlaveSel <=0;
-        rst <= 0;
-    end
     
-    
-    
-    always @(posedge SCLK)
-    begin
-        if (!SlaveSel)
-        begin
-            MOSI <= command[index];
-            index <= index - 1;
-            if (index == 0)
-            begin
-                SlaveSel <= 1;
-            end
-        end
-        else
-        begin
-            index <= 15;
-        end
-    end
-    
-    SPI u_SPI(
-        .reset(rst),
-        .MOSI_Raw(MOSI),
-        .SlaveSel(SlaveSel),
-        .clk(clk),
-        .SCLK_Raw(SCLK), 
-        .Buffer_DataIn()
-    );
-    /////////////////////////////////////////////////////////
 endmodule
