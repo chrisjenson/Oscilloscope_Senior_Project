@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log SPI.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source SPI.tcl
+EAStep vivado -log Buffer_FIFO.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source Buffer_FIFO.tcl

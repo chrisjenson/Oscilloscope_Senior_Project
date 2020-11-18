@@ -1,13 +1,14 @@
-
-*** Running vivado
-    with args -log Buffer_FIFO.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source Buffer_FIFO.tcl
-
-
-****** Vivado v2019.1 (64-bit)
-  **** SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
-  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
-
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Mon Nov 16 11:29:42 2020
+# Process ID: 14680
+# Current directory: D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/SPI_Test/SPI_Test.runs/synth_1
+# Command line: vivado.exe -log Buffer_FIFO.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Buffer_FIFO.tcl
+# Log file: D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/SPI_Test/SPI_Test.runs/synth_1/Buffer_FIFO.vds
+# Journal file: D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/SPI_Test/SPI_Test.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
 source Buffer_FIFO.tcl -notrace
 Command: synth_design -top Buffer_FIFO -part xc7a100tcsg324-1
 Starting synth_design

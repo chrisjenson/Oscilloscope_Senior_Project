@@ -17,7 +17,6 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_param chipscope.maxJobs 2
 create_project -in_memory -part xc7a100tcsg324-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -29,8 +28,10 @@ set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property ip_output_repo d:/SeniorProject/Oscilloscope_Senior_Project/Verilog/SPI_Test/SPI_Test.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-read_verilog -library xil_defaultlib -sv D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/SPI_Test/SPI_Test.srcs/sources_1/new/Regs.v
-read_verilog -library xil_defaultlib D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/SPI_Test/SPI_Test.srcs/sources_1/new/SPI.v
+read_verilog -library xil_defaultlib {
+  D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/SPI_Test/SPI_Test.srcs/sources_1/new/FIFO_Ram.v
+  D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/SPI_Test/SPI_Test.srcs/sources_1/new/Buffer_FIFO.v
+}
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
 # design are intentionally left as such for best results. Dcp files will be
@@ -39,15 +40,18 @@ read_verilog -library xil_defaultlib D:/SeniorProject/Oscilloscope_Senior_Projec
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
+read_xdc {{C:/Users/Brian Worts/Downloads/lp_constraints.xdc}}
+set_property used_in_implementation false [get_files {{C:/Users/Brian Worts/Downloads/lp_constraints.xdc}}]
+
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]
 
-synth_design -top SPI -part xc7a100tcsg324-1
+synth_design -top Buffer_FIFO -part xc7a100tcsg324-1
 
 
 # disable binary constraint mode for synth run checkpoints
 set_param constraints.enableBinaryConstraints false
-write_checkpoint -force -noxdef SPI.dcp
-create_report "synth_1_synth_report_utilization_0" "report_utilization -file SPI_utilization_synth.rpt -pb SPI_utilization_synth.pb"
+write_checkpoint -force -noxdef Buffer_FIFO.dcp
+create_report "synth_1_synth_report_utilization_0" "report_utilization -file Buffer_FIFO_utilization_synth.rpt -pb Buffer_FIFO_utilization_synth.pb"
 file delete __synthesis_is_running__
 close [open __synthesis_is_complete__ w]

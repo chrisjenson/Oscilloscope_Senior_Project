@@ -3,12 +3,15 @@
 module tb();
 
     reg clk;
+    reg rst;
     reg SCLK;
     reg [1:0] SCLKCount;
     
     reg MISO;
     reg MOSI;
     reg SlaveSel;
+    ////////////////////////////////////////////
+    /*
     //reg SlaveSelPre;
     reg SPITransferDone;
 
@@ -159,6 +162,7 @@ module tb();
         #20
         SlaveCount <= 0;
         SlaveSel <=0;
+        
     end
     
     initial
@@ -177,8 +181,8 @@ module tb();
         while (1)
              #5 clk = ~clk;  // toggle clk each 5 ns (100 MHz clock frequency)
     end
-
-    SPI u_SPI(
+    
+        SPI u_SPI(
         .MISO(),
         .MOSI_Raw(MOSI),
         .SlaveSel(SlaveSel),
@@ -186,5 +190,67 @@ module tb();
         .SCLK_Raw(SCLK), //DEBUG Generate Slave Clock???
         .Buffer_DataIn()
     );
+ */
+ 
+ ///////////////////////////////////////////////////////////////////////////////////
+    reg [15:0] command;
+    reg [3:0] index;
+    initial
+    begin
+        rst <= 1;
+        SlaveSel <= 1;
+        command = 16'b0010010011111111;
+        clk = 0;
+        SCLK = 0;
+        SCLKCount = 0;
+        index = 15;
+        while (1)
+            #5 clk = ~clk;  // toggle clk each 5 ns (100 MHz clock frequency)
+    end
+    always @(posedge clk) //Generate Slave Clock
+    begin
+        if (!SlaveSel)
+        begin
+            SCLKCount <= SCLKCount + 1;
+            if (SCLKCount == 2'b01)
+            begin
+                #1 SCLK = ~SCLK;
+            end
+        end
+    end
+    initial 
+    begin
+        #210
+        SlaveSel <=0;
+        rst <= 0;
+    end
     
+    
+    
+    always @(posedge SCLK)
+    begin
+        if (!SlaveSel)
+        begin
+            MOSI <= command[index];
+            index <= index - 1;
+            if (index == 0)
+            begin
+                SlaveSel <= 1;
+            end
+        end
+        else
+        begin
+            index <= 15;
+        end
+    end
+    
+    SPI u_SPI(
+        .reset(rst),
+        .MOSI_Raw(MOSI),
+        .SlaveSel(SlaveSel),
+        .clk(clk),
+        .SCLK_Raw(SCLK), 
+        .Buffer_DataIn()
+    );
+    /////////////////////////////////////////////////////////
 endmodule

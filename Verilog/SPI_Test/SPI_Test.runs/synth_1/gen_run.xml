@@ -1,15 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1604704807">
-  <File Type="PA-TCL" Name="SPI.tcl"/>
-  <File Type="REPORTS-TCL" Name="SPI_reports.tcl"/>
-  <File Type="RDS-RDS" Name="SPI.vds"/>
-  <File Type="RDS-UTIL" Name="SPI_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="SPI_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="SPI.dcp"/>
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1605544177">
+  <File Type="PA-TCL" Name="Buffer_FIFO.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="Buffer_FIFO_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="Buffer_FIFO_reports.tcl"/>
+  <File Type="RDS-RDS" Name="Buffer_FIFO.vds"/>
+  <File Type="RDS-UTIL" Name="Buffer_FIFO_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="Buffer_FIFO_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="Buffer_FIFO.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="Buffer_FIFO_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="Buffer_FIFO_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/FIFO_Ram.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/Buffer_FIFO.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/new/Regs.v">
       <FileInfo SFType="SVerilog">
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -17,6 +35,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/SPI.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -24,12 +43,18 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="SPI"/>
+      <Option Name="TopModule" Val="Buffer_FIFO"/>
       <Option Name="TopAutoSet" Val="TRUE"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
     <Filter Type="Constrs"/>
+    <File Path="C:/Users/Brian Worts/Downloads/lp_constraints.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="ConstrsType" Val="XDC"/>
     </Config>
