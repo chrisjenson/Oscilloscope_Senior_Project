@@ -7,6 +7,11 @@ module ADCInterface(
     input [9:0]         ADC_DataIn, //from DAB
     output reg [7:0]    Buffer_DataIn
     );
+    //DEBUG: ADD SATURATION
+    //
+    //May be better to force synthesis tools to utilize pads using following code:
+    //https://www.xilinx.com/support/answers/6214.html
+    //
     /////////////////////////////////////////////////
     //Get negedge and posedge pulses
     wire ADC_SampleClock_posedge_pulse;
@@ -39,13 +44,21 @@ module ADCInterface(
         end
         else
         begin
-            if (ADC_SampleClock_negedge_pulse)
+            if (ADC_SampleClock_posedge_pulse)
             begin
                 Buffer_DataIn <= ADC_DataIn[9:2]; //DBEUG: MAKE THESE BITS SELECTABLE
             end
         end
     end
     
+    /*
+    RAM_AddrGen u_RAM_AddrGen(
+    .clk(clk),
+    .reset(reset),
+    .ADC_SampleClock(ADC_SampleClock),
+    .Buffer_DataIn(Buffer_DataIn),
+    .onBit(!reset) //Use this to gate everything
+    );*/
     
 //    TimingGen u_TimingGen(
 //        .ADC_SampleClock(ADC_SampleClock)

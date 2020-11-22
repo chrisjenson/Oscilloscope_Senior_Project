@@ -25,7 +25,7 @@ module tb();
         rst <= 1;
         SlaveSel <= 1;
         clk = 0;
-        SCLK = 0;
+        SCLK = 1;
         SCLKCount = 0;
         index = 15;
         while (1)

@@ -28,7 +28,7 @@ module testbench();
     
     wire [9:0] stimInData;
     reg [11:0] stimInCount; //2^12 = 4096
-    reg [9:0] stimData [`numInputs-1:0]; //
+    reg [9:0] stimData [`numInputs-1:0];
     
      assign stimInData = stimData[stimInCount];
     
@@ -66,18 +66,28 @@ module testbench();
             stimInCount <= stimInCount + 1;
         end
     end
+    wire onBit;
+    assign onBit = ~reset;
     
-    TimingGen u_TimingGen(
+    Top u_Top(
         .clk(clk),
         .reset(reset),
+        .onBit(onBit),
+        .stimInData(stimInData),
         .ADC_SampleClock(ADC_SampleClock)
     );
     
-    ADCInterface u_ADCInterface(
-        .clk(clk),
-        .reset(reset),      
-        .ADC_DataIn(stimInData), 
-        .ADC_SampleClock(ADC_SampleClock)
-    );
+//    TimingGen u_TimingGen(
+//        .clk(clk),
+//        .reset(reset),
+//        .ADC_SampleClock(ADC_SampleClock)
+//    );
+    
+//    ADCInterface u_ADCInterface(
+//        .clk(clk),
+//        .reset(reset),      
+//        .ADC_DataIn(stimInData), 
+//        .ADC_SampleClock(ADC_SampleClock)
+//    );
     
 endmodule
