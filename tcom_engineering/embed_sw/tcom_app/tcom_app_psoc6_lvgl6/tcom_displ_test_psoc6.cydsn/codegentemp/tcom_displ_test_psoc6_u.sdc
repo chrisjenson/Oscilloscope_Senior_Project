@@ -1,6 +1,6 @@
-# Component constraints for E:\Applications\LittlevGL\Oscilloscope_Senior_Project\tcom_engineering\embed_sw\tcom_app\tcom_app_psoc6_lvgl6\tcom_displ_test_psoc6.cydsn\TopDesign\TopDesign.cysch
-# Project: E:\Applications\LittlevGL\Oscilloscope_Senior_Project\tcom_engineering\embed_sw\tcom_app\tcom_app_psoc6_lvgl6\tcom_displ_test_psoc6.cydsn\tcom_displ_test_psoc6.cyprj
-# Date: Wed, 11 Nov 2020 00:06:39 GMT
+# Component constraints for E:\College Work\SeniorProject\Oscilloscope_Senior_Project\tcom_engineering\embed_sw\tcom_app\tcom_app_psoc6_lvgl6\tcom_displ_test_psoc6.cydsn\TopDesign\TopDesign.cysch
+# Project: E:\College Work\SeniorProject\Oscilloscope_Senior_Project\tcom_engineering\embed_sw\tcom_app\tcom_app_psoc6_lvgl6\tcom_displ_test_psoc6.cydsn\tcom_displ_test_psoc6.cyprj
+# Date: Mon, 23 Nov 2020 03:32:35 GMT
 # LCD_INTERFACE
 # False paths present for both 8 and 16 bits Graphic LCD Interface configurations 
 expr {(8) == 8 ?

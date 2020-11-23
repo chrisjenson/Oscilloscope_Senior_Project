@@ -37,10 +37,12 @@ void home_screen()
     const int v_img_2 = 330;
 #endif
     
-    const char off_slide_txt[]  = "Offset";
+    //const char  off_slide_txt[]  = "Offset";
     const char gain_slide_txt[] = "Gain";
     const char vert_slide_txt[] = "Vert. Scale";
     const char hori_slide_txt[]  = "Hori. Scale";
+    
+    char read_test[] = "0000000000000000";
     
     const int  btn_wid       = 130;
     //const int  btn_hgt       = 50;
@@ -50,6 +52,63 @@ void home_screen()
     static lv_style_t *lbl_style;
     
     static lv_obj_t *chart1;        //declaring the chart
+    
+    
+    // SPI TEST CODE //
+   
+    //uunt16 because of the command size
+    //uint16_t txBuffer[BUFFER_SIZE];
+    uint16_t txBuffer[3];
+    uint16_t RxBuffer[3];
+    int SPIflag = 1;        //If you want to send a command, set the flag high
+    
+    /* Initialize txBuffer with command to transfer */
+    RxBuffer[0] = 0b1111111111111111; //Junk value
+    txBuffer[0] = 0b0100000000000000; //010 00000 00000000 command to write 00 to reg 0
+    txBuffer[1] = 0b0010000000000000; //001 00000 00000000 command to read reg 0
+    txBuffer[2] = 0b1111111111111111; // JUNK at present
+    uint16_t tempRead;
+    
+    // Command to be sent
+    if(SPIflag){
+    /* Master: start a transfer. Slave: prepare for a transfer. */
+        while(!(Cy_SCB_SPI_GetTxFifoStatus(SPIM_HW) & CY_SCB_SPI_TX_EMPTY)){}
+        Cy_SCB_SPI_Write(SPIM_HW, txBuffer[0]);
+       
+        CyDelay(1);
+       
+        while(!(Cy_SCB_SPI_GetRxFifoStatus(SPIM_HW) & CY_SCB_SPI_RX_NOT_EMPTY)){}
+        RxBuffer[0] = Cy_SCB_SPI_Read(SPIM_HW);
+        //RxBuffer[0] = 0b0010111100101111;
+        
+        //Get the first 3 bits, the CMD, to know what is being done.
+        char CMD = (txBuffer[1] >> 13) & 7;
+
+        //Read from reg
+        if(CMD == 1){
+            tempRead = RxBuffer[0];
+        }
+        //Write to reg
+        else if(CMD == 2){
+        
+        }
+        //Read sample data
+        else if(CMD == 3){
+        
+        }
+       
+        SPIflag = 0;
+    }
+    /* Handle results of a transfer */    
+    
+    //Create a label to display the value read in
+    lv_obj_t* readLabel = lv_label_create(lv_scr_act(), NULL);
+	lv_obj_set_drag(readLabel, false);
+	lv_label_set_text(readLabel, read_test);
+    lv_obj_set_pos(readLabel, 115, v_lab_2+40);                         /*Set its position*/
+    
+   
+    // END SPI TEST CODE //
     
     
     /*===========LEGACY CODE==============//
@@ -89,8 +148,9 @@ void home_screen()
     //First Slider
 	lv_obj_t* offsetLabel = lv_label_create(lv_scr_act(), NULL);
 	lv_obj_set_drag(offsetLabel, false);
-	lv_label_set_text(offsetLabel, off_slide_txt);
-    lv_obj_set_pos(offsetLabel, h_lab_1, v_lab_1-30);                         /*Set its position*/
+	//lv_label_set_text(offsetLabel, off_slide_txt);
+    lv_label_set_text(offsetLabel, "Offset");
+    lv_obj_set_pos(offsetLabel, h_lab_1, v_lab_1-40);                         /*Set its position*/
     
     lv_obj_t* offsetSlide = lv_slider_create(lv_scr_act(), NULL);
 	lv_obj_set_drag(offsetSlide, false);

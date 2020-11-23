@@ -99,29 +99,29 @@ main( void )
    
     //uunt16 because of the command size
     //uint16_t txBuffer[BUFFER_SIZE];
-    uint16_t txBuffer[3];
-    uint16_t RxBuffer[3];
+    //uint16_t txBuffer[3];
+    //uint16_t RxBuffer[3];
    
     /* Initialize txBuffer with command to transfer */
     //txBuffer[0] = CMD_START_TRANSFER;
-    RxBuffer[0] = 0x200U; //00100000000 command to read reg 0
-    txBuffer[0] = 0x100U; //00100000000 command to read reg 0
-    txBuffer[1] = 0x000U;
-    txBuffer[2] = 0x001U;
+    //RxBuffer[0] = 0x200U; //Junk value
+    //txBuffer[0] = 0x200U; //001 00000 00000000 command to write 00 to reg 0
+    //txBuffer[1] = 0x100U; //000 10000 00000000 command to read reg 0
+    //txBuffer[2] = 0x001U; // JUNK at present
    
-    while(1)
-    {
+    //while(1)
+    //{
     /* Master: start a transfer. Slave: prepare for a transfer. */
-        while(!(Cy_SCB_SPI_GetTxFifoStatus(SPIM_HW) & CY_SCB_SPI_TX_EMPTY)){}
-        Cy_SCB_SPI_Write(SPIM_HW, txBuffer[0]);
+    //    while(!(Cy_SCB_SPI_GetTxFifoStatus(SPIM_HW) & CY_SCB_SPI_TX_EMPTY)){}
+    //    Cy_SCB_SPI_Write(SPIM_HW, txBuffer[0]);
        
-        CyDelay(1);
+    //    CyDelay(1);
        
-        while(!(Cy_SCB_SPI_GetRxFifoStatus(SPIM_HW) & CY_SCB_SPI_RX_NOT_EMPTY)){}
-        RxBuffer[0] = Cy_SCB_SPI_Read(SPIM_HW);
+    //    while(!(Cy_SCB_SPI_GetRxFifoStatus(SPIM_HW) & CY_SCB_SPI_RX_NOT_EMPTY)){}
+    //    RxBuffer[0] = Cy_SCB_SPI_Read(SPIM_HW);
    
    
-    }
+    //}
     /* Handle results of a transfer */    
    
    
