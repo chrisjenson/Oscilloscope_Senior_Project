@@ -15,7 +15,7 @@ module Top(
         .ADC_SampleClock(ADC_SampleClock)
     );
     
-    wire [7:0] Buffer_DataIn;
+    wire [15:0] Buffer_DataIn;
     
     ADCInterface u_ADCInterface(
         .clk(clk),
@@ -26,7 +26,7 @@ module Top(
     );
     
     wire [18:0] RAMW_WriteAddr;
-    wire [7:0] RAMW_Data;
+    wire [15:0] RAMW_Data;
     wire RAMW_En;
     
     RAM_WriteEngine u_RAM_WriteEngine(
@@ -40,20 +40,28 @@ module Top(
     );
     
     wire [18:0] RAMW_ReadAddr;
-    wire [7:0] RAMR_Data;
+    wire [15:0] RAMR_Data;
+    wire SPI_ReadCommand; //from spi
+    wire triggered; //From triggermanagement
+    wire [18:0] RAMR_Quantity;
+    wire [15:0] RAMData;
+    wire FIFO_InRTS;
+    wire FIFO_InRTR;
+    
     Ram_ReadEngine u_Ram_ReadEngine(
         .clk(clk),
         .reset(reset),
         .ADC_SampleClock(ADC_SampleClock),
         //Ram Read
         .triggered(1), //DEBUG FROM TRIGGERMANAGEMENT
+        .SPI_ReadCommand(SPI_ReadCommand),
         .RAMR_ReadAddr(RAMW_ReadAddr), //Port B on RAM, current read location
         .RAMR_Quantity(4196), //DEBUG: FROM SPI COMMAND
-        .RAMR_Data(RAMR_Data)
+        .RAMR_Data(RAMR_Data),
         //FIFO
-        //.ConcatRAMData,
-        //.FIFO_InRTS,
-        //.FIFO_InRTR
+        .RAMData(RAMData),
+        .FIFO_InRTS(FIFO_InRTS),
+        .FIFO_InRTR(FIFO_InRTR)
     );
     
    

@@ -5,7 +5,7 @@ module ADCInterface(
     input               reset, //from tb
     input               ADC_SampleClock, //from timing gen
     input [9:0]         ADC_DataIn, //from DAB
-    output reg [7:0]    Buffer_DataIn
+    output reg [15:0]   Buffer_DataIn
     );
     //DEBUG: ADD SATURATION
     //
@@ -28,9 +28,12 @@ module ADCInterface(
     assign ADC_SampleClock_negedge_pulse = ~ADC_SampleClock & ADC_SampleClock_p1;
     //End section
     //////////////////////////////////////////////////////////////    
-    
+    reg twoCounter;
+    reg [15:0] ConcatRAMData;
+
     always @(posedge clk)
-    //Select 8 bits from input data as output on negedge of sample clk
+    //Select 8 bits from input data, concat with next 8 bit input, and set as output on negedge of sample clk
+    //
     //Inputs
         //reset
         //ADC_SampleClock_negedge_pulse
@@ -40,13 +43,24 @@ module ADCInterface(
     begin
         if (reset)
         begin
+            twoCounter <= 0;
             Buffer_DataIn <= 0;
         end
         else
         begin
             if (ADC_SampleClock_posedge_pulse)
             begin
-                Buffer_DataIn <= ADC_DataIn[9:2]; //DBEUG: MAKE THESE BITS SELECTABLE
+                if (twoCounter == 1)
+                begin
+                    ConcatRAMData[7:0] <= ADC_DataIn[9:2];  //DEBUG: MAKE THESE BITS SELECTABLE
+                    twoCounter <= twoCounter + 1;
+                    Buffer_DataIn <= ConcatRAMData[15:0];
+                end
+                else
+                begin
+                    ConcatRAMData[15:8] <= ADC_DataIn[9:2];
+                    twoCounter <= twoCounter + 1;
+                end
             end
         end
     end

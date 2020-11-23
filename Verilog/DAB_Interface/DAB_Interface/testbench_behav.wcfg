@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="166666666fs"></ZoomStartTime>
-      <ZoomEndTime time="1099593496fs"></ZoomEndTime>
-      <Cursor1Time time="1000000000fs"></Cursor1Time>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="1000000001fs"></ZoomEndTime>
+      <Cursor1Time time="309466000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="142"></NameColumnWidth>
-      <ValueColumnWidth column_width="69"></ValueColumnWidth>
+      <ValueColumnWidth column_width="65"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="6" />
+   <WVObjectSize size="5" />
    <wvobject fp_name="/testbench/clk" type="logic">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -32,16 +32,12 @@
       <obj_property name="ElementShortName">reset</obj_property>
       <obj_property name="ObjectShortName">reset</obj_property>
    </wvobject>
-   <wvobject fp_name="/testbench/u_ADCInterface/ADC_DataIn" type="array">
-      <obj_property name="ElementShortName">ADC_DataIn[9:0]</obj_property>
-      <obj_property name="ObjectShortName">ADC_DataIn[9:0]</obj_property>
-   </wvobject>
    <wvobject fp_name="/testbench/stimInData" type="array">
       <obj_property name="ElementShortName">stimInData[9:0]</obj_property>
       <obj_property name="ObjectShortName">stimInData[9:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/testbench/u_ADCInterface/Buffer_DataIn" type="array">
-      <obj_property name="ElementShortName">Buffer_DataIn[7:0]</obj_property>
-      <obj_property name="ObjectShortName">Buffer_DataIn[7:0]</obj_property>
+   <wvobject fp_name="/testbench/u_Top/RAMW_Data" type="array">
+      <obj_property name="ElementShortName">RAMW_Data[7:0]</obj_property>
+      <obj_property name="ObjectShortName">RAMW_Data[7:0]</obj_property>
    </wvobject>
 </wave_config>

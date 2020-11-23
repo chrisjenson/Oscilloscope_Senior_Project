@@ -10,31 +10,56 @@ module Ram_ReadEngine(
     input SPI_ReadCommand,
     output reg [18:0] RAMR_ReadAddr, //Port B on RAM, current read location
     input [18:0] RAMR_Quantity,
-    input [7:0] RAMR_Data,
+    input [15:0] RAMR_Data,
     //FIFO
-    output reg [15:0] ConcatRAMData,
+    output reg [15:0] RAMData,
     output reg FIFO_InRTS,
     input FIFO_InRTR
     );
+    
     wire FIFO_InXFC;
     assign FIFO_InXFC = FIFO_InRTS & FIFO_InRTR;
     //DEBUG Need to implement a Ring buffer
-    /////////////////////////////////////////////////
-    //Get negedge and posedge pulses
-    wire ADC_SampleClock_posedge_pulse;
-    wire ADC_SampleClock_negedge_pulse;
-    
-    reg ADC_SampleClock_p1;
+    wire reading;
+    assign reading = (RAMR_ReadAddr < RAMR_Quantity) & SPI_ReadCommand & triggered;
     
     always @(posedge clk)
     begin
-        ADC_SampleClock_p1 <= ADC_SampleClock;
+    //Determing if RAM should be reading data
+    //Inputs
+        //Reset
+        //reading
+        //FIFO_InXFC
+    //Outputs
+        //RAMR_ReadAddr
+        //FIFO_InRTS
+        if (reset)
+        begin
+            RAMR_ReadAddr <= 0;
+            FIFO_InRTS <= 0;
+        end
+        else
+        begin
+            if (reading)
+            begin
+                FIFO_InRTS <= 1;
+                if (FIFO_InXFC)
+                begin
+                    RAMR_ReadAddr <= RAMR_ReadAddr + 1;
+                end
+            end
+            else
+            begin
+                FIFO_InRTS <= 0;
+                RAMR_ReadAddr <= 0; //If not reading, address is 0;
+            end
+        end
     end
     
-    assign ADC_SampleClock_posedge_pulse = ADC_SampleClock & ~ADC_SampleClock_p1;
-    assign ADC_SampleClock_negedge_pulse = ~ADC_SampleClock & ADC_SampleClock_p1;
-    //End section
-    //////////////////////////////////////////////////////////////  
+    
+    
+    
+    /*
     //Read conditions met?
     reg reading;
 
@@ -160,7 +185,7 @@ module Ram_ReadEngine(
             end
         end
     end
-    
+    */
     /////////////////////////////////////////
     //
     

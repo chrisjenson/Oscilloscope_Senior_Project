@@ -6,9 +6,9 @@ module RAM_WriteEngine(
     input onBit, //Use this to gate everything
     input ADC_SampleClock,
     //Write
-    input [7:0] Buffer_DataIn,
+    input [15:0] Buffer_DataIn,
     output reg [18:0] RAMW_WriteAddr, //Port A on RAM
-    output [7:0] RAMW_Data
+    output [15:0] RAMW_Data
     );
     
     
@@ -16,6 +16,8 @@ module RAM_WriteEngine(
     //Get negedge and posedge pulses
     wire ADC_SampleClock_posedge_pulse;
     wire ADC_SampleClock_negedge_pulse;
+    reg ADC_SampleClock_WaingForSecondPosedge;
+    wire ADC_SampleClock_secondposedge_pulse;
     
     reg ADC_SampleClock_p1;
     
@@ -24,36 +26,41 @@ module RAM_WriteEngine(
         ADC_SampleClock_p1 <= ADC_SampleClock;
     end
     
+    always @(posedge clk)
+    //Set signal
+    begin
+        if (reset)
+        begin
+            ADC_SampleClock_WaingForSecondPosedge <= 0;
+        end
+        else
+        begin
+            if (ADC_SampleClock_posedge_pulse)
+            begin
+                if (ADC_SampleClock_WaingForSecondPosedge)
+                begin
+                    ADC_SampleClock_WaingForSecondPosedge <= 0;
+                end
+                else
+                begin
+                    ADC_SampleClock_WaingForSecondPosedge <= 1;
+                end
+            end
+        end
+    end
+    
+    assign ADC_SampleClock_secondposedge_pulse = ADC_SampleClock_WaingForSecondPosedge & ADC_SampleClock_posedge_pulse;
+    
     assign ADC_SampleClock_posedge_pulse = ADC_SampleClock & ~ADC_SampleClock_p1;
     assign ADC_SampleClock_negedge_pulse = ~ADC_SampleClock & ADC_SampleClock_p1;
+    
+    
     //End section
     //////////////////////////////////////////////////////////////    
     //////////////////////////////////////////////////////////////    
     //Write Section
-    reg writeFlag;
-    
-//    always @(posedge clk)
-//    begin
-//    //Write data to RAMW_Data for input into ram, contigent on flag
-//    //Inputs
-//        //Reset
-//    //Outputs
-//        //writeFlag
-//        //RAMW_WriteAddr
-//        if (reset)
-//        begin
-//        end
-//        else
-//        begin
-//            if (ADC_SampleClock_negedge_pulse) //Buffer_DataIn in is set on negedge
-//            begin
-//                writeFlag <= 1;
-//                RAMW_Data <= Buffer_DataIn;
-//            end
-//        end
-//    end
     wire RAMW_En;
-    assign RAMW_En = onBit & ADC_SampleClock_posedge_pulse;
+    assign RAMW_En = onBit & ADC_SampleClock_secondposedge_pulse;
     assign RAMW_Data = Buffer_DataIn;
     
     always @(posedge clk)

@@ -3,13 +3,16 @@ Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
 Running: D:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 59155b6501fe44cc9f19662a742f5ab9 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'triggered' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/DAB_Interface/DAB_Interface/DAB_Interface.srcs/sources_1/new/Top.v:49]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 19 for port 'RAMR_Quantity' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/DAB_Interface/DAB_Interface/DAB_Interface.srcs/sources_1/new/Top.v:51]
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
 Compiling module xil_defaultlib.TimingGen
 Compiling module xil_defaultlib.ADCInterface
-Compiling module xil_defaultlib.RAM_AddrGen
+Compiling module xil_defaultlib.RAM_WriteEngine
+Compiling module xil_defaultlib.Ram_ReadEngine
 Compiling module xil_defaultlib.Top
 Compiling module xil_defaultlib.testbench
 Compiling module xil_defaultlib.glbl
