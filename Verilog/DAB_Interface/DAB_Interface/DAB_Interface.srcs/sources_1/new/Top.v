@@ -29,7 +29,7 @@ module Top(
     wire [7:0] RAMW_Data;
     wire RAMW_En;
     
-    RAM_AddrGen u_RAM_AddrGen(
+    RAM_WriteEngine u_RAM_WriteEngine(
         .clk(clk),
         .reset(reset),
         .ADC_SampleClock(ADC_SampleClock),
@@ -37,6 +37,23 @@ module Top(
         .RAMW_WriteAddr(RAMW_WriteAddr), //Port A on RAM
         .RAMW_Data(RAMW_Data), 
         .onBit(onBit) //Use this to gate everything
+    );
+    
+    wire [18:0] RAMW_ReadAddr;
+    wire [7:0] RAMR_Data;
+    Ram_ReadEngine u_Ram_ReadEngine(
+        .clk(clk),
+        .reset(reset),
+        .ADC_SampleClock(ADC_SampleClock),
+        //Ram Read
+        .triggered(1), //DEBUG FROM TRIGGERMANAGEMENT
+        .RAMR_ReadAddr(RAMW_ReadAddr), //Port B on RAM, current read location
+        .RAMR_Quantity(4196), //DEBUG: FROM SPI COMMAND
+        .RAMR_Data(RAMR_Data)
+        //FIFO
+        //.ConcatRAMData,
+        //.FIFO_InRTS,
+        //.FIFO_InRTR
     );
     
    

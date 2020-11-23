@@ -1,6 +1,6 @@
 `timescale 1ns / 1ps
 
-module RAM_AddrGen(
+module RAM_WriteEngine(
     input clk,
     input reset,
     input onBit, //Use this to gate everything

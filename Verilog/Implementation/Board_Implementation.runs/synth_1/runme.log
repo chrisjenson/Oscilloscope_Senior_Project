@@ -1,0 +1,491 @@
+
+*** Running vivado
+    with args -log Top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source Top.tcl
+
+
+****** Vivado v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source Top.tcl -notrace
+Command: synth_design -top Top -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 14972 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 727.270 ; gain = 177.848
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'Top' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Top.v:3]
+INFO: [Synth 8-6157] synthesizing module 'SPI' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/SPI.v:3]
+WARNING: [Synth 8-151] case item 32'b00000000000000000000000001100100 is unreachable [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/SPI.v:147]
+WARNING: [Synth 8-151] case item 32'b00000000000000000000000001100101 is unreachable [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/SPI.v:151]
+WARNING: [Synth 8-151] case item 32'b00000000000000000000000001101110 is unreachable [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/SPI.v:155]
+WARNING: [Synth 8-151] case item 32'b00000000000000000000000001101111 is unreachable [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/SPI.v:159]
+WARNING: [Synth 8-151] case item 32'b00000000000000000000001111101000 is unreachable [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/SPI.v:163]
+WARNING: [Synth 8-151] case item 32'b00000000000000000000001111101001 is unreachable [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/SPI.v:167]
+WARNING: [Synth 8-151] case item 32'b00000000000000000000001111110010 is unreachable [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/SPI.v:171]
+WARNING: [Synth 8-151] case item 32'b00000000000000000000001111110011 is unreachable [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/SPI.v:175]
+WARNING: [Synth 8-151] case item 32'b00000000000000000000010001001100 is unreachable [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/SPI.v:179]
+WARNING: [Synth 8-151] case item 32'b00000000000000000000010001001101 is unreachable [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/SPI.v:183]
+WARNING: [Synth 8-151] case item 32'b00000000000000000000010001010110 is unreachable [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/SPI.v:187]
+WARNING: [Synth 8-151] case item 32'b00000000000000000000010001010111 is unreachable [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/SPI.v:191]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/SPI.v:130]
+INFO: [Synth 8-6157] synthesizing module 'Regs' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'Regs' (1#1) [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:4]
+WARNING: [Synth 8-6014] Unused sequential element BUFFER_InAmount_reg was removed.  [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/SPI.v:104]
+WARNING: [Synth 8-3848] Net FIFO_OutRTR in module/entity SPI does not have driver. [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/SPI.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'SPI' (2#1) [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/SPI.v:3]
+WARNING: [Synth 8-7023] instance 'u_SPI' of module 'SPI' has 8 connections declared, but only 6 given [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Top.v:15]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.runs/synth_1/.Xil/Vivado-31660-MSI/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (3#1) [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.runs/synth_1/.Xil/Vivado-31660-MSI/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'Top' (4#1) [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Top.v:3]
+WARNING: [Synth 8-3331] design SPI has unconnected port FIFO_OutRTR
+WARNING: [Synth 8-3331] design SPI has unconnected port Buffer_DataIn[15]
+WARNING: [Synth 8-3331] design SPI has unconnected port Buffer_DataIn[14]
+WARNING: [Synth 8-3331] design SPI has unconnected port Buffer_DataIn[13]
+WARNING: [Synth 8-3331] design SPI has unconnected port Buffer_DataIn[12]
+WARNING: [Synth 8-3331] design SPI has unconnected port Buffer_DataIn[11]
+WARNING: [Synth 8-3331] design SPI has unconnected port Buffer_DataIn[10]
+WARNING: [Synth 8-3331] design SPI has unconnected port Buffer_DataIn[9]
+WARNING: [Synth 8-3331] design SPI has unconnected port Buffer_DataIn[8]
+WARNING: [Synth 8-3331] design SPI has unconnected port Buffer_DataIn[7]
+WARNING: [Synth 8-3331] design SPI has unconnected port Buffer_DataIn[6]
+WARNING: [Synth 8-3331] design SPI has unconnected port Buffer_DataIn[5]
+WARNING: [Synth 8-3331] design SPI has unconnected port Buffer_DataIn[4]
+WARNING: [Synth 8-3331] design SPI has unconnected port Buffer_DataIn[3]
+WARNING: [Synth 8-3331] design SPI has unconnected port Buffer_DataIn[2]
+WARNING: [Synth 8-3331] design SPI has unconnected port Buffer_DataIn[1]
+WARNING: [Synth 8-3331] design SPI has unconnected port Buffer_DataIn[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 792.484 ; gain = 243.062
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 792.484 ; gain = 243.062
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 792.484 ; gain = 243.062
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [d:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'CLKWIZ0'
+Finished Parsing XDC File [d:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'CLKWIZ0'
+Parsing XDC File [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/lp_constraints.xdc]
+CRITICAL WARNING: [Designutils 20-1307] Command '<' is not supported in the xdc constraint file. [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/lp_constraints.xdc:9]
+WARNING: [Vivado 12-584] No ports matched 'registers[0]'. [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/lp_constraints.xdc:37]
+WARNING: [Vivado 12-584] No ports matched 'registers[1]'. [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/lp_constraints.xdc:38]
+WARNING: [Vivado 12-584] No ports matched 'registers[2]'. [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/lp_constraints.xdc:39]
+WARNING: [Vivado 12-584] No ports matched 'registers[3]'. [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/lp_constraints.xdc:40]
+WARNING: [Vivado 12-584] No ports matched 'registers[4]'. [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/lp_constraints.xdc:41]
+WARNING: [Vivado 12-584] No ports matched 'registers[5]'. [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/lp_constraints.xdc:42]
+WARNING: [Vivado 12-584] No ports matched 'registers[6]'. [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/lp_constraints.xdc:43]
+WARNING: [Vivado 12-584] No ports matched 'registers[7]'. [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/lp_constraints.xdc:44]
+WARNING: [Vivado 12-584] No ports matched 'SlaveSelLED'. [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/lp_constraints.xdc:52]
+Finished Parsing XDC File [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/lp_constraints.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/lp_constraints.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/Top_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/lp_constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/Top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 920.094 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 920.094 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 920.094 ; gain = 370.672
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 920.094 ; gain = 370.672
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for clk_in1. (constraint file  d:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for clk_in1. (constraint file  d:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc, line 4).
+Applied set_property DONT_TOUCH = true for CLKWIZ0. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 920.094 ; gain = 370.672
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-327] inferring latch for variable 'Read_Data_reg' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:43]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 920.094 ; gain = 370.672
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 2     
+	                1 Bit    Registers := 12    
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 14    
+	   4 Input      1 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module Regs 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 5     
+Module SPI 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 2     
+	                1 Bit    Registers := 12    
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 9     
+	   4 Input      1 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-3886] merging instance 'u_SPI/u_REGS/Read_Data_reg[7]' (LD) to 'u_SPI/u_REGS/Read_Data_reg[3]'
+INFO: [Synth 8-3886] merging instance 'u_SPI/u_REGS/Read_Data_reg[5]' (LD) to 'u_SPI/u_REGS/Read_Data_reg[3]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_SPI/u_REGS/Read_Data_reg[3] )
+WARNING: [Synth 8-3332] Sequential element (u_SPI/u_REGS/Read_Data_reg[3]) is unused and will be removed from module Top.
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'u_SPI/u_REGS/registers_reg[4][7]__0/Q' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'u_SPI/u_REGS/registers_reg[4][5]__0/Q' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'u_SPI/u_REGS/registers_reg[4][3]__0/Q' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'u_SPI/u_REGS/registers_reg[4][1]__0/Q' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'u_SPI/u_REGS/registers_reg[3][7]__0/Q' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'u_SPI/u_REGS/registers_reg[3][6]__0/Q' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'u_SPI/u_REGS/registers_reg[3][5]__0/Q' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'u_SPI/u_REGS/registers_reg[3][4]__0/Q' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'u_SPI/u_REGS/registers_reg[3][3]__0/Q' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'u_SPI/u_REGS/registers_reg[3][2]__0/Q' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'u_SPI/u_REGS/registers_reg[3][0]__0/Q' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'u_SPI/u_REGS/registers_reg[2][7]__0/Q' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'u_SPI/u_REGS/registers_reg[2][5]__0/Q' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'u_SPI/u_REGS/registers_reg[2][3]__0/Q' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'u_SPI/u_REGS/registers_reg[2][2]__0/Q' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'u_SPI/u_REGS/registers_reg[1][7]__0/Q' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'u_SPI/u_REGS/registers_reg[1][5]__0/Q' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'u_SPI/u_REGS/registers_reg[1][4]__0/Q' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'u_SPI/u_REGS/registers_reg[1][3]__0/Q' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'u_SPI/u_REGS/registers_reg[1][2]__0/Q' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'u_SPI/u_REGS/registers_reg[0][7]__0/Q' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'u_SPI/u_REGS/registers_reg[0][5]__0/Q' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'u_SPI/u_REGS/registers_reg[0][4]__0/Q' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'u_SPI/u_REGS/registers_reg[0][3]__0/Q' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'u_SPI/u_REGS/registers_reg[0][2]__0/Q' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'u_SPI/u_REGS/registers_reg[0][0]__0/Q' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'u_SPI/u_REGS/registers_reg[4][6]__0/Q' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'VCC' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'u_SPI/u_REGS/registers_reg[4][4]__0/Q' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'VCC' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'u_SPI/u_REGS/registers_reg[4][2]__0/Q' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'VCC' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'u_SPI/u_REGS/registers_reg[4][0]__0/Q' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'VCC' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'u_SPI/u_REGS/registers_reg[3][1]__0/Q' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'VCC' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'u_SPI/u_REGS/registers_reg[2][6]__0/Q' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'VCC' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'u_SPI/u_REGS/registers_reg[2][4]__0/Q' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'VCC' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'u_SPI/u_REGS/registers_reg[2][1]__0/Q' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'VCC' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'u_SPI/u_REGS/registers_reg[2][0]__0/Q' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'VCC' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'u_SPI/u_REGS/registers_reg[1][6]__0/Q' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'VCC' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'u_SPI/u_REGS/registers_reg[1][1]__0/Q' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'VCC' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'u_SPI/u_REGS/registers_reg[1][0]__0/Q' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'VCC' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'u_SPI/u_REGS/registers_reg[0][6]__0/Q' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'VCC' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'u_SPI/u_REGS/registers_reg[0][1]__0/Q' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'VCC' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/new/Regs.v:20]
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 920.094 ; gain = 370.672
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5578] Moved timing constraint from pin 'CLKWIZ0/clk_out1' to pin 'CLKWIZ0/bbstub_clk_out1/O'
+INFO: [Synth 8-5819] Moved 1 constraints on hierarchical pins to their respective driving/loading pins
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 920.094 ; gain = 370.672
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 920.094 ; gain = 370.672
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 920.094 ; gain = 370.672
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 920.094 ; gain = 370.672
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 920.094 ; gain = 370.672
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 920.094 ; gain = 370.672
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 920.094 ; gain = 370.672
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 920.094 ; gain = 370.672
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 920.094 ; gain = 370.672
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |clk_wiz_0     |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |clk_wiz_0 |     1|
+|2     |BUFG      |     1|
+|3     |LUT1      |     2|
+|4     |LUT2      |     4|
+|5     |LUT3      |     5|
+|6     |LUT4      |     4|
+|7     |LUT5      |     1|
+|8     |LUT6      |    13|
+|9     |FDRE      |    21|
+|10    |FDSE      |     7|
+|11    |LD        |     5|
+|12    |IBUF      |     4|
+|13    |OBUF      |     1|
++------+----------+------+
+
+Report Instance Areas: 
++------+-----------+-------+------+
+|      |Instance   |Module |Cells |
++------+-----------+-------+------+
+|1     |top        |       |    70|
+|2     |  u_SPI    |SPI    |    62|
+|3     |    u_REGS |Regs   |    13|
++------+-----------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 920.094 ; gain = 370.672
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 120 critical warnings and 2 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:20 . Memory (MB): peak = 920.094 ; gain = 243.062
+Synthesis Optimization Complete : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 920.094 ; gain = 370.672
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 5 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 1 inverter(s) to 5 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 929.277 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 5 instances were transformed.
+  LD => LDCE (inverted pins: G): 5 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+26 Infos, 44 Warnings, 121 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 929.277 ; gain = 627.656
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 929.277 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.runs/synth_1/Top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file Top_utilization_synth.rpt -pb Top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun Nov 22 20:25:07 2020...

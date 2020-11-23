@@ -7,6 +7,7 @@ module Ram_ReadEngine(
     input ADC_SampleClock,
     //Ram Read
     input triggered,
+    input SPI_ReadCommand,
     output reg [18:0] RAMR_ReadAddr, //Port B on RAM, current read location
     input [18:0] RAMR_Quantity,
     input [7:0] RAMR_Data,
@@ -17,7 +18,7 @@ module Ram_ReadEngine(
     );
     wire FIFO_InXFC;
     assign FIFO_InXFC = FIFO_InRTS & FIFO_InRTR;
-
+    //DEBUG Need to implement a Ring buffer
     /////////////////////////////////////////////////
     //Get negedge and posedge pulses
     wire ADC_SampleClock_posedge_pulse;
@@ -53,15 +54,19 @@ module Ram_ReadEngine(
         end
         else
         begin
-            if (triggered)
+            if (SPI_ReadCommand)
             begin
-                if (RAMR_ReadAddr >= RAMR_Quantity)
+                if (triggered)
                 begin
-                    reading <= 0;
-                end
-                else
-                begin
-                    reading <= 1;
+                    if (RAMR_ReadAddr >= RAMR_Quantity)
+                    begin
+                        reading <= 0;
+                        //DEBUG RESET HERE, TRIGGER TO 0?
+                    end
+                    else
+                    begin
+                        reading <= 1;
+                    end
                 end
             end
         end
