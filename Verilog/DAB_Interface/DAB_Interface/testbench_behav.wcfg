@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="1000000001fs"></ZoomEndTime>
-      <Cursor1Time time="1000000000fs"></Cursor1Time>
+      <ZoomStartTime time="34444444fs"></ZoomStartTime>
+      <ZoomEndTime time="221111111fs"></ZoomEndTime>
+      <Cursor1Time time="65000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="141"></NameColumnWidth>
-      <ValueColumnWidth column_width="58"></ValueColumnWidth>
+      <NameColumnWidth column_width="123"></NameColumnWidth>
+      <ValueColumnWidth column_width="139"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="16" />
+   <WVObjectSize size="14" />
    <wvobject fp_name="/testbench/clk" type="logic">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -45,14 +45,6 @@
    <wvobject fp_name="/testbench/u_Top/u_ADCInterface/Buffer_DataIn" type="array">
       <obj_property name="ElementShortName">Buffer_DataIn[15:0]</obj_property>
       <obj_property name="ObjectShortName">Buffer_DataIn[15:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench/u_Top/u_RAM_WriteEngine/ADC_SampleClock_secondposedge_pulse" type="logic">
-      <obj_property name="ElementShortName">ADC_SampleClock_secondposedge_pulse</obj_property>
-      <obj_property name="ObjectShortName">ADC_SampleClock_secondposedge_pulse</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench/u_Top/u_RAM_WriteEngine/ADC_SampleClock_posedge_pulse" type="logic">
-      <obj_property name="ElementShortName">ADC_SampleClock_posedge_pulse</obj_property>
-      <obj_property name="ObjectShortName">ADC_SampleClock_posedge_pulse</obj_property>
    </wvobject>
    <wvobject fp_name="/testbench/u_Top/u_RAM_WriteEngine/RAMW_En" type="logic">
       <obj_property name="ElementShortName">RAMW_En</obj_property>

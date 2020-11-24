@@ -1,0 +1,136 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Tue Nov 24 16:49:39 2020
+| Host         : MSI running 64-bit major release  (build 9200)
+| Command      : report_methodology -file Top_methodology_drc_routed.rpt -pb Top_methodology_drc_routed.pb -rpx Top_methodology_drc_routed.rpx
+| Design       : Top
+| Device       : xc7a100tcsg324-1
+| Speed File   : -1
+| Design State : Fully Routed
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 20
++-----------+----------+-------------------------------+------------+
+| Rule      | Severity | Description                   | Violations |
++-----------+----------+-------------------------------+------------+
+| TIMING-18 | Warning  | Missing input or output delay | 15         |
+| TIMING-20 | Warning  | Non-clocked latch             | 5          |
++-----------+----------+-------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+TIMING-18#1 Warning
+Missing input or output delay  
+An input delay is missing on MOSI_Raw relative to clock(s) clk
+Related violations: <none>
+
+TIMING-18#2 Warning
+Missing input or output delay  
+An input delay is missing on SCLK_Raw relative to clock(s) clk
+Related violations: <none>
+
+TIMING-18#3 Warning
+Missing input or output delay  
+An input delay is missing on SlaveSel relative to clock(s) clk
+Related violations: <none>
+
+TIMING-18#4 Warning
+Missing input or output delay  
+An input delay is missing on rst_ relative to clock(s) clk
+Related violations: <none>
+
+TIMING-18#5 Warning
+Missing input or output delay  
+An output delay is missing on ADC_SampleClock relative to clock(s) clk
+Related violations: <none>
+
+TIMING-18#6 Warning
+Missing input or output delay  
+An output delay is missing on DebugSPI_Ins[0] relative to clock(s) clk
+Related violations: <none>
+
+TIMING-18#7 Warning
+Missing input or output delay  
+An output delay is missing on DebugSPI_Ins[1] relative to clock(s) clk
+Related violations: <none>
+
+TIMING-18#8 Warning
+Missing input or output delay  
+An output delay is missing on DebugSPI_Ins[2] relative to clock(s) clk
+Related violations: <none>
+
+TIMING-18#9 Warning
+Missing input or output delay  
+An output delay is missing on DebugSPI_Ins[3] relative to clock(s) clk
+Related violations: <none>
+
+TIMING-18#10 Warning
+Missing input or output delay  
+An output delay is missing on DebugSPI_Ins[4] relative to clock(s) clk
+Related violations: <none>
+
+TIMING-18#11 Warning
+Missing input or output delay  
+An output delay is missing on DebugSPI_Ins[5] relative to clock(s) clk
+Related violations: <none>
+
+TIMING-18#12 Warning
+Missing input or output delay  
+An output delay is missing on DebugSPI_Ins[6] relative to clock(s) clk
+Related violations: <none>
+
+TIMING-18#13 Warning
+Missing input or output delay  
+An output delay is missing on DebugSPI_Ins[7] relative to clock(s) clk
+Related violations: <none>
+
+TIMING-18#14 Warning
+Missing input or output delay  
+An output delay is missing on DebugWriteReceived relative to clock(s) clk
+Related violations: <none>
+
+TIMING-18#15 Warning
+Missing input or output delay  
+An output delay is missing on MISO relative to clock(s) clk
+Related violations: <none>
+
+TIMING-20#1 Warning
+Non-clocked latch  
+The latch u_REGS/Read_Data_reg[0] cannot be properly analyzed as its control pin u_REGS/Read_Data_reg[0]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#2 Warning
+Non-clocked latch  
+The latch u_REGS/Read_Data_reg[1] cannot be properly analyzed as its control pin u_REGS/Read_Data_reg[1]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#3 Warning
+Non-clocked latch  
+The latch u_REGS/Read_Data_reg[2] cannot be properly analyzed as its control pin u_REGS/Read_Data_reg[2]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#4 Warning
+Non-clocked latch  
+The latch u_REGS/Read_Data_reg[4] cannot be properly analyzed as its control pin u_REGS/Read_Data_reg[4]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#5 Warning
+Non-clocked latch  
+The latch u_REGS/Read_Data_reg[6] cannot be properly analyzed as its control pin u_REGS/Read_Data_reg[6]/G is not reached by a timing clock
+Related violations: <none>
+
+

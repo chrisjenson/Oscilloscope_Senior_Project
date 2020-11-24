@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="testbench_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="testbench" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="3170000000fs"></ZoomStartTime>
+      <ZoomEndTime time="3840000001fs"></ZoomEndTime>
+      <Cursor1Time time="4380000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="142"></NameColumnWidth>
+      <ValueColumnWidth column_width="80"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="14" />
+   <wvobject fp_name="/testbench/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/reset" type="logic">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/u_Top/DebugRegister" type="array">
+      <obj_property name="ElementShortName">DebugRegister[7:0]</obj_property>
+      <obj_property name="ObjectShortName">DebugRegister[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/u_Top/DebugWriteReceived" type="logic">
+      <obj_property name="ElementShortName">DebugWriteReceived</obj_property>
+      <obj_property name="ObjectShortName">DebugWriteReceived</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/u_Top/DebugSlaveSel" type="logic">
+      <obj_property name="ElementShortName">DebugSlaveSel</obj_property>
+      <obj_property name="ObjectShortName">DebugSlaveSel</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/u_Top/DebugMOSI" type="logic">
+      <obj_property name="ElementShortName">DebugMOSI</obj_property>
+      <obj_property name="ObjectShortName">DebugMOSI</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/u_Top/DebugSCLK" type="logic">
+      <obj_property name="ElementShortName">DebugSCLK</obj_property>
+      <obj_property name="ObjectShortName">DebugSCLK</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/u_Top/MISO" type="logic">
+      <obj_property name="ElementShortName">MISO</obj_property>
+      <obj_property name="ObjectShortName">MISO</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/u_Top/RAMR_Quantity" type="array">
+      <obj_property name="ElementShortName">RAMR_Quantity[17:0]</obj_property>
+      <obj_property name="ObjectShortName">RAMR_Quantity[17:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/u_Top/u_SPI/SPI_Cmd" type="array">
+      <obj_property name="ElementShortName">SPI_Cmd[2:0]</obj_property>
+      <obj_property name="ObjectShortName">SPI_Cmd[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/u_Top/u_SPI/SPI_InBits" type="array">
+      <obj_property name="ElementShortName">SPI_InBits[15:0]</obj_property>
+      <obj_property name="ObjectShortName">SPI_InBits[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/u_Top/u_SPI/Buffer_RdEn" type="logic">
+      <obj_property name="ElementShortName">Buffer_RdEn</obj_property>
+      <obj_property name="ObjectShortName">Buffer_RdEn</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/u_Top/u_SPI/Reg_RdEn" type="logic">
+      <obj_property name="ElementShortName">Reg_RdEn</obj_property>
+      <obj_property name="ObjectShortName">Reg_RdEn</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/u_Top/u_SPI/Reg_WrEn" type="logic">
+      <obj_property name="ElementShortName">Reg_WrEn</obj_property>
+      <obj_property name="ObjectShortName">Reg_WrEn</obj_property>
+   </wvobject>
+</wave_config>
