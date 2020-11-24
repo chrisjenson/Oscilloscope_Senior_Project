@@ -18,6 +18,23 @@
 const uint8_t tcnj_blue[] = { 41, 63, 111 };
 const uint8_t tcnj_gold[] = { 166, 122, 0 };
 
+static void event_handler(lv_obj_t * obj, lv_event_t event)
+{
+    if(event == LV_EVENT_CLICKED) {
+        printf("State: %s\n", lv_sw_get_state(obj) ? "On" : "Off");
+        //lv_sw_toggle(obj, LV_ANIM_ON);
+    }
+}
+
+static void slider_event_cb(lv_obj_t * slider, lv_event_t event)
+{
+    //LV_EVENT_VALUE_CHANGED
+    if(event == LV_EVENT_DRAG_END) {
+        static char buf[4]; /* max 3 bytes for number plus 1 null terminating byte */
+        snprintf(buf, 4, "%u", lv_slider_get_value(slider));
+    }
+}
+
 
 void home_screen()
 {
@@ -61,6 +78,7 @@ void home_screen()
     uint16_t txBuffer[3];
     uint16_t RxBuffer[3];
     int SPIflag = 1;        //If you want to send a command, set the flag high
+    int readArray_SIZE = 16;
     
     /* Initialize txBuffer with command to transfer */
     RxBuffer[0] = 0b1111111111111111; //Junk value
@@ -68,17 +86,18 @@ void home_screen()
     txBuffer[1] = 0b0010000000000000; //001 00000 00000000 command to read reg 0
     txBuffer[2] = 0b1111111111111111; // JUNK at present
     uint16_t tempRead;
+    uint16_t elementsRead;
     
     // Command to be sent
     if(SPIflag){
-    /* Master: start a transfer. Slave: prepare for a transfer. */
+        /* Master: start a transfer. Slave: prepare for a transfer. */
         while(!(Cy_SCB_SPI_GetTxFifoStatus(SPIM_HW) & CY_SCB_SPI_TX_EMPTY)){}
         Cy_SCB_SPI_Write(SPIM_HW, txBuffer[0]);
        
         CyDelay(1);
        
         while(!(Cy_SCB_SPI_GetRxFifoStatus(SPIM_HW) & CY_SCB_SPI_RX_NOT_EMPTY)){}
-        RxBuffer[0] = Cy_SCB_SPI_Read(SPIM_HW);
+        elementsRead = Cy_SCB_SPI_ReadArray(SPIM_HW, RxBuffer, readArray_SIZE); //returns the number of things read in    CHANGE THE CHART LOOP ONCE IMPLEMENTED
         //RxBuffer[0] = 0b0010111100101111;
         
         //Get the first 3 bits, the CMD, to know what is being done.
@@ -157,7 +176,8 @@ void home_screen()
 	lv_slider_set_value(offsetSlide, 50, LV_ANIM_OFF);
     lv_obj_set_pos(offsetSlide, h_lab_1, v_lab_1);                         /*Set its position*/
     lv_obj_set_size(offsetSlide, btn_wid, btn_hgt);                        /*Set its size*/
-	//lv_obj_set_event_cb(offsetSlide, slider_action);
+    lv_slider_set_range(offsetSlide, 0, 100);
+    lv_obj_set_event_cb(offsetSlide, slider_event_cb);
    
     //Second Slider
 	lv_obj_t* gainLabel = lv_label_create(lv_scr_act(), NULL);
@@ -210,17 +230,24 @@ void home_screen()
 
     lv_chart_series_t * s1 = lv_chart_add_series(chart1, lv_color_hex(0x01a2b1));
     //arbitary plot points that will eventually be set by info coming from the FPGA
-    lv_chart_set_next(chart1, s1, 25);
-    lv_chart_set_next(chart1, s1, 50);
-    lv_chart_set_next(chart1, s1, 75);
-    lv_chart_set_next(chart1, s1, 50);
-    lv_chart_set_next(chart1, s1, 25);
-    lv_chart_set_next(chart1, s1, 50);
-    lv_chart_set_next(chart1, s1, 75);
-    lv_chart_set_next(chart1, s1, 50);
-    lv_chart_set_next(chart1, s1, 25);
-    lv_chart_set_next(chart1, s1, 50);
     
+    //temp sent to 8 to limit the number of points on screen. Will actually be somewhere in the hundreds
+    
+    //CHANGE ME ONCE IMPLEMENTED
+    elementsRead = 8;
+    
+    int points[8] = {25, 50, 75, 50, 25, 50, 75, 50};
+    for(int i = 0; i < elementsRead; ++i){
+        lv_chart_set_next(chart1, s1, points[i]);
+    }
+    
+    
+    //Adding an on/off switch
+    lv_obj_t *sw1 = lv_sw_create(lv_scr_act(), NULL);
+    lv_obj_align(sw1, NULL, LV_ALIGN_CENTER, 0, -50);
+    lv_obj_set_event_cb(sw1, event_handler);
+    lv_obj_set_pos(sw1, h_lab_1, v_lab_2+60);                         /*Set its position*/
+    lv_obj_set_size(sw1, btn_wid-40, btn_hgt);               /*Set its size*/ 
     
     
     //=======================LEGACY CODE==========================================//
