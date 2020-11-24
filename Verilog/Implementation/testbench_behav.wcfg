@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="1324000000fs"></ZoomStartTime>
-      <ZoomEndTime time="1736000001fs"></ZoomEndTime>
-      <Cursor1Time time="1455000000fs"></Cursor1Time>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="9000000000fs"></ZoomEndTime>
+      <Cursor1Time time="5455000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="142"></NameColumnWidth>
-      <ValueColumnWidth column_width="65"></ValueColumnWidth>
+      <ValueColumnWidth column_width="84"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="15" />
+   <WVObjectSize size="18" />
    <wvobject fp_name="/testbench/clk" type="logic">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -43,6 +43,7 @@
    <wvobject fp_name="/testbench/command" type="array">
       <obj_property name="ElementShortName">command[15:0]</obj_property>
       <obj_property name="ObjectShortName">command[15:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/testbench/index" type="array">
       <obj_property name="ElementShortName">index[3:0]</obj_property>
@@ -51,10 +52,6 @@
    <wvobject fp_name="/testbench/commandNum" type="array">
       <obj_property name="ElementShortName">commandNum[5:0]</obj_property>
       <obj_property name="ObjectShortName">commandNum[5:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench/u_Top/MISO" type="logic">
-      <obj_property name="ElementShortName">MISO</obj_property>
-      <obj_property name="ObjectShortName">MISO</obj_property>
    </wvobject>
    <wvobject fp_name="/testbench/MOSI" type="logic">
       <obj_property name="ElementShortName">MOSI</obj_property>
@@ -72,12 +69,29 @@
       <obj_property name="ElementShortName">SPI_Data[7:0]</obj_property>
       <obj_property name="ObjectShortName">SPI_Data[7:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/testbench/u_Top/u_SPI/u_REGS/registers" type="array">
-      <obj_property name="ElementShortName">registers[4:0][7:0]</obj_property>
-      <obj_property name="ObjectShortName">registers[4:0][7:0]</obj_property>
-   </wvobject>
    <wvobject fp_name="/testbench/u_Top/u_SPI/SPI_InBits" type="array">
       <obj_property name="ElementShortName">SPI_InBits[15:0]</obj_property>
       <obj_property name="ObjectShortName">SPI_InBits[15:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/u_Top/u_SPI/Reg_DataOut" type="array">
+      <obj_property name="ElementShortName">Reg_DataOut[7:0]</obj_property>
+      <obj_property name="ObjectShortName">Reg_DataOut[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/u_Top/u_SPI/MISO" type="logic">
+      <obj_property name="ElementShortName">MISO</obj_property>
+      <obj_property name="ObjectShortName">MISO</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/u_Top/u_SPI/SPI_InInstructionSixteenCounter" type="array">
+      <obj_property name="ElementShortName">SPI_InInstructionSixteenCounter[3:0]</obj_property>
+      <obj_property name="ObjectShortName">SPI_InInstructionSixteenCounter[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/u_Top/u_SPI/SPI_OutEightCount" type="array">
+      <obj_property name="ElementShortName">SPI_OutEightCount[2:0]</obj_property>
+      <obj_property name="ObjectShortName">SPI_OutEightCount[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/u_Top/u_SPI/u_REGS/registers" type="array">
+      <obj_property name="ElementShortName">registers[4:0][7:0]</obj_property>
+      <obj_property name="ObjectShortName">registers[4:0][7:0]</obj_property>
    </wvobject>
 </wave_config>

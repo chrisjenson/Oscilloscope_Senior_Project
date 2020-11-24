@@ -8,8 +8,8 @@ module Ram_ReadEngine(
     //Ram Read
     input triggered,
     input SPI_ReadCommand,
-    output reg [18:0] RAMR_ReadAddr, //Port B on RAM, current read location
-    input [18:0] RAMR_Quantity,
+    output reg [17:0] RAMR_ReadAddr, //Port B on RAM, current read location
+    input [17:0] RAMR_Quantity,
     input [15:0] RAMR_Data,
     //FIFO
     output reg [15:0] RAMData,

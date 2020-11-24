@@ -1,16 +1,29 @@
 `timescale 1ns / 1ps
 
 module Top(
-    input reset,
+    input rst_,
     input MOSI_Raw,
     input SlaveSel,
-    input clk_in1,
+    input clk,
     input SCLK_Raw,
-    output MISO
+    output MISO,
+    //For Debug
+    output [7:0] DebugRegister,
+    output DebugWriteReceived,
+    output DebugSlaveSel,
+    output DebugMOSI,
+    output DebugSCLK
     );
     
-    wire clk;
-    wire locked;
+    reg reset_p1;
+    reg reset;
+    always @(posedge clk)
+    begin
+        reset_p1 <= rst_;
+        reset <= reset_p1;
+    end
+    //wire clk;
+    //wire locked;
     
     SPI u_SPI(
         .MISO(MISO),
@@ -18,13 +31,16 @@ module Top(
         .SlaveSel(SlaveSel),
         .clk(clk),
         .reset(reset),
-        .SCLK_Raw(SCLK_Raw)
-        
+        .SCLK_Raw(SCLK_Raw),
+        .DebugRegister(DebugRegister),
+        .DebugWriteReceived(DebugWriteReceived), 
+        .DebugSlaveSel(DebugSlaveSel),      
+        .DebugMOSI(DebugMOSI),          
+        .DebugSCLK(DebugSCLK)           
         //For RAM
         //.Buffer_DataIn(), //DEBUG Changed this to 16 bits
         //.FIFO_OutRTR()
     );
     
-    clk_wiz_0 CLKWIZ0(.clk_out1(clk), .reset(reset), .locked(locked), .clk_in1(clk_in1));
     
 endmodule

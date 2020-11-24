@@ -7,8 +7,9 @@ module RAM_WriteEngine(
     input ADC_SampleClock,
     //Write
     input [15:0] Buffer_DataIn,
-    output reg [18:0] RAMW_WriteAddr, //Port A on RAM
-    output [15:0] RAMW_Data
+    output reg [17:0] RAMW_WriteAddr, //Port A on RAM
+    output [15:0] RAMW_Data,
+    output RAMW_En
     );
     
     
@@ -59,7 +60,6 @@ module RAM_WriteEngine(
     //////////////////////////////////////////////////////////////    
     //////////////////////////////////////////////////////////////    
     //Write Section
-    wire RAMW_En;
     assign RAMW_En = onBit & ADC_SampleClock_secondposedge_pulse;
     assign RAMW_Data = Buffer_DataIn;
     

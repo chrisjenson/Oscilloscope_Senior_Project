@@ -1,0 +1,40 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Mon Nov 23 21:20:59 2020
+# Process ID: 12812
+# Current directory: D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/DAB_Interface/DAB_Interface
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11000 D:\SeniorProject\Oscilloscope_Senior_Project\Verilog\DAB_Interface\DAB_Interface\DAB_Interface.xpr
+# Log file: D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/DAB_Interface/DAB_Interface/vivado.log
+# Journal file: D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/DAB_Interface/DAB_Interface\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/DAB_Interface/DAB_Interface/DAB_Interface.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+open_wave_config D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/DAB_Interface/DAB_Interface/testbench_behav.wcfg
+source testbench.tcl
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+save_wave_config {D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/DAB_Interface/DAB_Interface/testbench_behav.wcfg}
+close_sim
+launch_simulation
+launch_simulation
+open_wave_config D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/DAB_Interface/DAB_Interface/testbench_behav.wcfg
+source testbench.tcl
+add_bp {D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/DAB_Interface/DAB_Interface/DAB_Interface.srcs/sources_1/new/Ram_ReadEngine.v} 24
+add_bp {D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/DAB_Interface/DAB_Interface/DAB_Interface.srcs/sources_1/new/Ram_ReadEngine.v} 26
+remove_bps -file {D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/DAB_Interface/DAB_Interface/DAB_Interface.srcs/sources_1/new/Ram_ReadEngine.v} -line 24
+add_bp {D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/DAB_Interface/DAB_Interface/DAB_Interface.srcs/sources_1/new/Ram_ReadEngine.v} 24
+relaunch_sim
+remove_bps -file {D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/DAB_Interface/DAB_Interface/DAB_Interface.srcs/sources_1/new/Ram_ReadEngine.v} -line 26
+remove_bps -file {D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/DAB_Interface/DAB_Interface/DAB_Interface.srcs/sources_1/new/Ram_ReadEngine.v} -line 24
+relaunch_sim
+relaunch_sim

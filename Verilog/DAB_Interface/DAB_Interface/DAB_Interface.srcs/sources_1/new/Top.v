@@ -25,7 +25,7 @@ module Top(
         .Buffer_DataIn(Buffer_DataIn)
     );
     
-    wire [18:0] RAMW_WriteAddr;
+    wire [17:0] RAMW_WriteAddr;
     wire [15:0] RAMW_Data;
     wire RAMW_En;
     
@@ -36,59 +36,53 @@ module Top(
         .Buffer_DataIn(Buffer_DataIn),
         .RAMW_WriteAddr(RAMW_WriteAddr), //Port A on RAM
         .RAMW_Data(RAMW_Data), 
+        .RAMW_En(RAMW_En),
         .onBit(onBit) //Use this to gate everything
     );
     
-    wire [18:0] RAMW_ReadAddr;
+    wire [17:0] RAMW_ReadAddr;
     wire [15:0] RAMR_Data;
     wire SPI_ReadCommand; //from spi
     wire triggered; //From triggermanagement
-    wire [18:0] RAMR_Quantity;
+    wire [17:0] RAMR_Quantity;
     wire [15:0] RAMData;
     wire FIFO_InRTS;
     wire FIFO_InRTR;
+    
+    assign triggered = 1; //DEBUG FROM TRIGGERMANAGEMENT
+    assign SPI_ReadCommand = 1;
+    assign RAMR_Quantity = 4096; //DEBUG: FROM SPI COMMAND
     
     Ram_ReadEngine u_Ram_ReadEngine(
         .clk(clk),
         .reset(reset),
         .ADC_SampleClock(ADC_SampleClock),
         //Ram Read
-        .triggered(1), //DEBUG FROM TRIGGERMANAGEMENT
-        .SPI_ReadCommand(SPI_ReadCommand),
+        .triggered(triggered), 
         .RAMR_ReadAddr(RAMW_ReadAddr), //Port B on RAM, current read location
-        .RAMR_Quantity(4196), //DEBUG: FROM SPI COMMAND
+        .RAMR_Quantity(RAMR_Quantity), 
         .RAMR_Data(RAMR_Data),
+        .SPI_ReadCommand(SPI_ReadCommand),
         //FIFO
         .RAMData(RAMData),
         .FIFO_InRTS(FIFO_InRTS),
         .FIFO_InRTR(FIFO_InRTR)
     );
     
-   
-    /*
-    BlockRam_blk_mem_gen_0_0 blk_mem_gen_0(
-        //PORT A
-        .addra(RAMW_WriteAddr),
-        .clka(clk), 
-        .dina(RAMW_Data), 
-        .wea(RAMW_En), 
-        //PORT B
-        .clkb(clk), 
-        .doutb(),
-        .addrb()
-    );
-    */
-    /*
-    BlockRam u_BlockRam(
-        //PORT A
-        .addra(RAMW_WriteAddr),
-        .clka(clk), 
-        .dina(RAMW_Data), 
-        .wea(RAMW_En), 
-        //PORT B
-        .clkb(clk), 
-        .doutb(),
-        .addrb()
-    );*/
+   wire [1:0] wea; //RAM requires 2 bit enable
+   assign wea[0] = RAMW_En;
+   assign wea[1] = RAMW_En;
     
+    blk_mem_gen_0 u_blk_mem_gen_0(
+        //PORT A -Write
+        .addra(RAMW_WriteAddr),
+        .clka(clk), 
+        .dina(RAMW_Data), 
+        .wea(wea), 
+        //PORT B -Read
+        .clkb(clk), 
+        .doutb(RAMR_Data),
+        .addrb(RAMW_ReadAddr)
+    );
+
 endmodule

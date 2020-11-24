@@ -15,7 +15,7 @@ module testbench();
     reg [3:0] index;
     reg commandDone;
     reg [5:0] commandNum;
-    reg [15:0] commandArray[1:0];
+    reg [15:0] commandArray[3:0];
     initial
     begin
         commandNum <= 0;
@@ -31,8 +31,10 @@ module testbench();
     
     initial
     begin  
-        commandArray[0] = 16'b0100010011111111; //cmd = write, params = 4, data = 8'hFF
         commandArray[1] = 16'b0010010011111111; //cmd = Read, params = 4, data = x
+        commandArray[0] = 16'b0100010011111111; //cmd = write, params = 4, data = 8'hFF
+        commandArray[2] = 16'b0100010011110000; //cmd = write, params = 4, data = 8'hF0
+        commandArray[3] = 16'b0010010011111111; //cmd = Read, params = 4, data = x
     end
     
     always @(posedge clk) //Generate Slave Clock
@@ -57,7 +59,7 @@ module testbench();
     begin
         if (commandDone)
         begin
-            #200
+            //#25
             SlaveSel <= 0;
         end
     end
@@ -72,7 +74,8 @@ module testbench();
             index <= index - 1;
             if (index == 0)
             begin
-                #200 SlaveSel <= 1;
+                #40 
+                SlaveSel <= 1;
                 commandNum <= commandNum + 1;
                 commandDone <= 1;
             end
@@ -85,10 +88,10 @@ module testbench();
     end
     
     Top u_Top(
-        .reset(rst),
+        .rst_(rst),
         .MOSI_Raw(MOSI),
         .SlaveSel(SlaveSel),
-        .clk_in1(clk),
+        .clk(clk),
         .SCLK_Raw(SCLK)
     );
 endmodule

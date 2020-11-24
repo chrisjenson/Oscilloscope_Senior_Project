@@ -66,6 +66,7 @@ set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
   set_param chipscope.maxJobs 2
+  set_param xicom.use_bs_reader 1
   create_project -in_memory -part xc7a100tcsg324-1
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
@@ -73,9 +74,7 @@ set rc [catch {
   set_property parent.project_path D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.xpr [current_project]
   set_property ip_output_repo D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
-  set_property XPM_LIBRARIES XPM_CDC [current_project]
   add_files -quiet D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.runs/synth_1/Top.dcp
-  read_ip -quiet d:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
   read_xdc D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/lp_constraints.xdc
   link_design -top Top -part xc7a100tcsg324-1
   close_msg_db -file init_design.pb
@@ -149,6 +148,24 @@ if {$rc} {
   return -code error $RESULT
 } else {
   end_step route_design
+  unset ACTIVE_STEP 
+}
+
+start_step write_bitstream
+set ACTIVE_STEP write_bitstream
+set rc [catch {
+  create_msg_db write_bitstream.pb
+  catch { write_mem_info -force Top.mmi }
+  write_bitstream -force Top.bit 
+  catch {write_debug_probes -quiet -force Top}
+  catch {file copy -force Top.ltx debug_nets.ltx}
+  close_msg_db -file write_bitstream.pb
+} RESULT]
+if {$rc} {
+  step_failed write_bitstream
+  return -code error $RESULT
+} else {
+  end_step write_bitstream
   unset ACTIVE_STEP 
 }
 

@@ -8,19 +8,24 @@ module Regs(
     input WrEn,
     input RdEn,
     input [4:0] Regs_Addr,
-    output reg [7:0] Read_Data
+    output reg [7:0] Read_Data,
+    //For debug
+    output [7:0] DebugRegister
     );
     
+    
+    
     reg [7:0] registers [4:0];
-    //Make these 'define
+    assign DebugRegister = registers[4];
+    
     always @(posedge clk)
     begin
         if (reset)
         begin
-            registers[0] <= 8'b01000010; //B
-            registers[1] <= 8'b01000011; //C
-            registers[2] <= 8'b01010011; //S
-            registers[3] <= 8'b00000010; //RevId
+            registers[0] <= 8'b00000000;//01000010; //B
+            registers[1] <= 8'b00000001; //C
+            registers[2] <= 8'b00000010; //S
+            registers[3] <= 8'b00000011; //RevId
             registers[4] <= 8'b01010101; //scratch R/W reg
         end
     end

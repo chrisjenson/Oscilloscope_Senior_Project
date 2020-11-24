@@ -1,10 +1,10 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-// Date        : Sun Nov 22 20:04:32 2020
+// Date        : Mon Nov 23 16:17:30 2020
 // Host        : MSI running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
-//               d:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_sim_netlist.v
+//               D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/Implementation/Board_Implementation.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_sim_netlist.v
 // Design      : clk_wiz_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -15,34 +15,28 @@
 (* NotValidForBitStream *)
 module clk_wiz_0
    (clk_out1,
-    reset,
     locked,
     clk_in1);
   output clk_out1;
-  input reset;
   output locked;
   input clk_in1;
 
   (* IBUF_LOW_PWR *) wire clk_in1;
   wire clk_out1;
   wire locked;
-  wire reset;
 
   clk_wiz_0_clk_wiz_0_clk_wiz inst
        (.clk_in1(clk_in1),
         .clk_out1(clk_out1),
-        .locked(locked),
-        .reset(reset));
+        .locked(locked));
 endmodule
 
 (* ORIG_REF_NAME = "clk_wiz_0_clk_wiz" *) 
 module clk_wiz_0_clk_wiz_0_clk_wiz
    (clk_out1,
-    reset,
     locked,
     clk_in1);
   output clk_out1;
-  input reset;
   output locked;
   input clk_in1;
 
@@ -53,7 +47,6 @@ module clk_wiz_0_clk_wiz_0_clk_wiz
   wire clkfbout_buf_clk_wiz_0;
   wire clkfbout_clk_wiz_0;
   wire locked;
-  wire reset;
   wire NLW_mmcm_adv_inst_CLKFBOUTB_UNCONNECTED;
   wire NLW_mmcm_adv_inst_CLKFBSTOPPED_UNCONNECTED;
   wire NLW_mmcm_adv_inst_CLKINSTOPPED_UNCONNECTED;
@@ -171,7 +164,7 @@ module clk_wiz_0_clk_wiz_0_clk_wiz
         .PSEN(1'b0),
         .PSINCDEC(1'b0),
         .PWRDWN(1'b0),
-        .RST(reset));
+        .RST(1'b0));
 endmodule
 `ifndef GLBL
 `define GLBL
