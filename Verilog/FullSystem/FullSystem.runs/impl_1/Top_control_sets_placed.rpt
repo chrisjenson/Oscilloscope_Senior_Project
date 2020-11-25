@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Tue Nov 24 18:49:43 2020
+| Date         : Tue Nov 24 23:38:03 2020
 | Host         : MSI running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file Top_control_sets_placed.rpt
 | Design       : Top
@@ -27,7 +27,7 @@ Table of Contents
 |    Minimum number of control sets                        |     7 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |    23 |
+| Unused register locations in slices containing registers |    29 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -46,8 +46,8 @@ Table of Contents
 | >= 8 to < 10       |     0 |
 | >= 10 to < 12      |     0 |
 | >= 12 to < 14      |     0 |
-| >= 14 to < 16      |     2 |
-| >= 16              |     0 |
+| >= 14 to < 16      |     1 |
+| >= 16              |     1 |
 +--------------------+-------+
 * Control sets can be remapped at either synth_design or opt_design
 
@@ -58,9 +58,9 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              12 |            6 |
+| No           | No                    | No                     |              12 |            7 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |              17 |            6 |
+| No           | Yes                   | No                     |              19 |            6 |
 | Yes          | No                    | No                     |               0 |            0 |
 | Yes          | No                    | Yes                    |               0 |            0 |
 | Yes          | Yes                   | No                     |              20 |            6 |
@@ -77,9 +77,9 @@ Table of Contents
 |  clk_IBUF_BUFG   |                                       | reset_OBUF_BUFG    |                1 |              2 |
 |  clk_IBUF_BUFG   | u_SPI/SPI_InInstructionSixteenCounter | DebugSlaveSel_OBUF |                1 |              4 |
 | ~reset_OBUF_BUFG |                                       |                    |                2 |              5 |
-|  clk_IBUF_BUFG   |                                       |                    |                4 |              7 |
-|  clk_IBUF_BUFG   |                                       | DebugSlaveSel_OBUF |                5 |             15 |
+|  clk_IBUF_BUFG   |                                       |                    |                5 |              7 |
 |  clk_IBUF_BUFG   | u_SPI/new_instruction_strobe          | DebugSlaveSel_OBUF |                4 |             15 |
+|  clk_IBUF_BUFG   |                                       | DebugSlaveSel_OBUF |                5 |             17 |
 +------------------+---------------------------------------+--------------------+------------------+----------------+
 
 

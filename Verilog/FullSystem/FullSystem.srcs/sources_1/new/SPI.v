@@ -36,7 +36,7 @@ module SPI(
     
     
     assign DebugSPI_Ins = {SPI_Cmd,SPI_Params};
-    assign DebugWriteReceived = Reg_WrEn; //& write_data_strobe;
+    assign DebugWriteReceived = Reg_WrEn & write_data_strobe;
     assign DebugSlaveSel = SlaveSel;
     assign DebugMOSI = MOSI_Raw;
     assign DebugSCLK = SCLK_Raw;
