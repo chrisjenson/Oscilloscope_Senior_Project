@@ -12,7 +12,7 @@ module RAM_ReadEngine(
     input [17:0] RAMR_Quantity,
     //input [15:0] RAMR_Data,
     //FIFO
-    output reg [15:0] RAMData,
+    //output reg [15:0] RAMData,
     output reg FIFO_InRTS,
     input FIFO_InRTR
     );

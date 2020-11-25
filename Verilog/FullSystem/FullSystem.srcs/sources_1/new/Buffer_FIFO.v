@@ -28,6 +28,7 @@ module Buffer_FIFO(
     assign FIFO_InXFC = FIFO_InRTS & FIFO_InRTR;
     
     assign FIFO_OutRTS = (0 < FIFO_NumInFIFO) && (!reset);
+    assign FIFO_InRTR = (FIFO_NumInFIFO < 3) && (!reset);
     
     always @(posedge clk)
     begin

@@ -149,67 +149,67 @@ module SPI(
                         case (SPI_Params)
                             5'b00000:
                             begin
-                                BUFFER_InAmount <= 524288; //2^19 = max ram size
+                                BUFFER_InAmount <= 262144; //2^18 = max ram size
                             end
                             5'b00001:
                             begin
-                                BUFFER_InAmount <= 262144; //2^18
+                                BUFFER_InAmount <= 131072; //2^18
                             end
                             5'b00010:
                             begin
-                                BUFFER_InAmount <= 131072;
+                                BUFFER_InAmount <= 65536;
                             end
                             5'b00011:
                             begin
-                                BUFFER_InAmount <= 65536;
+                                BUFFER_InAmount <= 32768;
                             end
                             5'b00100:
                             begin
-                                BUFFER_InAmount <= 32768;
+                                BUFFER_InAmount <= 16384;
                             end
                             5'b00101:
                             begin
-                                BUFFER_InAmount <= 16384; //2^14
+                                BUFFER_InAmount <= 8192; //2^14
                             end
                             5'b00110:
                             begin
-                                BUFFER_InAmount <= 8192; 
+                                BUFFER_InAmount <= 4096; 
                             end
                             5'b00111:
                             begin
-                                BUFFER_InAmount <= 4096;
+                                BUFFER_InAmount <= 2048;
                             end
                             5'b01000:
                             begin
-                                BUFFER_InAmount <= 2048;
+                                BUFFER_InAmount <= 1024;
                             end
                             5'b01001:
                             begin
-                                BUFFER_InAmount <= 1024;
+                                BUFFER_InAmount <= 512;
                             end
                             5'b01010:
                             begin
-                                BUFFER_InAmount <= 512;
+                                BUFFER_InAmount <= 256;
                             end
                             5'b01011:
                             begin
-                                BUFFER_InAmount <= 256;
+                                BUFFER_InAmount <= 128;
                             end
                             5'b01100:
                             begin
-                                BUFFER_InAmount <= 128;
+                                BUFFER_InAmount <= 64;
                             end
                             5'b01101:
                             begin
-                                BUFFER_InAmount <= 64;
+                                BUFFER_InAmount <= 32;
                             end
                             5'b01110:
                             begin
-                                BUFFER_InAmount <= 32;
+                                BUFFER_InAmount <= 16;
                             end
                             5'b01111:
                             begin
-                                BUFFER_InAmount <= 16;
+                                BUFFER_InAmount <= 8;
                             end
                             default:
                             begin
@@ -342,7 +342,7 @@ module SPI(
     //Input
         //Reg_DataOut
     //Output
-        //MISO
+        //MISO- also driven from Ram Read
         if (SlaveSel)
         begin
             SPI_OutEightCount <= 7;
@@ -367,8 +367,44 @@ module SPI(
             end
         end
     end
+    /////////////////////////////////////////////////////////////////
+    //RAM Read
+    reg [3:0] SPI_OutSixteenCount;
     
-
+    always @(posedge clk)
+    begin
+    //RAM Read output
+    //Input
+        //SlaveSel
+        //sck
+        //Buffer_RdEn
+        //FIFO_OutRTR
+    //Output
+        //MISO- Also driven from Reg Read
+        if (SlaveSel)
+        begin
+            SPI_OutSixteenCount <= 4'hF;
+        end
+        else 
+        begin
+            if (sck_negedge_pulse) //Drive on neg edge
+            begin
+                if (Buffer_RdEn)
+                begin
+                    MISO <= Buffer_DataIn[SPI_OutSixteenCount];
+                    if (SPI_OutSixteenCount == 0)
+                    begin
+                        FIFO_OutRTR <= 1;
+                    end
+                    else
+                    begin
+                        FIFO_OutRTR <= 0;
+                    end
+                    SPI_OutSixteenCount <= SPI_OutSixteenCount - 1;
+                end
+            end
+        end
+    end
     
     
 endmodule

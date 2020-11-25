@@ -103,7 +103,7 @@ module testbench();
         commandArray[0] = 16'b0100010011111111; //cmd = write, params = 4, data = 8'hFF
         commandArray[2] = 16'b0100010011110000; //cmd = write, params = 4, data = 8'hF0
         commandArray[3] = 16'b0010010011111111; //cmd = Read, params = 4, data = x
-        commandArray[4] = 16'b0110010011111111; //cmd = Read Ram, params = 4, data = x
+        commandArray[4] = 16'b0110111111111111; //cmd = Read Ram, params = 01111 -> (8 x 16 bits out), data = x
     end
     
     always @(posedge clk) //Generate Slave Clock
@@ -134,25 +134,51 @@ module testbench();
     end
     
     assign command = commandArray[commandNum];
-    
+    reg [6:0] OneTwentyEightCounter;
     always @(posedge SCLK)
     begin
         if (!SlaveSel)
         begin
-            MOSI <= command[index];
-            index <= index - 1;
-            if (index == 0)
+            if (command[15:13] == 3'b011)
             begin
-                #40 
-                SlaveSel <= 1;
-                commandNum <= commandNum + 1;
-                commandDone <= 1;
+                MOSI <= command[index];
+                if (index == 0)
+                begin
+                    if (OneTwentyEightCounter == 127) //8 TRANSFERS OF 16 BITS
+                    begin
+                        #40 
+                        SlaveSel <= 1;
+                        commandNum <= commandNum + 1;
+                        commandDone <= 1;
+                    end
+                    else
+                    begin
+                        OneTwentyEightCounter <= OneTwentyEightCounter + 1;
+                    end
+                end
+                else
+                begin
+                    index <= index - 1;
+                end
+            end
+            else
+            begin
+                MOSI <= command[index];
+                index <= index - 1;
+                if (index == 0)
+                begin
+                    #40 
+                    SlaveSel <= 1;
+                    commandNum <= commandNum + 1;
+                    commandDone <= 1;
+                end
             end
         end
         else
         begin
             MOSI <= 0;
             index <= 15;
+            OneTwentyEightCounter <= 0;
         end
     end
     

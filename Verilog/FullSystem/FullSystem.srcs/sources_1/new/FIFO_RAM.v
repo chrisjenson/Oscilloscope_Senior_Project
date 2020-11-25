@@ -10,7 +10,7 @@ module FIFO_RAM(
     input       clk
     );
     
-    reg [15:0] dataBuffer[3:0];
+    reg [15:0] dataBuffer[2:0];
     
     assign FIFO_OutRDAT = dataBuffer[FIFO_OutRADR];
     

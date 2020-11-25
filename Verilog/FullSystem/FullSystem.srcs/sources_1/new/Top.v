@@ -25,9 +25,10 @@ module Top(
     assign onBit = 1'b1;
     reg reset_p1;
     //reg reset;
+    //DEBUG- IN SYNTHESIS USE ~rst, IN SIM USE rst
     always @(posedge clk)
     begin
-        reset_p1 <= ~rst_; //Get the opposite of reset
+        reset_p1 <= rst_; //Get the opposite of reset
         reset <= reset_p1;
     end    
     
@@ -67,7 +68,7 @@ module Top(
     wire SPI_ReadCommand; //from spi
     wire triggered; //From triggermanagement
     wire [17:0] RAMR_Quantity;
-    wire [15:0] RAMData;
+    //wire [15:0] RAMData;
     wire FIFO_InRTS;
     wire FIFO_InRTR;
     
@@ -87,7 +88,7 @@ module Top(
         //.RAMR_Data(RAMR_Data),
         .SPI_ReadCommand(SPI_ReadCommand), //Input, gates read
         //FIFO
-        .RAMData(RAMData),
+        //.RAMData(RAMData),
         .FIFO_InRTS(FIFO_InRTS),
         .FIFO_InRTR(FIFO_InRTR)
     );
