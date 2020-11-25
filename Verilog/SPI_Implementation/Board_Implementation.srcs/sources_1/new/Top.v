@@ -12,7 +12,8 @@ module Top(
     output DebugWriteReceived,
     output DebugSlaveSel,
     output DebugMOSI,
-    output DebugSCLK
+    output DebugSCLK,
+    output [7:0] DebugIns
     );
     
     reg reset_p1;

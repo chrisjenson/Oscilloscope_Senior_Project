@@ -13,6 +13,7 @@ module SPI(
         output DebugSlaveSel,
         output DebugMOSI,
         output DebugSCLK,
+        output [7:0] DebugSpiIns,
         //For RAM
         input [15:0] Buffer_DataIn, //DEBUG Changed this to 16 bits
         output reg FIFO_OutRTR
@@ -23,12 +24,15 @@ module SPI(
     reg Reg_RdEn;
     reg Buffer_RdEn;
     
-    
+    reg [2:0] SPI_Cmd; 
+    reg [4:0] SPI_Params;
+    reg [7:0] SPI_Data;
     
     assign DebugWriteReceived = Reg_WrEn;
     assign DebugSlaveSel = SlaveSel;
     assign DebugMOSI = MOSI_Raw;
     assign DebugSCLK = SCLK_Raw;
+    assign DebugSpiIns = {SPI_Cmd,SPI_Params};
     
     //reg [3:0] SPI_OutSixteenCount;
     //reg [3:0] SPI_InSixteenCount;
@@ -39,9 +43,7 @@ module SPI(
 //    wire [2:0] SPI_Cmd;
 //    wire [4:0] SPI_Params;
 //    wire [7:0] SPI_Data;
-    reg [2:0] SPI_Cmd; 
-    reg [4:0] SPI_Params;
-    reg [7:0] SPI_Data;
+
     
     
     //reg [15:0] SPIWord; //spiword is valid on the last possckposedgepulse of the word
