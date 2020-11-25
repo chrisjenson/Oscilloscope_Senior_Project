@@ -66,8 +66,8 @@ module testbench();
             stimInCount <= stimInCount + 1;
         end
     end
-    wire onBit;
-    assign onBit = ~reset;
+   // wire onBit;
+  //  assign onBit = ~reset;
     
     ////////////////////////////////////////////////////////////
     //SPI TB
@@ -164,7 +164,7 @@ module testbench();
         .SlaveSel(SlaveSel),
         .SCLK_Raw(SCLK),
         //FIFO
-        .onBit(onBit),
+  //      .onBit(onBit),
         .stimInData(stimInData),
         .ADC_SampleClock(ADC_SampleClock)
     );

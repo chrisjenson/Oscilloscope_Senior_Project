@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Tue Nov 24 16:49:39 2020
+| Date         : Tue Nov 24 18:50:19 2020
 | Host         : MSI running 64-bit major release  (build 9200)
 | Command      : report_methodology -file Top_methodology_drc_routed.rpt -pb Top_methodology_drc_routed.pb -rpx Top_methodology_drc_routed.rpx
 | Design       : Top
@@ -23,11 +23,11 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 20
+             Violations found: 21
 +-----------+----------+-------------------------------+------------+
 | Rule      | Severity | Description                   | Violations |
 +-----------+----------+-------------------------------+------------+
-| TIMING-18 | Warning  | Missing input or output delay | 15         |
+| TIMING-18 | Warning  | Missing input or output delay | 16         |
 | TIMING-20 | Warning  | Non-clocked latch             | 5          |
 +-----------+----------+-------------------------------+------------+
 
@@ -106,6 +106,11 @@ Related violations: <none>
 TIMING-18#15 Warning
 Missing input or output delay  
 An output delay is missing on MISO relative to clock(s) clk
+Related violations: <none>
+
+TIMING-18#16 Warning
+Missing input or output delay  
+An output delay is missing on reset relative to clock(s) clk
 Related violations: <none>
 
 TIMING-20#1 Warning

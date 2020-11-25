@@ -26,6 +26,7 @@ module SPI(
         output reg Buffer_RdEn,
         input [7:0] Reg_DataOut
     );
+  //  reg write_data_strobe;
     reg [2:0] SPI_Cmd; 
 
     
@@ -35,7 +36,7 @@ module SPI(
     
     
     assign DebugSPI_Ins = {SPI_Cmd,SPI_Params};
-    assign DebugWriteReceived = Reg_WrEn;
+    assign DebugWriteReceived = Reg_WrEn; //& write_data_strobe;
     assign DebugSlaveSel = SlaveSel;
     assign DebugMOSI = MOSI_Raw;
     assign DebugSCLK = SCLK_Raw;
@@ -319,13 +320,13 @@ module SPI(
     //Outputs
         //SPI_Data
         //write_data_strobe- ANDed with WrEn in u_REGS
+        write_data_strobe <= 0;
         if (SlaveSel)
         begin
         
         end
         else
         begin
-            write_data_strobe <= 0;
             if (new_data_strobe) //Will only be high 1 cycle
             begin
                 SPI_Data <= SPI_InBits[7:0];

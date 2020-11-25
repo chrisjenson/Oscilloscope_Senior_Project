@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="3170000000fs"></ZoomStartTime>
-      <ZoomEndTime time="3840000001fs"></ZoomEndTime>
-      <Cursor1Time time="4380000000fs"></Cursor1Time>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="3000000001fs"></ZoomEndTime>
+      <Cursor1Time time="2184502000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="142"></NameColumnWidth>
-      <ValueColumnWidth column_width="80"></ValueColumnWidth>
+      <ValueColumnWidth column_width="76"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="14" />
+   <WVObjectSize size="16" />
    <wvobject fp_name="/testbench/clk" type="logic">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -52,10 +52,6 @@
       <obj_property name="ElementShortName">MISO</obj_property>
       <obj_property name="ObjectShortName">MISO</obj_property>
    </wvobject>
-   <wvobject fp_name="/testbench/u_Top/RAMR_Quantity" type="array">
-      <obj_property name="ElementShortName">RAMR_Quantity[17:0]</obj_property>
-      <obj_property name="ObjectShortName">RAMR_Quantity[17:0]</obj_property>
-   </wvobject>
    <wvobject fp_name="/testbench/u_Top/u_SPI/SPI_Cmd" type="array">
       <obj_property name="ElementShortName">SPI_Cmd[2:0]</obj_property>
       <obj_property name="ObjectShortName">SPI_Cmd[2:0]</obj_property>
@@ -75,5 +71,17 @@
    <wvobject fp_name="/testbench/u_Top/u_SPI/Reg_WrEn" type="logic">
       <obj_property name="ElementShortName">Reg_WrEn</obj_property>
       <obj_property name="ObjectShortName">Reg_WrEn</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/u_Top/u_SPI/write_data_strobe" type="logic">
+      <obj_property name="ElementShortName">write_data_strobe</obj_property>
+      <obj_property name="ObjectShortName">write_data_strobe</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/u_Top/u_SPI/SPI_Data" type="array">
+      <obj_property name="ElementShortName">SPI_Data[7:0]</obj_property>
+      <obj_property name="ObjectShortName">SPI_Data[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/u_Top/u_REGS/registers" type="array">
+      <obj_property name="ElementShortName">registers[13:0][7:0]</obj_property>
+      <obj_property name="ObjectShortName">registers[13:0][7:0]</obj_property>
    </wvobject>
 </wave_config>

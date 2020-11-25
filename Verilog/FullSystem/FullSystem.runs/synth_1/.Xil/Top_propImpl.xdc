@@ -51,6 +51,8 @@ set_property src_info {type:XDC file:1 line:120 export:INPUT save:INPUT read:REA
 set_property -dict { PACKAGE_PIN G16   IOSTANDARD LVCMOS33 } [get_ports { DebugSCLK }]; #IO_L13N_T2_MRCC_15 Sch=jb[3]
 set_property src_info {type:XDC file:1 line:121 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN H14   IOSTANDARD LVCMOS33 } [get_ports { DebugWriteReceived }]; #IO_L15P_T2_DQS_15 Sch=jb[4]
+set_property src_info {type:XDC file:1 line:122 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN E16   IOSTANDARD LVCMOS33 } [get_ports { reset }]; #IO_L11N_T1_SRCC_15 Sch=jb[7]
 set_property src_info {type:XDC file:1 line:131 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN F6    IOSTANDARD LVCMOS33 } [get_ports { ADC_SampleClock }]; #IO_L19N_T3_VREF_35 Sch=jc[2]
 set_property src_info {type:XDC file:1 line:133 export:INPUT save:INPUT read:READ} [current_design]

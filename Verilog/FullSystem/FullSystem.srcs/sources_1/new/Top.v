@@ -3,7 +3,7 @@
 
 module Top(
     input clk,
-    input rst_,
+    input rst_, //HIGH BY DEFAULT
     //Frontend
     input [9:0] stimInData,
     output ADC_SampleClock,
@@ -18,14 +18,16 @@ module Top(
     output DebugSlaveSel,
     output DebugMOSI,
     output DebugSCLK,
-    output [7:0] DebugSPI_Ins
+    output [7:0] DebugSPI_Ins,
+    output reg reset
     );
     wire onBit;
+    assign onBit = 1'b1;
     reg reset_p1;
-    reg reset;
+    //reg reset;
     always @(posedge clk)
     begin
-        reset_p1 <= rst_;
+        reset_p1 <= ~rst_; //Get the opposite of reset
         reset <= reset_p1;
     end    
     
@@ -147,7 +149,7 @@ module Top(
         .reset(reset), //Input
         .Write_Data(SPI_Data), //Input
         .Regs_Addr(SPI_Params), //Input
-        .WrEn(Reg_WrEn & write_data_strobe), //Inputs
+        .WrEn(Reg_WrEn), //Inputs Reg_WrEn & write_data_strobe
         .RdEn(Reg_RdEn), //Input
         .Read_Data(Reg_DataOut), //Output
         .DebugRegister(DebugRegister) //Output
