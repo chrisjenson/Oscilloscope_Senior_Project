@@ -7,9 +7,6 @@
 #include "display_glue.h"
 #include "home_screen.h"
 
-//#include "yolo_tengo_310x480.h" 
-//#include "swirly_80x120.h"
-
 #define LED_ON              (0)
 #define LED_OFF             (1)
 
@@ -54,20 +51,13 @@ main( void )
     /* Enable the interrupt */
     NVIC_EnableIRQ(DISP_TICK_ISR_cfg.intrSrc);
     
-//    CLOCK_2_Enable();
     SPIM_Start();
     LCD_INTERFACE_Start();
     I2C_MASTER_Start();
     DISP_TICK_TIMER_Start();
-//    UART_KITPROG_USB_Start();    
     
     lv_init();
     ili9488_init();
-    
-//    UART_KITPROG_USB_PutString( "Hello, world!\r\n" );
-
-    //Cy_GPIO_Write(USER_LED_GRN_PORT, USER_LED_GRN_NUM, LED_ON);
-    //Cy_GPIO_Write(USER_LED_RED_PORT, USER_LED_RED_NUM, LED_ON);
     
     lv_theme_t *th = lv_theme_material_init(30, &lv_font_roboto_22);       //Set a HUE value and a Font for the Night Theme
     lv_theme_set_current(th);                                               //Apply the theme
@@ -97,30 +87,31 @@ main( void )
     
      // SPI TEST CODE //
    
-    //uunt16 because of the command size
+    //unt16 because of the command size
     //uint16_t txBuffer[BUFFER_SIZE];
-    //uint16_t txBuffer[3];
-    //uint16_t RxBuffer[3];
+    uint16_t txBuffer[3];
+    uint16_t RxBuffer[3];
    
     /* Initialize txBuffer with command to transfer */
     //txBuffer[0] = CMD_START_TRANSFER;
-    //RxBuffer[0] = 0x200U; //Junk value
-    //txBuffer[0] = 0x200U; //001 00000 00000000 command to write 00 to reg 0
-    //txBuffer[1] = 0x100U; //000 10000 00000000 command to read reg 0
-    //txBuffer[2] = 0x001U; // JUNK at present
+    RxBuffer[0] = 0b1111111111111111; //Junk value 100 01001 11111111
+    txBuffer[0] = 0b0100010000000000; //010 00100 1111111 command to write 11111111 to reg 4
+    //txBuffer[1] = 0b0100010011111111; //010 00001 01010101 command to write 01010101 to reg 1
+    txBuffer[1] = 0b0010001100000000; //001 00011 00000000 command to read reg 4
+    txBuffer[2] = 0b0010010011111111; //010 00001 01010101 command to read 01010101 to reg 1
    
     //while(1)
     //{
     /* Master: start a transfer. Slave: prepare for a transfer. */
+        //for(int i = 0; i < 2; ++i){
     //    while(!(Cy_SCB_SPI_GetTxFifoStatus(SPIM_HW) & CY_SCB_SPI_TX_EMPTY)){}
-    //    Cy_SCB_SPI_Write(SPIM_HW, txBuffer[0]);
-       
+    //    Cy_SCB_SPI_Write(SPIM_HW, txBuffer[1]);
+   
     //    CyDelay(1);
-       
+   
     //    while(!(Cy_SCB_SPI_GetRxFifoStatus(SPIM_HW) & CY_SCB_SPI_RX_NOT_EMPTY)){}
     //    RxBuffer[0] = Cy_SCB_SPI_Read(SPIM_HW);
-   
-   
+        //}
     //}
     /* Handle results of a transfer */    
    
