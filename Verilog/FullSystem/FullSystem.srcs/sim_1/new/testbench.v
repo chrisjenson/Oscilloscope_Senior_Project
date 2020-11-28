@@ -24,10 +24,10 @@ module testbench();
     
     /////////////////////
     //Initialize input Data
-    `define numInputs     (4096)
+    `define numInputs     (16384)
     
     wire [9:0] stimInData;
-    reg [11:0] stimInCount; //2^12 = 4096
+    reg [13:0] stimInCount; //2^14 = 16384
     reg [9:0] stimData [`numInputs-1:0];
     
      assign stimInData = stimData[stimInCount];
@@ -89,12 +89,9 @@ module testbench();
         commandNum <= 0;
         reset <= 1;
         SlaveSel <= 1;
-        clk = 0;
         SCLK = 1;
         SCLKCount = 0;
         index = 15;
-        while (1)
-            #5 clk = ~clk;  // toggle clk each 5 ns (100 MHz clock frequency)
     end
     
     initial
@@ -103,7 +100,7 @@ module testbench();
         commandArray[0] = 16'b0100010011111111; //cmd = write, params = 4, data = 8'hFF
         commandArray[2] = 16'b0100010011110000; //cmd = write, params = 4, data = 8'hF0
         commandArray[3] = 16'b0010010011111111; //cmd = Read, params = 4, data = x
-        commandArray[4] = 16'b0110111111111111; //cmd = Read Ram, params = 01111 -> (8 x 16 bits out), data = x
+        commandArray[4] = 16'b0110010011111111; //cmd = Read Ram, params = 01111 -> (8 x 16 bits out), data = x... PARAMS = 00100 -> (1024 X 16 out)
     end
     
     always @(posedge clk) //Generate Slave Clock
@@ -134,7 +131,9 @@ module testbench();
     end
     
     assign command = commandArray[commandNum];
-    reg [6:0] OneTwentyEightCounter;
+    reg [6:0] OneTwentyEightCounter; //128
+    reg [9:0] OneZeroTwoFourCounter; //1024
+
     always @(posedge SCLK)
     begin
         if (!SlaveSel)
@@ -144,7 +143,7 @@ module testbench();
                 MOSI <= command[index];
                 if (index == 0)
                 begin
-                    if (OneTwentyEightCounter == 127) //8 TRANSFERS OF 16 BITS
+                    if (OneZeroTwoFourCounter == 1023) //x TRANSFERS OF 16 BITS
                     begin
                         #40 
                         SlaveSel <= 1;
@@ -153,7 +152,7 @@ module testbench();
                     end
                     else
                     begin
-                        OneTwentyEightCounter <= OneTwentyEightCounter + 1;
+                        OneZeroTwoFourCounter <= OneZeroTwoFourCounter + 1;
                     end
                 end
                 else
@@ -179,19 +178,20 @@ module testbench();
             MOSI <= 0;
             index <= 15;
             OneTwentyEightCounter <= 0;
+            OneZeroTwoFourCounter <= 0;
         end
     end
     
     Top u_Top(
         .clk(clk),
-        .rst_(reset),
+        .rst_(~reset),
         //SPI
         .MOSI_Raw(MOSI),
         .SlaveSel(SlaveSel),
         .SCLK_Raw(SCLK),
         //FIFO
   //      .onBit(onBit),
-        .stimInData(stimInData),
+        .ADC_InData(stimInData),
         .ADC_SampleClock(ADC_SampleClock)
     );
 

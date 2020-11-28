@@ -4,12 +4,13 @@
 module RAM_ReadEngine(
     input clk,
     input reset,
-    input ADC_SampleClock,
+    //input ADC_SampleClock,
     //Ram Read
     input triggered,
     input SPI_ReadCommand,
     output reg [17:0] RAMR_ReadAddr, //Port B on RAM, current read location
     input [17:0] RAMR_Quantity,
+    input SlaveSel,
     //input [15:0] RAMR_Data,
     //FIFO
     //output reg [15:0] RAMData,
@@ -40,6 +41,11 @@ module RAM_ReadEngine(
         end
         else
         begin
+            if (SlaveSel)
+            //If SPI is done reading
+            begin
+                RAMR_ReadAddr <= 0; //If not reading, address is 0;
+            end
             if (reading)
             begin
                 FIFO_InRTS <= 1;
@@ -51,7 +57,6 @@ module RAM_ReadEngine(
             else
             begin
                 FIFO_InRTS <= 0;
-                RAMR_ReadAddr <= 0; //If not reading, address is 0;
             end
         end
     end

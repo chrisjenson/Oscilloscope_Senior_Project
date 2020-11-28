@@ -8,14 +8,14 @@ module SPI(
         input reset,
         input SCLK_Raw,
         //For debug
-        output DebugWriteReceived,
+        output DebugFlag,
         output DebugSlaveSel,
         output DebugMOSI,
         output DebugSCLK,
         output [7:0] DebugSPI_Ins,
         //For RAM
         output reg [17:0] BUFFER_InAmount,
-        input [15:0] Buffer_DataIn, //DEBUG Changed this to 16 bits
+        input [15:0] FIFO_OutData, 
         output reg FIFO_OutRTR,
         //Regs
         output reg [7:0] SPI_Data,
@@ -36,7 +36,7 @@ module SPI(
     
     
     assign DebugSPI_Ins = {SPI_Cmd,SPI_Params};
-    assign DebugWriteReceived = Reg_WrEn & write_data_strobe;
+    assign DebugFlag = Reg_WrEn & write_data_strobe; //Reg_RdEn;//
     assign DebugSlaveSel = SlaveSel;
     assign DebugMOSI = MOSI_Raw;
     assign DebugSCLK = SCLK_Raw;
@@ -370,7 +370,7 @@ module SPI(
     /////////////////////////////////////////////////////////////////
     //RAM Read
     reg [3:0] SPI_OutSixteenCount;
-    
+    reg GetNextWordStrobe;
     always @(posedge clk)
     begin
     //RAM Read output
@@ -378,9 +378,10 @@ module SPI(
         //SlaveSel
         //sck
         //Buffer_RdEn
-        //FIFO_OutRTR
     //Output
         //MISO- Also driven from Reg Read
+        //FIFO_OutRTR
+        FIFO_OutRTR <= 0;
         if (SlaveSel)
         begin
             SPI_OutSixteenCount <= 4'hF;
@@ -391,20 +392,15 @@ module SPI(
             begin
                 if (Buffer_RdEn)
                 begin
-                    MISO <= Buffer_DataIn[SPI_OutSixteenCount];
+                    //MISO <= FIFO_OutData[SPI_OutSixteenCount];
                     if (SPI_OutSixteenCount == 0)
                     begin
                         FIFO_OutRTR <= 1;
-                    end
-                    else
-                    begin
-                        FIFO_OutRTR <= 0;
                     end
                     SPI_OutSixteenCount <= SPI_OutSixteenCount - 1;
                 end
             end
         end
     end
-    
     
 endmodule

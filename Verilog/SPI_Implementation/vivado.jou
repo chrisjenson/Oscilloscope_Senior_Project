@@ -2,13 +2,17 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Wed Nov 25 11:26:25 2020
-# Process ID: 9172
+# Start of session at: Fri Nov 27 20:55:26 2020
+# Process ID: 11324
 # Current directory: D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/SPI_Implementation
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent16428 D:\SeniorProject\Oscilloscope_Senior_Project\Verilog\SPI_Implementation\Board_Implementation.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent21896 D:\SeniorProject\Oscilloscope_Senior_Project\Verilog\SPI_Implementation\Board_Implementation.xpr
 # Log file: D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/SPI_Implementation/vivado.log
 # Journal file: D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/SPI_Implementation\vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/SPI_Implementation/Board_Implementation.xpr
 update_compile_order -fileset sources_1
+launch_simulation
+open_wave_config D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/SPI_Implementation/testbench_behav.wcfg
+source testbench.tcl
+close_sim

@@ -3,9 +3,9 @@
 
 module Top(
     input clk,
-    input rst_, //HIGH BY DEFAULT
+    input rst_, //HIGH BY DEFAULT ON HARDWARE
     //Frontend
-    input [9:0] stimInData,
+    input [9:0] ADC_InData,
     output ADC_SampleClock,
     //SPI
     input MOSI_Raw, //C17
@@ -13,22 +13,22 @@ module Top(
     input SCLK_Raw, 
     output MISO,    //D18
     //For Debug
+    input [7:0] DebugWriteRegister,
     output [7:0] DebugRegister,
-    output DebugWriteReceived,
+    output DebugFlag,
     output DebugSlaveSel,
     output DebugMOSI,
     output DebugSCLK,
     output [7:0] DebugSPI_Ins,
-    output reg reset
+    output reg reset //For debug
     );
     wire onBit;
     assign onBit = 1'b1;
     reg reset_p1;
     //reg reset;
-    //DEBUG- IN SYNTHESIS USE ~rst, IN SIM USE rst
     always @(posedge clk)
     begin
-        reset_p1 <= rst_; //Get the opposite of reset
+        reset_p1 <= ~rst_; //Get the opposite of reset here
         reset <= reset_p1;
     end    
     
@@ -43,7 +43,7 @@ module Top(
     ADCInterface u_ADCInterface(
         .clk(clk),
         .reset(reset),      
-        .ADC_DataIn(stimInData), 
+        .ADC_DataIn(ADC_InData), 
         .ADC_SampleClock(ADC_SampleClock),
         .Buffer_DataIn(Buffer_DataIn)
     );
@@ -63,7 +63,7 @@ module Top(
         .onBit(onBit) //Use this to gate everything
     );
     
-    wire [17:0] RAMW_ReadAddr;
+    wire [17:0] RAMR_ReadAddr;
     wire [15:0] RAMR_Data;
     wire SPI_ReadCommand; //from spi
     wire triggered; //From triggermanagement
@@ -80,13 +80,14 @@ module Top(
     RAM_ReadEngine u_RAM_ReadEngine(
         .clk(clk),
         .reset(reset),
-        .ADC_SampleClock(ADC_SampleClock),
+        //.ADC_SampleClock(ADC_SampleClock),
         //Ram Read
         .triggered(triggered), //input, gates read
-        .RAMR_ReadAddr(RAMW_ReadAddr), //Port B on RAM, current read location
+        .RAMR_ReadAddr(RAMR_ReadAddr), //Port B on RAM, current read location
         .RAMR_Quantity(RAMR_Quantity), //output from spi, gates read
         //.RAMR_Data(RAMR_Data),
         .SPI_ReadCommand(SPI_ReadCommand), //Input, gates read
+        .SlaveSel(SlaveSel),
         //FIFO
         //.RAMData(RAMData),
         .FIFO_InRTS(FIFO_InRTS),
@@ -106,7 +107,7 @@ module Top(
         //PORT B -Read
         .clkb(clk), 
         .doutb(RAMR_Data),
-        .addrb(RAMW_ReadAddr)
+        .addrb(RAMR_ReadAddr)
     );
     
     wire [7:0] SPI_Data; //last 8 bits of spi command
@@ -126,14 +127,14 @@ module Top(
         .reset(reset),
         .SCLK_Raw(SCLK_Raw),
         //debug
-        .DebugWriteReceived(DebugWriteReceived), 
+        .DebugFlag(DebugFlag), 
         .DebugSlaveSel(DebugSlaveSel),      
         .DebugMOSI(DebugMOSI),          
         .DebugSCLK(DebugSCLK),
         .DebugSPI_Ins(DebugSPI_Ins),         
         //For RAM
         .BUFFER_InAmount(RAMR_Quantity), //Output
-        .Buffer_DataIn(FIFO_OutData),//Input
+        .FIFO_OutData(FIFO_OutData),//Input
         .FIFO_OutRTR(FIFO_OutRTR), //Output
         .Buffer_RdEn(SPI_ReadCommand), //Output
         //For Regs
@@ -153,6 +154,7 @@ module Top(
         .WrEn(Reg_WrEn), //Inputs Reg_WrEn & write_data_strobe
         .RdEn(Reg_RdEn), //Input
         .Read_Data(Reg_DataOut), //Output
+        .DebugWriteRegister(DebugWriteRegister), //Input
         .DebugRegister(DebugRegister) //Output
     );
     

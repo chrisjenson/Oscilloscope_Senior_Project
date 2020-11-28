@@ -10,10 +10,11 @@ module Regs(
     input [4:0] Regs_Addr,
     output reg [7:0] Read_Data,
     //For debug
+    input [7:0] DebugWriteRegister,
     output [7:0] DebugRegister
     );
-    
-    
+    //INPUT need an input for the write only register with the on-bit
+    //also a read only bit
     
     reg [7:0] registers [13:0];
     assign DebugRegister = registers[4];
@@ -25,7 +26,7 @@ module Regs(
             registers[0] <= 8'b01000010; //B
             registers[1] <= 8'b01000011; //C
             registers[2] <= 8'b01010011; //S
-            registers[3] <= 8'b00000011; //RevId
+            registers[3] <= DebugWriteRegister; //8'b11111111; //Scratch W reg- debug
             registers[4] <= 8'b01010101; //scratch R/W reg- Debug register
             registers[5] <= 8'b00000001; //Trigger
             registers[6] <= 8'b00000000; //Trigger slope
@@ -37,29 +38,30 @@ module Regs(
             registers[12] <= 8'b00000000; //Offset
             registers[13] <= 8'b00000000; //Shift Control Register
         end
-    end
-    always @(posedge clk)
-    begin
-        if (!reset)
+        else
         begin
             if (WrEn)
             begin 
+            
                 registers[Regs_Addr] <= Write_Data;
             end
         end
     end
     always @(*)
     begin
-        if (!reset)
+        if (RdEn) //DEBUG: Shouldnt matter what read data value is when not reading
         begin
-            if (RdEn)
-            begin
-                Read_Data = registers[Regs_Addr];
-            end
-            else//Always give a value in a combinational block!!
-            begin
-                Read_Data = 8'b00000000;
-            end
+        //DEBUG CHANGE TO BLOCK WRITE ATTEMPTS TO READ ONLY REGS
+        //case readonly regs
+            //return error or default value
+        //default
+            //normal read
+            Read_Data = registers[Regs_Addr];
+        //DEBUG Pick switches and assign to bits in registers. Changing switches will show changes in MISO
+        end
+        else//Always give a value in a combinational block!!
+        begin
+            Read_Data = 8'b00000000;
         end
     end
     

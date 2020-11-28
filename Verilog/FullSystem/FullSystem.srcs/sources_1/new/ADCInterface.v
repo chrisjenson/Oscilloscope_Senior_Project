@@ -30,7 +30,7 @@ module ADCInterface(
     //////////////////////////////////////////////////////////////    
     reg twoCounter;
     reg [15:0] ConcatRAMData;
-
+    //DEBUG FIRST CONCATRAMDATA IS INVALID
     always @(posedge clk)
     //Select 8 bits from input data, concat with next 8 bit input, and set as output on negedge of sample clk
     //
