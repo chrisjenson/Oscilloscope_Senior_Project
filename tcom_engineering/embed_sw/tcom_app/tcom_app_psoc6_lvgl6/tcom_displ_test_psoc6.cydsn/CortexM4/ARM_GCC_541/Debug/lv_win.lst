@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
   28:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_objx\../lv_core/../lv_misc/lv_area.h **** /*To avoid overflow don't let the max ranges (reduce with 1000) */
   29:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_objx\../lv_core/../lv_misc/lv_area.h **** #define LV_COORD_MAX ((lv_coord_t)((uint32_t)((uint32_t)1 << (8 * sizeof(lv_coord_t) - 1)) - 1000))
   30:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_objx\../lv_core/../lv_misc/lv_area.h **** #define LV_COORD_MIN (-LV_COORD_MAX)
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 2
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 2
 
 
   31:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_objx\../lv_core/../lv_misc/lv_area.h **** 
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
   85:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_objx\../lv_core/../lv_misc/lv_area.h ****  */
   86:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_objx\../lv_core/../lv_misc/lv_area.h **** static inline lv_coord_t lv_area_get_width(const lv_area_t * area_p)
   87:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_objx\../lv_core/../lv_misc/lv_area.h **** {
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 3
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 3
 
 
   28              		.loc 1 87 0
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
   96:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_objx\../lv_core/../lv_misc/lv_area.h **** static inline lv_coord_t lv_area_get_height(const lv_area_t * area_p)
   97:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_objx\../lv_core/../lv_misc/lv_area.h **** {
   74              		.loc 1 97 0
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 4
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 4
 
 
   75              		.cfi_startproc
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
    7:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_objx/lv_page.h **** #define LV_PAGE_H
    8:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_objx/lv_page.h **** 
    9:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_objx/lv_page.h **** #ifdef __cplusplus
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 5
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 5
 
 
   10:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_objx/lv_page.h **** extern "C" {
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
   64:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_objx/lv_page.h ****         const lv_style_t * style; /*Style of scrollbars*/
   65:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_objx/lv_page.h ****         lv_area_t hor_area;       /*Horizontal scrollbar area relative to the page. (Handled by the
   66:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_objx/lv_page.h ****         lv_area_t ver_area;       /*Vertical scrollbar area relative to the page (Handled by the li
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 6
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 6
 
 
   67:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_objx/lv_page.h ****         uint8_t hor_draw : 1;     /*1: horizontal scrollbar is visible now (Handled by the library)
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  121:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_objx/lv_page.h ****  * Get the scrollable object of a page
  122:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_objx/lv_page.h ****  * @param page pointer to a page object
  123:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_objx/lv_page.h ****  * @return pointer to a container which is the scrollable part of the page
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 7
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 7
 
 
  124:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_objx/lv_page.h ****  */
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  178:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_objx/lv_page.h ****     lv_cont_set_fit4(lv_page_get_scrl(page), left, right, top, bottom);
  179:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_objx/lv_page.h **** }
  180:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_objx/lv_page.h **** 
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 8
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 8
 
 
  181:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_objx/lv_page.h **** /**
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  125 0000 80B5     		push	{r7, lr}
  126              		.cfi_def_cfa_offset 8
  127              		.cfi_offset 7, -8
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 9
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 9
 
 
  128              		.cfi_offset 14, -4
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  251:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_objx/lv_page.h **** lv_sb_mode_t lv_page_get_sb_mode(const lv_obj_t * page);
  252:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_objx/lv_page.h **** 
  253:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_objx/lv_page.h **** /**
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 10
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 10
 
 
  254:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_objx/lv_page.h ****  * Get the scroll propagation property
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  162              		.loc 2 307 0
  163              		.cfi_startproc
  164              		@ args = 0, pretend = 0, frame = 8
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 11
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 11
 
 
  165              		@ frame_needed = 1, uses_anonymous_args = 0
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
    6:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_objx/lv_win.c **** /*********************
    7:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_objx/lv_win.c ****  *      INCLUDES
    8:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_objx/lv_win.c ****  *********************/
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 12
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 12
 
 
    9:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_objx/lv_win.c **** #include "lv_win.h"
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  221              		.cfi_def_cfa_register 7
  222 0006 7860     		str	r0, [r7, #4]
  223 0008 3960     		str	r1, [r7]
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 13
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 13
 
 
   52:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_objx/lv_win.c ****     LV_LOG_TRACE("window create started");
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  263 0046 BB69     		ldr	r3, [r7, #24]
  264 0048 0022     		movs	r2, #0
  265 004a 1A60     		str	r2, [r3]
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 14
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 14
 
 
   67:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_objx/lv_win.c ****     ext->header        = NULL;
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  304 008a F869     		ldr	r0, [r7, #28]
  305 008c FFF7FEFF 		bl	lv_obj_get_parent
  306 0090 0346     		mov	r3, r0
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 15
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 15
 
 
  307 0092 1846     		mov	r0, r3
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  349 00e6 1B68     		ldr	r3, [r3]
  350 00e8 0321     		movs	r1, #3
  351 00ea 1846     		mov	r0, r3
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 16
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 16
 
 
  352 00ec FFF7FEFF 		bl	lv_page_set_sb_mode
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  107:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_objx/lv_win.c ****         lv_obj_set_signal_cb(new_win, lv_win_signal);
  394              		.loc 3 107 0
  395 0142 5A49     		ldr	r1, .L21+24
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 17
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 17
 
 
  396 0144 F869     		ldr	r0, [r7, #28]
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  440              		.loc 3 117 0
  441 01a6 7B69     		ldr	r3, [r7, #20]
  442 01a8 D3F8A431 		ldr	r3, [r3, #420]
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 18
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 18
 
 
  443 01ac 1A46     		mov	r2, r3
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  485 01f8 9B68     		ldr	r3, [r3, #8]
  486 01fa 1946     		mov	r1, r3
  487 01fc 1046     		mov	r0, r2
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 19
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 19
 
 
  488 01fe FFF7FEFF 		bl	lv_label_create
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  531 0250 0021     		movs	r1, #0
  532 0252 386A     		ldr	r0, [r7, #32]
  533 0254 FFF7FEFF 		bl	lv_obj_get_child
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 20
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 20
 
 
  534 0258 0346     		mov	r3, r0
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  572 0292 80BD     		pop	{r7, pc}
  573              	.L22:
  574              		.align	2
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 21
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 21
 
 
  575              	.L21:
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  617              		.loc 3 167 0
  618 0016 00BF     		nop
  619 0018 1037     		adds	r7, r7, #16
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 22
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 22
 
 
  620              		.cfi_def_cfa_offset 8
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  655 0012 7B69     		ldr	r3, [r7, #20]
  656 0014 5B68     		ldr	r3, [r3, #4]
  657 0016 0021     		movs	r1, #0
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 23
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 23
 
 
  658 0018 1846     		mov	r0, r3
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  198:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_objx/lv_win.c **** }
  701              		.loc 3 198 0
  702 0072 1846     		mov	r0, r3
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 24
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 24
 
 
  703 0074 1837     		adds	r7, r7, #24
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  741 0012 7868     		ldr	r0, [r7, #4]
  742 0014 FFF7FEFF 		bl	lv_win_get_from_btn
  743 0018 F860     		str	r0, [r7, #12]
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 25
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 25
 
 
  215:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_objx/lv_win.c **** 
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  782              		.loc 3 230 0
  783 000a 7868     		ldr	r0, [r7, #4]
  784 000c FFF7FEFF 		bl	lv_obj_get_ext_attr
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 26
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 26
 
 
  785 0010 F860     		str	r0, [r7, #12]
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  827 0008 0B46     		mov	r3, r1
  828 000a 7B80     		strh	r3, [r7, #2]	@ movhi
  243:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_objx/lv_win.c ****     LV_ASSERT_OBJ(win, LV_OBJX_NAME);
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 27
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 27
 
 
  244:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_objx/lv_win.c **** 
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  257:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_objx/lv_win.c ****  * @param h height (the window will be higher with the height of the header)
  258:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_objx/lv_win.c ****  */
  259:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_objx/lv_win.c **** void lv_win_set_content_size(lv_obj_t * win, lv_coord_t w, lv_coord_t h)
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 28
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 28
 
 
  260:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_objx/lv_win.c **** {
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  915              		.cfi_endproc
  916              	.LFE74:
  917              		.size	lv_win_set_content_size, .-lv_win_set_content_size
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 29
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 29
 
 
  918 0046 00BF     		.section	.text.lv_win_set_layout,"ax",%progbits
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  959 0028 80BD     		pop	{r7, pc}
  960              		.cfi_endproc
  961              	.LFE75:
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 30
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 30
 
 
  962              		.size	lv_win_set_layout, .-lv_win_set_layout
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  1003              		@ sp needed
  1004 0028 80BD     		pop	{r7, pc}
  1005              		.cfi_endproc
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 31
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 31
 
 
  1006              	.LFE76:
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  1049              		.size	lv_win_set_anim_time, .-lv_win_set_anim_time
  1050 0026 00BF     		.section	.text.lv_win_set_style,"ax",%progbits
  1051              		.align	2
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 32
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 32
 
 
  1052              		.global	lv_win_set_style
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  1092              		.p2align 1
  1093              	.L40:
  319:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_objx/lv_win.c ****         case LV_WIN_STYLE_BG:
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 33
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 33
 
 
  320:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_objx/lv_win.c ****             lv_obj_set_style(win, style);
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  1138 0086 03E0     		b	.L39
  1139              	.L46:
  330:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_objx/lv_win.c ****         case LV_WIN_STYLE_BTN_PR: ext->style_btn_pr = style; break;
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 34
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 34
 
 
  1140              		.loc 3 330 0
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  341:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_objx/lv_win.c ****             else
  342:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_objx/lv_win.c ****                 lv_btn_set_style(btn, LV_BTN_STYLE_PR, style);
  1184              		.loc 3 342 0
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 35
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 35
 
 
  1185 00cc 7A68     		ldr	r2, [r7, #4]
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  1226              		@ frame_needed = 1, uses_anonymous_args = 0
  1227 0000 80B5     		push	{r7, lr}
  1228              		.cfi_def_cfa_offset 8
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 36
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 36
 
 
  1229              		.cfi_offset 7, -8
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  363:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_objx/lv_win.c **** /*=====================
  364:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_objx/lv_win.c ****  * Getter functions
  365:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_objx/lv_win.c ****  *====================*/
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 37
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 37
 
 
  366:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_objx/lv_win.c **** 
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  1316              	.LFB81:
  379:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_objx/lv_win.c **** 
  380:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_objx/lv_win.c **** /**
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 38
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 38
 
 
  381:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_objx/lv_win.c ****  * Get the content holder object of window (`lv_page`) to allow additional customization
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  396:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_objx/lv_win.c ****  * @return control button size
  397:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_objx/lv_win.c ****  */
  398:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_objx/lv_win.c **** lv_coord_t lv_win_get_btn_size(const lv_obj_t * win)
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 39
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 39
 
 
  399:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_objx/lv_win.c **** {
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  1395              		.loc 3 413 0
  1396              		.cfi_startproc
  1397              		@ args = 0, pretend = 0, frame = 16
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 40
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 40
 
 
  1398              		@ frame_needed = 1, uses_anonymous_args = 0
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  1437              		.loc 3 428 0
  1438              		.cfi_startproc
  1439              		@ args = 0, pretend = 0, frame = 16
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 41
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 41
 
 
  1440              		@ frame_needed = 1, uses_anonymous_args = 0
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  1481              		@ args = 0, pretend = 0, frame = 16
  1482              		@ frame_needed = 1, uses_anonymous_args = 0
  1483 0000 80B5     		push	{r7, lr}
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 42
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 42
 
 
  1484              		.cfi_def_cfa_offset 8
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  1525 0000 80B5     		push	{r7, lr}
  1526              		.cfi_def_cfa_offset 8
  1527              		.cfi_offset 7, -8
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 43
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 43
 
 
  1528              		.cfi_offset 14, -4
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  1570 0004 00AF     		add	r7, sp, #0
  1571              		.cfi_def_cfa_register 7
  1572 0006 7860     		str	r0, [r7, #4]
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 44
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 44
 
 
  467:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_objx/lv_win.c ****     LV_ASSERT_OBJ(win, LV_OBJX_NAME);
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  1619              		.type	lv_win_get_style, %function
  1620              	lv_win_get_style:
  1621              	.LFB88:
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 45
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 45
 
 
  475:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_objx/lv_win.c **** 
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  1660              		.loc 3 490 0
  1661 003c 7868     		ldr	r0, [r7, #4]
  1662 003e FFF7FEFF 		bl	lv_obj_get_style
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 46
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 46
 
 
  1663 0042 F860     		str	r0, [r7, #12]
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  499:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_objx/lv_win.c ****     return style;
  1709              		.loc 3 499 0
  1710 008a FB68     		ldr	r3, [r7, #12]
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 47
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 47
 
 
  500:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_objx/lv_win.c **** }
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  1746              		.loc 3 518 0
  1747 000e F868     		ldr	r0, [r7, #12]
  1748 0010 FFF7FEFF 		bl	lv_obj_get_ext_attr
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 48
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 48
 
 
  1749 0014 7861     		str	r0, [r7, #20]
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  1786              		.cfi_offset 7, -8
  1787              		.cfi_offset 14, -4
  1788 0002 8BB0     		sub	sp, sp, #44
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 49
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 49
 
 
  1789              		.cfi_def_cfa_offset 56
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  1833              		.loc 3 544 0
  1834 004e FB69     		ldr	r3, [r7, #28]
  1835 0050 1B68     		ldr	r3, [r3]
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 50
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 50
 
 
  1836 0052 BB61     		str	r3, [r7, #24]
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  1880              	.L89:
  548:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_objx/lv_win.c ****                 if(lv_obj_is_protected(child, LV_PROTECT_PARENT) == false) {
  1881              		.loc 3 548 0
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 51
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 51
 
 
  1882 009c 7B6A     		ldr	r3, [r7, #36]
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  1927              	.L94:
  564:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_objx/lv_win.c ****         }
  565:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_objx/lv_win.c ****     } else if(sign == LV_SIGNAL_CLEANUP) {
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 52
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 52
 
 
  1928              		.loc 3 565 0
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  1972              		.align	2
  1973              	.L98:
  1974 0128 00000000 		.word	ancestor_signal
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 53
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 53
 
 
  1975 012c 0C000000 		.word	.LC1
@@ -3178,7 +3178,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  2019 0028 002B     		cmp	r3, #0
  2020 002a 00F0AD80 		beq	.L108
  586:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_objx/lv_win.c **** 
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 54
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 54
 
 
  587:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_objx/lv_win.c ****     const lv_style_t * header_style = lv_win_get_style(win, LV_WIN_STYLE_HEADER);
@@ -3238,7 +3238,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  2063 0078 3B69     		ldr	r3, [r7, #16]
  2064 007a 5B68     		ldr	r3, [r3, #4]
  2065 007c 0021     		movs	r1, #0
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 55
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 55
 
 
  2066 007e 1846     		mov	r0, r3
@@ -3298,7 +3298,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  2112 00d6 FB68     		ldr	r3, [r7, #12]
  2113 00d8 B3F92830 		ldrsh	r3, [r3, #40]
  2114 00dc 9BB2     		uxth	r3, r3
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 56
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 56
 
 
  2115 00de 5B42     		negs	r3, r3
@@ -3358,7 +3358,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  2159 0130 5B68     		ldr	r3, [r3, #4]
  2160 0132 0022     		movs	r2, #0
  2161 0134 0021     		movs	r1, #0
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 57
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 57
 
 
  2162 0136 1846     		mov	r0, r3
@@ -3418,12 +3418,12 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  2211              	.LFE91:
  2212              		.size	lv_win_realign, .-lv_win_realign
  2213              		.text
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 58
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 58
 
 
  2214              	.Letext0:
- 2215              		.file 4 "e:\\applications\\psoc\\psoc creator\\4.3\\psoc creator\\import\\gnu\\arm\\5.4.1\\arm-non
- 2216              		.file 5 "e:\\applications\\psoc\\psoc creator\\4.3\\psoc creator\\import\\gnu\\arm\\5.4.1\\arm-non
+ 2215              		.file 4 "c:\\program files (x86)\\cypress\\psoc creator\\4.3\\psoc creator\\import\\gnu\\arm\\5.4.
+ 2216              		.file 5 "c:\\program files (x86)\\cypress\\psoc creator\\4.3\\psoc creator\\import\\gnu\\arm\\5.4.
  2217              		.file 6 "..\\..\\..\\lvgl\\version_6.1.2\\lvgl\\src\\lv_objx\\../../../lv_conf.h"
  2218              		.file 7 "..\\..\\..\\lvgl\\version_6.1.2\\lvgl\\src\\lv_objx\\../lv_core/../lv_font/lv_font.h"
  2219              		.file 8 "..\\..\\..\\lvgl\\version_6.1.2\\lvgl\\src\\lv_objx\\../lv_core/../lv_misc/lv_color.h"
@@ -3444,15 +3444,15 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  2234 0006 00000000 		.4byte	.Ldebug_abbrev0
  2235 000a 04       		.byte	0x4
  2236 000b 01       		.uleb128 0x1
- 2237 000c B20C0000 		.4byte	.LASF328
+ 2237 000c C50C0000 		.4byte	.LASF328
  2238 0010 0C       		.byte	0xc
  2239 0011 B8030000 		.4byte	.LASF329
- 2240 0015 3A0A0000 		.4byte	.LASF330
+ 2240 0015 9B070000 		.4byte	.LASF330
  2241 0019 00000000 		.4byte	.Ldebug_ranges0+0
  2242 001d 00000000 		.4byte	0
  2243 0021 00000000 		.4byte	.Ldebug_line0
  2244 0025 02       		.uleb128 0x2
- 2245 0026 D20B0000 		.4byte	.LASF0
+ 2245 0026 E50B0000 		.4byte	.LASF0
  2246 002a 04       		.byte	0x4
  2247 002b 1B       		.byte	0x1b
  2248 002c 30000000 		.4byte	0x30
@@ -3470,15 +3470,15 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  2260 0044 08       		.byte	0x8
  2261 0045 45030000 		.4byte	.LASF3
  2262 0049 02       		.uleb128 0x2
- 2263 004a 720D0000 		.4byte	.LASF4
+ 2263 004a 850D0000 		.4byte	.LASF4
  2264 004e 04       		.byte	0x4
  2265 004f 29       		.byte	0x29
  2266 0050 54000000 		.4byte	0x54
  2267 0054 03       		.uleb128 0x3
  2268 0055 02       		.byte	0x2
  2269 0056 05       		.byte	0x5
- 2270 0057 A40E0000 		.4byte	.LASF5
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 59
+ 2270 0057 B70E0000 		.4byte	.LASF5
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 59
 
 
  2271 005b 02       		.uleb128 0x2
@@ -3489,7 +3489,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  2276 0066 03       		.uleb128 0x3
  2277 0067 02       		.byte	0x2
  2278 0068 07       		.byte	0x7
- 2279 0069 B4100000 		.4byte	.LASF7
+ 2279 0069 C7100000 		.4byte	.LASF7
  2280 006d 03       		.uleb128 0x3
  2281 006e 04       		.byte	0x4
  2282 006f 05       		.byte	0x5
@@ -3510,7 +3510,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  2297 008d 03       		.uleb128 0x3
  2298 008e 08       		.byte	0x8
  2299 008f 07       		.byte	0x7
- 2300 0090 FC0B0000 		.4byte	.LASF12
+ 2300 0090 0F0C0000 		.4byte	.LASF12
  2301 0094 04       		.uleb128 0x4
  2302 0095 04       		.byte	0x4
  2303 0096 05       		.byte	0x5
@@ -3518,7 +3518,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  2305 009b 03       		.uleb128 0x3
  2306 009c 04       		.byte	0x4
  2307 009d 07       		.byte	0x7
- 2308 009e A9080000 		.4byte	.LASF13
+ 2308 009e 46090000 		.4byte	.LASF13
  2309 00a2 02       		.uleb128 0x2
  2310 00a3 0D000000 		.4byte	.LASF14
  2311 00a7 05       		.byte	0x5
@@ -3530,25 +3530,25 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  2317 00b3 18       		.byte	0x18
  2318 00b4 37000000 		.4byte	0x37
  2319 00b8 02       		.uleb128 0x2
- 2320 00b9 0A0F0000 		.4byte	.LASF16
+ 2320 00b9 1D0F0000 		.4byte	.LASF16
  2321 00bd 05       		.byte	0x5
  2322 00be 20       		.byte	0x20
  2323 00bf 49000000 		.4byte	0x49
  2324 00c3 02       		.uleb128 0x2
- 2325 00c4 410C0000 		.4byte	.LASF17
+ 2325 00c4 540C0000 		.4byte	.LASF17
  2326 00c8 05       		.byte	0x5
  2327 00c9 24       		.byte	0x24
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 60
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 60
 
 
  2328 00ca 5B000000 		.4byte	0x5b
  2329 00ce 02       		.uleb128 0x2
- 2330 00cf 35100000 		.4byte	.LASF18
+ 2330 00cf 48100000 		.4byte	.LASF18
  2331 00d3 05       		.byte	0x5
  2332 00d4 30       		.byte	0x30
  2333 00d5 74000000 		.4byte	0x74
  2334 00d9 02       		.uleb128 0x2
- 2335 00da E1100000 		.4byte	.LASF19
+ 2335 00da F4100000 		.4byte	.LASF19
  2336 00de 06       		.byte	0x6
  2337 00df 3C       		.byte	0x3c
  2338 00e0 B8000000 		.4byte	0xb8
@@ -3557,7 +3557,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  2341 00e6 03       		.uleb128 0x3
  2342 00e7 08       		.byte	0x8
  2343 00e8 04       		.byte	0x4
- 2344 00e9 2E0A0000 		.4byte	.LASF20
+ 2344 00e9 CB0A0000 		.4byte	.LASF20
  2345 00ed 06       		.uleb128 0x6
  2346 00ee 08       		.byte	0x8
  2347 00ef 07       		.byte	0x7
@@ -3570,13 +3570,13 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  2354 00fc C3000000 		.4byte	0xc3
  2355 0100 00       		.byte	0
  2356 0101 07       		.uleb128 0x7
- 2357 0102 9E0E0000 		.4byte	.LASF22
+ 2357 0102 B10E0000 		.4byte	.LASF22
  2358 0106 07       		.byte	0x7
  2359 0107 31       		.byte	0x31
  2360 0108 AD000000 		.4byte	0xad
  2361 010c 02       		.byte	0x2
  2362 010d 07       		.uleb128 0x7
- 2363 010e 820E0000 		.4byte	.LASF23
+ 2363 010e 950E0000 		.4byte	.LASF23
  2364 0112 07       		.byte	0x7
  2365 0113 32       		.byte	0x32
  2366 0114 AD000000 		.4byte	0xad
@@ -3598,24 +3598,24 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  2382 0136 07       		.byte	0x7
  2383 0137 35       		.byte	0x35
  2384 0138 AD000000 		.4byte	0xad
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 61
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 61
 
 
  2385 013c 06       		.byte	0x6
  2386 013d 00       		.byte	0
  2387 013e 02       		.uleb128 0x2
- 2388 013f 57090000 		.4byte	.LASF26
+ 2388 013f F4090000 		.4byte	.LASF26
  2389 0143 07       		.byte	0x7
  2390 0144 36       		.byte	0x36
  2391 0145 ED000000 		.4byte	0xed
  2392 0149 09       		.uleb128 0x9
- 2393 014a E7110000 		.4byte	.LASF82
+ 2393 014a FA110000 		.4byte	.LASF82
  2394 014e 10       		.byte	0x10
  2395 014f 07       		.byte	0x7
  2396 0150 44       		.byte	0x44
  2397 0151 A1010000 		.4byte	0x1a1
  2398 0155 07       		.uleb128 0x7
- 2399 0156 18110000 		.4byte	.LASF27
+ 2399 0156 2B110000 		.4byte	.LASF27
  2400 015a 07       		.byte	0x7
  2401 015b 47       		.byte	0x47
  2402 015c D7010000 		.4byte	0x1d7
@@ -3633,13 +3633,13 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  2414 0174 AD000000 		.4byte	0xad
  2415 0178 08       		.byte	0x8
  2416 0179 07       		.uleb128 0x7
- 2417 017a C20E0000 		.4byte	.LASF30
+ 2417 017a D50E0000 		.4byte	.LASF30
  2418 017e 07       		.byte	0x7
  2419 017f 4E       		.byte	0x4e
  2420 0180 A2000000 		.4byte	0xa2
  2421 0184 09       		.byte	0x9
  2422 0185 0A       		.uleb128 0xa
- 2423 0186 180B0000 		.4byte	.LASF65
+ 2423 0186 2B0B0000 		.4byte	.LASF65
  2424 018a 07       		.byte	0x7
  2425 018b 4F       		.byte	0x4f
  2426 018c AD000000 		.4byte	0xad
@@ -3658,7 +3658,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  2439 01a2 BF010000 		.4byte	0x1bf
  2440 01a6 BF010000 		.4byte	0x1bf
  2441 01aa 0C       		.uleb128 0xc
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 62
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 62
 
 
  2442 01ab C6010000 		.4byte	0x1c6
@@ -3701,7 +3701,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  2479 01fd 04       		.byte	0x4
  2480 01fe DD010000 		.4byte	0x1dd
  2481 0202 02       		.uleb128 0x2
- 2482 0203 87100000 		.4byte	.LASF32
+ 2482 0203 9A100000 		.4byte	.LASF32
  2483 0207 07       		.byte	0x7
  2484 0208 56       		.byte	0x56
  2485 0209 49010000 		.4byte	0x149
@@ -3717,8 +3717,8 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  2495 021c AD000000 		.4byte	0xad
  2496 0220 00       		.byte	0
  2497 0221 07       		.uleb128 0x7
- 2498 0222 81100000 		.4byte	.LASF34
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 63
+ 2498 0222 94100000 		.4byte	.LASF34
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 63
 
 
  2499 0226 08       		.byte	0x8
@@ -3749,7 +3749,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  2524 0253 F9       		.byte	0xf9
  2525 0254 0D020000 		.4byte	0x20d
  2526 0258 11       		.uleb128 0x11
- 2527 0259 9F0D0000 		.4byte	.LASF36
+ 2527 0259 B20D0000 		.4byte	.LASF36
  2528 025d 08       		.byte	0x8
  2529 025e FA       		.byte	0xfa
  2530 025f CE000000 		.4byte	0xce
@@ -3760,7 +3760,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  2535 026a FB       		.byte	0xfb
  2536 026b 46020000 		.4byte	0x246
  2537 026f 12       		.uleb128 0x12
- 2538 0270 540C0000 		.4byte	.LASF38
+ 2538 0270 670C0000 		.4byte	.LASF38
  2539 0274 08       		.byte	0x8
  2540 0275 0801     		.2byte	0x108
  2541 0277 64020000 		.4byte	0x264
@@ -3778,7 +3778,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  2553 0290 08       		.byte	0x8
  2554 0291 1F040000 		.4byte	.LASF41
  2555 0295 0D       		.uleb128 0xd
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 64
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 64
 
 
  2556 0296 04       		.byte	0x4
@@ -3826,37 +3826,37 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  2598 02e6 28       		.byte	0x28
  2599 02e7 AD000000 		.4byte	0xad
  2600 02eb 02       		.uleb128 0x2
- 2601 02ec 3F110000 		.4byte	.LASF44
+ 2601 02ec 52110000 		.4byte	.LASF44
  2602 02f0 0A       		.byte	0xa
  2603 02f1 2C       		.byte	0x2c
  2604 02f2 AD000000 		.4byte	0xad
  2605 02f6 02       		.uleb128 0x2
- 2606 02f7 EE0D0000 		.4byte	.LASF45
+ 2606 02f7 010E0000 		.4byte	.LASF45
  2607 02fb 0A       		.byte	0xa
  2608 02fc 33       		.byte	0x33
  2609 02fd AD000000 		.4byte	0xad
  2610 0301 06       		.uleb128 0x6
  2611 0302 08       		.byte	0x8
  2612 0303 0A       		.byte	0xa
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 65
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 65
 
 
  2613 0304 48       		.byte	0x48
  2614 0305 3A030000 		.4byte	0x33a
  2615 0309 07       		.uleb128 0x7
- 2616 030a CF0D0000 		.4byte	.LASF46
+ 2616 030a E20D0000 		.4byte	.LASF46
  2617 030e 0A       		.byte	0xa
  2618 030f 4A       		.byte	0x4a
  2619 0310 6F020000 		.4byte	0x26f
  2620 0314 00       		.byte	0
  2621 0315 07       		.uleb128 0x7
- 2622 0316 B4070000 		.4byte	.LASF47
+ 2622 0316 51080000 		.4byte	.LASF47
  2623 031a 0A       		.byte	0xa
  2624 031b 4B       		.byte	0x4b
  2625 031c D9000000 		.4byte	0xd9
  2626 0320 04       		.byte	0x4
  2627 0321 07       		.uleb128 0x7
- 2628 0322 F7110000 		.4byte	.LASF48
+ 2628 0322 0A120000 		.4byte	.LASF48
  2629 0326 0A       		.byte	0xa
  2630 0327 4C       		.byte	0x4c
  2631 0328 EB020000 		.4byte	0x2eb
@@ -3874,13 +3874,13 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  2643 033d 51       		.byte	0x51
  2644 033e 67030000 		.4byte	0x367
  2645 0342 07       		.uleb128 0x7
- 2646 0343 CF0D0000 		.4byte	.LASF46
+ 2646 0343 E20D0000 		.4byte	.LASF46
  2647 0347 0A       		.byte	0xa
  2648 0348 53       		.byte	0x53
  2649 0349 6F020000 		.4byte	0x26f
  2650 034d 00       		.byte	0
  2651 034e 07       		.uleb128 0x7
- 2652 034f B4070000 		.4byte	.LASF47
+ 2652 034f 51080000 		.4byte	.LASF47
  2653 0353 0A       		.byte	0xa
  2654 0354 54       		.byte	0x54
  2655 0355 D9000000 		.4byte	0xd9
@@ -3898,7 +3898,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  2667 036a 58       		.byte	0x58
  2668 036b AC030000 		.4byte	0x3ac
  2669 036f 08       		.uleb128 0x8
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 66
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 66
 
 
  2670 0370 746F7000 		.ascii	"top\000"
@@ -3907,7 +3907,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  2673 0376 D9000000 		.4byte	0xd9
  2674 037a 00       		.byte	0
  2675 037b 07       		.uleb128 0x7
- 2676 037c E2070000 		.4byte	.LASF50
+ 2676 037c 7F080000 		.4byte	.LASF50
  2677 0380 0A       		.byte	0xa
  2678 0381 5B       		.byte	0x5b
  2679 0382 D9000000 		.4byte	0xd9
@@ -3937,13 +3937,13 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  2703 03af 41       		.byte	0x41
  2704 03b0 09040000 		.4byte	0x409
  2705 03b4 07       		.uleb128 0x7
- 2706 03b5 B30B0000 		.4byte	.LASF54
+ 2706 03b5 C60B0000 		.4byte	.LASF54
  2707 03b9 0A       		.byte	0xa
  2708 03ba 43       		.byte	0x43
  2709 03bb 6F020000 		.4byte	0x26f
  2710 03bf 00       		.byte	0
  2711 03c0 07       		.uleb128 0x7
- 2712 03c1 70090000 		.4byte	.LASF55
+ 2712 03c1 0D0A0000 		.4byte	.LASF55
  2713 03c5 0A       		.byte	0xa
  2714 03c6 44       		.byte	0x44
  2715 03c7 6F020000 		.4byte	0x26f
@@ -3958,25 +3958,25 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  2724 03d9 6F706100 		.ascii	"opa\000"
  2725 03dd 0A       		.byte	0xa
  2726 03de 46       		.byte	0x46
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 67
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 67
 
 
  2727 03df 7B020000 		.4byte	0x27b
  2728 03e3 0A       		.byte	0xa
  2729 03e4 07       		.uleb128 0x7
- 2730 03e5 0B110000 		.4byte	.LASF57
+ 2730 03e5 1E110000 		.4byte	.LASF57
  2731 03e9 0A       		.byte	0xa
  2732 03ea 4E       		.byte	0x4e
  2733 03eb 01030000 		.4byte	0x301
  2734 03ef 0C       		.byte	0xc
  2735 03f0 07       		.uleb128 0x7
- 2736 03f1 840F0000 		.4byte	.LASF58
+ 2736 03f1 970F0000 		.4byte	.LASF58
  2737 03f5 0A       		.byte	0xa
  2738 03f6 56       		.byte	0x56
  2739 03f7 3A030000 		.4byte	0x33a
  2740 03fb 14       		.byte	0x14
  2741 03fc 07       		.uleb128 0x7
- 2742 03fd 23100000 		.4byte	.LASF59
+ 2742 03fd 36100000 		.4byte	.LASF59
  2743 0401 0A       		.byte	0xa
  2744 0402 5F       		.byte	0x5f
  2745 0403 67030000 		.4byte	0x367
@@ -3988,37 +3988,37 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  2751 040c 63       		.byte	0x63
  2752 040d 5A040000 		.4byte	0x45a
  2753 0411 07       		.uleb128 0x7
- 2754 0412 CF0D0000 		.4byte	.LASF46
+ 2754 0412 E20D0000 		.4byte	.LASF46
  2755 0416 0A       		.byte	0xa
  2756 0417 65       		.byte	0x65
  2757 0418 6F020000 		.4byte	0x26f
  2758 041c 00       		.byte	0
  2759 041d 07       		.uleb128 0x7
- 2760 041e CA110000 		.4byte	.LASF60
+ 2760 041e DD110000 		.4byte	.LASF60
  2761 0422 0A       		.byte	0xa
  2762 0423 66       		.byte	0x66
  2763 0424 6F020000 		.4byte	0x26f
  2764 0428 04       		.byte	0x4
  2765 0429 07       		.uleb128 0x7
- 2766 042a 330E0000 		.4byte	.LASF61
+ 2766 042a 460E0000 		.4byte	.LASF61
  2767 042e 0A       		.byte	0xa
  2768 042f 67       		.byte	0x67
  2769 0430 5A040000 		.4byte	0x45a
  2770 0434 08       		.byte	0x8
  2771 0435 07       		.uleb128 0x7
- 2772 0436 380E0000 		.4byte	.LASF62
+ 2772 0436 4B0E0000 		.4byte	.LASF62
  2773 043a 0A       		.byte	0xa
  2774 043b 68       		.byte	0x68
  2775 043c D9000000 		.4byte	0xd9
  2776 0440 0C       		.byte	0xc
  2777 0441 07       		.uleb128 0x7
- 2778 0442 D50D0000 		.4byte	.LASF63
+ 2778 0442 E80D0000 		.4byte	.LASF63
  2779 0446 0A       		.byte	0xa
  2780 0447 69       		.byte	0x69
  2781 0448 D9000000 		.4byte	0xd9
  2782 044c 0E       		.byte	0xe
  2783 044d 08       		.uleb128 0x8
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 68
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 68
 
 
  2784 044e 6F706100 		.ascii	"opa\000"
@@ -4038,7 +4038,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  2798 0468 6E       		.byte	0x6e
  2799 0469 92040000 		.4byte	0x492
  2800 046d 07       		.uleb128 0x7
- 2801 046e CF0D0000 		.4byte	.LASF46
+ 2801 046e E20D0000 		.4byte	.LASF46
  2802 0472 0A       		.byte	0xa
  2803 0473 70       		.byte	0x70
  2804 0474 6F020000 		.4byte	0x26f
@@ -4062,13 +4062,13 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  2822 0495 76       		.byte	0x76
  2823 0496 CE040000 		.4byte	0x4ce
  2824 049a 07       		.uleb128 0x7
- 2825 049b CF0D0000 		.4byte	.LASF46
+ 2825 049b E20D0000 		.4byte	.LASF46
  2826 049f 0A       		.byte	0xa
  2827 04a0 78       		.byte	0x78
  2828 04a1 6F020000 		.4byte	0x26f
  2829 04a5 00       		.byte	0
  2830 04a6 07       		.uleb128 0x7
- 2831 04a7 B4070000 		.4byte	.LASF47
+ 2831 04a7 51080000 		.4byte	.LASF47
  2832 04ab 0A       		.byte	0xa
  2833 04ac 79       		.byte	0x79
  2834 04ad D9000000 		.4byte	0xd9
@@ -4078,7 +4078,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  2838 04b7 0A       		.byte	0xa
  2839 04b8 7A       		.byte	0x7a
  2840 04b9 7B020000 		.4byte	0x27b
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 69
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 69
 
 
  2841 04bd 06       		.byte	0x6
@@ -4098,7 +4098,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  2855 04d1 3C       		.byte	0x3c
  2856 04d2 16050000 		.4byte	0x516
  2857 04d6 0A       		.uleb128 0xa
- 2858 04d7 7C080000 		.4byte	.LASF67
+ 2858 04d7 19090000 		.4byte	.LASF67
  2859 04db 0A       		.byte	0xa
  2860 04dc 3E       		.byte	0x3e
  2861 04dd AD000000 		.4byte	0xad
@@ -4138,7 +4138,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  2895 051d CE040000 		.4byte	0x4ce
  2896 0521 0D       		.uleb128 0xd
  2897 0522 04       		.byte	0x4
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 70
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 70
 
 
  2898 0523 16050000 		.4byte	0x516
@@ -4152,11 +4152,11 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  2906 0534 A9010000 		.4byte	.LASF73
  2907 0538 00       		.byte	0
  2908 0539 14       		.uleb128 0x14
- 2909 053a 4A0C0000 		.4byte	.LASF74
+ 2909 053a 5D0C0000 		.4byte	.LASF74
  2910 053e 01       		.byte	0x1
  2911 053f 00       		.byte	0
  2912 0540 02       		.uleb128 0x2
- 2913 0541 0B0A0000 		.4byte	.LASF75
+ 2913 0541 A80A0000 		.4byte	.LASF75
  2914 0545 0B       		.byte	0xb
  2915 0546 2C       		.byte	0x2c
  2916 0547 AD000000 		.4byte	0xad
@@ -4171,7 +4171,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  2925 0559 21       		.byte	0x21
  2926 055a 83050000 		.4byte	0x583
  2927 055e 07       		.uleb128 0x7
- 2928 055f FC110000 		.4byte	.LASF77
+ 2928 055f 0F120000 		.4byte	.LASF77
  2929 0563 0C       		.byte	0xc
  2930 0564 23       		.byte	0x23
  2931 0565 CE000000 		.4byte	0xce
@@ -4193,12 +4193,12 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  2947 0584 04       		.byte	0x4
  2948 0585 4B050000 		.4byte	0x54b
  2949 0589 02       		.uleb128 0x2
- 2950 058a CC0E0000 		.4byte	.LASF80
+ 2950 058a DF0E0000 		.4byte	.LASF80
  2951 058e 0C       		.byte	0xc
  2952 058f 26       		.byte	0x26
  2953 0590 56050000 		.4byte	0x556
  2954 0594 02       		.uleb128 0x2
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 71
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 71
 
 
  2955 0595 51050000 		.4byte	.LASF81
@@ -4211,7 +4211,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  2962 05a5 0E       		.uleb128 0xe
  2963 05a6 D5020000 		.4byte	0x2d5
  2964 05aa 09       		.uleb128 0x9
- 2965 05ab 140E0000 		.4byte	.LASF83
+ 2965 05ab 270E0000 		.4byte	.LASF83
  2966 05af 40       		.byte	0x40
  2967 05b0 0E       		.byte	0xe
  2968 05b1 BB       		.byte	0xbb
@@ -4223,13 +4223,13 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  2974 05bd EC060000 		.4byte	0x6ec
  2975 05c1 00       		.byte	0
  2976 05c2 07       		.uleb128 0x7
- 2977 05c3 E9070000 		.4byte	.LASF84
+ 2977 05c3 86080000 		.4byte	.LASF84
  2978 05c7 0E       		.byte	0xe
  2979 05c8 BE       		.byte	0xbe
  2980 05c9 89050000 		.4byte	0x589
  2981 05cd 04       		.byte	0x4
  2982 05ce 07       		.uleb128 0x7
- 2983 05cf 250F0000 		.4byte	.LASF85
+ 2983 05cf 380F0000 		.4byte	.LASF85
  2984 05d3 0E       		.byte	0xe
  2985 05d4 C0       		.byte	0xc0
  2986 05d5 D5020000 		.4byte	0x2d5
@@ -4241,7 +4241,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  2992 05e1 B7070000 		.4byte	0x7b7
  2993 05e5 18       		.byte	0x18
  2994 05e6 07       		.uleb128 0x7
- 2995 05e7 2B100000 		.4byte	.LASF87
+ 2995 05e7 3E100000 		.4byte	.LASF87
  2996 05eb 0E       		.byte	0xe
  2997 05ec C3       		.byte	0xc3
  2998 05ed 68080000 		.4byte	0x868
@@ -4253,12 +4253,12 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  3004 05f9 FD060000 		.4byte	0x6fd
  3005 05fd 20       		.byte	0x20
  3006 05fe 07       		.uleb128 0x7
- 3007 05ff D80A0000 		.4byte	.LASF89
+ 3007 05ff EB0A0000 		.4byte	.LASF89
  3008 0603 0E       		.byte	0xe
  3009 0604 C6       		.byte	0xc6
  3010 0605 E4000000 		.4byte	0xe4
  3011 0609 24       		.byte	0x24
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 72
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 72
 
 
  3012 060a 07       		.uleb128 0x7
@@ -4277,7 +4277,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  3025 0623 07       		.byte	0x7
  3026 0624 2C       		.byte	0x2c
  3027 0625 0A       		.uleb128 0xa
- 3028 0626 FF0D0000 		.4byte	.LASF92
+ 3028 0626 120E0000 		.4byte	.LASF92
  3029 062a 0E       		.byte	0xe
  3030 062b D8       		.byte	0xd8
  3031 062c AD000000 		.4byte	0xad
@@ -4295,7 +4295,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  3043 0641 05       		.byte	0x5
  3044 0642 2C       		.byte	0x2c
  3045 0643 0A       		.uleb128 0xa
- 3046 0644 D10F0000 		.4byte	.LASF94
+ 3046 0644 E40F0000 		.4byte	.LASF94
  3047 0648 0E       		.byte	0xe
  3048 0649 DA       		.byte	0xda
  3049 064a AD000000 		.4byte	0xad
@@ -4318,14 +4318,14 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  3066 0667 DC       		.byte	0xdc
  3067 0668 AD000000 		.4byte	0xad
  3068 066c 01       		.byte	0x1
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 73
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 73
 
 
  3069 066d 01       		.byte	0x1
  3070 066e 02       		.byte	0x2
  3071 066f 2C       		.byte	0x2c
  3072 0670 0A       		.uleb128 0xa
- 3073 0671 6D0F0000 		.4byte	.LASF96
+ 3073 0671 800F0000 		.4byte	.LASF96
  3074 0675 0E       		.byte	0xe
  3075 0676 DD       		.byte	0xdd
  3076 0677 AD000000 		.4byte	0xad
@@ -4334,7 +4334,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  3079 067d 01       		.byte	0x1
  3080 067e 2C       		.byte	0x2c
  3081 067f 0A       		.uleb128 0xa
- 3082 0680 24080000 		.4byte	.LASF97
+ 3082 0680 C1080000 		.4byte	.LASF97
  3083 0684 0E       		.byte	0xe
  3084 0685 DE       		.byte	0xde
  3085 0686 AD000000 		.4byte	0xad
@@ -4352,7 +4352,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  3097 069b 06       		.byte	0x6
  3098 069c 2D       		.byte	0x2d
  3099 069d 0A       		.uleb128 0xa
- 3100 069e 4E0E0000 		.4byte	.LASF99
+ 3100 069e 610E0000 		.4byte	.LASF99
  3101 06a2 0E       		.byte	0xe
  3102 06a3 E0       		.byte	0xe0
  3103 06a4 94050000 		.4byte	0x594
@@ -4361,7 +4361,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  3106 06aa 04       		.byte	0x4
  3107 06ab 2D       		.byte	0x2d
  3108 06ac 0A       		.uleb128 0xa
- 3109 06ad 91100000 		.4byte	.LASF100
+ 3109 06ad A4100000 		.4byte	.LASF100
  3110 06b1 0E       		.byte	0xe
  3111 06b2 E1       		.byte	0xe1
  3112 06b3 AD000000 		.4byte	0xad
@@ -4370,15 +4370,15 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  3115 06b9 01       		.byte	0x1
  3116 06ba 2D       		.byte	0x2d
  3117 06bb 07       		.uleb128 0x7
- 3118 06bc F8070000 		.4byte	.LASF101
+ 3118 06bc 95080000 		.4byte	.LASF101
  3119 06c0 0E       		.byte	0xe
  3120 06c1 E2       		.byte	0xe2
  3121 06c2 AD000000 		.4byte	0xad
  3122 06c6 2E       		.byte	0x2e
  3123 06c7 07       		.uleb128 0x7
- 3124 06c8 3D120000 		.4byte	.LASF102
+ 3124 06c8 50120000 		.4byte	.LASF102
  3125 06cc 0E       		.byte	0xe
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 74
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 74
 
 
  3126 06cd E4       		.byte	0xe4
@@ -4401,12 +4401,12 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  3143 06ed 04       		.byte	0x4
  3144 06ee AA050000 		.4byte	0x5aa
  3145 06f2 02       		.uleb128 0x2
- 3146 06f3 070B0000 		.4byte	.LASF105
+ 3146 06f3 1A0B0000 		.4byte	.LASF105
  3147 06f7 0E       		.byte	0xe
  3148 06f8 42       		.byte	0x42
  3149 06f9 AD000000 		.4byte	0xad
  3150 06fd 02       		.uleb128 0x2
- 3151 06fe 2E120000 		.4byte	.LASF106
+ 3151 06fe 41120000 		.4byte	.LASF106
  3152 0702 0E       		.byte	0xe
  3153 0703 48       		.byte	0x48
  3154 0704 08070000 		.4byte	0x708
@@ -4430,52 +4430,52 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  3172 072e 4A       		.byte	0x4a
  3173 072f AC070000 		.4byte	0x7ac
  3174 0733 14       		.uleb128 0x14
- 3175 0734 600B0000 		.4byte	.LASF107
+ 3175 0734 730B0000 		.4byte	.LASF107
  3176 0738 00       		.byte	0
  3177 0739 14       		.uleb128 0x14
- 3178 073a 7B090000 		.4byte	.LASF108
+ 3178 073a 180A0000 		.4byte	.LASF108
  3179 073e 01       		.byte	0x1
  3180 073f 14       		.uleb128 0x14
- 3181 0740 EC100000 		.4byte	.LASF109
+ 3181 0740 FF100000 		.4byte	.LASF109
  3182 0744 02       		.byte	0x2
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 75
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 75
 
 
  3183 0745 14       		.uleb128 0x14
- 3184 0746 C9090000 		.4byte	.LASF110
+ 3184 0746 660A0000 		.4byte	.LASF110
  3185 074a 03       		.byte	0x3
  3186 074b 14       		.uleb128 0x14
  3187 074c EA010000 		.4byte	.LASF111
  3188 0750 04       		.byte	0x4
  3189 0751 14       		.uleb128 0x14
- 3190 0752 E0090000 		.4byte	.LASF112
+ 3190 0752 7D0A0000 		.4byte	.LASF112
  3191 0756 05       		.byte	0x5
  3192 0757 14       		.uleb128 0x14
  3193 0758 B1050000 		.4byte	.LASF113
  3194 075c 06       		.byte	0x6
  3195 075d 14       		.uleb128 0x14
- 3196 075e 1C120000 		.4byte	.LASF114
+ 3196 075e 2F120000 		.4byte	.LASF114
  3197 0762 07       		.byte	0x7
  3198 0763 14       		.uleb128 0x14
  3199 0764 16050000 		.4byte	.LASF115
  3200 0768 08       		.byte	0x8
  3201 0769 14       		.uleb128 0x14
- 3202 076a 1E0B0000 		.4byte	.LASF116
+ 3202 076a 310B0000 		.4byte	.LASF116
  3203 076e 09       		.byte	0x9
  3204 076f 14       		.uleb128 0x14
  3205 0770 E9050000 		.4byte	.LASF117
  3206 0774 0A       		.byte	0xa
  3207 0775 14       		.uleb128 0x14
- 3208 0776 D4100000 		.4byte	.LASF118
+ 3208 0776 E7100000 		.4byte	.LASF118
  3209 077a 0B       		.byte	0xb
  3210 077b 14       		.uleb128 0x14
  3211 077c F9040000 		.4byte	.LASF119
  3212 0780 0C       		.byte	0xc
  3213 0781 14       		.uleb128 0x14
- 3214 0782 8B0F0000 		.4byte	.LASF120
+ 3214 0782 9E0F0000 		.4byte	.LASF120
  3215 0786 0D       		.byte	0xd
  3216 0787 14       		.uleb128 0x14
- 3217 0788 FF080000 		.4byte	.LASF121
+ 3217 0788 9C090000 		.4byte	.LASF121
  3218 078c 0E       		.byte	0xe
  3219 078d 14       		.uleb128 0x14
  3220 078e D0000000 		.4byte	.LASF122
@@ -4487,10 +4487,10 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  3226 079a D2050000 		.4byte	.LASF124
  3227 079e 11       		.byte	0x11
  3228 079f 14       		.uleb128 0x14
- 3229 07a0 8B0B0000 		.4byte	.LASF125
+ 3229 07a0 9E0B0000 		.4byte	.LASF125
  3230 07a4 12       		.byte	0x12
  3231 07a5 14       		.uleb128 0x14
- 3232 07a6 99080000 		.4byte	.LASF126
+ 3232 07a6 36090000 		.4byte	.LASF126
  3233 07aa 13       		.byte	0x13
  3234 07ab 00       		.byte	0
  3235 07ac 02       		.uleb128 0x2
@@ -4498,11 +4498,11 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  3237 07b1 0E       		.byte	0xe
  3238 07b2 61       		.byte	0x61
  3239 07b3 AD000000 		.4byte	0xad
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 76
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 76
 
 
  3240 07b7 02       		.uleb128 0x2
- 3241 07b8 85110000 		.4byte	.LASF128
+ 3241 07b8 98110000 		.4byte	.LASF128
  3242 07bc 0E       		.byte	0xe
  3243 07bd 68       		.byte	0x68
  3244 07be C2070000 		.4byte	0x7c2
@@ -4523,22 +4523,22 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  3259 07df 6D       		.byte	0x6d
  3260 07e0 5D080000 		.4byte	0x85d
  3261 07e4 14       		.uleb128 0x14
- 3262 07e5 31080000 		.4byte	.LASF129
+ 3262 07e5 CE080000 		.4byte	.LASF129
  3263 07e9 00       		.byte	0
  3264 07ea 14       		.uleb128 0x14
- 3265 07eb B6080000 		.4byte	.LASF130
+ 3265 07eb 53090000 		.4byte	.LASF130
  3266 07ef 01       		.byte	0x1
  3267 07f0 14       		.uleb128 0x14
- 3268 07f1 120F0000 		.4byte	.LASF131
+ 3268 07f1 250F0000 		.4byte	.LASF131
  3269 07f5 02       		.byte	0x2
  3270 07f6 14       		.uleb128 0x14
- 3271 07f7 710B0000 		.4byte	.LASF132
+ 3271 07f7 840B0000 		.4byte	.LASF132
  3272 07fb 03       		.byte	0x3
  3273 07fc 14       		.uleb128 0x14
  3274 07fd 92000000 		.4byte	.LASF133
  3275 0801 04       		.byte	0x4
  3276 0802 14       		.uleb128 0x14
- 3277 0803 DD0F0000 		.4byte	.LASF134
+ 3277 0803 F00F0000 		.4byte	.LASF134
  3278 0807 05       		.byte	0x5
  3279 0808 14       		.uleb128 0x14
  3280 0809 53030000 		.4byte	.LASF135
@@ -4550,15 +4550,15 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  3286 0815 CB010000 		.4byte	.LASF137
  3287 0819 08       		.byte	0x8
  3288 081a 14       		.uleb128 0x14
- 3289 081b B6090000 		.4byte	.LASF138
+ 3289 081b 530A0000 		.4byte	.LASF138
  3290 081f 09       		.byte	0x9
  3291 0820 14       		.uleb128 0x14
- 3292 0821 300B0000 		.4byte	.LASF139
+ 3292 0821 430B0000 		.4byte	.LASF139
  3293 0825 0A       		.byte	0xa
  3294 0826 14       		.uleb128 0x14
- 3295 0827 9B0B0000 		.4byte	.LASF140
+ 3295 0827 AE0B0000 		.4byte	.LASF140
  3296 082b 0B       		.byte	0xb
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 77
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 77
 
 
  3297 082c 14       		.uleb128 0x14
@@ -4571,7 +4571,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  3304 0839 4C010000 		.4byte	.LASF143
  3305 083d 0E       		.byte	0xe
  3306 083e 14       		.uleb128 0x14
- 3307 083f 4D0B0000 		.4byte	.LASF144
+ 3307 083f 600B0000 		.4byte	.LASF144
  3308 0843 0F       		.byte	0xf
  3309 0844 14       		.uleb128 0x14
  3310 0845 CD060000 		.4byte	.LASF145
@@ -4580,14 +4580,14 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  3313 084b E7040000 		.4byte	.LASF146
  3314 084f 11       		.byte	0x11
  3315 0850 14       		.uleb128 0x14
- 3316 0851 D0070000 		.4byte	.LASF147
+ 3316 0851 6D080000 		.4byte	.LASF147
  3317 0855 12       		.byte	0x12
  3318 0856 14       		.uleb128 0x14
  3319 0857 33070000 		.4byte	.LASF148
  3320 085b 13       		.byte	0x13
  3321 085c 00       		.byte	0
  3322 085d 02       		.uleb128 0x2
- 3323 085e DB0B0000 		.4byte	.LASF149
+ 3323 085e EE0B0000 		.4byte	.LASF149
  3324 0862 0E       		.byte	0xe
  3325 0863 88       		.byte	0x88
  3326 0864 AD000000 		.4byte	0xad
@@ -4616,22 +4616,22 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  3349 0899 8D       		.byte	0x8d
  3350 089a 1D090000 		.4byte	0x91d
  3351 089e 14       		.uleb128 0x14
- 3352 089f EF080000 		.4byte	.LASF151
+ 3352 089f 8C090000 		.4byte	.LASF151
  3353 08a3 00       		.byte	0
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 78
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 78
 
 
  3354 08a4 14       		.uleb128 0x14
- 3355 08a5 1E0E0000 		.4byte	.LASF152
+ 3355 08a5 310E0000 		.4byte	.LASF152
  3356 08a9 01       		.byte	0x1
  3357 08aa 14       		.uleb128 0x14
- 3358 08ab BE0B0000 		.4byte	.LASF153
+ 3358 08ab D10B0000 		.4byte	.LASF153
  3359 08af 02       		.byte	0x2
  3360 08b0 14       		.uleb128 0x14
- 3361 08b1 BA070000 		.4byte	.LASF154
+ 3361 08b1 57080000 		.4byte	.LASF154
  3362 08b5 03       		.byte	0x3
  3363 08b6 14       		.uleb128 0x14
- 3364 08b7 53080000 		.4byte	.LASF155
+ 3364 08b7 F0080000 		.4byte	.LASF155
  3365 08bb 04       		.byte	0x4
  3366 08bc 14       		.uleb128 0x14
  3367 08bd 96020000 		.4byte	.LASF156
@@ -4640,19 +4640,19 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  3370 08c3 03060000 		.4byte	.LASF157
  3371 08c7 06       		.byte	0x6
  3372 08c8 14       		.uleb128 0x14
- 3373 08c9 BC0F0000 		.4byte	.LASF158
+ 3373 08c9 CF0F0000 		.4byte	.LASF158
  3374 08cd 07       		.byte	0x7
  3375 08ce 14       		.uleb128 0x14
- 3376 08cf B90D0000 		.4byte	.LASF159
+ 3376 08cf CC0D0000 		.4byte	.LASF159
  3377 08d3 08       		.byte	0x8
  3378 08d4 14       		.uleb128 0x14
- 3379 08d5 F10A0000 		.4byte	.LASF160
+ 3379 08d5 040B0000 		.4byte	.LASF160
  3380 08d9 09       		.byte	0x9
  3381 08da 14       		.uleb128 0x14
- 3382 08db FD0F0000 		.4byte	.LASF161
+ 3382 08db 10100000 		.4byte	.LASF161
  3383 08df 0A       		.byte	0xa
  3384 08e0 14       		.uleb128 0x14
- 3385 08e1 E50E0000 		.4byte	.LASF162
+ 3385 08e1 F80E0000 		.4byte	.LASF162
  3386 08e5 0B       		.byte	0xb
  3387 08e6 14       		.uleb128 0x14
  3388 08e7 52070000 		.4byte	.LASF163
@@ -4664,25 +4664,25 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  3394 08f3 1C060000 		.4byte	.LASF165
  3395 08f7 0E       		.byte	0xe
  3396 08f8 14       		.uleb128 0x14
- 3397 08f9 56100000 		.4byte	.LASF166
+ 3397 08f9 69100000 		.4byte	.LASF166
  3398 08fd 0F       		.byte	0xf
  3399 08fe 14       		.uleb128 0x14
  3400 08ff 70040000 		.4byte	.LASF167
  3401 0903 10       		.byte	0x10
  3402 0904 14       		.uleb128 0x14
- 3403 0905 9B070000 		.4byte	.LASF168
+ 3403 0905 38080000 		.4byte	.LASF168
  3404 0909 11       		.byte	0x11
  3405 090a 14       		.uleb128 0x14
- 3406 090b 2A0C0000 		.4byte	.LASF169
+ 3406 090b 3D0C0000 		.4byte	.LASF169
  3407 090f 12       		.byte	0x12
  3408 0910 14       		.uleb128 0x14
  3409 0911 B4010000 		.4byte	.LASF170
  3410 0915 13       		.byte	0x13
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 79
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 79
 
 
  3411 0916 14       		.uleb128 0x14
- 3412 0917 140A0000 		.4byte	.LASF171
+ 3412 0917 B10A0000 		.4byte	.LASF171
  3413 091b 14       		.byte	0x14
  3414 091c 00       		.byte	0
  3415 091d 02       		.uleb128 0x2
@@ -4696,13 +4696,13 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  3423 092b A7       		.byte	0xa7
  3424 092c 7F090000 		.4byte	0x97f
  3425 0930 07       		.uleb128 0x7
- 3426 0931 990E0000 		.4byte	.LASF173
+ 3426 0931 AC0E0000 		.4byte	.LASF173
  3427 0935 0E       		.byte	0xe
  3428 0936 A9       		.byte	0xa9
  3429 0937 7F090000 		.4byte	0x97f
  3430 093b 00       		.byte	0
  3431 093c 07       		.uleb128 0x7
- 3432 093d E00D0000 		.4byte	.LASF174
+ 3432 093d F30D0000 		.4byte	.LASF174
  3433 0941 0E       		.byte	0xe
  3434 0942 AA       		.byte	0xaa
  3435 0943 D9000000 		.4byte	0xd9
@@ -4714,13 +4714,13 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  3441 094f D9000000 		.4byte	0xd9
  3442 0953 06       		.byte	0x6
  3443 0954 07       		.uleb128 0x7
- 3444 0955 4D080000 		.4byte	.LASF176
+ 3444 0955 EA080000 		.4byte	.LASF176
  3445 0959 0E       		.byte	0xe
  3446 095a AC       		.byte	0xac
  3447 095b 1D090000 		.4byte	0x91d
  3448 095f 08       		.byte	0x8
  3449 0960 0A       		.uleb128 0xa
- 3450 0961 3B090000 		.4byte	.LASF177
+ 3450 0961 D8090000 		.4byte	.LASF177
  3451 0965 0E       		.byte	0xe
  3452 0966 AD       		.byte	0xad
  3453 0967 AD000000 		.4byte	0xad
@@ -4729,7 +4729,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  3456 096d 07       		.byte	0x7
  3457 096e 09       		.byte	0x9
  3458 096f 0A       		.uleb128 0xa
- 3459 0970 A4110000 		.4byte	.LASF178
+ 3459 0970 B7110000 		.4byte	.LASF178
  3460 0974 0E       		.byte	0xe
  3461 0975 AE       		.byte	0xae
  3462 0976 AD000000 		.4byte	0xad
@@ -4738,7 +4738,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  3465 097c 06       		.byte	0x6
  3466 097d 09       		.byte	0x9
  3467 097e 00       		.byte	0
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 80
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 80
 
 
  3468 097f 0D       		.uleb128 0xd
@@ -4752,7 +4752,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  3476 0990 B0       		.byte	0xb0
  3477 0991 28090000 		.4byte	0x928
  3478 0995 02       		.uleb128 0x2
- 3479 0996 C40A0000 		.4byte	.LASF180
+ 3479 0996 D70A0000 		.4byte	.LASF180
  3480 099a 0E       		.byte	0xe
  3481 099b B9       		.byte	0xb9
  3482 099c AD000000 		.4byte	0xad
@@ -4762,7 +4762,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  3486 09a6 0E       		.uleb128 0xe
  3487 09a7 16050000 		.4byte	0x516
  3488 09ab 02       		.uleb128 0x2
- 3489 09ac E50D0000 		.4byte	.LASF181
+ 3489 09ac F80D0000 		.4byte	.LASF181
  3490 09b0 0E       		.byte	0xe
  3491 09b1 F0       		.byte	0xf0
  3492 09b2 AA050000 		.4byte	0x5aa
@@ -4773,10 +4773,10 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  3497 09bd F3       		.byte	0xf3
  3498 09be ED090000 		.4byte	0x9ed
  3499 09c2 14       		.uleb128 0x14
- 3500 09c3 E10A0000 		.4byte	.LASF182
+ 3500 09c3 F40A0000 		.4byte	.LASF182
  3501 09c7 00       		.byte	0
  3502 09c8 14       		.uleb128 0x14
- 3503 09c9 570E0000 		.4byte	.LASF183
+ 3503 09c9 6A0E0000 		.4byte	.LASF183
  3504 09cd 01       		.byte	0x1
  3505 09ce 14       		.uleb128 0x14
  3506 09cf 78030000 		.4byte	.LASF184
@@ -4788,17 +4788,17 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  3512 09db 76050000 		.4byte	.LASF186
  3513 09df 08       		.byte	0x8
  3514 09e0 14       		.uleb128 0x14
- 3515 09e1 6C0E0000 		.4byte	.LASF187
+ 3515 09e1 7F0E0000 		.4byte	.LASF187
  3516 09e5 10       		.byte	0x10
  3517 09e6 14       		.uleb128 0x14
- 3518 09e7 130C0000 		.4byte	.LASF188
+ 3518 09e7 260C0000 		.4byte	.LASF188
  3519 09eb 20       		.byte	0x20
  3520 09ec 00       		.byte	0
  3521 09ed 02       		.uleb128 0x2
- 3522 09ee 9E0F0000 		.4byte	.LASF189
+ 3522 09ee B10F0000 		.4byte	.LASF189
  3523 09f2 0F       		.byte	0xf
  3524 09f3 30       		.byte	0x30
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 81
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 81
 
 
  3525 09f4 AD000000 		.4byte	0xad
@@ -4812,7 +4812,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  3533 0a05 40020000 		.4byte	.LASF190
  3534 0a09 00       		.byte	0
  3535 0a0a 14       		.uleb128 0x14
- 3536 0a0b EC0B0000 		.4byte	.LASF191
+ 3536 0a0b FF0B0000 		.4byte	.LASF191
  3537 0a0f 01       		.byte	0x1
  3538 0a10 14       		.uleb128 0x14
  3539 0a11 94060000 		.4byte	.LASF192
@@ -4821,10 +4821,10 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  3542 0a17 21000000 		.4byte	.LASF193
  3543 0a1b 03       		.byte	0x3
  3544 0a1c 14       		.uleb128 0x14
- 3545 0a1d 16090000 		.4byte	.LASF194
+ 3545 0a1d B3090000 		.4byte	.LASF194
  3546 0a21 04       		.byte	0x4
  3547 0a22 14       		.uleb128 0x14
- 3548 0a23 03120000 		.4byte	.LASF195
+ 3548 0a23 16120000 		.4byte	.LASF195
  3549 0a27 05       		.byte	0x5
  3550 0a28 00       		.byte	0
  3551 0a29 13       		.uleb128 0x13
@@ -4840,13 +4840,13 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  3561 0a3c 60040000 		.4byte	.LASF197
  3562 0a40 01       		.byte	0x1
  3563 0a41 14       		.uleb128 0x14
- 3564 0a42 B0110000 		.4byte	.LASF198
+ 3564 0a42 C3110000 		.4byte	.LASF198
  3565 0a46 02       		.byte	0x2
  3566 0a47 14       		.uleb128 0x14
- 3567 0a48 A0100000 		.4byte	.LASF199
+ 3567 0a48 B3100000 		.4byte	.LASF199
  3568 0a4c 03       		.byte	0x3
  3569 0a4d 14       		.uleb128 0x14
- 3570 0a4e 6B080000 		.4byte	.LASF200
+ 3570 0a4e 08090000 		.4byte	.LASF200
  3571 0a52 04       		.byte	0x4
  3572 0a53 00       		.byte	0
  3573 0a54 0D       		.uleb128 0xd
@@ -4858,18 +4858,18 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  3579 0a5d 42000000 		.4byte	0x42
  3580 0a61 02       		.byte	0x2
  3581 0a62 2A       		.byte	0x2a
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 82
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 82
 
 
  3582 0a63 8C0A0000 		.4byte	0xa8c
  3583 0a67 14       		.uleb128 0x14
- 3584 0a68 00080000 		.4byte	.LASF201
+ 3584 0a68 9D080000 		.4byte	.LASF201
  3585 0a6c 00       		.byte	0
  3586 0a6d 14       		.uleb128 0x14
- 3587 0a6e FD090000 		.4byte	.LASF202
+ 3587 0a6e 9A0A0000 		.4byte	.LASF202
  3588 0a72 01       		.byte	0x1
  3589 0a73 14       		.uleb128 0x14
- 3590 0a74 46100000 		.4byte	.LASF203
+ 3590 0a74 59100000 		.4byte	.LASF203
  3591 0a78 02       		.byte	0x2
  3592 0a79 14       		.uleb128 0x14
  3593 0a7a 86040000 		.4byte	.LASF204
@@ -4882,7 +4882,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  3600 0a8a 05       		.byte	0x5
  3601 0a8b 00       		.byte	0
  3602 0a8c 02       		.uleb128 0x2
- 3603 0a8d C7100000 		.4byte	.LASF207
+ 3603 0a8d DA100000 		.4byte	.LASF207
  3604 0a91 02       		.byte	0x2
  3605 0a92 32       		.byte	0x32
  3606 0a93 AD000000 		.4byte	0xad
@@ -4896,10 +4896,10 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  3614 0aa4 5E       		.byte	0x5e
  3615 0aa5 C20A0000 		.4byte	0xac2
  3616 0aa9 14       		.uleb128 0x14
- 3617 0aaa 880E0000 		.4byte	.LASF208
+ 3617 0aaa 9B0E0000 		.4byte	.LASF208
  3618 0aae 00       		.byte	0
  3619 0aaf 14       		.uleb128 0x14
- 3620 0ab0 9F0C0000 		.4byte	.LASF209
+ 3620 0ab0 B20C0000 		.4byte	.LASF209
  3621 0ab4 01       		.byte	0x1
  3622 0ab5 14       		.uleb128 0x14
  3623 0ab6 A0050000 		.4byte	.LASF210
@@ -4914,11 +4914,11 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  3632 0ac5 39       		.byte	0x39
  3633 0ac6 130B0000 		.4byte	0xb13
  3634 0aca 07       		.uleb128 0x7
- 3635 0acb 8D090000 		.4byte	.LASF212
+ 3635 0acb 2A0A0000 		.4byte	.LASF212
  3636 0acf 11       		.byte	0x11
  3637 0ad0 3D       		.byte	0x3d
  3638 0ad1 970A0000 		.4byte	0xa97
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 83
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 83
 
 
  3639 0ad5 00       		.byte	0
@@ -4929,7 +4929,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  3644 0add 970A0000 		.4byte	0xa97
  3645 0ae1 04       		.byte	0x4
  3646 0ae2 07       		.uleb128 0x7
- 3647 0ae3 9A100000 		.4byte	.LASF214
+ 3647 0ae3 AD100000 		.4byte	.LASF214
  3648 0ae7 11       		.byte	0x11
  3649 0ae8 3F       		.byte	0x3f
  3650 0ae9 970A0000 		.4byte	0xa97
@@ -4965,20 +4965,20 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  3680 0b25 46       		.byte	0x46
  3681 0b26 4F0B0000 		.4byte	0xb4f
  3682 0b2a 14       		.uleb128 0x14
- 3683 0b2b 8F0D0000 		.4byte	.LASF219
+ 3683 0b2b A20D0000 		.4byte	.LASF219
  3684 0b2f 00       		.byte	0
  3685 0b30 14       		.uleb128 0x14
- 3686 0b31 A1090000 		.4byte	.LASF220
+ 3686 0b31 3E0A0000 		.4byte	.LASF220
  3687 0b35 01       		.byte	0x1
  3688 0b36 14       		.uleb128 0x14
  3689 0b37 00020000 		.4byte	.LASF221
  3690 0b3b 02       		.byte	0x2
  3691 0b3c 14       		.uleb128 0x14
- 3692 0b3d 27090000 		.4byte	.LASF222
+ 3692 0b3d C4090000 		.4byte	.LASF222
  3693 0b41 03       		.byte	0x3
  3694 0b42 14       		.uleb128 0x14
- 3695 0b43 480F0000 		.4byte	.LASF223
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 84
+ 3695 0b43 5B0F0000 		.4byte	.LASF223
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 84
 
 
  3696 0b47 04       		.byte	0x4
@@ -5009,7 +5009,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  3721 0b74 21050000 		.4byte	0x521
  3722 0b78 04       		.byte	0x4
  3723 0b79 07       		.uleb128 0x7
- 3724 0b7a E7080000 		.4byte	.LASF226
+ 3724 0b7a 84090000 		.4byte	.LASF226
  3725 0b7e 12       		.byte	0x12
  3726 0b7f 38       		.byte	0x38
  3727 0b80 21050000 		.4byte	0x521
@@ -5038,7 +5038,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  3750 0bac 41       		.byte	0x41
  3751 0bad 21050000 		.4byte	0x521
  3752 0bb1 00       		.byte	0
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 85
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 85
 
 
  3753 0bb2 08       		.uleb128 0x8
@@ -5048,7 +5048,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  3757 0bb8 21050000 		.4byte	0x521
  3758 0bbc 04       		.byte	0x4
  3759 0bbd 07       		.uleb128 0x7
- 3760 0bbe E7080000 		.4byte	.LASF226
+ 3760 0bbe 84090000 		.4byte	.LASF226
  3761 0bc2 12       		.byte	0x12
  3762 0bc3 43       		.byte	0x43
  3763 0bc4 21050000 		.4byte	0x521
@@ -5098,14 +5098,14 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  3807 0c17 07       		.uleb128 0x7
  3808 0c18 1F020000 		.4byte	.LASF230
  3809 0c1c 12       		.byte	0x12
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 86
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 86
 
 
  3810 0c1d 55       		.byte	0x55
  3811 0c1e 21050000 		.4byte	0x521
  3812 0c22 00       		.byte	0
  3813 0c23 07       		.uleb128 0x7
- 3814 0c24 7C100000 		.4byte	.LASF231
+ 3814 0c24 8F100000 		.4byte	.LASF231
  3815 0c28 12       		.byte	0x12
  3816 0c29 56       		.byte	0x56
  3817 0c2a 21050000 		.4byte	0x521
@@ -5117,7 +5117,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  3823 0c33 5B       		.byte	0x5b
  3824 0c34 450C0000 		.4byte	0xc45
  3825 0c38 07       		.uleb128 0x7
- 3826 0c39 650D0000 		.4byte	.LASF232
+ 3826 0c39 780D0000 		.4byte	.LASF232
  3827 0c3d 12       		.byte	0x12
  3828 0c3e 5D       		.byte	0x5d
  3829 0c3f 21050000 		.4byte	0x521
@@ -5135,7 +5135,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  3841 0c53 21050000 		.4byte	0x521
  3842 0c57 00       		.byte	0
  3843 0c58 07       		.uleb128 0x7
- 3844 0c59 F2070000 		.4byte	.LASF233
+ 3844 0c59 8F080000 		.4byte	.LASF233
  3845 0c5d 12       		.byte	0x12
  3846 0c5e 69       		.byte	0x69
  3847 0c5f 21050000 		.4byte	0x521
@@ -5153,16 +5153,16 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  3859 0c73 21050000 		.4byte	0x521
  3860 0c77 00       		.byte	0
  3861 0c78 07       		.uleb128 0x7
- 3862 0c79 F2070000 		.4byte	.LASF233
+ 3862 0c79 8F080000 		.4byte	.LASF233
  3863 0c7d 12       		.byte	0x12
  3864 0c7e 71       		.byte	0x71
  3865 0c7f 21050000 		.4byte	0x521
  3866 0c83 04       		.byte	0x4
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 87
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 87
 
 
  3867 0c84 07       		.uleb128 0x7
- 3868 0c85 C5110000 		.4byte	.LASF234
+ 3868 0c85 D8110000 		.4byte	.LASF234
  3869 0c89 12       		.byte	0x12
  3870 0c8a 72       		.byte	0x72
  3871 0c8b 21050000 		.4byte	0x521
@@ -5180,13 +5180,13 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  3883 0c9f 21050000 		.4byte	0x521
  3884 0ca3 00       		.byte	0
  3885 0ca4 07       		.uleb128 0x7
- 3886 0ca5 F2070000 		.4byte	.LASF233
+ 3886 0ca5 8F080000 		.4byte	.LASF233
  3887 0ca9 12       		.byte	0x12
  3888 0caa 8A       		.byte	0x8a
  3889 0cab 21050000 		.4byte	0x521
  3890 0caf 04       		.byte	0x4
  3891 0cb0 07       		.uleb128 0x7
- 3892 0cb1 92090000 		.4byte	.LASF235
+ 3892 0cb1 2F0A0000 		.4byte	.LASF235
  3893 0cb5 12       		.byte	0x12
  3894 0cb6 8B       		.byte	0x8b
  3895 0cb7 21050000 		.4byte	0x521
@@ -5218,14 +5218,14 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  3921 0ce8 07       		.uleb128 0x7
  3922 0ce9 3B000000 		.4byte	.LASF237
  3923 0ced 12       		.byte	0x12
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 88
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 88
 
 
  3924 0cee 99       		.byte	0x99
  3925 0cef 21050000 		.4byte	0x521
  3926 0cf3 08       		.byte	0x8
  3927 0cf4 07       		.uleb128 0x7
- 3928 0cf5 7A0F0000 		.4byte	.LASF238
+ 3928 0cf5 8D0F0000 		.4byte	.LASF238
  3929 0cf9 12       		.byte	0x12
  3930 0cfa 9A       		.byte	0x9a
  3931 0cfb 21050000 		.4byte	0x521
@@ -5273,12 +5273,12 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  3973 0d4b 21050000 		.4byte	0x521
  3974 0d4f 04       		.byte	0x4
  3975 0d50 07       		.uleb128 0x7
- 3976 0d51 E7080000 		.4byte	.LASF226
+ 3976 0d51 84090000 		.4byte	.LASF226
  3977 0d55 12       		.byte	0x12
  3978 0d56 AA       		.byte	0xaa
  3979 0d57 21050000 		.4byte	0x521
  3980 0d5b 08       		.byte	0x8
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 89
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 89
 
 
  3981 0d5c 07       		.uleb128 0x7
@@ -5330,7 +5330,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  4027 0daf 21050000 		.4byte	0x521
  4028 0db3 04       		.byte	0x4
  4029 0db4 07       		.uleb128 0x7
- 4030 0db5 E7080000 		.4byte	.LASF226
+ 4030 0db5 84090000 		.4byte	.LASF226
  4031 0db9 12       		.byte	0x12
  4032 0dba B9       		.byte	0xb9
  4033 0dbb 21050000 		.4byte	0x521
@@ -5338,7 +5338,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  4035 0dc0 07       		.uleb128 0x7
  4036 0dc1 0A030000 		.4byte	.LASF227
  4037 0dc5 12       		.byte	0x12
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 90
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 90
 
 
  4038 0dc6 BA       		.byte	0xba
@@ -5387,7 +5387,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  4081 0e13 21050000 		.4byte	0x521
  4082 0e17 04       		.byte	0x4
  4083 0e18 07       		.uleb128 0x7
- 4084 0e19 E7080000 		.4byte	.LASF226
+ 4084 0e19 84090000 		.4byte	.LASF226
  4085 0e1d 12       		.byte	0x12
  4086 0e1e C8       		.byte	0xc8
  4087 0e1f 21050000 		.4byte	0x521
@@ -5398,7 +5398,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  4092 0e2a C9       		.byte	0xc9
  4093 0e2b 21050000 		.4byte	0x521
  4094 0e2f 0C       		.byte	0xc
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 91
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 91
 
 
  4095 0e30 08       		.uleb128 0x8
@@ -5458,7 +5458,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  4149 0e90 08       		.uleb128 0x8
  4150 0e91 626700   		.ascii	"bg\000"
  4151 0e94 12       		.byte	0x12
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 92
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 92
 
 
  4152 0e95 D2       		.byte	0xd2
@@ -5513,12 +5513,12 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  4201 0eee 21050000 		.4byte	0x521
  4202 0ef2 04       		.byte	0x4
  4203 0ef3 07       		.uleb128 0x7
- 4204 0ef4 15120000 		.4byte	.LASF246
+ 4204 0ef4 28120000 		.4byte	.LASF246
  4205 0ef8 12       		.byte	0x12
  4206 0ef9 EA       		.byte	0xea
  4207 0efa 21050000 		.4byte	0x521
  4208 0efe 08       		.byte	0x8
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 93
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 93
 
 
  4209 0eff 08       		.uleb128 0x8
@@ -5540,7 +5540,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  4225 0f19 21050000 		.4byte	0x521
  4226 0f1d 00       		.byte	0
  4227 0f1e 07       		.uleb128 0x7
- 4228 0f1f 15120000 		.4byte	.LASF246
+ 4228 0f1f 28120000 		.4byte	.LASF246
  4229 0f23 12       		.byte	0x12
  4230 0f24 F3       		.byte	0xf3
  4231 0f25 21050000 		.4byte	0x521
@@ -5570,7 +5570,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  4255 0f52 21050000 		.4byte	0x521
  4256 0f56 04       		.byte	0x4
  4257 0f57 19       		.uleb128 0x19
- 4258 0f58 E7080000 		.4byte	.LASF226
+ 4258 0f58 84090000 		.4byte	.LASF226
  4259 0f5c 12       		.byte	0x12
  4260 0f5d 0201     		.2byte	0x102
  4261 0f5f 21050000 		.4byte	0x521
@@ -5578,7 +5578,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  4263 0f64 19       		.uleb128 0x19
  4264 0f65 0A030000 		.4byte	.LASF227
  4265 0f69 12       		.byte	0x12
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 94
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 94
 
 
  4266 0f6a 0301     		.2byte	0x103
@@ -5638,7 +5638,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  4320 0fd2 0D01     		.2byte	0x10d
  4321 0fd4 21050000 		.4byte	0x521
  4322 0fd8 04       		.byte	0x4
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 95
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 95
 
 
  4323 0fd9 18       		.uleb128 0x18
@@ -5690,7 +5690,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  4369 1032 21050000 		.4byte	0x521
  4370 1036 08       		.byte	0x8
  4371 1037 19       		.uleb128 0x19
- 4372 1038 E7080000 		.4byte	.LASF226
+ 4372 1038 84090000 		.4byte	.LASF226
  4373 103c 12       		.byte	0x12
  4374 103d 2401     		.2byte	0x124
  4375 103f 21050000 		.4byte	0x521
@@ -5698,7 +5698,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  4377 1044 19       		.uleb128 0x19
  4378 1045 0A030000 		.4byte	.LASF227
  4379 1049 12       		.byte	0x12
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 96
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 96
 
 
  4380 104a 2501     		.2byte	0x125
@@ -5717,7 +5717,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  4393 1062 21050000 		.4byte	0x521
  4394 1066 00       		.byte	0
  4395 1067 19       		.uleb128 0x19
- 4396 1068 F2070000 		.4byte	.LASF233
+ 4396 1068 8F080000 		.4byte	.LASF233
  4397 106c 12       		.byte	0x12
  4398 106d 1E01     		.2byte	0x11e
  4399 106f 21050000 		.4byte	0x521
@@ -5758,7 +5758,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  4434 10b3 12       		.byte	0x12
  4435 10b4 3401     		.2byte	0x134
  4436 10b6 D4100000 		.4byte	0x10d4
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 97
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 97
 
 
  4437 10ba 18       		.uleb128 0x18
@@ -5816,9 +5816,9 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  4489 1120 21050000 		.4byte	0x521
  4490 1124 08       		.byte	0x8
  4491 1125 19       		.uleb128 0x19
- 4492 1126 1B100000 		.4byte	.LASF248
+ 4492 1126 2E100000 		.4byte	.LASF248
  4493 112a 12       		.byte	0x12
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 98
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 98
 
 
  4494 112b 4101     		.2byte	0x141
@@ -5849,7 +5849,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  4519 115b 21050000 		.4byte	0x521
  4520 115f 04       		.byte	0x4
  4521 1160 07       		.uleb128 0x7
- 4522 1161 7C0D0000 		.4byte	.LASF249
+ 4522 1161 8F0D0000 		.4byte	.LASF249
  4523 1165 12       		.byte	0x12
  4524 1166 2D       		.byte	0x2d
  4525 1167 21050000 		.4byte	0x521
@@ -5867,18 +5867,18 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  4537 117f 5A0B0000 		.4byte	0xb5a
  4538 1183 10       		.byte	0x10
  4539 1184 07       		.uleb128 0x7
- 4540 1185 6B0D0000 		.4byte	.LASF251
+ 4540 1185 7E0D0000 		.4byte	.LASF251
  4541 1189 12       		.byte	0x12
  4542 118a 46       		.byte	0x46
  4543 118b 9E0B0000 		.4byte	0xb9e
  4544 118f 24       		.byte	0x24
  4545 1190 07       		.uleb128 0x7
- 4546 1191 12110000 		.4byte	.LASF252
+ 4546 1191 25110000 		.4byte	.LASF252
  4547 1195 12       		.byte	0x12
  4548 1196 4F       		.byte	0x4f
  4549 1197 E20B0000 		.4byte	0xbe2
  4550 119b 38       		.byte	0x38
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 99
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 99
 
 
  4551 119c 08       		.uleb128 0x8
@@ -5906,7 +5906,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  4573 11c7 450C0000 		.4byte	0xc45
  4574 11cb 54       		.byte	0x54
  4575 11cc 07       		.uleb128 0x7
- 4576 11cd 26110000 		.4byte	.LASF253
+ 4576 11cd 39110000 		.4byte	.LASF253
  4577 11d1 12       		.byte	0x12
  4578 11d2 73       		.byte	0x73
  4579 11d3 650C0000 		.4byte	0xc65
@@ -5918,7 +5918,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  4585 11df 21050000 		.4byte	0x521
  4586 11e3 68       		.byte	0x68
  4587 11e4 07       		.uleb128 0x7
- 4588 11e5 9B090000 		.4byte	.LASF255
+ 4588 11e5 380A0000 		.4byte	.LASF255
  4589 11e9 12       		.byte	0x12
  4590 11ea 7B       		.byte	0x7b
  4591 11eb 21050000 		.4byte	0x521
@@ -5930,7 +5930,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  4597 11f7 21050000 		.4byte	0x521
  4598 11fb 70       		.byte	0x70
  4599 11fc 07       		.uleb128 0x7
- 4600 11fd 93110000 		.4byte	.LASF256
+ 4600 11fd A6110000 		.4byte	.LASF256
  4601 1201 12       		.byte	0x12
  4602 1202 83       		.byte	0x83
  4603 1203 21050000 		.4byte	0x521
@@ -5938,7 +5938,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  4605 1208 08       		.uleb128 0x8
  4606 1209 737700   		.ascii	"sw\000"
  4607 120c 12       		.byte	0x12
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 100
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 100
 
 
  4608 120d 8D       		.byte	0x8d
@@ -5951,7 +5951,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  4615 121a 21050000 		.4byte	0x521
  4616 121e 88       		.byte	0x88
  4617 121f 07       		.uleb128 0x7
- 4618 1220 450E0000 		.4byte	.LASF258
+ 4618 1220 580E0000 		.4byte	.LASF258
  4619 1224 12       		.byte	0x12
  4620 1225 9F       		.byte	0x9f
  4621 1226 C90C0000 		.4byte	0xcc9
@@ -5975,13 +5975,13 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  4639 1248 3D0E0000 		.4byte	0xe3d
  4640 124c DC       		.byte	0xdc
  4641 124d 07       		.uleb128 0x7
- 4642 124e CA080000 		.4byte	.LASF260
+ 4642 124e 67090000 		.4byte	.LASF260
  4643 1252 12       		.byte	0x12
  4644 1253 D9       		.byte	0xd9
  4645 1254 880E0000 		.4byte	0xe88
  4646 1258 F4       		.byte	0xf4
  4647 1259 1C       		.uleb128 0x1c
- 4648 125a 8D090000 		.4byte	.LASF212
+ 4648 125a 2A0A0000 		.4byte	.LASF212
  4649 125e 12       		.byte	0x12
  4650 125f E2       		.byte	0xe2
  4651 1260 A80E0000 		.4byte	0xea8
@@ -5993,16 +5993,16 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  4657 126c D30E0000 		.4byte	0xed3
  4658 1270 1001     		.2byte	0x110
  4659 1272 1C       		.uleb128 0x1c
- 4660 1273 400F0000 		.4byte	.LASF261
+ 4660 1273 530F0000 		.4byte	.LASF261
  4661 1277 12       		.byte	0x12
  4662 1278 F5       		.byte	0xf5
  4663 1279 0B0F0000 		.4byte	0xf0b
  4664 127d 2001     		.2byte	0x120
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 101
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 101
 
 
  4665 127f 1E       		.uleb128 0x1e
- 4666 1280 6B090000 		.4byte	.LASF262
+ 4666 1280 080A0000 		.4byte	.LASF262
  4667 1284 12       		.byte	0x12
  4668 1285 0601     		.2byte	0x106
  4669 1287 7F0F0000 		.4byte	0xf7f
@@ -6014,13 +6014,13 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  4675 1295 B70F0000 		.4byte	0xfb7
  4676 1299 4C01     		.2byte	0x14c
  4677 129b 1E       		.uleb128 0x1e
- 4678 129c 47120000 		.4byte	.LASF264
+ 4678 129c 5A120000 		.4byte	.LASF264
  4679 12a0 12       		.byte	0x12
  4680 12a1 1701     		.2byte	0x117
  4681 12a3 E60F0000 		.4byte	0xfe6
  4682 12a7 5801     		.2byte	0x158
  4683 12a9 1E       		.uleb128 0x1e
- 4684 12aa 1C080000 		.4byte	.LASF265
+ 4684 12aa B9080000 		.4byte	.LASF265
  4685 12ae 12       		.byte	0x12
  4686 12af 2701     		.2byte	0x127
  4687 12b1 52100000 		.4byte	0x1052
@@ -6050,7 +6050,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  4711 12e6 27       		.byte	0x27
  4712 12e7 F9120000 		.4byte	0x12f9
  4713 12eb 19       		.uleb128 0x19
- 4714 12ec D20A0000 		.4byte	.LASF268
+ 4714 12ec E50A0000 		.4byte	.LASF268
  4715 12f0 12       		.byte	0x12
  4716 12f1 4901     		.2byte	0x149
  4717 12f3 40110000 		.4byte	0x1140
@@ -6058,14 +6058,14 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  4719 12f8 00       		.byte	0
  4720 12f9 12       		.uleb128 0x12
  4721 12fa C7050000 		.4byte	.LASF269
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 102
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 102
 
 
  4722 12fe 12       		.byte	0x12
  4723 12ff 5401     		.2byte	0x154
  4724 1301 E2120000 		.4byte	0x12e2
  4725 1305 20       		.uleb128 0x20
- 4726 1306 AA0F0000 		.4byte	.LASF270
+ 4726 1306 BD0F0000 		.4byte	.LASF270
  4727 130a 01       		.byte	0x1
  4728 130b 56       		.byte	0x56
  4729 130c D9000000 		.4byte	0xd9
@@ -6084,7 +6084,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  4742 132b 74       		.sleb128 -12
  4743 132c 00       		.byte	0
  4744 132d 20       		.uleb128 0x20
- 4745 132e 7C0C0000 		.4byte	.LASF271
+ 4745 132e 8F0C0000 		.4byte	.LASF271
  4746 1332 01       		.byte	0x1
  4747 1333 60       		.byte	0x60
  4748 1334 D9000000 		.4byte	0xd9
@@ -6112,18 +6112,18 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  4770 1365 9C       		.byte	0x9c
  4771 1366 87130000 		.4byte	0x1387
  4772 136a 21       		.uleb128 0x21
- 4773 136b 8D090000 		.4byte	.LASF212
+ 4773 136b 2A0A0000 		.4byte	.LASF212
  4774 136f 02       		.byte	0x2
  4775 1370 E5       		.byte	0xe5
  4776 1371 970A0000 		.4byte	0xa97
  4777 1375 02       		.uleb128 0x2
  4778 1376 91       		.byte	0x91
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 103
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 103
 
 
  4779 1377 74       		.sleb128 -12
  4780 1378 21       		.uleb128 0x21
- 4781 1379 15080000 		.4byte	.LASF273
+ 4781 1379 B2080000 		.4byte	.LASF273
  4782 137d 02       		.byte	0x2
  4783 137e E5       		.byte	0xe5
  4784 137f ED090000 		.4byte	0x9ed
@@ -6132,7 +6132,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  4787 1385 73       		.sleb128 -13
  4788 1386 00       		.byte	0
  4789 1387 23       		.uleb128 0x23
- 4790 1388 CF080000 		.4byte	.LASF274
+ 4790 1388 6C090000 		.4byte	.LASF274
  4791 138c 02       		.byte	0x2
  4792 138d 3201     		.2byte	0x132
  4793 138f ED090000 		.4byte	0x9ed
@@ -6142,7 +6142,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  4797 139c 9C       		.byte	0x9c
  4798 139d B1130000 		.4byte	0x13b1
  4799 13a1 24       		.uleb128 0x24
- 4800 13a2 8D090000 		.4byte	.LASF212
+ 4800 13a2 2A0A0000 		.4byte	.LASF212
  4801 13a6 02       		.byte	0x2
  4802 13a7 3201     		.2byte	0x132
  4803 13a9 B1130000 		.4byte	0x13b1
@@ -6156,7 +6156,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  4811 13b7 0E       		.uleb128 0xe
  4812 13b8 AB090000 		.4byte	0x9ab
  4813 13bc 25       		.uleb128 0x25
- 4814 13bd 63110000 		.4byte	.LASF280
+ 4814 13bd 76110000 		.4byte	.LASF280
  4815 13c1 03       		.byte	0x3
  4816 13c2 32       		.byte	0x32
  4817 13c3 970A0000 		.4byte	0xa97
@@ -6178,7 +6178,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  4833 13e8 03       		.byte	0x3
  4834 13e9 32       		.byte	0x32
  4835 13ea B1130000 		.4byte	0x13b1
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 104
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 104
 
 
  4836 13ee 02       		.uleb128 0x2
@@ -6233,18 +6233,18 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  4885 1441 D8010000 		.4byte	.LBB3
  4886 1445 A6000000 		.4byte	.LBE3-.LBB3
  4887 1449 27       		.uleb128 0x27
- 4888 144a 12100000 		.4byte	.LASF277
+ 4888 144a 25100000 		.4byte	.LASF277
  4889 144e 03       		.byte	0x3
  4890 144f 7E       		.byte	0x7e
  4891 1450 75140000 		.4byte	0x1475
  4892 1454 02       		.uleb128 0x2
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 105
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 105
 
 
  4893 1455 91       		.byte	0x91
  4894 1456 60       		.sleb128 -32
  4895 1457 27       		.uleb128 0x27
- 4896 1458 0F080000 		.4byte	.LASF278
+ 4896 1458 AC080000 		.4byte	.LASF278
  4897 145c 03       		.byte	0x3
  4898 145d 86       		.byte	0x86
  4899 145e 970A0000 		.4byte	0xa97
@@ -6252,7 +6252,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  4901 1463 91       		.byte	0x91
  4902 1464 70       		.sleb128 -16
  4903 1465 27       		.uleb128 0x27
- 4904 1466 AE0B0000 		.4byte	.LASF279
+ 4904 1466 C10B0000 		.4byte	.LASF279
  4905 146a 03       		.byte	0x3
  4906 146b 87       		.byte	0x87
  4907 146c 970A0000 		.4byte	0xa97
@@ -6268,7 +6268,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  4917 147c 04       		.byte	0x4
  4918 147d F9120000 		.4byte	0x12f9
  4919 1481 2B       		.uleb128 0x2b
- 4920 1482 6F0C0000 		.4byte	.LASF283
+ 4920 1482 820C0000 		.4byte	.LASF283
  4921 1486 03       		.byte	0x3
  4922 1487 A1       		.byte	0xa1
  4923 1488 00000000 		.4byte	.LFB69
@@ -6298,7 +6298,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  4947 14b8 03       		.byte	0x3
  4948 14b9 B3       		.byte	0xb3
  4949 14ba 970A0000 		.4byte	0xa97
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 106
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 106
 
 
  4950 14be 00000000 		.4byte	.LFB70
@@ -6315,7 +6315,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  4961 14d8 91       		.byte	0x91
  4962 14d9 64       		.sleb128 -28
  4963 14da 21       		.uleb128 0x21
- 4964 14db 450B0000 		.4byte	.LASF282
+ 4964 14db 580B0000 		.4byte	.LASF282
  4965 14df 03       		.byte	0x3
  4966 14e0 B3       		.byte	0xb3
  4967 14e1 540A0000 		.4byte	0xa54
@@ -6358,7 +6358,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  5004 1524 5D150000 		.4byte	0x155d
  5005 1528 26       		.uleb128 0x26
  5006 1529 62746E00 		.ascii	"btn\000"
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 107
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 107
 
 
  5007 152d 03       		.byte	0x3
@@ -6368,7 +6368,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  5011 1534 91       		.byte	0x91
  5012 1535 6C       		.sleb128 -20
  5013 1536 21       		.uleb128 0x21
- 5014 1537 82080000 		.4byte	.LASF285
+ 5014 1537 1F090000 		.4byte	.LASF285
  5015 153b 03       		.byte	0x3
  5016 153c D1       		.byte	0xd1
  5017 153d AC070000 		.4byte	0x7ac
@@ -6406,7 +6406,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  5049 157e 91       		.byte	0x91
  5050 157f 6C       		.sleb128 -20
  5051 1580 21       		.uleb128 0x21
- 5052 1581 9A100000 		.4byte	.LASF214
+ 5052 1581 AD100000 		.4byte	.LASF214
  5053 1585 03       		.byte	0x3
  5054 1586 E1       		.byte	0xe1
  5055 1587 95020000 		.4byte	0x295
@@ -6418,7 +6418,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  5061 1593 03       		.byte	0x3
  5062 1594 E6       		.byte	0xe6
  5063 1595 75140000 		.4byte	0x1475
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 108
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 108
 
 
  5064 1599 02       		.uleb128 0x2
@@ -6426,7 +6426,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  5066 159b 74       		.sleb128 -12
  5067 159c 00       		.byte	0
  5068 159d 2B       		.uleb128 0x2b
- 5069 159e 2C0F0000 		.4byte	.LASF287
+ 5069 159e 3F0F0000 		.4byte	.LASF287
  5070 15a2 03       		.byte	0x3
  5071 15a3 F1       		.byte	0xf1
  5072 15a4 00000000 		.4byte	.LFB73
@@ -6443,7 +6443,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  5083 15be 91       		.byte	0x91
  5084 15bf 6C       		.sleb128 -20
  5085 15c0 21       		.uleb128 0x21
- 5086 15c1 E70B0000 		.4byte	.LASF288
+ 5086 15c1 FA0B0000 		.4byte	.LASF288
  5087 15c5 03       		.byte	0x3
  5088 15c6 F1       		.byte	0xf1
  5089 15c7 D9000000 		.4byte	0xd9
@@ -6478,7 +6478,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  5118 1601 6C       		.sleb128 -20
  5119 1602 2D       		.uleb128 0x2d
  5120 1603 7700     		.ascii	"w\000"
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 109
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 109
 
 
  5121 1605 03       		.byte	0x3
@@ -6505,7 +6505,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  5142 162a 74       		.sleb128 -12
  5143 162b 00       		.byte	0
  5144 162c 2C       		.uleb128 0x2c
- 5145 162d 2D110000 		.4byte	.LASF290
+ 5145 162d 40110000 		.4byte	.LASF290
  5146 1631 03       		.byte	0x3
  5147 1632 1201     		.2byte	0x112
  5148 1634 00000000 		.4byte	.LFB75
@@ -6522,7 +6522,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  5159 164f 91       		.byte	0x91
  5160 1650 6C       		.sleb128 -20
  5161 1651 24       		.uleb128 0x24
- 5162 1652 15080000 		.4byte	.LASF273
+ 5162 1652 B2080000 		.4byte	.LASF273
  5163 1656 03       		.byte	0x3
  5164 1657 1201     		.2byte	0x112
  5165 1659 ED090000 		.4byte	0x9ed
@@ -6538,11 +6538,11 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  5175 166d 91       		.byte	0x91
  5176 166e 74       		.sleb128 -12
  5177 166f 00       		.byte	0
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 110
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 110
 
 
  5178 1670 2C       		.uleb128 0x2c
- 5179 1671 D4110000 		.4byte	.LASF291
+ 5179 1671 E7110000 		.4byte	.LASF291
  5180 1675 03       		.byte	0x3
  5181 1676 1F01     		.2byte	0x11f
  5182 1678 00000000 		.4byte	.LFB76
@@ -6598,14 +6598,14 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  5232 16df 2B01     		.2byte	0x12b
  5233 16e1 C3000000 		.4byte	0xc3
  5234 16e5 02       		.uleb128 0x2
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 111
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 111
 
 
  5235 16e6 91       		.byte	0x91
  5236 16e7 72       		.sleb128 -14
  5237 16e8 00       		.byte	0
  5238 16e9 2C       		.uleb128 0x2c
- 5239 16ea D40E0000 		.4byte	.LASF295
+ 5239 16ea E70E0000 		.4byte	.LASF295
  5240 16ee 03       		.byte	0x3
  5241 16ef 3801     		.2byte	0x138
  5242 16f1 00000000 		.4byte	.LFB78
@@ -6630,7 +6630,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  5261 171b 91       		.byte	0x91
  5262 171c 6B       		.sleb128 -21
  5263 171d 24       		.uleb128 0x24
- 5264 171e D20A0000 		.4byte	.LASF268
+ 5264 171e E50A0000 		.4byte	.LASF268
  5265 1722 03       		.byte	0x3
  5266 1723 3801     		.2byte	0x138
  5267 1725 A0090000 		.4byte	0x9a0
@@ -6658,11 +6658,11 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  5289 1752 74       		.sleb128 -12
  5290 1753 00       		.byte	0
  5291 1754 00       		.byte	0
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 112
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 112
 
 
  5292 1755 2C       		.uleb128 0x2c
- 5293 1756 6C100000 		.4byte	.LASF296
+ 5293 1756 7F100000 		.4byte	.LASF296
  5294 175a 03       		.byte	0x3
  5295 175b 6101     		.2byte	0x161
  5296 175d 00000000 		.4byte	.LFB79
@@ -6695,7 +6695,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  5323 1795 91       		.byte	0x91
  5324 1796 74       		.sleb128 -12
  5325 1797 2F       		.uleb128 0x2f
- 5326 1798 00110000 		.4byte	.LASF297
+ 5326 1798 13110000 		.4byte	.LASF297
  5327 179c 03       		.byte	0x3
  5328 179d 6601     		.2byte	0x166
  5329 179f 970A0000 		.4byte	0xa97
@@ -6718,7 +6718,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  5346 17c6 03       		.byte	0x3
  5347 17c7 7401     		.2byte	0x174
  5348 17c9 B1130000 		.4byte	0x13b1
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 113
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 113
 
 
  5349 17cd 02       		.uleb128 0x2
@@ -6734,7 +6734,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  5359 17de 74       		.sleb128 -12
  5360 17df 00       		.byte	0
  5361 17e0 30       		.uleb128 0x30
- 5362 17e1 50110000 		.4byte	.LASF299
+ 5362 17e1 63110000 		.4byte	.LASF299
  5363 17e5 03       		.byte	0x3
  5364 17e6 8101     		.2byte	0x181
  5365 17e8 970A0000 		.4byte	0xa97
@@ -6778,7 +6778,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  5403 183f 02       		.uleb128 0x2
  5404 1840 91       		.byte	0x91
  5405 1841 6C       		.sleb128 -20
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 114
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 114
 
 
  5406 1842 2E       		.uleb128 0x2e
@@ -6791,7 +6791,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  5413 1850 74       		.sleb128 -12
  5414 1851 00       		.byte	0
  5415 1852 30       		.uleb128 0x30
- 5416 1853 AE0E0000 		.4byte	.LASF301
+ 5416 1853 C10E0000 		.4byte	.LASF301
  5417 1857 03       		.byte	0x3
  5418 1858 9C01     		.2byte	0x19c
  5419 185a 970A0000 		.4byte	0xa97
@@ -6801,7 +6801,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  5423 1867 9C       		.byte	0x9c
  5424 1868 9A180000 		.4byte	0x189a
  5425 186c 24       		.uleb128 0x24
- 5426 186d 9B110000 		.4byte	.LASF302
+ 5426 186d AE110000 		.4byte	.LASF302
  5427 1871 03       		.byte	0x3
  5428 1872 9C01     		.2byte	0x19c
  5429 1874 B1130000 		.4byte	0x13b1
@@ -6838,7 +6838,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  5460 18b4 2D       		.uleb128 0x2d
  5461 18b5 77696E00 		.ascii	"win\000"
  5462 18b9 03       		.byte	0x3
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 115
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 115
 
 
  5463 18ba AB01     		.2byte	0x1ab
@@ -6883,7 +6883,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  5502 190a 74       		.sleb128 -12
  5503 190b 00       		.byte	0
  5504 190c 30       		.uleb128 0x30
- 5505 190d A40D0000 		.4byte	.LASF305
+ 5505 190d B70D0000 		.4byte	.LASF305
  5506 1911 03       		.byte	0x3
  5507 1912 C501     		.2byte	0x1c5
  5508 1914 C3000000 		.4byte	0xc3
@@ -6898,7 +6898,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  5517 192c C501     		.2byte	0x1c5
  5518 192e B1130000 		.4byte	0x13b1
  5519 1932 02       		.uleb128 0x2
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 116
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 116
 
 
  5520 1933 91       		.byte	0x91
@@ -6958,7 +6958,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  5574 19a2 9C       		.byte	0x9c
  5575 19a3 E4190000 		.4byte	0x19e4
  5576 19a7 2D       		.uleb128 0x2d
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 117
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 117
 
 
  5577 19a8 77696E00 		.ascii	"win\000"
@@ -6977,7 +6977,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  5590 19c3 91       		.byte	0x91
  5591 19c4 6B       		.sleb128 -21
  5592 19c5 2F       		.uleb128 0x2f
- 5593 19c6 D20A0000 		.4byte	.LASF268
+ 5593 19c6 E50A0000 		.4byte	.LASF268
  5594 19ca 03       		.byte	0x3
  5595 19cb E601     		.2byte	0x1e6
  5596 19cd A0090000 		.4byte	0x9a0
@@ -7018,11 +7018,11 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  5631 1a15 02       		.uleb128 0x2
  5632 1a16 91       		.byte	0x91
  5633 1a17 68       		.sleb128 -24
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 118
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 118
 
 
  5634 1a18 24       		.uleb128 0x24
- 5635 1a19 3E100000 		.4byte	.LASF310
+ 5635 1a19 51100000 		.4byte	.LASF310
  5636 1a1d 03       		.byte	0x3
  5637 1a1e 0002     		.2byte	0x200
  5638 1a20 E0020000 		.4byte	0x2e0
@@ -7039,7 +7039,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  5649 1a35 74       		.sleb128 -12
  5650 1a36 00       		.byte	0
  5651 1a37 23       		.uleb128 0x23
- 5652 1a38 FC0E0000 		.4byte	.LASF311
+ 5652 1a38 0F0F0000 		.4byte	.LASF311
  5653 1a3c 03       		.byte	0x3
  5654 1a3d 1502     		.2byte	0x215
  5655 1a3f 40050000 		.4byte	0x540
@@ -7078,7 +7078,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  5688 1a84 1702     		.2byte	0x217
  5689 1a86 40050000 		.4byte	0x540
  5690 1a8a 02       		.uleb128 0x2
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 119
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 119
 
 
  5691 1a8b 91       		.byte	0x91
@@ -7095,7 +7095,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  5702 1a9d 4E000000 		.4byte	.LBB6
  5703 1aa1 56000000 		.4byte	.LBE6-.LBB6
  5704 1aa5 2F       		.uleb128 0x2f
- 5705 1aa6 8D090000 		.4byte	.LASF212
+ 5705 1aa6 2A0A0000 		.4byte	.LASF212
  5706 1aaa 03       		.byte	0x3
  5707 1aab 2002     		.2byte	0x220
  5708 1aad 970A0000 		.4byte	0xa97
@@ -7106,7 +7106,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  5713 1ab5 5A000000 		.4byte	.LBB7
  5714 1ab9 4A000000 		.4byte	.LBE7-.LBB7
  5715 1abd 2F       		.uleb128 0x2f
- 5716 1abe 0F080000 		.4byte	.LASF278
+ 5716 1abe AC080000 		.4byte	.LASF278
  5717 1ac2 03       		.byte	0x3
  5718 1ac3 2202     		.2byte	0x222
  5719 1ac5 970A0000 		.4byte	0xa97
@@ -7138,7 +7138,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  5745 1af9 9C       		.byte	0x9c
  5746 1afa 681B0000 		.4byte	0x1b68
  5747 1afe 2D       		.uleb128 0x2d
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 120
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 120
 
 
  5748 1aff 77696E00 		.ascii	"win\000"
@@ -7157,7 +7157,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  5761 1b1a 91       		.byte	0x91
  5762 1b1b 58       		.sleb128 -40
  5763 1b1c 2F       		.uleb128 0x2f
- 5764 1b1d 820D0000 		.4byte	.LASF316
+ 5764 1b1d 950D0000 		.4byte	.LASF316
  5765 1b21 03       		.byte	0x3
  5766 1b22 4B02     		.2byte	0x24b
  5767 1b24 A0090000 		.4byte	0x9a0
@@ -7165,7 +7165,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  5769 1b29 91       		.byte	0x91
  5770 1b2a 54       		.sleb128 -44
  5771 1b2b 2F       		.uleb128 0x2f
- 5772 1b2c 43080000 		.4byte	.LASF317
+ 5772 1b2c E0080000 		.4byte	.LASF317
  5773 1b30 03       		.byte	0x3
  5774 1b31 4F02     		.2byte	0x24f
  5775 1b33 BF010000 		.4byte	0x1bf
@@ -7181,7 +7181,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  5785 1b47 91       		.byte	0x91
  5786 1b48 60       		.sleb128 -32
  5787 1b49 2F       		.uleb128 0x2f
- 5788 1b4a F40F0000 		.4byte	.LASF318
+ 5788 1b4a 07100000 		.4byte	.LASF318
  5789 1b4e 03       		.byte	0x3
  5790 1b4f 5102     		.2byte	0x251
  5791 1b51 970A0000 		.4byte	0xa97
@@ -7198,10 +7198,10 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  5802 1b66 50       		.sleb128 -48
  5803 1b67 00       		.byte	0
  5804 1b68 27       		.uleb128 0x27
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 121
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 121
 
 
- 5805 1b69 5F0C0000 		.4byte	.LASF320
+ 5805 1b69 720C0000 		.4byte	.LASF320
  5806 1b6d 03       		.byte	0x3
  5807 1b6e 22       		.byte	0x22
  5808 1b6f 68080000 		.4byte	0x868
@@ -7209,17 +7209,17 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  5810 1b74 03       		.byte	0x3
  5811 1b75 00000000 		.4byte	ancestor_signal
  5812 1b79 32       		.uleb128 0x32
- 5813 1b7a 5D0F0000 		.4byte	.LASF321
+ 5813 1b7a 700F0000 		.4byte	.LASF321
  5814 1b7e 0A       		.byte	0xa
  5815 1b7f 0C01     		.2byte	0x10c
  5816 1b81 16050000 		.4byte	0x516
  5817 1b85 32       		.uleb128 0x32
- 5818 1b86 71110000 		.4byte	.LASF322
+ 5818 1b86 84110000 		.4byte	.LASF322
  5819 1b8a 0A       		.byte	0xa
  5820 1b8b 0D01     		.2byte	0x10d
  5821 1b8d 16050000 		.4byte	0x516
  5822 1b91 32       		.uleb128 0x32
- 5823 1b92 48090000 		.4byte	.LASF323
+ 5823 1b92 E5090000 		.4byte	.LASF323
  5824 1b96 0A       		.byte	0xa
  5825 1b97 0F01     		.2byte	0x10f
  5826 1b99 16050000 		.4byte	0x516
@@ -7229,17 +7229,17 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  5830 1ba3 1001     		.2byte	0x110
  5831 1ba5 16050000 		.4byte	0x516
  5832 1ba9 32       		.uleb128 0x32
- 5833 1baa 040E0000 		.4byte	.LASF325
+ 5833 1baa 170E0000 		.4byte	.LASF325
  5834 1bae 0A       		.byte	0xa
  5835 1baf 1101     		.2byte	0x111
  5836 1bb1 16050000 		.4byte	0x516
  5837 1bb5 32       		.uleb128 0x32
- 5838 1bb6 88080000 		.4byte	.LASF326
+ 5838 1bb6 25090000 		.4byte	.LASF326
  5839 1bba 0A       		.byte	0xa
  5840 1bbb 1301     		.2byte	0x113
  5841 1bbd 16050000 		.4byte	0x516
  5842 1bc1 32       		.uleb128 0x32
- 5843 1bc2 8F0C0000 		.4byte	.LASF327
+ 5843 1bc2 A20C0000 		.4byte	.LASF327
  5844 1bc6 0A       		.byte	0xa
  5845 1bc7 1401     		.2byte	0x114
  5846 1bc9 16050000 		.4byte	0x516
@@ -7258,7 +7258,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  5859 0009 1B       		.uleb128 0x1b
  5860 000a 0E       		.uleb128 0xe
  5861 000b 55       		.uleb128 0x55
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 122
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 122
 
 
  5862 000c 17       		.uleb128 0x17
@@ -7318,7 +7318,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  5916 0042 3A       		.uleb128 0x3a
  5917 0043 0B       		.uleb128 0xb
  5918 0044 3B       		.uleb128 0x3b
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 123
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 123
 
 
  5919 0045 0B       		.uleb128 0xb
@@ -7378,7 +7378,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  5973 007b 0E       		.uleb128 0xe
  5974 007c 3A       		.uleb128 0x3a
  5975 007d 0B       		.uleb128 0xb
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 124
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 124
 
 
  5976 007e 3B       		.uleb128 0x3b
@@ -7438,7 +7438,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  6030 00b4 0B       		.uleb128 0xb
  6031 00b5 3B       		.uleb128 0x3b
  6032 00b6 0B       		.uleb128 0xb
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 125
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 125
 
 
  6033 00b7 01       		.uleb128 0x1
@@ -7498,7 +7498,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  6087 00ed 01       		.uleb128 0x1
  6088 00ee 13       		.uleb128 0x13
  6089 00ef 00       		.byte	0
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 126
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 126
 
 
  6090 00f0 00       		.byte	0
@@ -7558,7 +7558,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  6144 0126 49       		.uleb128 0x49
  6145 0127 13       		.uleb128 0x13
  6146 0128 38       		.uleb128 0x38
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 127
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 127
 
 
  6147 0129 0B       		.uleb128 0xb
@@ -7618,7 +7618,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  6201 015f 13       		.uleb128 0x13
  6202 0160 38       		.uleb128 0x38
  6203 0161 05       		.uleb128 0x5
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 128
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 128
 
 
  6204 0162 00       		.byte	0
@@ -7678,7 +7678,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  6258 0198 3B       		.uleb128 0x3b
  6259 0199 0B       		.uleb128 0xb
  6260 019a 27       		.uleb128 0x27
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 129
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 129
 
 
  6261 019b 19       		.uleb128 0x19
@@ -7738,7 +7738,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  6315 01d3 2E       		.uleb128 0x2e
  6316 01d4 01       		.byte	0x1
  6317 01d5 03       		.uleb128 0x3
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 130
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 130
 
 
  6318 01d6 0E       		.uleb128 0xe
@@ -7798,7 +7798,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  6372 020d 06       		.uleb128 0x6
  6373 020e 40       		.uleb128 0x40
  6374 020f 18       		.uleb128 0x18
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 131
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 131
 
 
  6375 0210 9642     		.uleb128 0x2116
@@ -7858,7 +7858,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  6429 0247 11       		.uleb128 0x11
  6430 0248 01       		.uleb128 0x1
  6431 0249 12       		.uleb128 0x12
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 132
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 132
 
 
  6432 024a 06       		.uleb128 0x6
@@ -7918,7 +7918,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  6486 0281 12       		.uleb128 0x12
  6487 0282 06       		.uleb128 0x6
  6488 0283 40       		.uleb128 0x40
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 133
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 133
 
 
  6489 0284 18       		.uleb128 0x18
@@ -7978,7 +7978,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  6543 02bb 01       		.byte	0x1
  6544 02bc 3F       		.uleb128 0x3f
  6545 02bd 19       		.uleb128 0x19
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 134
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 134
 
 
  6546 02be 03       		.uleb128 0x3
@@ -8038,7 +8038,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  6600 02f6 49       		.uleb128 0x49
  6601 02f7 13       		.uleb128 0x13
  6602 02f8 3F       		.uleb128 0x3f
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 135
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 135
 
 
  6603 02f9 19       		.uleb128 0x19
@@ -8098,7 +8098,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  6657 00b0 00000000 		.4byte	.LFB84
  6658 00b4 24000000 		.4byte	.LFE84-.LFB84
  6659 00b8 00000000 		.4byte	.LFB85
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 136
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 136
 
 
  6660 00bc 24000000 		.4byte	.LFE85-.LFB85
@@ -8158,7 +8158,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  6714 0094 1E000000 		.4byte	.LFE82
  6715 0098 00000000 		.4byte	.LFB83
  6716 009c 22000000 		.4byte	.LFE83
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 137
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 137
 
 
  6717 00a0 00000000 		.4byte	.LFB84
@@ -8181,8 +8181,8 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  6734 00e4 00000000 		.4byte	0
  6735              		.section	.debug_line,"",%progbits
  6736              	.Ldebug_line0:
- 6737 0000 52060000 		.section	.debug_str,"MS",%progbits,1
- 6737      02002503 
+ 6737 0000 66060000 		.section	.debug_str,"MS",%progbits,1
+ 6737      02003903 
  6737      00000201 
  6737      FB0E0D00 
  6737      01010101 
@@ -8218,7 +8218,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  6751      00
  6752              	.LASF37:
  6753 004e 6C765F63 		.ascii	"lv_color32_t\000"
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 138
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 138
 
 
  6753      6F6C6F72 
@@ -8278,7 +8278,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  6776              	.LASF308:
  6777 00ee 6C765F77 		.ascii	"lv_win_get_style\000"
  6777      696E5F67 
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 139
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 139
 
 
  6777      65745F73 
@@ -8338,7 +8338,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  6801      6E696D5F 
  6801      74696D65 
  6802              	.LASF206:
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 140
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 140
 
 
  6803 0197 4C565F53 		.ascii	"LV_SB_MODE_UNHIDE\000"
@@ -8398,7 +8398,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  6825      00
  6826              	.LASF228:
  6827 023b 7072696D 		.ascii	"prim\000"
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 141
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 141
 
 
  6827      00
@@ -8458,7 +8458,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  6855      544E5F53 
  6855      54594C45 
  6855      5F52454C 
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 142
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 142
 
 
  6855      00
@@ -8518,7 +8518,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  6881      5F646972 
  6881      00
  6882              	.LASF184:
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 143
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 143
 
 
  6883 0378 4C565F50 		.ascii	"LV_PROTECT_PARENT\000"
@@ -8578,7 +8578,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  6908      00
  6909              	.LASF68:
  6910 0424 626F6479 		.ascii	"body\000"
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 144
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 144
 
 
  6910      00
@@ -8638,7 +8638,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  6934 04c3 6C765F73 		.ascii	"lv_style_plain_color\000"
  6934      74796C65 
  6934      5F706C61 
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 145
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 145
 
 
  6934      696E5F63 
@@ -8698,7 +8698,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  6958      5F706164 
  6958      00
  6959              	.LASF42:
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 146
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 146
 
 
  6960 056c 6C765F61 		.ascii	"lv_area_t\000"
@@ -8758,7 +8758,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  6981              	.LASF165:
  6982 061c 4C565F41 		.ascii	"LV_ALIGN_OUT_BOTTOM_RIGHT\000"
  6982      4C49474E 
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 147
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 147
 
 
  6982      5F4F5554 
@@ -8818,7 +8818,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  7006      65745F6C 
  7006      61796F75 
  7006      7400
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 148
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 148
 
 
  7007              	.LASF145:
@@ -8878,7 +8878,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  7028      745F6362 
  7028      00
  7029              	.LASF52:
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 149
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 149
 
 
  7030 077f 72696768 		.ascii	"right\000"
@@ -8891,916 +8891,920 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 1
  7034      206C6F6E 
  7034      6720696E 
  7034      7400
- 7035              	.LASF168:
- 7036 079b 4C565F41 		.ascii	"LV_ALIGN_OUT_LEFT_BOTTOM\000"
- 7036      4C49474E 
- 7036      5F4F5554 
- 7036      5F4C4546 
- 7036      545F424F 
- 7037              	.LASF47:
- 7038 07b4 77696474 		.ascii	"width\000"
- 7038      6800
- 7039              	.LASF154:
- 7040 07ba 4C565F41 		.ascii	"LV_ALIGN_IN_TOP_RIGHT\000"
- 7040      4C49474E 
- 7040      5F494E5F 
- 7040      544F505F 
- 7040      52494748 
- 7041              	.LASF147:
- 7042 07d0 4C565F53 		.ascii	"LV_SIGNAL_CONTROL\000"
- 7042      49474E41 
- 7042      4C5F434F 
- 7042      4E54524F 
- 7042      4C00
- 7043              	.LASF50:
- 7044 07e2 626F7474 		.ascii	"bottom\000"
- 7044      6F6D00
- 7045              	.LASF84:
- 7046 07e9 6368696C 		.ascii	"child_ll\000"
- 7046      645F6C6C 
- 7046      00
- 7047              	.LASF233:
- 7048 07f2 696E6469 		.ascii	"indic\000"
- 7048      6300
- 7049              	.LASF101:
- 7050 07f8 70726F74 		.ascii	"protect\000"
- 7050      65637400 
- 7051              	.LASF201:
- 7052 0800 4C565F53 		.ascii	"LV_SB_MODE_OFF\000"
- 7052      425F4D4F 
- 7052      44455F4F 
- 7052      464600
- 7053              	.LASF278:
- 7054 080f 6368696C 		.ascii	"child\000"
- 7054      6400
- 7055              	.LASF273:
- 7056 0815 6C61796F 		.ascii	"layout\000"
- 7056      757400
- 7057              	.LASF265:
- 7058 081c 74616276 		.ascii	"tabview\000"
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 150
+ 7035              	.LASF330:
+ 7036 079b 433A5C55 		.ascii	"C:\\Users\\tmj32\\Documents\\TCNJ\\Senior_Project\\"
+ 7036      73657273 
+ 7036      5C746D6A 
+ 7036      33325C44 
+ 7036      6F63756D 
+ 7037 07c8 4F736369 		.ascii	"Oscilloscope_Senior_Project\\tcom_engineering\\embe"
+ 7037      6C6C6F73 
+ 7037      636F7065 
+ 7037      5F53656E 
+ 7037      696F725F 
+ 7038 07f9 645F7377 		.ascii	"d_sw\\tcom_app\\tcom_app_psoc6_lvgl6\\tcom_displ_te"
+ 7038      5C74636F 
+ 7038      6D5F6170 
+ 7038      705C7463 
+ 7038      6F6D5F61 
+ 7039 0829 73745F70 		.ascii	"st_psoc6.cydsn\000"
+ 7039      736F6336 
+ 7039      2E637964 
+ 7039      736E00
+ 7040              	.LASF168:
+ 7041 0838 4C565F41 		.ascii	"LV_ALIGN_OUT_LEFT_BOTTOM\000"
+ 7041      4C49474E 
+ 7041      5F4F5554 
+ 7041      5F4C4546 
+ 7041      545F424F 
+ 7042              	.LASF47:
+ 7043 0851 77696474 		.ascii	"width\000"
+ 7043      6800
+ 7044              	.LASF154:
+ 7045 0857 4C565F41 		.ascii	"LV_ALIGN_IN_TOP_RIGHT\000"
+ 7045      4C49474E 
+ 7045      5F494E5F 
+ 7045      544F505F 
+ 7045      52494748 
+ 7046              	.LASF147:
+ 7047 086d 4C565F53 		.ascii	"LV_SIGNAL_CONTROL\000"
+ 7047      49474E41 
+ 7047      4C5F434F 
+ 7047      4E54524F 
+ 7047      4C00
+ 7048              	.LASF50:
+ 7049 087f 626F7474 		.ascii	"bottom\000"
+ 7049      6F6D00
+ 7050              	.LASF84:
+ 7051 0886 6368696C 		.ascii	"child_ll\000"
+ 7051      645F6C6C 
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 150
 
 
- 7058      69657700 
- 7059              	.LASF97:
- 7060 0824 70617265 		.ascii	"parent_event\000"
- 7060      6E745F65 
- 7060      76656E74 
- 7060      00
- 7061              	.LASF129:
- 7062 0831 4C565F53 		.ascii	"LV_SIGNAL_CLEANUP\000"
- 7062      49474E41 
- 7062      4C5F434C 
- 7062      45414E55 
- 7062      5000
- 7063              	.LASF317:
- 7064 0843 66697273 		.ascii	"first_btn\000"
- 7064      745F6274 
- 7064      6E00
- 7065              	.LASF176:
- 7066 084d 616C6967 		.ascii	"align\000"
- 7066      6E00
- 7067              	.LASF155:
- 7068 0853 4C565F41 		.ascii	"LV_ALIGN_IN_BOTTOM_LEFT\000"
- 7068      4C49474E 
- 7068      5F494E5F 
- 7068      424F5454 
- 7068      4F4D5F4C 
- 7069              	.LASF200:
- 7070 086b 4C565F42 		.ascii	"LV_BTN_STYLE_INA\000"
- 7070      544E5F53 
- 7070      54594C45 
- 7070      5F494E41 
- 7070      00
- 7071              	.LASF67:
- 7072 087c 676C6173 		.ascii	"glass\000"
- 7072      7300
- 7073              	.LASF285:
- 7074 0882 6576656E 		.ascii	"event\000"
- 7074      7400
- 7075              	.LASF326:
- 7076 0888 6C765F73 		.ascii	"lv_style_btn_rel\000"
- 7076      74796C65 
- 7076      5F62746E 
- 7076      5F72656C 
- 7076      00
- 7077              	.LASF126:
- 7078 0899 4C565F45 		.ascii	"LV_EVENT_DELETE\000"
- 7078      56454E54 
- 7078      5F44454C 
- 7078      45544500 
- 7079              	.LASF13:
- 7080 08a9 756E7369 		.ascii	"unsigned int\000"
- 7080      676E6564 
- 7080      20696E74 
- 7080      00
- 7081              	.LASF130:
- 7082 08b6 4C565F53 		.ascii	"LV_SIGNAL_CHILD_CHG\000"
- 7082      49474E41 
- 7082      4C5F4348 
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 151
+ 7051      00
+ 7052              	.LASF233:
+ 7053 088f 696E6469 		.ascii	"indic\000"
+ 7053      6300
+ 7054              	.LASF101:
+ 7055 0895 70726F74 		.ascii	"protect\000"
+ 7055      65637400 
+ 7056              	.LASF201:
+ 7057 089d 4C565F53 		.ascii	"LV_SB_MODE_OFF\000"
+ 7057      425F4D4F 
+ 7057      44455F4F 
+ 7057      464600
+ 7058              	.LASF278:
+ 7059 08ac 6368696C 		.ascii	"child\000"
+ 7059      6400
+ 7060              	.LASF273:
+ 7061 08b2 6C61796F 		.ascii	"layout\000"
+ 7061      757400
+ 7062              	.LASF265:
+ 7063 08b9 74616276 		.ascii	"tabview\000"
+ 7063      69657700 
+ 7064              	.LASF97:
+ 7065 08c1 70617265 		.ascii	"parent_event\000"
+ 7065      6E745F65 
+ 7065      76656E74 
+ 7065      00
+ 7066              	.LASF129:
+ 7067 08ce 4C565F53 		.ascii	"LV_SIGNAL_CLEANUP\000"
+ 7067      49474E41 
+ 7067      4C5F434C 
+ 7067      45414E55 
+ 7067      5000
+ 7068              	.LASF317:
+ 7069 08e0 66697273 		.ascii	"first_btn\000"
+ 7069      745F6274 
+ 7069      6E00
+ 7070              	.LASF176:
+ 7071 08ea 616C6967 		.ascii	"align\000"
+ 7071      6E00
+ 7072              	.LASF155:
+ 7073 08f0 4C565F41 		.ascii	"LV_ALIGN_IN_BOTTOM_LEFT\000"
+ 7073      4C49474E 
+ 7073      5F494E5F 
+ 7073      424F5454 
+ 7073      4F4D5F4C 
+ 7074              	.LASF200:
+ 7075 0908 4C565F42 		.ascii	"LV_BTN_STYLE_INA\000"
+ 7075      544E5F53 
+ 7075      54594C45 
+ 7075      5F494E41 
+ 7075      00
+ 7076              	.LASF67:
+ 7077 0919 676C6173 		.ascii	"glass\000"
+ 7077      7300
+ 7078              	.LASF285:
+ 7079 091f 6576656E 		.ascii	"event\000"
+ 7079      7400
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 151
 
 
- 7082      494C445F 
- 7082      43484700 
- 7083              	.LASF260:
- 7084 08ca 6D626F78 		.ascii	"mbox\000"
- 7084      00
- 7085              	.LASF274:
- 7086 08cf 6C765F70 		.ascii	"lv_page_get_scrl_layout\000"
- 7086      6167655F 
- 7086      6765745F 
- 7086      7363726C 
- 7086      5F6C6179 
- 7087              	.LASF226:
- 7088 08e7 74676C5F 		.ascii	"tgl_rel\000"
- 7088      72656C00 
- 7089              	.LASF151:
- 7090 08ef 4C565F41 		.ascii	"LV_ALIGN_CENTER\000"
- 7090      4C49474E 
- 7090      5F43454E 
- 7090      54455200 
- 7091              	.LASF121:
- 7092 08ff 4C565F45 		.ascii	"LV_EVENT_VALUE_CHANGED\000"
- 7092      56454E54 
- 7092      5F56414C 
- 7092      55455F43 
- 7092      48414E47 
- 7093              	.LASF194:
- 7094 0916 4C565F42 		.ascii	"LV_BTN_STATE_INA\000"
- 7094      544E5F53 
- 7094      54415445 
- 7094      5F494E41 
- 7094      00
- 7095              	.LASF222:
- 7096 0927 4C565F57 		.ascii	"LV_WIN_STYLE_HEADER\000"
- 7096      494E5F53 
- 7096      54594C45 
- 7096      5F484541 
- 7096      44455200 
- 7097              	.LASF177:
- 7098 093b 6175746F 		.ascii	"auto_realign\000"
- 7098      5F726561 
- 7098      6C69676E 
- 7098      00
- 7099              	.LASF323:
- 7100 0948 6C765F73 		.ascii	"lv_style_plain\000"
- 7100      74796C65 
- 7100      5F706C61 
- 7100      696E00
- 7101              	.LASF26:
- 7102 0957 6C765F66 		.ascii	"lv_font_glyph_dsc_t\000"
- 7102      6F6E745F 
- 7102      676C7970 
- 7102      685F6473 
- 7102      635F7400 
- 7103              	.LASF262:
- 7104 096b 6C697374 		.ascii	"list\000"
- 7104      00
- 7105              	.LASF55:
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 152
+ 7080              	.LASF326:
+ 7081 0925 6C765F73 		.ascii	"lv_style_btn_rel\000"
+ 7081      74796C65 
+ 7081      5F62746E 
+ 7081      5F72656C 
+ 7081      00
+ 7082              	.LASF126:
+ 7083 0936 4C565F45 		.ascii	"LV_EVENT_DELETE\000"
+ 7083      56454E54 
+ 7083      5F44454C 
+ 7083      45544500 
+ 7084              	.LASF13:
+ 7085 0946 756E7369 		.ascii	"unsigned int\000"
+ 7085      676E6564 
+ 7085      20696E74 
+ 7085      00
+ 7086              	.LASF130:
+ 7087 0953 4C565F53 		.ascii	"LV_SIGNAL_CHILD_CHG\000"
+ 7087      49474E41 
+ 7087      4C5F4348 
+ 7087      494C445F 
+ 7087      43484700 
+ 7088              	.LASF260:
+ 7089 0967 6D626F78 		.ascii	"mbox\000"
+ 7089      00
+ 7090              	.LASF274:
+ 7091 096c 6C765F70 		.ascii	"lv_page_get_scrl_layout\000"
+ 7091      6167655F 
+ 7091      6765745F 
+ 7091      7363726C 
+ 7091      5F6C6179 
+ 7092              	.LASF226:
+ 7093 0984 74676C5F 		.ascii	"tgl_rel\000"
+ 7093      72656C00 
+ 7094              	.LASF151:
+ 7095 098c 4C565F41 		.ascii	"LV_ALIGN_CENTER\000"
+ 7095      4C49474E 
+ 7095      5F43454E 
+ 7095      54455200 
+ 7096              	.LASF121:
+ 7097 099c 4C565F45 		.ascii	"LV_EVENT_VALUE_CHANGED\000"
+ 7097      56454E54 
+ 7097      5F56414C 
+ 7097      55455F43 
+ 7097      48414E47 
+ 7098              	.LASF194:
+ 7099 09b3 4C565F42 		.ascii	"LV_BTN_STATE_INA\000"
+ 7099      544E5F53 
+ 7099      54415445 
+ 7099      5F494E41 
+ 7099      00
+ 7100              	.LASF222:
+ 7101 09c4 4C565F57 		.ascii	"LV_WIN_STYLE_HEADER\000"
+ 7101      494E5F53 
+ 7101      54594C45 
+ 7101      5F484541 
+ 7101      44455200 
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 152
 
 
- 7106 0970 67726164 		.ascii	"grad_color\000"
- 7106      5F636F6C 
- 7106      6F7200
- 7107              	.LASF108:
- 7108 097b 4C565F45 		.ascii	"LV_EVENT_PRESSING\000"
- 7108      56454E54 
- 7108      5F505245 
- 7108      5353494E 
- 7108      4700
- 7109              	.LASF212:
- 7110 098d 70616765 		.ascii	"page\000"
- 7110      00
- 7111              	.LASF235:
- 7112 0992 6B6E6F62 		.ascii	"knob_off\000"
- 7112      5F6F6666 
- 7112      00
- 7113              	.LASF255:
- 7114 099b 67617567 		.ascii	"gauge\000"
- 7114      6500
- 7115              	.LASF220:
- 7116 09a1 4C565F57 		.ascii	"LV_WIN_STYLE_CONTENT\000"
- 7116      494E5F53 
- 7116      54594C45 
- 7116      5F434F4E 
- 7116      54454E54 
- 7117              	.LASF138:
- 7118 09b6 4C565F53 		.ascii	"LV_SIGNAL_PRESSING\000"
- 7118      49474E41 
- 7118      4C5F5052 
- 7118      45535349 
- 7118      4E4700
- 7119              	.LASF110:
- 7120 09c9 4C565F45 		.ascii	"LV_EVENT_SHORT_CLICKED\000"
- 7120      56454E54 
- 7120      5F53484F 
- 7120      52545F43 
- 7120      4C49434B 
- 7121              	.LASF112:
- 7122 09e0 4C565F45 		.ascii	"LV_EVENT_LONG_PRESSED_REPEAT\000"
- 7122      56454E54 
- 7122      5F4C4F4E 
- 7122      475F5052 
- 7122      45535345 
- 7123              	.LASF202:
- 7124 09fd 4C565F53 		.ascii	"LV_SB_MODE_ON\000"
- 7124      425F4D4F 
- 7124      44455F4F 
- 7124      4E00
- 7125              	.LASF75:
- 7126 0a0b 6C765F72 		.ascii	"lv_res_t\000"
- 7126      65735F74 
- 7126      00
- 7127              	.LASF171:
- 7128 0a14 4C565F41 		.ascii	"LV_ALIGN_OUT_RIGHT_BOTTOM\000"
- 7128      4C49474E 
- 7128      5F4F5554 
- 7128      5F524947 
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 153
+ 7102              	.LASF177:
+ 7103 09d8 6175746F 		.ascii	"auto_realign\000"
+ 7103      5F726561 
+ 7103      6C69676E 
+ 7103      00
+ 7104              	.LASF323:
+ 7105 09e5 6C765F73 		.ascii	"lv_style_plain\000"
+ 7105      74796C65 
+ 7105      5F706C61 
+ 7105      696E00
+ 7106              	.LASF26:
+ 7107 09f4 6C765F66 		.ascii	"lv_font_glyph_dsc_t\000"
+ 7107      6F6E745F 
+ 7107      676C7970 
+ 7107      685F6473 
+ 7107      635F7400 
+ 7108              	.LASF262:
+ 7109 0a08 6C697374 		.ascii	"list\000"
+ 7109      00
+ 7110              	.LASF55:
+ 7111 0a0d 67726164 		.ascii	"grad_color\000"
+ 7111      5F636F6C 
+ 7111      6F7200
+ 7112              	.LASF108:
+ 7113 0a18 4C565F45 		.ascii	"LV_EVENT_PRESSING\000"
+ 7113      56454E54 
+ 7113      5F505245 
+ 7113      5353494E 
+ 7113      4700
+ 7114              	.LASF212:
+ 7115 0a2a 70616765 		.ascii	"page\000"
+ 7115      00
+ 7116              	.LASF235:
+ 7117 0a2f 6B6E6F62 		.ascii	"knob_off\000"
+ 7117      5F6F6666 
+ 7117      00
+ 7118              	.LASF255:
+ 7119 0a38 67617567 		.ascii	"gauge\000"
+ 7119      6500
+ 7120              	.LASF220:
+ 7121 0a3e 4C565F57 		.ascii	"LV_WIN_STYLE_CONTENT\000"
+ 7121      494E5F53 
+ 7121      54594C45 
+ 7121      5F434F4E 
+ 7121      54454E54 
+ 7122              	.LASF138:
+ 7123 0a53 4C565F53 		.ascii	"LV_SIGNAL_PRESSING\000"
+ 7123      49474E41 
+ 7123      4C5F5052 
+ 7123      45535349 
+ 7123      4E4700
+ 7124              	.LASF110:
+ 7125 0a66 4C565F45 		.ascii	"LV_EVENT_SHORT_CLICKED\000"
+ 7125      56454E54 
+ 7125      5F53484F 
+ 7125      52545F43 
+ 7125      4C49434B 
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 153
 
 
- 7128      48545F42 
- 7129              	.LASF20:
- 7130 0a2e 6C6F6E67 		.ascii	"long double\000"
- 7130      20646F75 
- 7130      626C6500 
- 7131              	.LASF330:
- 7132 0a3a 453A5C41 		.ascii	"E:\\Applications\\LittlevGL\\Oscilloscope_Senior_Pr"
- 7132      70706C69 
- 7132      63617469 
- 7132      6F6E735C 
- 7132      4C697474 
- 7133 0a6a 6F6A6563 		.ascii	"oject\\tcom_engineering\\embed_sw\\tcom_app\\tcom_a"
- 7133      745C7463 
- 7133      6F6D5F65 
- 7133      6E67696E 
- 7133      65657269 
- 7134 0a99 70705F70 		.ascii	"pp_psoc6_lvgl6\\tcom_displ_test_psoc6.cydsn\000"
- 7134      736F6336 
- 7134      5F6C7667 
- 7134      6C365C74 
- 7134      636F6D5F 
- 7135              	.LASF180:
- 7136 0ac4 6C765F64 		.ascii	"lv_drag_dir_t\000"
- 7136      7261675F 
- 7136      6469725F 
- 7136      7400
- 7137              	.LASF268:
- 7138 0ad2 7374796C 		.ascii	"style\000"
- 7138      6500
- 7139              	.LASF89:
- 7140 0ad8 6578745F 		.ascii	"ext_attr\000"
- 7140      61747472 
- 7140      00
- 7141              	.LASF182:
- 7142 0ae1 4C565F50 		.ascii	"LV_PROTECT_NONE\000"
- 7142      524F5445 
- 7142      43545F4E 
- 7142      4F4E4500 
- 7143              	.LASF160:
- 7144 0af1 4C565F41 		.ascii	"LV_ALIGN_OUT_TOP_LEFT\000"
- 7144      4C49474E 
- 7144      5F4F5554 
- 7144      5F544F50 
- 7144      5F4C4546 
- 7145              	.LASF105:
- 7146 0b07 6C765F64 		.ascii	"lv_design_mode_t\000"
- 7146      65736967 
- 7146      6E5F6D6F 
- 7146      64655F74 
- 7146      00
- 7147              	.LASF65:
- 7148 0b18 73756270 		.ascii	"subpx\000"
- 7148      7800
- 7149              	.LASF116:
- 7150 0b1e 4C565F45 		.ascii	"LV_EVENT_DRAG_END\000"
- 7150      56454E54 
- 7150      5F445241 
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 154
+ 7126              	.LASF112:
+ 7127 0a7d 4C565F45 		.ascii	"LV_EVENT_LONG_PRESSED_REPEAT\000"
+ 7127      56454E54 
+ 7127      5F4C4F4E 
+ 7127      475F5052 
+ 7127      45535345 
+ 7128              	.LASF202:
+ 7129 0a9a 4C565F53 		.ascii	"LV_SB_MODE_ON\000"
+ 7129      425F4D4F 
+ 7129      44455F4F 
+ 7129      4E00
+ 7130              	.LASF75:
+ 7131 0aa8 6C765F72 		.ascii	"lv_res_t\000"
+ 7131      65735F74 
+ 7131      00
+ 7132              	.LASF171:
+ 7133 0ab1 4C565F41 		.ascii	"LV_ALIGN_OUT_RIGHT_BOTTOM\000"
+ 7133      4C49474E 
+ 7133      5F4F5554 
+ 7133      5F524947 
+ 7133      48545F42 
+ 7134              	.LASF20:
+ 7135 0acb 6C6F6E67 		.ascii	"long double\000"
+ 7135      20646F75 
+ 7135      626C6500 
+ 7136              	.LASF180:
+ 7137 0ad7 6C765F64 		.ascii	"lv_drag_dir_t\000"
+ 7137      7261675F 
+ 7137      6469725F 
+ 7137      7400
+ 7138              	.LASF268:
+ 7139 0ae5 7374796C 		.ascii	"style\000"
+ 7139      6500
+ 7140              	.LASF89:
+ 7141 0aeb 6578745F 		.ascii	"ext_attr\000"
+ 7141      61747472 
+ 7141      00
+ 7142              	.LASF182:
+ 7143 0af4 4C565F50 		.ascii	"LV_PROTECT_NONE\000"
+ 7143      524F5445 
+ 7143      43545F4E 
+ 7143      4F4E4500 
+ 7144              	.LASF160:
+ 7145 0b04 4C565F41 		.ascii	"LV_ALIGN_OUT_TOP_LEFT\000"
+ 7145      4C49474E 
+ 7145      5F4F5554 
+ 7145      5F544F50 
+ 7145      5F4C4546 
+ 7146              	.LASF105:
+ 7147 0b1a 6C765F64 		.ascii	"lv_design_mode_t\000"
+ 7147      65736967 
+ 7147      6E5F6D6F 
+ 7147      64655F74 
+ 7147      00
+ 7148              	.LASF65:
+ 7149 0b2b 73756270 		.ascii	"subpx\000"
+ 7149      7800
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 154
 
 
- 7150      475F454E 
- 7150      4400
- 7151              	.LASF139:
- 7152 0b30 4C565F53 		.ascii	"LV_SIGNAL_PRESS_LOST\000"
- 7152      49474E41 
- 7152      4C5F5052 
- 7152      4553535F 
- 7152      4C4F5354 
- 7153              	.LASF282:
- 7154 0b45 696D675F 		.ascii	"img_src\000"
- 7154      73726300 
- 7155              	.LASF144:
- 7156 0b4d 4C565F53 		.ascii	"LV_SIGNAL_DRAG_END\000"
- 7156      49474E41 
- 7156      4C5F4452 
- 7156      41475F45 
- 7156      4E4400
- 7157              	.LASF107:
- 7158 0b60 4C565F45 		.ascii	"LV_EVENT_PRESSED\000"
- 7158      56454E54 
- 7158      5F505245 
- 7158      53534544 
- 7158      00
- 7159              	.LASF132:
- 7160 0b71 4C565F53 		.ascii	"LV_SIGNAL_PARENT_SIZE_CHG\000"
- 7160      49474E41 
- 7160      4C5F5041 
- 7160      52454E54 
- 7160      5F53495A 
- 7161              	.LASF125:
- 7162 0b8b 4C565F45 		.ascii	"LV_EVENT_CANCEL\000"
- 7162      56454E54 
- 7162      5F43414E 
- 7162      43454C00 
- 7163              	.LASF140:
- 7164 0b9b 4C565F53 		.ascii	"LV_SIGNAL_RELEASED\000"
- 7164      49474E41 
- 7164      4C5F5245 
- 7164      4C454153 
- 7164      454400
- 7165              	.LASF279:
- 7166 0bae 6362746E 		.ascii	"cbtn\000"
- 7166      00
- 7167              	.LASF54:
- 7168 0bb3 6D61696E 		.ascii	"main_color\000"
- 7168      5F636F6C 
- 7168      6F7200
- 7169              	.LASF153:
- 7170 0bbe 4C565F41 		.ascii	"LV_ALIGN_IN_TOP_MID\000"
- 7170      4C49474E 
- 7170      5F494E5F 
- 7170      544F505F 
- 7170      4D494400 
- 7171              	.LASF0:
- 7172 0bd2 5F5F696E 		.ascii	"__int8_t\000"
- 7172      74385F74 
- 7172      00
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 155
+ 7150              	.LASF116:
+ 7151 0b31 4C565F45 		.ascii	"LV_EVENT_DRAG_END\000"
+ 7151      56454E54 
+ 7151      5F445241 
+ 7151      475F454E 
+ 7151      4400
+ 7152              	.LASF139:
+ 7153 0b43 4C565F53 		.ascii	"LV_SIGNAL_PRESS_LOST\000"
+ 7153      49474E41 
+ 7153      4C5F5052 
+ 7153      4553535F 
+ 7153      4C4F5354 
+ 7154              	.LASF282:
+ 7155 0b58 696D675F 		.ascii	"img_src\000"
+ 7155      73726300 
+ 7156              	.LASF144:
+ 7157 0b60 4C565F53 		.ascii	"LV_SIGNAL_DRAG_END\000"
+ 7157      49474E41 
+ 7157      4C5F4452 
+ 7157      41475F45 
+ 7157      4E4400
+ 7158              	.LASF107:
+ 7159 0b73 4C565F45 		.ascii	"LV_EVENT_PRESSED\000"
+ 7159      56454E54 
+ 7159      5F505245 
+ 7159      53534544 
+ 7159      00
+ 7160              	.LASF132:
+ 7161 0b84 4C565F53 		.ascii	"LV_SIGNAL_PARENT_SIZE_CHG\000"
+ 7161      49474E41 
+ 7161      4C5F5041 
+ 7161      52454E54 
+ 7161      5F53495A 
+ 7162              	.LASF125:
+ 7163 0b9e 4C565F45 		.ascii	"LV_EVENT_CANCEL\000"
+ 7163      56454E54 
+ 7163      5F43414E 
+ 7163      43454C00 
+ 7164              	.LASF140:
+ 7165 0bae 4C565F53 		.ascii	"LV_SIGNAL_RELEASED\000"
+ 7165      49474E41 
+ 7165      4C5F5245 
+ 7165      4C454153 
+ 7165      454400
+ 7166              	.LASF279:
+ 7167 0bc1 6362746E 		.ascii	"cbtn\000"
+ 7167      00
+ 7168              	.LASF54:
+ 7169 0bc6 6D61696E 		.ascii	"main_color\000"
+ 7169      5F636F6C 
+ 7169      6F7200
+ 7170              	.LASF153:
+ 7171 0bd1 4C565F41 		.ascii	"LV_ALIGN_IN_TOP_MID\000"
+ 7171      4C49474E 
+ 7171      5F494E5F 
+ 7171      544F505F 
+ 7171      4D494400 
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 155
 
 
- 7173              	.LASF149:
- 7174 0bdb 6C765F73 		.ascii	"lv_signal_t\000"
- 7174      69676E61 
- 7174      6C5F7400 
- 7175              	.LASF288:
- 7176 0be7 73697A65 		.ascii	"size\000"
- 7176      00
- 7177              	.LASF191:
- 7178 0bec 4C565F42 		.ascii	"LV_BTN_STATE_PR\000"
- 7178      544E5F53 
- 7178      54415445 
- 7178      5F505200 
- 7179              	.LASF12:
- 7180 0bfc 6C6F6E67 		.ascii	"long long unsigned int\000"
- 7180      206C6F6E 
- 7180      6720756E 
- 7180      7369676E 
- 7180      65642069 
- 7181              	.LASF188:
- 7182 0c13 4C565F50 		.ascii	"LV_PROTECT_CLICK_FOCUS\000"
- 7182      524F5445 
- 7182      43545F43 
- 7182      4C49434B 
- 7182      5F464F43 
- 7183              	.LASF169:
- 7184 0c2a 4C565F41 		.ascii	"LV_ALIGN_OUT_RIGHT_TOP\000"
- 7184      4C49474E 
- 7184      5F4F5554 
- 7184      5F524947 
- 7184      48545F54 
- 7185              	.LASF17:
- 7186 0c41 75696E74 		.ascii	"uint16_t\000"
- 7186      31365F74 
- 7186      00
- 7187              	.LASF74:
- 7188 0c4a 4C565F52 		.ascii	"LV_RES_OK\000"
- 7188      45535F4F 
- 7188      4B00
- 7189              	.LASF38:
- 7190 0c54 6C765F63 		.ascii	"lv_color_t\000"
- 7190      6F6C6F72 
- 7190      5F7400
- 7191              	.LASF320:
- 7192 0c5f 616E6365 		.ascii	"ancestor_signal\000"
- 7192      73746F72 
- 7192      5F736967 
- 7192      6E616C00 
- 7193              	.LASF283:
- 7194 0c6f 6C765F77 		.ascii	"lv_win_clean\000"
- 7194      696E5F63 
- 7194      6C65616E 
- 7194      00
- 7195              	.LASF271:
- 7196 0c7c 6C765F61 		.ascii	"lv_area_get_height\000"
- 7196      7265615F 
- 7196      6765745F 
- 7196      68656967 
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 156
+ 7172              	.LASF0:
+ 7173 0be5 5F5F696E 		.ascii	"__int8_t\000"
+ 7173      74385F74 
+ 7173      00
+ 7174              	.LASF149:
+ 7175 0bee 6C765F73 		.ascii	"lv_signal_t\000"
+ 7175      69676E61 
+ 7175      6C5F7400 
+ 7176              	.LASF288:
+ 7177 0bfa 73697A65 		.ascii	"size\000"
+ 7177      00
+ 7178              	.LASF191:
+ 7179 0bff 4C565F42 		.ascii	"LV_BTN_STATE_PR\000"
+ 7179      544E5F53 
+ 7179      54415445 
+ 7179      5F505200 
+ 7180              	.LASF12:
+ 7181 0c0f 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 7181      206C6F6E 
+ 7181      6720756E 
+ 7181      7369676E 
+ 7181      65642069 
+ 7182              	.LASF188:
+ 7183 0c26 4C565F50 		.ascii	"LV_PROTECT_CLICK_FOCUS\000"
+ 7183      524F5445 
+ 7183      43545F43 
+ 7183      4C49434B 
+ 7183      5F464F43 
+ 7184              	.LASF169:
+ 7185 0c3d 4C565F41 		.ascii	"LV_ALIGN_OUT_RIGHT_TOP\000"
+ 7185      4C49474E 
+ 7185      5F4F5554 
+ 7185      5F524947 
+ 7185      48545F54 
+ 7186              	.LASF17:
+ 7187 0c54 75696E74 		.ascii	"uint16_t\000"
+ 7187      31365F74 
+ 7187      00
+ 7188              	.LASF74:
+ 7189 0c5d 4C565F52 		.ascii	"LV_RES_OK\000"
+ 7189      45535F4F 
+ 7189      4B00
+ 7190              	.LASF38:
+ 7191 0c67 6C765F63 		.ascii	"lv_color_t\000"
+ 7191      6F6C6F72 
+ 7191      5F7400
+ 7192              	.LASF320:
+ 7193 0c72 616E6365 		.ascii	"ancestor_signal\000"
+ 7193      73746F72 
+ 7193      5F736967 
+ 7193      6E616C00 
+ 7194              	.LASF283:
+ 7195 0c82 6C765F77 		.ascii	"lv_win_clean\000"
+ 7195      696E5F63 
+ 7195      6C65616E 
+ 7195      00
+ 7196              	.LASF271:
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 156
 
 
- 7196      687400
- 7197              	.LASF327:
- 7198 0c8f 6C765F73 		.ascii	"lv_style_btn_pr\000"
- 7198      74796C65 
- 7198      5F62746E 
- 7198      5F707200 
- 7199              	.LASF209:
- 7200 0c9f 4C565F50 		.ascii	"LV_PAGE_STYLE_SCRL\000"
- 7200      4147455F 
- 7200      5354594C 
- 7200      455F5343 
- 7200      524C00
- 7201              	.LASF328:
- 7202 0cb2 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
- 7202      43313120 
- 7202      352E342E 
- 7202      31203230 
- 7202      31363036 
- 7203 0ce5 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m4 -mfloat-abi=s"
- 7203      20726576 
- 7203      6973696F 
- 7203      6E203233 
- 7203      37373135 
- 7204 0d18 6F667466 		.ascii	"oftfp -mfpu=fpv4-sp-d16 -mthumb -g -O0 -ffunction-s"
- 7204      70202D6D 
- 7204      6670753D 
- 7204      66707634 
- 7204      2D73702D 
- 7205 0d4b 65637469 		.ascii	"ections -ffat-lto-objects\000"
- 7205      6F6E7320 
- 7205      2D666661 
- 7205      742D6C74 
- 7205      6F2D6F62 
- 7206              	.LASF232:
- 7207 0d65 6465636F 		.ascii	"decor\000"
- 7207      7200
- 7208              	.LASF251:
- 7209 0d6b 696D6762 		.ascii	"imgbtn\000"
- 7209      746E00
- 7210              	.LASF4:
- 7211 0d72 5F5F696E 		.ascii	"__int16_t\000"
- 7211      7431365F 
- 7211      7400
- 7212              	.LASF249:
- 7213 0d7c 70616E65 		.ascii	"panel\000"
- 7213      6C00
- 7214              	.LASF316:
- 7215 0d82 68656164 		.ascii	"header_style\000"
- 7215      65725F73 
- 7215      74796C65 
- 7215      00
- 7216              	.LASF219:
- 7217 0d8f 4C565F57 		.ascii	"LV_WIN_STYLE_BG\000"
- 7217      494E5F53 
- 7217      54594C45 
- 7217      5F424700 
- 7218              	.LASF36:
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 157
+ 7197 0c8f 6C765F61 		.ascii	"lv_area_get_height\000"
+ 7197      7265615F 
+ 7197      6765745F 
+ 7197      68656967 
+ 7197      687400
+ 7198              	.LASF327:
+ 7199 0ca2 6C765F73 		.ascii	"lv_style_btn_pr\000"
+ 7199      74796C65 
+ 7199      5F62746E 
+ 7199      5F707200 
+ 7200              	.LASF209:
+ 7201 0cb2 4C565F50 		.ascii	"LV_PAGE_STYLE_SCRL\000"
+ 7201      4147455F 
+ 7201      5354594C 
+ 7201      455F5343 
+ 7201      524C00
+ 7202              	.LASF328:
+ 7203 0cc5 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 7203      43313120 
+ 7203      352E342E 
+ 7203      31203230 
+ 7203      31363036 
+ 7204 0cf8 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m4 -mfloat-abi=s"
+ 7204      20726576 
+ 7204      6973696F 
+ 7204      6E203233 
+ 7204      37373135 
+ 7205 0d2b 6F667466 		.ascii	"oftfp -mfpu=fpv4-sp-d16 -mthumb -g -O0 -ffunction-s"
+ 7205      70202D6D 
+ 7205      6670753D 
+ 7205      66707634 
+ 7205      2D73702D 
+ 7206 0d5e 65637469 		.ascii	"ections -ffat-lto-objects\000"
+ 7206      6F6E7320 
+ 7206      2D666661 
+ 7206      742D6C74 
+ 7206      6F2D6F62 
+ 7207              	.LASF232:
+ 7208 0d78 6465636F 		.ascii	"decor\000"
+ 7208      7200
+ 7209              	.LASF251:
+ 7210 0d7e 696D6762 		.ascii	"imgbtn\000"
+ 7210      746E00
+ 7211              	.LASF4:
+ 7212 0d85 5F5F696E 		.ascii	"__int16_t\000"
+ 7212      7431365F 
+ 7212      7400
+ 7213              	.LASF249:
+ 7214 0d8f 70616E65 		.ascii	"panel\000"
+ 7214      6C00
+ 7215              	.LASF316:
+ 7216 0d95 68656164 		.ascii	"header_style\000"
+ 7216      65725F73 
+ 7216      74796C65 
+ 7216      00
+ 7217              	.LASF219:
+ 7218 0da2 4C565F57 		.ascii	"LV_WIN_STYLE_BG\000"
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 157
 
 
- 7219 0d9f 66756C6C 		.ascii	"full\000"
- 7219      00
- 7220              	.LASF305:
- 7221 0da4 6C765F77 		.ascii	"lv_win_get_anim_time\000"
- 7221      696E5F67 
- 7221      65745F61 
- 7221      6E696D5F 
- 7221      74696D65 
- 7222              	.LASF159:
- 7223 0db9 4C565F41 		.ascii	"LV_ALIGN_IN_RIGHT_MID\000"
- 7223      4C49474E 
- 7223      5F494E5F 
- 7223      52494748 
- 7223      545F4D49 
- 7224              	.LASF46:
- 7225 0dcf 636F6C6F 		.ascii	"color\000"
- 7225      7200
- 7226              	.LASF63:
- 7227 0dd5 6C696E65 		.ascii	"line_space\000"
- 7227      5F737061 
- 7227      636500
- 7228              	.LASF174:
- 7229 0de0 786F6673 		.ascii	"xofs\000"
- 7229      00
- 7230              	.LASF181:
- 7231 0de5 6C765F6F 		.ascii	"lv_obj_t\000"
- 7231      626A5F74 
- 7231      00
- 7232              	.LASF45:
- 7233 0dee 6C765F73 		.ascii	"lv_shadow_type_t\000"
- 7233      6861646F 
- 7233      775F7479 
- 7233      70655F74 
- 7233      00
- 7234              	.LASF92:
- 7235 0dff 64726167 		.ascii	"drag\000"
- 7235      00
- 7236              	.LASF325:
- 7237 0e04 6C765F73 		.ascii	"lv_style_pretty\000"
- 7237      74796C65 
- 7237      5F707265 
- 7237      74747900 
- 7238              	.LASF83:
- 7239 0e14 5F6C765F 		.ascii	"_lv_obj_t\000"
- 7239      6F626A5F 
- 7239      7400
- 7240              	.LASF152:
- 7241 0e1e 4C565F41 		.ascii	"LV_ALIGN_IN_TOP_LEFT\000"
- 7241      4C49474E 
- 7241      5F494E5F 
- 7241      544F505F 
- 7241      4C454654 
- 7242              	.LASF61:
- 7243 0e33 666F6E74 		.ascii	"font\000"
- 7243      00
- 7244              	.LASF62:
- 7245 0e38 6C657474 		.ascii	"letter_space\000"
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 158
+ 7218      494E5F53 
+ 7218      54594C45 
+ 7218      5F424700 
+ 7219              	.LASF36:
+ 7220 0db2 66756C6C 		.ascii	"full\000"
+ 7220      00
+ 7221              	.LASF305:
+ 7222 0db7 6C765F77 		.ascii	"lv_win_get_anim_time\000"
+ 7222      696E5F67 
+ 7222      65745F61 
+ 7222      6E696D5F 
+ 7222      74696D65 
+ 7223              	.LASF159:
+ 7224 0dcc 4C565F41 		.ascii	"LV_ALIGN_IN_RIGHT_MID\000"
+ 7224      4C49474E 
+ 7224      5F494E5F 
+ 7224      52494748 
+ 7224      545F4D49 
+ 7225              	.LASF46:
+ 7226 0de2 636F6C6F 		.ascii	"color\000"
+ 7226      7200
+ 7227              	.LASF63:
+ 7228 0de8 6C696E65 		.ascii	"line_space\000"
+ 7228      5F737061 
+ 7228      636500
+ 7229              	.LASF174:
+ 7230 0df3 786F6673 		.ascii	"xofs\000"
+ 7230      00
+ 7231              	.LASF181:
+ 7232 0df8 6C765F6F 		.ascii	"lv_obj_t\000"
+ 7232      626A5F74 
+ 7232      00
+ 7233              	.LASF45:
+ 7234 0e01 6C765F73 		.ascii	"lv_shadow_type_t\000"
+ 7234      6861646F 
+ 7234      775F7479 
+ 7234      70655F74 
+ 7234      00
+ 7235              	.LASF92:
+ 7236 0e12 64726167 		.ascii	"drag\000"
+ 7236      00
+ 7237              	.LASF325:
+ 7238 0e17 6C765F73 		.ascii	"lv_style_pretty\000"
+ 7238      74796C65 
+ 7238      5F707265 
+ 7238      74747900 
+ 7239              	.LASF83:
+ 7240 0e27 5F6C765F 		.ascii	"_lv_obj_t\000"
+ 7240      6F626A5F 
+ 7240      7400
+ 7241              	.LASF152:
+ 7242 0e31 4C565F41 		.ascii	"LV_ALIGN_IN_TOP_LEFT\000"
+ 7242      4C49474E 
+ 7242      5F494E5F 
+ 7242      544F505F 
+ 7242      4C454654 
+ 7243              	.LASF61:
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 158
 
 
- 7245      65725F73 
- 7245      70616365 
- 7245      00
- 7246              	.LASF258:
- 7247 0e45 63616C65 		.ascii	"calendar\000"
- 7247      6E646172 
- 7247      00
- 7248              	.LASF99:
- 7249 0e4e 62617365 		.ascii	"base_dir\000"
- 7249      5F646972 
- 7249      00
- 7250              	.LASF183:
- 7251 0e57 4C565F50 		.ascii	"LV_PROTECT_CHILD_CHG\000"
- 7251      524F5445 
- 7251      43545F43 
- 7251      48494C44 
- 7251      5F434847 
- 7252              	.LASF187:
- 7253 0e6c 4C565F50 		.ascii	"LV_PROTECT_PRESS_LOST\000"
- 7253      524F5445 
- 7253      43545F50 
- 7253      52455353 
- 7253      5F4C4F53 
- 7254              	.LASF23:
- 7255 0e82 626F785F 		.ascii	"box_h\000"
- 7255      6800
- 7256              	.LASF208:
- 7257 0e88 4C565F50 		.ascii	"LV_PAGE_STYLE_BG\000"
- 7257      4147455F 
- 7257      5354594C 
- 7257      455F4247 
- 7257      00
- 7258              	.LASF173:
- 7259 0e99 62617365 		.ascii	"base\000"
- 7259      00
- 7260              	.LASF22:
- 7261 0e9e 626F785F 		.ascii	"box_w\000"
- 7261      7700
- 7262              	.LASF5:
- 7263 0ea4 73686F72 		.ascii	"short int\000"
- 7263      7420696E 
- 7263      7400
- 7264              	.LASF301:
- 7265 0eae 6C765F77 		.ascii	"lv_win_get_from_btn\000"
- 7265      696E5F67 
- 7265      65745F66 
- 7265      726F6D5F 
- 7265      62746E00 
- 7266              	.LASF30:
- 7267 0ec2 62617365 		.ascii	"base_line\000"
- 7267      5F6C696E 
- 7267      6500
- 7268              	.LASF80:
- 7269 0ecc 6C765F6C 		.ascii	"lv_ll_t\000"
- 7269      6C5F7400 
- 7270              	.LASF295:
- 7271 0ed4 6C765F77 		.ascii	"lv_win_set_style\000"
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 159
+ 7244 0e46 666F6E74 		.ascii	"font\000"
+ 7244      00
+ 7245              	.LASF62:
+ 7246 0e4b 6C657474 		.ascii	"letter_space\000"
+ 7246      65725F73 
+ 7246      70616365 
+ 7246      00
+ 7247              	.LASF258:
+ 7248 0e58 63616C65 		.ascii	"calendar\000"
+ 7248      6E646172 
+ 7248      00
+ 7249              	.LASF99:
+ 7250 0e61 62617365 		.ascii	"base_dir\000"
+ 7250      5F646972 
+ 7250      00
+ 7251              	.LASF183:
+ 7252 0e6a 4C565F50 		.ascii	"LV_PROTECT_CHILD_CHG\000"
+ 7252      524F5445 
+ 7252      43545F43 
+ 7252      48494C44 
+ 7252      5F434847 
+ 7253              	.LASF187:
+ 7254 0e7f 4C565F50 		.ascii	"LV_PROTECT_PRESS_LOST\000"
+ 7254      524F5445 
+ 7254      43545F50 
+ 7254      52455353 
+ 7254      5F4C4F53 
+ 7255              	.LASF23:
+ 7256 0e95 626F785F 		.ascii	"box_h\000"
+ 7256      6800
+ 7257              	.LASF208:
+ 7258 0e9b 4C565F50 		.ascii	"LV_PAGE_STYLE_BG\000"
+ 7258      4147455F 
+ 7258      5354594C 
+ 7258      455F4247 
+ 7258      00
+ 7259              	.LASF173:
+ 7260 0eac 62617365 		.ascii	"base\000"
+ 7260      00
+ 7261              	.LASF22:
+ 7262 0eb1 626F785F 		.ascii	"box_w\000"
+ 7262      7700
+ 7263              	.LASF5:
+ 7264 0eb7 73686F72 		.ascii	"short int\000"
+ 7264      7420696E 
+ 7264      7400
+ 7265              	.LASF301:
+ 7266 0ec1 6C765F77 		.ascii	"lv_win_get_from_btn\000"
+ 7266      696E5F67 
+ 7266      65745F66 
+ 7266      726F6D5F 
+ 7266      62746E00 
+ 7267              	.LASF30:
+ 7268 0ed5 62617365 		.ascii	"base_line\000"
+ 7268      5F6C696E 
+ 7268      6500
+ 7269              	.LASF80:
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 159
 
 
- 7271      696E5F73 
- 7271      65745F73 
- 7271      74796C65 
- 7271      00
- 7272              	.LASF162:
- 7273 0ee5 4C565F41 		.ascii	"LV_ALIGN_OUT_TOP_RIGHT\000"
- 7273      4C49474E 
- 7273      5F4F5554 
- 7273      5F544F50 
- 7273      5F524947 
- 7274              	.LASF311:
- 7275 0efc 6C765F77 		.ascii	"lv_win_signal\000"
- 7275      696E5F73 
- 7275      69676E61 
- 7275      6C00
- 7276              	.LASF16:
- 7277 0f0a 696E7431 		.ascii	"int16_t\000"
- 7277      365F7400 
- 7278              	.LASF131:
- 7279 0f12 4C565F53 		.ascii	"LV_SIGNAL_CORD_CHG\000"
- 7279      49474E41 
- 7279      4C5F434F 
- 7279      52445F43 
- 7279      484700
- 7280              	.LASF85:
- 7281 0f25 636F6F72 		.ascii	"coords\000"
- 7281      647300
- 7282              	.LASF287:
- 7283 0f2c 6C765F77 		.ascii	"lv_win_set_btn_size\000"
- 7283      696E5F73 
- 7283      65745F62 
- 7283      746E5F73 
- 7283      697A6500 
- 7284              	.LASF261:
- 7285 0f40 7370696E 		.ascii	"spinbox\000"
- 7285      626F7800 
- 7286              	.LASF223:
- 7287 0f48 4C565F57 		.ascii	"LV_WIN_STYLE_BTN_REL\000"
- 7287      494E5F53 
- 7287      54594C45 
- 7287      5F42544E 
- 7287      5F52454C 
- 7288              	.LASF321:
- 7289 0f5d 6C765F73 		.ascii	"lv_style_transp\000"
- 7289      74796C65 
- 7289      5F747261 
- 7289      6E737000 
- 7290              	.LASF96:
- 7291 0f6d 6F70615F 		.ascii	"opa_scale_en\000"
- 7291      7363616C 
- 7291      655F656E 
- 7291      00
- 7292              	.LASF238:
- 7293 0f7a 6461795F 		.ascii	"day_names\000"
- 7293      6E616D65 
- 7293      7300
- 7294              	.LASF58:
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 160
+ 7270 0edf 6C765F6C 		.ascii	"lv_ll_t\000"
+ 7270      6C5F7400 
+ 7271              	.LASF295:
+ 7272 0ee7 6C765F77 		.ascii	"lv_win_set_style\000"
+ 7272      696E5F73 
+ 7272      65745F73 
+ 7272      74796C65 
+ 7272      00
+ 7273              	.LASF162:
+ 7274 0ef8 4C565F41 		.ascii	"LV_ALIGN_OUT_TOP_RIGHT\000"
+ 7274      4C49474E 
+ 7274      5F4F5554 
+ 7274      5F544F50 
+ 7274      5F524947 
+ 7275              	.LASF311:
+ 7276 0f0f 6C765F77 		.ascii	"lv_win_signal\000"
+ 7276      696E5F73 
+ 7276      69676E61 
+ 7276      6C00
+ 7277              	.LASF16:
+ 7278 0f1d 696E7431 		.ascii	"int16_t\000"
+ 7278      365F7400 
+ 7279              	.LASF131:
+ 7280 0f25 4C565F53 		.ascii	"LV_SIGNAL_CORD_CHG\000"
+ 7280      49474E41 
+ 7280      4C5F434F 
+ 7280      52445F43 
+ 7280      484700
+ 7281              	.LASF85:
+ 7282 0f38 636F6F72 		.ascii	"coords\000"
+ 7282      647300
+ 7283              	.LASF287:
+ 7284 0f3f 6C765F77 		.ascii	"lv_win_set_btn_size\000"
+ 7284      696E5F73 
+ 7284      65745F62 
+ 7284      746E5F73 
+ 7284      697A6500 
+ 7285              	.LASF261:
+ 7286 0f53 7370696E 		.ascii	"spinbox\000"
+ 7286      626F7800 
+ 7287              	.LASF223:
+ 7288 0f5b 4C565F57 		.ascii	"LV_WIN_STYLE_BTN_REL\000"
+ 7288      494E5F53 
+ 7288      54594C45 
+ 7288      5F42544E 
+ 7288      5F52454C 
+ 7289              	.LASF321:
+ 7290 0f70 6C765F73 		.ascii	"lv_style_transp\000"
+ 7290      74796C65 
+ 7290      5F747261 
+ 7290      6E737000 
+ 7291              	.LASF96:
+ 7292 0f80 6F70615F 		.ascii	"opa_scale_en\000"
+ 7292      7363616C 
+ 7292      655F656E 
+ 7292      00
+ 7293              	.LASF238:
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 160
 
 
- 7295 0f84 73686164 		.ascii	"shadow\000"
- 7295      6F7700
- 7296              	.LASF120:
- 7297 0f8b 4C565F45 		.ascii	"LV_EVENT_DEFOCUSED\000"
- 7297      56454E54 
- 7297      5F444546 
- 7297      4F435553 
- 7297      454400
- 7298              	.LASF189:
- 7299 0f9e 6C765F6C 		.ascii	"lv_layout_t\000"
- 7299      61796F75 
- 7299      745F7400 
- 7300              	.LASF270:
- 7301 0faa 6C765F61 		.ascii	"lv_area_get_width\000"
- 7301      7265615F 
- 7301      6765745F 
- 7301      77696474 
- 7301      6800
- 7302              	.LASF158:
- 7303 0fbc 4C565F41 		.ascii	"LV_ALIGN_IN_LEFT_MID\000"
- 7303      4C49474E 
- 7303      5F494E5F 
- 7303      4C454654 
- 7303      5F4D4944 
- 7304              	.LASF94:
- 7305 0fd1 64726167 		.ascii	"drag_parent\000"
- 7305      5F706172 
- 7305      656E7400 
- 7306              	.LASF134:
- 7307 0fdd 4C565F53 		.ascii	"LV_SIGNAL_BASE_DIR_CHG\000"
- 7307      49474E41 
- 7307      4C5F4241 
- 7307      53455F44 
- 7307      49525F43 
- 7308              	.LASF318:
- 7309 0ff4 62746E5F 		.ascii	"btn_prev\000"
- 7309      70726576 
- 7309      00
- 7310              	.LASF161:
- 7311 0ffd 4C565F41 		.ascii	"LV_ALIGN_OUT_TOP_MID\000"
- 7311      4C49474E 
- 7311      5F4F5554 
- 7311      5F544F50 
- 7311      5F4D4944 
- 7312              	.LASF277:
- 7313 1012 636F7079 		.ascii	"copy_ext\000"
- 7313      5F657874 
- 7313      00
- 7314              	.LASF248:
- 7315 101b 636F6E74 		.ascii	"content\000"
- 7315      656E7400 
- 7316              	.LASF59:
- 7317 1023 70616464 		.ascii	"padding\000"
- 7317      696E6700 
- 7318              	.LASF87:
- 7319 102b 7369676E 		.ascii	"signal_cb\000"
- 7319      616C5F63 
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 161
+ 7294 0f8d 6461795F 		.ascii	"day_names\000"
+ 7294      6E616D65 
+ 7294      7300
+ 7295              	.LASF58:
+ 7296 0f97 73686164 		.ascii	"shadow\000"
+ 7296      6F7700
+ 7297              	.LASF120:
+ 7298 0f9e 4C565F45 		.ascii	"LV_EVENT_DEFOCUSED\000"
+ 7298      56454E54 
+ 7298      5F444546 
+ 7298      4F435553 
+ 7298      454400
+ 7299              	.LASF189:
+ 7300 0fb1 6C765F6C 		.ascii	"lv_layout_t\000"
+ 7300      61796F75 
+ 7300      745F7400 
+ 7301              	.LASF270:
+ 7302 0fbd 6C765F61 		.ascii	"lv_area_get_width\000"
+ 7302      7265615F 
+ 7302      6765745F 
+ 7302      77696474 
+ 7302      6800
+ 7303              	.LASF158:
+ 7304 0fcf 4C565F41 		.ascii	"LV_ALIGN_IN_LEFT_MID\000"
+ 7304      4C49474E 
+ 7304      5F494E5F 
+ 7304      4C454654 
+ 7304      5F4D4944 
+ 7305              	.LASF94:
+ 7306 0fe4 64726167 		.ascii	"drag_parent\000"
+ 7306      5F706172 
+ 7306      656E7400 
+ 7307              	.LASF134:
+ 7308 0ff0 4C565F53 		.ascii	"LV_SIGNAL_BASE_DIR_CHG\000"
+ 7308      49474E41 
+ 7308      4C5F4241 
+ 7308      53455F44 
+ 7308      49525F43 
+ 7309              	.LASF318:
+ 7310 1007 62746E5F 		.ascii	"btn_prev\000"
+ 7310      70726576 
+ 7310      00
+ 7311              	.LASF161:
+ 7312 1010 4C565F41 		.ascii	"LV_ALIGN_OUT_TOP_MID\000"
+ 7312      4C49474E 
+ 7312      5F4F5554 
+ 7312      5F544F50 
+ 7312      5F4D4944 
+ 7313              	.LASF277:
+ 7314 1025 636F7079 		.ascii	"copy_ext\000"
+ 7314      5F657874 
+ 7314      00
+ 7315              	.LASF248:
+ 7316 102e 636F6E74 		.ascii	"content\000"
+ 7316      656E7400 
+ 7317              	.LASF59:
+ 7318 1036 70616464 		.ascii	"padding\000"
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 161
 
 
- 7319      6200
- 7320              	.LASF18:
- 7321 1035 75696E74 		.ascii	"uint32_t\000"
- 7321      33325F74 
- 7321      00
- 7322              	.LASF310:
- 7323 103e 616E696D 		.ascii	"anim_en\000"
- 7323      5F656E00 
- 7324              	.LASF203:
- 7325 1046 4C565F53 		.ascii	"LV_SB_MODE_DRAG\000"
- 7325      425F4D4F 
- 7325      44455F44 
- 7325      52414700 
- 7326              	.LASF166:
- 7327 1056 4C565F41 		.ascii	"LV_ALIGN_OUT_LEFT_TOP\000"
- 7327      4C49474E 
- 7327      5F4F5554 
- 7327      5F4C4546 
- 7327      545F544F 
- 7328              	.LASF296:
- 7329 106c 6C765F77 		.ascii	"lv_win_set_drag\000"
- 7329      696E5F73 
- 7329      65745F64 
- 7329      72616700 
- 7330              	.LASF231:
- 7331 107c 6461726B 		.ascii	"dark\000"
- 7331      00
- 7332              	.LASF34:
- 7333 1081 67726565 		.ascii	"green\000"
- 7333      6E00
- 7334              	.LASF32:
- 7335 1087 6C765F66 		.ascii	"lv_font_t\000"
- 7335      6F6E745F 
- 7335      7400
- 7336              	.LASF100:
- 7337 1091 72657365 		.ascii	"reserved\000"
- 7337      72766564 
- 7337      00
- 7338              	.LASF214:
- 7339 109a 7469746C 		.ascii	"title\000"
- 7339      6500
- 7340              	.LASF199:
- 7341 10a0 4C565F42 		.ascii	"LV_BTN_STYLE_TGL_PR\000"
- 7341      544E5F53 
- 7341      54594C45 
- 7341      5F54474C 
- 7341      5F505200 
- 7342              	.LASF7:
- 7343 10b4 73686F72 		.ascii	"short unsigned int\000"
- 7343      7420756E 
- 7343      7369676E 
- 7343      65642069 
- 7343      6E7400
- 7344              	.LASF207:
- 7345 10c7 6C765F73 		.ascii	"lv_sb_mode_t\000"
- 7345      625F6D6F 
- 7345      64655F74 
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 162
+ 7318      696E6700 
+ 7319              	.LASF87:
+ 7320 103e 7369676E 		.ascii	"signal_cb\000"
+ 7320      616C5F63 
+ 7320      6200
+ 7321              	.LASF18:
+ 7322 1048 75696E74 		.ascii	"uint32_t\000"
+ 7322      33325F74 
+ 7322      00
+ 7323              	.LASF310:
+ 7324 1051 616E696D 		.ascii	"anim_en\000"
+ 7324      5F656E00 
+ 7325              	.LASF203:
+ 7326 1059 4C565F53 		.ascii	"LV_SB_MODE_DRAG\000"
+ 7326      425F4D4F 
+ 7326      44455F44 
+ 7326      52414700 
+ 7327              	.LASF166:
+ 7328 1069 4C565F41 		.ascii	"LV_ALIGN_OUT_LEFT_TOP\000"
+ 7328      4C49474E 
+ 7328      5F4F5554 
+ 7328      5F4C4546 
+ 7328      545F544F 
+ 7329              	.LASF296:
+ 7330 107f 6C765F77 		.ascii	"lv_win_set_drag\000"
+ 7330      696E5F73 
+ 7330      65745F64 
+ 7330      72616700 
+ 7331              	.LASF231:
+ 7332 108f 6461726B 		.ascii	"dark\000"
+ 7332      00
+ 7333              	.LASF34:
+ 7334 1094 67726565 		.ascii	"green\000"
+ 7334      6E00
+ 7335              	.LASF32:
+ 7336 109a 6C765F66 		.ascii	"lv_font_t\000"
+ 7336      6F6E745F 
+ 7336      7400
+ 7337              	.LASF100:
+ 7338 10a4 72657365 		.ascii	"reserved\000"
+ 7338      72766564 
+ 7338      00
+ 7339              	.LASF214:
+ 7340 10ad 7469746C 		.ascii	"title\000"
+ 7340      6500
+ 7341              	.LASF199:
+ 7342 10b3 4C565F42 		.ascii	"LV_BTN_STYLE_TGL_PR\000"
+ 7342      544E5F53 
+ 7342      54594C45 
+ 7342      5F54474C 
+ 7342      5F505200 
+ 7343              	.LASF7:
+ 7344 10c7 73686F72 		.ascii	"short unsigned int\000"
+ 7344      7420756E 
+ 7344      7369676E 
+ 7344      65642069 
+ 7344      6E7400
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 162
 
 
- 7345      00
- 7346              	.LASF118:
- 7347 10d4 4C565F45 		.ascii	"LV_EVENT_KEY\000"
- 7347      56454E54 
- 7347      5F4B4559 
- 7347      00
- 7348              	.LASF19:
- 7349 10e1 6C765F63 		.ascii	"lv_coord_t\000"
- 7349      6F6F7264 
- 7349      5F7400
- 7350              	.LASF109:
- 7351 10ec 4C565F45 		.ascii	"LV_EVENT_PRESS_LOST\000"
- 7351      56454E54 
- 7351      5F505245 
- 7351      53535F4C 
- 7351      4F535400 
- 7352              	.LASF297:
- 7353 1100 77696E5F 		.ascii	"win_header\000"
- 7353      68656164 
- 7353      657200
- 7354              	.LASF57:
- 7355 110b 626F7264 		.ascii	"border\000"
- 7355      657200
- 7356              	.LASF252:
- 7357 1112 6C616265 		.ascii	"label\000"
- 7357      6C00
- 7358              	.LASF27:
- 7359 1118 6765745F 		.ascii	"get_glyph_dsc\000"
- 7359      676C7970 
- 7359      685F6473 
- 7359      6300
- 7360              	.LASF253:
- 7361 1126 736C6964 		.ascii	"slider\000"
- 7361      657200
- 7362              	.LASF290:
- 7363 112d 6C765F77 		.ascii	"lv_win_set_layout\000"
- 7363      696E5F73 
- 7363      65745F6C 
- 7363      61796F75 
- 7363      7400
- 7364              	.LASF44:
- 7365 113f 6C765F62 		.ascii	"lv_border_part_t\000"
- 7365      6F726465 
- 7365      725F7061 
- 7365      72745F74 
- 7365      00
- 7366              	.LASF299:
- 7367 1150 6C765F77 		.ascii	"lv_win_get_content\000"
- 7367      696E5F67 
- 7367      65745F63 
- 7367      6F6E7465 
- 7367      6E7400
- 7368              	.LASF280:
- 7369 1163 6C765F77 		.ascii	"lv_win_create\000"
- 7369      696E5F63 
- 7369      72656174 
- 7369      6500
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 163
+ 7345              	.LASF207:
+ 7346 10da 6C765F73 		.ascii	"lv_sb_mode_t\000"
+ 7346      625F6D6F 
+ 7346      64655F74 
+ 7346      00
+ 7347              	.LASF118:
+ 7348 10e7 4C565F45 		.ascii	"LV_EVENT_KEY\000"
+ 7348      56454E54 
+ 7348      5F4B4559 
+ 7348      00
+ 7349              	.LASF19:
+ 7350 10f4 6C765F63 		.ascii	"lv_coord_t\000"
+ 7350      6F6F7264 
+ 7350      5F7400
+ 7351              	.LASF109:
+ 7352 10ff 4C565F45 		.ascii	"LV_EVENT_PRESS_LOST\000"
+ 7352      56454E54 
+ 7352      5F505245 
+ 7352      53535F4C 
+ 7352      4F535400 
+ 7353              	.LASF297:
+ 7354 1113 77696E5F 		.ascii	"win_header\000"
+ 7354      68656164 
+ 7354      657200
+ 7355              	.LASF57:
+ 7356 111e 626F7264 		.ascii	"border\000"
+ 7356      657200
+ 7357              	.LASF252:
+ 7358 1125 6C616265 		.ascii	"label\000"
+ 7358      6C00
+ 7359              	.LASF27:
+ 7360 112b 6765745F 		.ascii	"get_glyph_dsc\000"
+ 7360      676C7970 
+ 7360      685F6473 
+ 7360      6300
+ 7361              	.LASF253:
+ 7362 1139 736C6964 		.ascii	"slider\000"
+ 7362      657200
+ 7363              	.LASF290:
+ 7364 1140 6C765F77 		.ascii	"lv_win_set_layout\000"
+ 7364      696E5F73 
+ 7364      65745F6C 
+ 7364      61796F75 
+ 7364      7400
+ 7365              	.LASF44:
+ 7366 1152 6C765F62 		.ascii	"lv_border_part_t\000"
+ 7366      6F726465 
+ 7366      725F7061 
+ 7366      72745F74 
+ 7366      00
+ 7367              	.LASF299:
+ 7368 1163 6C765F77 		.ascii	"lv_win_get_content\000"
+ 7368      696E5F67 
+ 7368      65745F63 
+ 7368      6F6E7465 
+ 7368      6E7400
+ 7369              	.LASF280:
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 163
 
 
- 7370              	.LASF322:
- 7371 1171 6C765F73 		.ascii	"lv_style_transp_fit\000"
- 7371      74796C65 
- 7371      5F747261 
- 7371      6E73705F 
- 7371      66697400 
- 7372              	.LASF128:
- 7373 1185 6C765F65 		.ascii	"lv_event_cb_t\000"
- 7373      76656E74 
- 7373      5F63625F 
- 7373      7400
- 7374              	.LASF256:
- 7375 1193 7072656C 		.ascii	"preload\000"
- 7375      6F616400 
- 7376              	.LASF302:
- 7377 119b 6374726C 		.ascii	"ctrl_btn\000"
- 7377      5F62746E 
- 7377      00
- 7378              	.LASF178:
- 7379 11a4 6F726967 		.ascii	"origo_align\000"
- 7379      6F5F616C 
- 7379      69676E00 
- 7380              	.LASF198:
- 7381 11b0 4C565F42 		.ascii	"LV_BTN_STYLE_TGL_REL\000"
- 7381      544E5F53 
- 7381      54594C45 
- 7381      5F54474C 
- 7381      5F52454C 
- 7382              	.LASF234:
- 7383 11c5 6B6E6F62 		.ascii	"knob\000"
- 7383      00
- 7384              	.LASF60:
- 7385 11ca 73656C5F 		.ascii	"sel_color\000"
- 7385      636F6C6F 
- 7385      7200
- 7386              	.LASF291:
- 7387 11d4 6C765F77 		.ascii	"lv_win_set_sb_mode\000"
- 7387      696E5F73 
- 7387      65745F73 
- 7387      625F6D6F 
- 7387      646500
- 7388              	.LASF82:
- 7389 11e7 5F6C765F 		.ascii	"_lv_font_struct\000"
- 7389      666F6E74 
- 7389      5F737472 
- 7389      75637400 
- 7390              	.LASF48:
- 7391 11f7 70617274 		.ascii	"part\000"
- 7391      00
- 7392              	.LASF77:
- 7393 11fc 6E5F7369 		.ascii	"n_size\000"
- 7393      7A6500
- 7394              	.LASF195:
- 7395 1203 5F4C565F 		.ascii	"_LV_BTN_STATE_NUM\000"
- 7395      42544E5F 
- 7395      53544154 
- 7395      455F4E55 
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccdm25Mj.s 			page 164
+ 7370 1176 6C765F77 		.ascii	"lv_win_create\000"
+ 7370      696E5F63 
+ 7370      72656174 
+ 7370      6500
+ 7371              	.LASF322:
+ 7372 1184 6C765F73 		.ascii	"lv_style_transp_fit\000"
+ 7372      74796C65 
+ 7372      5F747261 
+ 7372      6E73705F 
+ 7372      66697400 
+ 7373              	.LASF128:
+ 7374 1198 6C765F65 		.ascii	"lv_event_cb_t\000"
+ 7374      76656E74 
+ 7374      5F63625F 
+ 7374      7400
+ 7375              	.LASF256:
+ 7376 11a6 7072656C 		.ascii	"preload\000"
+ 7376      6F616400 
+ 7377              	.LASF302:
+ 7378 11ae 6374726C 		.ascii	"ctrl_btn\000"
+ 7378      5F62746E 
+ 7378      00
+ 7379              	.LASF178:
+ 7380 11b7 6F726967 		.ascii	"origo_align\000"
+ 7380      6F5F616C 
+ 7380      69676E00 
+ 7381              	.LASF198:
+ 7382 11c3 4C565F42 		.ascii	"LV_BTN_STYLE_TGL_REL\000"
+ 7382      544E5F53 
+ 7382      54594C45 
+ 7382      5F54474C 
+ 7382      5F52454C 
+ 7383              	.LASF234:
+ 7384 11d8 6B6E6F62 		.ascii	"knob\000"
+ 7384      00
+ 7385              	.LASF60:
+ 7386 11dd 73656C5F 		.ascii	"sel_color\000"
+ 7386      636F6C6F 
+ 7386      7200
+ 7387              	.LASF291:
+ 7388 11e7 6C765F77 		.ascii	"lv_win_set_sb_mode\000"
+ 7388      696E5F73 
+ 7388      65745F73 
+ 7388      625F6D6F 
+ 7388      646500
+ 7389              	.LASF82:
+ 7390 11fa 5F6C765F 		.ascii	"_lv_font_struct\000"
+ 7390      666F6E74 
+ 7390      5F737472 
+ 7390      75637400 
+ 7391              	.LASF48:
+ 7392 120a 70617274 		.ascii	"part\000"
+ 7392      00
+ 7393              	.LASF77:
+ 7394 120f 6E5F7369 		.ascii	"n_size\000"
+ 7394      7A6500
+ 7395              	.LASF195:
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3P6lgF.s 			page 164
 
 
- 7395      4D00
- 7396              	.LASF246:
- 7397 1215 63757273 		.ascii	"cursor\000"
- 7397      6F7200
- 7398              	.LASF114:
- 7399 121c 4C565F45 		.ascii	"LV_EVENT_RELEASED\000"
- 7399      56454E54 
- 7399      5F52454C 
- 7399      45415345 
- 7399      4400
- 7400              	.LASF106:
- 7401 122e 6C765F64 		.ascii	"lv_design_cb_t\000"
- 7401      65736967 
- 7401      6E5F6362 
- 7401      5F7400
- 7402              	.LASF102:
- 7403 123d 6F70615F 		.ascii	"opa_scale\000"
- 7403      7363616C 
- 7403      6500
- 7404              	.LASF264:
- 7405 1247 726F6C6C 		.ascii	"roller\000"
- 7405      657200
- 7406              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
+ 7396 1216 5F4C565F 		.ascii	"_LV_BTN_STATE_NUM\000"
+ 7396      42544E5F 
+ 7396      53544154 
+ 7396      455F4E55 
+ 7396      4D00
+ 7397              	.LASF246:
+ 7398 1228 63757273 		.ascii	"cursor\000"
+ 7398      6F7200
+ 7399              	.LASF114:
+ 7400 122f 4C565F45 		.ascii	"LV_EVENT_RELEASED\000"
+ 7400      56454E54 
+ 7400      5F52454C 
+ 7400      45415345 
+ 7400      4400
+ 7401              	.LASF106:
+ 7402 1241 6C765F64 		.ascii	"lv_design_cb_t\000"
+ 7402      65736967 
+ 7402      6E5F6362 
+ 7402      5F7400
+ 7403              	.LASF102:
+ 7404 1250 6F70615F 		.ascii	"opa_scale\000"
+ 7404      7363616C 
+ 7404      6500
+ 7405              	.LASF264:
+ 7406 125a 726F6C6C 		.ascii	"roller\000"
+ 7406      657200
+ 7407              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

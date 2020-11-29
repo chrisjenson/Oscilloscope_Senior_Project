@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 1
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccuTzbdn.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 1
   28:Generated_Source\PSoC6\pdl\drivers\peripheral\wdt/cy_wdt.h **** *
   29:Generated_Source\PSoC6\pdl\drivers\peripheral\wdt/cy_wdt.h **** * The <b> First use case </b> is recovering from a CPU or firmware failure.
   30:Generated_Source\PSoC6\pdl\drivers\peripheral\wdt/cy_wdt.h **** * A timeout period is set up in the Watchdog timer, and if a timeout occurs, the
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 2
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccuTzbdn.s 			page 2
 
 
   31:Generated_Source\PSoC6\pdl\drivers\peripheral\wdt/cy_wdt.h **** * device is reset (WRES). <br>
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 1
   85:Generated_Source\PSoC6\pdl\drivers\peripheral\wdt/cy_wdt.h **** * <b> Clock Source </b>
   86:Generated_Source\PSoC6\pdl\drivers\peripheral\wdt/cy_wdt.h **** *
   87:Generated_Source\PSoC6\pdl\drivers\peripheral\wdt/cy_wdt.h **** * The WDT is clocked by the ILO. The WDT must be disabled before disabling 
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 3
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccuTzbdn.s 			page 3
 
 
   88:Generated_Source\PSoC6\pdl\drivers\peripheral\wdt/cy_wdt.h **** * the ILO. According to the device datasheet, the ILO accuracy is +/-30% over 
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 1
  142:Generated_Source\PSoC6\pdl\drivers\peripheral\wdt/cy_wdt.h **** * To start the WDT, make sure that ILO is enabled.
  143:Generated_Source\PSoC6\pdl\drivers\peripheral\wdt/cy_wdt.h **** * After the ILO is enabled, ensure that the WDT is unlocked and disabled by 
  144:Generated_Source\PSoC6\pdl\drivers\peripheral\wdt/cy_wdt.h **** * calling the Cy_WDT_Unlock() and Cy_WDT_Disable() functions. Set the WDT match 
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 4
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccuTzbdn.s 			page 4
 
 
  145:Generated_Source\PSoC6\pdl\drivers\peripheral\wdt/cy_wdt.h **** * value by calling Cy_WDT_SetMatch() with the required match value. If needed, 
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 1
  199:Generated_Source\PSoC6\pdl\drivers\peripheral\wdt/cy_wdt.h **** *     <td>Added register access layer. Use register access macros instead
  200:Generated_Source\PSoC6\pdl\drivers\peripheral\wdt/cy_wdt.h **** *         of direct register access using dereferenced pointers.</td>
  201:Generated_Source\PSoC6\pdl\drivers\peripheral\wdt/cy_wdt.h **** *     <td>Makes register access device-independent, so that the PDL does 
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 5
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccuTzbdn.s 			page 5
 
 
  202:Generated_Source\PSoC6\pdl\drivers\peripheral\wdt/cy_wdt.h **** *         not need to be recompiled for each supported part number.</td>
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 1
  256:Generated_Source\PSoC6\pdl\drivers\peripheral\wdt/cy_wdt.h **** 
  257:Generated_Source\PSoC6\pdl\drivers\peripheral\wdt/cy_wdt.h **** /** The internal define for the second iteration of WDT unlocking */
  258:Generated_Source\PSoC6\pdl\drivers\peripheral\wdt/cy_wdt.h **** #define CY_SRSS_WDT_LOCK_BIT1                           ((uint32_t)0x01U << 31U)
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 6
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccuTzbdn.s 			page 6
 
 
  259:Generated_Source\PSoC6\pdl\drivers\peripheral\wdt/cy_wdt.h **** 
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 1
  313:Generated_Source\PSoC6\pdl\drivers\peripheral\wdt/cy_wdt.h **** 
  314:Generated_Source\PSoC6\pdl\drivers\peripheral\wdt/cy_wdt.h **** 
  315:Generated_Source\PSoC6\pdl\drivers\peripheral\wdt/cy_wdt.h **** /*******************************************************************************
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 7
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccuTzbdn.s 			page 7
 
 
  316:Generated_Source\PSoC6\pdl\drivers\peripheral\wdt/cy_wdt.h **** * Function Name: Cy_WDT_Enable
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 1
   54 001e 00BF     		.align	2
   55              	.L2:
   56 0020 00002640 		.word	1076232192
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 8
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccuTzbdn.s 			page 8
 
 
   57              		.cfi_endproc
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 1
   69              		.loc 2 42 0
   70              		.cfi_startproc
   71              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 9
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccuTzbdn.s 			page 9
 
 
   72              		@ frame_needed = 1, uses_anonymous_args = 0
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 1
  117              		.type	Cy_WDT_Lock, %function
  118              	Cy_WDT_Lock:
  119              	.LFB140:
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 10
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccuTzbdn.s 			page 10
 
 
   52:Generated_Source\PSoC6\pdl\drivers\peripheral\wdt/cy_wdt.c **** 
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 1
  158              	.LFB141:
   68:Generated_Source\PSoC6\pdl\drivers\peripheral\wdt/cy_wdt.c **** 
   69:Generated_Source\PSoC6\pdl\drivers\peripheral\wdt/cy_wdt.c **** 
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 11
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccuTzbdn.s 			page 11
 
 
   70:Generated_Source\PSoC6\pdl\drivers\peripheral\wdt/cy_wdt.c **** /*******************************************************************************
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 1
  197              		.global	Cy_WDT_Unlock
  198              		.thumb
  199              		.thumb_func
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 12
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccuTzbdn.s 			page 12
 
 
  200              		.type	Cy_WDT_Unlock, %function
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 1
  238 0034 00002640 		.word	1076232192
  239              		.cfi_endproc
  240              	.LFE142:
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 13
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccuTzbdn.s 			page 13
 
 
  241              		.size	Cy_WDT_Unlock, .-Cy_WDT_Unlock
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 1
  270 000a B3F5803F 		cmp	r3, #65536
  271 000e 03D3     		bcc	.L18
  272              		.loc 2 119 0 is_stmt 0 discriminator 1
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 14
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccuTzbdn.s 			page 14
 
 
  273 0010 7721     		movs	r1, #119
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 1
  128:Generated_Source\PSoC6\pdl\drivers\peripheral\wdt/cy_wdt.c **** /*******************************************************************************
  129:Generated_Source\PSoC6\pdl\drivers\peripheral\wdt/cy_wdt.c **** * Function Name: Cy_WDT_SetIgnoreBits
  130:Generated_Source\PSoC6\pdl\drivers\peripheral\wdt/cy_wdt.c **** ****************************************************************************//**
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 15
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccuTzbdn.s 			page 15
 
 
  131:Generated_Source\PSoC6\pdl\drivers\peripheral\wdt/cy_wdt.c **** *
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 1
  349 0026 0949     		ldr	r1, .L27+4
  350 0028 084B     		ldr	r3, .L27+4
  351 002a D3F88831 		ldr	r3, [r3, #392]
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 16
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccuTzbdn.s 			page 16
 
 
  352 002e 23F47022 		bic	r2, r3, #983040
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 1
  391 0002 00AF     		add	r7, sp, #0
  392              		.cfi_def_cfa_register 7
  170:Generated_Source\PSoC6\pdl\drivers\peripheral\wdt/cy_wdt.c ****     SRSS_SRSS_INTR = _VAL2FLD(SRSS_SRSS_INTR_WDT_MATCH, 1U);
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 17
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccuTzbdn.s 			page 17
 
 
  393              		.loc 2 170 0
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 1
  429              		.cfi_def_cfa_offset 8
  430              		.cfi_offset 7, -8
  431              		.cfi_offset 14, -4
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 18
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccuTzbdn.s 			page 18
 
 
  432 0002 00AF     		add	r7, sp, #0
@@ -1035,8 +1035,8 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 1
  441              		.size	Cy_WDT_ClearWatchdog, .-Cy_WDT_ClearWatchdog
  442              		.text
  443              	.Letext0:
- 444              		.file 3 "e:\\applications\\psoc\\psoc creator\\4.3\\psoc creator\\import\\gnu\\arm\\5.4.1\\arm-non
- 445              		.file 4 "e:\\applications\\psoc\\psoc creator\\4.3\\psoc creator\\import\\gnu\\arm\\5.4.1\\arm-non
+ 444              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.3\\psoc creator\\import\\gnu\\arm\\5.4.
+ 445              		.file 4 "c:\\program files (x86)\\cypress\\psoc creator\\4.3\\psoc creator\\import\\gnu\\arm\\5.4.
  446              		.file 5 "Generated_Source\\PSoC6\\pdl\\devices/psoc6/include/ip/cyip_srss.h"
  447              		.file 6 "Generated_Source\\PSoC6\\pdl\\devices/psoc6/include/psoc6_01_config.h"
  448              		.file 7 "Generated_Source\\PSoC6\\pdl\\drivers/peripheral/syslib/cy_syslib.h"
@@ -1050,8 +1050,8 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 1
  456 000b 01       		.uleb128 0x1
  457 000c 37000000 		.4byte	.LASF110
  458 0010 0C       		.byte	0xc
- 459 0011 DB050000 		.4byte	.LASF111
- 460 0015 C9060000 		.4byte	.LASF112
+ 459 0011 6D060000 		.4byte	.LASF111
+ 460 0015 A1050000 		.4byte	.LASF112
  461 0019 00000000 		.4byte	.Ldebug_ranges0+0
  462 001d 00000000 		.4byte	0
  463 0021 00000000 		.4byte	.Ldebug_line0
@@ -1062,7 +1062,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 1
  468 002c 02       		.uleb128 0x2
  469 002d 01       		.byte	0x1
  470 002e 08       		.byte	0x8
- 471 002f 4B030000 		.4byte	.LASF1
+ 471 002f 40030000 		.4byte	.LASF1
  472 0033 02       		.uleb128 0x2
  473 0034 02       		.byte	0x2
  474 0035 05       		.byte	0x5
@@ -1070,7 +1070,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 1
  476 003a 02       		.uleb128 0x2
  477 003b 02       		.byte	0x2
  478 003c 07       		.byte	0x7
- 479 003d 48040000 		.4byte	.LASF3
+ 479 003d 3D040000 		.4byte	.LASF3
  480 0041 03       		.uleb128 0x3
  481 0042 64020000 		.4byte	.LASF5
  482 0046 03       		.byte	0x3
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 1
  484 0048 4C000000 		.4byte	0x4c
  485 004c 02       		.uleb128 0x2
  486 004d 04       		.byte	0x4
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 19
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccuTzbdn.s 			page 19
 
 
  487 004e 05       		.byte	0x5
@@ -1091,7 +1091,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 1
  494 005e 02       		.uleb128 0x2
  495 005f 04       		.byte	0x4
  496 0060 07       		.byte	0x7
- 497 0061 64050000 		.4byte	.LASF7
+ 497 0061 59050000 		.4byte	.LASF7
  498 0065 02       		.uleb128 0x2
  499 0066 08       		.byte	0x8
  500 0067 05       		.byte	0x5
@@ -1099,7 +1099,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 1
  502 006c 02       		.uleb128 0x2
  503 006d 08       		.byte	0x8
  504 006e 07       		.byte	0x7
- 505 006f AE030000 		.4byte	.LASF9
+ 505 006f A3030000 		.4byte	.LASF9
  506 0073 04       		.uleb128 0x4
  507 0074 04       		.byte	0x4
  508 0075 05       		.byte	0x5
@@ -1107,14 +1107,14 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 1
  510 007a 02       		.uleb128 0x2
  511 007b 04       		.byte	0x4
  512 007c 07       		.byte	0x7
- 513 007d E4030000 		.4byte	.LASF10
+ 513 007d D9030000 		.4byte	.LASF10
  514 0081 03       		.uleb128 0x3
- 515 0082 6F040000 		.4byte	.LASF11
+ 515 0082 64040000 		.4byte	.LASF11
  516 0086 04       		.byte	0x4
  517 0087 2C       		.byte	0x2c
  518 0088 41000000 		.4byte	0x41
  519 008c 03       		.uleb128 0x3
- 520 008d C5030000 		.4byte	.LASF12
+ 520 008d BA030000 		.4byte	.LASF12
  521 0091 04       		.byte	0x4
  522 0092 30       		.byte	0x30
  523 0093 53000000 		.4byte	0x53
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 1
  541 00bd C8000000 		.4byte	0xc8
  542 00c1 08       		.uleb128 0x8
  543 00c2 97000000 		.4byte	0x97
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 20
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccuTzbdn.s 			page 20
 
 
  544 00c6 04       		.byte	0x4
@@ -1191,14 +1191,14 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 1
  591 012b 22       		.byte	0x22
  592 012c C1010000 		.4byte	0x1c1
  593 0130 0A       		.uleb128 0xa
- 594 0131 6C060000 		.4byte	.LASF14
+ 594 0131 FE060000 		.4byte	.LASF14
  595 0135 05       		.byte	0x5
  596 0136 23       		.byte	0x23
  597 0137 A3000000 		.4byte	0xa3
  598 013b 00       		.byte	0
  599 013c 0A       		.uleb128 0xa
  600 013d 0C000000 		.4byte	.LASF15
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 21
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccuTzbdn.s 			page 21
 
 
  601 0141 05       		.byte	0x5
@@ -1206,7 +1206,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 1
  603 0143 9E000000 		.4byte	0x9e
  604 0147 04       		.byte	0x4
  605 0148 0A       		.uleb128 0xa
- 606 0149 82060000 		.4byte	.LASF16
+ 606 0149 14070000 		.4byte	.LASF16
  607 014d 05       		.byte	0x5
  608 014e 25       		.byte	0x25
  609 014f 9E000000 		.4byte	0x9e
@@ -1218,7 +1218,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 1
  615 015b 9E000000 		.4byte	0x9e
  616 015f 0C       		.byte	0xc
  617 0160 0A       		.uleb128 0xa
- 618 0161 52060000 		.4byte	.LASF18
+ 618 0161 E4060000 		.4byte	.LASF18
  619 0165 05       		.byte	0x5
  620 0166 27       		.byte	0x27
  621 0167 9E000000 		.4byte	0x9e
@@ -1230,7 +1230,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 1
  627 0173 9E000000 		.4byte	0x9e
  628 0177 14       		.byte	0x14
  629 0178 0A       		.uleb128 0xa
- 630 0179 40030000 		.4byte	.LASF20
+ 630 0179 5B070000 		.4byte	.LASF20
  631 017d 05       		.byte	0x5
  632 017e 29       		.byte	0x29
  633 017f 9E000000 		.4byte	0x9e
@@ -1254,16 +1254,16 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 1
  651 01a3 A3000000 		.4byte	0xa3
  652 01a7 24       		.byte	0x24
  653 01a8 0A       		.uleb128 0xa
- 654 01a9 16060000 		.4byte	.LASF24
+ 654 01a9 A8060000 		.4byte	.LASF24
  655 01ad 05       		.byte	0x5
  656 01ae 2D       		.byte	0x2d
  657 01af 9E000000 		.4byte	0x9e
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 22
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccuTzbdn.s 			page 22
 
 
  658 01b3 28       		.byte	0x28
  659 01b4 0A       		.uleb128 0xa
- 660 01b5 15050000 		.4byte	.LASF25
+ 660 01b5 0A050000 		.4byte	.LASF25
  661 01b9 05       		.byte	0x5
  662 01ba 2E       		.byte	0x2e
  663 01bb C6010000 		.4byte	0x1c6
@@ -1274,7 +1274,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 1
  668 01c6 06       		.uleb128 0x6
  669 01c7 C1010000 		.4byte	0x1c1
  670 01cb 03       		.uleb128 0x3
- 671 01cc F1030000 		.4byte	.LASF26
+ 671 01cc E6030000 		.4byte	.LASF26
  672 01d0 05       		.byte	0x5
  673 01d1 2F       		.byte	0x2f
  674 01d2 28010000 		.4byte	0x128
@@ -1284,13 +1284,13 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 1
  678 01da 34       		.byte	0x34
  679 01db 4A050000 		.4byte	0x54a
  680 01df 0A       		.uleb128 0xa
- 681 01e0 A6030000 		.4byte	.LASF27
+ 681 01e0 9B030000 		.4byte	.LASF27
  682 01e4 05       		.byte	0x5
  683 01e5 35       		.byte	0x35
  684 01e6 9E000000 		.4byte	0x9e
  685 01ea 00       		.byte	0
  686 01eb 0A       		.uleb128 0xa
- 687 01ec 21060000 		.4byte	.LASF28
+ 687 01ec B3060000 		.4byte	.LASF28
  688 01f0 05       		.byte	0x5
  689 01f1 36       		.byte	0x36
  690 01f2 9E000000 		.4byte	0x9e
@@ -1302,7 +1302,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 1
  696 01fe 9E000000 		.4byte	0x9e
  697 0202 08       		.byte	0x8
  698 0203 0A       		.uleb128 0xa
- 699 0204 6C060000 		.4byte	.LASF14
+ 699 0204 FE060000 		.4byte	.LASF14
  700 0208 05       		.byte	0x5
  701 0209 38       		.byte	0x38
  702 020a 4F050000 		.4byte	0x54f
@@ -1314,11 +1314,11 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 1
  708 0216 9E000000 		.4byte	0x9e
  709 021a 14       		.byte	0x14
  710 021b 0A       		.uleb128 0xa
- 711 021c 1F040000 		.4byte	.LASF31
+ 711 021c 14040000 		.4byte	.LASF31
  712 0220 05       		.byte	0x5
  713 0221 3A       		.byte	0x3a
  714 0222 9E000000 		.4byte	0x9e
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 23
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccuTzbdn.s 			page 23
 
 
  715 0226 18       		.byte	0x18
@@ -1329,7 +1329,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 1
  720 022e A3000000 		.4byte	0xa3
  721 0232 1C       		.byte	0x1c
  722 0233 0A       		.uleb128 0xa
- 723 0234 15050000 		.4byte	.LASF25
+ 723 0234 0A050000 		.4byte	.LASF25
  724 0238 05       		.byte	0x5
  725 0239 3C       		.byte	0x3c
  726 023a 69050000 		.4byte	0x569
@@ -1341,7 +1341,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 1
  732 0246 6E050000 		.4byte	0x56e
  733 024a 80       		.byte	0x80
  734 024b 0A       		.uleb128 0xa
- 735 024c 1F050000 		.4byte	.LASF34
+ 735 024c 14050000 		.4byte	.LASF34
  736 0250 05       		.byte	0x5
  737 0251 3E       		.byte	0x3e
  738 0252 78050000 		.4byte	0x578
@@ -1353,7 +1353,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 1
  744 025e 9E000000 		.4byte	0x9e
  745 0262 8001     		.2byte	0x180
  746 0264 0C       		.uleb128 0xc
- 747 0265 0D050000 		.4byte	.LASF36
+ 747 0265 02050000 		.4byte	.LASF36
  748 0269 05       		.byte	0x5
  749 026a 40       		.byte	0x40
  750 026b 9E000000 		.4byte	0x9e
@@ -1371,14 +1371,14 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 1
  762 0285 82050000 		.4byte	0x582
  763 0289 8C01     		.2byte	0x18c
  764 028b 0C       		.uleb128 0xc
- 765 028c 9F050000 		.4byte	.LASF39
+ 765 028c 94050000 		.4byte	.LASF39
  766 0290 05       		.byte	0x5
  767 0291 43       		.byte	0x43
  768 0292 87050000 		.4byte	0x587
  769 0296 0002     		.2byte	0x200
  770 0298 0C       		.uleb128 0xc
  771 0299 AB020000 		.4byte	.LASF40
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 24
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccuTzbdn.s 			page 24
 
 
  772 029d 05       		.byte	0x5
@@ -1392,7 +1392,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 1
  780 02ac 9C050000 		.4byte	0x59c
  781 02b0 4003     		.2byte	0x340
  782 02b2 0C       		.uleb128 0xc
- 783 02b3 9C040000 		.4byte	.LASF42
+ 783 02b3 91040000 		.4byte	.LASF42
  784 02b7 05       		.byte	0x5
  785 02b8 46       		.byte	0x46
  786 02b9 A1050000 		.4byte	0x5a1
@@ -1410,7 +1410,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 1
  798 02d3 9E000000 		.4byte	0x9e
  799 02d7 0005     		.2byte	0x500
  800 02d9 0C       		.uleb128 0xc
- 801 02da AC050000 		.4byte	.LASF45
+ 801 02da 3E060000 		.4byte	.LASF45
  802 02de 05       		.byte	0x5
  803 02df 49       		.byte	0x49
  804 02e0 9E000000 		.4byte	0x9e
@@ -1438,12 +1438,12 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 1
  826 0312 05       		.byte	0x5
  827 0313 4D       		.byte	0x4d
  828 0314 9E000000 		.4byte	0x9e
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 25
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccuTzbdn.s 			page 25
 
 
  829 0318 1405     		.2byte	0x514
  830 031a 0C       		.uleb128 0xc
- 831 031b AA060000 		.4byte	.LASF50
+ 831 031b 3C070000 		.4byte	.LASF50
  832 031f 05       		.byte	0x5
  833 0320 4E       		.byte	0x4e
  834 0321 9E000000 		.4byte	0x9e
@@ -1455,7 +1455,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 1
  840 032e 9E000000 		.4byte	0x9e
  841 0332 1C05     		.2byte	0x51c
  842 0334 0C       		.uleb128 0xc
- 843 0335 CE050000 		.4byte	.LASF52
+ 843 0335 60060000 		.4byte	.LASF52
  844 0339 05       		.byte	0x5
  845 033a 50       		.byte	0x50
  846 033b A3000000 		.4byte	0xa3
@@ -1467,7 +1467,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 1
  852 0348 C5050000 		.4byte	0x5c5
  853 034c 2405     		.2byte	0x524
  854 034e 0C       		.uleb128 0xc
- 855 034f 9B060000 		.4byte	.LASF54
+ 855 034f 2D070000 		.4byte	.LASF54
  856 0353 05       		.byte	0x5
  857 0354 52       		.byte	0x52
  858 0355 9E000000 		.4byte	0x9e
@@ -1479,26 +1479,26 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 1
  864 0362 A3000000 		.4byte	0xa3
  865 0366 3005     		.2byte	0x530
  866 0368 0C       		.uleb128 0xc
- 867 0369 76050000 		.4byte	.LASF56
+ 867 0369 6B050000 		.4byte	.LASF56
  868 036d 05       		.byte	0x5
  869 036e 54       		.byte	0x54
  870 036f CF050000 		.4byte	0x5cf
  871 0373 3405     		.2byte	0x534
  872 0375 0C       		.uleb128 0xc
- 873 0376 CD040000 		.4byte	.LASF57
+ 873 0376 C2040000 		.4byte	.LASF57
  874 037a 05       		.byte	0x5
  875 037b 55       		.byte	0x55
  876 037c 9E000000 		.4byte	0x9e
  877 0380 3C05     		.2byte	0x53c
  878 0382 0C       		.uleb128 0xc
- 879 0383 80050000 		.4byte	.LASF58
+ 879 0383 75050000 		.4byte	.LASF58
  880 0387 05       		.byte	0x5
  881 0388 56       		.byte	0x56
  882 0389 D9050000 		.4byte	0x5d9
  883 038d 4005     		.2byte	0x540
  884 038f 0C       		.uleb128 0xc
  885 0390 FD000000 		.4byte	.LASF59
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 26
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccuTzbdn.s 			page 26
 
 
  886 0394 05       		.byte	0x5
@@ -1506,25 +1506,25 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 1
  888 0396 9E000000 		.4byte	0x9e
  889 039a 8005     		.2byte	0x580
  890 039c 0C       		.uleb128 0xc
- 891 039d DD040000 		.4byte	.LASF60
+ 891 039d D2040000 		.4byte	.LASF60
  892 03a1 05       		.byte	0x5
  893 03a2 58       		.byte	0x58
  894 03a3 9E000000 		.4byte	0x9e
  895 03a7 8405     		.2byte	0x584
  896 03a9 0C       		.uleb128 0xc
- 897 03aa ED040000 		.4byte	.LASF61
+ 897 03aa E2040000 		.4byte	.LASF61
  898 03ae 05       		.byte	0x5
  899 03af 59       		.byte	0x59
  900 03b0 9E000000 		.4byte	0x9e
  901 03b4 8805     		.2byte	0x588
  902 03b6 0C       		.uleb128 0xc
- 903 03b7 FD040000 		.4byte	.LASF62
+ 903 03b7 F2040000 		.4byte	.LASF62
  904 03bb 05       		.byte	0x5
  905 03bc 5A       		.byte	0x5a
  906 03bd 9E000000 		.4byte	0x9e
  907 03c1 8C05     		.2byte	0x58c
  908 03c3 0C       		.uleb128 0xc
- 909 03c4 60040000 		.4byte	.LASF63
+ 909 03c4 55040000 		.4byte	.LASF63
  910 03c8 05       		.byte	0x5
  911 03c9 5B       		.byte	0x5b
  912 03ca 9E000000 		.4byte	0x9e
@@ -1542,7 +1542,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 1
  924 03e4 F8050000 		.4byte	0x5f8
  925 03e8 0006     		.2byte	0x600
  926 03ea 0C       		.uleb128 0xc
- 927 03eb 59030000 		.4byte	.LASF66
+ 927 03eb 4E030000 		.4byte	.LASF66
  928 03ef 05       		.byte	0x5
  929 03f0 5E       		.byte	0x5e
  930 03f1 A3000000 		.4byte	0xa3
@@ -1554,22 +1554,22 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 1
  936 03fe FD050000 		.4byte	0x5fd
  937 0402 4006     		.2byte	0x640
  938 0404 0C       		.uleb128 0xc
- 939 0405 64030000 		.4byte	.LASF68
+ 939 0405 59030000 		.4byte	.LASF68
  940 0409 05       		.byte	0x5
  941 040a 60       		.byte	0x60
  942 040b 17060000 		.4byte	0x617
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 27
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccuTzbdn.s 			page 27
 
 
  943 040f 7C06     		.2byte	0x67c
  944 0411 0C       		.uleb128 0xc
- 945 0412 C3040000 		.4byte	.LASF69
+ 945 0412 B8040000 		.4byte	.LASF69
  946 0416 05       		.byte	0x5
  947 0417 61       		.byte	0x61
  948 0418 9E000000 		.4byte	0x9e
  949 041c 0007     		.2byte	0x700
  950 041e 0C       		.uleb128 0xc
- 951 041f 2F060000 		.4byte	.LASF70
+ 951 041f C1060000 		.4byte	.LASF70
  952 0423 05       		.byte	0x5
  953 0424 62       		.byte	0x62
  954 0425 9E000000 		.4byte	0x9e
@@ -1581,7 +1581,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 1
  960 0432 9E000000 		.4byte	0x9e
  961 0436 0807     		.2byte	0x708
  962 0438 0C       		.uleb128 0xc
- 963 0439 2D040000 		.4byte	.LASF72
+ 963 0439 22040000 		.4byte	.LASF72
  964 043d 05       		.byte	0x5
  965 043e 64       		.byte	0x64
  966 043f A3000000 		.4byte	0xa3
@@ -1593,32 +1593,32 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 1
  972 044c 9E000000 		.4byte	0x9e
  973 0450 1007     		.2byte	0x710
  974 0452 0C       		.uleb128 0xc
- 975 0453 6F030000 		.4byte	.LASF74
+ 975 0453 64030000 		.4byte	.LASF74
  976 0457 05       		.byte	0x5
  977 0458 66       		.byte	0x66
  978 0459 31060000 		.4byte	0x631
  979 045d 1407     		.2byte	0x714
  980 045f 0C       		.uleb128 0xc
- 981 0460 3E040000 		.4byte	.LASF75
+ 981 0460 33040000 		.4byte	.LASF75
  982 0464 05       		.byte	0x5
  983 0465 67       		.byte	0x67
  984 0466 9E000000 		.4byte	0x9e
  985 046a 0008     		.2byte	0x800
  986 046c 0C       		.uleb128 0xc
- 987 046d 90060000 		.4byte	.LASF76
+ 987 046d 22070000 		.4byte	.LASF76
  988 0471 05       		.byte	0x5
  989 0472 68       		.byte	0x68
  990 0473 9E000000 		.4byte	0x9e
  991 0477 0408     		.2byte	0x804
  992 0479 0C       		.uleb128 0xc
- 993 047a 7A030000 		.4byte	.LASF77
+ 993 047a 6F030000 		.4byte	.LASF77
  994 047e 05       		.byte	0x5
  995 047f 69       		.byte	0x69
  996 0480 4C060000 		.4byte	0x64c
  997 0484 0808     		.2byte	0x808
  998 0486 0C       		.uleb128 0xc
- 999 0487 06040000 		.4byte	.LASF78
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 28
+ 999 0487 FB030000 		.4byte	.LASF78
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccuTzbdn.s 			page 28
 
 
  1000 048b 05       		.byte	0x5
@@ -1626,7 +1626,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 1
  1002 048d 9E000000 		.4byte	0x9e
  1003 0491 007F     		.2byte	0x7f00
  1004 0493 0C       		.uleb128 0xc
- 1005 0494 77040000 		.4byte	.LASF79
+ 1005 0494 6C040000 		.4byte	.LASF79
  1006 0498 05       		.byte	0x5
  1007 0499 6B       		.byte	0x6b
  1008 049a 9E000000 		.4byte	0x9e
@@ -1644,7 +1644,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 1
  1020 04b4 9E000000 		.4byte	0x9e
  1021 04b8 0C7F     		.2byte	0x7f0c
  1022 04ba 0C       		.uleb128 0xc
- 1023 04bb 85030000 		.4byte	.LASF82
+ 1023 04bb 7A030000 		.4byte	.LASF82
  1024 04bf 05       		.byte	0x5
  1025 04c0 6E       		.byte	0x6e
  1026 04c1 56060000 		.4byte	0x656
@@ -1656,29 +1656,29 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 1
  1032 04ce 9E000000 		.4byte	0x9e
  1033 04d2 307F     		.2byte	0x7f30
  1034 04d4 0C       		.uleb128 0xc
- 1035 04d5 90030000 		.4byte	.LASF84
+ 1035 04d5 85030000 		.4byte	.LASF84
  1036 04d9 05       		.byte	0x5
  1037 04da 70       		.byte	0x70
  1038 04db 71060000 		.4byte	0x671
  1039 04df 347F     		.2byte	0x7f34
  1040 04e1 0C       		.uleb128 0xc
- 1041 04e2 8B040000 		.4byte	.LASF85
+ 1041 04e2 80040000 		.4byte	.LASF85
  1042 04e6 05       		.byte	0x5
  1043 04e7 71       		.byte	0x71
  1044 04e8 9E000000 		.4byte	0x9e
  1045 04ec 10FF     		.2byte	0xff10
  1046 04ee 0C       		.uleb128 0xc
- 1047 04ef 9B030000 		.4byte	.LASF86
+ 1047 04ef 90030000 		.4byte	.LASF86
  1048 04f3 05       		.byte	0x5
  1049 04f4 72       		.byte	0x72
  1050 04f5 A3000000 		.4byte	0xa3
  1051 04f9 14FF     		.2byte	0xff14
  1052 04fb 0C       		.uleb128 0xc
- 1053 04fc AC040000 		.4byte	.LASF87
+ 1053 04fc A1040000 		.4byte	.LASF87
  1054 0500 05       		.byte	0x5
  1055 0501 73       		.byte	0x73
  1056 0502 9E000000 		.4byte	0x9e
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 29
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccuTzbdn.s 			page 29
 
 
  1057 0506 18FF     		.2byte	0xff18
@@ -1701,13 +1701,13 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 1
  1074 0529 9E000000 		.4byte	0x9e
  1075 052d 24FF     		.2byte	0xff24
  1076 052f 0C       		.uleb128 0xc
- 1077 0530 3E050000 		.4byte	.LASF91
+ 1077 0530 33050000 		.4byte	.LASF91
  1078 0534 05       		.byte	0x5
  1079 0535 77       		.byte	0x77
  1080 0536 9E000000 		.4byte	0x9e
  1081 053a 28FF     		.2byte	0xff28
  1082 053c 0C       		.uleb128 0xc
- 1083 053d 51050000 		.4byte	.LASF92
+ 1083 053d 46050000 		.4byte	.LASF92
  1084 0541 05       		.byte	0x5
  1085 0542 78       		.byte	0x78
  1086 0543 9E000000 		.4byte	0x9e
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 1
  1111 057e 18010000 		.4byte	0x118
  1112 0582 06       		.uleb128 0x6
  1113 0583 7D050000 		.4byte	0x57d
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 30
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccuTzbdn.s 			page 30
 
 
  1114 0587 07       		.uleb128 0x7
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 1
  1168 060b 08       		.uleb128 0x8
  1169 060c 97000000 		.4byte	0x97
  1170 0610 20       		.byte	0x20
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 31
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccuTzbdn.s 			page 31
 
 
  1171 0611 00       		.byte	0
@@ -1844,7 +1844,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 1
  1211 0671 06       		.uleb128 0x6
  1212 0672 6C060000 		.4byte	0x66c
  1213 0676 03       		.uleb128 0x3
- 1214 0677 5F060000 		.4byte	.LASF93
+ 1214 0677 F1060000 		.4byte	.LASF93
  1215 067b 05       		.byte	0x5
  1216 067c 79       		.byte	0x79
  1217 067d D6010000 		.4byte	0x1d6
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 1
  1225 068f 04       		.byte	0x4
  1226 0690 27030000 		.4byte	.LASF95
  1227 0694 0E       		.uleb128 0xe
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 32
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccuTzbdn.s 			page 32
 
 
  1228 0695 A4020000 		.4byte	.LASF96
@@ -1868,7 +1868,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 1
  1232 06a0 02       		.uleb128 0x2
  1233 06a1 01       		.byte	0x1
  1234 06a2 08       		.byte	0x8
- 1235 06a3 5B040000 		.4byte	.LASF97
+ 1235 06a3 50040000 		.4byte	.LASF97
  1236 06a7 02       		.uleb128 0x2
  1237 06a8 04       		.byte	0x4
  1238 06a9 04       		.byte	0x4
@@ -1876,9 +1876,9 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 1
  1240 06ae 02       		.uleb128 0x2
  1241 06af 08       		.byte	0x8
  1242 06b0 04       		.byte	0x4
- 1243 06b1 8A050000 		.4byte	.LASF99
+ 1243 06b1 7F050000 		.4byte	.LASF99
  1244 06b5 0F       		.uleb128 0xf
- 1245 06b6 BA060000 		.4byte	.LASF113
+ 1245 06b6 4C070000 		.4byte	.LASF113
  1246 06ba 01       		.byte	0x1
  1247 06bb 5401     		.2byte	0x154
  1248 06bd 00000000 		.4byte	.LFB131
@@ -1902,7 +1902,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 1
  1266 06e7 01       		.uleb128 0x1
  1267 06e8 9C       		.byte	0x9c
  1268 06e9 12       		.uleb128 0x12
- 1269 06ea BA050000 		.4byte	.LASF114
+ 1269 06ea 4C060000 		.4byte	.LASF114
  1270 06ee 02       		.byte	0x2
  1271 06ef 51       		.byte	0x51
  1272 06f0 FE060000 		.4byte	0x6fe
@@ -1913,12 +1913,12 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 1
  1277 06fe 02       		.uleb128 0x2
  1278 06ff 01       		.byte	0x1
  1279 0700 02       		.byte	0x2
- 1280 0701 BD040000 		.4byte	.LASF102
+ 1280 0701 B2040000 		.4byte	.LASF102
  1281 0705 11       		.uleb128 0x11
- 1282 0706 91050000 		.4byte	.LASF103
+ 1282 0706 86050000 		.4byte	.LASF103
  1283 070a 02       		.byte	0x2
  1284 070b 5F       		.byte	0x5f
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 33
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccuTzbdn.s 			page 33
 
 
  1285 070c 00000000 		.4byte	.LFB142
@@ -1935,7 +1935,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 1
  1296 0726 9C       		.byte	0x9c
  1297 0727 3A070000 		.4byte	0x73a
  1298 072b 14       		.uleb128 0x14
- 1299 072c C8050000 		.4byte	.LASF106
+ 1299 072c 5A060000 		.4byte	.LASF106
  1300 0730 02       		.byte	0x2
  1301 0731 75       		.byte	0x75
  1302 0732 8C000000 		.4byte	0x8c
@@ -1944,7 +1944,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 1
  1305 0738 74       		.sleb128 -12
  1306 0739 00       		.byte	0
  1307 073a 13       		.uleb128 0x13
- 1308 073b 3D060000 		.4byte	.LASF105
+ 1308 073b CF060000 		.4byte	.LASF105
  1309 073f 02       		.byte	0x2
  1310 0740 94       		.byte	0x94
  1311 0741 00000000 		.4byte	.LFB144
@@ -1953,7 +1953,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 1
  1314 074a 9C       		.byte	0x9c
  1315 074b 5E070000 		.4byte	0x75e
  1316 074f 14       		.uleb128 0x14
- 1317 0750 17040000 		.4byte	.LASF107
+ 1317 0750 0C040000 		.4byte	.LASF107
  1318 0754 02       		.byte	0x2
  1319 0755 94       		.byte	0x94
  1320 0756 8C000000 		.4byte	0x8c
@@ -1962,7 +1962,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 1
  1323 075c 74       		.sleb128 -12
  1324 075d 00       		.byte	0
  1325 075e 11       		.uleb128 0x11
- 1326 075f CE030000 		.4byte	.LASF108
+ 1326 075f C3030000 		.4byte	.LASF108
  1327 0763 02       		.byte	0x2
  1328 0764 A8       		.byte	0xa8
  1329 0765 00000000 		.4byte	.LFB145
@@ -1970,7 +1970,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 1
  1331 076d 01       		.uleb128 0x1
  1332 076e 9C       		.byte	0x9c
  1333 076f 10       		.uleb128 0x10
- 1334 0770 29050000 		.4byte	.LASF109
+ 1334 0770 1E050000 		.4byte	.LASF109
  1335 0774 02       		.byte	0x2
  1336 0775 BB       		.byte	0xbb
  1337 0776 00000000 		.4byte	.LFB146
@@ -1978,10 +1978,10 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 1
  1339 077e 01       		.uleb128 0x1
  1340 077f 9C       		.byte	0x9c
  1341 0780 15       		.uleb128 0x15
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 34
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccuTzbdn.s 			page 34
 
 
- 1342 0781 75060000 		.4byte	.LASF115
+ 1342 0781 07070000 		.4byte	.LASF115
  1343 0785 08       		.byte	0x8
  1344 0786 F907     		.2byte	0x7f9
  1345 0788 8C070000 		.4byte	0x78c
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 1
  1396 002d 00       		.byte	0
  1397 002e 0B       		.uleb128 0xb
  1398 002f 0B       		.uleb128 0xb
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 35
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccuTzbdn.s 			page 35
 
 
  1399 0030 3E       		.uleb128 0x3e
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 1
  1453 0066 03       		.uleb128 0x3
  1454 0067 0E       		.uleb128 0xe
  1455 0068 3A       		.uleb128 0x3a
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 36
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccuTzbdn.s 			page 36
 
 
  1456 0069 0B       		.uleb128 0xb
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 1
  1510 009f 05       		.uleb128 0x5
  1511 00a0 49       		.uleb128 0x49
  1512 00a1 13       		.uleb128 0x13
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 37
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccuTzbdn.s 			page 37
 
 
  1513 00a2 00       		.byte	0
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 1
  1567 00da 0B       		.uleb128 0xb
  1568 00db 3B       		.uleb128 0x3b
  1569 00dc 0B       		.uleb128 0xb
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 38
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccuTzbdn.s 			page 38
 
 
  1570 00dd 27       		.uleb128 0x27
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 1
  1624 0115 9642     		.uleb128 0x2116
  1625 0117 19       		.uleb128 0x19
  1626 0118 01       		.uleb128 0x1
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 39
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccuTzbdn.s 			page 39
 
 
  1627 0119 13       		.uleb128 0x13
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 1
  1681 0038 00000000 		.4byte	.LFB143
  1682 003c 50000000 		.4byte	.LFE143-.LFB143
  1683 0040 00000000 		.4byte	.LFB144
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 40
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccuTzbdn.s 			page 40
 
 
  1684 0044 50000000 		.4byte	.LFE144-.LFB144
@@ -2372,8 +2372,8 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 1
  1712 004c 00000000 		.4byte	0
  1713              		.section	.debug_line,"",%progbits
  1714              	.Ldebug_line0:
- 1715 0000 1A030000 		.section	.debug_str,"MS",%progbits,1
- 1715      02004A02 
+ 1715 0000 2E030000 		.section	.debug_str,"MS",%progbits,1
+ 1715      02005E02 
  1715      00000201 
  1715      FB0E0D00 
  1715      01010101 
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 1
  1723      4C00
  1724              	.LASF110:
  1725 0037 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 41
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccuTzbdn.s 			page 41
 
 
  1725      43313120 
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 1
  1744      4C00
  1745              	.LASF49:
  1746 014e 434C4B5F 		.ascii	"CLK_OUTPUT_FAST\000"
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 42
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccuTzbdn.s 			page 42
 
 
  1746      4F555450 
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 1
  1769              	.LASF23:
  1770 01e6 4D435744 		.ascii	"MCWDT_INTR_MASKED\000"
  1770      545F494E 
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 43
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccuTzbdn.s 			page 43
 
 
  1770      54525F4D 
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 1
  1794      53544154 
  1794      555300
  1795              	.LASF4:
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 44
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccuTzbdn.s 			page 44
 
 
  1796 028c 6C6F6E67 		.ascii	"long int\000"
@@ -2638,346 +2638,350 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 1
  1818      626C6500 
  1819              	.LASF33:
  1820 0333 5057525F 		.ascii	"PWR_HIB_DATA\000"
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 45
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccuTzbdn.s 			page 45
 
 
  1820      4849425F 
  1820      44415441 
  1820      00
- 1821              	.LASF20:
- 1822 0340 4D435744 		.ascii	"MCWDT_INTR\000"
- 1822      545F494E 
- 1822      545200
- 1823              	.LASF1:
- 1824 034b 756E7369 		.ascii	"unsigned char\000"
- 1824      676E6564 
- 1824      20636861 
- 1824      7200
- 1825              	.LASF66:
- 1826 0359 52455345 		.ascii	"RESERVED10\000"
+ 1821              	.LASF1:
+ 1822 0340 756E7369 		.ascii	"unsigned char\000"
+ 1822      676E6564 
+ 1822      20636861 
+ 1822      7200
+ 1823              	.LASF66:
+ 1824 034e 52455345 		.ascii	"RESERVED10\000"
+ 1824      52564544 
+ 1824      313000
+ 1825              	.LASF68:
+ 1826 0359 52455345 		.ascii	"RESERVED11\000"
  1826      52564544 
- 1826      313000
- 1827              	.LASF68:
- 1828 0364 52455345 		.ascii	"RESERVED11\000"
+ 1826      313100
+ 1827              	.LASF74:
+ 1828 0364 52455345 		.ascii	"RESERVED12\000"
  1828      52564544 
- 1828      313100
- 1829              	.LASF74:
- 1830 036f 52455345 		.ascii	"RESERVED12\000"
+ 1828      313200
+ 1829              	.LASF77:
+ 1830 036f 52455345 		.ascii	"RESERVED13\000"
  1830      52564544 
- 1830      313200
- 1831              	.LASF77:
- 1832 037a 52455345 		.ascii	"RESERVED13\000"
+ 1830      313300
+ 1831              	.LASF82:
+ 1832 037a 52455345 		.ascii	"RESERVED14\000"
  1832      52564544 
- 1832      313300
- 1833              	.LASF82:
- 1834 0385 52455345 		.ascii	"RESERVED14\000"
+ 1832      313400
+ 1833              	.LASF84:
+ 1834 0385 52455345 		.ascii	"RESERVED15\000"
  1834      52564544 
- 1834      313400
- 1835              	.LASF84:
- 1836 0390 52455345 		.ascii	"RESERVED15\000"
+ 1834      313500
+ 1835              	.LASF86:
+ 1836 0390 52455345 		.ascii	"RESERVED16\000"
  1836      52564544 
- 1836      313500
- 1837              	.LASF86:
- 1838 039b 52455345 		.ascii	"RESERVED16\000"
- 1838      52564544 
- 1838      313600
- 1839              	.LASF27:
- 1840 03a6 5057525F 		.ascii	"PWR_CTL\000"
- 1840      43544C00 
- 1841              	.LASF9:
- 1842 03ae 6C6F6E67 		.ascii	"long long unsigned int\000"
- 1842      206C6F6E 
- 1842      6720756E 
- 1842      7369676E 
- 1842      65642069 
- 1843              	.LASF12:
- 1844 03c5 75696E74 		.ascii	"uint32_t\000"
- 1844      33325F74 
- 1844      00
- 1845              	.LASF108:
- 1846 03ce 43795F57 		.ascii	"Cy_WDT_ClearInterrupt\000"
- 1846      44545F43 
- 1846      6C656172 
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 46
+ 1836      313600
+ 1837              	.LASF27:
+ 1838 039b 5057525F 		.ascii	"PWR_CTL\000"
+ 1838      43544C00 
+ 1839              	.LASF9:
+ 1840 03a3 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1840      206C6F6E 
+ 1840      6720756E 
+ 1840      7369676E 
+ 1840      65642069 
+ 1841              	.LASF12:
+ 1842 03ba 75696E74 		.ascii	"uint32_t\000"
+ 1842      33325F74 
+ 1842      00
+ 1843              	.LASF108:
+ 1844 03c3 43795F57 		.ascii	"Cy_WDT_ClearInterrupt\000"
+ 1844      44545F43 
+ 1844      6C656172 
+ 1844      496E7465 
+ 1844      72727570 
+ 1845              	.LASF10:
+ 1846 03d9 756E7369 		.ascii	"unsigned int\000"
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccuTzbdn.s 			page 46
 
 
- 1846      496E7465 
- 1846      72727570 
- 1847              	.LASF10:
- 1848 03e4 756E7369 		.ascii	"unsigned int\000"
- 1848      676E6564 
- 1848      20696E74 
- 1848      00
- 1849              	.LASF26:
- 1850 03f1 4D435744 		.ascii	"MCWDT_STRUCT_V1_Type\000"
- 1850      545F5354 
- 1850      52554354 
- 1850      5F56315F 
- 1850      54797065 
- 1851              	.LASF78:
- 1852 0406 5057525F 		.ascii	"PWR_TRIM_REF_CTL\000"
- 1852      5452494D 
- 1852      5F524546 
- 1852      5F43544C 
- 1852      00
- 1853              	.LASF107:
- 1854 0417 62697473 		.ascii	"bitsNum\000"
- 1854      4E756D00 
- 1855              	.LASF31:
- 1856 041f 5057525F 		.ascii	"PWR_BUCK_CTL2\000"
- 1856      4255434B 
- 1856      5F43544C 
- 1856      3200
- 1857              	.LASF72:
- 1858 042d 53525353 		.ascii	"SRSS_INTR_MASKED\000"
- 1858      5F494E54 
- 1858      525F4D41 
- 1858      534B4544 
- 1858      00
- 1859              	.LASF75:
- 1860 043e 5245535F 		.ascii	"RES_CAUSE\000"
- 1860      43415553 
- 1860      4500
- 1861              	.LASF3:
- 1862 0448 73686F72 		.ascii	"short unsigned int\000"
- 1862      7420756E 
- 1862      7369676E 
- 1862      65642069 
- 1862      6E7400
- 1863              	.LASF97:
- 1864 045b 63686172 		.ascii	"char\000"
- 1864      00
- 1865              	.LASF63:
- 1866 0460 434C4B5F 		.ascii	"CLK_FLL_STATUS\000"
- 1866      464C4C5F 
- 1866      53544154 
- 1866      555300
- 1867              	.LASF11:
- 1868 046f 696E7433 		.ascii	"int32_t\000"
- 1868      325F7400 
- 1869              	.LASF79:
- 1870 0477 5057525F 		.ascii	"PWR_TRIM_BODOVP_CTL\000"
+ 1846      676E6564 
+ 1846      20696E74 
+ 1846      00
+ 1847              	.LASF26:
+ 1848 03e6 4D435744 		.ascii	"MCWDT_STRUCT_V1_Type\000"
+ 1848      545F5354 
+ 1848      52554354 
+ 1848      5F56315F 
+ 1848      54797065 
+ 1849              	.LASF78:
+ 1850 03fb 5057525F 		.ascii	"PWR_TRIM_REF_CTL\000"
+ 1850      5452494D 
+ 1850      5F524546 
+ 1850      5F43544C 
+ 1850      00
+ 1851              	.LASF107:
+ 1852 040c 62697473 		.ascii	"bitsNum\000"
+ 1852      4E756D00 
+ 1853              	.LASF31:
+ 1854 0414 5057525F 		.ascii	"PWR_BUCK_CTL2\000"
+ 1854      4255434B 
+ 1854      5F43544C 
+ 1854      3200
+ 1855              	.LASF72:
+ 1856 0422 53525353 		.ascii	"SRSS_INTR_MASKED\000"
+ 1856      5F494E54 
+ 1856      525F4D41 
+ 1856      534B4544 
+ 1856      00
+ 1857              	.LASF75:
+ 1858 0433 5245535F 		.ascii	"RES_CAUSE\000"
+ 1858      43415553 
+ 1858      4500
+ 1859              	.LASF3:
+ 1860 043d 73686F72 		.ascii	"short unsigned int\000"
+ 1860      7420756E 
+ 1860      7369676E 
+ 1860      65642069 
+ 1860      6E7400
+ 1861              	.LASF97:
+ 1862 0450 63686172 		.ascii	"char\000"
+ 1862      00
+ 1863              	.LASF63:
+ 1864 0455 434C4B5F 		.ascii	"CLK_FLL_STATUS\000"
+ 1864      464C4C5F 
+ 1864      53544154 
+ 1864      555300
+ 1865              	.LASF11:
+ 1866 0464 696E7433 		.ascii	"int32_t\000"
+ 1866      325F7400 
+ 1867              	.LASF79:
+ 1868 046c 5057525F 		.ascii	"PWR_TRIM_BODOVP_CTL\000"
+ 1868      5452494D 
+ 1868      5F424F44 
+ 1868      4F56505F 
+ 1868      43544C00 
+ 1869              	.LASF85:
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccuTzbdn.s 			page 47
+
+
+ 1870 0480 5057525F 		.ascii	"PWR_TRIM_LVD_CTL\000"
  1870      5452494D 
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 47
-
-
- 1870      5F424F44 
- 1870      4F56505F 
- 1870      43544C00 
- 1871              	.LASF85:
- 1872 048b 5057525F 		.ascii	"PWR_TRIM_LVD_CTL\000"
- 1872      5452494D 
- 1872      5F4C5644 
- 1872      5F43544C 
- 1872      00
- 1873              	.LASF42:
- 1874 049c 434C4B5F 		.ascii	"CLK_ROOT_SELECT\000"
- 1874      524F4F54 
- 1874      5F53454C 
- 1874      45435400 
- 1875              	.LASF87:
- 1876 04ac 434C4B5F 		.ascii	"CLK_TRIM_ILO_CTL\000"
- 1876      5452494D 
- 1876      5F494C4F 
- 1876      5F43544C 
- 1876      00
- 1877              	.LASF102:
- 1878 04bd 5F426F6F 		.ascii	"_Bool\000"
- 1878      6C00
- 1879              	.LASF69:
- 1880 04c3 53525353 		.ascii	"SRSS_INTR\000"
- 1880      5F494E54 
- 1880      5200
- 1881              	.LASF57:
- 1882 04cd 434C4B5F 		.ascii	"CLK_PILO_CONFIG\000"
- 1882      50494C4F 
- 1882      5F434F4E 
- 1882      46494700 
- 1883              	.LASF60:
- 1884 04dd 434C4B5F 		.ascii	"CLK_FLL_CONFIG2\000"
+ 1870      5F4C5644 
+ 1870      5F43544C 
+ 1870      00
+ 1871              	.LASF42:
+ 1872 0491 434C4B5F 		.ascii	"CLK_ROOT_SELECT\000"
+ 1872      524F4F54 
+ 1872      5F53454C 
+ 1872      45435400 
+ 1873              	.LASF87:
+ 1874 04a1 434C4B5F 		.ascii	"CLK_TRIM_ILO_CTL\000"
+ 1874      5452494D 
+ 1874      5F494C4F 
+ 1874      5F43544C 
+ 1874      00
+ 1875              	.LASF102:
+ 1876 04b2 5F426F6F 		.ascii	"_Bool\000"
+ 1876      6C00
+ 1877              	.LASF69:
+ 1878 04b8 53525353 		.ascii	"SRSS_INTR\000"
+ 1878      5F494E54 
+ 1878      5200
+ 1879              	.LASF57:
+ 1880 04c2 434C4B5F 		.ascii	"CLK_PILO_CONFIG\000"
+ 1880      50494C4F 
+ 1880      5F434F4E 
+ 1880      46494700 
+ 1881              	.LASF60:
+ 1882 04d2 434C4B5F 		.ascii	"CLK_FLL_CONFIG2\000"
+ 1882      464C4C5F 
+ 1882      434F4E46 
+ 1882      49473200 
+ 1883              	.LASF61:
+ 1884 04e2 434C4B5F 		.ascii	"CLK_FLL_CONFIG3\000"
  1884      464C4C5F 
  1884      434F4E46 
- 1884      49473200 
- 1885              	.LASF61:
- 1886 04ed 434C4B5F 		.ascii	"CLK_FLL_CONFIG3\000"
+ 1884      49473300 
+ 1885              	.LASF62:
+ 1886 04f2 434C4B5F 		.ascii	"CLK_FLL_CONFIG4\000"
  1886      464C4C5F 
  1886      434F4E46 
- 1886      49473300 
- 1887              	.LASF62:
- 1888 04fd 434C4B5F 		.ascii	"CLK_FLL_CONFIG4\000"
- 1888      464C4C5F 
- 1888      434F4E46 
- 1888      49473400 
- 1889              	.LASF36:
- 1890 050d 5744545F 		.ascii	"WDT_CNT\000"
- 1890      434E5400 
- 1891              	.LASF25:
- 1892 0515 52455345 		.ascii	"RESERVED1\000"
+ 1886      49473400 
+ 1887              	.LASF36:
+ 1888 0502 5744545F 		.ascii	"WDT_CNT\000"
+ 1888      434E5400 
+ 1889              	.LASF25:
+ 1890 050a 52455345 		.ascii	"RESERVED1\000"
+ 1890      52564544 
+ 1890      3100
+ 1891              	.LASF34:
+ 1892 0514 52455345 		.ascii	"RESERVED2\000"
  1892      52564544 
- 1892      3100
- 1893              	.LASF34:
- 1894 051f 52455345 		.ascii	"RESERVED2\000"
- 1894      52564544 
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 48
+ 1892      3200
+ 1893              	.LASF109:
+ 1894 051e 43795F57 		.ascii	"Cy_WDT_ClearWatchdog\000"
+ 1894      44545F43 
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccuTzbdn.s 			page 48
 
 
- 1894      3200
- 1895              	.LASF109:
- 1896 0529 43795F57 		.ascii	"Cy_WDT_ClearWatchdog\000"
- 1896      44545F43 
- 1896      6C656172 
- 1896      57617463 
- 1896      68646F67 
- 1897              	.LASF91:
- 1898 053e 434C4B5F 		.ascii	"CLK_TRIM_PILO_CTL2\000"
+ 1894      6C656172 
+ 1894      57617463 
+ 1894      68646F67 
+ 1895              	.LASF91:
+ 1896 0533 434C4B5F 		.ascii	"CLK_TRIM_PILO_CTL2\000"
+ 1896      5452494D 
+ 1896      5F50494C 
+ 1896      4F5F4354 
+ 1896      4C3200
+ 1897              	.LASF92:
+ 1898 0546 434C4B5F 		.ascii	"CLK_TRIM_PILO_CTL3\000"
  1898      5452494D 
  1898      5F50494C 
  1898      4F5F4354 
- 1898      4C3200
- 1899              	.LASF92:
- 1900 0551 434C4B5F 		.ascii	"CLK_TRIM_PILO_CTL3\000"
- 1900      5452494D 
- 1900      5F50494C 
- 1900      4F5F4354 
- 1900      4C3300
- 1901              	.LASF7:
- 1902 0564 6C6F6E67 		.ascii	"long unsigned int\000"
- 1902      20756E73 
- 1902      69676E65 
- 1902      6420696E 
- 1902      7400
- 1903              	.LASF56:
- 1904 0576 52455345 		.ascii	"RESERVED7\000"
+ 1898      4C3300
+ 1899              	.LASF7:
+ 1900 0559 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1900      20756E73 
+ 1900      69676E65 
+ 1900      6420696E 
+ 1900      7400
+ 1901              	.LASF56:
+ 1902 056b 52455345 		.ascii	"RESERVED7\000"
+ 1902      52564544 
+ 1902      3700
+ 1903              	.LASF58:
+ 1904 0575 52455345 		.ascii	"RESERVED8\000"
  1904      52564544 
- 1904      3700
- 1905              	.LASF58:
- 1906 0580 52455345 		.ascii	"RESERVED8\000"
- 1906      52564544 
- 1906      3800
- 1907              	.LASF99:
- 1908 058a 646F7562 		.ascii	"double\000"
- 1908      6C6500
- 1909              	.LASF103:
- 1910 0591 43795F57 		.ascii	"Cy_WDT_Unlock\000"
- 1910      44545F55 
- 1910      6E6C6F63 
- 1910      6B00
- 1911              	.LASF39:
- 1912 059f 4D435744 		.ascii	"MCWDT_STRUCT\000"
- 1912      545F5354 
- 1912      52554354 
- 1912      00
- 1913              	.LASF45:
- 1914 05ac 434C4B5F 		.ascii	"CLK_TIMER_CTL\000"
- 1914      54494D45 
- 1914      525F4354 
- 1914      4C00
- 1915              	.LASF114:
- 1916 05ba 43795F57 		.ascii	"Cy_WDT_Locked\000"
- 1916      44545F4C 
- 1916      6F636B65 
- 1916      6400
- 1917              	.LASF106:
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 49
+ 1904      3800
+ 1905              	.LASF99:
+ 1906 057f 646F7562 		.ascii	"double\000"
+ 1906      6C6500
+ 1907              	.LASF103:
+ 1908 0586 43795F57 		.ascii	"Cy_WDT_Unlock\000"
+ 1908      44545F55 
+ 1908      6E6C6F63 
+ 1908      6B00
+ 1909              	.LASF39:
+ 1910 0594 4D435744 		.ascii	"MCWDT_STRUCT\000"
+ 1910      545F5354 
+ 1910      52554354 
+ 1910      00
+ 1911              	.LASF112:
+ 1912 05a1 433A5C55 		.ascii	"C:\\Users\\tmj32\\Documents\\TCNJ\\Senior_Project\\"
+ 1912      73657273 
+ 1912      5C746D6A 
+ 1912      33325C44 
+ 1912      6F63756D 
+ 1913 05ce 4F736369 		.ascii	"Oscilloscope_Senior_Project\\tcom_engineering\\embe"
+ 1913      6C6C6F73 
+ 1913      636F7065 
+ 1913      5F53656E 
+ 1913      696F725F 
+ 1914 05ff 645F7377 		.ascii	"d_sw\\tcom_app\\tcom_app_psoc6_lvgl6\\tcom_displ_te"
+ 1914      5C74636F 
+ 1914      6D5F6170 
+ 1914      705C7463 
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccuTzbdn.s 			page 49
 
 
- 1918 05c8 6D617463 		.ascii	"match\000"
- 1918      6800
- 1919              	.LASF52:
- 1920 05ce 434C4B5F 		.ascii	"CLK_CAL_CNT2\000"
- 1920      43414C5F 
- 1920      434E5432 
- 1920      00
- 1921              	.LASF111:
- 1922 05db 47656E65 		.ascii	"Generated_Source\\PSoC6\\pdl\\drivers\\peripheral\\"
- 1922      72617465 
- 1922      645F536F 
- 1922      75726365 
- 1922      5C50536F 
- 1923 0609 7764745C 		.ascii	"wdt\\cy_wdt.c\000"
- 1923      63795F77 
- 1923      64742E63 
+ 1914      6F6D5F61 
+ 1915 062f 73745F70 		.ascii	"st_psoc6.cydsn\000"
+ 1915      736F6336 
+ 1915      2E637964 
+ 1915      736E00
+ 1916              	.LASF45:
+ 1917 063e 434C4B5F 		.ascii	"CLK_TIMER_CTL\000"
+ 1917      54494D45 
+ 1917      525F4354 
+ 1917      4C00
+ 1918              	.LASF114:
+ 1919 064c 43795F57 		.ascii	"Cy_WDT_Locked\000"
+ 1919      44545F4C 
+ 1919      6F636B65 
+ 1919      6400
+ 1920              	.LASF106:
+ 1921 065a 6D617463 		.ascii	"match\000"
+ 1921      6800
+ 1922              	.LASF52:
+ 1923 0660 434C4B5F 		.ascii	"CLK_CAL_CNT2\000"
+ 1923      43414C5F 
+ 1923      434E5432 
  1923      00
- 1924              	.LASF24:
- 1925 0616 4D435744 		.ascii	"MCWDT_LOCK\000"
- 1925      545F4C4F 
- 1925      434B00
- 1926              	.LASF28:
- 1927 0621 5057525F 		.ascii	"PWR_HIBERNATE\000"
- 1927      48494245 
- 1927      524E4154 
- 1927      4500
- 1928              	.LASF70:
- 1929 062f 53525353 		.ascii	"SRSS_INTR_SET\000"
- 1929      5F494E54 
- 1929      525F5345 
- 1929      5400
- 1930              	.LASF105:
- 1931 063d 43795F57 		.ascii	"Cy_WDT_SetIgnoreBits\000"
- 1931      44545F53 
- 1931      65744967 
- 1931      6E6F7265 
- 1931      42697473 
- 1932              	.LASF18:
- 1933 0652 4D435744 		.ascii	"MCWDT_CONFIG\000"
- 1933      545F434F 
- 1933      4E464947 
- 1933      00
- 1934              	.LASF93:
- 1935 065f 53525353 		.ascii	"SRSS_V1_Type\000"
- 1935      5F56315F 
- 1935      54797065 
- 1935      00
- 1936              	.LASF14:
- 1937 066c 52455345 		.ascii	"RESERVED\000"
- 1937      52564544 
- 1937      00
- 1938              	.LASF115:
- 1939 0675 49544D5F 		.ascii	"ITM_RxBuffer\000"
- 1939      52784275 
- 1939      66666572 
- 1939      00
- 1940              	.LASF16:
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccta7S5a.s 			page 50
+ 1924              	.LASF111:
+ 1925 066d 47656E65 		.ascii	"Generated_Source\\PSoC6\\pdl\\drivers\\peripheral\\"
+ 1925      72617465 
+ 1925      645F536F 
+ 1925      75726365 
+ 1925      5C50536F 
+ 1926 069b 7764745C 		.ascii	"wdt\\cy_wdt.c\000"
+ 1926      63795F77 
+ 1926      64742E63 
+ 1926      00
+ 1927              	.LASF24:
+ 1928 06a8 4D435744 		.ascii	"MCWDT_LOCK\000"
+ 1928      545F4C4F 
+ 1928      434B00
+ 1929              	.LASF28:
+ 1930 06b3 5057525F 		.ascii	"PWR_HIBERNATE\000"
+ 1930      48494245 
+ 1930      524E4154 
+ 1930      4500
+ 1931              	.LASF70:
+ 1932 06c1 53525353 		.ascii	"SRSS_INTR_SET\000"
+ 1932      5F494E54 
+ 1932      525F5345 
+ 1932      5400
+ 1933              	.LASF105:
+ 1934 06cf 43795F57 		.ascii	"Cy_WDT_SetIgnoreBits\000"
+ 1934      44545F53 
+ 1934      65744967 
+ 1934      6E6F7265 
+ 1934      42697473 
+ 1935              	.LASF18:
+ 1936 06e4 4D435744 		.ascii	"MCWDT_CONFIG\000"
+ 1936      545F434F 
+ 1936      4E464947 
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccuTzbdn.s 			page 50
 
 
- 1941 0682 4D435744 		.ascii	"MCWDT_CNTHIGH\000"
- 1941      545F434E 
- 1941      54484947 
- 1941      4800
- 1942              	.LASF76:
- 1943 0690 5245535F 		.ascii	"RES_CAUSE2\000"
- 1943      43415553 
- 1943      453200
- 1944              	.LASF54:
- 1945 069b 434C4B5F 		.ascii	"CLK_ECO_CONFIG\000"
- 1945      45434F5F 
- 1945      434F4E46 
- 1945      494700
- 1946              	.LASF50:
- 1947 06aa 434C4B5F 		.ascii	"CLK_OUTPUT_SLOW\000"
- 1947      4F555450 
- 1947      55545F53 
- 1947      4C4F5700 
- 1948              	.LASF113:
- 1949 06ba 43795F57 		.ascii	"Cy_WDT_Disable\000"
- 1949      44545F44 
- 1949      69736162 
- 1949      6C6500
- 1950              	.LASF112:
- 1951 06c9 453A5C41 		.ascii	"E:\\Applications\\LittlevGL\\Oscilloscope_Senior_Pr"
- 1951      70706C69 
- 1951      63617469 
- 1951      6F6E735C 
- 1951      4C697474 
- 1952 06f9 6F6A6563 		.ascii	"oject\\tcom_engineering\\embed_sw\\tcom_app\\tcom_a"
- 1952      745C7463 
- 1952      6F6D5F65 
- 1952      6E67696E 
- 1952      65657269 
- 1953 0728 70705F70 		.ascii	"pp_psoc6_lvgl6\\tcom_displ_test_psoc6.cydsn\000"
- 1953      736F6336 
- 1953      5F6C7667 
- 1953      6C365C74 
- 1953      636F6D5F 
- 1954              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
+ 1936      00
+ 1937              	.LASF93:
+ 1938 06f1 53525353 		.ascii	"SRSS_V1_Type\000"
+ 1938      5F56315F 
+ 1938      54797065 
+ 1938      00
+ 1939              	.LASF14:
+ 1940 06fe 52455345 		.ascii	"RESERVED\000"
+ 1940      52564544 
+ 1940      00
+ 1941              	.LASF115:
+ 1942 0707 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 1942      52784275 
+ 1942      66666572 
+ 1942      00
+ 1943              	.LASF16:
+ 1944 0714 4D435744 		.ascii	"MCWDT_CNTHIGH\000"
+ 1944      545F434E 
+ 1944      54484947 
+ 1944      4800
+ 1945              	.LASF76:
+ 1946 0722 5245535F 		.ascii	"RES_CAUSE2\000"
+ 1946      43415553 
+ 1946      453200
+ 1947              	.LASF54:
+ 1948 072d 434C4B5F 		.ascii	"CLK_ECO_CONFIG\000"
+ 1948      45434F5F 
+ 1948      434F4E46 
+ 1948      494700
+ 1949              	.LASF50:
+ 1950 073c 434C4B5F 		.ascii	"CLK_OUTPUT_SLOW\000"
+ 1950      4F555450 
+ 1950      55545F53 
+ 1950      4C4F5700 
+ 1951              	.LASF113:
+ 1952 074c 43795F57 		.ascii	"Cy_WDT_Disable\000"
+ 1952      44545F44 
+ 1952      69736162 
+ 1952      6C6500
+ 1953              	.LASF20:
+ 1954 075b 4D435744 		.ascii	"MCWDT_INTR\000"
+ 1954      545F494E 
+ 1954      545200
+ 1955              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

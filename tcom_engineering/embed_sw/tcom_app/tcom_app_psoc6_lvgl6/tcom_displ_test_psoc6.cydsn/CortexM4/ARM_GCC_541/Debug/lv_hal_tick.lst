@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccCZBWFm.s 			page 1
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3lORhy.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccCZBWFm.s 			page 1
   21:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_hal/lv_hal_tick.c **** 
   22:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_hal/lv_hal_tick.c **** /*********************
   23:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_hal/lv_hal_tick.c ****  *      DEFINES
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccCZBWFm.s 			page 2
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3lORhy.s 			page 2
 
 
   24:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_hal/lv_hal_tick.c ****  *********************/
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccCZBWFm.s 			page 1
   57 0016 054A     		ldr	r2, .L2+4
   58 0018 1360     		str	r3, [r2]
   56:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_hal/lv_hal_tick.c **** }
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccCZBWFm.s 			page 3
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3lORhy.s 			page 3
 
 
   59              		.loc 1 56 0
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccCZBWFm.s 			page 1
  102 000a 1A70     		strb	r2, [r3]
   68:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_hal/lv_hal_tick.c ****         result        = sys_time;
  103              		.loc 1 68 0 discriminator 1
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccCZBWFm.s 			page 4
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3lORhy.s 			page 4
 
 
  104 000c 084B     		ldr	r3, .L7+4
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccCZBWFm.s 			page 1
  142              		.loc 1 84 0
  143              		.cfi_startproc
  144              		@ args = 0, pretend = 0, frame = 16
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccCZBWFm.s 			page 5
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3lORhy.s 			page 5
 
 
  145              		@ frame_needed = 1, uses_anonymous_args = 0
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccCZBWFm.s 			page 1
  187              		.cfi_def_cfa_register 13
  188              		@ sp needed
  189 0036 80BD     		pop	{r7, pc}
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccCZBWFm.s 			page 6
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3lORhy.s 			page 6
 
 
  190              		.cfi_endproc
@@ -306,8 +306,8 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccCZBWFm.s 			page 1
  192              		.size	lv_tick_elaps, .-lv_tick_elaps
  193              		.text
  194              	.Letext0:
- 195              		.file 2 "e:\\applications\\psoc\\psoc creator\\4.3\\psoc creator\\import\\gnu\\arm\\5.4.1\\arm-non
- 196              		.file 3 "e:\\applications\\psoc\\psoc creator\\4.3\\psoc creator\\import\\gnu\\arm\\5.4.1\\arm-non
+ 195              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.3\\psoc creator\\import\\gnu\\arm\\5.4.
+ 196              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.3\\psoc creator\\import\\gnu\\arm\\5.4.
  197              		.section	.debug_info,"",%progbits
  198              	.Ldebug_info0:
  199 0000 44010000 		.4byte	0x144
@@ -317,15 +317,15 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccCZBWFm.s 			page 1
  203 000b 01       		.uleb128 0x1
  204 000c 6A000000 		.4byte	.LASF22
  205 0010 0C       		.byte	0xc
- 206 0011 56020000 		.4byte	.LASF23
- 207 0015 83010000 		.4byte	.LASF24
+ 206 0011 69020000 		.4byte	.LASF23
+ 207 0015 8A010000 		.4byte	.LASF24
  208 0019 00000000 		.4byte	.Ldebug_ranges0+0
  209 001d 00000000 		.4byte	0
  210 0021 00000000 		.4byte	.Ldebug_line0
  211 0025 02       		.uleb128 0x2
  212 0026 01       		.byte	0x1
  213 0027 06       		.byte	0x6
- 214 0028 4A020000 		.4byte	.LASF0
+ 214 0028 5D020000 		.4byte	.LASF0
  215 002c 03       		.uleb128 0x3
  216 002d 00000000 		.4byte	.LASF5
  217 0031 02       		.byte	0x2
@@ -338,7 +338,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccCZBWFm.s 			page 1
  224 003e 02       		.uleb128 0x2
  225 003f 02       		.byte	0x2
  226 0040 05       		.byte	0x5
- 227 0041 22020000 		.4byte	.LASF2
+ 227 0041 35020000 		.4byte	.LASF2
  228 0045 02       		.uleb128 0x2
  229 0046 02       		.byte	0x2
  230 0047 07       		.byte	0x7
@@ -346,7 +346,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccCZBWFm.s 			page 1
  232 004c 02       		.uleb128 0x2
  233 004d 04       		.byte	0x4
  234 004e 05       		.byte	0x5
- 235 004f 35020000 		.4byte	.LASF4
+ 235 004f 48020000 		.4byte	.LASF4
  236 0053 03       		.uleb128 0x3
  237 0054 37010000 		.4byte	.LASF6
  238 0058 02       		.byte	0x2
@@ -358,11 +358,11 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccCZBWFm.s 			page 1
  244 0061 45000000 		.4byte	.LASF7
  245 0065 02       		.uleb128 0x2
  246 0066 08       		.byte	0x8
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccCZBWFm.s 			page 7
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3lORhy.s 			page 7
 
 
  247 0067 05       		.byte	0x5
- 248 0068 14020000 		.4byte	.LASF8
+ 248 0068 27020000 		.4byte	.LASF8
  249 006c 02       		.uleb128 0x2
  250 006d 08       		.byte	0x8
  251 006e 07       		.byte	0x7
@@ -381,14 +381,14 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccCZBWFm.s 			page 1
  264 0087 18       		.byte	0x18
  265 0088 2C000000 		.4byte	0x2c
  266 008c 03       		.uleb128 0x3
- 267 008d 2C020000 		.4byte	.LASF12
+ 267 008d 3F020000 		.4byte	.LASF12
  268 0091 03       		.byte	0x3
  269 0092 30       		.byte	0x30
  270 0093 53000000 		.4byte	0x53
  271 0097 02       		.uleb128 0x2
  272 0098 08       		.byte	0x8
  273 0099 04       		.byte	0x4
- 274 009a 3E020000 		.4byte	.LASF13
+ 274 009a 51020000 		.4byte	.LASF13
  275 009e 05       		.uleb128 0x5
  276 009f 42010000 		.4byte	.LASF25
  277 00a3 01       		.byte	0x1
@@ -418,10 +418,10 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccCZBWFm.s 			page 1
  301 00d6 9C       		.byte	0x9c
  302 00d7 EA000000 		.4byte	0xea
  303 00db 08       		.uleb128 0x8
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccCZBWFm.s 			page 8
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3lORhy.s 			page 8
 
 
- 304 00dc 0D020000 		.4byte	.LASF18
+ 304 00dc 83010000 		.4byte	.LASF18
  305 00e0 01       		.byte	0x1
  306 00e1 41       		.byte	0x41
  307 00e2 8C000000 		.4byte	0x8c
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccCZBWFm.s 			page 1
  358              		.section	.debug_abbrev,"",%progbits
  359              	.Ldebug_abbrev0:
  360 0000 01       		.uleb128 0x1
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccCZBWFm.s 			page 9
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3lORhy.s 			page 9
 
 
  361 0001 11       		.uleb128 0x11
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccCZBWFm.s 			page 1
  415 0037 2E       		.uleb128 0x2e
  416 0038 01       		.byte	0x1
  417 0039 3F       		.uleb128 0x3f
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccCZBWFm.s 			page 10
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3lORhy.s 			page 10
 
 
  418 003a 19       		.uleb128 0x19
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccCZBWFm.s 			page 1
  472 0071 06       		.uleb128 0x6
  473 0072 40       		.uleb128 0x40
  474 0073 18       		.uleb128 0x18
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccCZBWFm.s 			page 11
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3lORhy.s 			page 11
 
 
  475 0074 9742     		.uleb128 0x2117
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccCZBWFm.s 			page 1
  529 00ac 00       		.byte	0
  530 00ad 00       		.byte	0
  531              		.section	.debug_aranges,"",%progbits
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccCZBWFm.s 			page 12
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3lORhy.s 			page 12
 
 
  532 0000 2C000000 		.4byte	0x2c
@@ -688,8 +688,8 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccCZBWFm.s 			page 1
  556 001c 00000000 		.4byte	0
  557              		.section	.debug_line,"",%progbits
  558              	.Ldebug_line0:
- 559 0000 88010000 		.section	.debug_str,"MS",%progbits,1
- 559      02003901 
+ 559 0000 9C010000 		.section	.debug_str,"MS",%progbits,1
+ 559      02004D01 
  559      00000201 
  559      FB0E0D00 
  559      01010101 
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccCZBWFm.s 			page 1
  571 0037 6C765F74 		.ascii	"lv_tick_elaps\000"
  571      69636B5F 
  571      656C6170 
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccCZBWFm.s 			page 13
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3lORhy.s 			page 13
 
 
  571      7300
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccCZBWFm.s 			page 1
  590      20696E74 
  590      00
  591              	.LASF19:
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccCZBWFm.s 			page 14
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3lORhy.s 			page 14
 
 
  592 015b 6163745F 		.ascii	"act_time\000"
@@ -793,61 +793,65 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccCZBWFm.s 			page 1
  595              	.LASF11:
  596 017b 75696E74 		.ascii	"uint8_t\000"
  596      385F7400 
- 597              	.LASF24:
- 598 0183 453A5C41 		.ascii	"E:\\Applications\\LittlevGL\\Oscilloscope_Senior_Pr"
- 598      70706C69 
- 598      63617469 
- 598      6F6E735C 
- 598      4C697474 
- 599 01b3 6F6A6563 		.ascii	"oject\\tcom_engineering\\embed_sw\\tcom_app\\tcom_a"
- 599      745C7463 
- 599      6F6D5F65 
- 599      6E67696E 
- 599      65657269 
- 600 01e2 70705F70 		.ascii	"pp_psoc6_lvgl6\\tcom_displ_test_psoc6.cydsn\000"
- 600      736F6336 
- 600      5F6C7667 
- 600      6C365C74 
- 600      636F6D5F 
- 601              	.LASF18:
- 602 020d 72657375 		.ascii	"result\000"
- 602      6C7400
- 603              	.LASF8:
- 604 0214 6C6F6E67 		.ascii	"long long int\000"
- 604      206C6F6E 
- 604      6720696E 
- 604      7400
- 605              	.LASF2:
- 606 0222 73686F72 		.ascii	"short int\000"
- 606      7420696E 
- 606      7400
- 607              	.LASF12:
- 608 022c 75696E74 		.ascii	"uint32_t\000"
- 608      33325F74 
- 608      00
- 609              	.LASF4:
- 610 0235 6C6F6E67 		.ascii	"long int\000"
- 610      20696E74 
- 610      00
- 611              	.LASF13:
- 612 023e 6C6F6E67 		.ascii	"long double\000"
- 612      20646F75 
- 612      626C6500 
- 613              	.LASF0:
- 614 024a 7369676E 		.ascii	"signed char\000"
- 614      65642063 
- 614      68617200 
- 615              	.LASF23:
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccCZBWFm.s 			page 15
+ 597              	.LASF18:
+ 598 0183 72657375 		.ascii	"result\000"
+ 598      6C7400
+ 599              	.LASF24:
+ 600 018a 433A5C55 		.ascii	"C:\\Users\\tmj32\\Documents\\TCNJ\\Senior_Project\\"
+ 600      73657273 
+ 600      5C746D6A 
+ 600      33325C44 
+ 600      6F63756D 
+ 601 01b7 4F736369 		.ascii	"Oscilloscope_Senior_Project\\tcom_engineering\\embe"
+ 601      6C6C6F73 
+ 601      636F7065 
+ 601      5F53656E 
+ 601      696F725F 
+ 602 01e8 645F7377 		.ascii	"d_sw\\tcom_app\\tcom_app_psoc6_lvgl6\\tcom_displ_te"
+ 602      5C74636F 
+ 602      6D5F6170 
+ 602      705C7463 
+ 602      6F6D5F61 
+ 603 0218 73745F70 		.ascii	"st_psoc6.cydsn\000"
+ 603      736F6336 
+ 603      2E637964 
+ 603      736E00
+ 604              	.LASF8:
+ 605 0227 6C6F6E67 		.ascii	"long long int\000"
+ 605      206C6F6E 
+ 605      6720696E 
+ 605      7400
+ 606              	.LASF2:
+ 607 0235 73686F72 		.ascii	"short int\000"
+ 607      7420696E 
+ 607      7400
+ 608              	.LASF12:
+ 609 023f 75696E74 		.ascii	"uint32_t\000"
+ 609      33325F74 
+ 609      00
+ 610              	.LASF4:
+ 611 0248 6C6F6E67 		.ascii	"long int\000"
+ 611      20696E74 
+ 611      00
+ 612              	.LASF13:
+ 613 0251 6C6F6E67 		.ascii	"long double\000"
+ 613      20646F75 
+ 613      626C6500 
+ 614              	.LASF0:
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cc3lORhy.s 			page 15
 
 
- 616 0256 2E2E5C2E 		.ascii	"..\\..\\..\\lvgl\\version_6.1.2\\lvgl\\src\\lv_hal\\"
- 616      2E5C2E2E 
- 616      5C6C7667 
- 616      6C5C7665 
- 616      7273696F 
- 617 0282 6C765F68 		.ascii	"lv_hal_tick.c\000"
- 617      616C5F74 
- 617      69636B2E 
- 617      6300
- 618              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
+ 615 025d 7369676E 		.ascii	"signed char\000"
+ 615      65642063 
+ 615      68617200 
+ 616              	.LASF23:
+ 617 0269 2E2E5C2E 		.ascii	"..\\..\\..\\lvgl\\version_6.1.2\\lvgl\\src\\lv_hal\\"
+ 617      2E5C2E2E 
+ 617      5C6C7667 
+ 617      6C5C7665 
+ 617      7273696F 
+ 618 0295 6C765F68 		.ascii	"lv_hal_tick.c\000"
+ 618      616C5F74 
+ 618      69636B2E 
+ 618      6300
+ 619              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

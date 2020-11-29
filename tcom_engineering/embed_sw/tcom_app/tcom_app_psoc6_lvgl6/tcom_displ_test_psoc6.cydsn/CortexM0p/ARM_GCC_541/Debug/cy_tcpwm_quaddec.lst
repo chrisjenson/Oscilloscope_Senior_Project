@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccA8YygN.s 			page 1
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccKOiFKb.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccA8YygN.s 			page 1
   28:Generated_Source\PSoC6\pdl\drivers\peripheral\tcpwm/cy_tcpwm_quaddec.c **** *
   29:Generated_Source\PSoC6\pdl\drivers\peripheral\tcpwm/cy_tcpwm_quaddec.c **** * Initializes the counter in the TCPWM block for the QuadDec operation.
   30:Generated_Source\PSoC6\pdl\drivers\peripheral\tcpwm/cy_tcpwm_quaddec.c **** *
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccA8YygN.s 			page 2
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccKOiFKb.s 			page 2
 
 
   31:Generated_Source\PSoC6\pdl\drivers\peripheral\tcpwm/cy_tcpwm_quaddec.c **** * \param base
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccA8YygN.s 			page 1
   56:Generated_Source\PSoC6\pdl\drivers\peripheral\tcpwm/cy_tcpwm_quaddec.c **** 
   57:Generated_Source\PSoC6\pdl\drivers\peripheral\tcpwm/cy_tcpwm_quaddec.c ****         if (CY_TCPWM_INPUT_CREATOR != config->phiAInput)
   57              		.loc 1 57 0
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccA8YygN.s 			page 3
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccKOiFKb.s 			page 3
 
 
   58 0020 9369     		ldr	r3, [r2, #24]
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccA8YygN.s 			page 1
   97 005a 3025     		movs	r5, #48
   98 005c 1D40     		ands	r5, r3
   69:Generated_Source\PSoC6\pdl\drivers\peripheral\tcpwm/cy_tcpwm_quaddec.c ****                                           _VAL2FLD(TCPWM_CNT_TR_CTRL1_STOP_EDGE, config->stopInputM
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccA8YygN.s 			page 4
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccKOiFKb.s 			page 4
 
 
   99              		.loc 1 69 0
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccA8YygN.s 			page 1
  142              	.L6:
  143 008c 0F030000 		.word	783
  144 0090 0100B600 		.word	11927553
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccA8YygN.s 			page 5
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccKOiFKb.s 			page 5
 
 
  145              		.cfi_endproc
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccA8YygN.s 			page 1
  173 000a 8B01     		lsls	r3, r1, #6
  174 000c C318     		adds	r3, r0, r3
  175 000e 1D00     		movs	r5, r3
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccA8YygN.s 			page 6
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccKOiFKb.s 			page 6
 
 
  176 0010 0935     		adds	r5, r5, #9
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccA8YygN.s 			page 1
  219 0052 05D0     		beq	.L8
  115:Generated_Source\PSoC6\pdl\drivers\peripheral\tcpwm/cy_tcpwm_quaddec.c ****     {        
  116:Generated_Source\PSoC6\pdl\drivers\peripheral\tcpwm/cy_tcpwm_quaddec.c ****         TCPWM_CNT_TR_CTRL0(base, cntNum) = CY_TCPWM_CNT_TR_CTRL0_DEFAULT;
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccA8YygN.s 			page 7
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccKOiFKb.s 			page 7
 
 
  220              		.loc 1 116 0
@@ -384,8 +384,8 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccA8YygN.s 			page 1
  238              		.size	Cy_TCPWM_QuadDec_DeInit, .-Cy_TCPWM_QuadDec_DeInit
  239              		.text
  240              	.Letext0:
- 241              		.file 2 "e:\\applications\\psoc\\psoc creator\\4.3\\psoc creator\\import\\gnu\\arm\\5.4.1\\arm-non
- 242              		.file 3 "e:\\applications\\psoc\\psoc creator\\4.3\\psoc creator\\import\\gnu\\arm\\5.4.1\\arm-non
+ 241              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.3\\psoc creator\\import\\gnu\\arm\\5.4.
+ 242              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.3\\psoc creator\\import\\gnu\\arm\\5.4.
  243              		.file 4 "Generated_Source\\PSoC6\\pdl\\devices/psoc6/include/ip/cyip_tcpwm.h"
  244              		.file 5 "Generated_Source\\PSoC6\\pdl\\devices/psoc6/include/psoc6_01_config.h"
  245              		.file 6 "Generated_Source\\PSoC6\\pdl\\drivers\\peripheral\\tcpwm\\cy_tcpwm.h"
@@ -400,7 +400,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccA8YygN.s 			page 1
  254 000c 98020000 		.4byte	.LASF56
  255 0010 0C       		.byte	0xc
  256 0011 1E000000 		.4byte	.LASF57
- 257 0015 A8030000 		.4byte	.LASF58
+ 257 0015 42030000 		.4byte	.LASF58
  258 0019 00000000 		.4byte	.Ldebug_ranges0+0
  259 001d 00000000 		.4byte	0
  260 0021 00000000 		.4byte	.Ldebug_line0
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccA8YygN.s 			page 1
  272 0036 65000000 		.4byte	.LASF2
  273 003a 02       		.uleb128 0x2
  274 003b 02       		.byte	0x2
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccA8YygN.s 			page 8
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccKOiFKb.s 			page 8
 
 
  275 003c 07       		.byte	0x7
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccA8YygN.s 			page 1
  329 00a8 00       		.byte	0
  330 00a9 09       		.uleb128 0x9
  331 00aa 40       		.byte	0x40
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccA8YygN.s 			page 9
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccKOiFKb.s 			page 9
 
 
  332 00ab 04       		.byte	0x4
@@ -497,7 +497,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccA8YygN.s 			page 1
  345 00c4 8D000000 		.4byte	0x8d
  346 00c8 04       		.byte	0x4
  347 00c9 0A       		.uleb128 0xa
- 348 00ca 68030000 		.4byte	.LASF15
+ 348 00ca 05040000 		.4byte	.LASF15
  349 00ce 04       		.byte	0x4
  350 00cf 25       		.byte	0x25
  351 00d0 88000000 		.4byte	0x88
@@ -527,7 +527,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccA8YygN.s 			page 1
  375 00ff 88000000 		.4byte	0x88
  376 0103 18       		.byte	0x18
  377 0104 0A       		.uleb128 0xa
- 378 0105 70030000 		.4byte	.LASF19
+ 378 0105 0D040000 		.4byte	.LASF19
  379 0109 04       		.byte	0x4
  380 010a 2A       		.byte	0x2a
  381 010b 8D000000 		.4byte	0x8d
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccA8YygN.s 			page 1
  386 0116 2B       		.byte	0x2b
  387 0117 88000000 		.4byte	0x88
  388 011b 20       		.byte	0x20
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccA8YygN.s 			page 10
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccKOiFKb.s 			page 10
 
 
  389 011c 0A       		.uleb128 0xa
@@ -572,7 +572,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccA8YygN.s 			page 1
  417 0153 88000000 		.4byte	0x88
  418 0157 34       		.byte	0x34
  419 0158 0A       		.uleb128 0xa
- 420 0159 8E030000 		.4byte	.LASF26
+ 420 0159 2B040000 		.4byte	.LASF26
  421 015d 04       		.byte	0x4
  422 015e 31       		.byte	0x31
  423 015f 88000000 		.4byte	0x88
@@ -598,13 +598,13 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccA8YygN.s 			page 1
  443 0186 A7010000 		.4byte	.LASF13
  444 018a 04       		.byte	0x4
  445 018b 39       		.byte	0x39
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccA8YygN.s 			page 11
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccKOiFKb.s 			page 11
 
 
  446 018c 88000000 		.4byte	0x88
  447 0190 00       		.byte	0
  448 0191 0A       		.uleb128 0xa
- 449 0192 5F030000 		.4byte	.LASF29
+ 449 0192 FC030000 		.4byte	.LASF29
  450 0196 04       		.byte	0x4
  451 0197 3A       		.byte	0x3a
  452 0198 88000000 		.4byte	0x88
@@ -646,7 +646,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccA8YygN.s 			page 1
  488 01e0 8D000000 		.4byte	0x8d
  489 01e4 1C       		.byte	0x1c
  490 01e5 0A       		.uleb128 0xa
- 491 01e6 70030000 		.4byte	.LASF19
+ 491 01e6 0D040000 		.4byte	.LASF19
  492 01ea 04       		.byte	0x4
  493 01eb 41       		.byte	0x41
  494 01ec 04020000 		.4byte	0x204
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccA8YygN.s 			page 1
  500 01f8 09020000 		.4byte	0x209
  501 01fc 0001     		.2byte	0x100
  502 01fe 00       		.byte	0
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccA8YygN.s 			page 12
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccKOiFKb.s 			page 12
 
 
  503 01ff 05       		.uleb128 0x5
@@ -678,7 +678,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccA8YygN.s 			page 1
  517 021f 43       		.byte	0x43
  518 0220 7C010000 		.4byte	0x17c
  519 0224 0E       		.uleb128 0xe
- 520 0225 98030000 		.4byte	.LASF37
+ 520 0225 35040000 		.4byte	.LASF37
  521 0229 05       		.byte	0x5
  522 022a 4206     		.2byte	0x642
  523 022c 19020000 		.4byte	0x219
@@ -708,7 +708,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccA8YygN.s 			page 1
  547 025d 0100B600 		.4byte	0xb60001
  548 0261 00       		.byte	0
  549 0262 0E       		.uleb128 0xe
- 550 0263 79030000 		.4byte	.LASF43
+ 550 0263 16040000 		.4byte	.LASF43
  551 0267 06       		.byte	0x6
  552 0268 7601     		.2byte	0x176
  553 026a 45020000 		.4byte	0x245
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccA8YygN.s 			page 1
  557 0274 07       		.byte	0x7
  558 0275 2E       		.byte	0x2e
  559 0276 DB020000 		.4byte	0x2db
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccA8YygN.s 			page 13
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccKOiFKb.s 			page 13
 
 
  560 027a 0A       		.uleb128 0xa
@@ -734,7 +734,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccA8YygN.s 			page 1
  570 028d 76000000 		.4byte	0x76
  571 0291 04       		.byte	0x4
  572 0292 0A       		.uleb128 0xa
- 573 0293 42030000 		.4byte	.LASF46
+ 573 0293 DF030000 		.4byte	.LASF46
  574 0297 07       		.byte	0x7
  575 0298 35       		.byte	0x35
  576 0299 76000000 		.4byte	0x76
@@ -746,7 +746,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccA8YygN.s 			page 1
  582 02a5 76000000 		.4byte	0x76
  583 02a9 0C       		.byte	0xc
  584 02aa 0A       		.uleb128 0xa
- 585 02ab 51030000 		.4byte	.LASF48
+ 585 02ab EE030000 		.4byte	.LASF48
  586 02af 07       		.byte	0x7
  587 02b0 39       		.byte	0x39
  588 02b1 76000000 		.4byte	0x76
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccA8YygN.s 			page 1
  614 02e6 13       		.uleb128 0x13
  615 02e7 83010000 		.4byte	.LASF60
  616 02eb 01       		.byte	0x1
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccA8YygN.s 			page 14
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccKOiFKb.s 			page 14
 
 
  617 02ec 2F       		.byte	0x2f
@@ -789,7 +789,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccA8YygN.s 			page 1
  622 02fa 9C       		.byte	0x9c
  623 02fb 3A030000 		.4byte	0x33a
  624 02ff 14       		.uleb128 0x14
- 625 0300 A3030000 		.4byte	.LASF53
+ 625 0300 40040000 		.4byte	.LASF53
  626 0304 01       		.byte	0x1
  627 0305 2F       		.byte	0x2f
  628 0306 3A030000 		.4byte	0x33a
@@ -831,14 +831,14 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccA8YygN.s 			page 1
  664 035a 01       		.uleb128 0x1
  665 035b 9C       		.byte	0x9c
  666 035c 15       		.uleb128 0x15
- 667 035d A3030000 		.4byte	.LASF53
+ 667 035d 40040000 		.4byte	.LASF53
  668 0361 01       		.byte	0x1
  669 0362 64       		.byte	0x64
  670 0363 3A030000 		.4byte	0x33a
  671 0367 01       		.uleb128 0x1
  672 0368 50       		.byte	0x50
  673 0369 14       		.uleb128 0x14
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccA8YygN.s 			page 15
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccKOiFKb.s 			page 15
 
 
  674 036a 5C010000 		.4byte	.LASF54
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccA8YygN.s 			page 1
  728 0026 0B       		.uleb128 0xb
  729 0027 49       		.uleb128 0x49
  730 0028 13       		.uleb128 0x13
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccA8YygN.s 			page 16
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccKOiFKb.s 			page 16
 
 
  731 0029 00       		.byte	0
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccA8YygN.s 			page 1
  785 005f 01       		.uleb128 0x1
  786 0060 13       		.uleb128 0x13
  787 0061 00       		.byte	0
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccA8YygN.s 			page 17
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccKOiFKb.s 			page 17
 
 
  788 0062 00       		.byte	0
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccA8YygN.s 			page 1
  842 0098 13       		.uleb128 0x13
  843 0099 38       		.uleb128 0x38
  844 009a 05       		.uleb128 0x5
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccA8YygN.s 			page 18
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccKOiFKb.s 			page 18
 
 
  845 009b 00       		.byte	0
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccA8YygN.s 			page 1
  899 00d1 0B       		.uleb128 0xb
  900 00d2 3A       		.uleb128 0x3a
  901 00d3 0B       		.uleb128 0xb
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccA8YygN.s 			page 19
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccKOiFKb.s 			page 19
 
 
  902 00d4 3B       		.uleb128 0x3b
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccA8YygN.s 			page 1
  956 010b 0B       		.uleb128 0xb
  957 010c 3B       		.uleb128 0x3b
  958 010d 0B       		.uleb128 0xb
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccA8YygN.s 			page 20
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccKOiFKb.s 			page 20
 
 
  959 010e 49       		.uleb128 0x49
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccA8YygN.s 			page 1
  1013              		.section	.debug_loc,"",%progbits
  1014              	.Ldebug_loc0:
  1015              	.LLST0:
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccA8YygN.s 			page 21
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccKOiFKb.s 			page 21
 
 
  1016 0000 00000000 		.4byte	.LVL0
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccA8YygN.s 			page 1
  1070 0081 F3       		.byte	0xf3
  1071 0082 01       		.uleb128 0x1
  1072 0083 51       		.byte	0x51
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccA8YygN.s 			page 22
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccKOiFKb.s 			page 22
 
 
  1073 0084 9F       		.byte	0x9f
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccA8YygN.s 			page 1
  1127 0024 00000000 		.4byte	0
  1128              		.section	.debug_ranges,"",%progbits
  1129              	.Ldebug_ranges0:
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccA8YygN.s 			page 23
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccKOiFKb.s 			page 23
 
 
  1130 0000 00000000 		.4byte	.LFB64
@@ -1329,8 +1329,8 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccA8YygN.s 			page 1
  1135 0014 00000000 		.4byte	0
  1136              		.section	.debug_line,"",%progbits
  1137              	.Ldebug_line0:
- 1138 0000 47020000 		.section	.debug_str,"MS",%progbits,1
- 1138      0200F401 
+ 1138 0000 5B020000 		.section	.debug_str,"MS",%progbits,1
+ 1138      02000802 
  1138      00000201 
  1138      FB0E0D00 
  1138      01010101 
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccA8YygN.s 			page 1
  1155      4F4400
  1156              	.LASF32:
  1157 00a6 434D445F 		.ascii	"CMD_RELOAD\000"
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccA8YygN.s 			page 24
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccKOiFKb.s 			page 24
 
 
  1157      52454C4F 
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccA8YygN.s 			page 1
  1182              	.LASF39:
  1183 0138 666C6F61 		.ascii	"float\000"
  1183      7400
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccA8YygN.s 			page 25
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccKOiFKb.s 			page 25
 
 
  1184              	.LASF6:
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccA8YygN.s 			page 1
  1211      206C6F6E 
  1211      6720756E 
  1211      7369676E 
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccA8YygN.s 			page 26
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccKOiFKb.s 			page 26
 
 
  1211      65642069 
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccA8YygN.s 			page 1
  1237 0275 70686941 		.ascii	"phiAInput\000"
  1237      496E7075 
  1237      7400
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccA8YygN.s 			page 27
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccKOiFKb.s 			page 27
 
 
  1238              	.LASF5:
@@ -1592,61 +1592,65 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\ccA8YygN.s 			page 1
  1247      5F517561 
  1247      64446563 
  1247      5F446549 
- 1248              	.LASF46:
- 1249 0342 696E6465 		.ascii	"indexInputMode\000"
- 1249      78496E70 
- 1249      75744D6F 
- 1249      646500
- 1250              	.LASF48:
- 1251 0351 73746F70 		.ascii	"stopInputMode\000"
- 1251      496E7075 
- 1251      744D6F64 
- 1251      6500
- 1252              	.LASF29:
- 1253 035f 4354524C 		.ascii	"CTRL_CLR\000"
- 1253      5F434C52 
- 1253      00
- 1254              	.LASF15:
- 1255 0368 434F554E 		.ascii	"COUNTER\000"
- 1255      54455200 
- 1256              	.LASF19:
- 1257 0370 52455345 		.ascii	"RESERVED\000"
- 1257      52564544 
- 1257      00
- 1258              	.LASF43:
- 1259 0379 63795F65 		.ascii	"cy_en_tcpwm_status_t\000"
- 1259      6E5F7463 
- 1259      70776D5F 
- 1259      73746174 
-ARM GAS  C:\Users\chris\AppData\Local\Temp\ccA8YygN.s 			page 28
+ 1248              	.LASF58:
+ 1249 0342 433A5C55 		.ascii	"C:\\Users\\tmj32\\Documents\\TCNJ\\Senior_Project\\"
+ 1249      73657273 
+ 1249      5C746D6A 
+ 1249      33325C44 
+ 1249      6F63756D 
+ 1250 036f 4F736369 		.ascii	"Oscilloscope_Senior_Project\\tcom_engineering\\embe"
+ 1250      6C6C6F73 
+ 1250      636F7065 
+ 1250      5F53656E 
+ 1250      696F725F 
+ 1251 03a0 645F7377 		.ascii	"d_sw\\tcom_app\\tcom_app_psoc6_lvgl6\\tcom_displ_te"
+ 1251      5C74636F 
+ 1251      6D5F6170 
+ 1251      705C7463 
+ 1251      6F6D5F61 
+ 1252 03d0 73745F70 		.ascii	"st_psoc6.cydsn\000"
+ 1252      736F6336 
+ 1252      2E637964 
+ 1252      736E00
+ 1253              	.LASF46:
+ 1254 03df 696E6465 		.ascii	"indexInputMode\000"
+ 1254      78496E70 
+ 1254      75744D6F 
+ 1254      646500
+ 1255              	.LASF48:
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccKOiFKb.s 			page 28
 
 
- 1259      75735F74 
- 1260              	.LASF26:
- 1261 038e 494E5452 		.ascii	"INTR_MASK\000"
- 1261      5F4D4153 
- 1261      4B00
- 1262              	.LASF37:
- 1263 0398 54435057 		.ascii	"TCPWM_Type\000"
- 1263      4D5F5479 
- 1263      706500
- 1264              	.LASF53:
- 1265 03a3 62617365 		.ascii	"base\000"
- 1265      00
- 1266              	.LASF58:
- 1267 03a8 453A5C41 		.ascii	"E:\\Applications\\LittlevGL\\Oscilloscope_Senior_Pr"
- 1267      70706C69 
- 1267      63617469 
- 1267      6F6E735C 
- 1267      4C697474 
- 1268 03d8 6F6A6563 		.ascii	"oject\\tcom_engineering\\embed_sw\\tcom_app\\tcom_a"
- 1268      745C7463 
- 1268      6F6D5F65 
- 1268      6E67696E 
- 1268      65657269 
- 1269 0407 70705F70 		.ascii	"pp_psoc6_lvgl6\\tcom_displ_test_psoc6.cydsn\000"
- 1269      736F6336 
- 1269      5F6C7667 
- 1269      6C365C74 
- 1269      636F6D5F 
- 1270              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
+ 1256 03ee 73746F70 		.ascii	"stopInputMode\000"
+ 1256      496E7075 
+ 1256      744D6F64 
+ 1256      6500
+ 1257              	.LASF29:
+ 1258 03fc 4354524C 		.ascii	"CTRL_CLR\000"
+ 1258      5F434C52 
+ 1258      00
+ 1259              	.LASF15:
+ 1260 0405 434F554E 		.ascii	"COUNTER\000"
+ 1260      54455200 
+ 1261              	.LASF19:
+ 1262 040d 52455345 		.ascii	"RESERVED\000"
+ 1262      52564544 
+ 1262      00
+ 1263              	.LASF43:
+ 1264 0416 63795F65 		.ascii	"cy_en_tcpwm_status_t\000"
+ 1264      6E5F7463 
+ 1264      70776D5F 
+ 1264      73746174 
+ 1264      75735F74 
+ 1265              	.LASF26:
+ 1266 042b 494E5452 		.ascii	"INTR_MASK\000"
+ 1266      5F4D4153 
+ 1266      4B00
+ 1267              	.LASF37:
+ 1268 0435 54435057 		.ascii	"TCPWM_Type\000"
+ 1268      4D5F5479 
+ 1268      706500
+ 1269              	.LASF53:
+ 1270 0440 62617365 		.ascii	"base\000"
+ 1270      00
+ 1271              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

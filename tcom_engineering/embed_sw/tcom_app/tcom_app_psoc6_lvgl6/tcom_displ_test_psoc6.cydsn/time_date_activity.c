@@ -126,30 +126,6 @@ static void ap_event_handler(lv_obj_t * obj, lv_event_t event)
     }
 }
 
-void update_time_task(lv_task_t * task)
-{
-    sprintf( time_str, "%2d:%02d:%02d %s", time_hr, time_mn, time_se, ap_str );
-    lv_label_set_static_text( label_tim, time_str );
-    
-    ++time_se;
-    if (time_se == 60)
-    {
-        time_se = 0;
-        ++time_mn;
-        if (time_mn == 60)
-        {
-            time_mn = 0;
-            ++time_hr;
-            if (time_hr == 13)
-            {
-                time_hr = 1;
-                if (ap_str[0] == 'A')   ap_str[0] = 'P';
-                else                    ap_str[0] = 'A';
-            }
-        }
-    }
-}
-
 
 void time_activity_action(lv_obj_t *obj, lv_event_t event)
 {

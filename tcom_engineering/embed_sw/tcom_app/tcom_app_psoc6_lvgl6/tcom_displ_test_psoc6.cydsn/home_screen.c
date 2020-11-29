@@ -7,31 +7,28 @@
 #include "time_date_activity.h"
 #include "slider_activity.h"
 
-//#define DO_IMAGES
-#ifdef DO_IMAGES
-#include "blow.c"
-#include "message.c"
-#include "ribbons.c"
-#include "team.c"
-#endif
+//static lv_obj_t * slider_label;
 
 const uint8_t tcnj_blue[] = { 41, 63, 111 };
 const uint8_t tcnj_gold[] = { 166, 122, 0 };
 
-static void event_handler(lv_obj_t * obj, lv_event_t event)
+int SPIflag = 0;        //If you want to send a command, set the flag high
+
+static void sw_event_handler(lv_obj_t * obj, lv_event_t event)
 {
     if(event == LV_EVENT_CLICKED) {
         printf("State: %s\n", lv_sw_get_state(obj) ? "On" : "Off");
         //lv_sw_toggle(obj, LV_ANIM_ON);
+        //SPIflag = !SPIflag;
     }
 }
 
 static void slider_event_cb(lv_obj_t * slider, lv_event_t event)
 {
-    //LV_EVENT_VALUE_CHANGED
-    if(event == LV_EVENT_DRAG_END) {
+    if(event == LV_EVENT_VALUE_CHANGED) {
         static char buf[4]; /* max 3 bytes for number plus 1 null terminating byte */
         snprintf(buf, 4, "%u", lv_slider_get_value(slider));
+        //lv_label_set_text(slider_label, buf);
     }
 }
 
@@ -41,90 +38,58 @@ void home_screen()
     const int chart_width = 280;
     const int chart_heigth = 200;
     const int chart_vertPos = 20;
-    const int chart_horiPos = 20;    
-    
-    const int h_lab_1 =  20;
-    const int h_lab_2 = 170;
-    
-    const int v_lab_1 =  280;
-    const int v_lab_2 = 370;    
-    
-#ifdef DO_IMAGES
-    const int v_img_1 = 120;
-    const int v_img_2 = 330;
-#endif
-    
-    //const char  off_slide_txt[]  = "Offset";
-    const char gain_slide_txt[] = "Gain";
-    const char vert_slide_txt[] = "Vert. Scale";
-    const char hori_slide_txt[]  = "Hori. Scale";
+    const int chart_horiPos = 20;      
     
     char read_test[] = "0000000000000000";
-    
-    const int  btn_wid       = 130;
-    //const int  btn_hgt       = 50;
-    const int  btn_hgt       = 35;
     
     static lv_obj_t *my_label;
     static lv_style_t *lbl_style;
     
     static lv_obj_t *chart1;        //declaring the chart
     
-    
     // SPI TEST CODE //
    
     //uunt16 because of the command size
     //uint16_t txBuffer[BUFFER_SIZE];
     uint16_t txBuffer[3];
-    uint16_t RxBuffer[3];
-    int SPIflag = 1;        //If you want to send a command, set the flag high
+    uint8_t RxBuffer[3];
+    //int SPIflag = 0;        //If you want to send a command, set the flag high
     int readArray_SIZE = 16;
     
     /* Initialize txBuffer with command to transfer */
-    RxBuffer[0] = 0b1111111111111111; //Junk value
-    txBuffer[0] = 0b0100000000000000; //010 00000 00000000 command to write 00 to reg 0
-    txBuffer[1] = 0b0010000000000000; //001 00000 00000000 command to read reg 0
-    txBuffer[2] = 0b1111111111111111; // JUNK at present
-    uint16_t tempRead;
-    uint16_t elementsRead;
+    //txBuffer[0] = CMD_START_TRANSFER;
+    RxBuffer[0] = 0b11111111; //Junk value 100 01001 11111111
+    txBuffer[0] = 0b0100010000000000; //010 00100 1111111 command to write 11111111 to reg 4
+    //txBuffer[1] = 0b0100010011111111; //010 00001 01010101 command to write 01010101 to reg 1
+    txBuffer[1] = 0b0010001100000000; //001 00011 00000000 command to read reg 4
+    txBuffer[2] = 0b0010010011111111; //010 00001 01010101 command to read 01010101 to reg 1
     
     // Command to be sent
-    if(SPIflag){
+    //if(SPIflag){
         /* Master: start a transfer. Slave: prepare for a transfer. */
-        while(!(Cy_SCB_SPI_GetTxFifoStatus(SPIM_HW) & CY_SCB_SPI_TX_EMPTY)){}
-        Cy_SCB_SPI_Write(SPIM_HW, txBuffer[0]);
-       
-        CyDelay(1);
-       
-        while(!(Cy_SCB_SPI_GetRxFifoStatus(SPIM_HW) & CY_SCB_SPI_RX_NOT_EMPTY)){}
-        elementsRead = Cy_SCB_SPI_ReadArray(SPIM_HW, RxBuffer, readArray_SIZE); //returns the number of things read in    CHANGE THE CHART LOOP ONCE IMPLEMENTED
-        //RxBuffer[0] = 0b0010111100101111;
-        
-        //Get the first 3 bits, the CMD, to know what is being done.
-        char CMD = (txBuffer[1] >> 13) & 7;
+        //for(int i = 0; i < 1; ++i){
+        //    while(!(Cy_SCB_SPI_GetTxFifoStatus(SPIM_HW) & CY_SCB_SPI_TX_EMPTY)){}
+        //    Cy_SCB_SPI_Write(SPIM_HW, txBuffer[1]);
 
-        //Read from reg
-        if(CMD == 1){
-            tempRead = RxBuffer[0];
-        }
-        //Write to reg
-        else if(CMD == 2){
-        
-        }
-        //Read sample data
-        else if(CMD == 3){
-        
-        }
-       
-        SPIflag = 0;
-    }
+        //    CyDelay(1);
+
+        //    while(!(Cy_SCB_SPI_GetRxFifoStatus(SPIM_HW) & CY_SCB_SPI_RX_NOT_EMPTY)){}
+        //    RxBuffer[0] = Cy_SCB_SPI_Read(SPIM_HW);
+        //}
+        //SPIflag = 0;
+    //}
+    
+    //uint8_t spi_dat = RxBuffer[0];
+    //char my_str[256];
+    //sprintf(my_str, 'Received %02X', spi_dat);
     /* Handle results of a transfer */    
     
     //Create a label to display the value read in
     lv_obj_t* readLabel = lv_label_create(lv_scr_act(), NULL);
 	lv_obj_set_drag(readLabel, false);
-	lv_label_set_text(readLabel, read_test);
-    lv_obj_set_pos(readLabel, 115, v_lab_2+40);                         /*Set its position*/
+	//lv_label_set_text(readLabel, my_str);
+    lv_label_set_text(readLabel, read_test);
+    lv_obj_set_pos(readLabel, 115, 430);                         /*Set its position*/
     
    
     // END SPI TEST CODE //
@@ -164,59 +129,86 @@ void home_screen()
     //lbl_style = lv_label_get_style(my_label, LV_LABEL_STYLE_MAIN);
     //lbl_style->text.color.full = 0x000000;
     
-    //First Slider
-	lv_obj_t* offsetLabel = lv_label_create(lv_scr_act(), NULL);
-	lv_obj_set_drag(offsetLabel, false);
-	//lv_label_set_text(offsetLabel, off_slide_txt);
-    lv_label_set_text(offsetLabel, "Offset");
-    lv_obj_set_pos(offsetLabel, h_lab_1, v_lab_1-40);                         /*Set its position*/
+    /* First Slider: Offset */
+    lv_obj_t * offsetSlider = lv_slider_create(lv_scr_act(), NULL);
+    lv_obj_set_pos(offsetSlider, 20, 270);                         /*Set its position*/
+    lv_obj_set_size(offsetSlider, 130, 35);                        /*Set its size*/
+    lv_slider_set_value(offsetSlider, 50, LV_ANIM_ON);
+    lv_obj_set_event_cb(offsetSlider, slider_event_cb);
+    lv_slider_set_range(offsetSlider, 0, 100);
     
-    lv_obj_t* offsetSlide = lv_slider_create(lv_scr_act(), NULL);
-	lv_obj_set_drag(offsetSlide, false);
-	lv_slider_set_value(offsetSlide, 50, LV_ANIM_OFF);
-    lv_obj_set_pos(offsetSlide, h_lab_1, v_lab_1);                         /*Set its position*/
-    lv_obj_set_size(offsetSlide, btn_wid, btn_hgt);                        /*Set its size*/
-    lv_slider_set_range(offsetSlide, 0, 100);
-    lv_obj_set_event_cb(offsetSlide, slider_event_cb);
-   
-    //Second Slider
-	lv_obj_t* gainLabel = lv_label_create(lv_scr_act(), NULL);
-	lv_obj_set_drag(gainLabel, false);
-	lv_label_set_text(gainLabel, gain_slide_txt);
-    lv_obj_set_pos(gainLabel, h_lab_2, v_lab_1-30);                         /*Set its position*/
+    /* Create a label below the slider */
+    lv_obj_t * offsetLabel = lv_label_create(lv_scr_act(), NULL);
+    lv_label_set_text(offsetLabel, "0");
+    lv_obj_set_auto_realign(offsetLabel, true);
+    lv_obj_align(offsetLabel, offsetSlider, LV_ALIGN_OUT_BOTTOM_MID, 0, 0);
     
-    lv_obj_t* gainSlide = lv_slider_create(lv_scr_act(), NULL);
-	lv_obj_set_drag(gainSlide, false);
-	lv_slider_set_value(gainSlide, 50, LV_ANIM_OFF);
-    lv_obj_set_pos(gainSlide, h_lab_2, v_lab_1);                         /*Set its position*/
-    lv_obj_set_size(gainSlide, btn_wid, btn_hgt);                        /*Set its size*/
-	//lv_obj_set_event_cb(gainSlide, slider_action);
+    /* Create a label above the slider */
+	lv_obj_t* offsetLabel2 = lv_label_create(lv_scr_act(), NULL);
+	lv_obj_set_drag(offsetLabel2, false);
+    lv_label_set_text(offsetLabel2, "Offset");
+    lv_obj_set_pos(offsetLabel2, 20, 240);                         /*Set its position*/
     
-    //Third Slider
-	lv_obj_t* horiLabel = lv_label_create(lv_scr_act(), NULL);
-	lv_obj_set_drag(horiLabel, false);
-	lv_label_set_text(horiLabel, vert_slide_txt);
-    lv_obj_set_pos(horiLabel, h_lab_1, v_lab_2-30);                         /*Set its position*/
     
-    lv_obj_t* horiSlide = lv_slider_create(lv_scr_act(), NULL);
-	lv_obj_set_drag(horiSlide, false);
-	lv_slider_set_value(horiSlide, 50, LV_ANIM_OFF);
-    lv_obj_set_pos(horiSlide, h_lab_1, v_lab_2);                         /*Set its position*/
-    lv_obj_set_size(horiSlide, btn_wid, btn_hgt);                        /*Set its size*/
-	//lv_obj_set_event_cb(offsetSlide, slider_action);
-   
-    //Fourth Slider
-	lv_obj_t* vertLabel = lv_label_create(lv_scr_act(), NULL);
-	lv_obj_set_drag(vertLabel, false);
-	lv_label_set_text(vertLabel, hori_slide_txt);
-    lv_obj_set_pos(vertLabel, h_lab_2, v_lab_2-30);                         /*Set its position*/
+    /* Second Slider: Gain */
+    lv_obj_t * gainSlider = lv_slider_create(lv_scr_act(), NULL);
+    lv_obj_set_pos(gainSlider, 170, 270);                         /*Set its position*/
+    lv_obj_set_size(gainSlider, 130, 35);                        /*Set its size*/
+    lv_slider_set_value(gainSlider, 50, LV_ANIM_ON);
+    lv_obj_set_event_cb(gainSlider, slider_event_cb);
+    lv_slider_set_range(gainSlider, 0, 100);
     
-    lv_obj_t* vertSlide = lv_slider_create(lv_scr_act(), NULL);
-	lv_obj_set_drag(vertSlide, false);
-	lv_slider_set_value(vertSlide, 50, LV_ANIM_OFF);
-    lv_obj_set_pos(vertSlide, h_lab_2, v_lab_2);                         /*Set its position*/
-    lv_obj_set_size(vertSlide, btn_wid, btn_hgt);                        /*Set its size*/
-	//lv_obj_set_event_cb(gainSlide, slider_action);
+    /* Create a label below the slider */
+    lv_obj_t * gainLabel = lv_label_create(lv_scr_act(), NULL);
+    lv_label_set_text(gainLabel, "0");
+    lv_obj_set_auto_realign(gainLabel, true);
+    lv_obj_align(gainLabel, gainSlider, LV_ALIGN_OUT_BOTTOM_MID, 0, 0);
+    
+	lv_obj_t* gainLabel2 = lv_label_create(lv_scr_act(), NULL);
+	lv_obj_set_drag(gainLabel2, false);
+    lv_label_set_text(gainLabel2, "Gain");
+    lv_obj_set_pos(gainLabel2, 170, 240); 
+
+    
+    /* Third Slider: Hori. Scale */
+    lv_obj_t * horiSlider = lv_slider_create(lv_scr_act(), NULL);
+    lv_obj_set_pos(horiSlider, 20, 360);                         /*Set its position*/
+    lv_obj_set_size(horiSlider, 130, 35);                        /*Set its size*/
+    lv_slider_set_value(horiSlider, 50, LV_ANIM_ON);
+    lv_obj_set_event_cb(horiSlider, slider_event_cb);
+    lv_slider_set_range(horiSlider, 0, 100);
+    
+    /* Create a label below the slider */
+    lv_obj_t * horiLabel1 = lv_label_create(lv_scr_act(), NULL);
+    lv_label_set_text(horiLabel1, "0");
+    lv_obj_set_auto_realign(horiLabel1, true);
+    lv_obj_align(horiLabel1, horiSlider, LV_ALIGN_OUT_BOTTOM_MID, 0, 0);
+    
+	lv_obj_t* horiLabel2 = lv_label_create(lv_scr_act(), NULL);
+	lv_obj_set_drag(horiLabel2, false);
+    lv_label_set_text(horiLabel2, "Hori. Scale");
+    lv_obj_set_pos(horiLabel2, 20, 340);                         /*Set its position*/
+
+    
+    /* Fourth Slider: Vert. Scale */
+    lv_obj_t * vertSlider = lv_slider_create(lv_scr_act(), NULL);
+    lv_obj_set_pos(vertSlider, 170, 360);                         /*Set its position*/
+    lv_obj_set_size(vertSlider, 130, 35);                        /*Set its size*/
+    lv_slider_set_value(vertSlider, 50, LV_ANIM_ON);
+    lv_obj_set_event_cb(vertSlider, slider_event_cb);
+    lv_slider_set_range(vertSlider, 0, 100);
+    
+    /* Create a label below the slider */
+    lv_obj_t * vertLabel1 = lv_label_create(lv_scr_act(), NULL);
+    lv_label_set_text(vertLabel1, "0");
+    lv_obj_set_auto_realign(vertLabel1, true);
+    lv_obj_align(vertLabel1, vertSlider, LV_ALIGN_OUT_BOTTOM_MID, 0, 0);
+    
+	lv_obj_t* vertLabel2 = lv_label_create(lv_scr_act(), NULL);
+	lv_obj_set_drag(vertLabel2, false);
+    lv_label_set_text(vertLabel2, "Vert. Scale");
+    lv_obj_set_pos(vertLabel2, 170, 340); 
+    
     
     
     chart1 = lv_chart_create(lv_scr_act(), NULL);                     //Add a chart to the current screen
@@ -234,7 +226,7 @@ void home_screen()
     //temp sent to 8 to limit the number of points on screen. Will actually be somewhere in the hundreds
     
     //CHANGE ME ONCE IMPLEMENTED
-    elementsRead = 8;
+    uint8 elementsRead = 8;
     
     int points[8] = {25, 50, 75, 50, 25, 50, 75, 50};
     for(int i = 0; i < elementsRead; ++i){
@@ -245,9 +237,10 @@ void home_screen()
     //Adding an on/off switch
     lv_obj_t *sw1 = lv_sw_create(lv_scr_act(), NULL);
     lv_obj_align(sw1, NULL, LV_ALIGN_CENTER, 0, -50);
-    lv_obj_set_event_cb(sw1, event_handler);
-    lv_obj_set_pos(sw1, h_lab_1, v_lab_2+60);                         /*Set its position*/
-    lv_obj_set_size(sw1, btn_wid-40, btn_hgt);               /*Set its size*/ 
+    lv_obj_set_event_cb(sw1, sw_event_handler);
+    //lv_obj_set_event_cb(sw1,  breath_activity_action);             /*Assign a callback to the button*/
+    lv_obj_set_pos(sw1, 20, 430);                         /*Set its position*/
+    lv_obj_set_size(sw1, 90, 35);               /*Set its size*/ 
     
     
     //=======================LEGACY CODE==========================================//
@@ -340,35 +333,5 @@ void home_screen()
     //lv_btn_set_style( btn_dat, LV_BTN_STATE_REL, &btn_style_tim_dat );
     //lv_btn_set_style( btn_tim, LV_BTN_STATE_REL, &btn_style_tim_dat );
     
-    //=======================LEGACY CODE==========================================//
-    
-    
-    
-    lv_task_t * task = lv_task_create(update_time_task, 1000, LV_TASK_PRIO_MID, NULL);
-
-#ifdef DO_IMAGES
-
-    static lv_obj_t *img1;
-    static lv_obj_t *img2;
-    static lv_obj_t *img3;
-    static lv_obj_t *img4;
-    
-    img1 = lv_img_create(lv_scr_act(), NULL);
-    lv_img_set_src(img1, &blow);
-    lv_obj_align(img1, NULL, LV_ALIGN_IN_TOP_LEFT, h_lab_1, v_img_1);
-    
-    img2 = lv_img_create(lv_scr_act(), NULL);
-    lv_img_set_src(img2, &ribbons);
-    lv_obj_align(img2, NULL, LV_ALIGN_IN_TOP_LEFT, h_lab_2, v_img_1);
-    
-    img3 = lv_img_create(lv_scr_act(), NULL);
-    lv_img_set_src(img3, &message);
-    lv_obj_align(img3, NULL, LV_ALIGN_IN_TOP_LEFT, h_lab_1, v_img_2);
-    
-    img4 = lv_img_create(lv_scr_act(), NULL);
-    lv_img_set_src(img4, &team);
-    lv_obj_align(img4, NULL, LV_ALIGN_IN_TOP_LEFT, h_lab_2, v_img_2);
-
-#endif
-    
+    //=======================LEGACY CODE==========================================//    
 }

@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 1
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccHkZwwI.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 1
   21:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_misc/lv_anim.c **** #include LV_GC_INCLUDE
   22:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_misc/lv_anim.c **** #endif /* LV_ENABLE_GC */
   23:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_misc/lv_anim.c **** 
-ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 2
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccHkZwwI.s 			page 2
 
 
   24:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_misc/lv_anim.c **** /*********************
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 1
   52 0012 064B     		ldr	r3, .L2+4
   53 0014 1A60     		str	r2, [r3]
   61:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_misc/lv_anim.c ****     lv_task_create(anim_task, LV_DISP_DEF_REFR_PERIOD, LV_TASK_PRIO_MID, NULL);
-ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 3
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccHkZwwI.s 			page 3
 
 
   54              		.loc 1 61 0
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 1
   94 0008 2422     		movs	r2, #36
   95 000a 0021     		movs	r1, #0
   96 000c 7868     		ldr	r0, [r7, #4]
-ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 4
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccHkZwwI.s 			page 4
 
 
   97 000e FFF7FEFF 		bl	memset
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 1
  140              		@ frame_needed = 1, uses_anonymous_args = 0
  141 0000 80B5     		push	{r7, lr}
  142              		.cfi_def_cfa_offset 8
-ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 5
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccHkZwwI.s 			page 5
 
 
  143              		.cfi_offset 7, -8
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 1
  182              		.loc 1 101 0
  183 0046 FB68     		ldr	r3, [r7, #12]
  184 0048 5B68     		ldr	r3, [r3, #4]
-ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 6
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccHkZwwI.s 			page 6
 
 
  185 004a 002B     		cmp	r3, #0
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 1
  110:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_misc/lv_anim.c **** /**
  111:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_misc/lv_anim.c ****  * Delete an animation of a variable with a given animator function
  112:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_misc/lv_anim.c ****  * @param var pointer to variable
-ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 7
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccHkZwwI.s 			page 7
 
 
  113:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_misc/lv_anim.c ****  * @param exec_cb a function pointer which is animating 'var',
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 1
  269 0032 9A42     		cmp	r2, r3
  270 0034 02D0     		beq	.L18
  271              		.loc 1 127 0 discriminator 2
-ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 8
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccHkZwwI.s 			page 8
 
 
  272 0036 3B68     		ldr	r3, [r7]
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 1
  313 006c 04000000 		.word	anim_list_changed
  314              		.cfi_endproc
  315              	.LFE34:
-ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 9
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccHkZwwI.s 			page 9
 
 
  316              		.size	lv_anim_del, .-lv_anim_del
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 1
  151:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_misc/lv_anim.c ****     return cnt++;
  359              		.loc 1 151 0 is_stmt 1
  360 002a FB88     		ldrh	r3, [r7, #6]
-ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 10
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccHkZwwI.s 			page 10
 
 
  361 002c 5A1C     		adds	r2, r3, #1
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 1
  163:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_misc/lv_anim.c ****     int32_t d     = LV_MATH_ABS((int32_t)start - end);
  404              		.loc 1 163 0
  405 0012 B7F90420 		ldrsh	r2, [r7, #4]
-ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 11
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccHkZwwI.s 			page 11
 
 
  406 0016 B7F90230 		ldrsh	r3, [r7, #2]
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 1
  450              		.cfi_endproc
  451              	.LFE36:
  452              		.size	lv_anim_speed_to_time, .-lv_anim_speed_to_time
-ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 12
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccHkZwwI.s 			page 12
 
 
  453              		.section	.text.lv_anim_path_linear,"ax",%progbits
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 1
  493 002c 93FBF2F3 		sdiv	r3, r3, r2
  494 0030 FB60     		str	r3, [r7, #12]
  495              	.L35:
-ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 13
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccHkZwwI.s 			page 13
 
 
  188:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_misc/lv_anim.c ****     }
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 1
  539              	.LFB38:
  199:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_misc/lv_anim.c **** 
  200:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_misc/lv_anim.c **** /**
-ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 14
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccHkZwwI.s 			page 14
 
 
  201:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_misc/lv_anim.c ****  * Calculate the current value of an animation slowing down the start phase
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 1
  580 003c 0021     		movs	r1, #0
  581 003e 7869     		ldr	r0, [r7, #20]
  582 0040 FFF7FEFF 		bl	lv_bezier3
-ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 15
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccHkZwwI.s 			page 15
 
 
  583 0044 3861     		str	r0, [r7, #16]
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 1
  227:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_misc/lv_anim.c ****  * @return the current value to set
  228:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_misc/lv_anim.c ****  */
  229:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_misc/lv_anim.c **** lv_anim_value_t lv_anim_path_ease_out(const lv_anim_t * a)
-ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 16
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccHkZwwI.s 			page 16
 
 
  230:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_misc/lv_anim.c **** {
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 1
  240:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_misc/lv_anim.c **** 
  241:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_misc/lv_anim.c ****     int32_t new_value;
  242:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_misc/lv_anim.c ****     new_value = (int32_t)step * (a->end - a->start);
-ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 17
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccHkZwwI.s 			page 17
 
 
  669              		.loc 1 242 0
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 1
  710              		.loc 1 255 0
  711              		.cfi_startproc
  712              		@ args = 0, pretend = 0, frame = 24
-ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 18
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccHkZwwI.s 			page 18
 
 
  713              		@ frame_needed = 1, uses_anonymous_args = 0
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 1
  755 0048 7B68     		ldr	r3, [r7, #4]
  756 004a 5A69     		ldr	r2, [r3, #20]
  757 004c 7B68     		ldr	r3, [r7, #4]
-ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 19
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccHkZwwI.s 			page 19
 
 
  758 004e 1B69     		ldr	r3, [r3, #16]
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 1
  799 0000 80B5     		push	{r7, lr}
  800              		.cfi_def_cfa_offset 8
  801              		.cfi_offset 7, -8
-ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 20
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccHkZwwI.s 			page 20
 
 
  802              		.cfi_offset 14, -4
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 1
  844 0052 D31A     		subs	r3, r2, r3
  845 0054 3A69     		ldr	r2, [r7, #16]
  846 0056 02FB03F3 		mul	r3, r2, r3
-ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 21
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccHkZwwI.s 			page 21
 
 
  847 005a FB60     		str	r3, [r7, #12]
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 1
  888 0002 88B0     		sub	sp, sp, #32
  889              		.cfi_def_cfa_offset 40
  890 0004 02AF     		add	r7, sp, #8
-ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 22
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccHkZwwI.s 			page 22
 
 
  891              		.cfi_def_cfa 7, 32
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 1
  931 0052 7B61     		str	r3, [r7, #20]
  932 0054 6EE0     		b	.L57
  933              	.L56:
-ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 23
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccHkZwwI.s 			page 23
 
 
  320:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_misc/lv_anim.c ****     } else if(t >= 408 && t < 614) {
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 1
  979 00ac 7B61     		str	r3, [r7, #20]
  329:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_misc/lv_anim.c ****         t    = t * 5; /*to [0..1024] range*/
  980              		.loc 1 329 0
-ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 24
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccHkZwwI.s 			page 24
 
 
  981 00ae 7A69     		ldr	r2, [r7, #20]
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 1
  1028              	.L60:
  337:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_misc/lv_anim.c ****     } else if(t >= 921 && t <= 1024) {
  1029              		.loc 1 337 0
-ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 25
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccHkZwwI.s 			page 25
 
 
  1030 0104 7B69     		ldr	r3, [r7, #20]
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 1
  348:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_misc/lv_anim.c ****     int32_t new_value;
  349:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_misc/lv_anim.c ****     new_value = (int32_t)step * diff;
  1074              		.loc 1 349 0
-ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 26
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccHkZwwI.s 			page 26
 
 
  1075 015a FB68     		ldr	r3, [r7, #12]
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 1
  1115              		.loc 1 363 0
  1116              		.cfi_startproc
  1117              		@ args = 0, pretend = 0, frame = 8
-ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 27
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccHkZwwI.s 			page 27
 
 
  1118              		@ frame_needed = 1, uses_anonymous_args = 0
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 1
  1167              	.LFB44:
  369:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_misc/lv_anim.c **** 
  370:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_misc/lv_anim.c **** /**********************
-ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 28
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccHkZwwI.s 			page 28
 
 
  371:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_misc/lv_anim.c ****  *   STATIC FUNCTIONS
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 1
  1202              		.loc 1 388 0 is_stmt 1
  1203 0030 394B     		ldr	r3, .L79+4
  1204 0032 1B68     		ldr	r3, [r3]
-ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 29
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccHkZwwI.s 			page 29
 
 
  1205 0034 1846     		mov	r0, r3
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 1
  1245 0086 002B     		cmp	r3, #0
  1246 0088 29DB     		blt	.L74
  1247              	.LBB2:
-ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 30
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccHkZwwI.s 			page 30
 
 
  403:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_misc/lv_anim.c ****                 if(a->act_time > a->time) a->act_time = a->time;
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 1
  1292 00d6 02DB     		blt	.L74
  413:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_misc/lv_anim.c ****                     anim_ready_handler(a);
  1293              		.loc 1 413 0
-ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 31
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccHkZwwI.s 			page 31
 
 
  1294 00d8 7869     		ldr	r0, [r7, #20]
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 1
  1333 0112 00BF     		.align	2
  1334              	.L79:
  1335 0114 00000000 		.word	_lv_anim_ll
-ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 32
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccHkZwwI.s 			page 32
 
 
  1336 0118 00000000 		.word	last_task_run
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 1
  1376              		.loc 1 441 0 discriminator 3
  1377 0028 7B68     		ldr	r3, [r7, #4]
  1378 002a 93F82030 		ldrb	r3, [r3, #32]	@ zero_extendqisi2
-ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 33
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccHkZwwI.s 			page 33
 
 
  1379 002e 03F00203 		and	r3, r3, #2
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 1
  1422 0082 07F10802 		add	r2, r7, #8
  1423 0086 1046     		mov	r0, r2
  1424 0088 9847     		blx	r3
-ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 34
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccHkZwwI.s 			page 34
 
 
  1425              	.LBE3:
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 1
  1467 00d6 0CBF     		ite	eq
  1468 00d8 0123     		moveq	r3, #1
  1469 00da 0023     		movne	r3, #0
-ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 35
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccHkZwwI.s 			page 35
 
 
  1470 00dc D9B2     		uxtb	r1, r3
@@ -2097,11 +2097,11 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 1
  1512              		.size	anim_ready_handler, .-anim_ready_handler
  1513              		.text
  1514              	.Letext0:
- 1515              		.file 2 "e:\\applications\\psoc\\psoc creator\\4.3\\psoc creator\\import\\gnu\\arm\\5.4.1\\arm-non
-ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 36
+ 1515              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.3\\psoc creator\\import\\gnu\\arm\\5.4.
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccHkZwwI.s 			page 36
 
 
- 1516              		.file 3 "e:\\applications\\psoc\\psoc creator\\4.3\\psoc creator\\import\\gnu\\arm\\5.4.1\\arm-non
+ 1516              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.3\\psoc creator\\import\\gnu\\arm\\5.4.
  1517              		.file 4 "..\\..\\..\\lvgl\\version_6.1.2\\lvgl\\src\\lv_misc\\../../../lv_conf.h"
  1518              		.file 5 "..\\..\\..\\lvgl\\version_6.1.2\\lvgl\\src\\lv_misc\\lv_anim.h"
  1519              		.file 6 "..\\..\\..\\lvgl\\version_6.1.2\\lvgl\\src\\lv_misc\\../lv_core/../lv_misc/lv_ll.h"
@@ -2116,26 +2116,26 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 1
  1528 000b 01       		.uleb128 0x1
  1529 000c 23010000 		.4byte	.LASF86
  1530 0010 0C       		.byte	0xc
- 1531 0011 47040000 		.4byte	.LASF87
- 1532 0015 38020000 		.4byte	.LASF88
+ 1531 0011 BD030000 		.4byte	.LASF87
+ 1532 0015 74040000 		.4byte	.LASF88
  1533 0019 00000000 		.4byte	.Ldebug_ranges0+0
  1534 001d 00000000 		.4byte	0
  1535 0021 00000000 		.4byte	.Ldebug_line0
  1536 0025 02       		.uleb128 0x2
  1537 0026 01       		.byte	0x1
  1538 0027 06       		.byte	0x6
- 1539 0028 5F030000 		.4byte	.LASF0
+ 1539 0028 D5020000 		.4byte	.LASF0
  1540 002c 03       		.uleb128 0x3
- 1541 002d E4020000 		.4byte	.LASF2
+ 1541 002d 5A020000 		.4byte	.LASF2
  1542 0031 02       		.byte	0x2
  1543 0032 1D       		.byte	0x1d
  1544 0033 37000000 		.4byte	0x37
  1545 0037 02       		.uleb128 0x2
  1546 0038 01       		.byte	0x1
  1547 0039 08       		.byte	0x8
- 1548 003a 3E030000 		.4byte	.LASF1
+ 1548 003a B4020000 		.4byte	.LASF1
  1549 003e 03       		.uleb128 0x3
- 1550 003f 46050000 		.4byte	.LASF3
+ 1550 003f 59050000 		.4byte	.LASF3
  1551 0043 02       		.byte	0x2
  1552 0044 29       		.byte	0x29
  1553 0045 49000000 		.4byte	0x49
@@ -2151,19 +2151,19 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 1
  1563 005b 02       		.uleb128 0x2
  1564 005c 02       		.byte	0x2
  1565 005d 07       		.byte	0x7
- 1566 005e 0E040000 		.4byte	.LASF6
+ 1566 005e 84030000 		.4byte	.LASF6
  1567 0062 03       		.uleb128 0x3
- 1568 0063 25050000 		.4byte	.LASF7
+ 1568 0063 38050000 		.4byte	.LASF7
  1569 0067 02       		.byte	0x2
  1570 0068 3F       		.byte	0x3f
  1571 0069 6D000000 		.4byte	0x6d
  1572 006d 02       		.uleb128 0x2
-ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 37
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccHkZwwI.s 			page 37
 
 
  1573 006e 04       		.byte	0x4
  1574 006f 05       		.byte	0x5
- 1575 0070 CA020000 		.4byte	.LASF8
+ 1575 0070 40020000 		.4byte	.LASF8
  1576 0074 03       		.uleb128 0x3
  1577 0075 97000000 		.4byte	.LASF9
  1578 0079 02       		.byte	0x2
@@ -2172,7 +2172,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 1
  1581 007f 02       		.uleb128 0x2
  1582 0080 04       		.byte	0x4
  1583 0081 07       		.byte	0x7
- 1584 0082 E2040000 		.4byte	.LASF10
+ 1584 0082 58040000 		.4byte	.LASF10
  1585 0086 02       		.uleb128 0x2
  1586 0087 08       		.byte	0x8
  1587 0088 05       		.byte	0x5
@@ -2180,7 +2180,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 1
  1589 008d 02       		.uleb128 0x2
  1590 008e 08       		.byte	0x8
  1591 008f 07       		.byte	0x7
- 1592 0090 73030000 		.4byte	.LASF12
+ 1592 0090 E9020000 		.4byte	.LASF12
  1593 0094 04       		.uleb128 0x4
  1594 0095 04       		.byte	0x4
  1595 0096 05       		.byte	0x5
@@ -2188,37 +2188,37 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 1
  1597 009b 02       		.uleb128 0x2
  1598 009c 04       		.byte	0x4
  1599 009d 07       		.byte	0x7
- 1600 009e A0030000 		.4byte	.LASF13
+ 1600 009e 16030000 		.4byte	.LASF13
  1601 00a2 03       		.uleb128 0x3
  1602 00a3 D6010000 		.4byte	.LASF14
  1603 00a7 03       		.byte	0x3
  1604 00a8 18       		.byte	0x18
  1605 00a9 2C000000 		.4byte	0x2c
  1606 00ad 03       		.uleb128 0x3
- 1607 00ae AE040000 		.4byte	.LASF15
+ 1607 00ae 24040000 		.4byte	.LASF15
  1608 00b2 03       		.byte	0x3
  1609 00b3 20       		.byte	0x20
  1610 00b4 3E000000 		.4byte	0x3e
  1611 00b8 03       		.uleb128 0x3
- 1612 00b9 AD030000 		.4byte	.LASF16
+ 1612 00b9 23030000 		.4byte	.LASF16
  1613 00bd 03       		.byte	0x3
  1614 00be 24       		.byte	0x24
  1615 00bf 50000000 		.4byte	0x50
  1616 00c3 03       		.uleb128 0x3
- 1617 00c4 6B030000 		.4byte	.LASF17
+ 1617 00c4 E1020000 		.4byte	.LASF17
  1618 00c8 03       		.byte	0x3
  1619 00c9 2C       		.byte	0x2c
  1620 00ca 62000000 		.4byte	0x62
  1621 00ce 03       		.uleb128 0x3
- 1622 00cf 97030000 		.4byte	.LASF18
+ 1622 00cf 0D030000 		.4byte	.LASF18
  1623 00d3 03       		.byte	0x3
  1624 00d4 30       		.byte	0x30
  1625 00d5 74000000 		.4byte	0x74
  1626 00d9 03       		.uleb128 0x3
- 1627 00da 87040000 		.4byte	.LASF19
+ 1627 00da FD030000 		.4byte	.LASF19
  1628 00de 04       		.byte	0x4
  1629 00df 3C       		.byte	0x3c
-ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 38
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccHkZwwI.s 			page 38
 
 
  1630 00e0 AD000000 		.4byte	0xad
@@ -2227,7 +2227,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 1
  1633 00e6 02       		.uleb128 0x2
  1634 00e7 08       		.byte	0x8
  1635 00e8 04       		.byte	0x4
- 1636 00e9 1B030000 		.4byte	.LASF20
+ 1636 00e9 91020000 		.4byte	.LASF20
  1637 00ed 02       		.uleb128 0x2
  1638 00ee 04       		.byte	0x4
  1639 00ef 07       		.byte	0x7
@@ -2235,7 +2235,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 1
  1641 00f4 02       		.uleb128 0x2
  1642 00f5 01       		.byte	0x1
  1643 00f6 08       		.byte	0x8
- 1644 00f7 2E040000 		.4byte	.LASF22
+ 1644 00f7 A4030000 		.4byte	.LASF22
  1645 00fb 03       		.uleb128 0x3
  1646 00fc B8000000 		.4byte	.LASF23
  1647 0100 05       		.byte	0x5
@@ -2260,7 +2260,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 1
  1666 0128 04       		.byte	0x4
  1667 0129 2D010000 		.4byte	0x12d
  1668 012d 09       		.uleb128 0x9
- 1669 012e BC040000 		.4byte	.LASF47
+ 1669 012e 32040000 		.4byte	.LASF47
  1670 0132 24       		.byte	0x24
  1671 0133 05       		.byte	0x5
  1672 0134 44       		.byte	0x44
@@ -2272,28 +2272,28 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 1
  1678 0140 E4000000 		.4byte	0xe4
  1679 0144 00       		.byte	0
  1680 0145 0B       		.uleb128 0xb
- 1681 0146 79050000 		.4byte	.LASF25
+ 1681 0146 8C050000 		.4byte	.LASF25
  1682 014a 05       		.byte	0x5
  1683 014b 47       		.byte	0x47
  1684 014c 06010000 		.4byte	0x106
  1685 0150 04       		.byte	0x4
  1686 0151 0B       		.uleb128 0xb
-ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 39
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccHkZwwI.s 			page 39
 
 
- 1687 0152 B6030000 		.4byte	.LASF26
+ 1687 0152 2C030000 		.4byte	.LASF26
  1688 0156 05       		.byte	0x5
  1689 0157 48       		.byte	0x48
  1690 0158 EE010000 		.4byte	0x1ee
  1691 015c 08       		.byte	0x8
  1692 015d 0B       		.uleb128 0xb
- 1693 015e D9040000 		.4byte	.LASF27
+ 1693 015e 4F040000 		.4byte	.LASF27
  1694 0162 05       		.byte	0x5
  1695 0163 49       		.byte	0x49
  1696 0164 19020000 		.4byte	0x219
  1697 0168 0C       		.byte	0xc
  1698 0169 0B       		.uleb128 0xb
- 1699 016a 2C030000 		.4byte	.LASF28
+ 1699 016a A2020000 		.4byte	.LASF28
  1700 016e 05       		.byte	0x5
  1701 016f 4A       		.byte	0x4a
  1702 0170 C3000000 		.4byte	0xc3
@@ -2305,19 +2305,19 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 1
  1708 017c C3000000 		.4byte	0xc3
  1709 0180 14       		.byte	0x14
  1710 0181 0B       		.uleb128 0xb
- 1711 0182 E3030000 		.4byte	.LASF29
+ 1711 0182 59030000 		.4byte	.LASF29
  1712 0186 05       		.byte	0x5
  1713 0187 4C       		.byte	0x4c
  1714 0188 B8000000 		.4byte	0xb8
  1715 018c 18       		.byte	0x18
  1716 018d 0B       		.uleb128 0xb
- 1717 018e 7E040000 		.4byte	.LASF30
+ 1717 018e F4030000 		.4byte	.LASF30
  1718 0192 05       		.byte	0x5
  1719 0193 4D       		.byte	0x4d
  1720 0194 AD000000 		.4byte	0xad
  1721 0198 1A       		.byte	0x1a
  1722 0199 0B       		.uleb128 0xb
- 1723 019a 94050000 		.4byte	.LASF31
+ 1723 019a A7050000 		.4byte	.LASF31
  1724 019e 05       		.byte	0x5
  1725 019f 4E       		.byte	0x4e
  1726 01a0 B8000000 		.4byte	0xb8
@@ -2338,10 +2338,10 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 1
  1741 01be 07       		.byte	0x7
  1742 01bf 20       		.byte	0x20
  1743 01c0 0C       		.uleb128 0xc
-ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 40
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccHkZwwI.s 			page 40
 
 
- 1744 01c1 14030000 		.4byte	.LASF34
+ 1744 01c1 8A020000 		.4byte	.LASF34
  1745 01c5 05       		.byte	0x5
  1746 01c6 55       		.byte	0x55
  1747 01c7 A2000000 		.4byte	0xa2
@@ -2350,7 +2350,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 1
  1750 01cd 06       		.byte	0x6
  1751 01ce 20       		.byte	0x20
  1752 01cf 0C       		.uleb128 0xc
- 1753 01d0 21040000 		.4byte	.LASF35
+ 1753 01d0 97030000 		.4byte	.LASF35
  1754 01d4 05       		.byte	0x5
  1755 01d5 57       		.byte	0x57
  1756 01d6 A2000000 		.4byte	0xa2
@@ -2398,20 +2398,20 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 1
  1798 022a 07       		.uleb128 0x7
  1799 022b 35020000 		.4byte	0x235
  1800 022f 08       		.uleb128 0x8
-ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 41
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccHkZwwI.s 			page 41
 
 
  1801 0230 27010000 		.4byte	0x127
  1802 0234 00       		.byte	0
  1803 0235 03       		.uleb128 0x3
- 1804 0236 F4040000 		.4byte	.LASF39
+ 1804 0236 6A040000 		.4byte	.LASF39
  1805 023a 05       		.byte	0x5
  1806 023b 59       		.byte	0x59
  1807 023c 2D010000 		.4byte	0x12d
  1808 0240 02       		.uleb128 0x2
  1809 0241 01       		.byte	0x1
  1810 0242 02       		.byte	0x2
- 1811 0243 B6040000 		.4byte	.LASF40
+ 1811 0243 2C040000 		.4byte	.LASF40
  1812 0247 03       		.uleb128 0x3
  1813 0248 00000000 		.4byte	.LASF41
  1814 024c 06       		.byte	0x6
@@ -2423,7 +2423,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 1
  1820 0255 21       		.byte	0x21
  1821 0256 7F020000 		.4byte	0x27f
  1822 025a 0B       		.uleb128 0xb
- 1823 025b B9050000 		.4byte	.LASF42
+ 1823 025b CC050000 		.4byte	.LASF42
  1824 025f 06       		.byte	0x6
  1825 0260 23       		.byte	0x23
  1826 0261 CE000000 		.4byte	0xce
@@ -2435,7 +2435,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 1
  1832 026d 7F020000 		.4byte	0x27f
  1833 0271 04       		.byte	0x4
  1834 0272 0B       		.uleb128 0xb
- 1835 0273 27030000 		.4byte	.LASF44
+ 1835 0273 9D020000 		.4byte	.LASF44
  1836 0277 06       		.byte	0x6
  1837 0278 25       		.byte	0x25
  1838 0279 7F020000 		.4byte	0x27f
@@ -2445,12 +2445,12 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 1
  1842 0280 04       		.byte	0x4
  1843 0281 47020000 		.4byte	0x247
  1844 0285 03       		.uleb128 0x3
- 1845 0286 C2020000 		.4byte	.LASF45
+ 1845 0286 38020000 		.4byte	.LASF45
  1846 028a 06       		.byte	0x6
  1847 028b 26       		.byte	0x26
  1848 028c 52020000 		.4byte	0x252
  1849 0290 03       		.uleb128 0x3
- 1850 0291 5A050000 		.4byte	.LASF46
+ 1850 0291 6D050000 		.4byte	.LASF46
  1851 0295 07       		.byte	0x7
  1852 0296 2B       		.byte	0x2b
  1853 0297 9B020000 		.4byte	0x29b
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 1
  1855 029c 04       		.byte	0x4
  1856 029d A1020000 		.4byte	0x2a1
  1857 02a1 07       		.uleb128 0x7
-ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 42
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccHkZwwI.s 			page 42
 
 
  1858 02a2 AC020000 		.4byte	0x2ac
@@ -2475,19 +2475,19 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 1
  1869 02b9 3E       		.byte	0x3e
  1870 02ba 0D030000 		.4byte	0x30d
  1871 02be 0B       		.uleb128 0xb
- 1872 02bf D3020000 		.4byte	.LASF49
+ 1872 02bf 49020000 		.4byte	.LASF49
  1873 02c3 07       		.byte	0x7
  1874 02c4 40       		.byte	0x40
  1875 02c5 CE000000 		.4byte	0xce
  1876 02c9 00       		.byte	0
  1877 02ca 0B       		.uleb128 0xb
- 1878 02cb 81050000 		.4byte	.LASF50
+ 1878 02cb 94050000 		.4byte	.LASF50
  1879 02cf 07       		.byte	0x7
  1880 02d0 41       		.byte	0x41
  1881 02d1 CE000000 		.4byte	0xce
  1882 02d5 04       		.byte	0x4
  1883 02d6 0B       		.uleb128 0xb
- 1884 02d7 92040000 		.4byte	.LASF51
+ 1884 02d7 08040000 		.4byte	.LASF51
  1885 02db 07       		.byte	0x7
  1886 02dc 42       		.byte	0x42
  1887 02dd 90020000 		.4byte	0x290
@@ -2499,7 +2499,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 1
  1893 02e9 E4000000 		.4byte	0xe4
  1894 02ed 0C       		.byte	0xc
  1895 02ee 0C       		.uleb128 0xc
- 1896 02ef 8F050000 		.4byte	.LASF53
+ 1896 02ef A2050000 		.4byte	.LASF53
  1897 02f3 07       		.byte	0x7
  1898 02f4 46       		.byte	0x46
  1899 02f5 A2000000 		.4byte	0xa2
@@ -2508,7 +2508,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 1
  1902 02fb 05       		.byte	0x5
  1903 02fc 10       		.byte	0x10
  1904 02fd 0C       		.uleb128 0xc
- 1905 02fe 5A030000 		.4byte	.LASF54
+ 1905 02fe D0020000 		.4byte	.LASF54
  1906 0302 07       		.byte	0x7
  1907 0303 47       		.byte	0x47
  1908 0304 A2000000 		.4byte	0xa2
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 1
  1912 030b 10       		.byte	0x10
  1913 030c 00       		.byte	0
  1914 030d 10       		.uleb128 0x10
-ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 43
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccHkZwwI.s 			page 43
 
 
  1915 030e 01       		.byte	0x1
@@ -2530,16 +2530,16 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 1
  1921 031a 27020000 		.4byte	.LASF55
  1922 031e 00       		.byte	0
  1923 031f 11       		.uleb128 0x11
- 1924 0320 33040000 		.4byte	.LASF56
+ 1924 0320 A9030000 		.4byte	.LASF56
  1925 0324 01       		.byte	0x1
  1926 0325 11       		.uleb128 0x11
- 1927 0326 EE020000 		.4byte	.LASF57
+ 1927 0326 64020000 		.4byte	.LASF57
  1928 032a 02       		.byte	0x2
  1929 032b 11       		.uleb128 0x11
  1930 032c 70000000 		.4byte	.LASF58
  1931 0330 03       		.byte	0x3
  1932 0331 11       		.uleb128 0x11
- 1933 0332 C7040000 		.4byte	.LASF59
+ 1933 0332 3D040000 		.4byte	.LASF59
  1934 0336 04       		.byte	0x4
  1935 0337 11       		.uleb128 0x11
  1936 0338 0E010000 		.4byte	.LASF60
@@ -2557,7 +2557,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 1
  1948 0350 04       		.byte	0x4
  1949 0351 44030000 		.4byte	0x344
  1950 0355 12       		.uleb128 0x12
- 1951 0356 13050000 		.4byte	.LASF89
+ 1951 0356 26050000 		.4byte	.LASF89
  1952 035a 01       		.byte	0x1
  1953 035b 39       		.byte	0x39
  1954 035c 00000000 		.4byte	.LFB31
@@ -2565,7 +2565,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 1
  1956 0364 01       		.uleb128 0x1
  1957 0365 9C       		.byte	0x9c
  1958 0366 13       		.uleb128 0x13
- 1959 0367 8A030000 		.4byte	.LASF63
+ 1959 0367 00030000 		.4byte	.LASF63
  1960 036b 01       		.byte	0x1
  1961 036c 49       		.byte	0x49
  1962 036d 00000000 		.4byte	.LFB32
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 1
  1969 037e 01       		.byte	0x1
  1970 037f 49       		.byte	0x49
  1971 0380 88030000 		.4byte	0x388
-ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 44
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccHkZwwI.s 			page 44
 
 
  1972 0384 02       		.uleb128 0x2
@@ -2589,7 +2589,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 1
  1977 0389 04       		.byte	0x4
  1978 038a 35020000 		.4byte	0x235
  1979 038e 13       		.uleb128 0x13
- 1980 038f FE040000 		.4byte	.LASF64
+ 1980 038f 11050000 		.4byte	.LASF64
  1981 0393 01       		.byte	0x1
  1982 0394 55       		.byte	0x55
  1983 0395 00000000 		.4byte	.LFB33
@@ -2615,7 +2615,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 1
  2003 03bc 74       		.sleb128 -12
  2004 03bd 00       		.byte	0
  2005 03be 16       		.uleb128 0x16
- 2006 03bf 32030000 		.4byte	.LASF67
+ 2006 03bf A8020000 		.4byte	.LASF67
  2007 03c3 01       		.byte	0x1
  2008 03c4 75       		.byte	0x75
  2009 03c5 40020000 		.4byte	0x240
@@ -2633,12 +2633,12 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 1
  2021 03e3 91       		.byte	0x91
  2022 03e4 64       		.sleb128 -28
  2023 03e5 17       		.uleb128 0x17
- 2024 03e6 79050000 		.4byte	.LASF25
+ 2024 03e6 8C050000 		.4byte	.LASF25
  2025 03ea 01       		.byte	0x1
  2026 03eb 75       		.byte	0x75
  2027 03ec 06010000 		.4byte	0x106
  2028 03f0 02       		.uleb128 0x2
-ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 45
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccHkZwwI.s 			page 45
 
 
  2029 03f1 91       		.byte	0x91
@@ -2696,9 +2696,9 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 1
  2081 044e 70       		.sleb128 -16
  2082 044f 00       		.byte	0
  2083 0450 19       		.uleb128 0x19
- 2084 0451 A3050000 		.4byte	.LASF69
+ 2084 0451 B6050000 		.4byte	.LASF69
  2085 0455 01       		.byte	0x1
-ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 46
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccHkZwwI.s 			page 46
 
 
  2086 0456 A1       		.byte	0xa1
@@ -2709,7 +2709,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 1
  2091 0464 9C       		.byte	0x9c
  2092 0465 AE040000 		.4byte	0x4ae
  2093 0469 17       		.uleb128 0x17
- 2094 046a D7030000 		.4byte	.LASF70
+ 2094 046a 4D030000 		.4byte	.LASF70
  2095 046e 01       		.byte	0x1
  2096 046f A1       		.byte	0xa1
  2097 0470 B8000000 		.4byte	0xb8
@@ -2717,7 +2717,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 1
  2099 0475 91       		.byte	0x91
  2100 0476 6E       		.sleb128 -18
  2101 0477 17       		.uleb128 0x17
- 2102 0478 2C030000 		.4byte	.LASF28
+ 2102 0478 A2020000 		.4byte	.LASF28
  2103 047c 01       		.byte	0x1
  2104 047d A1       		.byte	0xa1
  2105 047e FB000000 		.4byte	0xfb
@@ -2741,7 +2741,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 1
  2123 049d 91       		.byte	0x91
  2124 049e 70       		.sleb128 -16
  2125 049f 15       		.uleb128 0x15
- 2126 04a0 E3030000 		.4byte	.LASF29
+ 2126 04a0 59030000 		.4byte	.LASF29
  2127 04a4 01       		.byte	0x1
  2128 04a5 A4       		.byte	0xa4
  2129 04a6 CE000000 		.4byte	0xce
@@ -2750,7 +2750,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 1
  2132 04ac 74       		.sleb128 -12
  2133 04ad 00       		.byte	0
  2134 04ae 19       		.uleb128 0x19
- 2135 04af 9A040000 		.4byte	.LASF71
+ 2135 04af 10040000 		.4byte	.LASF71
  2136 04b3 01       		.byte	0x1
  2137 04b4 B4       		.byte	0xb4
  2138 04b5 FB000000 		.4byte	0xfb
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 1
  2140 04bd 64000000 		.4byte	.LFE37-.LFB37
  2141 04c1 01       		.uleb128 0x1
  2142 04c2 9C       		.byte	0x9c
-ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 47
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccHkZwwI.s 			page 47
 
 
  2143 04c3 F0040000 		.4byte	0x4f0
@@ -2771,7 +2771,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 1
  2150 04d1 91       		.byte	0x91
  2151 04d2 6C       		.sleb128 -20
  2152 04d3 15       		.uleb128 0x15
- 2153 04d4 8A050000 		.4byte	.LASF72
+ 2153 04d4 9D050000 		.4byte	.LASF72
  2154 04d8 01       		.byte	0x1
  2155 04d9 B7       		.byte	0xb7
  2156 04da CE000000 		.4byte	0xce
@@ -2779,7 +2779,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 1
  2158 04df 91       		.byte	0x91
  2159 04e0 74       		.sleb128 -12
  2160 04e1 15       		.uleb128 0x15
- 2161 04e2 50050000 		.4byte	.LASF73
+ 2161 04e2 63050000 		.4byte	.LASF73
  2162 04e6 01       		.byte	0x1
  2163 04e7 C0       		.byte	0xc0
  2164 04e8 C3000000 		.4byte	0xc3
@@ -2793,7 +2793,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 1
  2172 04f6 0E       		.uleb128 0xe
  2173 04f7 35020000 		.4byte	0x235
  2174 04fb 16       		.uleb128 0x16
- 2175 04fc FF020000 		.4byte	.LASF74
+ 2175 04fc 75020000 		.4byte	.LASF74
  2176 0500 01       		.byte	0x1
  2177 0501 CD       		.byte	0xcd
  2178 0502 FB000000 		.4byte	0xfb
@@ -2818,11 +2818,11 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 1
  2197 0529 02       		.uleb128 0x2
  2198 052a 91       		.byte	0x91
  2199 052b 74       		.sleb128 -12
-ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 48
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccHkZwwI.s 			page 48
 
 
  2200 052c 15       		.uleb128 0x15
- 2201 052d 8A050000 		.4byte	.LASF72
+ 2201 052d 9D050000 		.4byte	.LASF72
  2202 0531 01       		.byte	0x1
  2203 0532 D6       		.byte	0xd6
  2204 0533 C3000000 		.4byte	0xc3
@@ -2830,7 +2830,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 1
  2206 0538 91       		.byte	0x91
  2207 0539 70       		.sleb128 -16
  2208 053a 15       		.uleb128 0x15
- 2209 053b 50050000 		.4byte	.LASF73
+ 2209 053b 63050000 		.4byte	.LASF73
  2210 053f 01       		.byte	0x1
  2211 0540 D8       		.byte	0xd8
  2212 0541 C3000000 		.4byte	0xc3
@@ -2865,7 +2865,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 1
  2241 0578 91       		.byte	0x91
  2242 0579 74       		.sleb128 -12
  2243 057a 15       		.uleb128 0x15
- 2244 057b 8A050000 		.4byte	.LASF72
+ 2244 057b 9D050000 		.4byte	.LASF72
  2245 057f 01       		.byte	0x1
  2246 0580 EF       		.byte	0xef
  2247 0581 C3000000 		.4byte	0xc3
@@ -2873,19 +2873,19 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 1
  2249 0586 91       		.byte	0x91
  2250 0587 70       		.sleb128 -16
  2251 0588 15       		.uleb128 0x15
- 2252 0589 50050000 		.4byte	.LASF73
+ 2252 0589 63050000 		.4byte	.LASF73
  2253 058d 01       		.byte	0x1
  2254 058e F1       		.byte	0xf1
  2255 058f C3000000 		.4byte	0xc3
  2256 0593 02       		.uleb128 0x2
-ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 49
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccHkZwwI.s 			page 49
 
 
  2257 0594 91       		.byte	0x91
  2258 0595 6C       		.sleb128 -20
  2259 0596 00       		.byte	0
  2260 0597 16       		.uleb128 0x16
- 2261 0598 BE030000 		.4byte	.LASF76
+ 2261 0598 34030000 		.4byte	.LASF76
  2262 059c 01       		.byte	0x1
  2263 059d FE       		.byte	0xfe
  2264 059e FB000000 		.4byte	0xfb
@@ -2911,7 +2911,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 1
  2284 05c7 91       		.byte	0x91
  2285 05c8 74       		.sleb128 -12
  2286 05c9 1B       		.uleb128 0x1b
- 2287 05ca 8A050000 		.4byte	.LASF72
+ 2287 05ca 9D050000 		.4byte	.LASF72
  2288 05ce 01       		.byte	0x1
  2289 05cf 0801     		.2byte	0x108
  2290 05d1 C3000000 		.4byte	0xc3
@@ -2919,7 +2919,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 1
  2292 05d6 91       		.byte	0x91
  2293 05d7 70       		.sleb128 -16
  2294 05d8 1B       		.uleb128 0x1b
- 2295 05d9 50050000 		.4byte	.LASF73
+ 2295 05d9 63050000 		.4byte	.LASF73
  2296 05dd 01       		.byte	0x1
  2297 05de 0A01     		.2byte	0x10a
  2298 05e0 C3000000 		.4byte	0xc3
@@ -2928,7 +2928,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 1
  2301 05e6 6C       		.sleb128 -20
  2302 05e7 00       		.byte	0
  2303 05e8 1C       		.uleb128 0x1c
- 2304 05e9 2F050000 		.4byte	.LASF77
+ 2304 05e9 42050000 		.4byte	.LASF77
  2305 05ed 01       		.byte	0x1
  2306 05ee 1701     		.2byte	0x117
  2307 05f0 FB000000 		.4byte	0xfb
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 1
  2311 05fd 9C       		.byte	0x9c
  2312 05fe 3B060000 		.4byte	0x63b
  2313 0602 1D       		.uleb128 0x1d
-ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 50
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccHkZwwI.s 			page 50
 
 
  2314 0603 6100     		.ascii	"a\000"
@@ -2957,7 +2957,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 1
  2327 061a 91       		.byte	0x91
  2328 061b 74       		.sleb128 -12
  2329 061c 1B       		.uleb128 0x1b
- 2330 061d 8A050000 		.4byte	.LASF72
+ 2330 061d 9D050000 		.4byte	.LASF72
  2331 0621 01       		.byte	0x1
  2332 0622 2101     		.2byte	0x121
  2333 0624 C3000000 		.4byte	0xc3
@@ -2965,7 +2965,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 1
  2335 0629 91       		.byte	0x91
  2336 062a 70       		.sleb128 -16
  2337 062b 1B       		.uleb128 0x1b
- 2338 062c 50050000 		.4byte	.LASF73
+ 2338 062c 63050000 		.4byte	.LASF73
  2339 0630 01       		.byte	0x1
  2340 0631 2301     		.2byte	0x123
  2341 0633 C3000000 		.4byte	0xc3
@@ -2974,7 +2974,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 1
  2344 0639 6C       		.sleb128 -20
  2345 063a 00       		.byte	0
  2346 063b 1C       		.uleb128 0x1c
- 2347 063c EE030000 		.4byte	.LASF78
+ 2347 063c 64030000 		.4byte	.LASF78
  2348 0640 01       		.byte	0x1
  2349 0641 3001     		.2byte	0x130
  2350 0643 FB000000 		.4byte	0xfb
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 1
  2368 0668 CE000000 		.4byte	0xce
  2369 066c 02       		.uleb128 0x2
  2370 066d 91       		.byte	0x91
-ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 51
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccHkZwwI.s 			page 51
 
 
  2371 066e 74       		.sleb128 -12
@@ -3011,7 +3011,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 1
  2378 067c 91       		.byte	0x91
  2379 067d 70       		.sleb128 -16
  2380 067e 1B       		.uleb128 0x1b
- 2381 067f 8A050000 		.4byte	.LASF72
+ 2381 067f 9D050000 		.4byte	.LASF72
  2382 0683 01       		.byte	0x1
  2383 0684 5A01     		.2byte	0x15a
  2384 0686 C3000000 		.4byte	0xc3
@@ -3019,7 +3019,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 1
  2386 068b 91       		.byte	0x91
  2387 068c 6C       		.sleb128 -20
  2388 068d 1B       		.uleb128 0x1b
- 2389 068e 50050000 		.4byte	.LASF73
+ 2389 068e 63050000 		.4byte	.LASF73
  2390 0692 01       		.byte	0x1
  2391 0693 5C01     		.2byte	0x15c
  2392 0695 C3000000 		.4byte	0xc3
@@ -3028,7 +3028,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 1
  2395 069b 68       		.sleb128 -24
  2396 069c 00       		.byte	0
  2397 069d 1E       		.uleb128 0x1e
- 2398 069e 67050000 		.4byte	.LASF80
+ 2398 069e 7A050000 		.4byte	.LASF80
  2399 06a2 01       		.byte	0x1
  2400 06a3 6A01     		.2byte	0x16a
  2401 06a5 FB000000 		.4byte	0xfb
@@ -3047,7 +3047,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 1
  2414 06c3 74       		.sleb128 -12
  2415 06c4 00       		.byte	0
  2416 06c5 1F       		.uleb128 0x1f
- 2417 06c6 DA020000 		.4byte	.LASF90
+ 2417 06c6 50020000 		.4byte	.LASF90
  2418 06ca 01       		.byte	0x1
  2419 06cb 7A01     		.2byte	0x17a
  2420 06cd 00000000 		.4byte	.LFB44
@@ -3056,9 +3056,9 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 1
  2423 06d6 9C       		.byte	0x9c
  2424 06d7 20070000 		.4byte	0x720
  2425 06db 20       		.uleb128 0x20
- 2426 06dc E8030000 		.4byte	.LASF81
+ 2426 06dc 5E030000 		.4byte	.LASF81
  2427 06e0 01       		.byte	0x1
-ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 52
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccHkZwwI.s 			page 52
 
 
  2428 06e1 7A01     		.2byte	0x17a
@@ -3075,7 +3075,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 1
  2439 06f5 91       		.byte	0x91
  2440 06f6 74       		.sleb128 -12
  2441 06f7 1B       		.uleb128 0x1b
- 2442 06f8 DD030000 		.4byte	.LASF82
+ 2442 06f8 53030000 		.4byte	.LASF82
  2443 06fc 01       		.byte	0x1
  2444 06fd 8401     		.2byte	0x184
  2445 06ff CE000000 		.4byte	0xce
@@ -3086,7 +3086,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 1
  2450 0707 8A000000 		.4byte	.LBB2
  2451 070b 54000000 		.4byte	.LBE2-.LBB2
  2452 070f 1B       		.uleb128 0x1b
- 2453 0710 50050000 		.4byte	.LASF73
+ 2453 0710 63050000 		.4byte	.LASF73
  2454 0714 01       		.byte	0x1
  2455 0715 9501     		.2byte	0x195
  2456 0717 C3000000 		.4byte	0xc3
@@ -3118,10 +3118,10 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 1
  2482 074c 32000000 		.4byte	.LBE3-.LBB3
  2483 0750 64070000 		.4byte	0x764
  2484 0754 1B       		.uleb128 0x1b
-ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 53
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccHkZwwI.s 			page 53
 
 
- 2485 0755 0D050000 		.4byte	.LASF83
+ 2485 0755 20050000 		.4byte	.LASF83
  2486 0759 01       		.byte	0x1
  2487 075a BD01     		.2byte	0x1bd
  2488 075c 35020000 		.4byte	0x235
@@ -3143,7 +3143,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 1
  2504 077c 00       		.byte	0
  2505 077d 00       		.byte	0
  2506 077e 15       		.uleb128 0x15
- 2507 077f 4C030000 		.4byte	.LASF84
+ 2507 077f C2020000 		.4byte	.LASF84
  2508 0783 01       		.byte	0x1
  2509 0784 2B       		.byte	0x2b
  2510 0785 CE000000 		.4byte	0xce
@@ -3159,7 +3159,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 1
  2520 079b 03       		.byte	0x3
  2521 079c 04000000 		.4byte	anim_list_changed
  2522 07a0 24       		.uleb128 0x24
- 2523 07a1 02040000 		.4byte	.LASF92
+ 2523 07a1 78030000 		.4byte	.LASF92
  2524 07a5 08       		.byte	0x8
  2525 07a6 38       		.byte	0x38
  2526 07a7 85020000 		.4byte	0x285
@@ -3178,7 +3178,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 1
  2539 0009 1B       		.uleb128 0x1b
  2540 000a 0E       		.uleb128 0xe
  2541 000b 55       		.uleb128 0x55
-ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 54
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccHkZwwI.s 			page 54
 
 
  2542 000c 17       		.uleb128 0x17
@@ -3238,7 +3238,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 1
  2596 0042 49       		.uleb128 0x49
  2597 0043 13       		.uleb128 0x13
  2598 0044 00       		.byte	0
-ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 55
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccHkZwwI.s 			page 55
 
 
  2599 0045 00       		.byte	0
@@ -3298,7 +3298,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 1
  2653 007b 3B       		.uleb128 0x3b
  2654 007c 0B       		.uleb128 0xb
  2655 007d 49       		.uleb128 0x49
-ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 56
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccHkZwwI.s 			page 56
 
 
  2656 007e 13       		.uleb128 0x13
@@ -3358,7 +3358,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 1
  2710 00b4 13       		.uleb128 0x13
  2711 00b5 00       		.byte	0
  2712 00b6 00       		.byte	0
-ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 57
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccHkZwwI.s 			page 57
 
 
  2713 00b7 10       		.uleb128 0x10
@@ -3418,7 +3418,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 1
  2767 00ee 3A       		.uleb128 0x3a
  2768 00ef 0B       		.uleb128 0xb
  2769 00f0 3B       		.uleb128 0x3b
-ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 58
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccHkZwwI.s 			page 58
 
 
  2770 00f1 0B       		.uleb128 0xb
@@ -3478,7 +3478,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 1
  2824 0128 3B       		.uleb128 0x3b
  2825 0129 0B       		.uleb128 0xb
  2826 012a 27       		.uleb128 0x27
-ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 59
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccHkZwwI.s 			page 59
 
 
  2827 012b 19       		.uleb128 0x19
@@ -3538,7 +3538,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 1
  2881 0162 3B       		.uleb128 0x3b
  2882 0163 0B       		.uleb128 0xb
  2883 0164 27       		.uleb128 0x27
-ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 60
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccHkZwwI.s 			page 60
 
 
  2884 0165 19       		.uleb128 0x19
@@ -3598,7 +3598,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 1
  2938 019c 3B       		.uleb128 0x3b
  2939 019d 05       		.uleb128 0x5
  2940 019e 27       		.uleb128 0x27
-ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 61
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccHkZwwI.s 			page 61
 
 
  2941 019f 19       		.uleb128 0x19
@@ -3658,7 +3658,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 1
  2995 01d7 13       		.uleb128 0x13
  2996 01d8 00       		.byte	0
  2997 01d9 00       		.byte	0
-ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 62
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccHkZwwI.s 			page 62
 
 
  2998 01da 1F       		.uleb128 0x1f
@@ -3718,7 +3718,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 1
  3052 0211 3B       		.uleb128 0x3b
  3053 0212 05       		.uleb128 0x5
  3054 0213 27       		.uleb128 0x27
-ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 63
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccHkZwwI.s 			page 63
 
 
  3055 0214 19       		.uleb128 0x19
@@ -3778,7 +3778,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 1
  3109 0018 00000000 		.4byte	.LFB32
  3110 001c 38000000 		.4byte	.LFE32-.LFB32
  3111 0020 00000000 		.4byte	.LFB33
-ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 64
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccHkZwwI.s 			page 64
 
 
  3112 0024 78000000 		.4byte	.LFE33-.LFB33
@@ -3838,7 +3838,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 1
  3166 0064 32000000 		.4byte	.LFE43
  3167 0068 00000000 		.4byte	.LFB44
  3168 006c 20010000 		.4byte	.LFE44
-ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 65
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccHkZwwI.s 			page 65
 
 
  3169 0070 00000000 		.4byte	.LFB45
@@ -3847,8 +3847,8 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 1
  3172 007c 00000000 		.4byte	0
  3173              		.section	.debug_line,"",%progbits
  3174              	.Ldebug_line0:
- 3175 0000 79040000 		.section	.debug_str,"MS",%progbits,1
- 3175      02003902 
+ 3175 0000 8D040000 		.section	.debug_str,"MS",%progbits,1
+ 3175      02004D02 
  3175      00000201 
  3175      FB0E0D00 
  3175      01010101 
@@ -3898,7 +3898,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 1
  3195 0070 4C565F54 		.ascii	"LV_TASK_PRIO_MID\000"
  3195      41534B5F 
  3195      5052494F 
-ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 66
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccHkZwwI.s 			page 66
 
 
  3195      5F4D4944 
@@ -3958,7 +3958,7 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 1
  3219      41534B5F 
  3219      5052494F 
  3219      5F484947 
-ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 67
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccHkZwwI.s 			page 67
 
 
  3219      48455354 
@@ -4016,303 +4016,310 @@ ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 1
  3238      5052494F 
  3238      5F4F4646 
  3238      00
- 3239              	.LASF88:
- 3240 0238 453A5C41 		.ascii	"E:\\Applications\\LittlevGL\\Oscilloscope_Senior_Pr"
-ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 68
+ 3239              	.LASF45:
+ 3240 0238 6C765F6C 		.ascii	"lv_ll_t\000"
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccHkZwwI.s 			page 68
 
 
- 3240      70706C69 
- 3240      63617469 
- 3240      6F6E735C 
- 3240      4C697474 
- 3241 0268 6F6A6563 		.ascii	"oject\\tcom_engineering\\embed_sw\\tcom_app\\tcom_a"
- 3241      745C7463 
- 3241      6F6D5F65 
- 3241      6E67696E 
- 3241      65657269 
- 3242 0297 70705F70 		.ascii	"pp_psoc6_lvgl6\\tcom_displ_test_psoc6.cydsn\000"
- 3242      736F6336 
- 3242      5F6C7667 
- 3242      6C365C74 
- 3242      636F6D5F 
- 3243              	.LASF45:
- 3244 02c2 6C765F6C 		.ascii	"lv_ll_t\000"
- 3244      6C5F7400 
- 3245              	.LASF8:
- 3246 02ca 6C6F6E67 		.ascii	"long int\000"
- 3246      20696E74 
- 3246      00
- 3247              	.LASF49:
- 3248 02d3 70657269 		.ascii	"period\000"
- 3248      6F6400
- 3249              	.LASF90:
- 3250 02da 616E696D 		.ascii	"anim_task\000"
- 3250      5F746173 
- 3250      6B00
- 3251              	.LASF2:
- 3252 02e4 5F5F7569 		.ascii	"__uint8_t\000"
- 3252      6E74385F 
- 3252      7400
- 3253              	.LASF57:
- 3254 02ee 4C565F54 		.ascii	"LV_TASK_PRIO_LOW\000"
- 3254      41534B5F 
- 3254      5052494F 
- 3254      5F4C4F57 
- 3254      00
- 3255              	.LASF74:
- 3256 02ff 6C765F61 		.ascii	"lv_anim_path_ease_in\000"
- 3256      6E696D5F 
- 3256      70617468 
- 3256      5F656173 
- 3256      655F696E 
- 3257              	.LASF34:
- 3258 0314 72657065 		.ascii	"repeat\000"
- 3258      617400
- 3259              	.LASF20:
- 3260 031b 6C6F6E67 		.ascii	"long double\000"
- 3260      20646F75 
- 3260      626C6500 
- 3261              	.LASF44:
- 3262 0327 7461696C 		.ascii	"tail\000"
- 3262      00
- 3263              	.LASF28:
- 3264 032c 73746172 		.ascii	"start\000"
- 3264      7400
-ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 69
+ 3240      6C5F7400 
+ 3241              	.LASF8:
+ 3242 0240 6C6F6E67 		.ascii	"long int\000"
+ 3242      20696E74 
+ 3242      00
+ 3243              	.LASF49:
+ 3244 0249 70657269 		.ascii	"period\000"
+ 3244      6F6400
+ 3245              	.LASF90:
+ 3246 0250 616E696D 		.ascii	"anim_task\000"
+ 3246      5F746173 
+ 3246      6B00
+ 3247              	.LASF2:
+ 3248 025a 5F5F7569 		.ascii	"__uint8_t\000"
+ 3248      6E74385F 
+ 3248      7400
+ 3249              	.LASF57:
+ 3250 0264 4C565F54 		.ascii	"LV_TASK_PRIO_LOW\000"
+ 3250      41534B5F 
+ 3250      5052494F 
+ 3250      5F4C4F57 
+ 3250      00
+ 3251              	.LASF74:
+ 3252 0275 6C765F61 		.ascii	"lv_anim_path_ease_in\000"
+ 3252      6E696D5F 
+ 3252      70617468 
+ 3252      5F656173 
+ 3252      655F696E 
+ 3253              	.LASF34:
+ 3254 028a 72657065 		.ascii	"repeat\000"
+ 3254      617400
+ 3255              	.LASF20:
+ 3256 0291 6C6F6E67 		.ascii	"long double\000"
+ 3256      20646F75 
+ 3256      626C6500 
+ 3257              	.LASF44:
+ 3258 029d 7461696C 		.ascii	"tail\000"
+ 3258      00
+ 3259              	.LASF28:
+ 3260 02a2 73746172 		.ascii	"start\000"
+ 3260      7400
+ 3261              	.LASF67:
+ 3262 02a8 6C765F61 		.ascii	"lv_anim_del\000"
+ 3262      6E696D5F 
+ 3262      64656C00 
+ 3263              	.LASF1:
+ 3264 02b4 756E7369 		.ascii	"unsigned char\000"
+ 3264      676E6564 
+ 3264      20636861 
+ 3264      7200
+ 3265              	.LASF84:
+ 3266 02c2 6C617374 		.ascii	"last_task_run\000"
+ 3266      5F746173 
+ 3266      6B5F7275 
+ 3266      6E00
+ 3267              	.LASF54:
+ 3268 02d0 6F6E6365 		.ascii	"once\000"
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccHkZwwI.s 			page 69
 
 
- 3265              	.LASF67:
- 3266 0332 6C765F61 		.ascii	"lv_anim_del\000"
- 3266      6E696D5F 
- 3266      64656C00 
- 3267              	.LASF1:
- 3268 033e 756E7369 		.ascii	"unsigned char\000"
- 3268      676E6564 
- 3268      20636861 
- 3268      7200
- 3269              	.LASF84:
- 3270 034c 6C617374 		.ascii	"last_task_run\000"
- 3270      5F746173 
- 3270      6B5F7275 
- 3270      6E00
- 3271              	.LASF54:
- 3272 035a 6F6E6365 		.ascii	"once\000"
- 3272      00
- 3273              	.LASF0:
- 3274 035f 7369676E 		.ascii	"signed char\000"
- 3274      65642063 
- 3274      68617200 
- 3275              	.LASF17:
- 3276 036b 696E7433 		.ascii	"int32_t\000"
- 3276      325F7400 
- 3277              	.LASF12:
- 3278 0373 6C6F6E67 		.ascii	"long long unsigned int\000"
- 3278      206C6F6E 
- 3278      6720756E 
- 3278      7369676E 
- 3278      65642069 
- 3279              	.LASF63:
- 3280 038a 6C765F61 		.ascii	"lv_anim_init\000"
- 3280      6E696D5F 
- 3280      696E6974 
+ 3268      00
+ 3269              	.LASF0:
+ 3270 02d5 7369676E 		.ascii	"signed char\000"
+ 3270      65642063 
+ 3270      68617200 
+ 3271              	.LASF17:
+ 3272 02e1 696E7433 		.ascii	"int32_t\000"
+ 3272      325F7400 
+ 3273              	.LASF12:
+ 3274 02e9 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 3274      206C6F6E 
+ 3274      6720756E 
+ 3274      7369676E 
+ 3274      65642069 
+ 3275              	.LASF63:
+ 3276 0300 6C765F61 		.ascii	"lv_anim_init\000"
+ 3276      6E696D5F 
+ 3276      696E6974 
+ 3276      00
+ 3277              	.LASF18:
+ 3278 030d 75696E74 		.ascii	"uint32_t\000"
+ 3278      33325F74 
+ 3278      00
+ 3279              	.LASF13:
+ 3280 0316 756E7369 		.ascii	"unsigned int\000"
+ 3280      676E6564 
+ 3280      20696E74 
  3280      00
- 3281              	.LASF18:
- 3282 0397 75696E74 		.ascii	"uint32_t\000"
- 3282      33325F74 
+ 3281              	.LASF16:
+ 3282 0323 75696E74 		.ascii	"uint16_t\000"
+ 3282      31365F74 
  3282      00
- 3283              	.LASF13:
- 3284 03a0 756E7369 		.ascii	"unsigned int\000"
- 3284      676E6564 
- 3284      20696E74 
- 3284      00
- 3285              	.LASF16:
- 3286 03ad 75696E74 		.ascii	"uint16_t\000"
- 3286      31365F74 
- 3286      00
- 3287              	.LASF26:
- 3288 03b6 70617468 		.ascii	"path_cb\000"
- 3288      5F636200 
- 3289              	.LASF76:
- 3290 03be 6C765F61 		.ascii	"lv_anim_path_ease_in_out\000"
- 3290      6E696D5F 
- 3290      70617468 
- 3290      5F656173 
- 3290      655F696E 
-ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 70
+ 3283              	.LASF26:
+ 3284 032c 70617468 		.ascii	"path_cb\000"
+ 3284      5F636200 
+ 3285              	.LASF76:
+ 3286 0334 6C765F61 		.ascii	"lv_anim_path_ease_in_out\000"
+ 3286      6E696D5F 
+ 3286      70617468 
+ 3286      5F656173 
+ 3286      655F696E 
+ 3287              	.LASF70:
+ 3288 034d 73706565 		.ascii	"speed\000"
+ 3288      6400
+ 3289              	.LASF82:
+ 3290 0353 656C6170 		.ascii	"elaps\000"
+ 3290      7300
+ 3291              	.LASF29:
+ 3292 0359 74696D65 		.ascii	"time\000"
+ 3292      00
+ 3293              	.LASF81:
+ 3294 035e 70617261 		.ascii	"param\000"
+ 3294      6D00
+ 3295              	.LASF78:
+ 3296 0364 6C765F61 		.ascii	"lv_anim_path_bounce\000"
+ 3296      6E696D5F 
+ 3296      70617468 
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccHkZwwI.s 			page 70
 
 
- 3291              	.LASF70:
- 3292 03d7 73706565 		.ascii	"speed\000"
- 3292      6400
- 3293              	.LASF82:
- 3294 03dd 656C6170 		.ascii	"elaps\000"
- 3294      7300
- 3295              	.LASF29:
- 3296 03e3 74696D65 		.ascii	"time\000"
- 3296      00
- 3297              	.LASF81:
- 3298 03e8 70617261 		.ascii	"param\000"
- 3298      6D00
- 3299              	.LASF78:
- 3300 03ee 6C765F61 		.ascii	"lv_anim_path_bounce\000"
- 3300      6E696D5F 
- 3300      70617468 
- 3300      5F626F75 
- 3300      6E636500 
- 3301              	.LASF92:
- 3302 0402 5F6C765F 		.ascii	"_lv_anim_ll\000"
- 3302      616E696D 
- 3302      5F6C6C00 
- 3303              	.LASF6:
- 3304 040e 73686F72 		.ascii	"short unsigned int\000"
- 3304      7420756E 
- 3304      7369676E 
- 3304      65642069 
- 3304      6E7400
- 3305              	.LASF35:
- 3306 0421 706C6179 		.ascii	"playback_now\000"
- 3306      6261636B 
- 3306      5F6E6F77 
- 3306      00
- 3307              	.LASF22:
- 3308 042e 63686172 		.ascii	"char\000"
- 3308      00
- 3309              	.LASF56:
- 3310 0433 4C565F54 		.ascii	"LV_TASK_PRIO_LOWEST\000"
- 3310      41534B5F 
- 3310      5052494F 
- 3310      5F4C4F57 
- 3310      45535400 
- 3311              	.LASF87:
- 3312 0447 2E2E5C2E 		.ascii	"..\\..\\..\\lvgl\\version_6.1.2\\lvgl\\src\\lv_misc"
- 3312      2E5C2E2E 
- 3312      5C6C7667 
- 3312      6C5C7665 
- 3312      7273696F 
- 3313 0473 5C6C765F 		.ascii	"\\lv_anim.c\000"
- 3313      616E696D 
- 3313      2E6300
- 3314              	.LASF30:
- 3315 047e 6163745F 		.ascii	"act_time\000"
- 3315      74696D65 
- 3315      00
- 3316              	.LASF19:
- 3317 0487 6C765F63 		.ascii	"lv_coord_t\000"
-ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 71
+ 3296      5F626F75 
+ 3296      6E636500 
+ 3297              	.LASF92:
+ 3298 0378 5F6C765F 		.ascii	"_lv_anim_ll\000"
+ 3298      616E696D 
+ 3298      5F6C6C00 
+ 3299              	.LASF6:
+ 3300 0384 73686F72 		.ascii	"short unsigned int\000"
+ 3300      7420756E 
+ 3300      7369676E 
+ 3300      65642069 
+ 3300      6E7400
+ 3301              	.LASF35:
+ 3302 0397 706C6179 		.ascii	"playback_now\000"
+ 3302      6261636B 
+ 3302      5F6E6F77 
+ 3302      00
+ 3303              	.LASF22:
+ 3304 03a4 63686172 		.ascii	"char\000"
+ 3304      00
+ 3305              	.LASF56:
+ 3306 03a9 4C565F54 		.ascii	"LV_TASK_PRIO_LOWEST\000"
+ 3306      41534B5F 
+ 3306      5052494F 
+ 3306      5F4C4F57 
+ 3306      45535400 
+ 3307              	.LASF87:
+ 3308 03bd 2E2E5C2E 		.ascii	"..\\..\\..\\lvgl\\version_6.1.2\\lvgl\\src\\lv_misc"
+ 3308      2E5C2E2E 
+ 3308      5C6C7667 
+ 3308      6C5C7665 
+ 3308      7273696F 
+ 3309 03e9 5C6C765F 		.ascii	"\\lv_anim.c\000"
+ 3309      616E696D 
+ 3309      2E6300
+ 3310              	.LASF30:
+ 3311 03f4 6163745F 		.ascii	"act_time\000"
+ 3311      74696D65 
+ 3311      00
+ 3312              	.LASF19:
+ 3313 03fd 6C765F63 		.ascii	"lv_coord_t\000"
+ 3313      6F6F7264 
+ 3313      5F7400
+ 3314              	.LASF51:
+ 3315 0408 7461736B 		.ascii	"task_cb\000"
+ 3315      5F636200 
+ 3316              	.LASF71:
+ 3317 0410 6C765F61 		.ascii	"lv_anim_path_linear\000"
+ 3317      6E696D5F 
+ 3317      70617468 
+ 3317      5F6C696E 
+ 3317      65617200 
+ 3318              	.LASF15:
+ 3319 0424 696E7431 		.ascii	"int16_t\000"
+ 3319      365F7400 
+ 3320              	.LASF40:
+ 3321 042c 5F426F6F 		.ascii	"_Bool\000"
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccHkZwwI.s 			page 71
 
 
- 3317      6F6F7264 
- 3317      5F7400
- 3318              	.LASF51:
- 3319 0492 7461736B 		.ascii	"task_cb\000"
- 3319      5F636200 
- 3320              	.LASF71:
- 3321 049a 6C765F61 		.ascii	"lv_anim_path_linear\000"
- 3321      6E696D5F 
- 3321      70617468 
- 3321      5F6C696E 
- 3321      65617200 
- 3322              	.LASF15:
- 3323 04ae 696E7431 		.ascii	"int16_t\000"
- 3323      365F7400 
- 3324              	.LASF40:
- 3325 04b6 5F426F6F 		.ascii	"_Bool\000"
- 3325      6C00
- 3326              	.LASF47:
- 3327 04bc 5F6C765F 		.ascii	"_lv_anim_t\000"
- 3327      616E696D 
- 3327      5F7400
- 3328              	.LASF59:
- 3329 04c7 4C565F54 		.ascii	"LV_TASK_PRIO_HIGH\000"
- 3329      41534B5F 
- 3329      5052494F 
- 3329      5F484947 
- 3329      4800
- 3330              	.LASF27:
- 3331 04d9 72656164 		.ascii	"ready_cb\000"
- 3331      795F6362 
- 3331      00
- 3332              	.LASF10:
- 3333 04e2 6C6F6E67 		.ascii	"long unsigned int\000"
- 3333      20756E73 
- 3333      69676E65 
- 3333      6420696E 
- 3333      7400
- 3334              	.LASF39:
- 3335 04f4 6C765F61 		.ascii	"lv_anim_t\000"
- 3335      6E696D5F 
- 3335      7400
- 3336              	.LASF64:
- 3337 04fe 6C765F61 		.ascii	"lv_anim_create\000"
- 3337      6E696D5F 
- 3337      63726561 
- 3337      746500
- 3338              	.LASF83:
- 3339 050d 615F746D 		.ascii	"a_tmp\000"
- 3339      7000
- 3340              	.LASF89:
- 3341 0513 6C765F61 		.ascii	"lv_anim_core_init\000"
- 3341      6E696D5F 
- 3341      636F7265 
- 3341      5F696E69 
- 3341      7400
- 3342              	.LASF7:
- 3343 0525 5F5F696E 		.ascii	"__int32_t\000"
-ARM GAS  C:\Users\chris\AppData\Local\Temp\cc62KuRt.s 			page 72
+ 3321      6C00
+ 3322              	.LASF47:
+ 3323 0432 5F6C765F 		.ascii	"_lv_anim_t\000"
+ 3323      616E696D 
+ 3323      5F7400
+ 3324              	.LASF59:
+ 3325 043d 4C565F54 		.ascii	"LV_TASK_PRIO_HIGH\000"
+ 3325      41534B5F 
+ 3325      5052494F 
+ 3325      5F484947 
+ 3325      4800
+ 3326              	.LASF27:
+ 3327 044f 72656164 		.ascii	"ready_cb\000"
+ 3327      795F6362 
+ 3327      00
+ 3328              	.LASF10:
+ 3329 0458 6C6F6E67 		.ascii	"long unsigned int\000"
+ 3329      20756E73 
+ 3329      69676E65 
+ 3329      6420696E 
+ 3329      7400
+ 3330              	.LASF39:
+ 3331 046a 6C765F61 		.ascii	"lv_anim_t\000"
+ 3331      6E696D5F 
+ 3331      7400
+ 3332              	.LASF88:
+ 3333 0474 433A5C55 		.ascii	"C:\\Users\\tmj32\\Documents\\TCNJ\\Senior_Project\\"
+ 3333      73657273 
+ 3333      5C746D6A 
+ 3333      33325C44 
+ 3333      6F63756D 
+ 3334 04a1 4F736369 		.ascii	"Oscilloscope_Senior_Project\\tcom_engineering\\embe"
+ 3334      6C6C6F73 
+ 3334      636F7065 
+ 3334      5F53656E 
+ 3334      696F725F 
+ 3335 04d2 645F7377 		.ascii	"d_sw\\tcom_app\\tcom_app_psoc6_lvgl6\\tcom_displ_te"
+ 3335      5C74636F 
+ 3335      6D5F6170 
+ 3335      705C7463 
+ 3335      6F6D5F61 
+ 3336 0502 73745F70 		.ascii	"st_psoc6.cydsn\000"
+ 3336      736F6336 
+ 3336      2E637964 
+ 3336      736E00
+ 3337              	.LASF64:
+ 3338 0511 6C765F61 		.ascii	"lv_anim_create\000"
+ 3338      6E696D5F 
+ 3338      63726561 
+ 3338      746500
+ 3339              	.LASF83:
+ 3340 0520 615F746D 		.ascii	"a_tmp\000"
+ 3340      7000
+ 3341              	.LASF89:
+ 3342 0526 6C765F61 		.ascii	"lv_anim_core_init\000"
+ 3342      6E696D5F 
+ 3342      636F7265 
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccHkZwwI.s 			page 72
 
 
- 3343      7433325F 
- 3343      7400
- 3344              	.LASF77:
- 3345 052f 6C765F61 		.ascii	"lv_anim_path_overshoot\000"
- 3345      6E696D5F 
- 3345      70617468 
- 3345      5F6F7665 
- 3345      7273686F 
- 3346              	.LASF3:
- 3347 0546 5F5F696E 		.ascii	"__int16_t\000"
- 3347      7431365F 
- 3347      7400
- 3348              	.LASF73:
- 3349 0550 6E65775F 		.ascii	"new_value\000"
- 3349      76616C75 
- 3349      6500
- 3350              	.LASF46:
- 3351 055a 6C765F74 		.ascii	"lv_task_cb_t\000"
- 3351      61736B5F 
- 3351      63625F74 
- 3351      00
- 3352              	.LASF80:
- 3353 0567 6C765F61 		.ascii	"lv_anim_path_step\000"
- 3353      6E696D5F 
- 3353      70617468 
- 3353      5F737465 
- 3353      7000
- 3354              	.LASF25:
- 3355 0579 65786563 		.ascii	"exec_cb\000"
- 3355      5F636200 
- 3356              	.LASF50:
- 3357 0581 6C617374 		.ascii	"last_run\000"
- 3357      5F72756E 
- 3357      00
- 3358              	.LASF72:
- 3359 058a 73746570 		.ascii	"step\000"
- 3359      00
- 3360              	.LASF53:
- 3361 058f 7072696F 		.ascii	"prio\000"
- 3361      00
- 3362              	.LASF31:
- 3363 0594 706C6179 		.ascii	"playback_pause\000"
- 3363      6261636B 
- 3363      5F706175 
- 3363      736500
- 3364              	.LASF69:
- 3365 05a3 6C765F61 		.ascii	"lv_anim_speed_to_time\000"
- 3365      6E696D5F 
- 3365      73706565 
- 3365      645F746F 
- 3365      5F74696D 
- 3366              	.LASF42:
- 3367 05b9 6E5F7369 		.ascii	"n_size\000"
- 3367      7A6500
- 3368              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
+ 3342      5F696E69 
+ 3342      7400
+ 3343              	.LASF7:
+ 3344 0538 5F5F696E 		.ascii	"__int32_t\000"
+ 3344      7433325F 
+ 3344      7400
+ 3345              	.LASF77:
+ 3346 0542 6C765F61 		.ascii	"lv_anim_path_overshoot\000"
+ 3346      6E696D5F 
+ 3346      70617468 
+ 3346      5F6F7665 
+ 3346      7273686F 
+ 3347              	.LASF3:
+ 3348 0559 5F5F696E 		.ascii	"__int16_t\000"
+ 3348      7431365F 
+ 3348      7400
+ 3349              	.LASF73:
+ 3350 0563 6E65775F 		.ascii	"new_value\000"
+ 3350      76616C75 
+ 3350      6500
+ 3351              	.LASF46:
+ 3352 056d 6C765F74 		.ascii	"lv_task_cb_t\000"
+ 3352      61736B5F 
+ 3352      63625F74 
+ 3352      00
+ 3353              	.LASF80:
+ 3354 057a 6C765F61 		.ascii	"lv_anim_path_step\000"
+ 3354      6E696D5F 
+ 3354      70617468 
+ 3354      5F737465 
+ 3354      7000
+ 3355              	.LASF25:
+ 3356 058c 65786563 		.ascii	"exec_cb\000"
+ 3356      5F636200 
+ 3357              	.LASF50:
+ 3358 0594 6C617374 		.ascii	"last_run\000"
+ 3358      5F72756E 
+ 3358      00
+ 3359              	.LASF72:
+ 3360 059d 73746570 		.ascii	"step\000"
+ 3360      00
+ 3361              	.LASF53:
+ 3362 05a2 7072696F 		.ascii	"prio\000"
+ 3362      00
+ 3363              	.LASF31:
+ 3364 05a7 706C6179 		.ascii	"playback_pause\000"
+ 3364      6261636B 
+ 3364      5F706175 
+ 3364      736500
+ 3365              	.LASF69:
+ 3366 05b6 6C765F61 		.ascii	"lv_anim_speed_to_time\000"
+ 3366      6E696D5F 
+ 3366      73706565 
+ 3366      645F746F 
+ 3366      5F74696D 
+ 3367              	.LASF42:
+ 3368 05cc 6E5F7369 		.ascii	"n_size\000"
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccHkZwwI.s 			page 73
+
+
+ 3368      7A6500
+ 3369              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
