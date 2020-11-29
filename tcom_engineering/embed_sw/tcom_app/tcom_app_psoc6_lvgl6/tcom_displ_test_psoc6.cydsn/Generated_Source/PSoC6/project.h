@@ -115,5 +115,26 @@
 #include "I2C_MASTER_SCBCLK.h"
 #include "SPIM_SCBCLK.h"
 
+//Declaring a Global Structure
+struct SPI_parameters
+{
+    uint8_t BrianReg;
+    uint8_t ChrisReg;
+    uint8_t ShannonReg;
+    
+    uint8_t VersionID;
+    uint8_t Trigger;
+    uint8_t TriggerSlope;
+    uint8_t SampleRate;
+    uint8_t onBit;
+    uint8_t Reset;
+    uint8_t IRS;
+    uint8_t Offset;
+    uint8_t HoriSCale;
+    uint8_t VertScale;
+    uint8_t Gain;       //goes to Shannon
+
+};
+struct SPI_parameters cm4;
 /*[]*/
 

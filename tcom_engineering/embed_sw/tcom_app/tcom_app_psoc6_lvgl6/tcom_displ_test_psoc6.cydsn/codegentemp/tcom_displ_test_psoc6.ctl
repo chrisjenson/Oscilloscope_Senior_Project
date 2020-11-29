@@ -1,6 +1,6 @@
 -- ======================================================================
 -- tcom_displ_test_psoc6.ctl generated from tcom_displ_test_psoc6
--- 11/28/2020 at 16:01
+-- 11/29/2020 at 14:05
 -- This file is auto generated. ANY EDITS YOU MAKE MAY BE LOST WHEN THIS FILE IS REGENERATED!!!
 -- ======================================================================
 

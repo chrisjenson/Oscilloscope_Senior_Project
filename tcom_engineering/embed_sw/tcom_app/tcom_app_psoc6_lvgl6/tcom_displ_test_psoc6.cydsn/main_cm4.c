@@ -12,7 +12,6 @@
 
 uint32 msec_cnt = 0;
 
-
 void Interrupt_Handler_DISP_TICK(void)
 {
     lv_tick_inc(1);
@@ -81,24 +80,71 @@ main( void )
     // P6_2 (Backlight control)
     CY_SET_REG32(&port_addr->OUT, _CLR_SET_FLD32U(port_addr->OUT, GPIO_PRT_OUT_OUT2, 1u));
     
+    
+    
+    // INITIALIZE THE STRUCT VALUES
+    //struct SPI_parameters cm4;
+    cm4.BrianReg = 0b01000010;
+    cm4.ChrisReg = 0b01000011;
+    cm4.ShannonReg = 0b01010011;
+    cm4.VersionID = 0b00000001;
+    cm4.Trigger = 0b00000000;
+    cm4.TriggerSlope = 0b00000000;
+    cm4.SampleRate = 0b00000000;
+    cm4.onBit = 0b00000000;
+    cm4.Reset = 0b00000000;
+    cm4.IRS = 0b00000000;
+    cm4.Offset = 0b00000000;
+    cm4.Gain = 0b00000000;       //goes to Shannon
+    cm4.HoriSCale = 0b00000000;
+    cm4.VertScale = 0b00000000;
+    
+    
     home_screen();
     
     
-    
-     // SPI TEST CODE //
-   
-    //unt16 because of the command size
-    //uint16_t txBuffer[BUFFER_SIZE];
+    // START SPI CODE //
     uint16_t txBuffer[3];
     uint16_t RxBuffer[3];
+    
+    if(cm4.onBit == 00000001)
+    {
+        //construct write commmand for updating offset in register 11
+        txBuffer[0] = 0b0100101100000000 | cm4.Offset;     //010 01011 00000000
+        
+        //construct write commmand for updating trigger in register 4
+        txBuffer[1] = 0b0100010000000000 | cm4.Trigger;     //010 00100 00000000
+        
+        //construct read RAM command, or with HoriScale to determine the sample size
+        txBuffer[2] = 0b0110000000000000 | cm4.HoriSCale;     //011 00000 00000000
+        
+        //loop to send each command in the txBuffer
+        for(int i = 0; i < 3; ++i){
+            while(!(Cy_SCB_SPI_GetTxFifoStatus(SPIM_HW) & CY_SCB_SPI_TX_EMPTY)){}
+            Cy_SCB_SPI_Write(SPIM_HW, txBuffer[i]);
+   
+            CyDelay(1);
+   
+            while(!(Cy_SCB_SPI_GetRxFifoStatus(SPIM_HW) & CY_SCB_SPI_RX_NOT_EMPTY)){}
+            RxBuffer[i] = Cy_SCB_SPI_Read(SPIM_HW);
+        }
+    }
+    // END SPI CODE //
+    
+     // SPI TEST CODE //
+
+    //unt16 because of the command size
+    //uint16_t txBuffer[BUFFER_SIZE];
+    //uint16_t txBuffer[3];
+    //uint16_t RxBuffer[3];
    
     /* Initialize txBuffer with command to transfer */
     //txBuffer[0] = CMD_START_TRANSFER;
-    RxBuffer[0] = 0b1111111111111111; //Junk value 100 01001 11111111
-    txBuffer[0] = 0b0100010000000000; //010 00100 1111111 command to write 11111111 to reg 4
+    //RxBuffer[0] = 0b1111111111111111; //Junk value 100 01001 11111111
+    //txBuffer[0] = 0b0100010000000000; //010 00100 1111111 command to write 11111111 to reg 4
     //txBuffer[1] = 0b0100010011111111; //010 00001 01010101 command to write 01010101 to reg 1
-    txBuffer[1] = 0b0010001100000000; //001 00011 00000000 command to read reg 4
-    txBuffer[2] = 0b0010010011111111; //010 00001 01010101 command to read 01010101 to reg 1
+    //txBuffer[1] = 0b0010001100000000; //001 00011 00000000 command to read reg 4
+    //txBuffer[2] = 0b0010010011111111; //010 00001 01010101 command to read 01010101 to reg 1
    
     //while(1)
     //{
