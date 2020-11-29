@@ -151,10 +151,10 @@ module Top(
         .reset(reset), //Input
         .Write_Data(SPI_Data), //Input
         .Regs_Addr(SPI_Params), //Input
-        .WrEn(Reg_WrEn), //Inputs Reg_WrEn & write_data_strobe
+        .WrEn(Reg_WrEn & write_data_strobe), //Inputs Reg_WrEn & write_data_strobe
         .RdEn(Reg_RdEn), //Input
         .Read_Data(Reg_DataOut), //Output
-        .DebugWriteRegister(DebugWriteRegister), //Input
+        .DebugWriteRegister(8'b00000000), //Input
         .DebugRegister(DebugRegister) //Output
     );
     

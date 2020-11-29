@@ -323,7 +323,7 @@ module SPI(
         write_data_strobe <= 0;
         if (SlaveSel)
         begin
-        
+            SPI_Data <= 0;
         end
         else
         begin

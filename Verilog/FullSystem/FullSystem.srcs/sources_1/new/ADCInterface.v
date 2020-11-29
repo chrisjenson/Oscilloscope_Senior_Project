@@ -31,6 +31,7 @@ module ADCInterface(
     reg twoCounter;
     reg [15:0] ConcatRAMData;
     //DEBUG FIRST CONCATRAMDATA IS INVALID
+    //DEBUG THIS SHOULD BE OUTPUTTING A FLAG WHEN READY, NOT RELYING ON SECONDPOSEDGEPULSE
     always @(posedge clk)
     //Select 8 bits from input data, concat with next 8 bit input, and set as output on negedge of sample clk
     //
@@ -65,18 +66,5 @@ module ADCInterface(
             end
         end
     end
-    
-    /*
-    RAM_AddrGen u_RAM_AddrGen(
-    .clk(clk),
-    .reset(reset),
-    .ADC_SampleClock(ADC_SampleClock),
-    .Buffer_DataIn(Buffer_DataIn),
-    .onBit(!reset) //Use this to gate everything
-    );*/
-    
-//    TimingGen u_TimingGen(
-//        .ADC_SampleClock(ADC_SampleClock)
-//    );
     
 endmodule
