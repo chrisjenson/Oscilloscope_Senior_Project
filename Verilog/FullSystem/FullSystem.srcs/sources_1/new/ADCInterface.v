@@ -5,7 +5,7 @@ module ADCInterface(
     input               reset, //from tb
     input               ADC_SampleClock, //from timing gen
     input [9:0]         ADC_DataIn, //from DAB
-    output reg [15:0]   Buffer_DataIn
+    output reg [15:0]   RAMW_Data
     );
     //DEBUG: ADD SATURATION
     //
@@ -45,7 +45,7 @@ module ADCInterface(
         if (reset)
         begin
             twoCounter <= 0;
-            Buffer_DataIn <= 0;
+            RAMW_Data <= 0;
         end
         else
         begin
@@ -59,7 +59,7 @@ module ADCInterface(
                 end
                 else
                 begin
-                    Buffer_DataIn <= ConcatRAMData[15:0];
+                    RAMW_Data <= ConcatRAMData[15:0];
                     ConcatRAMData[15:8] <= ADC_DataIn[9:2];
                     twoCounter <= twoCounter + 1;
                 end

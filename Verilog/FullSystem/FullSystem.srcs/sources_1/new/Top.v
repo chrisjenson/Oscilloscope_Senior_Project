@@ -38,29 +38,29 @@ module Top(
         .ADC_SampleClock(ADC_SampleClock)
     );
     
-    wire [15:0] Buffer_DataIn;
-    
+   // wire [15:0] Buffer_DataIn;
+    wire [15:0] RAMW_Data;
+
     ADCInterface u_ADCInterface(
         .clk(clk),
         .reset(reset),      
         .ADC_DataIn(ADC_InData), 
         .ADC_SampleClock(ADC_SampleClock),
-        .Buffer_DataIn(Buffer_DataIn)
+        .RAMW_Data(RAMW_Data)
     );
     
     wire [17:0] RAMW_WriteAddr;
-    wire [15:0] RAMW_Data;
     wire RAMW_En;
     
     RAM_WriteEngine u_RAM_WriteEngine(
         .clk(clk),
         .reset(reset),
         .ADC_SampleClock(ADC_SampleClock),
-        .Buffer_DataIn(Buffer_DataIn),
+        //.Buffer_DataIn(Buffer_DataIn),
         .RAMW_WriteAddr(RAMW_WriteAddr), //Port A on RAM
-        .RAMW_Data(RAMW_Data), 
+        //.RAMW_Data(RAMW_Data), 
         .RAMW_En(RAMW_En),
-        .onBit(onBit) //Use this to gate everything
+        .onBit(onBit) //Use this to gate everything, should come from regs
     );
     
     wire [17:0] RAMR_ReadAddr;
@@ -154,7 +154,7 @@ module Top(
         .WrEn(Reg_WrEn & write_data_strobe), //Inputs Reg_WrEn & write_data_strobe
         .RdEn(Reg_RdEn), //Input
         .Read_Data(Reg_DataOut), //Output
-        .DebugWriteRegister(8'b00000000), //Input
+        .DebugWriteRegister(8'b00000000), //Input- set to DebugWriteRegister for synthesis
         .DebugRegister(DebugRegister) //Output
     );
     
@@ -165,7 +165,7 @@ module Top(
         .FIFO_InRTS(FIFO_InRTS), //Input from RamRdEngine
         .FIFO_InRTR(FIFO_InRTR), //Output to RamRdEngine to know fifo to increment address
         
-        .FIFO_InData(16'b1010101010101010),//RAMR_Data), //Input from RAM
+        .FIFO_InData(RAMR_Data),//RAMR_Data), //Input from RAM 16'b1010101010101010
         .FIFO_OutData(FIFO_OutData), //Output to SPI
         
         //.FIFO_OutXFC(),
