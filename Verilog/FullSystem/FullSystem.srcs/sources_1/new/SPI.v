@@ -336,16 +336,27 @@ module SPI(
     end
     
     reg [2:0] SPI_OutEightCount;
+    reg [3:0] SPI_OutSixteenCount;
+
     always @(posedge clk)
     begin
-    //Register Read output
+    //Register Read & RAM Read... Driving MISO
     //Input
-        //Reg_DataOut
+        //Reg Read
+            //Reg_DataOut
+        //RamRead
+            //Buffer_RdEn
+            //FIFO_OutData
     //Output
         //MISO- also driven from Ram Read
+        //FIFO_OutRTR
+        
+        //DBEUG: CHANGE THIS TO COMBINATIONAL??
+        FIFO_OutRTR <= 0;
         if (SlaveSel)
         begin
             SPI_OutEightCount <= 7;
+            SPI_OutSixteenCount <= 4'hF;
             MISO <= 0; //DEBUG: Default 0?
         end
         else 
@@ -354,22 +365,28 @@ module SPI(
             begin
                 if (Reg_RdEn)
                 begin
-                    MISO <= Reg_DataOut[SPI_OutEightCount];
+                    MISO <= Reg_DataOut[SPI_OutEightCount];//Why use two counters? 8 and 16? maybe just use one 16 count 
                     if (SPI_OutEightCount > 0)
                     begin
                         SPI_OutEightCount <= SPI_OutEightCount - 1;
+                        //Dont reset here, wait till SlaveSel to reset
                     end
-                    else
+                end
+                else if (Buffer_RdEn)
+                begin
+                    MISO <= FIFO_OutData[SPI_OutSixteenCount];
+                    if (SPI_OutSixteenCount == 0)
                     begin
-                    
+                        FIFO_OutRTR <= 1;
                     end
+                    SPI_OutSixteenCount <= SPI_OutSixteenCount - 1;
                 end
             end
         end
     end
     /////////////////////////////////////////////////////////////////
     //RAM Read
-    reg [3:0] SPI_OutSixteenCount;
+    /*
     reg GetNextWordStrobe;
     always @(posedge clk)
     begin
@@ -378,6 +395,7 @@ module SPI(
         //SlaveSel
         //sck
         //Buffer_RdEn
+        //FIFO_OutData
     //Output
         //MISO- Also driven from Reg Read
         //FIFO_OutRTR
@@ -402,5 +420,5 @@ module SPI(
             end
         end
     end
-    
+    */
 endmodule

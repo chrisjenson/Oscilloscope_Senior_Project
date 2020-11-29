@@ -21,12 +21,12 @@ module Regs(
     
     always @(posedge clk)
     begin
+        registers[3] <= DebugWriteRegister; //8'b11111111; //Scratch W reg- debug
         if (reset)
         begin
             registers[0] <= 8'b01000010; //B
             registers[1] <= 8'b01000011; //C
             registers[2] <= 8'b01010011; //S
-            registers[3] <= DebugWriteRegister; //8'b11111111; //Scratch W reg- debug
             registers[4] <= 8'b01010101; //scratch R/W reg- Debug register
             registers[5] <= 8'b00000001; //Trigger
             registers[6] <= 8'b00000000; //Trigger slope
@@ -42,7 +42,6 @@ module Regs(
         begin
             if (WrEn)
             begin 
-            
                 registers[Regs_Addr] <= Write_Data;
             end
         end

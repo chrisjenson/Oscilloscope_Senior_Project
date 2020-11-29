@@ -60,7 +60,8 @@ module RAM_WriteEngine(
     //////////////////////////////////////////////////////////////    
     //////////////////////////////////////////////////////////////    
     //Write Section
-    assign RAMW_En = onBit & ADC_SampleClock_secondposedge_pulse;
+    assign RAMW_En = onBit & ADC_SampleClock_secondposedge_pulse; //DEBUG:Need to make this its own process and delay by one word..
+    // in order to prevent invalid data in the first
     assign RAMW_Data = Buffer_DataIn;
     
     always @(posedge clk)

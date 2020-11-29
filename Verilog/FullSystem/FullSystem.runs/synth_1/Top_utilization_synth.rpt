@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Sat Nov 28 16:14:21 2020
+| Date         : Sat Nov 28 17:31:29 2020
 | Host         : MSI running 64-bit major release  (build 9200)
 | Command      : report_utilization -file Top_utilization_synth.rpt -pb Top_utilization_synth.pb
 | Design       : Top
@@ -27,18 +27,20 @@ Table of Contents
 1. Slice Logic
 --------------
 
-+-------------------------+------+-------+-----------+-------+
-|        Site Type        | Used | Fixed | Available | Util% |
-+-------------------------+------+-------+-----------+-------+
-| Slice LUTs*             |  146 |     0 |     63400 |  0.23 |
-|   LUT as Logic          |  146 |     0 |     63400 |  0.23 |
-|   LUT as Memory         |    0 |     0 |     19000 |  0.00 |
-| Slice Registers         |  261 |     0 |    126800 |  0.21 |
-|   Register as Flip Flop |  261 |     0 |    126800 |  0.21 |
-|   Register as Latch     |    0 |     0 |    126800 |  0.00 |
-| F7 Muxes                |   18 |     0 |     31700 |  0.06 |
-| F8 Muxes                |    5 |     0 |     15850 |  0.03 |
-+-------------------------+------+-------+-----------+-------+
++----------------------------+------+-------+-----------+-------+
+|          Site Type         | Used | Fixed | Available | Util% |
++----------------------------+------+-------+-----------+-------+
+| Slice LUTs*                |  140 |     0 |     63400 |  0.22 |
+|   LUT as Logic             |  132 |     0 |     63400 |  0.21 |
+|   LUT as Memory            |    8 |     0 |     19000 |  0.04 |
+|     LUT as Distributed RAM |    8 |     0 |           |       |
+|     LUT as Shift Register  |    0 |     0 |           |       |
+| Slice Registers            |  265 |     0 |    126800 |  0.21 |
+|   Register as Flip Flop    |  265 |     0 |    126800 |  0.21 |
+|   Register as Latch        |    0 |     0 |    126800 |  0.00 |
+| F7 Muxes                   |   16 |     0 |     31700 |  0.05 |
+| F8 Muxes                   |    1 |     0 |     15850 | <0.01 |
++----------------------------+------+-------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
 
 
@@ -57,7 +59,7 @@ Table of Contents
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
 | 25    |          Yes |         Set |            - |
-| 236   |          Yes |       Reset |            - |
+| 240   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -146,19 +148,21 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDRE     |  236 |        Flop & Latch |
-| LUT6     |   79 |                 LUT |
-| LUT4     |   39 |                 LUT |
-| LUT2     |   30 |                 LUT |
-| LUT3     |   28 |                 LUT |
+| FDRE     |  240 |        Flop & Latch |
+| LUT6     |   76 |                 LUT |
+| LUT4     |   27 |                 LUT |
+| LUT2     |   27 |                 LUT |
 | FDSE     |   25 |        Flop & Latch |
 | OBUF     |   23 |                  IO |
 | IBUF     |   21 |                  IO |
-| MUXF7    |   18 |               MuxFx |
-| CARRY4   |   13 |          CarryLogic |
-| LUT1     |    6 |                 LUT |
-| MUXF8    |    5 |               MuxFx |
-| LUT5     |    3 |                 LUT |
+| LUT3     |   19 |                 LUT |
+| LUT5     |   18 |                 LUT |
+| MUXF7    |   16 |               MuxFx |
+| RAMD32   |   12 |  Distributed Memory |
+| CARRY4   |   12 |          CarryLogic |
+| LUT1     |    5 |                 LUT |
+| RAMS32   |    4 |  Distributed Memory |
+| MUXF8    |    1 |               MuxFx |
 | BUFG     |    1 |               Clock |
 +----------+------+---------------------+
 

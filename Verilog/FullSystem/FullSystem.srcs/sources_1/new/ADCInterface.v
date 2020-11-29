@@ -54,10 +54,11 @@ module ADCInterface(
                 begin
                     ConcatRAMData[7:0] <= ADC_DataIn[9:2];  //DEBUG: MAKE THESE BITS SELECTABLE
                     twoCounter <= twoCounter + 1;
-                    Buffer_DataIn <= ConcatRAMData[15:0];
+                    
                 end
                 else
                 begin
+                    Buffer_DataIn <= ConcatRAMData[15:0];
                     ConcatRAMData[15:8] <= ADC_DataIn[9:2];
                     twoCounter <= twoCounter + 1;
                 end

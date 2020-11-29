@@ -165,7 +165,7 @@ module Top(
         .FIFO_InRTS(FIFO_InRTS), //Input from RamRdEngine
         .FIFO_InRTR(FIFO_InRTR), //Output to RamRdEngine to know fifo to increment address
         
-        .FIFO_InData(RAMR_Data), //Input from RAM
+        .FIFO_InData(16'b1010101010101010),//RAMR_Data), //Input from RAM
         .FIFO_OutData(FIFO_OutData), //Output to SPI
         
         //.FIFO_OutXFC(),
