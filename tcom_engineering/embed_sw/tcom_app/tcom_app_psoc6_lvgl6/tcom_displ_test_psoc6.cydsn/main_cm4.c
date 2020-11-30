@@ -3,6 +3,7 @@
 
 #include "stdio.h"
 
+#include "globalStruct.h"
 #include "touchpad_glue.h"
 #include "display_glue.h"
 #include "home_screen.h"
@@ -128,6 +129,8 @@ main( void )
             while(!(Cy_SCB_SPI_GetRxFifoStatus(SPIM_HW) & CY_SCB_SPI_RX_NOT_EMPTY)){}
             RxBuffer[i] = Cy_SCB_SPI_Read(SPIM_HW);
         }
+        //Reset to avoid an infinite loop
+        cm4.onBit = 0b00000000;
     }
     // END SPI CODE //
     
@@ -140,23 +143,23 @@ main( void )
    
     /* Initialize txBuffer with command to transfer */
     //txBuffer[0] = CMD_START_TRANSFER;
-    //RxBuffer[0] = 0b1111111111111111; //Junk value 100 01001 11111111
-    //txBuffer[0] = 0b0100010000000000; //010 00100 1111111 command to write 11111111 to reg 4
-    //txBuffer[1] = 0b0100010011111111; //010 00001 01010101 command to write 01010101 to reg 1
-    //txBuffer[1] = 0b0010001100000000; //001 00011 00000000 command to read reg 4
-    //txBuffer[2] = 0b0010010011111111; //010 00001 01010101 command to read 01010101 to reg 1
-   
+    //RxBuffer[0] = 0b1111111111111111; //Junk value
+    //txBuffer[0] = 0b0100010000000000; //010 00100 1111111 command to write 00000000 to reg 4
+    //txBuffer[1] = 0b0100010011111111; //010 00001 01010101 command to write 11111111 to reg 4
+    //txBuffer[1] = 0b0010001100000000; //001 00011 00000000 command to read reg 3
+    //txBuffer[2] = 0b0010010011111111; //001 00100 11111111 command to read reg 4
+    //txBuffer[2] = 0b0110000000000000; //011 00000 00000000 command to do a RAM READ
     //while(1)
     //{
     /* Master: start a transfer. Slave: prepare for a transfer. */
         //for(int i = 0; i < 2; ++i){
-    //    while(!(Cy_SCB_SPI_GetTxFifoStatus(SPIM_HW) & CY_SCB_SPI_TX_EMPTY)){}
-    //    Cy_SCB_SPI_Write(SPIM_HW, txBuffer[1]);
-   
-    //    CyDelay(1);
-   
-    //    while(!(Cy_SCB_SPI_GetRxFifoStatus(SPIM_HW) & CY_SCB_SPI_RX_NOT_EMPTY)){}
-    //    RxBuffer[0] = Cy_SCB_SPI_Read(SPIM_HW);
+    //        while(!(Cy_SCB_SPI_GetTxFifoStatus(SPIM_HW) & CY_SCB_SPI_TX_EMPTY)){}
+    //        Cy_SCB_SPI_Write(SPIM_HW, txBuffer[1]);
+       
+    //        CyDelay(1);
+       
+    //        while(!(Cy_SCB_SPI_GetRxFifoStatus(SPIM_HW) & CY_SCB_SPI_RX_NOT_EMPTY)){}
+    //        RxBuffer[0] = Cy_SCB_SPI_Read(SPIM_HW);
         //}
     //}
     /* Handle results of a transfer */    

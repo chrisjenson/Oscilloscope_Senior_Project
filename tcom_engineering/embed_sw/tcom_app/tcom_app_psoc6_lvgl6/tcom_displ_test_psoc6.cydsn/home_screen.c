@@ -1,6 +1,7 @@
 #include <stdio.h>
 
 #include "project.h"
+#include "globalStruct.h"
 #include "lvgl.h"
 #include "home_screen.h"
 #include "breath_activity.h"
