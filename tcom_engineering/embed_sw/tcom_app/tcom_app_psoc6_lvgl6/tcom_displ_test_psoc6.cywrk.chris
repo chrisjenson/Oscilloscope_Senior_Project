@@ -219,7 +219,6 @@
 <v>tcom_displ_test_psoc6\tcom_displ_test_psoc6\CM4 (Core 1)\Source Files\globalStruct.h</v>
 <v>tcom_displ_test_psoc6\tcom_displ_test_psoc6\CM4 (Core 1)\Source Files\home_screen.c</v>
 <v>tcom_displ_test_psoc6\tcom_displ_test_psoc6\CM4 (Core 1)\Source Files\home_screen.h</v>
-<v>tcom_displ_test_psoc6\tcom_displ_test_psoc6\CM4 (Core 1)\Source Files\main_cm4.c</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
@@ -657,8 +656,9 @@
 <OpenDocs>
 <name v=".\tcom_displ_test_psoc6.cydsn\main_cm4.c" />
 <name v=".\tcom_displ_test_psoc6.cydsn\home_screen.c" />
-<name v=".\tcom_displ_test_psoc6.cydsn\tcom_displ_test_psoc6.cydwr" />
 <name v=".\tcom_displ_test_psoc6.cydsn\Generated_Source\PSoC6\project.h" />
+<name v=".\tcom_displ_test_psoc6.cydsn\globalStruct.h" />
+<name v=".\tcom_displ_test_psoc6.cydsn\Generated_Source\PSoC6\pdl\drivers\peripheral\syslib\gcc\cy_syslib_gcc.S" />
 </OpenDocs>
 <OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
 
@@ -666,7 +666,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1301, 730" SelectedTabbedMdiWindow="59ac8adc-de2e-40ea-ac03-f4f8096cd668"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="c075075c-ca65-4f4f-b837-1e69f8181441" /><DocumentWindow Key="C:\Users\tmj32\Documents\TCNJ\Senior_Project\Oscilloscope_Senior_Project\tcom_engineering\embed_sw\tcom_app\tcom_app_psoc6_lvgl6\tcom_displ_test_psoc6.cydsn\main_cm4.c" Guid="59ac8adc-de2e-40ea-ac03-f4f8096cd668" /><DocumentWindow Key="C:\Users\tmj32\Documents\TCNJ\Senior_Project\Oscilloscope_Senior_Project\tcom_engineering\embed_sw\tcom_app\tcom_app_psoc6_lvgl6\tcom_displ_test_psoc6.cydsn\home_screen.c" Guid="3aabfa8c-228c-4048-a1b5-3f179d367574" /><DocumentWindow Key="C:\Users\tmj32\Documents\TCNJ\Senior_Project\Oscilloscope_Senior_Project\tcom_engineering\embed_sw\tcom_app\tcom_app_psoc6_lvgl6\tcom_displ_test_psoc6.cydsn\tcom_displ_test_psoc6.cydwr" Guid="b0607f48-1ddb-4f46-b2a0-cebf71c737aa" /><DocumentWindow Key="C:\Users\tmj32\Documents\TCNJ\Senior_Project\Oscilloscope_Senior_Project\tcom_engineering\embed_sw\tcom_app\tcom_app_psoc6_lvgl6\tcom_displ_test_psoc6.cydsn\Generated_Source\PSoC6\project.h" Guid="03d0d80e-834e-46bf-ac66-eb28d7ae7e27" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1630, 730" SelectedTabbedMdiWindow="59ac8adc-de2e-40ea-ac03-f4f8096cd668"><DocumentWindow Key="C:\Users\tmj32\Documents\TCNJ\Senior_Project\Oscilloscope_Senior_Project\tcom_engineering\embed_sw\tcom_app\tcom_app_psoc6_lvgl6\tcom_displ_test_psoc6.cydsn\main_cm4.c" Guid="59ac8adc-de2e-40ea-ac03-f4f8096cd668" /><DocumentWindow Key="C:\Users\tmj32\Documents\TCNJ\Senior_Project\Oscilloscope_Senior_Project\tcom_engineering\embed_sw\tcom_app\tcom_app_psoc6_lvgl6\tcom_displ_test_psoc6.cydsn\home_screen.c" Guid="3aabfa8c-228c-4048-a1b5-3f179d367574" /><DocumentWindow Key="C:\Users\tmj32\Documents\TCNJ\Senior_Project\Oscilloscope_Senior_Project\tcom_engineering\embed_sw\tcom_app\tcom_app_psoc6_lvgl6\tcom_displ_test_psoc6.cydsn\Generated_Source\PSoC6\project.h" Guid="03d0d80e-834e-46bf-ac66-eb28d7ae7e27" /><DocumentWindow Key="C:\Users\tmj32\Documents\TCNJ\Senior_Project\Oscilloscope_Senior_Project\tcom_engineering\embed_sw\tcom_app\tcom_app_psoc6_lvgl6\tcom_displ_test_psoc6.cydsn\globalStruct.h" Guid="2ceaed9e-2550-4138-b75f-3f3c113dae2a" /><DocumentWindow Key="C:\Users\tmj32\Documents\TCNJ\Senior_Project\Oscilloscope_Senior_Project\tcom_engineering\embed_sw\tcom_app\tcom_app_psoc6_lvgl6\tcom_displ_test_psoc6.cydsn\Generated_Source\PSoC6\pdl\drivers\peripheral\syslib\gcc\cy_syslib_gcc.S" Guid="24b3d1bb-2255-478b-9dc6-c7072503cd83" /><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="c075075c-ca65-4f4f-b837-1e69f8181441" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>

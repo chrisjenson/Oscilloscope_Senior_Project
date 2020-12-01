@@ -19,6 +19,8 @@ struct SPI_parameters
     uint8_t HoriSCale;
     uint8_t VertScale;
     uint8_t Gain;       //goes to Shannon
+    
+    uint16_t RegBuffer[13];
 
 };
 struct SPI_parameters cm4;

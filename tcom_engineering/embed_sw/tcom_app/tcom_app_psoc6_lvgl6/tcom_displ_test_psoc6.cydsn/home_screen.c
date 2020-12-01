@@ -27,10 +27,10 @@ uint8_t zeros = 0b00000000;
 
 static void sw_event_handler(lv_obj_t * obj, lv_event_t event)
 {
-    if(event == LV_EVENT_CLICKED) {
+    if(event == LV_EVENT_VALUE_CHANGED) {
         printf("State: %s\n", lv_sw_get_state(obj) ? "On" : "Off");
         //lv_sw_toggle(obj, LV_ANIM_ON);
-        cm4.onBit = !cm4.onBit;
+        //cm4.onBit = !cm4.onBit;
     }
 }
 
@@ -180,8 +180,8 @@ void home_screen()
     //lv_obj_set_style(chart1, &style_box);                           //sets the style
     lv_obj_set_pos(chart1, chart_horiPos, chart_vertPos);                         /*Set its position*/
     lv_obj_set_size(chart1, chart_width, chart_heigth);               /*Set its size*/   
-    lv_chart_set_div_line_count(chart1, 3, 0);                        //LOOK INTO ME
-    lv_chart_set_point_count(chart1, 8);                              //setting the number of points on the chart
+    lv_chart_set_div_line_count(chart1, 3, 4);                        //sets the grid lines
+    lv_chart_set_point_count(chart1, 13);                              //setting the number of points on the chart
     lv_chart_set_type(chart1, LV_CHART_TYPE_LINE);                    //set the points to be connected by lines
                                                                       //CHANGE TO POINT ONCE MORE SAMPLES                                                                  
 
@@ -191,13 +191,14 @@ void home_screen()
     //temp sent to 8 to limit the number of points on screen. Will actually be somewhere in the hundreds
     
     //CHANGE ME ONCE IMPLEMENTED
-    uint8 elementsRead = 8;
-    
-    int points[8] = {25, 50, 75, 50, 25, 50, 75, 50};
+    uint8 elementsRead = 13;
+    //Use for a fake chart if desired
+    //int points[13] = {25, 50, 75, 50, 25, 50, 75, 50, 25, 50, 75, 50, 25};
     for(int i = 0; i < elementsRead; ++i){
-        lv_chart_set_next(chart1, s1, points[i]);
+        //lv_chart_set_next(chart1, s1, points[i]);
+        lv_chart_set_next(chart1, s1, cm4.RegBuffer[i]);
     }
-    
+    //lv_chart_set_points(chart1, s1, regSeries);
     
     //Adding an on/off switch
 	lv_obj_t* switchLabel = lv_label_create(lv_scr_act(), NULL);
