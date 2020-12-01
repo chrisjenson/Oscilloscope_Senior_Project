@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date             : Sat Nov 28 17:32:48 2020
+| Date             : Tue Dec  1 13:45:16 2020
 | Host             : MSI running 64-bit major release  (build 9200)
 | Command          : report_power -file Top_power_routed.rpt -pb Top_power_summary_routed.pb -rpx Top_power_routed.rpx
 | Design           : Top
@@ -33,7 +33,7 @@ Table of Contents
 | Total On-Chip Power (W)  | 0.104        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.006        |
+| Dynamic (W)              | 0.007        |
 | Device Static (W)        | 0.097        |
 | Effective TJA (C/W)      | 4.6          |
 | Max Ambient (C)          | 84.5         |
@@ -53,15 +53,15 @@ Table of Contents
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |     0.001 |        3 |       --- |             --- |
-| Slice Logic              |    <0.001 |      447 |       --- |             --- |
-|   LUT as Logic           |    <0.001 |      127 |     63400 |            0.20 |
-|   Register               |    <0.001 |      229 |    126800 |            0.18 |
+| Slice Logic              |    <0.001 |      449 |       --- |             --- |
+|   LUT as Logic           |    <0.001 |      132 |     63400 |            0.21 |
+|   Register               |    <0.001 |      231 |    126800 |            0.18 |
 |   F7/F8 Muxes            |    <0.001 |       17 |     63400 |            0.03 |
 |   CARRY4                 |    <0.001 |        7 |     15850 |            0.04 |
 |   Others                 |     0.000 |       13 |       --- |             --- |
 |   LUT as Distributed RAM |     0.000 |        8 |     19000 |            0.04 |
-| Signals                  |    <0.001 |      324 |       --- |             --- |
-| I/O                      |     0.005 |       36 |       210 |           17.14 |
+| Signals                  |    <0.001 |      326 |       --- |             --- |
+| I/O                      |     0.005 |       39 |       210 |           18.57 |
 | Static Power             |     0.097 |          |           |                 |
 | Total                    |     0.104 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
@@ -142,7 +142,7 @@ Table of Contents
 +------+-----------+
 | Name | Power (W) |
 +------+-----------+
-| Top  |     0.006 |
+| Top  |     0.007 |
 +------+-----------+
 
 
