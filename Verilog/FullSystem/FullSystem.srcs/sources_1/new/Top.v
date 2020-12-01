@@ -16,6 +16,9 @@ module Top(
     input [7:0] DebugWriteRegister,
     output [7:0] DebugRegister,
     output DebugFlag,
+    output DebugFlag2,
+    output DebugFIFOInXFC,
+    output DebugFIFOOutXFC,
     output DebugSlaveSel,
     output DebugMOSI,
     output DebugSCLK,
@@ -82,6 +85,7 @@ module Top(
         .reset(reset),
         //.ADC_SampleClock(ADC_SampleClock),
         //Ram Read
+        .DEBUGreading(DebugFlag),
         .triggered(triggered), //input, gates read
         .RAMR_ReadAddr(RAMR_ReadAddr), //Port B on RAM, current read location
         .RAMR_Quantity(RAMR_Quantity), //output from spi, gates read
@@ -127,7 +131,8 @@ module Top(
         .reset(reset),
         .SCLK_Raw(SCLK_Raw),
         //debug
-        .DebugFlag(DebugFlag), 
+        //.DebugFlag(DebugFlag), 
+        .DebugFlag2(DebugFlag2),
         .DebugSlaveSel(DebugSlaveSel),      
         .DebugMOSI(DebugMOSI),          
         .DebugSCLK(DebugSCLK),
@@ -154,9 +159,10 @@ module Top(
         .WrEn(Reg_WrEn & write_data_strobe), //Inputs Reg_WrEn & write_data_strobe
         .RdEn(Reg_RdEn), //Input
         .Read_Data(Reg_DataOut), //Output
-        .DebugWriteRegister(8'b00000000), //Input- set to DebugWriteRegister for synthesis
+        .DebugWriteRegister(DebugWriteRegister), //Input- set to DebugWriteRegister for synthesis 8'b00000000
         .DebugRegister(DebugRegister) //Output
     );
+    
     
     Buffer_FIFO u_Buffer_FIFO(
         .FIFO_OutRTR(FIFO_OutRTR), //Input from SPI
@@ -164,11 +170,12 @@ module Top(
         
         .FIFO_InRTS(FIFO_InRTS), //Input from RamRdEngine
         .FIFO_InRTR(FIFO_InRTR), //Output to RamRdEngine to know fifo to increment address
-        
-        .FIFO_InData(RAMR_Data),//RAMR_Data), //Input from RAM 16'b1010101010101010
+        //DEBUG BELOW SHOULD BE RAMR_DATA
+        .FIFO_InData(16'b1010101010101010),//RAMR_Data), //Input from RAM 16'b1010101010101010
         .FIFO_OutData(FIFO_OutData), //Output to SPI
         
-        //.FIFO_OutXFC(),
+        .DebugFIFOInXFC(DebugFIFOInXFC),
+        .DebugFIFOOutXFC(DebugFIFOOutXFC),
         
         .clk(clk),
         .reset(reset)

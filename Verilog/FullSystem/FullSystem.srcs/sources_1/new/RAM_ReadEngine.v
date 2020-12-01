@@ -14,6 +14,8 @@ module RAM_ReadEngine(
     //input [15:0] RAMR_Data,
     //FIFO
     //output reg [15:0] RAMData,
+    output DEBUGreading,
+    
     output reg FIFO_InRTS,
     input FIFO_InRTR
     );
@@ -21,7 +23,7 @@ module RAM_ReadEngine(
     wire FIFO_InXFC;
     assign FIFO_InXFC = FIFO_InRTS & FIFO_InRTR;
     //DEBUG Need to implement a Ring buffer
-    wire reading;
+    wire reading; //DEBUG READING IS LOW 11/30/2020
     assign reading = (RAMR_ReadAddr < RAMR_Quantity) & SPI_ReadCommand & triggered;
     
     always @(posedge clk)

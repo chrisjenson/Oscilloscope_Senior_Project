@@ -13,14 +13,21 @@ module Buffer_FIFO(
 //    output FIFO_OutXFC,
     
     input clk,
-    input reset
+    input reset,
+    
+    output DebugFIFOOutXFC,
+    output DebugFIFOInXFC
     );
+    
     wire FIFO_OutRTS;
     wire FIFO_InXFC;
     
     wire FIFO_OutXFC;
     
-    reg [1:0] FIFO_NumInFIFO;
+    assign DebugFIFOOutXFC = FIFO_OutXFC;
+    assign DebugFIFOInXFC = FIFO_InXFC;
+    //DEBUG: SHOULD ALSO BE RESET ON SLAVE SELECT
+    reg [2:0] FIFO_NumInFIFO;//DEBUG: THIS NEEDS TO BE 3 BITS SINCE THERE ARE 4 POSITIONS
     reg [1:0] FIFO_WPTR;
     reg [1:0] FIFO_RPTR;
     
@@ -28,7 +35,7 @@ module Buffer_FIFO(
     assign FIFO_InXFC = FIFO_InRTS & FIFO_InRTR;
     
     assign FIFO_OutRTS = (0 < FIFO_NumInFIFO) && (!reset);
-    assign FIFO_InRTR = (FIFO_NumInFIFO < 3) && (!reset);
+    assign FIFO_InRTR = (FIFO_NumInFIFO < 4) && (!reset);
     
     always @(posedge clk)
     begin
