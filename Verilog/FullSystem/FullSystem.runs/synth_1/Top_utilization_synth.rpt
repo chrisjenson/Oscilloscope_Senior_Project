@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Tue Dec  1 13:44:00 2020
+| Date         : Thu Dec  3 18:41:33 2020
 | Host         : MSI running 64-bit major release  (build 9200)
 | Command      : report_utilization -file Top_utilization_synth.rpt -pb Top_utilization_synth.pb
 | Design       : Top
@@ -58,8 +58,8 @@ Table of Contents
 | 0     |          Yes |           - |            - |
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
-| 22    |          Yes |         Set |            - |
-| 244   |          Yes |       Reset |            - |
+| 28    |          Yes |         Set |            - |
+| 238   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -148,13 +148,13 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDRE     |  244 |        Flop & Latch |
+| FDRE     |  238 |        Flop & Latch |
 | LUT6     |   67 |                 LUT |
 | LUT5     |   47 |                 LUT |
+| FDSE     |   28 |        Flop & Latch |
 | OBUF     |   25 |                  IO |
 | LUT4     |   25 |                 LUT |
 | LUT3     |   23 |                 LUT |
-| FDSE     |   22 |        Flop & Latch |
 | IBUF     |   21 |                  IO |
 | MUXF7    |   16 |               MuxFx |
 | RAMD32   |   12 |  Distributed Memory |

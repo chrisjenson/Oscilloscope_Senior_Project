@@ -43,12 +43,15 @@ module Top(
     
    // wire [15:0] Buffer_DataIn;
     wire [15:0] RAMW_Data;
-
+    wire [1:0] ADC_BitSelect;
+    
+    assign ADC_BitSelect = 1;
     ADCInterface u_ADCInterface(
         .clk(clk),
         .reset(reset),      
         .ADC_DataIn(ADC_InData), 
         .ADC_SampleClock(ADC_SampleClock),
+        .ADC_BitSelect(ADC_BitSelect),
         .RAMW_Data(RAMW_Data)
     );
     

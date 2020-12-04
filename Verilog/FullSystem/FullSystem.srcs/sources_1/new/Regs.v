@@ -17,18 +17,18 @@ module Regs(
     //also a read only bit
     
     reg [7:0] registers [13:0];
-    assign DebugRegister = registers[3];
+    assign DebugRegister = registers[4]; //LEDs
     
     always @(posedge clk)
     begin
-        registers[5] <= DebugWriteRegister; //8'b11111111; //Scratch W reg- debug
+        registers[5] <= DebugWriteRegister; //8'b11111111; //Scratch W reg- Switches
         if (reset)
-        begin /*
+        begin 
             registers[0] <= 8'b01000010; //B
             registers[1] <= 8'b01000011; //C
             registers[2] <= 8'b01010011; //S
             registers[3] <= 8'b01010101; //Version ID
-            registers[4] <= 8'b01010101; //scratch R/W reg- Debug register
+            registers[4] <= 8'b01010101; //scratch R/W reg LEDs- Debug register
 
             registers[6] <= 8'b00000000; //Trigger and Trigger slope
             registers[7] <= 8'b00000000; //Sample Decimation
@@ -37,20 +37,22 @@ module Regs(
             registers[10] <= 8'b00000000; //IRS_High and Low
             registers[11] <= 8'b00000000; //Offset
             registers[12] <= 8'b00000000; //Shift Control Register
-            */
-            registers[0] <= 8'b00000000; //B
-            registers[1] <= 8'b00000010; //C
-            registers[2] <= 8'b00000100; //S
-            registers[3] <= 8'b00001000; //Version ID
-            registers[4] <= 8'b00010000; //scratch R/W reg- Debug register
+            
+            /* data display test
+            registers[0] <= 8'b00010000; //B
+            registers[1] <= 8'b00100000; //C
+            registers[2] <= 8'b01000000; //S
+            registers[3] <= 8'b01000000; //Version ID
+            registers[4] <= 8'b00100000; //scratch R/W reg LEDs- Debug register
 
             registers[6] <= 8'b00001000; //Trigger and Trigger slope
-            registers[7] <= 8'b00000100; //Sample Decimation
-            registers[8] <= 8'b00000010; //on-bit
-            registers[9] <= 8'b00000001; //reset
-            registers[10] <= 8'b00000010; //IRS_High and Low
-            registers[11] <= 8'b00000100; //Offset
-            registers[12] <= 8'b00001000; //Shift Control Register
+            registers[7] <= 8'b00001000; //Sample Decimation
+            registers[8] <= 8'b00010000; //on-bit
+            registers[9] <= 8'b00100000; //reset
+            registers[10] <= 8'b01000000; //IRS_High and Low
+            registers[11] <= 8'b01000000; //Offset
+            registers[12] <= 8'b00100000; //Shift Control Register
+            */
         end
         else
         begin

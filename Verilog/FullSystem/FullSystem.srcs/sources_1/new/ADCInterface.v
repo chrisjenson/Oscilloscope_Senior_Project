@@ -5,6 +5,7 @@ module ADCInterface(
     input               reset, //from tb
     input               ADC_SampleClock, //from timing gen
     input [9:0]         ADC_DataIn, //from DAB
+    input [1:0]         ADC_BitSelect,
     output reg [15:0]   RAMW_Data
     );
     //DEBUG: ADD SATURATION
@@ -16,6 +17,7 @@ module ADCInterface(
     //Get negedge and posedge pulses
     wire ADC_SampleClock_posedge_pulse;
     wire ADC_SampleClock_negedge_pulse;
+    
     
     reg ADC_SampleClock_p1;
     
@@ -32,6 +34,7 @@ module ADCInterface(
     reg [15:0] ConcatRAMData;
     //DEBUG FIRST CONCATRAMDATA IS INVALID
     //DEBUG THIS SHOULD BE OUTPUTTING A FLAG WHEN READY, NOT RELYING ON SECONDPOSEDGEPULSE
+    //DEBUG: Please verify this is doing Big Endian Format
     always @(posedge clk)
     //Select 8 bits from input data, concat with next 8 bit input, and set as output on negedge of sample clk
     //
