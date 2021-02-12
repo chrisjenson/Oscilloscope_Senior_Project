@@ -2,6 +2,7 @@
 #include "lvgl.h"
 
 #include "stdio.h"
+#include "math.h"
 
 #include "globalStruct.h"
 #include "touchpad_glue.h"
@@ -95,38 +96,50 @@ main( void )
     cm4.IRS = 0b00000000;
     cm4.Offset = 0b00000000;
     cm4.Gain = 0b00000000;       //goes to Shannon
-    cm4.HoriSCale = 0b00000000;
+    cm4.HoriScale = 0b00000000;
     cm4.VertScale = 0b00000000;
+    cm4.onBit = 0b00000000;
+    cm4.windowPos = 512;
     
     
     // START SPI CODE //
-    uint16_t txBuffer[13];
-    uint16_t RxBuffer[13];
+    //uint16_t txBuffer[13];
+    //uint16_t RxBuffer[13];
     
-    if(cm4.onBit == 00000001)
-    {
+    //if(cm4.onBit == 0b00000001)
+    //{
         //construct write commmand for updating offset in register 11
-        txBuffer[0] = 0b0100101100000000 | cm4.Offset;     //010 01011 00000000
+        //txBuffer[0] = 0b0100101100000000 | cm4.Offset;     //010 01011 00000000
+        cm4.TxBuffer[0] = 0b0100101100000000 | cm4.Offset;     //010 01011 00000000
         
         //construct write commmand for updating trigger in register 4
-        txBuffer[1] = 0b0100010000000000 | cm4.Trigger;     //010 00100 00000000
+        //txBuffer[1] = 0b0100010000000000 | cm4.Trigger;     //010 00100 00000000
+        cm4.TxBuffer[1] = 0b0100010000000000 | cm4.Trigger;     //010 00100 00000000
+        
+        //construct write commmand for updating gain in register 14
+        //txBuffer[1] = 0b0100111000000000 | cm4.Trigger;     //010 01110 00000000
+        cm4.TxBuffer[2] = 0b0100111000000000 | cm4.Gain;     //010 01110 00000000
         
         //construct read RAM command, or with HoriScale to determine the sample size
-        txBuffer[2] = 0b0110000000000000 | cm4.HoriSCale;     //011 00000 00000000
+        //txBuffer[2] = 0b0110000000000000 | cm4.HoriSCale;     //011 00000 00000000
+        //cm4.TxBuffer[3] = 0b0110000000000000 | cm4.HoriScale;     //011 00000 00000000
+        
+        //Send a read ram command to read 512x2 samples 
+        cm4.TxBuffer[0] = 0b0110100100000000 | cm4.HoriScale;     //011 01001 00000000
         
         //loop to send each command in the txBuffer
-        for(int i = 0; i < 3; ++i){
+        for(int i = 0; i < 1; ++i){
             while(!(Cy_SCB_SPI_GetTxFifoStatus(SPIM_HW) & CY_SCB_SPI_TX_EMPTY)){}
-            Cy_SCB_SPI_Write(SPIM_HW, txBuffer[i]);
+            Cy_SCB_SPI_Write(SPIM_HW, cm4.TxBuffer[i]);
    
             CyDelay(1);
    
             while(!(Cy_SCB_SPI_GetRxFifoStatus(SPIM_HW) & CY_SCB_SPI_RX_NOT_EMPTY)){}
-            RxBuffer[i] = Cy_SCB_SPI_Read(SPIM_HW);
+            cm4.RxBuffer[i] = Cy_SCB_SPI_Read(SPIM_HW);
         }
         //Reset to avoid an infinite loop
         cm4.onBit = 0b00000000;
-    }
+    //}
     // END SPI CODE //
     
     
