@@ -4,16 +4,13 @@
 module RAM_ReadEngine(
     input clk,
     input reset,
-    //input ADC_SampleClock,
     //Ram Read
     input triggered,
     input SPI_ReadCommand,
     output reg [17:0] RAMR_ReadAddr, //Port B on RAM, current read location
     input [17:0] RAMR_Quantity,
     input SlaveSel,
-    //input [15:0] RAMR_Data,
     //FIFO
-    //output reg [15:0] RAMData,
     output DEBUGreading,
     
     output reg FIFO_InRTS,
@@ -25,7 +22,7 @@ module RAM_ReadEngine(
     //DEBUG Need to implement a Ring buffer
     wire reading; //DEBUG READING IS LOW 11/30/2020
     assign reading = (RAMR_ReadAddr < RAMR_Quantity) & SPI_ReadCommand & triggered;
-    
+    assign DEBUGreading = reading;
     always @(posedge clk)
     begin
     //Determing if RAM should be reading data

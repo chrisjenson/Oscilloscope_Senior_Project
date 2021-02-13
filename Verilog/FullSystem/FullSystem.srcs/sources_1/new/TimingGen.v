@@ -34,9 +34,5 @@ module TimingGen(
             end
         end
     end
-    
-//    ADCInterface u_ADCInterface(
-//        .ADC_SampleClock(ADC_SampleClock)
-//    );
-    
+
 endmodule

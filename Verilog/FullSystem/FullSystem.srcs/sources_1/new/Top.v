@@ -1,11 +1,17 @@
 `timescale 1ns / 1ps
-
+/*
+Tasks to do:
+    -Output test to MCU
+    -All control value form regsiters need to be assigned
+    -Trigger logic needs to be implemented
+    -Debug improvements
+*/
 
 module Top(
     input clk,
     input rst_, //HIGH BY DEFAULT ON HARDWARE
     //Frontend
-    input [9:0] ADC_InData,
+    //input [9:0] ADC_InData, //Uncomment this for TB
     output ADC_SampleClock,
     //SPI
     input MOSI_Raw, //C17
@@ -25,6 +31,23 @@ module Top(
     output [7:0] DebugSPI_Ins,
     output reg reset //For debug
     );
+    
+    //////////////////////////
+    //To comment this out, uncomment input [9:0] ADC_InData and comment everything below
+    //Also uncomment in constraints
+    //Uncomment in TB
+    
+    //Simulate data input on hardware
+    wire [9:0] ADC_InData;
+    
+    DataSimulation u_DataSimulation(
+        .ADC_SampleClock(ADC_SampleClock),
+        .clk(clk),
+        .reset(reset),
+        .SimData(ADC_InData)
+    );
+    /////////////////////
+    
     wire onBit;
     assign onBit = 1'b1;
     reg reset_p1;
@@ -62,9 +85,7 @@ module Top(
         .clk(clk),
         .reset(reset),
         .ADC_SampleClock(ADC_SampleClock),
-        //.Buffer_DataIn(Buffer_DataIn),
         .RAMW_WriteAddr(RAMW_WriteAddr), //Port A on RAM
-        //.RAMW_Data(RAMW_Data), 
         .RAMW_En(RAMW_En),
         .onBit(onBit) //Use this to gate everything, should come from regs
     );
@@ -74,29 +95,24 @@ module Top(
     wire SPI_ReadCommand; //from spi
     wire triggered; //From triggermanagement
     wire [17:0] RAMR_Quantity;
-    //wire [15:0] RAMData;
     wire FIFO_InRTS;
     wire FIFO_InRTR;
     
     assign triggered = 1; //DEBUG FROM TRIGGERMANAGEMENT
-    //assign SPI_ReadCommand = 1;
    // assign RAMR_Quantity = 4096; //DEBUG: FROM SPI COMMAND
     
     
     RAM_ReadEngine u_RAM_ReadEngine(
         .clk(clk),
         .reset(reset),
-        //.ADC_SampleClock(ADC_SampleClock),
         //Ram Read
         .DEBUGreading(DebugFlag),
         .triggered(triggered), //input, gates read
         .RAMR_ReadAddr(RAMR_ReadAddr), //Port B on RAM, current read location
         .RAMR_Quantity(RAMR_Quantity), //output from spi, gates read
-        //.RAMR_Data(RAMR_Data),
         .SPI_ReadCommand(SPI_ReadCommand), //Input, gates read
         .SlaveSel(SlaveSel),
         //FIFO
-        //.RAMData(RAMData),
         .FIFO_InRTS(FIFO_InRTS),
         .FIFO_InRTR(FIFO_InRTR)
     );
@@ -133,8 +149,7 @@ module Top(
         .clk(clk),
         .reset(reset),
         .SCLK_Raw(SCLK_Raw),
-        //debug
-        //.DebugFlag(DebugFlag), 
+        //Debug
         .DebugFlag2(DebugFlag2),
         .DebugSlaveSel(DebugSlaveSel),      
         .DebugMOSI(DebugMOSI),          
@@ -169,12 +184,10 @@ module Top(
     
     Buffer_FIFO u_Buffer_FIFO(
         .FIFO_OutRTR(FIFO_OutRTR), //Input from SPI
-       // .FIFO_OutRTS(),
         
         .FIFO_InRTS(FIFO_InRTS), //Input from RamRdEngine
         .FIFO_InRTR(FIFO_InRTR), //Output to RamRdEngine to know fifo to increment address
-        //DEBUG BELOW SHOULD BE RAMR_DATA
-        .FIFO_InData(16'b1010101010101010),//RAMR_Data), //Input from RAM 16'b1010101010101010
+        .FIFO_InData(RAMR_Data),//RAMR_Data), //Input from RAM 16'b1010101010101010
         .FIFO_OutData(FIFO_OutData), //Output to SPI
         
         .DebugFIFOInXFC(DebugFIFOInXFC),

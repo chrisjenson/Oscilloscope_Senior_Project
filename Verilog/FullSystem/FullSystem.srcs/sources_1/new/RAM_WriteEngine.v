@@ -6,9 +6,7 @@ module RAM_WriteEngine(
     input onBit, //Use this to gate everything
     input ADC_SampleClock,
     //Write
-    //input [15:0] Buffer_DataIn,
     output reg [17:0] RAMW_WriteAddr, //Port A on RAM
-    //output [15:0] RAMW_Data,
     output RAMW_En
     );
     
@@ -61,8 +59,6 @@ module RAM_WriteEngine(
     //////////////////////////////////////////////////////////////    
     //Write Section
     assign RAMW_En = onBit & ADC_SampleClock_secondposedge_pulse; //DEBUG:Need to make this its own process and delay by one word..
-    // in order to prevent invalid data in the first
-    //assign RAMW_Data = Buffer_DataIn;
     
     always @(posedge clk)
     begin

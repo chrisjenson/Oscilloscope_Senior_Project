@@ -2,16 +2,13 @@
 
 module Buffer_FIFO(
     input FIFO_OutRTR,
-    //output FIFO_OutRTS,
     
     input FIFO_InRTS,
     output FIFO_InRTR,
     
     input [15:0]FIFO_InData,
     output [15:0]FIFO_OutData,
-    
-//    output FIFO_OutXFC,
-    
+        
     input clk,
     input reset,
     

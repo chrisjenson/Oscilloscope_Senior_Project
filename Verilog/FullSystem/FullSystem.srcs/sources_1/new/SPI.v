@@ -27,13 +27,8 @@ module SPI(
         output reg Buffer_RdEn,
         input [7:0] Reg_DataOut
     );
-  //  reg write_data_strobe;
     reg [2:0] SPI_Cmd; 
 
-    
-   // reg Reg_WrEn;
-    //reg Reg_RdEn;
-    //reg Buffer_RdEn;
     
     
     assign DebugSPI_Ins = {SPI_Cmd,SPI_Params};
@@ -43,26 +38,6 @@ module SPI(
     assign DebugMOSI = MOSI_Raw;
     assign DebugSCLK = SCLK_Raw;
     
-    //reg [3:0] SPI_OutSixteenCount;
-    //reg [3:0] SPI_InSixteenCount;
-    //reg [2:0] SPI_InEightCounter;
-    
-    //reg [2:0] SPI_OutEightCount;
-    
-//    wire [2:0] SPI_Cmd;
-//    wire [4:0] SPI_Params;
-//    wire [7:0] SPI_Data;
- //   reg [4:0] SPI_Params;
-    
-    
-    //reg [15:0] SPIWord; //spiword is valid on the last possckposedgepulse of the word
-    //reg [15:0] SPI_DataIn;
-    
-    //assign SPI_Cmd = SPIWord[15:13];
-    //assign SPI_Params = SPIWord[12:8];
-    //assign SPI_Data = SPIWord[7:0];
-        
-    //wire [7:0] Reg_DataOut;//Wires between modules are always modules
     reg [7:0] Reg_DataIn;
     
     reg sck;
@@ -76,8 +51,6 @@ module SPI(
     
     reg new_word_strobe;
     
-  //  reg [18:0] BUFFER_InCount;
-    //reg [18:0] BUFFER_InAmount;// geting sent to RAM_Read_Engine
     
     always @(posedge clk)
     begin
@@ -126,108 +99,105 @@ module SPI(
         end
         else
         begin
-            //if (new_instruction_strobe)
-            //begin
-                case (SPI_Cmd)
-                    3'b001: //ReadReg- MISO //32 bits
-                    begin
-                        Reg_RdEn <= 1;
-                        Reg_WrEn <= 0;
-                        Buffer_RdEn <= 0;
-                        BUFFER_InAmount <= 0;
-                    end
-                    3'b010: //Write- MOSI 16bits
-                    begin
-                        Reg_RdEn <= 0;
-                        Reg_WrEn <= 1;
-                        Buffer_RdEn <= 0;
-                        BUFFER_InAmount <= 0;
-                    end
-                    3'b011: //ReadData- MISO RAM Read- this is default mode //8 bits
-                    begin
-                        Reg_RdEn <= 0;
-                        Reg_WrEn <= 0;
-                        Buffer_RdEn <= 1;
-                        case (SPI_Params)
-                            5'b00000:
-                            begin
-                                BUFFER_InAmount <= 262144; //2^18 = max ram size
-                            end
-                            5'b00001:
-                            begin
-                                BUFFER_InAmount <= 131072; //2^18
-                            end
-                            5'b00010:
-                            begin
-                                BUFFER_InAmount <= 65536;
-                            end
-                            5'b00011:
-                            begin
-                                BUFFER_InAmount <= 32768;
-                            end
-                            5'b00100:
-                            begin
-                                BUFFER_InAmount <= 16384;
-                            end
-                            5'b00101:
-                            begin
-                                BUFFER_InAmount <= 8192; //2^14
-                            end
-                            5'b00110:
-                            begin
-                                BUFFER_InAmount <= 4096; 
-                            end
-                            5'b00111:
-                            begin
-                                BUFFER_InAmount <= 2048;
-                            end
-                            5'b01000:
-                            begin
-                                BUFFER_InAmount <= 1024;
-                            end
-                            5'b01001:
-                            begin
-                                BUFFER_InAmount <= 512;
-                            end
-                            5'b01010:
-                            begin
-                                BUFFER_InAmount <= 256;
-                            end
-                            5'b01011:
-                            begin
-                                BUFFER_InAmount <= 128;
-                            end
-                            5'b01100:
-                            begin
-                                BUFFER_InAmount <= 64;
-                            end
-                            5'b01101:
-                            begin
-                                BUFFER_InAmount <= 32;
-                            end
-                            5'b01110:
-                            begin
-                                BUFFER_InAmount <= 16;
-                            end
-                            5'b01111:
-                            begin
-                                BUFFER_InAmount <= 8;
-                            end
-                            default:
-                            begin
-                                BUFFER_InAmount <= 0;
-                            end
-                        endcase
-                    end
-                    default:
-                    begin
-                        Reg_RdEn <= 0;
-                        Reg_WrEn <= 0;
-                        Buffer_RdEn <= 0;
-                        BUFFER_InAmount <= 0;
-                    end
-                endcase
-            //end
+            case (SPI_Cmd)
+                3'b001: //ReadReg- MISO //8 Bits in 8 out
+                begin
+                    Reg_RdEn <= 1;
+                    Reg_WrEn <= 0;
+                    Buffer_RdEn <= 0;
+                    BUFFER_InAmount <= 0;
+                end
+                3'b010: //Write- MOSI 8 bits in
+                begin
+                    Reg_RdEn <= 0;
+                    Reg_WrEn <= 1;
+                    Buffer_RdEn <= 0;
+                    BUFFER_InAmount <= 0;
+                end
+                3'b011: //ReadData- MISO RAM Read- this is default mode //8 bits
+                begin
+                    Reg_RdEn <= 0;
+                    Reg_WrEn <= 0;
+                    Buffer_RdEn <= 1;
+                    case (SPI_Params)
+                        5'b00000:
+                        begin
+                            BUFFER_InAmount <= 262144; //2^18 = max ram size
+                        end
+                        5'b00001:
+                        begin
+                            BUFFER_InAmount <= 131072; //2^18
+                        end
+                        5'b00010:
+                        begin
+                            BUFFER_InAmount <= 65536;
+                        end
+                        5'b00011:
+                        begin
+                            BUFFER_InAmount <= 32768;
+                        end
+                        5'b00100:
+                        begin
+                            BUFFER_InAmount <= 16384;
+                        end
+                        5'b00101:
+                        begin
+                            BUFFER_InAmount <= 8192; //2^14
+                        end
+                        5'b00110:
+                        begin
+                            BUFFER_InAmount <= 4096; 
+                        end
+                        5'b00111:
+                        begin
+                            BUFFER_InAmount <= 2048;
+                        end
+                        5'b01000:
+                        begin
+                            BUFFER_InAmount <= 1024;
+                        end
+                        5'b01001:
+                        begin
+                            BUFFER_InAmount <= 512;
+                        end
+                        5'b01010:
+                        begin
+                            BUFFER_InAmount <= 256;
+                        end
+                        5'b01011:
+                        begin
+                            BUFFER_InAmount <= 128;
+                        end
+                        5'b01100:
+                        begin
+                            BUFFER_InAmount <= 64;
+                        end
+                        5'b01101:
+                        begin
+                            BUFFER_InAmount <= 32;
+                        end
+                        5'b01110:
+                        begin
+                            BUFFER_InAmount <= 16;
+                        end
+                        5'b01111:
+                        begin
+                            BUFFER_InAmount <= 8;
+                        end
+                        default:
+                        begin
+                            BUFFER_InAmount <= 0;
+                        end
+                    endcase
+                end
+                default:
+                begin
+                    Reg_RdEn <= 0;
+                    Reg_WrEn <= 0;
+                    Buffer_RdEn <= 0;
+                    BUFFER_InAmount <= 0;
+                end
+            endcase
         end
     end
     
@@ -264,9 +234,7 @@ module SPI(
                     begin
                         SPI_InInstructionSixteenCounter <= SPI_InInstructionSixteenCounter - 1;
                     end
-               // end
-              //  if (sck_negedge_pulse)
-              //  begin
+
                     if (SPI_InInstructionSixteenCounter == 8)
                     begin
                         new_instruction_strobe <= 1; //High for one clock cycle //DEBUG: STROBE ON CLK NOT SPICLK
@@ -302,15 +270,12 @@ module SPI(
         begin
             if (new_instruction_strobe) //Will only be high 1 cycle
             begin
-               //SPI_Instruction <= SPI_InBits[15:8]; 
                SPI_Cmd <= SPI_InBits[15:13];   
                SPI_Params <= SPI_InBits[12:8];
             end
         end
     end
-    
-    //reg write_data_strobe;
-    
+        
     always @(posedge clk) //Write Data
     begin
     //If data bits are recieved (will only happen on a write command), write
@@ -342,18 +307,17 @@ module SPI(
 
     always @(posedge clk)
     begin
-    //Register Read & RAM Read... Driving MISO
-    //Input
-        //Reg Read
-            //Reg_DataOut
-        //RamRead
-            //Buffer_RdEn
-            //FIFO_OutData
-    //Output
-        //MISO- also driven from Ram Read
-        //FIFO_OutRTR
+        //Register Read & RAM Read... Driving MISO
+        //Input
+            //Reg Read
+                //Reg_DataOut
+            //RamRead
+                //Buffer_RdEn
+                //FIFO_OutData
+        //Output
+            //MISO- also driven from Ram Read
+            //FIFO_OutRTR
         
-        //DBEUG: CHANGE THIS TO COMBINATIONAL??
         FIFO_OutRTR <= 0;
         if (SlaveSel)
         begin

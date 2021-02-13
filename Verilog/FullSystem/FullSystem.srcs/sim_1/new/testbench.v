@@ -24,9 +24,10 @@ module testbench();
     
     /////////////////////
     //Initialize input Data
+    //Obsolete due to DataSimulation Module
     `define numInputs     (16384)
     
-    wire [9:0] stimInData;
+    wire [9:0] stimInData; //
     reg [13:0] stimInCount; //2^14 = 16384
     reg [9:0] stimData [`numInputs-1:0];
     
@@ -35,6 +36,7 @@ module testbench();
     integer i;
     initial
     begin
+        //Initialize with random data
         for (i = 0; i < `numInputs; i = i + 1)
         begin
             stimData[i] = $random();
@@ -54,6 +56,7 @@ module testbench();
     end
     
     always @(posedge ADC_SampleClock)
+    //After ADC Sampling, go to next adc input
     //Inputs
         //Reset
     begin
@@ -66,8 +69,6 @@ module testbench();
             stimInCount <= stimInCount + 1;
         end
     end
-   // wire onBit;
-  //  assign onBit = ~reset;
     
     ////////////////////////////////////////////////////////////
     //SPI TB
@@ -87,46 +88,58 @@ module testbench();
     initial
     begin
         commandNum <= 0;
-        reset <= 1;
         SlaveSel <= 1;
         SCLK = 1;
         SCLKCount = 0;
         index = 15;
+        commandDone <= 0;
     end
     
     initial
     begin  
+        commandArray[0] = 16'b0110100011111111; //cmd = Read Ram, params = 01111 -> (8 x 16 bits out), data = x... PARAMS = 00100 -> (1024 X 16 out)
+                                                //If changing number of data points being read (1024) need to change OneZeroTwoFourCounter below
         commandArray[1] = 16'b0010010011111111; //cmd = Read, params = 4, data = x
-        commandArray[0] = 16'b0100010011111111; //cmd = write, params = 4, data = 8'hFF
         commandArray[2] = 16'b0100010011110000; //cmd = write, params = 4, data = 8'hF0
-        commandArray[3] = 16'b0010010011111111; //cmd = Read, params = 4, data = x
-        commandArray[4] = 16'b0110010011111111; //cmd = Read Ram, params = 01111 -> (8 x 16 bits out), data = x... PARAMS = 00100 -> (1024 X 16 out)
-    end
+        //commandArray[3] = 16'b0110100011111111; //cmd = Read Ram, params = 01111 -> (8 x 16 bits out), data = x... PARAMS = 00100 -> (1024 X 16 out)
+    end 
     
-    always @(posedge clk) //Generate Slave Clock
+    always @(posedge clk) 
+    //Simluate Slave Clock
     begin
-        if (!SlaveSel)
+        if (!reset)
         begin
-            SCLKCount <= SCLKCount + 1;
-            if (SCLKCount == 2'b01)
+            if (!SlaveSel)
             begin
-                #1 SCLK = ~SCLK;
+                SCLKCount <= SCLKCount + 1;
+                if (SCLKCount == 2'b01)
+                begin
+                    #1 SCLK = ~SCLK;
+                end
             end
         end
     end
+    
     initial 
+    //Initialize
     begin
-        #210
+        #50 //Begin spi after 50
         SlaveSel <=0;
         reset <= 0;
     end
     
     always @(posedge clk)
+    //If command finished, go to next command
     begin
-        if (commandDone)
+        if (!reset)
         begin
-            //#25
-            SlaveSel <= 0;
+        if (commandDone)
+            begin
+                commandDone <= 0;
+                #100;
+                commandNum <= commandNum + 1;
+                SlaveSel <= 0;
+            end
         end
     end
     
@@ -134,50 +147,98 @@ module testbench();
     reg [6:0] OneTwentyEightCounter; //128
     reg [9:0] OneZeroTwoFourCounter; //1024
 
+    reg HERE1;
+    reg HERE2;
+  
+
     always @(posedge SCLK)
+    //Simulates SPI Master
+    //Inputs:
+        //SlaveSel
+        //Command
+    //Outputs:
+        //MOSI
+        //Index (initial = 15)
     begin
-        if (!SlaveSel)
+        if (!reset)
         begin
-            if (command[15:13] == 3'b011)
+            if (!SlaveSel)
             begin
-                MOSI <= command[index];
-                if (index == 0)
+                if (command[15:13] == 3'b011) //If RAM Read
                 begin
-                    if (OneZeroTwoFourCounter == 1023) //x TRANSFERS OF 16 BITS
-                    begin
-                        #40 
-                        SlaveSel <= 1;
-                        commandNum <= commandNum + 1;
-                        commandDone <= 1;
+                    MOSI <= command[index];
+                    if (index == 0)
+                    begin //For testing, read 1024 data values.
+                        if (OneZeroTwoFourCounter == 1023) //1024 TRANSFERS OF 16 BITS OF DATA
+                        begin
+                            #40 //wait 40 after ram read is done
+                            SlaveSel <= 1;
+                            commandDone <= 1;
+                            index <= 15;
+                            OneZeroTwoFourCounter <= 0;
+                        end
+                        else
+                        begin
+                            OneZeroTwoFourCounter <= OneZeroTwoFourCounter + 1;
+                        end
                     end
                     else
                     begin
-                        OneZeroTwoFourCounter <= OneZeroTwoFourCounter + 1;
+                        index <= index - 1;
                     end
                 end
-                else
+                else if ((command[15:13] == 3'bXXX) ||  (command[15:13] == 3'b000))
                 begin
+                    //IDLE
+                    #40 
+                    HERE1 <= 0;
+                    HERE2 <= 0;
+                    SlaveSel <= 1;
+                    //commandDone <= 1;
+                    index <= 15;
+                    //commandNum <= 0;
+                end
+                else if ((command[15:13] == 3'b001) ||  (command[15:13] == 3'b010)) //REG READ/WRITE
+                begin
+                     
+                    MOSI <= command[index];
                     index <= index - 1;
+                    if (index == 0)
+                    begin
+                        #40 
+                        SlaveSel <= 1;
+                       // commandNum <= commandNum + 1;
+                        commandDone <= 1;
+                        index <= 15;
+                    end
+                end
+                else //IDLE
+                begin
+                     //Commands done... Idle
+                    #40 
+                    HERE1 <= 0;
+                    HERE2 <= 0;
+                    SlaveSel <= 1;
+                    //commandDone <= 1;
+                    index <= 15;
+                    //commandNum <= 0;
                 end
             end
             else
+            //If SS is high
             begin
-                MOSI <= command[index];
-                index <= index - 1;
-                if (index == 0)
-                begin
-                    #40 
-                    SlaveSel <= 1;
-                    commandNum <= commandNum + 1;
-                    commandDone <= 1;
-                end
+                MOSI <= 0;
+                index <= 15;
+                OneTwentyEightCounter <= 0;
+                OneZeroTwoFourCounter <= 0;
+                HERE2 <= 1;
+
+                //commandDone <= 1;
             end
         end
         else
         begin
-            MOSI <= 0;
-            index <= 15;
-            OneTwentyEightCounter <= 0;
+            HERE1 <= 1;
             OneZeroTwoFourCounter <= 0;
         end
     end
@@ -189,9 +250,8 @@ module testbench();
         .MOSI_Raw(MOSI),
         .SlaveSel(SlaveSel),
         .SCLK_Raw(SCLK),
-        //FIFO
-  //      .onBit(onBit),
-        .ADC_InData(stimInData),
+        //ADC Interface
+        //.ADC_InData(stimInData),
         .ADC_SampleClock(ADC_SampleClock)
     );
 

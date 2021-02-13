@@ -1,0 +1,106 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Thu Feb 11 20:25:48 2021
+| Host         : MSI running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file Top_control_sets_placed.rpt
+| Design       : Top
+| Device       : xc7a100t
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    28 |
+|    Minimum number of control sets                        |    28 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    50 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    28 |
+| >= 0 to < 4        |     1 |
+| >= 4 to < 6        |     2 |
+| >= 6 to < 8        |     0 |
+| >= 8 to < 10       |    16 |
+| >= 10 to < 12      |     1 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     0 |
+| >= 16              |     8 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              29 |           16 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              50 |           14 |
+| Yes          | No                    | No                     |              24 |            9 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             199 |           59 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++----------------+----------------------------------------------+--------------------+------------------+----------------+
+|  Clock Signal  |                 Enable Signal                |  Set/Reset Signal  | Slice Load Count | Bel Load Count |
++----------------+----------------------------------------------+--------------------+------------------+----------------+
+|  clk_IBUF_BUFG | u_SPI/MISO8_out                              | DebugSlaveSel_OBUF |                1 |              1 |
+|  clk_IBUF_BUFG | u_SPI/SPI_InInstructionSixteenCounter        | DebugSlaveSel_OBUF |                1 |              4 |
+|  clk_IBUF_BUFG | u_SPI/SPI_OutSixteenCount                    | DebugSlaveSel_OBUF |                2 |              4 |
+|  clk_IBUF_BUFG | u_SPI/new_data_strobe                        | DebugSlaveSel_OBUF |                2 |              8 |
+|  clk_IBUF_BUFG | u_SPI/SPI_Params_reg[2]_3[0]                 | reset_OBUF         |                2 |              8 |
+|  clk_IBUF_BUFG | u_SPI/SPI_Params_reg[2]_4[0]                 | reset_OBUF         |                2 |              8 |
+|  clk_IBUF_BUFG | u_SPI/SPI_Params_reg[2]_5[0]                 | reset_OBUF         |                2 |              8 |
+|  clk_IBUF_BUFG | u_SPI/SPI_Params_reg[2]_6[0]                 | reset_OBUF         |                3 |              8 |
+|  clk_IBUF_BUFG | u_SPI/SPI_Params_reg[4]_0[0]                 | reset_OBUF         |                2 |              8 |
+|  clk_IBUF_BUFG | u_SPI/SPI_Params_reg[2]_0[0]                 | reset_OBUF         |                2 |              8 |
+|  clk_IBUF_BUFG | u_SPI/SPI_Params_reg[2]_7[0]                 | reset_OBUF         |                4 |              8 |
+|  clk_IBUF_BUFG | u_SPI/SPI_Params_reg[4]_3[0]                 | reset_OBUF         |                3 |              8 |
+|  clk_IBUF_BUFG | u_SPI/SPI_Params_reg[4]_1[0]                 | reset_OBUF         |                2 |              8 |
+|  clk_IBUF_BUFG | u_SPI/SPI_Params_reg[2]_2[0]                 | reset_OBUF         |                2 |              8 |
+|  clk_IBUF_BUFG | u_SPI/SPI_Params_reg[2]_1[0]                 | reset_OBUF         |                2 |              8 |
+|  clk_IBUF_BUFG | u_SPI/E[0]                                   |                    |                3 |              8 |
+|  clk_IBUF_BUFG | u_ADCInterface/ConcatRAMData[15]             |                    |                3 |              8 |
+|  clk_IBUF_BUFG | u_DataSimulation/E[0]                        |                    |                3 |              8 |
+|  clk_IBUF_BUFG |                                              | reset_OBUF         |                4 |              9 |
+|  clk_IBUF_BUFG | u_TimingGen/ADC_SampleClock_reg_0[0]         | reset_OBUF         |                3 |             10 |
+|  clk_IBUF_BUFG | u_SPI/new_instruction_strobe                 | DebugSlaveSel_OBUF |                4 |             16 |
+|  clk_IBUF_BUFG | u_SPI/SPI_Params_reg[4]_2[0]                 | reset_OBUF         |                6 |             16 |
+|  clk_IBUF_BUFG | u_DataSimulation/ADC_SampleClock_p1_reg_0[0] | reset_OBUF         |                4 |             16 |
+|  clk_IBUF_BUFG | u_SPI/FIFO_InRTS_reg[0]                      | reset_OBUF         |                5 |             18 |
+|  clk_IBUF_BUFG | u_RAM_WriteEngine/RAMW_En                    | reset_OBUF         |                5 |             18 |
+|  clk_IBUF_BUFG | u_RAM_ReadEngine/DebugFIFOInXFC_OBUF         |                    |                3 |             24 |
+|  clk_IBUF_BUFG |                                              |                    |               16 |             29 |
+|  clk_IBUF_BUFG |                                              | DebugSlaveSel_OBUF |               10 |             41 |
++----------------+----------------------------------------------+--------------------+------------------+----------------+
+
+
