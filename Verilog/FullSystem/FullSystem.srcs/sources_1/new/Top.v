@@ -109,6 +109,7 @@ module Top(
         .DEBUGreading(DebugFlag),
         .triggered(triggered), //input, gates read
         .RAMR_ReadAddr(RAMR_ReadAddr), //Port B on RAM, current read location
+        .RAMW_WriteAddr(RAMW_WriteAddr), //Know where writing vurrently to read half below half above
         .RAMR_Quantity(RAMR_Quantity), //output from spi, gates read
         .SPI_ReadCommand(SPI_ReadCommand), //Input, gates read
         .SlaveSel(SlaveSel),

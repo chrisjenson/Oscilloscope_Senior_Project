@@ -97,11 +97,10 @@ module testbench();
     
     initial
     begin  
-        commandArray[0] = 16'b0110100011111111; //cmd = Read Ram, params = 01111 -> (8 x 16 bits out), data = x... PARAMS = 00100 -> (1024 X 16 out)
-                                                //If changing number of data points being read (1024) need to change OneZeroTwoFourCounter below
-        commandArray[1] = 16'b0010010011111111; //cmd = Read, params = 4, data = x
-        commandArray[2] = 16'b0100010011110000; //cmd = write, params = 4, data = 8'hF0
-        //commandArray[3] = 16'b0110100011111111; //cmd = Read Ram, params = 01111 -> (8 x 16 bits out), data = x... PARAMS = 00100 -> (1024 X 16 out)
+        commandArray[0] = 16'b0110110111111111; //cmd = Read Ram, params = 01111 -> (8 x 16 bits out), data = x... PARAMS = 00100 -> (1024 X 16 out)
+        commandArray[1] = 16'b0000000000000000;                                      //If changing number of data points being read (1024) need to change OneZeroTwoFourCounter below
+        commandArray[2] = 16'b0010010011111111; //cmd = Read, params = 4, data = x
+        commandArray[3] = 16'b0100010011110000; //cmd = write, params = 4, data = 8'hF0
     end 
     
     always @(posedge clk) 
@@ -145,11 +144,8 @@ module testbench();
     
     assign command = commandArray[commandNum];
     reg [6:0] OneTwentyEightCounter; //128
-    reg [9:0] OneZeroTwoFourCounter; //1024
+    reg [9:0] RAMReadCounter; //1024
 
-    reg HERE1;
-    reg HERE2;
-  
 
     always @(posedge SCLK)
     //Simulates SPI Master
@@ -169,17 +165,17 @@ module testbench();
                     MOSI <= command[index];
                     if (index == 0)
                     begin //For testing, read 1024 data values.
-                        if (OneZeroTwoFourCounter == 1023) //1024 TRANSFERS OF 16 BITS OF DATA
+                        index <= 15;
+                        if (RAMReadCounter == 31) //# TRANSFERS OF 16 BITS OF DATA
                         begin
                             #40 //wait 40 after ram read is done
                             SlaveSel <= 1;
                             commandDone <= 1;
-                            index <= 15;
-                            OneZeroTwoFourCounter <= 0;
+                            RAMReadCounter <= 0;
                         end
                         else
                         begin
-                            OneZeroTwoFourCounter <= OneZeroTwoFourCounter + 1;
+                            RAMReadCounter <= RAMReadCounter + 1;
                         end
                     end
                     else
@@ -191,10 +187,8 @@ module testbench();
                 begin
                     //IDLE
                     #40 
-                    HERE1 <= 0;
-                    HERE2 <= 0;
                     SlaveSel <= 1;
-                    //commandDone <= 1;
+                    commandDone <= 1;
                     index <= 15;
                     //commandNum <= 0;
                 end
@@ -216,8 +210,6 @@ module testbench();
                 begin
                      //Commands done... Idle
                     #40 
-                    HERE1 <= 0;
-                    HERE2 <= 0;
                     SlaveSel <= 1;
                     //commandDone <= 1;
                     index <= 15;
@@ -230,16 +222,14 @@ module testbench();
                 MOSI <= 0;
                 index <= 15;
                 OneTwentyEightCounter <= 0;
-                OneZeroTwoFourCounter <= 0;
-                HERE2 <= 1;
+                RAMReadCounter <= 0;
 
                 //commandDone <= 1;
             end
         end
         else
         begin
-            HERE1 <= 1;
-            OneZeroTwoFourCounter <= 0;
+            RAMReadCounter <= 0;
         end
     end
     
@@ -254,9 +244,4 @@ module testbench();
         //.ADC_InData(stimInData),
         .ADC_SampleClock(ADC_SampleClock)
     );
-
-
-    
-    
-    
 endmodule
