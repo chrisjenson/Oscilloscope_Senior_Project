@@ -304,16 +304,16 @@
 <v>Generated_Source\PSoC6\SPIM_SCBCLK.h</v>
 </gen_list>
 <warp_dep>
-<v>C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\warp\lib\ieee\work\stdlogic.vif</v>
-<v>C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\warp\lib\common\stdlogic\mod_genv.vif</v>
-<v>C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\warp\lib\common\cypress.v</v>
-<v>C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\warp\lib\common\cy_psoc3_inc.v</v>
-<v>C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\warp\lib\common\stdlogic\rtlpkg.vif</v>
+<v>E:\Applications\PSOC\PSoC Creator\4.3\PSoC Creator\warp\lib\ieee\work\stdlogic.vif</v>
+<v>E:\Applications\PSOC\PSoC Creator\4.3\PSoC Creator\warp\lib\common\stdlogic\mod_genv.vif</v>
+<v>E:\Applications\PSOC\PSoC Creator\4.3\PSoC Creator\warp\lib\common\cypress.v</v>
+<v>E:\Applications\PSOC\PSoC Creator\4.3\PSoC Creator\warp\lib\common\cy_psoc3_inc.v</v>
+<v>E:\Applications\PSOC\PSoC Creator\4.3\PSoC Creator\warp\lib\common\stdlogic\rtlpkg.vif</v>
 </warp_dep>
-<deps_time v="132511794428740713" />
+<deps_time v="132575609892843217" />
 <top_block v="TopDesign" />
 <last_generation v="0" />
-<pdl_path v="C:\Program Files (x86)\Cypress\PDL\3.1.2" />
+<pdl_path v="E:\Applications\Cypress\PDL\PDL\3.1.2" />
 <sw_packages />
 </CyGuid_925cc1e1-309e-4e08-b0a1-09a83c35b157>
 </dataGuid>
@@ -3658,18 +3658,14 @@
 <dep name=".\Generated_Source\PSoC6\pdl\drivers\peripheral\wdt\cy_wdt.h" />
 <dep name=".\Generated_Source\PSoC6\pdl\middleware\ble\cy_ble_clk.h" />
 <dep name=".\Generated_Source\PSoC6\project.h" />
-<dep name=".\breath_activity.h" />
 <dep name=".\globalStruct.h" />
 <dep name=".\home_screen.c" />
 <dep name=".\home_screen.h" />
 <dep name=".\slider_activity.h" />
 <dep name=".\system_psoc6.h" />
-<dep name=".\time_date_activity.h" />
 </file>
-<file name=".\breath_activity.h" />
 <file name=".\home_screen.c" />
 <file name=".\slider_activity.h" />
-<file name=".\time_date_activity.h" />
 <file name=".\CortexM4\ARM_GCC_541\Debug\breath_activity.o">
 <dep name="..\..\..\lvgl\version_6.1.2\lv_conf.h" />
 <dep name="..\..\..\lvgl\version_6.1.2\lvgl\lvgl.h" />
@@ -4535,6 +4531,7 @@
 <dep name=".\time_date_activity.h" />
 </file>
 <file name=".\time_date_activity.c" />
+<file name=".\time_date_activity.h" />
 <file name=".\CortexM4\ARM_GCC_541\Debug\touchpad_glue.o">
 <dep name="..\..\..\lvgl\version_6.1.2\lv_conf.h" />
 <dep name="..\..\..\lvgl\version_6.1.2\lvgl\lvgl.h" />
@@ -4751,6 +4748,7 @@
 <dep name=".\touchpad_glue.h" />
 </file>
 <file name=".\touchpad_glue.c" />
+<file name=".\breath_activity.h" />
 <file name=".\blow.c" />
 <file name=".\message.c" />
 <file name=".\ribbons.c" />
@@ -11969,7 +11967,7 @@
 <name_val_pair name="C:\Users\tmj32\Documents\TCNJ\Senior_Project\Oscilloscope_Senior_Project\tcom_engineering\embed_sw\tcom_app\tcom_app_psoc6_lvgl6\tcom_displ_test_psoc6.cydsn\CortexM4\ARM_GCC_541\Debug\tcom_displ_test_psoc6.hex" v="-mcpu=cortex-m4 -mfloat-abi=softfp -mfpu=fpv4-sp-d16 -mthumb -L Generated_Source\PSoC6 -Wl,-Map,${OutputDir}/${ProjectShortName}.map -T cy8c6xx7_cm4_dual.ld -specs=nano.specs -Wl,--gc-sections -g -ffunction-sections -O0 -ffat-lto-objects" />
 </name>
 </genericCmdLineData>
-<codeGenCmdLineTag v="-.appdatapath &quot;C:\Users\tmj32\AppData\Local\Cypress Semiconductor\PSoC Creator\4.3&quot; -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -.fdsreffile=referenced_files.txt -p C:\Users\tmj32\Documents\TCNJ\Senior_Project\Oscilloscope_Senior_Project\tcom_engineering\embed_sw\tcom_app\tcom_app_psoc6_lvgl6\tcom_displ_test_psoc6.cydsn\tcom_displ_test_psoc6.cyprj -d CYBLE-416045-02 -s C:\Users\tmj32\Documents\TCNJ\Senior_Project\Oscilloscope_Senior_Project\tcom_engineering\embed_sw\tcom_app\tcom_app_psoc6_lvgl6\tcom_displ_test_psoc6.cydsn\Generated_Source\PSoC6 -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE" />
+<codeGenCmdLineTag v="-.appdatapath &quot;C:\Users\chris\AppData\Local\Cypress Semiconductor\PSoC Creator\4.3&quot; -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -.fdsreffile=referenced_files.txt -p &quot;E:\College Work\SeniorProject\Oscilloscope_Senior_Project\tcom_engineering\embed_sw\tcom_app\tcom_app_psoc6_lvgl6\tcom_displ_test_psoc6.cydsn\tcom_displ_test_psoc6.cyprj&quot; -d CYBLE-416045-02 -s &quot;E:\College Work\SeniorProject\Oscilloscope_Senior_Project\tcom_engineering\embed_sw\tcom_app\tcom_app_psoc6_lvgl6\tcom_displ_test_psoc6.cydsn\Generated_Source\PSoC6&quot; -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE" />
 </CyGuid_b0374e30-ce3a-47f2-ad85-821643292c68>
 </dataGuid>
 <dataGuid v="718b6b01-68ba-4a17-b632-d38dc61ebb3b">
@@ -12020,8 +12018,8 @@
 <dataGuid v="769d31ea-68b1-4f0c-b90a-7c10a43ee563">
 <CyGuid_769d31ea-68b1-4f0c-b90a-7c10a43ee563 type_name="CyDesigner.Common.ProjMgmt.Model.CyLinkCustomData" version="1">
 <link_deps_times>
-<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM0p" v="132511879404729492" />
-<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM4" v="132513302611725254" />
+<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM0p" v="132575609922055233" />
+<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM4" v="132575658609205269" />
 </link_deps_times>
 </CyGuid_769d31ea-68b1-4f0c-b90a-7c10a43ee563>
 </dataGuid>
