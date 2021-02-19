@@ -35,6 +35,12 @@ module ADCInterface(
     //DEBUG FIRST CONCATRAMDATA IS INVALID
     //DEBUG THIS SHOULD BE OUTPUTTING A FLAG WHEN READY, NOT RELYING ON SECONDPOSEDGEPULSE
     //DEBUG: Please verify this is doing Big Endian Format
+    always @(*)
+        //Select bits
+        //This will affect trigger logic threshold
+    begin
+    end
+ 
     always @(posedge clk)
     //Select 8 bits from input data, concat with next 8 bit input, and set as output on negedge of sample clk
     //

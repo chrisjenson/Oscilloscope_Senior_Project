@@ -7,7 +7,9 @@ module RAM_WriteEngine(
     input ADC_SampleClock,
     //Write
     output reg [17:0] RAMW_WriteAddr, //Port A on RAM
-    output RAMW_En
+    output RAMW_En,
+    //DEBUG
+    output reg DebugRAMFullFlag
     );
     
     
@@ -77,6 +79,27 @@ module RAM_WriteEngine(
             if (RAMW_En) //Buffer_DataIn in is set on negedge
             begin
                 RAMW_WriteAddr <= RAMW_WriteAddr + 1;
+            end
+        end
+    end
+    
+    always @(posedge clk)
+    begin
+    //Ram deubg output
+    //Inputs
+        //Reset
+        //RAMW_En
+    //Outputs
+        //RAMW_WriteAddr
+        if (reset)
+        begin
+            DebugRAMFullFlag <= 0;
+        end
+        else
+        begin
+            if (RAMW_WriteAddr >= 262143) //Buffer_DataIn in is set on negedge
+            begin
+                DebugRAMFullFlag <= 1;
             end
         end
     end

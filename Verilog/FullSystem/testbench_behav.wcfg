@@ -12,14 +12,14 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="101000000001fs"></ZoomEndTime>
-      <Cursor1Time time="101000000000fs"></Cursor1Time>
+      <ZoomEndTime time="1189944136fs"></ZoomEndTime>
+      <Cursor1Time time="45000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="133"></NameColumnWidth>
+      <NameColumnWidth column_width="121"></NameColumnWidth>
       <ValueColumnWidth column_width="58"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="82" />
+   <WVObjectSize size="84" />
    <wvobject type="divider" fp_name="divider85">
       <obj_property name="label">Top</obj_property>
       <obj_property name="DisplayName">label</obj_property>
@@ -31,10 +31,6 @@
    <wvobject fp_name="/testbench/u_Top/DebugRegister" type="array">
       <obj_property name="ElementShortName">DebugRegister[7:0]</obj_property>
       <obj_property name="ObjectShortName">DebugRegister[7:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench/u_Top/DebugSlaveSel" type="logic">
-      <obj_property name="ElementShortName">DebugSlaveSel</obj_property>
-      <obj_property name="ObjectShortName">DebugSlaveSel</obj_property>
    </wvobject>
    <wvobject fp_name="/testbench/u_Top/DebugSCLK" type="logic">
       <obj_property name="ElementShortName">DebugSCLK</obj_property>
@@ -116,6 +112,10 @@
    <wvobject fp_name="/testbench/u_Top/u_REGS/registers" type="array">
       <obj_property name="ElementShortName">registers[13:0][7:0]</obj_property>
       <obj_property name="ObjectShortName">registers[13:0][7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/u_Top/u_REGS/onBit" type="logic">
+      <obj_property name="ElementShortName">onBit</obj_property>
+      <obj_property name="ObjectShortName">onBit</obj_property>
    </wvobject>
    <wvobject type="divider" fp_name="divider56">
       <obj_property name="label">FIFO</obj_property>
@@ -264,11 +264,6 @@
       <obj_property name="ElementShortName">SCLK</obj_property>
       <obj_property name="ObjectShortName">SCLK</obj_property>
    </wvobject>
-   <wvobject fp_name="/testbench/OneZeroTwoFourCounter" type="array">
-      <obj_property name="ElementShortName">OneZeroTwoFourCounter[9:0]</obj_property>
-      <obj_property name="ObjectShortName">OneZeroTwoFourCounter[9:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-   </wvobject>
    <wvobject fp_name="/testbench/commandNum" type="array">
       <obj_property name="ElementShortName">commandNum[5:0]</obj_property>
       <obj_property name="ObjectShortName">commandNum[5:0]</obj_property>
@@ -290,21 +285,33 @@
       <obj_property name="ElementShortName">index[3:0]</obj_property>
       <obj_property name="ObjectShortName">index[3:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/testbench/HERE1" type="logic">
-      <obj_property name="ElementShortName">HERE1</obj_property>
-      <obj_property name="ObjectShortName">HERE1</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench/HERE2" type="logic">
-      <obj_property name="ElementShortName">HERE2</obj_property>
-      <obj_property name="ObjectShortName">HERE2</obj_property>
-   </wvobject>
    <wvobject fp_name="/testbench/reset" type="logic">
       <obj_property name="ElementShortName">reset</obj_property>
       <obj_property name="ObjectShortName">reset</obj_property>
    </wvobject>
    <wvobject type="divider" fp_name="divider78">
-      <obj_property name="label">Blank</obj_property>
+      <obj_property name="label">TriggerLogic</obj_property>
       <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/u_Top/u_TriggerLogic/triggered" type="logic">
+      <obj_property name="ElementShortName">triggered</obj_property>
+      <obj_property name="ObjectShortName">triggered</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/u_Top/u_TriggerLogic/TriggerThreshold" type="array">
+      <obj_property name="ElementShortName">TriggerThreshold[7:0]</obj_property>
+      <obj_property name="ObjectShortName">TriggerThreshold[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/u_Top/u_TriggerLogic/TriggerType" type="array">
+      <obj_property name="ElementShortName">TriggerType[7:0]</obj_property>
+      <obj_property name="ObjectShortName">TriggerType[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/u_Top/u_TriggerLogic/ADC_InData" type="array">
+      <obj_property name="ElementShortName">ADC_InData[7:0]</obj_property>
+      <obj_property name="ObjectShortName">ADC_InData[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/u_Top/u_TriggerLogic/ADC_InData_p1" type="array">
+      <obj_property name="ElementShortName">ADC_InData_p1[7:0]</obj_property>
+      <obj_property name="ObjectShortName">ADC_InData_p1[7:0]</obj_property>
    </wvobject>
    <wvobject type="divider" fp_name="divider78">
       <obj_property name="label">Blank</obj_property>

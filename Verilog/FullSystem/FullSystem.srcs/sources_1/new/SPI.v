@@ -9,8 +9,8 @@ module SPI(
         input SCLK_Raw,
         //For debug
         //output DebugFlag,
-        output DebugFlag2,
-        output DebugSlaveSel,
+        output DebugBuffer_RdEn,
+        output DebugNotSlaveSel,
         output DebugMOSI,
         output DebugSCLK,
         output [7:0] DebugSPI_Ins,
@@ -33,8 +33,8 @@ module SPI(
     
     assign DebugSPI_Ins = {SPI_Cmd,SPI_Params};
     //assign DebugFlag = Reg_WrEn & write_data_strobe; //Reg_RdEn;//
-    assign DebugFlag2 = Buffer_RdEn;
-    assign DebugSlaveSel = SlaveSel;
+    assign DebugBuffer_RdEn = Buffer_RdEn;
+    assign DebugNotSlaveSel = ~SlaveSel;
     assign DebugMOSI = MOSI_Raw;
     assign DebugSCLK = SCLK_Raw;
     

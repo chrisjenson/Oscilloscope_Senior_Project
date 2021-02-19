@@ -11,14 +11,28 @@ module Regs(
     output reg [7:0] Read_Data,
     //For debug
     input [7:0] DebugWriteRegister,
-    output [7:0] DebugRegister
+    output [7:0] DebugLEDRegister,
+    
+    
+    output [7:0] TriggerType,
+    output [7:0] TriggerThreshold,
+    output [1:0] SampleDecimationFactor,
+    output onBit,
+    //output reset,
+   output [1:0] IRSHighLow,
+   output [3:0] Offset,
+   output [1:0] ShiftControlRegister
+    
     );
     //INPUT need an input for the write only register with the on-bit
     //also a read only bit
     
     reg [7:0] registers [13:0];
-    assign DebugRegister = registers[4]; //LEDs
+    assign DebugLEDRegister = registers[4]; //LEDs
     
+    assign TriggerThreshold = registers[7];
+    assign TriggerType = registers[6];
+    assign onBit = registers[9][0];
     always @(posedge clk)
     begin
         registers[5] <= DebugWriteRegister; //8'b11111111; //Scratch W reg- Switches
@@ -31,12 +45,13 @@ module Regs(
             registers[4] <= 8'b01010101; //scratch R/W reg LEDs- Debug register
 
             registers[6] <= 8'b00000000; //Trigger and Trigger slope
-            registers[7] <= 8'b00000000; //Sample Decimation
-            registers[8] <= 8'b00000000; //on-bit
-            registers[9] <= 8'b00000000; //reset
-            registers[10] <= 8'b00000000; //IRS_High and Low
-            registers[11] <= 8'b00000000; //Offset
-            registers[12] <= 8'b00000000; //Shift Control Register
+            registers[7] <= 8'b00000000; //Trigger Threshold Value
+            registers[8] <= 8'b00000000; //Sample Decimation
+            registers[9] <= 8'b00000001; //on-bit
+            registers[10] <= 8'b00000000; //reset
+            registers[11] <= 8'b00000000; //IRS_High and Low
+            registers[12] <= 8'b00000000; //Offset
+            registers[13] <= 8'b00000000; //Shift Control Register
             
             /* data display test
             registers[0] <= 8'b00010000; //B

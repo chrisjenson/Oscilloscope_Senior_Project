@@ -2,9 +2,11 @@
 /*
 Tasks to do:
     -Output test to MCU
+    -Input test with DAB
     -All control value form regsiters need to be assigned
     -Trigger logic needs to be implemented
     -Debug improvements
+    -Bit selection
 */
 
 module Top(
@@ -19,16 +21,21 @@ module Top(
     input SCLK_Raw, 
     output MISO,    //D18
     //For Debug
-    input [7:0] DebugWriteRegister,
-    output [7:0] DebugRegister,
-    output DebugFlag,
-    output DebugFlag2,
+    input [7:0] DebugWriteRegister, //Switches
+    output [7:0] DebugLEDRegister,
+    output DebugRamReading, //Debug Are we reading from the RAM
+    output DebugRAMFullFlag,
+    output DebugBuffer_RdEn,
+    output DebugTriggered,
     output DebugFIFOInXFC,
     output DebugFIFOOutXFC,
-    output DebugSlaveSel,
+    output DebugNotSlaveSel,
     output DebugMOSI,
     output DebugSCLK,
-    output [7:0] DebugSPI_Ins,
+    output DebugOnBit,
+    output DebugMISO,
+    output DebugSlaveSel,
+   // output [7:0] DebugSPI_Ins,
     output reg reset //For debug
     );
     
@@ -49,7 +56,7 @@ module Top(
     /////////////////////
     
     wire onBit;
-    assign onBit = 1'b1;
+    //assign onBit = 1'b1;
     reg reset_p1;
     //reg reset;
     always @(posedge clk)
@@ -58,10 +65,15 @@ module Top(
         reset <= reset_p1;
     end    
     
+    wire ADC_SampleClock_posedge_pulse;
+    wire ADC_SampleClock_negedge_pulse;
+    
     TimingGen u_TimingGen(
         .clk(clk),
         .reset(reset),
-        .ADC_SampleClock(ADC_SampleClock)
+        .ADC_SampleClock(ADC_SampleClock),
+        .ADC_SampleClock_posedge_pulse(ADC_SampleClock_posedge_pulse),
+        .ADC_SampleClock_negedge_pulse(ADC_SampleClock_negedge_pulse)
     );
     
    // wire [15:0] Buffer_DataIn;
@@ -80,6 +92,27 @@ module Top(
     
     wire [17:0] RAMW_WriteAddr;
     wire RAMW_En;
+    wire [7:0] TriggerType;
+    wire [7:0] TriggerThreshold;
+    
+    wire triggered; //From triggermanagement
+    
+    assign triggered = 1;
+    assign DebugTriggered = triggered;
+   // assign RAMR_Quantity = 4096; //DEBUG: FROM SPI COMMAND
+    TriggerLogic u_TriggerLogic(
+        .clk(clk),
+        .reset(reset),
+        .TriggerType(TriggerType), //From Regs
+        .TriggerThreshold(TriggerThreshold), //From Regs
+        //.triggered(triggered),
+        .onBit(onBit), 
+        
+        //.ADC_SampleClock(ADC_SampleClock),
+        //.RAMW_En(RAMW_En), //High when writing data to RAM
+        .ADC_SampleClock_posedge_pulse(ADC_SampleClock_posedge_pulse),
+        .ADC_InData(ADC_InData) //10 bits input- pre bit selection
+    );
     
     RAM_WriteEngine u_RAM_WriteEngine(
         .clk(clk),
@@ -87,26 +120,24 @@ module Top(
         .ADC_SampleClock(ADC_SampleClock),
         .RAMW_WriteAddr(RAMW_WriteAddr), //Port A on RAM
         .RAMW_En(RAMW_En),
+        .DebugRAMFullFlag(DebugRAMFullFlag),
         .onBit(onBit) //Use this to gate everything, should come from regs
     );
     
     wire [17:0] RAMR_ReadAddr;
     wire [15:0] RAMR_Data;
     wire SPI_ReadCommand; //from spi
-    wire triggered; //From triggermanagement
     wire [17:0] RAMR_Quantity;
     wire FIFO_InRTS;
     wire FIFO_InRTR;
     
-    assign triggered = 1; //DEBUG FROM TRIGGERMANAGEMENT
-   // assign RAMR_Quantity = 4096; //DEBUG: FROM SPI COMMAND
     
     
     RAM_ReadEngine u_RAM_ReadEngine(
         .clk(clk),
         .reset(reset),
         //Ram Read
-        .DEBUGreading(DebugFlag),
+        .DEBUGreading(DebugRamReading),
         .triggered(triggered), //input, gates read
         .RAMR_ReadAddr(RAMR_ReadAddr), //Port B on RAM, current read location
         .RAMW_WriteAddr(RAMW_WriteAddr), //Know where writing vurrently to read half below half above
@@ -143,6 +174,8 @@ module Top(
     
     wire [15:0] FIFO_OutData;
     wire FIFO_OutRTR;
+    
+    assign DebugMISO = MISO;
     SPI u_SPI(
         .MISO(MISO),
         .MOSI_Raw(MOSI_Raw),
@@ -151,11 +184,11 @@ module Top(
         .reset(reset),
         .SCLK_Raw(SCLK_Raw),
         //Debug
-        .DebugFlag2(DebugFlag2),
-        .DebugSlaveSel(DebugSlaveSel),      
+        .DebugBuffer_RdEn(DebugBuffer_RdEn),
+        .DebugNotSlaveSel(DebugNotSlaveSel),      
         .DebugMOSI(DebugMOSI),          
         .DebugSCLK(DebugSCLK),
-        .DebugSPI_Ins(DebugSPI_Ins),         
+        //.DebugSPI_Ins(DebugSPI_Ins),         
         //For RAM
         .BUFFER_InAmount(RAMR_Quantity), //Output
         .FIFO_OutData(FIFO_OutData),//Input
@@ -179,7 +212,10 @@ module Top(
         .RdEn(Reg_RdEn), //Input
         .Read_Data(Reg_DataOut), //Output
         .DebugWriteRegister(DebugWriteRegister), //Input- set to DebugWriteRegister for synthesis 8'b00000000
-        .DebugRegister(DebugRegister) //Output
+        .DebugLEDRegister(DebugLEDRegister), //Output
+        .TriggerType(TriggerType),
+        .TriggerThreshold(TriggerThreshold),
+        .onBit(onBit)
     );
     
     

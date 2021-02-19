@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date             : Thu Feb 11 20:27:00 2021
+| Date             : Fri Feb 19 18:02:27 2021
 | Host             : MSI running 64-bit major release  (build 9200)
 | Command          : report_power -file Top_power_routed.rpt -pb Top_power_summary_routed.pb -rpx Top_power_routed.rpx
 | Design           : Top
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.121        |
+| Total On-Chip Power (W)  | 0.120        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.018        |
+| Dynamic (W)              | 0.017        |
 | Device Static (W)        | 0.103        |
 | Effective TJA (C/W)      | 4.6          |
 | Max Ambient (C)          | 84.5         |
@@ -53,18 +53,18 @@ Table of Contents
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |     0.006 |        3 |       --- |             --- |
-| Slice Logic              |    <0.001 |     1667 |       --- |             --- |
-|   LUT as Logic           |    <0.001 |      673 |     63400 |            1.06 |
-|   Register               |    <0.001 |      302 |    126800 |            0.24 |
+| Slice Logic              |    <0.001 |     1703 |       --- |             --- |
+|   LUT as Logic           |    <0.001 |      715 |     63400 |            1.13 |
+|   Register               |    <0.001 |      296 |    126800 |            0.23 |
 |   CARRY4                 |    <0.001 |       12 |     15850 |            0.08 |
-|   F7/F8 Muxes            |    <0.001 |      209 |     63400 |            0.33 |
+|   F7/F8 Muxes            |    <0.001 |      217 |     63400 |            0.34 |
 |   LUT as Distributed RAM |    <0.001 |       12 |     19000 |            0.06 |
 |   Others                 |     0.000 |      404 |       --- |             --- |
-| Signals                  |     0.002 |     1780 |       --- |             --- |
+| Signals                  |     0.001 |     1806 |       --- |             --- |
 | Block RAM                |     0.004 |      128 |       135 |           94.81 |
-| I/O                      |     0.005 |       39 |       210 |           18.57 |
+| I/O                      |     0.005 |       36 |       210 |           17.14 |
 | Static Power             |     0.103 |          |           |                 |
-| Total                    |     0.121 |          |           |                 |
+| Total                    |     0.120 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -74,7 +74,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.030 |       0.013 |      0.018 |
+| Vccint    |       1.000 |     0.030 |       0.012 |      0.018 |
 | Vccaux    |       1.800 |     0.018 |       0.000 |      0.018 |
 | Vcco33    |       3.300 |     0.005 |       0.001 |      0.004 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -143,9 +143,8 @@ Table of Contents
 +------------------------+-----------+
 | Name                   | Power (W) |
 +------------------------+-----------+
-| Top                    |     0.018 |
-|   u_RAM_WriteEngine    |     0.002 |
-|   u_REGS               |     0.002 |
+| Top                    |     0.017 |
+|   u_REGS               |     0.003 |
 |   u_SPI                |     0.001 |
 |   u_blk_mem_gen_0      |     0.006 |
 |     U0                 |     0.006 |
