@@ -1,5 +1,5 @@
 # tcom_displ_test_psoc6
-# 2021-02-11 23:49:27Z
+# 2021-02-18 15:11:18Z
 
 dont_use_location SMIF -1 -1 0
 dont_use_location p4usbcell -1 -1 0
@@ -27,3 +27,4 @@ set_io "SPI_MOSI(0)" iocell 5 0
 set_io "SPI_CLK(0)" iocell 5 2
 set_io "SPI_Sel(0)" iocell 5 3
 set_io "SPI_MISO(0)" iocell 5 1
+set_io "SEL_PIN(0)" iocell 5 5

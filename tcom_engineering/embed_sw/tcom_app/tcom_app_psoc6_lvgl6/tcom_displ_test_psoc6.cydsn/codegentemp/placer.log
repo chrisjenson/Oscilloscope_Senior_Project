@@ -6,7 +6,7 @@
 
 #Build Date:         Sep  9 2019 11:47:43
 
-#File Generated:     Feb 11 2021 18:49:27
+#File Generated:     Feb 18 2021 10:11:18
 
 #Purpose:            
 
@@ -14,7 +14,7 @@
 
 #***************************************************************************
 
-Executing : E:\Applications\PSOC\PSoC Creator\4.3\PSoC Creator\bin/sjplacer.exe --proj-name tcom_displ_test_psoc6 --netlist-vh2 tcom_displ_test_psoc6_p.vh2 --arch p6_udb2x6 --arch-file E:\Applications\PSOC\PSoC Creator\4.3\PSoC Creator\dev\arch/udbdsi2_2x6_12.cydata --ip-file E:\Applications\PSOC\PSoC Creator\4.3\PSoC Creator\dev\psoc6/0/ip_blocks.cydata --rrg-file E:\Applications\PSOC\PSoC Creator\4.3\PSoC Creator\dev\psoc6/0/route_arch-rrg.cydata --irq-file E:\Applications\PSOC\PSoC Creator\4.3\PSoC Creator\dev\psoc6/0/irqconn.cydata --drq-file E:\Applications\PSOC\PSoC Creator\4.3\PSoC Creator\dev\psoc6/0/triggerconn.cydata --dsi-conn-file E:\Applications\PSOC\PSoC Creator\4.3\PSoC Creator\dev\psoc6/0/dsiconn.cydata --pins-file pins_43-SMT.xml --lib-file tcom_displ_test_psoc6_p.lib --sdc-file tcom_displ_test_psoc6.sdc --io-pcf tcom_displ_test_psoc6.pci --outdir .
+Executing : C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\bin/sjplacer.exe --proj-name tcom_displ_test_psoc6 --netlist-vh2 tcom_displ_test_psoc6_p.vh2 --arch p6_udb2x6 --arch-file C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\dev\arch/udbdsi2_2x6_12.cydata --ip-file C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\dev\psoc6/0/ip_blocks.cydata --rrg-file C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\dev\psoc6/0/route_arch-rrg.cydata --irq-file C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\dev\psoc6/0/irqconn.cydata --drq-file C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\dev\psoc6/0/triggerconn.cydata --dsi-conn-file C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\dev\psoc6/0/dsiconn.cydata --pins-file pins_43-SMT.xml --lib-file tcom_displ_test_psoc6_p.lib --sdc-file tcom_displ_test_psoc6.sdc --io-pcf tcom_displ_test_psoc6.pci --outdir .
 
 		Softjin Techologies Placer, Version 1.1
 
@@ -23,7 +23,7 @@ Build Date : Sep  9 2019	11:45:12
 D2004: Option and Settings Summary
 =============================================================
 Netlist vh2 file          - tcom_displ_test_psoc6_p.vh2
-Architecture file         - E:\Applications\PSOC\PSoC Creator\4.3\PSoC Creator\dev\arch/udbdsi2_2x6_12.cydata
+Architecture file         - C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\dev\arch/udbdsi2_2x6_12.cydata
 Package                   - 
 Defparam file             - 
 SDC file                  - tcom_displ_test_psoc6.sdc
@@ -34,7 +34,7 @@ IO Placement file         - tcom_displ_test_psoc6.pci
 D2050: Starting reading inputs for placer
 =============================================================
 D2065: Reading netlist file : "tcom_displ_test_psoc6_p.vh2"
-D2065: Reading arch file : "E:\Applications\PSOC\PSoC Creator\4.3\PSoC Creator\dev\arch/udbdsi2_2x6_12.cydata"
+D2065: Reading arch file : "C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\dev\arch/udbdsi2_2x6_12.cydata"
 D2051: Reading of inputs for placer completed successfully
 
 D2053: Starting placement of the design
@@ -55,7 +55,7 @@ Design Statistics after Packing
 Device Utilization Summary after Packing
     Macrocells                  :	11/96
     UDBS                        :	2/12
-    IOs                         :	21/96
+    IOs                         :	22/96
 
 
 D2088: Phase 3, elapsed time : 0.0 (sec)
@@ -129,11 +129,11 @@ Final Design Statistics
     Number of Status            	:	2
     Number of SyncCells         	:	0
     Number of count7cells       	:	0
-    Number of IOs       	:	21
+    Number of IOs       	:	22
 
 Device Utilization Summary
     Macrocells                  :	11/96
-    IOs                         :	21/96
+    IOs                         :	22/96
 
 
 
@@ -173,5 +173,5 @@ D2088: Phase 8, elapsed time : 0.0 (sec)
 
 D2054: Placement of the design completed successfully
 
-I2076: Total run-time: 0.5 sec.
+I2076: Total run-time: 0.6 sec.
 

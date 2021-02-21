@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
   28:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_themes\../lv_core/../lv_misc/lv_color.h **** #error "LV_COLOR_SCREEN_TRANSP requires LV_COLOR_DEPTH == 32. Set it in lv_conf.h"
   29:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_themes\../lv_core/../lv_misc/lv_color.h **** #endif
   30:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_themes\../lv_core/../lv_misc/lv_color.h **** 
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 2
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 2
 
 
   31:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_themes\../lv_core/../lv_misc/lv_color.h **** #if LV_COLOR_DEPTH != 16 && LV_COLOR_16_SWAP != 0
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
   85:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_themes\../lv_core/../lv_misc/lv_color.h **** #elif LV_COLOR_DEPTH == 16
   86:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_themes\../lv_core/../lv_misc/lv_color.h **** #define LV_COLOR_SIZE 16
   87:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_themes\../lv_core/../lv_misc/lv_color.h **** #elif LV_COLOR_DEPTH == 32
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 3
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 3
 
 
   88:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_themes\../lv_core/../lv_misc/lv_color.h **** #define LV_COLOR_SIZE 32
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  142:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_themes\../lv_core/../lv_misc/lv_color.h ****  * to set/get values of the color channels
  143:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_themes\../lv_core/../lv_misc/lv_color.h ****  *------------------------------------------*/
  144:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_themes\../lv_core/../lv_misc/lv_color.h **** #if LV_COLOR_DEPTH == 1
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 4
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 4
 
 
  145:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_themes\../lv_core/../lv_misc/lv_color.h **** # define LV_COLOR_SET_R(c, v) LV_COLOR_SET_R1(c,v)
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  199:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_themes\../lv_core/../lv_misc/lv_color.h ****  **********************/
  200:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_themes\../lv_core/../lv_misc/lv_color.h **** 
  201:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_themes\../lv_core/../lv_misc/lv_color.h **** typedef union
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 5
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 5
 
 
  202:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_themes\../lv_core/../lv_misc/lv_color.h **** {
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  256:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_themes\../lv_core/../lv_misc/lv_color.h **** #elif LV_COLOR_DEPTH == 8
  257:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_themes\../lv_core/../lv_misc/lv_color.h **** typedef uint8_t lv_color_int_t;
  258:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_themes\../lv_core/../lv_misc/lv_color.h **** typedef lv_color8_t lv_color_t;
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 6
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 6
 
 
  259:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_themes\../lv_core/../lv_misc/lv_color.h **** #elif LV_COLOR_DEPTH == 16
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  313:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_themes\../lv_core/../lv_misc/lv_color.h ****     if((LV_COLOR_GET_R(color) & 0x80) || (LV_COLOR_GET_G(color) & 0x80) || (LV_COLOR_GET_B(color) &
  314:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_themes\../lv_core/../lv_misc/lv_color.h ****         return 1;
  315:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_themes\../lv_core/../lv_misc/lv_color.h ****     } else {
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 7
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 7
 
 
  316:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_themes\../lv_core/../lv_misc/lv_color.h ****         return 0;
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  370:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_themes\../lv_core/../lv_misc/lv_color.h **** #else
  371:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_themes\../lv_core/../lv_misc/lv_color.h ****     LV_COLOR_SET_G16_SWAP(ret, ret.ch.green_h = (LV_COLOR_GET_G(color) >> 2); /*(2^6 - 1)/(2^3 - 1)
  372:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_themes\../lv_core/../lv_misc/lv_color.h **** #endif
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 8
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 8
 
 
  373:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_themes\../lv_core/../lv_misc/lv_color.h ****     LV_COLOR_SET_B16(ret, LV_COLOR_GET_B(color) >> 3);  /* 8 - 5  = 3*/
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  427:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_themes\../lv_core/../lv_misc/lv_color.h **** #elif LV_COLOR_DEPTH == 32
  428:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_themes\../lv_core/../lv_misc/lv_color.h ****     return color.full;
  429:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_themes\../lv_core/../lv_misc/lv_color.h **** #endif
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 9
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 9
 
 
  430:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_themes\../lv_core/../lv_misc/lv_color.h **** }
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
   33 0000 90B4     		push	{r4, r7}
   34              		.cfi_def_cfa_offset 8
   35              		.cfi_offset 4, -8
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 10
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 10
 
 
   36              		.cfi_offset 7, -4
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
   85              		.cfi_def_cfa_offset 8
   86              		.cfi_offset 7, -8
   87              		.cfi_offset 14, -4
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 11
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 11
 
 
   88 0002 82B0     		sub	sp, sp, #8
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  136              		.loc 1 489 0
  137 0008 7B68     		ldr	r3, [r7, #4]
  138 000a 1B09     		lsrs	r3, r3, #4
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 12
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 12
 
 
  139 000c DBB2     		uxtb	r3, r3
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  187      00000000 
  188              		.align	2
  189              	def:
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 13
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 13
 
 
  190 01a8 00000000 		.space	80
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
   29:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_themes/lv_theme_material.c ****  **********************/
   30:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_themes/lv_theme_material.c **** static lv_theme_t theme;
   31:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_themes/lv_theme_material.c **** static lv_style_t def;
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 14
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 14
 
 
   32:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_themes/lv_theme_material.c **** 
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
   57:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_themes/lv_theme_material.c ****     bg.body.main_color = lv_color_hex(0xf0f0f0);
  237              		.loc 2 57 0
  238 0022 524C     		ldr	r4, .L8+12
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 15
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 15
 
 
  239 0024 5248     		ldr	r0, .L8+16
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  281 006a FF22     		movs	r2, #255
  282 006c 1A71     		strb	r2, [r3, #4]
  283 006e 424B     		ldr	r3, .L8+24
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 16
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 16
 
 
  284 0070 FF22     		movs	r2, #255
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
   77:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_themes/lv_theme_material.c ****     panel.body.padding.left   = LV_DPI / 8;
  331              		.loc 2 77 0
  332 00c8 2B4B     		ldr	r3, .L8+24
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 17
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 17
 
 
  333 00ca 1222     		movs	r2, #18
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
   87:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_themes/lv_theme_material.c ****     sb.body.grad_color     = LV_COLOR_BLACK;
  378              		.loc 2 87 0
  379 011e 174B     		ldr	r3, .L8+28
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 18
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 18
 
 
  380 0120 0022     		movs	r2, #0
@@ -1073,12 +1073,12 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  421 0160 00000000 		.word	lv_style_plain
  422 0164 A8010000 		.word	def
  423 0168 4C020000 		.word	_font
- 424 016c 50020000 		.word	bg.5949
+ 424 016c 50020000 		.word	bg.5947
  425 0170 F0F0F000 		.word	15790320
- 426 0174 A0020000 		.word	scr.5951
- 427 0178 F0020000 		.word	panel.5950
+ 426 0174 A0020000 		.word	scr.5949
+ 427 0178 F0020000 		.word	panel.5948
  428 017c F8010000 		.word	sb
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 19
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 19
 
 
  429 0180 00000000 		.word	theme
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  475              		.type	btn_init, %function
  476              	btn_init:
  477              	.LFB33:
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 20
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 20
 
 
  104:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_themes/lv_theme_material.c **** 
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  116:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_themes/lv_theme_material.c ****     rel.body.padding.top    = LV_DPI / 8;
  520              		.loc 2 116 0
  521 0038 4C4B     		ldr	r3, .L14+4
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 21
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 21
 
 
  522 003a 1222     		movs	r2, #18
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  126:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_themes/lv_theme_material.c ****     pr.body.main_color   = lv_color_hsv_to_rgb(_hue, 90, 60);
  567              		.loc 2 126 0
  568 008e 384B     		ldr	r3, .L14+8
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 22
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 22
 
 
  569 0090 1B88     		ldrh	r3, [r3]
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  613 00e0 1B88     		ldrh	r3, [r3]
  614 00e2 264C     		ldr	r4, .L14+20
  615 00e4 2822     		movs	r2, #40
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 23
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 23
 
 
  616 00e6 5F21     		movs	r1, #95
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  661 013a 5F21     		movs	r1, #95
  662 013c 1846     		mov	r0, r3
  663 013e FFF7FEFF 		bl	lv_color_hsv_to_rgb
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 24
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 24
 
 
  664 0142 2064     		str	r0, [r4, #64]
@@ -1417,12 +1417,12 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  689 0166 00BF     		.align	2
  690              	.L14:
  691 0168 A8010000 		.word	def
- 692 016c 40030000 		.word	rel.5962
+ 692 016c 40030000 		.word	rel.5960
  693 0170 48020000 		.word	_hue
- 694 0174 90030000 		.word	pr.5963
- 695 0178 E0030000 		.word	tgl_rel.5964
- 696 017c 30040000 		.word	tgl_pr.5965
- 697 0180 80040000 		.word	ina.5966
+ 694 0174 90030000 		.word	pr.5961
+ 695 0178 E0030000 		.word	tgl_rel.5962
+ 696 017c 30040000 		.word	tgl_pr.5963
+ 697 0180 80040000 		.word	ina.5964
  698 0184 00000000 		.word	theme
  699              		.cfi_endproc
  700              	.LFE33:
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  155:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_themes/lv_theme_material.c **** static void label_init(void)
  156:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_themes/lv_theme_material.c **** {
  709              		.loc 2 156 0
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 25
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 25
 
 
  710              		.cfi_startproc
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  753 0040 0C49     		ldr	r1, .L17+4
  754 0042 1048     		ldr	r0, .L17+20
  755 0044 FFF7FEFF 		bl	lv_style_copy
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 26
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 26
 
 
  168:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_themes/lv_theme_material.c ****     hint.text.color = lv_color_hsv_to_rgb(_hue, 40, 90);
@@ -1536,11 +1536,11 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  781              		.align	2
  782              	.L17:
  783 0070 A8010000 		.word	def
- 784 0074 D0040000 		.word	prim.5970
+ 784 0074 D0040000 		.word	prim.5968
  785 0078 4C020000 		.word	_font
  786 007c 48020000 		.word	_hue
- 787 0080 20050000 		.word	sec.5971
- 788 0084 70050000 		.word	hint.5972
+ 787 0080 20050000 		.word	sec.5969
+ 788 0084 70050000 		.word	hint.5970
  789 0088 00000000 		.word	theme
  790              		.cfi_endproc
  791              	.LFE34:
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  800              		.loc 2 177 0
  801              		.cfi_startproc
  802              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 27
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 27
 
 
  803              		@ frame_needed = 1, uses_anonymous_args = 0
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  846              		.loc 2 188 0
  847 0048 074B     		ldr	r3, .L20+16
  848 004a 034A     		ldr	r2, .L20
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 28
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 28
 
 
  849 004c 5A64     		str	r2, [r3, #68]
@@ -1636,9 +1636,9 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  858              		.align	2
  859              	.L20:
  860 0058 A8010000 		.word	def
- 861 005c C0050000 		.word	img_light.5976
+ 861 005c C0050000 		.word	img_light.5974
  862 0060 48020000 		.word	_hue
- 863 0064 10060000 		.word	img_dark.5977
+ 863 0064 10060000 		.word	img_dark.5975
  864 0068 00000000 		.word	theme
  865              		.cfi_endproc
  866              	.LFE35:
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  892              		.cfi_def_cfa_register 13
  893              		@ sp needed
  894 000e 5DF8047B 		ldr	r7, [sp], #4
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 29
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 29
 
 
  895              		.cfi_restore 7
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  940 001e 9A82     		strh	r2, [r3, #20]	@ movhi
  209:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_themes/lv_theme_material.c ****     led.body.border.opa   = LV_OPA_30;
  941              		.loc 2 209 0
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 30
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 30
 
 
  942 0020 164B     		ldr	r3, .L26+4
@@ -1798,11 +1798,11 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  988              	.L27:
  989              		.align	2
  990              	.L26:
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 31
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 31
 
 
  991 0078 A8010000 		.word	def
- 992 007c 60060000 		.word	led.5984
+ 992 007c 60060000 		.word	led.5982
  993 0080 48020000 		.word	_hue
  994 0084 00000000 		.word	theme
  995              		.cfi_endproc
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  1035              		.loc 2 227 0
  1036 0026 1C4B     		ldr	r3, .L29+4
  1037 0028 0322     		movs	r2, #3
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 32
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 32
 
 
  1038 002a 9A81     		strh	r2, [r3, #12]	@ movhi
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  1081              		.loc 2 238 0
  1082 0072 0B4B     		ldr	r3, .L29+12
  1083 0074 0022     		movs	r2, #0
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 33
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 33
 
 
  1084 0076 DA84     		strh	r2, [r3, #38]	@ movhi
@@ -1952,9 +1952,9 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  1105              		.align	2
  1106              	.L29:
  1107 0094 A8010000 		.word	def
- 1108 0098 B0060000 		.word	bar_bg.5988
+ 1108 0098 B0060000 		.word	bar_bg.5986
  1109 009c 48020000 		.word	_hue
- 1110 00a0 00070000 		.word	bar_indic.5989
+ 1110 00a0 00070000 		.word	bar_indic.5987
  1111 00a4 00000000 		.word	theme
  1112              		.cfi_endproc
  1113              	.LFE38:
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  1128              		.cfi_offset 7, -8
  1129              		.cfi_offset 14, -4
  1130 0002 00AF     		add	r7, sp, #0
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 34
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 34
 
 
  1131              		.cfi_def_cfa_register 7
@@ -2038,12 +2038,12 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  1171 0044 80BD     		pop	{r7, pc}
  1172              	.L33:
  1173 0046 00BF     		.align	2
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 35
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 35
 
 
  1174              	.L32:
  1175 0048 A8010000 		.word	def
- 1176 004c 50070000 		.word	knob.5993
+ 1176 004c 50070000 		.word	knob.5991
  1177 0050 00000000 		.word	theme
  1178              		.cfi_endproc
  1179              	.LFE39:
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  1218 0026 47F61842 		movw	r2, #31768
  1219 002a 9A81     		strh	r2, [r3, #12]	@ movhi
  273:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_themes/lv_theme_material.c **** 
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 36
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 36
 
 
  274:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_themes/lv_theme_material.c ****     lv_style_copy(&sw_knob_on, theme.style.slider.knob);
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  1263 007c 0D4B     		ldr	r3, .L35+16
  1264 007e FF22     		movs	r2, #255
  1265 0080 DA75     		strb	r2, [r3, #23]
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 37
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 37
 
 
  285:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_themes/lv_theme_material.c **** 
@@ -2191,10 +2191,10 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  1286 00a2 00BF     		.align	2
  1287              	.L35:
  1288 00a4 00000000 		.word	theme
- 1289 00a8 A0070000 		.word	sw_bg.5997
- 1290 00ac F0070000 		.word	sw_indic.5998
- 1291 00b0 40080000 		.word	sw_knob_on.6000
- 1292 00b4 90080000 		.word	sw_knob_off.5999
+ 1289 00a8 A0070000 		.word	sw_bg.5995
+ 1290 00ac F0070000 		.word	sw_indic.5996
+ 1291 00b0 40080000 		.word	sw_knob_on.5998
+ 1292 00b4 90080000 		.word	sw_knob_off.5997
  1293 00b8 FAFAFA00 		.word	16448250
  1294              		.cfi_endproc
  1295              	.LFE40:
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  1310              		.cfi_offset 3, -16
  1311              		.cfi_offset 4, -12
  1312              		.cfi_offset 7, -8
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 38
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 38
 
 
  1313              		.cfi_offset 14, -4
@@ -2278,10 +2278,10 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  1355 004a 00BF     		.align	2
  1356              	.L38:
  1357 004c A8010000 		.word	def
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 39
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 39
 
 
- 1358 0050 E0080000 		.word	lmeter.6004
+ 1358 0050 E0080000 		.word	lmeter.6002
  1359 0054 48020000 		.word	_hue
  1360 0058 00000000 		.word	theme
  1361              		.cfi_endproc
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  1402 0026 134B     		ldr	r3, .L41+4
  1403 0028 0922     		movs	r2, #9
  1404 002a 9A84     		strh	r2, [r3, #36]	@ movhi
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 40
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 40
 
 
  317:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_themes/lv_theme_material.c ****     gauge.body.padding.inner = LV_DPI / 8;
@@ -2388,7 +2388,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  1440 006e 00BF     		.align	2
  1441              	.L41:
  1442 0070 A8010000 		.word	def
- 1443 0074 30090000 		.word	gauge.6008
+ 1443 0074 30090000 		.word	gauge.6006
  1444 0078 48020000 		.word	_hue
  1445 007c 00000000 		.word	theme
  1446              		.cfi_endproc
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  1450              		.align	2
  1451              		.thumb
  1452              		.thumb_func
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 41
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 41
 
 
  1453              		.type	arc_init, %function
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  1494 0034 1E21     		movs	r1, #30
  1495 0036 1846     		mov	r0, r3
  1496 0038 FFF7FEFF 		bl	lv_color_hsv_to_rgb
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 42
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 42
 
 
  1497 003c 2061     		str	r0, [r4, #16]
@@ -2497,7 +2497,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  1522              		.align	2
  1523              	.L44:
  1524 0060 A8010000 		.word	def
- 1525 0064 80090000 		.word	arc.6012
+ 1525 0064 80090000 		.word	arc.6010
  1526 0068 48020000 		.word	_hue
  1527 006c 00000000 		.word	theme
  1528              		.cfi_endproc
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  1540              		@ args = 0, pretend = 0, frame = 0
  1541              		@ frame_needed = 1, uses_anonymous_args = 0
  1542              		@ link register save eliminated.
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 43
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 43
 
 
  1543 0000 80B4     		push	{r7}
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  1587 0004 044B     		ldr	r3, .L50
  1588 0006 9B68     		ldr	r3, [r3, #8]
  1589 0008 034A     		ldr	r2, .L50
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 44
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 44
 
 
  1590 000a C2F88830 		str	r3, [r2, #136]
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  1635 0014 0021     		movs	r1, #0
  1636 0016 1846     		mov	r0, r3
  1637 0018 FFF7FEFF 		bl	lv_color_hsv_to_rgb
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 45
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 45
 
 
  1638 001c E062     		str	r0, [r4, #44]
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  1681 006e 5A84     		strh	r2, [r3, #34]	@ movhi
  380:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_themes/lv_theme_material.c ****     week_box.body.padding.left   = theme.style.panel->body.padding.left;
  1682              		.loc 2 380 0
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 46
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 46
 
 
  1683 0070 334B     		ldr	r3, .L53+20
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  1728 00c4 1F4B     		ldr	r3, .L53+24
  1729 00c6 FF22     		movs	r2, #255
  1730 00c8 DA71     		strb	r2, [r3, #7]
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 47
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 47
 
 
  390:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_themes/lv_theme_material.c ****     today_box.body.grad_color     = LV_COLOR_WHITE;
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  1775 0118 084A     		ldr	r2, .L53+16
  1776 011a C3F8A420 		str	r2, [r3, #164]
  400:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_themes/lv_theme_material.c ****     theme.style.calendar.today_box        = &today_box;
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 48
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 48
 
 
  1777              		.loc 2 400 0
@@ -2834,12 +2834,12 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  1785 012a 00BF     		.align	2
  1786              	.L53:
  1787 012c A8010000 		.word	def
- 1788 0130 D0090000 		.word	ina_days.6022
+ 1788 0130 D0090000 		.word	ina_days.6020
  1789 0134 48020000 		.word	_hue
- 1790 0138 200A0000 		.word	high_days.6023
- 1791 013c 700A0000 		.word	week_box.6024
+ 1790 0138 200A0000 		.word	high_days.6021
+ 1791 013c 700A0000 		.word	week_box.6022
  1792 0140 00000000 		.word	theme
- 1793 0144 C00A0000 		.word	today_box.6025
+ 1793 0144 C00A0000 		.word	today_box.6023
  1794 0148 00000000 		.word	lv_style_transp
  1795              		.cfi_endproc
  1796              	.LFE46:
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  409:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_themes/lv_theme_material.c ****     rel.body.shadow.type  = LV_SHADOW_BOTTOM;
  1823              		.loc 2 409 0
  1824 0010 314B     		ldr	r3, .L56+4
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 49
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 49
 
 
  1825 0012 0022     		movs	r2, #0
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  1868 0060 1F4B     		ldr	r3, .L56+12
  1869 0062 0122     		movs	r2, #1
  1870 0064 9A77     		strb	r2, [r3, #30]
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 50
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 50
 
 
  421:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_themes/lv_theme_material.c ****     tgl_rel.body.shadow.width = 0;
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  1913 00b2 0A4A     		ldr	r2, .L56+8
  1914 00b4 C3F8B420 		str	r2, [r3, #180]
  433:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_themes/lv_theme_material.c ****     theme.style.cb.box.tgl_rel = &tgl_rel;
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 51
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 51
 
 
  1915              		.loc 2 433 0
@@ -3024,12 +3024,12 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  1931              		.align	2
  1932              	.L56:
  1933 00d4 00000000 		.word	theme
- 1934 00d8 100B0000 		.word	rel.6031
- 1935 00dc 600B0000 		.word	pr.6032
- 1936 00e0 B00B0000 		.word	tgl_rel.6033
+ 1934 00d8 100B0000 		.word	rel.6029
+ 1935 00dc 600B0000 		.word	pr.6030
+ 1936 00e0 B00B0000 		.word	tgl_rel.6031
  1937 00e4 48020000 		.word	_hue
- 1938 00e8 000C0000 		.word	tgl_pr.6034
- 1939 00ec 500C0000 		.word	ina.6035
+ 1938 00e8 000C0000 		.word	tgl_pr.6032
+ 1939 00ec 500C0000 		.word	ina.6033
  1940 00f0 00000000 		.word	lv_style_transp
  1941              		.cfi_endproc
  1942              	.LFE47:
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  1962              		.cfi_def_cfa_register 7
  441:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_themes/lv_theme_material.c **** #if LV_USE_BTNM
  442:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_themes/lv_theme_material.c ****     static lv_style_t bg, rel, pr, tgl_rel, tgl_pr, ina;
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 52
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 52
 
 
  443:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_themes/lv_theme_material.c **** 
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  2005 004c 404B     		ldr	r3, .L59+8
  2006 004e 0122     		movs	r2, #1
  2007 0050 9A82     		strh	r2, [r3, #20]	@ movhi
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 53
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 53
 
 
  455:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_themes/lv_theme_material.c ****     rel.body.border.color = lv_color_hex3(0xbbb);
@@ -3178,7 +3178,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  2050 009e 2E48     		ldr	r0, .L59+16
  2051 00a0 FFF7FEFF 		bl	lv_style_copy
  467:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_themes/lv_theme_material.c ****     tgl_rel.body.main_color = lv_color_hsv_to_rgb(_hue, 90, 70);
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 54
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 54
 
 
  2052              		.loc 2 467 0
@@ -3238,7 +3238,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  2097              		.loc 2 476 0
  2098 00f8 1649     		ldr	r1, .L59+12
  2099 00fa 1A48     		ldr	r0, .L59+28
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 55
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 55
 
 
  2100 00fc FFF7FEFF 		bl	lv_style_copy
@@ -3294,16 +3294,16 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  2139              		.align	2
  2140              	.L59:
  2141 0148 00000000 		.word	theme
- 2142 014c A00C0000 		.word	bg.6039
- 2143 0150 F00C0000 		.word	rel.6040
- 2144 0154 400D0000 		.word	pr.6041
- 2145 0158 900D0000 		.word	tgl_rel.6042
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 56
+ 2142 014c A00C0000 		.word	bg.6037
+ 2143 0150 F00C0000 		.word	rel.6038
+ 2144 0154 400D0000 		.word	pr.6039
+ 2145 0158 900D0000 		.word	tgl_rel.6040
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 56
 
 
  2146 015c 48020000 		.word	_hue
- 2147 0160 E00D0000 		.word	tgl_pr.6043
- 2148 0164 300E0000 		.word	ina.6044
+ 2147 0160 E00D0000 		.word	tgl_pr.6041
+ 2148 0164 300E0000 		.word	ina.6042
  2149 0168 A8010000 		.word	def
  2150              		.cfi_endproc
  2151              	.LFE48:
@@ -3358,7 +3358,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  2188              		.loc 2 499 0
  2189 0028 0F4B     		ldr	r3, .L62+12
  2190 002a D3F8CC30 		ldr	r3, [r3, #204]
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 57
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 57
 
 
  2191 002e 0E4A     		ldr	r2, .L62+12
@@ -3390,7 +3390,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  2212              		.align	2
  2213              	.L62:
  2214 005c 00000000 		.word	lv_style_transp
- 2215 0060 800E0000 		.word	rel.6048
+ 2215 0060 800E0000 		.word	rel.6046
  2216 0064 4C020000 		.word	_font
  2217 0068 00000000 		.word	theme
  2218              		.cfi_endproc
@@ -3418,7 +3418,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  2237              		.cfi_offset 14, -4
  2238 0002 00AF     		add	r7, sp, #0
  2239              		.cfi_def_cfa_register 7
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 58
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 58
 
 
  508:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_themes/lv_theme_material.c **** #if LV_USE_MBOX
@@ -3478,7 +3478,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  2282 0056 C2F8F430 		str	r3, [r2, #244]
  520:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_themes/lv_theme_material.c ****     theme.style.mbox.btn.bg  = &lv_style_transp;
  2283              		.loc 2 520 0
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 59
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 59
 
 
  2284 005a 0B4B     		ldr	r3, .L65+16
@@ -3503,11 +3503,11 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  2299 0076 00BF     		.align	2
  2300              	.L65:
  2301 0078 00000000 		.word	lv_style_transp
- 2302 007c D00E0000 		.word	rel.6053
+ 2302 007c D00E0000 		.word	rel.6051
  2303 0080 4C020000 		.word	_font
  2304 0084 48020000 		.word	_hue
  2305 0088 00000000 		.word	theme
- 2306 008c 200F0000 		.word	pr.6052
+ 2306 008c 200F0000 		.word	pr.6050
  2307              		.cfi_endproc
  2308              	.LFE50:
  2309              		.size	mbox_init, .-mbox_init
@@ -3538,7 +3538,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  2328 0004 084B     		ldr	r3, .L68
  2329 0006 9B68     		ldr	r3, [r3, #8]
  2330 0008 074A     		ldr	r2, .L68
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 60
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 60
 
 
  2331 000a C2F80431 		str	r3, [r2, #260]
@@ -3598,7 +3598,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  539:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_themes/lv_theme_material.c ****     static lv_style_t oneline;
  540:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_themes/lv_theme_material.c **** 
  541:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_themes/lv_theme_material.c ****     lv_style_copy(&oneline, &def);
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 61
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 61
 
 
  2377              		.loc 2 541 0
@@ -3658,7 +3658,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  2420              		.loc 2 552 0
  2421 0054 064B     		ldr	r3, .L71+8
  2422 0056 0022     		movs	r2, #0
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 62
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 62
 
 
  2423 0058 C3F81821 		str	r2, [r3, #280]
@@ -3676,7 +3676,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  2432              		.align	2
  2433              	.L71:
  2434 0068 A8010000 		.word	def
- 2435 006c 700F0000 		.word	oneline.6060
+ 2435 006c 700F0000 		.word	oneline.6058
  2436 0070 00000000 		.word	theme
  2437 0074 F8010000 		.word	sb
  2438              		.cfi_endproc
@@ -3718,7 +3718,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  562:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_themes/lv_theme_material.c ****     theme.style.spinbox.sb     = theme.style.ta.sb;
  2468              		.loc 2 562 0
  2469 001a 054B     		ldr	r3, .L74
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 63
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 63
 
 
  2470 001c D3F81C31 		ldr	r3, [r3, #284]
@@ -3778,7 +3778,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  573:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_themes/lv_theme_material.c ****     list_bg.body.padding.left   = 0;
  2514              		.loc 2 573 0
  2515 0010 564B     		ldr	r3, .L77+4
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 64
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 64
 
 
  2516 0012 0022     		movs	r2, #0
@@ -3838,7 +3838,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  2558              		.loc 2 585 0
  2559 0054 474C     		ldr	r4, .L77+12
  2560 0056 40F6BB30 		movw	r0, #3003
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 65
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 65
 
 
  2561 005a FFF7FEFF 		bl	lv_color_hex3
@@ -3898,7 +3898,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  2604 00a6 1B68     		ldr	r3, [r3]
  2605 00a8 334A     		ldr	r2, .L77+16
  2606 00aa 5363     		str	r3, [r2, #52]
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 66
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 66
 
 
  597:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_themes/lv_theme_material.c **** 
@@ -3958,7 +3958,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  606:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_themes/lv_theme_material.c ****     tgl_pr.body.border.width = 0;
  2652              		.loc 2 606 0
  2653 0102 214B     		ldr	r3, .L77+32
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 67
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 67
 
 
  2654 0104 0022     		movs	r2, #0
@@ -4018,7 +4018,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  2696 0156 0C4A     		ldr	r2, .L77+32
  2697 0158 C3F84421 		str	r2, [r3, #324]
  619:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_themes/lv_theme_material.c ****     theme.style.list.btn.ina     = &ina;
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 68
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 68
 
 
  2698              		.loc 2 619 0
@@ -4034,15 +4034,15 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  2706              		.align	2
  2707              	.L77:
  2708 0168 00000000 		.word	theme
- 2709 016c C00F0000 		.word	list_bg.6067
+ 2709 016c C00F0000 		.word	list_bg.6065
  2710 0170 00000000 		.word	lv_style_transp
- 2711 0174 10100000 		.word	rel.6068
- 2712 0178 60100000 		.word	pr.6069
+ 2711 0174 10100000 		.word	rel.6066
+ 2712 0178 60100000 		.word	pr.6067
  2713 017c 4C020000 		.word	_font
- 2714 0180 B0100000 		.word	tgl_rel.6070
+ 2714 0180 B0100000 		.word	tgl_rel.6068
  2715 0184 48020000 		.word	_hue
- 2716 0188 00110000 		.word	tgl_pr.6071
- 2717 018c 50110000 		.word	ina.6072
+ 2716 0188 00110000 		.word	tgl_pr.6069
+ 2717 018c 50110000 		.word	ina.6070
  2718 0190 F8010000 		.word	sb
  2719 0194 00000000 		.word	lv_style_transp_tight
  2720              		.cfi_endproc
@@ -4078,7 +4078,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  2744 0006 9B68     		ldr	r3, [r3, #8]
  2745 0008 1946     		mov	r1, r3
  2746 000a 2148     		ldr	r0, .L80+4
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 69
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 69
 
 
  2747 000c FFF7FEFF 		bl	lv_style_copy
@@ -4138,7 +4138,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  2790              		.loc 2 638 0
  2791 0056 0F4B     		ldr	r3, .L80+8
  2792 0058 0022     		movs	r2, #0
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 70
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 70
 
 
  2793 005a 9A83     		strh	r2, [r3, #28]	@ movhi
@@ -4177,8 +4177,8 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  2819 008a 00BF     		.align	2
  2820              	.L80:
  2821 008c 00000000 		.word	theme
- 2822 0090 A0110000 		.word	bg.6076
- 2823 0094 F0110000 		.word	sel.6077
+ 2822 0090 A0110000 		.word	bg.6074
+ 2823 0094 F0110000 		.word	sel.6075
  2824 0098 48020000 		.word	_hue
  2825 009c F8010000 		.word	sb
  2826              		.cfi_endproc
@@ -4198,7 +4198,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  2837              		.cfi_startproc
  2838              		@ args = 0, pretend = 0, frame = 0
  2839              		@ frame_needed = 1, uses_anonymous_args = 0
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 71
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 71
 
 
  2840 0000 98B5     		push	{r3, r4, r7, lr}
@@ -4258,7 +4258,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  661:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_themes/lv_theme_material.c ****     lv_style_copy(&roller_sel, &roller_bg);
  2882              		.loc 2 661 0
  2883 003c 0C49     		ldr	r1, .L83+4
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 72
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 72
 
 
  2884 003e 0E48     		ldr	r0, .L83+12
@@ -4293,9 +4293,9 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  2907 006a 00BF     		.align	2
  2908              	.L83:
  2909 006c 00000000 		.word	lv_style_transp
- 2910 0070 40120000 		.word	roller_bg.6081
+ 2910 0070 40120000 		.word	roller_bg.6079
  2911 0074 4C020000 		.word	_font
- 2912 0078 90120000 		.word	roller_sel.6082
+ 2912 0078 90120000 		.word	roller_sel.6080
  2913 007c 48020000 		.word	_hue
  2914 0080 00000000 		.word	theme
  2915              		.cfi_endproc
@@ -4318,7 +4318,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  2929 0000 98B5     		push	{r3, r4, r7, lr}
  2930              		.cfi_def_cfa_offset 16
  2931              		.cfi_offset 3, -16
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 73
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 73
 
 
  2932              		.cfi_offset 4, -12
@@ -4378,7 +4378,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  2974 0046 FFF7FEFF 		bl	lv_color_hex3
  2975 004a 6060     		str	r0, [r4, #4]
  683:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_themes/lv_theme_material.c ****     btn_bg.body.grad_color     = btn_bg.body.main_color;
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 74
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 74
 
 
  2976              		.loc 2 683 0
@@ -4438,7 +4438,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  3020 0096 554B     		ldr	r3, .L86+12
  3021 0098 0022     		movs	r2, #0
  3022 009a 9A84     		strh	r2, [r3, #36]	@ movhi
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 75
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 75
 
 
  694:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_themes/lv_theme_material.c ****     btn_bg.body.padding.right  = 0;
@@ -4498,7 +4498,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  3065 00e8 6060     		str	r0, [r4, #4]
  706:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_themes/lv_theme_material.c ****     pr.body.grad_color   = pr.body.main_color;
  3066              		.loc 2 706 0
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 76
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 76
 
 
  3067 00ea 444A     		ldr	r2, .L86+28
@@ -4558,7 +4558,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  3110 0136 324A     		ldr	r2, .L86+32
  3111 0138 1378     		ldrb	r3, [r2]
  3112 013a 6FF30003 		bfc	r3, #0, #1
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 77
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 77
 
 
  3113 013e 1370     		strb	r3, [r2]
@@ -4618,7 +4618,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  727:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_themes/lv_theme_material.c ****     tgl_pr.text.color        = lv_color_hsv_to_rgb(_hue, 90, 60);
  3158              		.loc 2 727 0
  3159 018e 164B     		ldr	r3, .L86+8
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 78
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 78
 
 
  3160 0190 1B88     		ldrh	r3, [r3]
@@ -4674,18 +4674,18 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  3200 01de 00BF     		.align	2
  3201              	.L86:
  3202 01e0 A8010000 		.word	def
- 3203 01e4 E0120000 		.word	indic.6086
+ 3203 01e4 E0120000 		.word	indic.6084
  3204 01e8 48020000 		.word	_hue
- 3205 01ec 30130000 		.word	btn_bg.6087
+ 3205 01ec 30130000 		.word	btn_bg.6085
  3206 01f0 00000000 		.word	lv_style_transp
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 79
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 79
 
 
- 3207 01f4 80130000 		.word	rel.6088
+ 3207 01f4 80130000 		.word	rel.6086
  3208 01f8 4C020000 		.word	_font
- 3209 01fc D0130000 		.word	pr.6089
- 3210 0200 20140000 		.word	tgl_rel.6090
- 3211 0204 70140000 		.word	tgl_pr.6091
+ 3209 01fc D0130000 		.word	pr.6087
+ 3210 0200 20140000 		.word	tgl_rel.6088
+ 3211 0204 70140000 		.word	tgl_pr.6089
  3212 0208 00000000 		.word	theme
  3213              		.cfi_endproc
  3214              	.LFE57:
@@ -4738,7 +4738,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  3252              		.cfi_restore 7
  3253              		.cfi_def_cfa_offset 0
  3254 0028 7047     		bx	lr
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 80
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 80
 
 
  3255              	.L90:
@@ -4798,7 +4798,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  3299 0022 0A4B     		ldr	r3, .L92+4
  3300 0024 0C22     		movs	r2, #12
  3301 0026 DA84     		strh	r2, [r3, #38]	@ movhi
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 81
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 81
 
 
  757:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_themes/lv_theme_material.c ****     cell.body.padding.top    = LV_DPI / 12;
@@ -4831,7 +4831,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  3322              		.align	2
  3323              	.L92:
  3324 0048 00000000 		.word	theme
- 3325 004c C0140000 		.word	cell.6098
+ 3325 004c C0140000 		.word	cell.6096
  3326 0050 00000000 		.word	lv_style_transp_tight
  3327              		.cfi_endproc
  3328              	.LFE59:
@@ -4858,7 +4858,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  3346              		.cfi_offset 14, -4
  3347 0002 00AF     		add	r7, sp, #0
  3348              		.cfi_def_cfa_register 7
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 82
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 82
 
 
  767:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_themes/lv_theme_material.c **** #if LV_USE_WIN != 0
@@ -4918,7 +4918,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  3390 004c 0022     		movs	r2, #0
  3391 004e 9A84     		strh	r2, [r3, #36]	@ movhi
  780:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_themes/lv_theme_material.c ****     header.body.padding.right  = 0;
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 83
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 83
 
 
  3392              		.loc 2 780 0
@@ -4978,7 +4978,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  791:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_themes/lv_theme_material.c ****     pr.body.radius       = 0;
  3436              		.loc 2 791 0
  3437 00a2 174B     		ldr	r3, .L95+8
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 84
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 84
 
 
  3438 00a4 0022     		movs	r2, #0
@@ -5036,9 +5036,9 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  3479 00f6 00BF     		.align	2
  3480              	.L95:
  3481 00f8 A8010000 		.word	def
- 3482 00fc 10150000 		.word	header.6102
- 3483 0100 60150000 		.word	pr.6103
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 85
+ 3482 00fc 10150000 		.word	header.6100
+ 3483 0100 60150000 		.word	pr.6101
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 85
 
 
  3484 0104 00000000 		.word	theme
@@ -5098,7 +5098,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  843:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_themes/lv_theme_material.c **** 
  844:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_themes/lv_theme_material.c **** 
  845:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_themes/lv_theme_material.c ****     style->body.main_color   = lv_color_mix(style->body.main_color, lv_color_hsv_to_rgb(hue2, 90, 7
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 86
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 86
 
 
  846:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_themes/lv_theme_material.c ****     style->body.grad_color   = lv_color_mix(style->body.grad_color, lv_color_hsv_to_rgb(hue2, 90, 7
@@ -5158,7 +5158,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  3524 001a 1380     		strh	r3, [r2]	@ movhi
  874:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_themes/lv_theme_material.c ****     _font = font;
  3525              		.loc 2 874 0
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 87
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 87
 
 
  3526 001c 2C4A     		ldr	r2, .L102+8
@@ -5218,7 +5218,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  889:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_themes/lv_theme_material.c ****     line_init();
  3564              		.loc 2 889 0
  3565 0058 FFF7FEFF 		bl	line_init
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 88
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 88
 
 
  890:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_themes/lv_theme_material.c ****     led_init();
@@ -5278,7 +5278,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  908:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_themes/lv_theme_material.c ****     ddlist_init();
  3602              		.loc 2 908 0
  3603 00a4 FFF7FEFF 		bl	ddlist_init
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 89
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 89
 
 
  909:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_themes/lv_theme_material.c ****     roller_init();
@@ -5338,7 +5338,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  924:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_themes/lv_theme_material.c ****  * Get a pointer to the theme
  925:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_themes/lv_theme_material.c ****  * @return pointer to the theme
  926:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_themes/lv_theme_material.c ****  */
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 90
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 90
 
 
  927:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_themes/lv_theme_material.c **** lv_theme_t * lv_theme_get_material(void)
@@ -5375,30 +5375,30 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  3670              		.size	lv_theme_get_material, .-lv_theme_get_material
  3671              		.bss
  3672              		.align	2
- 3673              	bg.5949:
+ 3673              	bg.5947:
  3674 0250 00000000 		.space	80
  3674      00000000 
  3674      00000000 
  3674      00000000 
  3674      00000000 
  3675              		.align	2
- 3676              	scr.5951:
+ 3676              	scr.5949:
  3677 02a0 00000000 		.space	80
  3677      00000000 
  3677      00000000 
  3677      00000000 
  3677      00000000 
  3678              		.align	2
- 3679              	panel.5950:
+ 3679              	panel.5948:
  3680 02f0 00000000 		.space	80
  3680      00000000 
  3680      00000000 
  3680      00000000 
  3680      00000000 
  3681              		.align	2
- 3682              	rel.5962:
+ 3682              	rel.5960:
  3683 0340 00000000 		.space	80
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 91
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 91
 
 
  3683      00000000 
@@ -5406,359 +5406,359 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  3683      00000000 
  3683      00000000 
  3684              		.align	2
- 3685              	pr.5963:
+ 3685              	pr.5961:
  3686 0390 00000000 		.space	80
  3686      00000000 
  3686      00000000 
  3686      00000000 
  3686      00000000 
  3687              		.align	2
- 3688              	tgl_rel.5964:
+ 3688              	tgl_rel.5962:
  3689 03e0 00000000 		.space	80
  3689      00000000 
  3689      00000000 
  3689      00000000 
  3689      00000000 
  3690              		.align	2
- 3691              	tgl_pr.5965:
+ 3691              	tgl_pr.5963:
  3692 0430 00000000 		.space	80
  3692      00000000 
  3692      00000000 
  3692      00000000 
  3692      00000000 
  3693              		.align	2
- 3694              	ina.5966:
+ 3694              	ina.5964:
  3695 0480 00000000 		.space	80
  3695      00000000 
  3695      00000000 
  3695      00000000 
  3695      00000000 
  3696              		.align	2
- 3697              	prim.5970:
+ 3697              	prim.5968:
  3698 04d0 00000000 		.space	80
  3698      00000000 
  3698      00000000 
  3698      00000000 
  3698      00000000 
  3699              		.align	2
- 3700              	sec.5971:
+ 3700              	sec.5969:
  3701 0520 00000000 		.space	80
  3701      00000000 
  3701      00000000 
  3701      00000000 
  3701      00000000 
  3702              		.align	2
- 3703              	hint.5972:
+ 3703              	hint.5970:
  3704 0570 00000000 		.space	80
  3704      00000000 
  3704      00000000 
  3704      00000000 
  3704      00000000 
  3705              		.align	2
- 3706              	img_light.5976:
+ 3706              	img_light.5974:
  3707 05c0 00000000 		.space	80
  3707      00000000 
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 92
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 92
 
 
  3707      00000000 
  3707      00000000 
  3707      00000000 
  3708              		.align	2
- 3709              	img_dark.5977:
+ 3709              	img_dark.5975:
  3710 0610 00000000 		.space	80
  3710      00000000 
  3710      00000000 
  3710      00000000 
  3710      00000000 
  3711              		.align	2
- 3712              	led.5984:
+ 3712              	led.5982:
  3713 0660 00000000 		.space	80
  3713      00000000 
  3713      00000000 
  3713      00000000 
  3713      00000000 
  3714              		.align	2
- 3715              	bar_bg.5988:
+ 3715              	bar_bg.5986:
  3716 06b0 00000000 		.space	80
  3716      00000000 
  3716      00000000 
  3716      00000000 
  3716      00000000 
  3717              		.align	2
- 3718              	bar_indic.5989:
+ 3718              	bar_indic.5987:
  3719 0700 00000000 		.space	80
  3719      00000000 
  3719      00000000 
  3719      00000000 
  3719      00000000 
  3720              		.align	2
- 3721              	knob.5993:
+ 3721              	knob.5991:
  3722 0750 00000000 		.space	80
  3722      00000000 
  3722      00000000 
  3722      00000000 
  3722      00000000 
  3723              		.align	2
- 3724              	sw_bg.5997:
+ 3724              	sw_bg.5995:
  3725 07a0 00000000 		.space	80
  3725      00000000 
  3725      00000000 
  3725      00000000 
  3725      00000000 
  3726              		.align	2
- 3727              	sw_indic.5998:
+ 3727              	sw_indic.5996:
  3728 07f0 00000000 		.space	80
  3728      00000000 
  3728      00000000 
  3728      00000000 
  3728      00000000 
  3729              		.align	2
- 3730              	sw_knob_on.6000:
+ 3730              	sw_knob_on.5998:
  3731 0840 00000000 		.space	80
  3731      00000000 
  3731      00000000 
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 93
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 93
 
 
  3731      00000000 
  3731      00000000 
  3732              		.align	2
- 3733              	sw_knob_off.5999:
+ 3733              	sw_knob_off.5997:
  3734 0890 00000000 		.space	80
  3734      00000000 
  3734      00000000 
  3734      00000000 
  3734      00000000 
  3735              		.align	2
- 3736              	lmeter.6004:
+ 3736              	lmeter.6002:
  3737 08e0 00000000 		.space	80
  3737      00000000 
  3737      00000000 
  3737      00000000 
  3737      00000000 
  3738              		.align	2
- 3739              	gauge.6008:
+ 3739              	gauge.6006:
  3740 0930 00000000 		.space	80
  3740      00000000 
  3740      00000000 
  3740      00000000 
  3740      00000000 
  3741              		.align	2
- 3742              	arc.6012:
+ 3742              	arc.6010:
  3743 0980 00000000 		.space	80
  3743      00000000 
  3743      00000000 
  3743      00000000 
  3743      00000000 
  3744              		.align	2
- 3745              	ina_days.6022:
+ 3745              	ina_days.6020:
  3746 09d0 00000000 		.space	80
  3746      00000000 
  3746      00000000 
  3746      00000000 
  3746      00000000 
  3747              		.align	2
- 3748              	high_days.6023:
+ 3748              	high_days.6021:
  3749 0a20 00000000 		.space	80
  3749      00000000 
  3749      00000000 
  3749      00000000 
  3749      00000000 
  3750              		.align	2
- 3751              	week_box.6024:
+ 3751              	week_box.6022:
  3752 0a70 00000000 		.space	80
  3752      00000000 
  3752      00000000 
  3752      00000000 
  3752      00000000 
  3753              		.align	2
- 3754              	today_box.6025:
+ 3754              	today_box.6023:
  3755 0ac0 00000000 		.space	80
  3755      00000000 
  3755      00000000 
  3755      00000000 
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 94
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 94
 
 
  3755      00000000 
  3756              		.align	2
- 3757              	rel.6031:
+ 3757              	rel.6029:
  3758 0b10 00000000 		.space	80
  3758      00000000 
  3758      00000000 
  3758      00000000 
  3758      00000000 
  3759              		.align	2
- 3760              	pr.6032:
+ 3760              	pr.6030:
  3761 0b60 00000000 		.space	80
  3761      00000000 
  3761      00000000 
  3761      00000000 
  3761      00000000 
  3762              		.align	2
- 3763              	tgl_rel.6033:
+ 3763              	tgl_rel.6031:
  3764 0bb0 00000000 		.space	80
  3764      00000000 
  3764      00000000 
  3764      00000000 
  3764      00000000 
  3765              		.align	2
- 3766              	tgl_pr.6034:
+ 3766              	tgl_pr.6032:
  3767 0c00 00000000 		.space	80
  3767      00000000 
  3767      00000000 
  3767      00000000 
  3767      00000000 
  3768              		.align	2
- 3769              	ina.6035:
+ 3769              	ina.6033:
  3770 0c50 00000000 		.space	80
  3770      00000000 
  3770      00000000 
  3770      00000000 
  3770      00000000 
  3771              		.align	2
- 3772              	bg.6039:
+ 3772              	bg.6037:
  3773 0ca0 00000000 		.space	80
  3773      00000000 
  3773      00000000 
  3773      00000000 
  3773      00000000 
  3774              		.align	2
- 3775              	rel.6040:
+ 3775              	rel.6038:
  3776 0cf0 00000000 		.space	80
  3776      00000000 
  3776      00000000 
  3776      00000000 
  3776      00000000 
  3777              		.align	2
- 3778              	pr.6041:
+ 3778              	pr.6039:
  3779 0d40 00000000 		.space	80
  3779      00000000 
  3779      00000000 
  3779      00000000 
  3779      00000000 
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 95
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 95
 
 
  3780              		.align	2
- 3781              	tgl_rel.6042:
+ 3781              	tgl_rel.6040:
  3782 0d90 00000000 		.space	80
  3782      00000000 
  3782      00000000 
  3782      00000000 
  3782      00000000 
  3783              		.align	2
- 3784              	tgl_pr.6043:
+ 3784              	tgl_pr.6041:
  3785 0de0 00000000 		.space	80
  3785      00000000 
  3785      00000000 
  3785      00000000 
  3785      00000000 
  3786              		.align	2
- 3787              	ina.6044:
+ 3787              	ina.6042:
  3788 0e30 00000000 		.space	80
  3788      00000000 
  3788      00000000 
  3788      00000000 
  3788      00000000 
  3789              		.align	2
- 3790              	rel.6048:
+ 3790              	rel.6046:
  3791 0e80 00000000 		.space	80
  3791      00000000 
  3791      00000000 
  3791      00000000 
  3791      00000000 
  3792              		.align	2
- 3793              	rel.6053:
+ 3793              	rel.6051:
  3794 0ed0 00000000 		.space	80
  3794      00000000 
  3794      00000000 
  3794      00000000 
  3794      00000000 
  3795              		.align	2
- 3796              	pr.6052:
+ 3796              	pr.6050:
  3797 0f20 00000000 		.space	80
  3797      00000000 
  3797      00000000 
  3797      00000000 
  3797      00000000 
  3798              		.align	2
- 3799              	oneline.6060:
+ 3799              	oneline.6058:
  3800 0f70 00000000 		.space	80
  3800      00000000 
  3800      00000000 
  3800      00000000 
  3800      00000000 
  3801              		.align	2
- 3802              	list_bg.6067:
+ 3802              	list_bg.6065:
  3803 0fc0 00000000 		.space	80
  3803      00000000 
  3803      00000000 
  3803      00000000 
  3803      00000000 
  3804              		.align	2
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 96
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 96
 
 
- 3805              	rel.6068:
+ 3805              	rel.6066:
  3806 1010 00000000 		.space	80
  3806      00000000 
  3806      00000000 
  3806      00000000 
  3806      00000000 
  3807              		.align	2
- 3808              	pr.6069:
+ 3808              	pr.6067:
  3809 1060 00000000 		.space	80
  3809      00000000 
  3809      00000000 
  3809      00000000 
  3809      00000000 
  3810              		.align	2
- 3811              	tgl_rel.6070:
+ 3811              	tgl_rel.6068:
  3812 10b0 00000000 		.space	80
  3812      00000000 
  3812      00000000 
  3812      00000000 
  3812      00000000 
  3813              		.align	2
- 3814              	tgl_pr.6071:
+ 3814              	tgl_pr.6069:
  3815 1100 00000000 		.space	80
  3815      00000000 
  3815      00000000 
  3815      00000000 
  3815      00000000 
  3816              		.align	2
- 3817              	ina.6072:
+ 3817              	ina.6070:
  3818 1150 00000000 		.space	80
  3818      00000000 
  3818      00000000 
  3818      00000000 
  3818      00000000 
  3819              		.align	2
- 3820              	bg.6076:
+ 3820              	bg.6074:
  3821 11a0 00000000 		.space	80
  3821      00000000 
  3821      00000000 
  3821      00000000 
  3821      00000000 
  3822              		.align	2
- 3823              	sel.6077:
+ 3823              	sel.6075:
  3824 11f0 00000000 		.space	80
  3824      00000000 
  3824      00000000 
  3824      00000000 
  3824      00000000 
  3825              		.align	2
- 3826              	roller_bg.6081:
+ 3826              	roller_bg.6079:
  3827 1240 00000000 		.space	80
  3827      00000000 
  3827      00000000 
  3827      00000000 
  3827      00000000 
  3828              		.align	2
- 3829              	roller_sel.6082:
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 97
+ 3829              	roller_sel.6080:
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 97
 
 
  3830 1290 00000000 		.space	80
@@ -5767,58 +5767,58 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  3830      00000000 
  3830      00000000 
  3831              		.align	2
- 3832              	indic.6086:
+ 3832              	indic.6084:
  3833 12e0 00000000 		.space	80
  3833      00000000 
  3833      00000000 
  3833      00000000 
  3833      00000000 
  3834              		.align	2
- 3835              	btn_bg.6087:
+ 3835              	btn_bg.6085:
  3836 1330 00000000 		.space	80
  3836      00000000 
  3836      00000000 
  3836      00000000 
  3836      00000000 
  3837              		.align	2
- 3838              	rel.6088:
+ 3838              	rel.6086:
  3839 1380 00000000 		.space	80
  3839      00000000 
  3839      00000000 
  3839      00000000 
  3839      00000000 
  3840              		.align	2
- 3841              	pr.6089:
+ 3841              	pr.6087:
  3842 13d0 00000000 		.space	80
  3842      00000000 
  3842      00000000 
  3842      00000000 
  3842      00000000 
  3843              		.align	2
- 3844              	tgl_rel.6090:
+ 3844              	tgl_rel.6088:
  3845 1420 00000000 		.space	80
  3845      00000000 
  3845      00000000 
  3845      00000000 
  3845      00000000 
  3846              		.align	2
- 3847              	tgl_pr.6091:
+ 3847              	tgl_pr.6089:
  3848 1470 00000000 		.space	80
  3848      00000000 
  3848      00000000 
  3848      00000000 
  3848      00000000 
  3849              		.align	2
- 3850              	cell.6098:
+ 3850              	cell.6096:
  3851 14c0 00000000 		.space	80
  3851      00000000 
  3851      00000000 
  3851      00000000 
  3851      00000000 
  3852              		.align	2
- 3853              	header.6102:
+ 3853              	header.6100:
  3854 1510 00000000 		.space	80
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 98
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 98
 
 
  3854      00000000 
@@ -5826,7 +5826,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  3854      00000000 
  3854      00000000 
  3855              		.align	2
- 3856              	pr.6103:
+ 3856              	pr.6101:
  3857 1560 00000000 		.space	80
  3857      00000000 
  3857      00000000 
@@ -5878,7 +5878,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  3901 004f 29       		.byte	0x29
  3902 0050 54000000 		.4byte	0x54
  3903 0054 03       		.uleb128 0x3
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 99
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 99
 
 
  3904 0055 02       		.byte	0x2
@@ -5938,7 +5938,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  3958 00be 20       		.byte	0x20
  3959 00bf 49000000 		.4byte	0x49
  3960 00c3 02       		.uleb128 0x2
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 100
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 100
 
 
  3961 00c4 D1020000 		.4byte	.LASF17
@@ -5998,7 +5998,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  4015 0130 05       		.byte	0x5
  4016 0131 08       		.uleb128 0x8
  4017 0132 62707000 		.ascii	"bpp\000"
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 101
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 101
 
 
  4018 0136 06       		.byte	0x6
@@ -6058,7 +6058,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  4072 019f 0C       		.byte	0xc
  4073 01a0 00       		.byte	0
  4074 01a1 0B       		.uleb128 0xb
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 102
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 102
 
 
  4075 01a2 BF010000 		.4byte	0x1bf
@@ -6118,7 +6118,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  4129 021a 12040000 		.4byte	.LASF33
  4130 021e 00       		.byte	0
  4131 021f 10       		.uleb128 0x10
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 103
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 103
 
 
  4132 0220 F4010000 		.4byte	.LASF34
@@ -6178,7 +6178,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  4186 0289 72656400 		.ascii	"red\000"
  4187 028d 01       		.byte	0x1
  4188 028e F7       		.byte	0xf7
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 104
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 104
 
 
  4189 028f AD000000 		.4byte	0xad
@@ -6238,7 +6238,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  4243 02fc 10       		.uleb128 0x10
  4244 02fd 4A020000 		.4byte	.LASF55
  4245 0301 00       		.byte	0
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 105
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 105
 
 
  4246 0302 10       		.uleb128 0x10
@@ -6298,7 +6298,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  4300 036b 18030000 		.4byte	.LASF67
  4301 036f 07       		.byte	0x7
  4302 0370 4B       		.byte	0x4b
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 106
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 106
 
 
  4303 0371 D9000000 		.4byte	0xd9
@@ -6358,7 +6358,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  4357 03d7 D9000000 		.4byte	0xd9
  4358 03db 02       		.byte	0x2
  4359 03dc 07       		.uleb128 0x7
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 107
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 107
 
 
  4360 03dd F1080000 		.4byte	.LASF71
@@ -6418,7 +6418,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  4414 0446 2F050000 		.4byte	.LASF78
  4415 044a 07       		.byte	0x7
  4416 044b 56       		.byte	0x56
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 108
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 108
 
 
  4417 044c 8F030000 		.4byte	0x38f
@@ -6478,7 +6478,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  4471 04b5 0E       		.uleb128 0xe
  4472 04b6 02020000 		.4byte	0x202
  4473 04ba 06       		.uleb128 0x6
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 109
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 109
 
 
  4474 04bb 08       		.byte	0x8
@@ -6538,7 +6538,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  4528 0521 07       		.byte	0x7
  4529 0522 00       		.byte	0
  4530 0523 06       		.uleb128 0x6
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 110
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 110
 
 
  4531 0524 50       		.byte	0x50
@@ -6598,7 +6598,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  4585 058a 36       		.byte	0x36
  4586 058b 76050000 		.4byte	0x576
  4587 058f 00       		.byte	0
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 111
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 111
 
 
  4588 0590 08       		.uleb128 0x8
@@ -6658,7 +6658,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  4642 05f7 08       		.uleb128 0x8
  4643 05f8 696E6100 		.ascii	"ina\000"
  4644 05fc 08       		.byte	0x8
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 112
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 112
 
 
  4645 05fd 45       		.byte	0x45
@@ -6718,7 +6718,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  4699 0660 5D       		.byte	0x5d
  4700 0661 76050000 		.4byte	0x576
  4701 0665 00       		.byte	0
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 113
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 113
 
 
  4702 0666 00       		.byte	0
@@ -6778,7 +6778,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  4756 06c6 07       		.uleb128 0x7
  4757 06c7 04020000 		.4byte	.LASF100
  4758 06cb 08       		.byte	0x8
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 114
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 114
 
 
  4759 06cc 8A       		.byte	0x8a
@@ -6838,7 +6838,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  4813 0734 9C       		.byte	0x9c
  4814 0735 76050000 		.4byte	0x576
  4815 0739 14       		.byte	0x14
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 115
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 115
 
 
  4816 073a 07       		.uleb128 0x7
@@ -6898,7 +6898,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  4870 079f 08       		.uleb128 0x8
  4871 07a0 626700   		.ascii	"bg\000"
  4872 07a3 08       		.byte	0x8
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 116
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 116
 
 
  4873 07a4 A5       		.byte	0xa5
@@ -6958,7 +6958,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  4927 0808 B4       		.byte	0xb4
  4928 0809 76050000 		.4byte	0x576
  4929 080d 00       		.byte	0
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 117
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 117
 
 
  4930 080e 08       		.uleb128 0x8
@@ -7018,7 +7018,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  4984 0872 08       		.uleb128 0x8
  4985 0873 62746E00 		.ascii	"btn\000"
  4986 0877 08       		.byte	0x8
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 118
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 118
 
 
  4987 0878 CB       		.byte	0xcb
@@ -7078,7 +7078,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  5041 08d7 DF       		.byte	0xdf
  5042 08d8 76050000 		.4byte	0x576
  5043 08dc 00       		.byte	0
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 119
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 119
 
 
  5044 08dd 07       		.uleb128 0x7
@@ -7138,7 +7138,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  5098 0940 07       		.uleb128 0x7
  5099 0941 F7000000 		.4byte	.LASF114
  5100 0945 08       		.byte	0x8
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 120
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 120
 
 
  5101 0946 F3       		.byte	0xf3
@@ -7198,7 +7198,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  5155 09ae FB       		.byte	0xfb
  5156 09af 76050000 		.4byte	0x576
  5157 09b3 00       		.byte	0
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 121
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 121
 
 
  5158 09b4 07       		.uleb128 0x7
@@ -7258,7 +7258,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  5212 0a1d 15       		.uleb128 0x15
  5213 0a1e 73656C00 		.ascii	"sel\000"
  5214 0a22 08       		.byte	0x8
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 122
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 122
 
 
  5215 0a23 1601     		.2byte	0x116
@@ -7318,7 +7318,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  5269 0a8f 1E01     		.2byte	0x11e
  5270 0a91 76050000 		.4byte	0x576
  5271 0a95 04       		.byte	0x4
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 123
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 123
 
 
  5272 0a96 15       		.uleb128 0x15
@@ -7378,7 +7378,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  5326 0aff 15       		.uleb128 0x15
  5327 0b00 72656C00 		.ascii	"rel\000"
  5328 0b04 08       		.byte	0x8
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 124
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 124
 
 
  5329 0b05 4401     		.2byte	0x144
@@ -7438,7 +7438,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  5383 0b71 2B       		.byte	0x2b
  5384 0b72 76050000 		.4byte	0x576
  5385 0b76 00       		.byte	0
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 125
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 125
 
 
  5386 0b77 08       		.uleb128 0x8
@@ -7498,7 +7498,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  5440 0be2 08       		.uleb128 0x8
  5441 0be3 62617200 		.ascii	"bar\000"
  5442 0be7 08       		.byte	0x8
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 126
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 126
 
 
  5443 0be8 6A       		.byte	0x6a
@@ -7558,7 +7558,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  5497 0c52 AE       		.byte	0xae
  5498 0c53 97070000 		.4byte	0x797
  5499 0c57 AC       		.byte	0xac
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 127
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 127
 
 
  5500 0c58 07       		.uleb128 0x7
@@ -7618,7 +7618,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  5554 0ccb 1B       		.uleb128 0x1b
  5555 0ccc F6080000 		.4byte	.LASF134
  5556 0cd0 08       		.byte	0x8
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 128
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 128
 
 
  5557 0cd1 2701     		.2byte	0x127
@@ -7678,7 +7678,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  5611 0d4b 02       		.uleb128 0x2
  5612 0d4c 91       		.byte	0x91
  5613 0d4d 77       		.sleb128 -9
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 129
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 129
 
 
  5614 0d4e 1E       		.uleb128 0x1e
@@ -7738,7 +7738,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  5668 0db8 00       		.byte	0
  5669 0db9 20       		.uleb128 0x20
  5670 0dba E6080000 		.4byte	.LASF142
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 130
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 130
 
 
  5671 0dbe 02       		.byte	0x2
@@ -7755,7 +7755,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  5682 0dd4 6B050000 		.4byte	0x56b
  5683 0dd8 05       		.uleb128 0x5
  5684 0dd9 03       		.byte	0x3
- 5685 0dda 50020000 		.4byte	bg.5949
+ 5685 0dda 50020000 		.4byte	bg.5947
  5686 0dde 22       		.uleb128 0x22
  5687 0ddf A8060000 		.4byte	.LASF117
  5688 0de3 02       		.byte	0x2
@@ -7763,7 +7763,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  5690 0de5 6B050000 		.4byte	0x56b
  5691 0de9 05       		.uleb128 0x5
  5692 0dea 03       		.byte	0x3
- 5693 0deb F0020000 		.4byte	panel.5950
+ 5693 0deb F0020000 		.4byte	panel.5948
  5694 0def 21       		.uleb128 0x21
  5695 0df0 73637200 		.ascii	"scr\000"
  5696 0df4 02       		.byte	0x2
@@ -7771,7 +7771,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  5698 0df6 6B050000 		.4byte	0x56b
  5699 0dfa 05       		.uleb128 0x5
  5700 0dfb 03       		.byte	0x3
- 5701 0dfc A0020000 		.4byte	scr.5951
+ 5701 0dfc A0020000 		.4byte	scr.5949
  5702 0e00 00       		.byte	0
  5703 0e01 23       		.uleb128 0x23
  5704 0e02 4F030000 		.4byte	.LASF148
@@ -7797,8 +7797,8 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  5724 0e2e 6B050000 		.4byte	0x56b
  5725 0e32 05       		.uleb128 0x5
  5726 0e33 03       		.byte	0x3
- 5727 0e34 40030000 		.4byte	rel.5962
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 131
+ 5727 0e34 40030000 		.4byte	rel.5960
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 131
 
 
  5728 0e38 21       		.uleb128 0x21
@@ -7808,7 +7808,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  5732 0e3e 6B050000 		.4byte	0x56b
  5733 0e42 05       		.uleb128 0x5
  5734 0e43 03       		.byte	0x3
- 5735 0e44 90030000 		.4byte	pr.5963
+ 5735 0e44 90030000 		.4byte	pr.5961
  5736 0e48 22       		.uleb128 0x22
  5737 0e49 EE030000 		.4byte	.LASF93
  5738 0e4d 02       		.byte	0x2
@@ -7816,7 +7816,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  5740 0e4f 6B050000 		.4byte	0x56b
  5741 0e53 05       		.uleb128 0x5
  5742 0e54 03       		.byte	0x3
- 5743 0e55 E0030000 		.4byte	tgl_rel.5964
+ 5743 0e55 E0030000 		.4byte	tgl_rel.5962
  5744 0e59 22       		.uleb128 0x22
  5745 0e5a 61060000 		.4byte	.LASF94
  5746 0e5e 02       		.byte	0x2
@@ -7824,7 +7824,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  5748 0e60 6B050000 		.4byte	0x56b
  5749 0e64 05       		.uleb128 0x5
  5750 0e65 03       		.byte	0x3
- 5751 0e66 30040000 		.4byte	tgl_pr.5965
+ 5751 0e66 30040000 		.4byte	tgl_pr.5963
  5752 0e6a 21       		.uleb128 0x21
  5753 0e6b 696E6100 		.ascii	"ina\000"
  5754 0e6f 02       		.byte	0x2
@@ -7832,7 +7832,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  5756 0e71 6B050000 		.4byte	0x56b
  5757 0e75 05       		.uleb128 0x5
  5758 0e76 03       		.byte	0x3
- 5759 0e77 80040000 		.4byte	ina.5966
+ 5759 0e77 80040000 		.4byte	ina.5964
  5760 0e7b 00       		.byte	0
  5761 0e7c 20       		.uleb128 0x20
  5762 0e7d 7A050000 		.4byte	.LASF144
@@ -7850,7 +7850,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  5774 0e98 6B050000 		.4byte	0x56b
  5775 0e9c 05       		.uleb128 0x5
  5776 0e9d 03       		.byte	0x3
- 5777 0e9e D0040000 		.4byte	prim.5970
+ 5777 0e9e D0040000 		.4byte	prim.5968
  5778 0ea2 21       		.uleb128 0x21
  5779 0ea3 73656300 		.ascii	"sec\000"
  5780 0ea7 02       		.byte	0x2
@@ -7858,10 +7858,10 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  5782 0ea9 6B050000 		.4byte	0x56b
  5783 0ead 05       		.uleb128 0x5
  5784 0eae 03       		.byte	0x3
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 132
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 132
 
 
- 5785 0eaf 20050000 		.4byte	sec.5971
+ 5785 0eaf 20050000 		.4byte	sec.5969
  5786 0eb3 22       		.uleb128 0x22
  5787 0eb4 4D060000 		.4byte	.LASF96
  5788 0eb8 02       		.byte	0x2
@@ -7869,7 +7869,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  5790 0eba 6B050000 		.4byte	0x56b
  5791 0ebe 05       		.uleb128 0x5
  5792 0ebf 03       		.byte	0x3
- 5793 0ec0 70050000 		.4byte	hint.5972
+ 5793 0ec0 70050000 		.4byte	hint.5970
  5794 0ec4 00       		.byte	0
  5795 0ec5 20       		.uleb128 0x20
  5796 0ec6 5B050000 		.4byte	.LASF145
@@ -7887,7 +7887,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  5808 0ee1 6B050000 		.4byte	0x56b
  5809 0ee5 05       		.uleb128 0x5
  5810 0ee6 03       		.byte	0x3
- 5811 0ee7 C0050000 		.4byte	img_light.5976
+ 5811 0ee7 C0050000 		.4byte	img_light.5974
  5812 0eeb 22       		.uleb128 0x22
  5813 0eec 6D060000 		.4byte	.LASF147
  5814 0ef0 02       		.byte	0x2
@@ -7895,7 +7895,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  5816 0ef2 6B050000 		.4byte	0x56b
  5817 0ef6 05       		.uleb128 0x5
  5818 0ef7 03       		.byte	0x3
- 5819 0ef8 10060000 		.4byte	img_dark.5977
+ 5819 0ef8 10060000 		.4byte	img_dark.5975
  5820 0efc 00       		.byte	0
  5821 0efd 23       		.uleb128 0x23
  5822 0efe A9010000 		.4byte	.LASF149
@@ -7918,13 +7918,13 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  5839 0f24 6C656400 		.ascii	"led\000"
  5840 0f28 02       		.byte	0x2
  5841 0f29 CC       		.byte	0xcc
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 133
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 133
 
 
  5842 0f2a 6B050000 		.4byte	0x56b
  5843 0f2e 05       		.uleb128 0x5
  5844 0f2f 03       		.byte	0x3
- 5845 0f30 60060000 		.4byte	led.5984
+ 5845 0f30 60060000 		.4byte	led.5982
  5846 0f34 00       		.byte	0
  5847 0f35 20       		.uleb128 0x20
  5848 0f36 A6040000 		.4byte	.LASF151
@@ -7942,7 +7942,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  5860 0f51 6B050000 		.4byte	0x56b
  5861 0f55 05       		.uleb128 0x5
  5862 0f56 03       		.byte	0x3
- 5863 0f57 B0060000 		.4byte	bar_bg.5988
+ 5863 0f57 B0060000 		.4byte	bar_bg.5986
  5864 0f5b 22       		.uleb128 0x22
  5865 0f5c AD000000 		.4byte	.LASF153
  5866 0f60 02       		.byte	0x2
@@ -7950,7 +7950,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  5868 0f62 6B050000 		.4byte	0x56b
  5869 0f66 05       		.uleb128 0x5
  5870 0f67 03       		.byte	0x3
- 5871 0f68 00070000 		.4byte	bar_indic.5989
+ 5871 0f68 00070000 		.4byte	bar_indic.5987
  5872 0f6c 00       		.byte	0
  5873 0f6d 20       		.uleb128 0x20
  5874 0f6e 16000000 		.4byte	.LASF154
@@ -7968,7 +7968,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  5886 0f89 6B050000 		.4byte	0x56b
  5887 0f8d 05       		.uleb128 0x5
  5888 0f8e 03       		.byte	0x3
- 5889 0f8f 50070000 		.4byte	knob.5993
+ 5889 0f8f 50070000 		.4byte	knob.5991
  5890 0f93 00       		.byte	0
  5891 0f94 24       		.uleb128 0x24
  5892 0f95 25010000 		.4byte	.LASF155
@@ -7978,7 +7978,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  5896 0fa0 BC000000 		.4byte	.LFE40-.LFB40
  5897 0fa4 01       		.uleb128 0x1
  5898 0fa5 9C       		.byte	0x9c
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 134
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 134
 
 
  5899 0fa6 F30F0000 		.4byte	0xff3
@@ -7989,7 +7989,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  5904 0fb2 6B050000 		.4byte	0x56b
  5905 0fb6 05       		.uleb128 0x5
  5906 0fb7 03       		.byte	0x3
- 5907 0fb8 A0070000 		.4byte	sw_bg.5997
+ 5907 0fb8 A0070000 		.4byte	sw_bg.5995
  5908 0fbc 25       		.uleb128 0x25
  5909 0fbd 6C000000 		.4byte	.LASF157
  5910 0fc1 02       		.byte	0x2
@@ -7997,7 +7997,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  5912 0fc4 6B050000 		.4byte	0x56b
  5913 0fc8 05       		.uleb128 0x5
  5914 0fc9 03       		.byte	0x3
- 5915 0fca F0070000 		.4byte	sw_indic.5998
+ 5915 0fca F0070000 		.4byte	sw_indic.5996
  5916 0fce 25       		.uleb128 0x25
  5917 0fcf E0000000 		.4byte	.LASF158
  5918 0fd3 02       		.byte	0x2
@@ -8005,7 +8005,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  5920 0fd6 6B050000 		.4byte	0x56b
  5921 0fda 05       		.uleb128 0x5
  5922 0fdb 03       		.byte	0x3
- 5923 0fdc 90080000 		.4byte	sw_knob_off.5999
+ 5923 0fdc 90080000 		.4byte	sw_knob_off.5997
  5924 0fe0 25       		.uleb128 0x25
  5925 0fe1 31040000 		.4byte	.LASF159
  5926 0fe5 02       		.byte	0x2
@@ -8013,7 +8013,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  5928 0fe8 6B050000 		.4byte	0x56b
  5929 0fec 05       		.uleb128 0x5
  5930 0fed 03       		.byte	0x3
- 5931 0fee 40080000 		.4byte	sw_knob_on.6000
+ 5931 0fee 40080000 		.4byte	sw_knob_on.5998
  5932 0ff2 00       		.byte	0
  5933 0ff3 24       		.uleb128 0x24
  5934 0ff4 9D030000 		.4byte	.LASF160
@@ -8031,14 +8031,14 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  5946 1011 6B050000 		.4byte	0x56b
  5947 1015 05       		.uleb128 0x5
  5948 1016 03       		.byte	0x3
- 5949 1017 E0080000 		.4byte	lmeter.6004
+ 5949 1017 E0080000 		.4byte	lmeter.6002
  5950 101b 00       		.byte	0
  5951 101c 24       		.uleb128 0x24
  5952 101d D2040000 		.4byte	.LASF161
  5953 1021 02       		.byte	0x2
  5954 1022 3401     		.2byte	0x134
  5955 1024 00000000 		.4byte	.LFB42
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 135
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 135
 
 
  5956 1028 80000000 		.4byte	.LFE42-.LFB42
@@ -8052,7 +8052,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  5964 103a 6B050000 		.4byte	0x56b
  5965 103e 05       		.uleb128 0x5
  5966 103f 03       		.byte	0x3
- 5967 1040 30090000 		.4byte	gauge.6008
+ 5967 1040 30090000 		.4byte	gauge.6006
  5968 1044 00       		.byte	0
  5969 1045 24       		.uleb128 0x24
  5970 1046 85000000 		.4byte	.LASF162
@@ -8070,7 +8070,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  5982 1063 6B050000 		.4byte	0x56b
  5983 1067 05       		.uleb128 0x5
  5984 1068 03       		.byte	0x3
- 5985 1069 80090000 		.4byte	arc.6012
+ 5985 1069 80090000 		.4byte	arc.6010
  5986 106d 00       		.byte	0
  5987 106e 27       		.uleb128 0x27
  5988 106f D3070000 		.4byte	.LASF163
@@ -8098,7 +8098,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  6010 10a3 9C       		.byte	0x9c
  6011 10a4 F1100000 		.4byte	0x10f1
  6012 10a8 25       		.uleb128 0x25
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 136
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 136
 
 
  6013 10a9 78070000 		.4byte	.LASF166
@@ -8107,7 +8107,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  6016 10b0 6B050000 		.4byte	0x56b
  6017 10b4 05       		.uleb128 0x5
  6018 10b5 03       		.byte	0x3
- 6019 10b6 D0090000 		.4byte	ina_days.6022
+ 6019 10b6 D0090000 		.4byte	ina_days.6020
  6020 10ba 25       		.uleb128 0x25
  6021 10bb 29030000 		.4byte	.LASF167
  6022 10bf 02       		.byte	0x2
@@ -8115,7 +8115,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  6024 10c2 6B050000 		.4byte	0x56b
  6025 10c6 05       		.uleb128 0x5
  6026 10c7 03       		.byte	0x3
- 6027 10c8 200A0000 		.4byte	high_days.6023
+ 6027 10c8 200A0000 		.4byte	high_days.6021
  6028 10cc 25       		.uleb128 0x25
  6029 10cd 33030000 		.4byte	.LASF109
  6030 10d1 02       		.byte	0x2
@@ -8123,7 +8123,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  6032 10d4 6B050000 		.4byte	0x56b
  6033 10d8 05       		.uleb128 0x5
  6034 10d9 03       		.byte	0x3
- 6035 10da 700A0000 		.4byte	week_box.6024
+ 6035 10da 700A0000 		.4byte	week_box.6022
  6036 10de 25       		.uleb128 0x25
  6037 10df 93060000 		.4byte	.LASF110
  6038 10e3 02       		.byte	0x2
@@ -8131,7 +8131,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  6040 10e6 6B050000 		.4byte	0x56b
  6041 10ea 05       		.uleb128 0x5
  6042 10eb 03       		.byte	0x3
- 6043 10ec C00A0000 		.4byte	today_box.6025
+ 6043 10ec C00A0000 		.4byte	today_box.6023
  6044 10f0 00       		.byte	0
  6045 10f1 24       		.uleb128 0x24
  6046 10f2 A1010000 		.4byte	.LASF168
@@ -8149,7 +8149,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  6058 110f 6B050000 		.4byte	0x56b
  6059 1113 05       		.uleb128 0x5
  6060 1114 03       		.byte	0x3
- 6061 1115 100B0000 		.4byte	rel.6031
+ 6061 1115 100B0000 		.4byte	rel.6029
  6062 1119 26       		.uleb128 0x26
  6063 111a 707200   		.ascii	"pr\000"
  6064 111d 02       		.byte	0x2
@@ -8157,8 +8157,8 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  6066 1120 6B050000 		.4byte	0x56b
  6067 1124 05       		.uleb128 0x5
  6068 1125 03       		.byte	0x3
- 6069 1126 600B0000 		.4byte	pr.6032
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 137
+ 6069 1126 600B0000 		.4byte	pr.6030
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 137
 
 
  6070 112a 25       		.uleb128 0x25
@@ -8168,7 +8168,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  6074 1132 6B050000 		.4byte	0x56b
  6075 1136 05       		.uleb128 0x5
  6076 1137 03       		.byte	0x3
- 6077 1138 B00B0000 		.4byte	tgl_rel.6033
+ 6077 1138 B00B0000 		.4byte	tgl_rel.6031
  6078 113c 25       		.uleb128 0x25
  6079 113d 61060000 		.4byte	.LASF94
  6080 1141 02       		.byte	0x2
@@ -8176,7 +8176,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  6082 1144 6B050000 		.4byte	0x56b
  6083 1148 05       		.uleb128 0x5
  6084 1149 03       		.byte	0x3
- 6085 114a 000C0000 		.4byte	tgl_pr.6034
+ 6085 114a 000C0000 		.4byte	tgl_pr.6032
  6086 114e 26       		.uleb128 0x26
  6087 114f 696E6100 		.ascii	"ina\000"
  6088 1153 02       		.byte	0x2
@@ -8184,7 +8184,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  6090 1156 6B050000 		.4byte	0x56b
  6091 115a 05       		.uleb128 0x5
  6092 115b 03       		.byte	0x3
- 6093 115c 500C0000 		.4byte	ina.6035
+ 6093 115c 500C0000 		.4byte	ina.6033
  6094 1160 00       		.byte	0
  6095 1161 24       		.uleb128 0x24
  6096 1162 41050000 		.4byte	.LASF169
@@ -8202,7 +8202,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  6108 117e 6B050000 		.4byte	0x56b
  6109 1182 05       		.uleb128 0x5
  6110 1183 03       		.byte	0x3
- 6111 1184 A00C0000 		.4byte	bg.6039
+ 6111 1184 A00C0000 		.4byte	bg.6037
  6112 1188 26       		.uleb128 0x26
  6113 1189 72656C00 		.ascii	"rel\000"
  6114 118d 02       		.byte	0x2
@@ -8210,7 +8210,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  6116 1190 6B050000 		.4byte	0x56b
  6117 1194 05       		.uleb128 0x5
  6118 1195 03       		.byte	0x3
- 6119 1196 F00C0000 		.4byte	rel.6040
+ 6119 1196 F00C0000 		.4byte	rel.6038
  6120 119a 26       		.uleb128 0x26
  6121 119b 707200   		.ascii	"pr\000"
  6122 119e 02       		.byte	0x2
@@ -8218,10 +8218,10 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  6124 11a1 6B050000 		.4byte	0x56b
  6125 11a5 05       		.uleb128 0x5
  6126 11a6 03       		.byte	0x3
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 138
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 138
 
 
- 6127 11a7 400D0000 		.4byte	pr.6041
+ 6127 11a7 400D0000 		.4byte	pr.6039
  6128 11ab 25       		.uleb128 0x25
  6129 11ac EE030000 		.4byte	.LASF93
  6130 11b0 02       		.byte	0x2
@@ -8229,7 +8229,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  6132 11b3 6B050000 		.4byte	0x56b
  6133 11b7 05       		.uleb128 0x5
  6134 11b8 03       		.byte	0x3
- 6135 11b9 900D0000 		.4byte	tgl_rel.6042
+ 6135 11b9 900D0000 		.4byte	tgl_rel.6040
  6136 11bd 25       		.uleb128 0x25
  6137 11be 61060000 		.4byte	.LASF94
  6138 11c2 02       		.byte	0x2
@@ -8237,7 +8237,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  6140 11c5 6B050000 		.4byte	0x56b
  6141 11c9 05       		.uleb128 0x5
  6142 11ca 03       		.byte	0x3
- 6143 11cb E00D0000 		.4byte	tgl_pr.6043
+ 6143 11cb E00D0000 		.4byte	tgl_pr.6041
  6144 11cf 26       		.uleb128 0x26
  6145 11d0 696E6100 		.ascii	"ina\000"
  6146 11d4 02       		.byte	0x2
@@ -8245,7 +8245,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  6148 11d7 6B050000 		.4byte	0x56b
  6149 11db 05       		.uleb128 0x5
  6150 11dc 03       		.byte	0x3
- 6151 11dd 300E0000 		.4byte	ina.6044
+ 6151 11dd 300E0000 		.4byte	ina.6042
  6152 11e1 00       		.byte	0
  6153 11e2 24       		.uleb128 0x24
  6154 11e3 C9020000 		.4byte	.LASF170
@@ -8263,7 +8263,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  6166 1200 6B050000 		.4byte	0x56b
  6167 1204 05       		.uleb128 0x5
  6168 1205 03       		.byte	0x3
- 6169 1206 800E0000 		.4byte	rel.6048
+ 6169 1206 800E0000 		.4byte	rel.6046
  6170 120a 00       		.byte	0
  6171 120b 24       		.uleb128 0x24
  6172 120c 12070000 		.4byte	.LASF171
@@ -8278,13 +8278,13 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  6181 1222 707200   		.ascii	"pr\000"
  6182 1225 02       		.byte	0x2
  6183 1226 FD01     		.2byte	0x1fd
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 139
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 139
 
 
  6184 1228 6B050000 		.4byte	0x56b
  6185 122c 05       		.uleb128 0x5
  6186 122d 03       		.byte	0x3
- 6187 122e 200F0000 		.4byte	pr.6052
+ 6187 122e 200F0000 		.4byte	pr.6050
  6188 1232 26       		.uleb128 0x26
  6189 1233 72656C00 		.ascii	"rel\000"
  6190 1237 02       		.byte	0x2
@@ -8292,7 +8292,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  6192 123a 6B050000 		.4byte	0x56b
  6193 123e 05       		.uleb128 0x5
  6194 123f 03       		.byte	0x3
- 6195 1240 D00E0000 		.4byte	rel.6053
+ 6195 1240 D00E0000 		.4byte	rel.6051
  6196 1244 00       		.byte	0
  6197 1245 27       		.uleb128 0x27
  6198 1246 46000000 		.4byte	.LASF172
@@ -8318,7 +8318,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  6218 1275 6B050000 		.4byte	0x56b
  6219 1279 05       		.uleb128 0x5
  6220 127a 03       		.byte	0x3
- 6221 127b 700F0000 		.4byte	oneline.6060
+ 6221 127b 700F0000 		.4byte	oneline.6058
  6222 127f 00       		.byte	0
  6223 1280 27       		.uleb128 0x27
  6224 1281 BE010000 		.4byte	.LASF174
@@ -8338,7 +8338,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  6238 12a3 9C       		.byte	0x9c
  6239 12a4 14130000 		.4byte	0x1314
  6240 12a8 25       		.uleb128 0x25
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 140
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 140
 
 
  6241 12a9 81060000 		.4byte	.LASF176
@@ -8347,7 +8347,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  6244 12b0 6B050000 		.4byte	0x56b
  6245 12b4 05       		.uleb128 0x5
  6246 12b5 03       		.byte	0x3
- 6247 12b6 C00F0000 		.4byte	list_bg.6067
+ 6247 12b6 C00F0000 		.4byte	list_bg.6065
  6248 12ba 26       		.uleb128 0x26
  6249 12bb 72656C00 		.ascii	"rel\000"
  6250 12bf 02       		.byte	0x2
@@ -8355,7 +8355,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  6252 12c2 6B050000 		.4byte	0x56b
  6253 12c6 05       		.uleb128 0x5
  6254 12c7 03       		.byte	0x3
- 6255 12c8 10100000 		.4byte	rel.6068
+ 6255 12c8 10100000 		.4byte	rel.6066
  6256 12cc 26       		.uleb128 0x26
  6257 12cd 707200   		.ascii	"pr\000"
  6258 12d0 02       		.byte	0x2
@@ -8363,7 +8363,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  6260 12d3 6B050000 		.4byte	0x56b
  6261 12d7 05       		.uleb128 0x5
  6262 12d8 03       		.byte	0x3
- 6263 12d9 60100000 		.4byte	pr.6069
+ 6263 12d9 60100000 		.4byte	pr.6067
  6264 12dd 25       		.uleb128 0x25
  6265 12de EE030000 		.4byte	.LASF93
  6266 12e2 02       		.byte	0x2
@@ -8371,7 +8371,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  6268 12e5 6B050000 		.4byte	0x56b
  6269 12e9 05       		.uleb128 0x5
  6270 12ea 03       		.byte	0x3
- 6271 12eb B0100000 		.4byte	tgl_rel.6070
+ 6271 12eb B0100000 		.4byte	tgl_rel.6068
  6272 12ef 25       		.uleb128 0x25
  6273 12f0 61060000 		.4byte	.LASF94
  6274 12f4 02       		.byte	0x2
@@ -8379,7 +8379,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  6276 12f7 6B050000 		.4byte	0x56b
  6277 12fb 05       		.uleb128 0x5
  6278 12fc 03       		.byte	0x3
- 6279 12fd 00110000 		.4byte	tgl_pr.6071
+ 6279 12fd 00110000 		.4byte	tgl_pr.6069
  6280 1301 26       		.uleb128 0x26
  6281 1302 696E6100 		.ascii	"ina\000"
  6282 1306 02       		.byte	0x2
@@ -8387,7 +8387,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  6284 1309 6B050000 		.4byte	0x56b
  6285 130d 05       		.uleb128 0x5
  6286 130e 03       		.byte	0x3
- 6287 130f 50110000 		.4byte	ina.6072
+ 6287 130f 50110000 		.4byte	ina.6070
  6288 1313 00       		.byte	0
  6289 1314 24       		.uleb128 0x24
  6290 1315 ED020000 		.4byte	.LASF177
@@ -8398,7 +8398,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  6295 1324 01       		.uleb128 0x1
  6296 1325 9C       		.byte	0x9c
  6297 1326 4E130000 		.4byte	0x134e
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 141
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 141
 
 
  6298 132a 26       		.uleb128 0x26
@@ -8408,7 +8408,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  6302 1331 6B050000 		.4byte	0x56b
  6303 1335 05       		.uleb128 0x5
  6304 1336 03       		.byte	0x3
- 6305 1337 A0110000 		.4byte	bg.6076
+ 6305 1337 A0110000 		.4byte	bg.6074
  6306 133b 26       		.uleb128 0x26
  6307 133c 73656C00 		.ascii	"sel\000"
  6308 1340 02       		.byte	0x2
@@ -8416,7 +8416,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  6310 1343 6B050000 		.4byte	0x56b
  6311 1347 05       		.uleb128 0x5
  6312 1348 03       		.byte	0x3
- 6313 1349 F0110000 		.4byte	sel.6077
+ 6313 1349 F0110000 		.4byte	sel.6075
  6314 134d 00       		.byte	0
  6315 134e 24       		.uleb128 0x24
  6316 134f DA080000 		.4byte	.LASF178
@@ -8434,7 +8434,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  6328 136c 6B050000 		.4byte	0x56b
  6329 1370 05       		.uleb128 0x5
  6330 1371 03       		.byte	0x3
- 6331 1372 40120000 		.4byte	roller_bg.6081
+ 6331 1372 40120000 		.4byte	roller_bg.6079
  6332 1376 25       		.uleb128 0x25
  6333 1377 59020000 		.4byte	.LASF180
  6334 137b 02       		.byte	0x2
@@ -8442,7 +8442,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  6336 137e 6B050000 		.4byte	0x56b
  6337 1382 05       		.uleb128 0x5
  6338 1383 03       		.byte	0x3
- 6339 1384 90120000 		.4byte	roller_sel.6082
+ 6339 1384 90120000 		.4byte	roller_sel.6080
  6340 1388 00       		.byte	0
  6341 1389 24       		.uleb128 0x24
  6342 138a 05040000 		.4byte	.LASF181
@@ -8458,12 +8458,12 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  6352 13a4 02       		.byte	0x2
  6353 13a5 A002     		.2byte	0x2a0
  6354 13a7 6B050000 		.4byte	0x56b
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 142
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 142
 
 
  6355 13ab 05       		.uleb128 0x5
  6356 13ac 03       		.byte	0x3
- 6357 13ad E0120000 		.4byte	indic.6086
+ 6357 13ad E0120000 		.4byte	indic.6084
  6358 13b1 25       		.uleb128 0x25
  6359 13b2 51010000 		.4byte	.LASF182
  6360 13b6 02       		.byte	0x2
@@ -8471,7 +8471,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  6362 13b9 6B050000 		.4byte	0x56b
  6363 13bd 05       		.uleb128 0x5
  6364 13be 03       		.byte	0x3
- 6365 13bf 30130000 		.4byte	btn_bg.6087
+ 6365 13bf 30130000 		.4byte	btn_bg.6085
  6366 13c3 26       		.uleb128 0x26
  6367 13c4 72656C00 		.ascii	"rel\000"
  6368 13c8 02       		.byte	0x2
@@ -8479,7 +8479,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  6370 13cb 6B050000 		.4byte	0x56b
  6371 13cf 05       		.uleb128 0x5
  6372 13d0 03       		.byte	0x3
- 6373 13d1 80130000 		.4byte	rel.6088
+ 6373 13d1 80130000 		.4byte	rel.6086
  6374 13d5 26       		.uleb128 0x26
  6375 13d6 707200   		.ascii	"pr\000"
  6376 13d9 02       		.byte	0x2
@@ -8487,7 +8487,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  6378 13dc 6B050000 		.4byte	0x56b
  6379 13e0 05       		.uleb128 0x5
  6380 13e1 03       		.byte	0x3
- 6381 13e2 D0130000 		.4byte	pr.6089
+ 6381 13e2 D0130000 		.4byte	pr.6087
  6382 13e6 25       		.uleb128 0x25
  6383 13e7 EE030000 		.4byte	.LASF93
  6384 13eb 02       		.byte	0x2
@@ -8495,7 +8495,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  6386 13ee 6B050000 		.4byte	0x56b
  6387 13f2 05       		.uleb128 0x5
  6388 13f3 03       		.byte	0x3
- 6389 13f4 20140000 		.4byte	tgl_rel.6090
+ 6389 13f4 20140000 		.4byte	tgl_rel.6088
  6390 13f8 25       		.uleb128 0x25
  6391 13f9 61060000 		.4byte	.LASF94
  6392 13fd 02       		.byte	0x2
@@ -8503,7 +8503,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  6394 1400 6B050000 		.4byte	0x56b
  6395 1404 05       		.uleb128 0x5
  6396 1405 03       		.byte	0x3
- 6397 1406 70140000 		.4byte	tgl_pr.6091
+ 6397 1406 70140000 		.4byte	tgl_pr.6089
  6398 140a 00       		.byte	0
  6399 140b 27       		.uleb128 0x27
  6400 140c B5070000 		.4byte	.LASF183
@@ -8518,7 +8518,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  6409 1422 02       		.byte	0x2
  6410 1423 EC02     		.2byte	0x2ec
  6411 1425 00000000 		.4byte	.LFB59
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 143
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 143
 
 
  6412 1429 54000000 		.4byte	.LFE59-.LFB59
@@ -8532,7 +8532,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  6420 143b 6B050000 		.4byte	0x56b
  6421 143f 05       		.uleb128 0x5
  6422 1440 03       		.byte	0x3
- 6423 1441 C0140000 		.4byte	cell.6098
+ 6423 1441 C0140000 		.4byte	cell.6096
  6424 1445 00       		.byte	0
  6425 1446 24       		.uleb128 0x24
  6426 1447 C4030000 		.4byte	.LASF185
@@ -8550,7 +8550,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  6438 1464 6B050000 		.4byte	0x56b
  6439 1468 05       		.uleb128 0x5
  6440 1469 03       		.byte	0x3
- 6441 146a 10150000 		.4byte	header.6102
+ 6441 146a 10150000 		.4byte	header.6100
  6442 146e 26       		.uleb128 0x26
  6443 146f 707200   		.ascii	"pr\000"
  6444 1472 02       		.byte	0x2
@@ -8558,7 +8558,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  6446 1475 6B050000 		.4byte	0x56b
  6447 1479 05       		.uleb128 0x5
  6448 147a 03       		.byte	0x3
- 6449 147b 60150000 		.4byte	pr.6103
+ 6449 147b 60150000 		.4byte	pr.6101
  6450 147f 00       		.byte	0
  6451 1480 28       		.uleb128 0x28
  6452 1481 14020000 		.4byte	.LASF198
@@ -8578,7 +8578,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  6466 14a6 02       		.uleb128 0x2
  6467 14a7 91       		.byte	0x91
  6468 14a8 6E       		.sleb128 -18
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 144
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 144
 
 
  6469 14a9 29       		.uleb128 0x29
@@ -8638,7 +8638,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  6523 1514 1F       		.byte	0x1f
  6524 1515 6B050000 		.4byte	0x56b
  6525 1519 05       		.uleb128 0x5
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 145
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 145
 
 
  6526 151a 03       		.byte	0x3
@@ -8698,7 +8698,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  6580 0005 13       		.uleb128 0x13
  6581 0006 0B       		.uleb128 0xb
  6582 0007 03       		.uleb128 0x3
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 146
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 146
 
 
  6583 0008 0E       		.uleb128 0xe
@@ -8758,7 +8758,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  6637 003e 13       		.uleb128 0x13
  6638 003f 01       		.byte	0x1
  6639 0040 0B       		.uleb128 0xb
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 147
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 147
 
 
  6640 0041 0B       		.uleb128 0xb
@@ -8818,7 +8818,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  6694 0077 0A       		.uleb128 0xa
  6695 0078 0D       		.uleb128 0xd
  6696 0079 00       		.byte	0
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 148
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 148
 
 
  6697 007a 03       		.uleb128 0x3
@@ -8878,7 +8878,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  6751 00b0 01       		.byte	0x1
  6752 00b1 0B       		.uleb128 0xb
  6753 00b2 0B       		.uleb128 0xb
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 149
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 149
 
 
  6754 00b3 49       		.uleb128 0x49
@@ -8938,7 +8938,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  6808 00e9 49       		.uleb128 0x49
  6809 00ea 13       		.uleb128 0x13
  6810 00eb 00       		.byte	0
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 150
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 150
 
 
  6811 00ec 00       		.byte	0
@@ -8998,7 +8998,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  6865 0122 13       		.uleb128 0x13
  6866 0123 00       		.byte	0
  6867 0124 00       		.byte	0
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 151
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 151
 
 
  6868 0125 18       		.uleb128 0x18
@@ -9058,7 +9058,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  6922 015b 38       		.uleb128 0x38
  6923 015c 05       		.uleb128 0x5
  6924 015d 00       		.byte	0
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 152
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 152
 
 
  6925 015e 00       		.byte	0
@@ -9118,7 +9118,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  6979 0195 00       		.byte	0
  6980 0196 00       		.byte	0
  6981 0197 1F       		.uleb128 0x1f
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 153
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 153
 
 
  6982 0198 2E       		.uleb128 0x2e
@@ -9178,7 +9178,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  7036 01d0 3B       		.uleb128 0x3b
  7037 01d1 0B       		.uleb128 0xb
  7038 01d2 49       		.uleb128 0x49
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 154
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 154
 
 
  7039 01d3 13       		.uleb128 0x13
@@ -9238,7 +9238,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  7093 020a 12       		.uleb128 0x12
  7094 020b 06       		.uleb128 0x6
  7095 020c 40       		.uleb128 0x40
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 155
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 155
 
 
  7096 020d 18       		.uleb128 0x18
@@ -9298,7 +9298,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  7150 0244 9742     		.uleb128 0x2117
  7151 0246 19       		.uleb128 0x19
  7152 0247 00       		.byte	0
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 156
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 156
 
 
  7153 0248 00       		.byte	0
@@ -9358,7 +9358,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  7207 027f 27       		.uleb128 0x27
  7208 0280 19       		.uleb128 0x19
  7209 0281 49       		.uleb128 0x49
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 157
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 157
 
 
  7210 0282 13       		.uleb128 0x13
@@ -9418,7 +9418,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  7264 0010 00000000 		.4byte	.LFB7
  7265 0014 38000000 		.4byte	.LFE7-.LFB7
  7266 0018 00000000 		.4byte	.LFB8
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 158
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 158
 
 
  7267 001c 28000000 		.4byte	.LFE8-.LFB8
@@ -9478,7 +9478,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  7321 00f4 84000000 		.4byte	.LFE56-.LFB56
  7322 00f8 00000000 		.4byte	.LFB57
  7323 00fc 0C020000 		.4byte	.LFE57-.LFB57
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 159
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 159
 
 
  7324 0100 00000000 		.4byte	.LFB58
@@ -9538,7 +9538,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  7378 00a0 00000000 		.4byte	.LFB48
  7379 00a4 6C010000 		.4byte	.LFE48
  7380 00a8 00000000 		.4byte	.LFB49
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 160
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 160
 
 
  7381 00ac 6C000000 		.4byte	.LFE49
@@ -9598,7 +9598,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  7421              	.LASF61:
  7422 0033 4C565F42 		.ascii	"LV_BORDER_INTERNAL\000"
  7422      4F524445 
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 161
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 161
 
 
  7422      525F494E 
@@ -9658,7 +9658,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  7450      206C6F6E 
  7450      6720756E 
  7450      7369676E 
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 162
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 162
 
 
  7450      65642069 
@@ -9718,7 +9718,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  7480 0158 72696768 		.ascii	"right\000"
  7480      7400
  7481              	.LASF16:
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 163
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 163
 
 
  7482 015e 696E7431 		.ascii	"int16_t\000"
@@ -9778,7 +9778,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  7510 01e7 4C565F4F 		.ascii	"LV_OPA_COVER\000"
  7510      50415F43 
  7510      4F564552 
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 164
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 164
 
 
  7510      00
@@ -9838,7 +9838,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  7535 02a7 6C765F63 		.ascii	"lv_color_hex\000"
  7535      6F6C6F72 
  7535      5F686578 
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 165
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 165
 
 
  7535      00
@@ -9898,7 +9898,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  7563      00
  7564              	.LASF7:
  7565 033c 73686F72 		.ascii	"short unsigned int\000"
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 166
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 166
 
 
  7565      7420756E 
@@ -9958,7 +9958,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  7591      00
  7592              	.LASF52:
  7593 03cd 6C765F6F 		.ascii	"lv_opa_t\000"
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 167
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 167
 
 
  7593      70615F74 
@@ -10018,7 +10018,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  7621      76696577 
  7621      00
  7622              	.LASF42:
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 168
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 168
 
 
  7623 045b 4C565F4F 		.ascii	"LV_OPA_80\000"
@@ -10078,7 +10078,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  7649      00
  7650              	.LASF30:
  7651 04e7 62617365 		.ascii	"base_line\000"
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 169
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 169
 
 
  7651      5F6C696E 
@@ -10138,7 +10138,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  7681 0569 67726164 		.ascii	"grad_color\000"
  7681      5F636F6C 
  7681      6F7200
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 170
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 170
 
 
  7682              	.LASF99:
@@ -10198,7 +10198,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  7706      707200
  7707              	.LASF46:
  7708 0668 626C7565 		.ascii	"blue\000"
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 171
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 171
 
 
  7708      00
@@ -10258,7 +10258,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  7738      50415F31 
  7738      303000
  7739              	.LASF21:
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 172
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 172
 
 
  7740 06f7 6164765F 		.ascii	"adv_w\000"
@@ -10318,7 +10318,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  7767              	.LASF132:
  7768 0781 64646C69 		.ascii	"ddlist\000"
  7768      737400
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 173
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 173
 
 
  7769              	.LASF81:
@@ -10378,7 +10378,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 1
  7797              	.LASF194:
  7798 080d 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
  7798      43313120 
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccoCc7Si.s 			page 174
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\cchbwiKV.s 			page 174
 
 
  7798      352E342E 

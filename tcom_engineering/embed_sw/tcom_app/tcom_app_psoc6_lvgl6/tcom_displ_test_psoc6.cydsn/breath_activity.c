@@ -58,14 +58,14 @@ void btn_anime(lv_task_t * task)
         lv_label_set_text( my_label, "Hold breath for\n10 seconds ...\n\n... then breathe\ninto device\nslowly for\n15 seconds" );
         lv_obj_align( my_label, NULL, LV_ALIGN_IN_TOP_LEFT, 5,100 );
         lv_label_set_long_mode(my_label, LV_LABEL_LONG_EXPAND);
-        lbl_style.text.font = &lv_font_roboto_28;
+        lbl_style.text.font = &lv_font_roboto_16;
         lv_label_set_style(my_label, LV_LABEL_STYLE_MAIN, &lbl_style);
 
         time_label = lv_label_create(my_btn, NULL);
         lv_style_copy(&lbl_style, lv_obj_get_style(time_label));
         lv_label_set_static_text( time_label, "" );
         lv_obj_align( time_label, NULL, LV_ALIGN_IN_TOP_LEFT, 120,400 );
-        lbl_style.text.font = &lv_font_roboto_28;
+        lbl_style.text.font = &lv_font_roboto_16;
         lv_label_set_style(time_label, LV_LABEL_STYLE_MAIN, &lbl_style);
 
         lv_style_copy(&style_led, &lv_style_pretty_color);

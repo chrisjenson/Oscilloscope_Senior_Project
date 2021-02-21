@@ -2,7 +2,7 @@
 --	Conversion of tcom_displ_test_psoc6.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Thu Feb 11 18:49:19 2021
+--	Thu Feb 18 10:11:07 2021
 --
 
 USE cypress.cypress.all;
@@ -179,6 +179,9 @@ SIGNAL tmpIO_0__SPI_Sel_net_0 : bit;
 TERMINAL tmpSIOVREF__SPI_Sel_net_0 : bit;
 SIGNAL tmpIO_0__SPI_MISO_net_0 : bit;
 TERMINAL tmpSIOVREF__SPI_MISO_net_0 : bit;
+SIGNAL tmpFB_0__SEL_PIN_net_0 : bit;
+SIGNAL tmpIO_0__SEL_PIN_net_0 : bit;
+TERMINAL tmpSIOVREF__SEL_PIN_net_0 : bit;
 SIGNAL \LCD_INTERFACE:state_3\\D\ : bit;
 SIGNAL \LCD_INTERFACE:state_2\\D\ : bit;
 SIGNAL \LCD_INTERFACE:state_1\\D\ : bit;
@@ -863,6 +866,38 @@ SPI_MISO:cy_mxs40_gpio_v1_0
 		io=>(tmpIO_0__SPI_MISO_net_0),
 		annotation=>(open),
 		siovref=>(tmpSIOVREF__SPI_MISO_net_0));
+SEL_PIN:cy_mxs40_gpio_v1_0
+	GENERIC MAP(cy_registers=>"",
+		width=>1,
+		sio_grp_cnt=>0,
+		id=>"9dccffa9-0f96-4336-8d9b-23c06d4df85c",
+		drive_mode=>"6",
+		ibuf_enabled=>"0",
+		init_dr_st=>"0",
+		input_sync=>"0",
+		intr_mode=>"0",
+		io_voltage=>"",
+		output_conn=>"0",
+		oe_conn=>"0",
+		output_sync=>"0",
+		oe_sync=>"0",
+		drive_strength=>"0",
+		max_frequency=>"100",
+		output_current_cap=>"8",
+		i2c_mode=>"0",
+		pin_aliases=>"",
+		pin_mode=>"O",
+		slew_rate=>"0",
+		vtrip=>"0",
+		use_annotation=>"0",
+		hotswap_needed=>"0")
+	PORT MAP(oe=>(one),
+		y=>(zero),
+		fb=>(tmpFB_0__SEL_PIN_net_0),
+		analog=>(open),
+		io=>(tmpIO_0__SEL_PIN_net_0),
+		annotation=>(open),
+		siovref=>(tmpSIOVREF__SEL_PIN_net_0));
 \LCD_INTERFACE:state_3\:cy_dff
 	PORT MAP(d=>\LCD_INTERFACE:state_3\\D\,
 		clk=>\LCD_INTERFACE:op_clk\,

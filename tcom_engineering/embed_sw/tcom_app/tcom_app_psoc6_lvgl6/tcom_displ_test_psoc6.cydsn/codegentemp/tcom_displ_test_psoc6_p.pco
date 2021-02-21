@@ -43,6 +43,7 @@ set_io "d(2)" iocell 10 2
 set_io "d(7)" iocell 5 6
 set_io "CY_CPUSS_SWJ_SWDIO_TMS(0)" iocell 6 6
 set_io "PORT6_PIN2(0)" iocell 6 2
+set_io "SEL_PIN(0)" iocell 5 5
 set_location "ClockBlock" Clock -1 -1 0
 set_io "PORT9_PIN0(0)" iocell 9 0
 set_location "CPUSS" CPUSS -1 -1 0

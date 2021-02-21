@@ -28,7 +28,6 @@ static void sw_event_handler(lv_obj_t * obj, lv_event_t event)
 {
     if(event == LV_EVENT_VALUE_CHANGED) {
         printf("State: %s\n", lv_sw_get_state(obj) ? "On" : "Off");
-        //lv_sw_toggle(obj, LV_ANIM_ON);
         //cm4.onBit = !cm4.onBit;
     }
 }
@@ -80,22 +79,14 @@ static void verti_slider_event_cb(lv_obj_t * slider, lv_event_t event)
 static void window_slider_event_cb(lv_obj_t * slider, lv_event_t event)
 {
     if(event == LV_EVENT_VALUE_CHANGED) {
-        static char buf[4]; /* max 3 bytes for number plus 1 null terminating byte */
-        snprintf(buf, 4, "%u", lv_slider_get_value(slider));
+        static char buf[6]; /* max 3 bytes for number plus 1 null terminating byte */
+        snprintf(buf, 6, "%u", lv_slider_get_value(slider));
         lv_label_set_text(windowLabel, buf);
         //int temp = (int)(buf);          //type cast the new slider value to an integer
         //cm4.windowPos = (zeros | temp);    //stores the new slider value in the global structure
         cm4.windowPos = lv_slider_get_value(slider);
     }
 }
-
-//static void buildChart(lv_obj_t * chart){
-//    
-//}
-
-//static void updateChart(){
-//    
-//}
 
 void home_screen()
 {
@@ -105,22 +96,18 @@ void home_screen()
     const int chart_vertPos = 20;
     const int chart_horiPos = 20;      
     
-    static lv_obj_t *my_label;
-    static lv_style_t *lbl_style;
+    //static lv_obj_t *my_label;
+    //static lv_style_t *lbl_style;
     
     static lv_obj_t *chart1;        //declaring the chart
     
-    
-    //char gain_str[3];
-    //sprintf(gain_str, "%02X", cm4.gain_label);
-    
     /* First Slider: Offset */
     lv_obj_t * offsetSlider = lv_slider_create(lv_scr_act(), NULL);
-    lv_obj_set_pos(offsetSlider, 20, 280);                         /*Set its position*/
+    lv_obj_set_pos(offsetSlider, 20, 295);                         /*Set its position*/
     lv_obj_set_size(offsetSlider, 130, 30);                        /*Set its size*/
-    lv_slider_set_value(offsetSlider, 0, LV_ANIM_ON);
+    lv_slider_set_value(offsetSlider, 5, LV_ANIM_ON);
     lv_obj_set_event_cb(offsetSlider, offset_slider_event_cb);
-    lv_slider_set_range(offsetSlider, -5, 5);
+    lv_slider_set_range(offsetSlider, 0, 10);
         
             /* Create a label below the slider */
             offsetLabel = lv_label_create(lv_scr_act(), NULL);
@@ -133,16 +120,17 @@ void home_screen()
         	lv_obj_set_drag(offsetLabel2, false);
             lv_label_set_text(offsetLabel2, "Offset:");
             lv_label_set_long_mode(offsetLabel2, LV_LABEL_LONG_EXPAND);
-            lv_obj_set_pos(offsetLabel2, 20, 250);                         /*Set its position*/
+            lv_obj_align(offsetLabel2, offsetSlider, LV_ALIGN_OUT_TOP_MID, 0, 0);                         /*Set its position*/
     
-    
+            
+            
     /* Second Slider: Trigger */
     lv_obj_t * triggerSlider = lv_slider_create(lv_scr_act(), NULL);
-    lv_obj_set_pos(triggerSlider, 170, 280);                         /*Set its position*/
+    lv_obj_set_pos(triggerSlider, 170, 295);                         /*Set its position*/
     lv_obj_set_size(triggerSlider, 130, 30);                        /*Set its size*/
-    lv_slider_set_value(triggerSlider, 0, LV_ANIM_ON);
+    lv_slider_set_value(triggerSlider, 5, LV_ANIM_ON);
     lv_obj_set_event_cb(triggerSlider, trigger_slider_event_cb);
-    lv_slider_set_range(triggerSlider, -5, 5);
+    lv_slider_set_range(triggerSlider, 0, 10);
     
             /* Create a label below the slider */
             triggerLabel = lv_label_create(lv_scr_act(), NULL);
@@ -153,17 +141,18 @@ void home_screen()
             /* Create a label above the slider */
         	lv_obj_t* triggerLabel2 = lv_label_create(lv_scr_act(), NULL);
         	lv_obj_set_drag(triggerLabel2, false);
-            lv_label_set_text(triggerLabel2, "Trigger");
-            lv_obj_set_pos(triggerLabel2, 200, 250); 
+            lv_label_set_text(triggerLabel2, "Trigger: ");
+            lv_obj_align(triggerLabel2, triggerSlider, LV_ALIGN_OUT_TOP_MID, 0, 0); 
 
     
+            
     /* Third Slider: Hori. Scale */
     lv_obj_t * horiSlider = lv_slider_create(lv_scr_act(), NULL);
     lv_obj_set_pos(horiSlider, 20, 375);                         /*Set its position*/
     lv_obj_set_size(horiSlider, 130, 30);                        /*Set its size*/
     lv_slider_set_value(horiSlider, 4, LV_ANIM_ON);
     lv_obj_set_event_cb(horiSlider, hori_slider_event_cb);
-    lv_slider_set_range(horiSlider, 0, 9);                      // 11 options for the 11 different data size posibilites
+    lv_slider_set_range(horiSlider, 0, 10);                      // 11 options for the 11 different data size posibilites
     
             /* Create a label below the slider */
             horiLabel1 = lv_label_create(lv_scr_act(), NULL);
@@ -174,9 +163,11 @@ void home_screen()
             /* Create a label above the slider */
         	lv_obj_t* horiLabel2 = lv_label_create(lv_scr_act(), NULL);
         	lv_obj_set_drag(horiLabel2, false);
-            lv_label_set_text(horiLabel2, "Hori. Scale :");
-            lv_obj_set_pos(horiLabel2, 20, 345);                         /*Set its position*/
+            lv_label_set_text(horiLabel2, "Hori. Scale: ");
+            lv_obj_align(horiLabel2, horiSlider, LV_ALIGN_OUT_TOP_MID, 0, 0);
     
+            
+            
     /* Fourth Slider: Vert. Scale */
     lv_obj_t * vertSlider = lv_slider_create(lv_scr_act(), NULL);
     lv_obj_set_pos(vertSlider, 170, 375);                         /*Set its position*/
@@ -194,13 +185,14 @@ void home_screen()
             /* Create a label above the slider */
         	lv_obj_t* vertLabel2 = lv_label_create(lv_scr_act(), NULL);
         	lv_obj_set_drag(vertLabel2, false);
-            lv_label_set_text(vertLabel2, "Vert. Scale :");
-            lv_obj_set_pos(vertLabel2, 170, 345); 
-            
+            lv_label_set_text(vertLabel2, "Vert. Scale: ");
+            lv_obj_align(vertLabel2, vertSlider, LV_ALIGN_OUT_TOP_MID, 0, 0);
     
+            
+            
     /* Fifth Slider: Horizontal Window      Control Range of Points shown */
     lv_obj_t * windowSlider = lv_slider_create(lv_scr_act(), NULL);
-    lv_obj_set_pos(windowSlider, 20, 230);                         /*Set its position*/
+    lv_obj_set_pos(windowSlider, 20, 225);                         /*Set its position*/
     lv_obj_set_size(windowSlider, 280, 30);                        /*Set its size*/
     lv_obj_set_event_cb(windowSlider, window_slider_event_cb);
     //lv_slider_set_range(windowSlider, 0, pow(2, cm4.HoriScale + 6));
@@ -213,6 +205,9 @@ void home_screen()
             lv_obj_set_auto_realign(windowLabel, true);
             lv_obj_align(windowLabel, windowSlider, LV_ALIGN_OUT_BOTTOM_MID, 0, 0);
     
+            
+            
+    /* Display chart                         */        
     chart1 = lv_chart_create(lv_scr_act(), NULL);                     //Add a chart to the current screen
     //lv_obj_set_style(chart1, &style_box);                           //sets the style
     lv_obj_set_pos(chart1, chart_horiPos, chart_vertPos);             /*Set its position*/
@@ -221,7 +216,7 @@ void home_screen()
     //GIVE IMPACT BASED ON THE VERT AND HORI SCALE
     lv_chart_set_div_line_count(chart1, 3, 4);                        //sets the grid lines
     
-    lv_chart_set_point_count(chart1, 200);                              //setting the number of points on the chart
+    lv_chart_set_point_count(chart1, 32);                              //setting the number of points on the chart
     lv_chart_set_type(chart1, LV_CHART_TYPE_POINT);                    //set graph to points, as opposed to lines
                                                                       
 
@@ -245,22 +240,25 @@ void home_screen()
     }
    
     //for(int i = cm4.windowMin; i < cm4.windowMax; ++i){
-    for(int i = 412; i < 612; ++i){
+    for(int i = 0; i < 512; ++i){
         //lv_chart_set_next(chart1, s1, points[i]);
         //lv_chart_set_next(chart1, s1, cm4.RxBuffer[i] + cm4.Offset);
         lv_chart_set_next(chart1, s1, cm4.RxBuffer[i]);
     }
     
-    //Adding an on/off switch
-	lv_obj_t* switchLabel = lv_label_create(lv_scr_act(), NULL);
-	lv_obj_set_drag(switchLabel, false);
-    lv_label_set_text(switchLabel, "On\\Off");
-    lv_obj_set_pos(switchLabel, 85, 435);
     
-    lv_obj_t *sw1 = lv_sw_create(lv_scr_act(), NULL);
+    
+    //Adding an on/off switch 
+    lv_obj_t * sw1 = lv_sw_create(lv_scr_act(), NULL);
     lv_obj_align(sw1, NULL, LV_ALIGN_CENTER, 0, -50);
     lv_obj_set_event_cb(sw1, sw_event_handler);
     //lv_obj_set_event_cb(sw1,  breath_activity_action);             /*Assign a callback to the button*/
-    lv_obj_set_pos(sw1, 170, 435);                         /*Set its position*/
+    lv_obj_set_pos(sw1, 70, 440);                         /*Set its position*/
     lv_obj_set_size(sw1, 90, 30);               /*Set its size*/ 
+    
+    lv_obj_t * switchLabel = lv_label_create(lv_scr_act(), NULL);
+	lv_obj_set_drag(switchLabel, false);
+    lv_label_set_text(switchLabel, "On\\Off");
+    //lv_obj_set_pos(switchLabel, 15, 445);
+    lv_obj_align(switchLabel, sw1, LV_ALIGN_OUT_LEFT_MID, 0, 0);
 }
