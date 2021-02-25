@@ -719,8 +719,3 @@ net \SPIM:Net_847_ff0\
 	switch ":Clockcontainer:ff_permute.Clock[0]ff_div_5==>:SCBcontainer:SCB[5].clock"
 	term   ":SCBcontainer:SCB[5].clock"
 end \SPIM:Net_847_ff0\
-net \SPIM:intr_wire\
-	term   ":SCBcontainer:SCB[5].interrupt"
-	switch ":SCBcontainer:SCB[5].interrupt==>:intc_0:interrupt46.interrupt"
-	term   ":intc_0:interrupt46.interrupt"
-end \SPIM:intr_wire\

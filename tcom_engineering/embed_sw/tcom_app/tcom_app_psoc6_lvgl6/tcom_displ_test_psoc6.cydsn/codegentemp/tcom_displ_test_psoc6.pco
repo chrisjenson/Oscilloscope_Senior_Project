@@ -1,5 +1,5 @@
 # tcom_displ_test_psoc6
-# 2021-02-18 15:11:20Z
+# 2021-02-25 02:13:50Z
 
 dont_use_location SMIF -1 -1 0
 dont_use_location p4usbcell -1 -1 0
@@ -41,7 +41,6 @@ set_location "\I2C_MASTER:SCB\" SCB -1 -1 2
 set_location "\I2C_MASTER:SCB_IRQ\" interrupt -1 -1 43
 set_location "DISP_TICK_ISR" interrupt -1 -1 90
 set_location "\SPIM:SCB\" SCB -1 -1 5
-set_location "\SPIM:SCB_IRQ\" interrupt -1 -1 46
 set_location "\LCD_INTERFACE:state_3\" 1 1 0 1
 set_location "\LCD_INTERFACE:state_2\" 0 1 0 0
 set_location "\LCD_INTERFACE:state_1\" 1 1 0 0

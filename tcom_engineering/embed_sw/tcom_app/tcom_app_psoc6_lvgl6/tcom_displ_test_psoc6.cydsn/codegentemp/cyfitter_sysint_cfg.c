@@ -26,12 +26,6 @@
         .intrPriority = I2C_MASTER_SCB_IRQ__INTC_CORTEXM4_PRIORITY
     };
 
-    /* SPIM_SCB_IRQ */
-    const cy_stc_sysint_t SPIM_SCB_IRQ_cfg = {
-        .intrSrc = (IRQn_Type)SPIM_SCB_IRQ__INTC_NUMBER,
-        .intrPriority = SPIM_SCB_IRQ__INTC_CORTEXM4_PRIORITY
-    };
-
     /* DISP_TICK_ISR */
     const cy_stc_sysint_t DISP_TICK_ISR_cfg = {
         .intrSrc = (IRQn_Type)DISP_TICK_ISR__INTC_NUMBER,

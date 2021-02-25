@@ -1,5 +1,5 @@
 -- Project:   tcom_displ_test_psoc6
--- Generated: 02/18/2021 10:11:20
+-- Generated: 02/24/2021 21:13:50
 -- PSoC Creator  4.3
 
 ENTITY tcom_displ_test_psoc6 IS
@@ -228,7 +228,6 @@ ARCHITECTURE __DEFAULT__ OF tcom_displ_test_psoc6 IS
     ATTRIBUTE Location OF \I2C_MASTER:SCB_IRQ\ : LABEL IS "[IntrContainer=(0)][IntrId=(43)]";
     ATTRIBUTE Location OF DISP_TICK_ISR : LABEL IS "[IntrContainer=(0)][IntrId=(90)]";
     ATTRIBUTE Location OF \SPIM:SCB\ : LABEL IS "F(SCB,5)";
-    ATTRIBUTE Location OF \SPIM:SCB_IRQ\ : LABEL IS "[IntrContainer=(0)][IntrId=(46)]";
     ATTRIBUTE lib_model OF \LCD_INTERFACE:state_3\ : LABEL IS "macrocell3";
     ATTRIBUTE Location OF \LCD_INTERFACE:state_3\ : LABEL IS "U(1,1)";
     ATTRIBUTE lib_model OF \LCD_INTERFACE:state_2\ : LABEL IS "macrocell4";
@@ -2038,15 +2037,6 @@ BEGIN
             tr_tx_req => Net_89,
             tr_rx_req => Net_88,
             tr_i2c_scl_filtered => \SPIM:Net_498\);
-
-    \SPIM:SCB_IRQ\:interrupt
-        GENERIC MAP(
-            cy_registers => "",
-            deepsleep_required => 0,
-            int_type => "10")
-        PORT MAP(
-            interrupt => \SPIM:intr_wire\,
-            clock => ClockBlock_PeriClk);
 
     \LCD_INTERFACE:state_3\:macrocell
         GENERIC MAP(

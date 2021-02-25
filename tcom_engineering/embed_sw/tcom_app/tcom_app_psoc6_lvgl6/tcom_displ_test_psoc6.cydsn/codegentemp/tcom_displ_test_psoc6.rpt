@@ -1,13 +1,13 @@
-Loading plugins phase: Elapsed time ==> 0s.226ms
+Loading plugins phase: Elapsed time ==> 0s.156ms
 <CYPRESSTAG name="CyDsfit arguments...">
 cydsfit arguments: -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -.fdsreffile=referenced_files.txt -p C:\Users\tmj32\Documents\TCNJ\Senior_Project\Oscilloscope_Senior_Project\tcom_engineering\embed_sw\tcom_app\tcom_app_psoc6_lvgl6\tcom_displ_test_psoc6.cydsn\tcom_displ_test_psoc6.cyprj -d CYBLE-416045-02 -s C:\Users\tmj32\Documents\TCNJ\Senior_Project\Oscilloscope_Senior_Project\tcom_engineering\embed_sw\tcom_app\tcom_app_psoc6_lvgl6\tcom_displ_test_psoc6.cydsn\Generated_Source\PSoC6 -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE
 </CYPRESSTAG>
 <CYPRESSTAG name="Design elaboration results...">
 </CYPRESSTAG>
-Elaboration phase: Elapsed time ==> 1s.960ms
+Elaboration phase: Elapsed time ==> 1s.421ms
 <CYPRESSTAG name="HDL generation results...">
 </CYPRESSTAG>
-HDL generation phase: Elapsed time ==> 0s.095ms
+HDL generation phase: Elapsed time ==> 0s.078ms
 <CYPRESSTAG name="Synthesis results...">
 
      | | | | | | |
@@ -41,7 +41,7 @@ Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\tmj32
 ======================================================================
 
 vlogfe V6.3 IR 41:  Verilog parser
-Thu Feb 18 10:11:05 2021
+Wed Feb 24 21:13:39 2021
 
 
 ======================================================================
@@ -51,7 +51,7 @@ Options  :    -yv2 -q10 tcom_displ_test_psoc6.v
 ======================================================================
 
 vpp V6.3 IR 41:  Verilog Pre-Processor
-Thu Feb 18 10:11:05 2021
+Wed Feb 24 21:13:39 2021
 
 Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\GraphicLCDIntf_v1_80\GraphicLCDIntf_v1_80.v'
 Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\warp\lib\common\cypress.v'
@@ -86,7 +86,7 @@ Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\tmj32
 ======================================================================
 
 tovif V6.3 IR 41:  High-level synthesis
-Thu Feb 18 10:11:06 2021
+Wed Feb 24 21:13:40 2021
 
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\warp\lib\common\std.vhd'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\warp\lib\common\cypress.vhd'.
@@ -116,7 +116,7 @@ Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\tmj32
 ======================================================================
 
 topld V6.3 IR 41:  Synthesis and optimization
-Thu Feb 18 10:11:06 2021
+Wed Feb 24 21:13:40 2021
 
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\warp\lib\common\std.vhd'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\warp\lib\common\cypress.vhd'.
@@ -213,9 +213,9 @@ Removing Lhs of wire \SPIM:sclk_s_wire\[155] = zero[23]
 Removing Lhs of wire \SPIM:select_s_wire\[160] = zero[23]
 Removing Lhs of wire \SPIM:miso_m_wire\[162] = Net_93[169]
 Removing Lhs of wire \SPIM:mosi_s_wire\[163] = zero[23]
-Removing Rhs of wire Net_94[172] = \SPIM:mosi_m_wire\[161]
-Removing Rhs of wire Net_95[173] = \SPIM:sclk_m_wire\[154]
-Removing Rhs of wire Net_96[174] = \SPIM:select_m_wire_0\[159]
+Removing Rhs of wire Net_94[171] = \SPIM:mosi_m_wire\[161]
+Removing Rhs of wire Net_95[172] = \SPIM:sclk_m_wire\[154]
+Removing Rhs of wire Net_96[173] = \SPIM:select_m_wire_0\[159]
 
 ------------------------------------------------------
 Aliased 0 equations, 37 wires.
@@ -265,14 +265,14 @@ CYPRESS_DIR    : C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\wa
 Warp Program   : C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\warp\bin\warp.exe
 Warp Arguments : -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\tmj32\Documents\TCNJ\Senior_Project\Oscilloscope_Senior_Project\tcom_engineering\embed_sw\tcom_app\tcom_app_psoc6_lvgl6\tcom_displ_test_psoc6.cydsn\tcom_displ_test_psoc6.cyprj -dcpsoc3 tcom_displ_test_psoc6.v -verilog
 </CYPRESSTAG>
-Warp synthesis phase: Elapsed time ==> 1s.992ms
+Warp synthesis phase: Elapsed time ==> 1s.371ms
 <CYPRESSTAG name="Fitter results...">
 <CYPRESSTAG name="Fitter startup details...">
-cyp3fit: V4.3.0.1445, Family: PSoC3, Started at: Thursday, 18 February 2021 10:11:07
+cyp3fit: V4.3.0.1445, Family: PSoC3, Started at: Wednesday, 24 February 2021 21:13:41
 Options: -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\tmj32\Documents\TCNJ\Senior_Project\Oscilloscope_Senior_Project\tcom_engineering\embed_sw\tcom_app\tcom_app_psoc6_lvgl6\tcom_displ_test_psoc6.cydsn\tcom_displ_test_psoc6.cyprj -d CYBLE-416045-02 tcom_displ_test_psoc6.v -verilog
 </CYPRESSTAG>
 <CYPRESSTAG name="Design parsing">
-Design parsing phase: Elapsed time ==> 0s.960ms
+Design parsing phase: Elapsed time ==> 0s.656ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Tech Mapping">
 <CYPRESSTAG name="Initial Mapping" icon="FILE_RPT_TECHM">
@@ -1548,16 +1548,6 @@ Design Equations
             deepsleep_required = 0
             int_type = "10"
         }
-
-    interrupt: Name =\SPIM:SCB_IRQ\
-        PORT MAP (
-            interrupt => \SPIM:intr_wire\ );
-        Properties:
-        {
-            cy_registers = ""
-            deepsleep_required = 0
-            int_type = "10"
-        }
     </CYPRESSTAG>
 </CYPRESSTAG>
 <CYPRESSTAG name="Technology mapping summary" expanded>
@@ -1571,7 +1561,7 @@ Resource Type                 : Used : Free :  Max :  % Used
 Digital Clocks                :    0 :    8 :    8 :  0.00 %
 Crypto Accelerator            :    0 :    1 :    1 :  0.00 %
 Interrupts [CM0+]             :    5 :   27 :   32 : 15.63 %
-Interrupts [CM4]              :    3 :  144 :  147 :  2.04 %
+Interrupts [CM4]              :    2 :  145 :  147 :  1.36 %
 IO                            :   22 :   14 :   36 : 61.11 %
 Interprocessor Communication  :    0 :   16 :   16 :  0.00 %
 MCWDT                         :    0 :    2 :    2 :  0.00 %
@@ -1603,8 +1593,8 @@ Sample and Hold               :    0 :    1 :    1 :  0.00 %
 SAR ADC                       :    0 :    1 :    1 :  0.00 %
 DieTemp Sensor                :    0 :    1 :    1 :  0.00 %
 </CYPRESSTAG>
-Technology Mapping: Elapsed time ==> 0s.178ms
-Tech Mapping phase: Elapsed time ==> 0s.284ms
+Technology Mapping: Elapsed time ==> 0s.171ms
+Tech Mapping phase: Elapsed time ==> 0s.231ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Placement">
 <CYPRESSTAG name="FFB & IO Pre Placement">
@@ -1644,15 +1634,15 @@ CPUSS                               : CPUSS_[FFB(CPUSS,0)]
 </CYPRESSTAG>
 </CYPRESSTAG>
 <CYPRESSTAG name="Real Analog Placement">
-Elapsed time ==> 0.1682676s
+Elapsed time ==> 0.1206381s
 </CYPRESSTAG>
-Analog Placement phase: Elapsed time ==> 2s.039ms
+Analog Placement phase: Elapsed time ==> 1s.062ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Routing">
 <CYPRESSTAG name="Analog Routing">
-Route success=True, Iterations=1 Elapsed=0.0010290 secs
+Route success=True, Iterations=1 Elapsed=0.0007450 secs
 </CYPRESSTAG>
-Analog Routing phase: Elapsed time ==> 0s.001ms
+Analog Routing phase: Elapsed time ==> 0s.000ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Code Generation">
 ============ Analog Final Answer Routes ============
@@ -1663,7 +1653,7 @@ Map of item to net {
 }
 Mux Info {
 }
-Analog Code Generation phase: Elapsed time ==> 0s.025ms
+Analog Code Generation phase: Elapsed time ==> 0s.015ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Digital Placement">
 <CYPRESSTAG name="Detailed placement messages">
@@ -1691,14 +1681,14 @@ PLD Packing Summary
 <CYPRESSTAG name="Packed PLD Contents">
 Packed PLD Contents not displayed at this verbose level.</CYPRESSTAG>
 </CYPRESSTAG>
-PLD Packing: Elapsed time ==> 0s.001ms
+PLD Packing: Elapsed time ==> 0s.000ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Partitioning">
 <CYPRESSTAG name="Initial Partitioning Summary">
 Initial Partitioning Summary not displayed at this verbose level.</CYPRESSTAG>
 <CYPRESSTAG name="Final Partitioning Summary">
 Final Partitioning Summary not displayed at this verbose level.</CYPRESSTAG>
-Partitioning: Elapsed time ==> 0s.038ms
+Partitioning: Elapsed time ==> 0s.015ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Final Placement Summary">
 
@@ -2018,16 +2008,6 @@ Intr container @ [IntrContainer=(0)]:
     interrupt: Name =\I2C_MASTER:SCB_IRQ\
         PORT MAP (
             interrupt => \I2C_MASTER:intr_wire\ );
-        Properties:
-        {
-            cy_registers = ""
-            deepsleep_required = 0
-            int_type = "10"
-        }
-  Intr@ [IntrContainer=(0)][IntrId=(46)] 
-    interrupt: Name =\SPIM:SCB_IRQ\
-        PORT MAP (
-            interrupt => \SPIM:intr_wire\ );
         Properties:
         {
             cy_registers = ""
@@ -3143,33 +3123,33 @@ Port | Pin | Fixed |      Type |       Drive Mode |                       Name |
 </CYPRESSTAG>
 </CYPRESSTAG>
 </CYPRESSTAG>
-Digital component placer commit/Report: Elapsed time ==> 0s.058ms
-Digital Placement phase: Elapsed time ==> 8s.529ms
+Digital component placer commit/Report: Elapsed time ==> 0s.031ms
+Digital Placement phase: Elapsed time ==> 6s.195ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Digital Routing">
 "C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\bin/sjrouter.exe" --xml-path "C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\dev\psoc6/0/route_arch-rrg.cydata" --vh2-path "tcom_displ_test_psoc6_r.vh2" --pcf-path "tcom_displ_test_psoc6.pco" --des-name "tcom_displ_test_psoc6" --dsf-path "tcom_displ_test_psoc6.dsf" --sdc-path "tcom_displ_test_psoc6.sdc" --lib-path "tcom_displ_test_psoc6_r.lib"
 Routing successful.
-Digital Routing phase: Elapsed time ==> 2s.656ms
+Digital Routing phase: Elapsed time ==> 1s.903ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Bitstream Generation">
-Bitstream Generation phase: Elapsed time ==> 0s.779ms
+Bitstream Generation phase: Elapsed time ==> 0s.499ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Bitstream Verification">
-Bitstream Verification phase: Elapsed time ==> 0s.001ms
+Bitstream Verification phase: Elapsed time ==> 0s.000ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Static timing analysis">
 Timing report is in tcom_displ_test_psoc6_timing.html.
-Static timing analysis phase: Elapsed time ==> 13s.047ms
+Static timing analysis phase: Elapsed time ==> 9s.821ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Data reporting">
 Data reporting phase: Elapsed time ==> 0s.000ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Database update...">
-Design database save phase: Elapsed time ==> 0s.254ms
+Design database save phase: Elapsed time ==> 0s.156ms
 </CYPRESSTAG>
-cydsfit: Elapsed time ==> 28s.659ms
+cydsfit: Elapsed time ==> 20s.588ms
 </CYPRESSTAG>
-Fitter phase: Elapsed time ==> 28s.660ms
-API generation phase: Elapsed time ==> 1s.428ms
-Dependency generation phase: Elapsed time ==> 0s.034ms
+Fitter phase: Elapsed time ==> 20s.588ms
+API generation phase: Elapsed time ==> 1s.184ms
+Dependency generation phase: Elapsed time ==> 0s.031ms
 Cleanup phase: Elapsed time ==> 0s.000ms

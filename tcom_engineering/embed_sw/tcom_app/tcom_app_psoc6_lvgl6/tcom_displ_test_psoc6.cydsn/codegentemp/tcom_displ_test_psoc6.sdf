@@ -1,6 +1,6 @@
 (DELAYFILE
  (SDFVERSION "IEEE 1497 4.0")
- (DATE "2021-02-18T15:11:35Z")
+ (DATE "2021-02-25T02:14:01Z")
  (DESIGN "tcom_displ_test_psoc6")
  (VENDOR "Cypress Semiconductor")
  (PROGRAM "PSoC Creator")
@@ -28,7 +28,6 @@
     (INTERCONNECT ClockBlock.periclk \\LCD_INTERFACE\:state_3\\.clock_0 (0.000:0.000:0.000))
     (INTERCONNECT ClockBlock.periclk \\I2C_MASTER\:SCB_IRQ\\.clock (0.000:0.000:0.000))
     (INTERCONNECT ClockBlock.periclk DISP_TICK_ISR.clock (0.000:0.000:0.000))
-    (INTERCONNECT ClockBlock.periclk \\SPIM\:SCB_IRQ\\.clock (0.000:0.000:0.000))
     (INTERCONNECT ClockBlock.ff_div_48 PASS_BLOCK.clock_pump_peri (0.000:0.000:0.000))
     (INTERCONNECT Net_127.q d\(0\).oe (14.521:16.038:16.038))
     (INTERCONNECT Net_127.q d\(1\).oe (12.661:14.178:14.178))
@@ -133,7 +132,6 @@
     (INTERCONNECT \\LCD_INTERFACE\:GraphLcd8\:Lsb\\.z1_comb \\LCD_INTERFACE\:state_1\\.main_6 (2.092:2.922:2.922))
     (INTERCONNECT \\LCD_INTERFACE\:GraphLcd8\:Lsb\\.z1_comb \\LCD_INTERFACE\:state_2\\.main_4 (1.009:1.314:1.314))
     (INTERCONNECT ClockBlock.ff_div_5 \\SPIM\:SCB\\.clock (0.000:0.000:0.000))
-    (INTERCONNECT \\SPIM\:SCB\\.interrupt \\SPIM\:SCB_IRQ\\.interrupt (0.000:0.000:0.000))
     (INTERCONNECT d\(0\).pad_out d\(0\).pad_in (0.000:0.000:0.000))
     (INTERCONNECT d\(1\).pad_out d\(1\).pad_in (0.000:0.000:0.000))
     (INTERCONNECT d\(2\).pad_out d\(2\).pad_in (0.000:0.000:0.000))
