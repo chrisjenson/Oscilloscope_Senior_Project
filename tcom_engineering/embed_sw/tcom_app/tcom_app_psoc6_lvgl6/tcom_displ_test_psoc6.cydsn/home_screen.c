@@ -216,7 +216,7 @@ void home_screen()
     //GIVE IMPACT BASED ON THE VERT AND HORI SCALE
     lv_chart_set_div_line_count(chart1, 3, 4);                        //sets the grid lines
     
-    lv_chart_set_point_count(chart1, 32);                              //setting the number of points on the chart
+    lv_chart_set_point_count(chart1, 256);                              //setting the number of points on the chart
     lv_chart_set_type(chart1, LV_CHART_TYPE_POINT);                    //set graph to points, as opposed to lines
                                                                       
 
@@ -240,7 +240,7 @@ void home_screen()
     }
    
     //for(int i = cm4.windowMin; i < cm4.windowMax; ++i){
-    for(int i = 0; i < 512; ++i){
+    for(int i = 0; i < 256; ++i){
         //lv_chart_set_next(chart1, s1, points[i]);
         //lv_chart_set_next(chart1, s1, cm4.RxBuffer[i] + cm4.Offset);
         lv_chart_set_next(chart1, s1, cm4.RxBuffer[i]);

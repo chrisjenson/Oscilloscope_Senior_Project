@@ -127,7 +127,7 @@ main( void )
         
         
         //write reg 4 all zeroes
-        cm4.TxBuffer[0] = 0b0100010000000000;  //011 01001 00000000
+        //cm4.TxBuffer[0] = 0b0100010000000000;  //011 01001 00000000
         
         //Cy_GPIO_Write(Pin_1_PORT, Pin_1_NUM, 1);
         
@@ -139,7 +139,7 @@ main( void )
         
         CyDelay(3000);
         
-       uint32_t NUM_TO_WRITE = 1; 
+       uint32_t NUM_TO_WRITE = 8; 
        int ss_state = 1;
         
         //loop to send each command in the txBuffer
@@ -180,7 +180,9 @@ main( void )
                 
                 //while((Cy_SCB_SPI_GetRxFifoStatus(SPIM_HW) & CY_SCB_SPI_RX_NOT_EMPTY)){
                 while((Cy_SCB_SPI_GetNumInRxFifo(SPIM_HW) != NUM_TO_WRITE)){}
-                Cy_SCB_SPI_ReadArray(SPIM_HW, cm4.RxBuffer, 1);
+                Cy_SCB_SPI_ReadArray(SPIM_HW, cm4.RxBuffer, NUM_TO_WRITE);
+                //cm4.RxBuffer[i] = Cy_SCB_SPI_Read(SPIM_HW);
+                
                 // ss_state = !ss_state;  Cy_GPIO_Write(SEL_PIN_PORT, SEL_PIN_NUM, ss_state); 
                 
                 
