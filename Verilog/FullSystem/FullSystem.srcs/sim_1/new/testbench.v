@@ -25,6 +25,7 @@ module testbench();
     /////////////////////
     //Initialize input Data
     //Obsolete due to DataSimulation Module
+    /*
     `define numInputs     (16384)
     
     wire [9:0] stimInData; //
@@ -42,10 +43,10 @@ module testbench();
             stimData[i] = $random();
         end
     end
+    
     //End intialize data
     ///////////////////////////////////
     
-    wire ADC_SampleClock; //Input from Timing Gen
     
     always @(posedge clk)
     begin
@@ -69,7 +70,10 @@ module testbench();
             stimInCount <= stimInCount + 1;
         end
     end
+    */
     
+    wire ADC_SampleClock; //Input from Timing Gen
+
     ////////////////////////////////////////////////////////////
     //SPI TB
     
@@ -87,20 +91,30 @@ module testbench();
     reg [15:0] commandArray[4:0];
     initial
     begin
-        commandNum <= 0;
         SlaveSel <= 1;
         SCLK = 1;
         SCLKCount = 0;
         index = 15;
+    end
+    
+    initial 
+    begin
         commandDone <= 0;
+        commandNum <= 0;
     end
     
     initial
     begin  
-        commandArray[0] = 16'b0110110111111111; //cmd = Read Ram, params = 01111 -> (8 x 16 bits out), data = x... PARAMS = 00100 -> (1024 X 16 out)
-        commandArray[1] = 16'b0000000000000000;                                      //If changing number of data points being read (1024) need to change OneZeroTwoFourCounter below
-        commandArray[2] = 16'b0010010011111111; //cmd = Read, params = 4, data = x
-        commandArray[3] = 16'b0100010011110000; //cmd = write, params = 4, data = 8'hF0
+        commandArray[0] = 16'b0000000000000000;
+        commandArray[1] = 16'b0000000000000000;
+        commandArray[2] = 16'b0110110111111111; //cmd = Read Ram, params = 01111 -> (8 x 16 bits out), data = x... PARAMS = 00100 -> (1024 X 16 out)
+        commandArray[3] = 16'b0000000000000000;                                      //If changing number of data points being read (1024) need to change OneZeroTwoFourCounter below
+        commandArray[4] = 16'b0110110111111111; //cmd = Read, params = 4, data = x
+        commandArray[5] = 16'b0110110111111111; //cmd = write, params = 4, data = 8'hF0
+        commandArray[6] = 16'b0000000000000000;
+        commandArray[7] = 16'b0000000000000000;
+        
+
     end 
     
     always @(posedge clk) 
@@ -136,6 +150,12 @@ module testbench();
             begin
                 commandDone <= 0;
                 #100;
+                if (commandNum == 2)
+                begin
+                    reset <= 1;
+                    #10
+                    reset <= 0;
+                end
                 commandNum <= commandNum + 1;
                 SlaveSel <= 0;
             end
@@ -183,7 +203,7 @@ module testbench();
                         index <= index - 1;
                     end
                 end
-                else if ((command[15:13] == 3'bXXX) ||  (command[15:13] == 3'b000))
+                else if (command[15:13] == 3'b000)
                 begin
                     //IDLE
                     #40 
@@ -194,7 +214,6 @@ module testbench();
                 end
                 else if ((command[15:13] == 3'b001) ||  (command[15:13] == 3'b010)) //REG READ/WRITE
                 begin
-                     
                     MOSI <= command[index];
                     index <= index - 1;
                     if (index == 0)

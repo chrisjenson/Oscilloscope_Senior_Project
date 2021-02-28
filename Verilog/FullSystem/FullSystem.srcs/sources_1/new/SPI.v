@@ -9,8 +9,9 @@ module SPI(
         input SCLK_Raw,
         //For debug
         //output DebugFlag,
-        output DebugBuffer_RdEn,
+        output reg DebugRAMReadRecieved,
         output DebugNotSlaveSel,
+        output DebugSlaveSel,
         output DebugMOSI,
         output DebugSCLK,
         output [7:0] DebugSPI_Ins,
@@ -29,11 +30,9 @@ module SPI(
     );
     reg [2:0] SPI_Cmd; 
 
-    
-    
     assign DebugSPI_Ins = {SPI_Cmd,SPI_Params};
     //assign DebugFlag = Reg_WrEn & write_data_strobe; //Reg_RdEn;//
-    assign DebugBuffer_RdEn = Buffer_RdEn;
+    //assign DebugBuffer_RdEn = Buffer_RdEn;
     assign DebugNotSlaveSel = ~SlaveSel;
     assign DebugMOSI = MOSI_Raw;
     assign DebugSCLK = SCLK_Raw;
@@ -90,114 +89,126 @@ module SPI(
         //Reg_WrEn
         //Buffer_RdEn
         //BUFFER_InAmount
-        if (SlaveSel)
+        if (reset)
         begin
             Reg_RdEn <= 0;
             Reg_WrEn <= 0;
             Buffer_RdEn <= 0;
             BUFFER_InAmount <= 0;
+            DebugRAMReadRecieved <= 0;
         end
         else
         begin
-            case (SPI_Cmd)
-                3'b001: //ReadReg- MISO //8 Bits in 8 out
-                begin
-                    Reg_RdEn <= 1;
-                    Reg_WrEn <= 0;
-                    Buffer_RdEn <= 0;
-                    BUFFER_InAmount <= 0;
-                end
-                3'b010: //Write- MOSI 8 bits in
-                begin
-                    Reg_RdEn <= 0;
-                    Reg_WrEn <= 1;
-                    Buffer_RdEn <= 0;
-                    BUFFER_InAmount <= 0;
-                end
-                3'b011: //ReadData- MISO RAM Read- this is default mode //8 bits
-                begin
-                    Reg_RdEn <= 0;
-                    Reg_WrEn <= 0;
-                    Buffer_RdEn <= 1;
-                    case (SPI_Params)
-                        5'b00000:
-                        begin
-                            BUFFER_InAmount <= 262144; //2^18 = max ram size
-                        end
-                        5'b00001:
-                        begin
-                            BUFFER_InAmount <= 131072; //2^18
-                        end
-                        5'b00010:
-                        begin
-                            BUFFER_InAmount <= 65536;
-                        end
-                        5'b00011:
-                        begin
-                            BUFFER_InAmount <= 32768;
-                        end
-                        5'b00100:
-                        begin
-                            BUFFER_InAmount <= 16384;
-                        end
-                        5'b00101:
-                        begin
-                            BUFFER_InAmount <= 8192; //2^14
-                        end
-                        5'b00110:
-                        begin
-                            BUFFER_InAmount <= 4096; 
-                        end
-                        5'b00111:
-                        begin
-                            BUFFER_InAmount <= 2048;
-                        end
-                        5'b01000:
-                        begin
-                            BUFFER_InAmount <= 1024;
-                        end
-                        5'b01001:
-                        begin
-                            BUFFER_InAmount <= 512;
-                        end
-                        5'b01010:
-                        begin
-                            BUFFER_InAmount <= 256;
-                        end
-                        5'b01011:
-                        begin
-                            BUFFER_InAmount <= 128;
-                        end
-                        5'b01100:
-                        begin
-                            BUFFER_InAmount <= 64;
-                        end
-                        5'b01101:
-                        begin
-                            BUFFER_InAmount <= 32;
-                        end
-                        5'b01110:
-                        begin
-                            BUFFER_InAmount <= 16;
-                        end
-                        5'b01111:
-                        begin
-                            BUFFER_InAmount <= 8;
-                        end
-                        default:
-                        begin
-                            BUFFER_InAmount <= 0;
-                        end
-                    endcase
-                end
-                default:
-                begin
-                    Reg_RdEn <= 0;
-                    Reg_WrEn <= 0;
-                    Buffer_RdEn <= 0;
-                    BUFFER_InAmount <= 0;
-                end
-            endcase
+            if (SlaveSel)
+            begin
+                Reg_RdEn <= 0;
+                Reg_WrEn <= 0;
+                Buffer_RdEn <= 0;
+                BUFFER_InAmount <= 0;
+            end
+            else
+            begin
+                case (SPI_Cmd)
+                    3'b001: //ReadReg- MISO //8 Bits in 8 out
+                    begin
+                        Reg_RdEn <= 1;
+                        Reg_WrEn <= 0;
+                        Buffer_RdEn <= 0;
+                        BUFFER_InAmount <= 0;
+                    end
+                    3'b010: //Write- MOSI 8 bits in
+                    begin
+                        Reg_RdEn <= 0;
+                        Reg_WrEn <= 1;
+                        Buffer_RdEn <= 0;
+                        BUFFER_InAmount <= 0;
+                    end
+                    3'b011: //ReadData- MISO RAM Read- this is default mode //8 bits
+                    begin
+                        Reg_RdEn <= 0;
+                        Reg_WrEn <= 0;
+                        Buffer_RdEn <= 1;
+                        DebugRAMReadRecieved <= 1;
+                        case (SPI_Params)
+                            5'b00000:
+                            begin
+                                BUFFER_InAmount <= 262144; //2^18 = max ram size
+                            end
+                            5'b00001:
+                            begin
+                                BUFFER_InAmount <= 131072; //2^18
+                            end
+                            5'b00010:
+                            begin
+                                BUFFER_InAmount <= 65536;
+                            end
+                            5'b00011:
+                            begin
+                                BUFFER_InAmount <= 32768;
+                            end
+                            5'b00100:
+                            begin
+                                BUFFER_InAmount <= 16384;
+                            end
+                            5'b00101:
+                            begin
+                                BUFFER_InAmount <= 8192; //2^14
+                            end
+                            5'b00110:
+                            begin
+                                BUFFER_InAmount <= 4096; 
+                            end
+                            5'b00111:
+                            begin
+                                BUFFER_InAmount <= 2048;
+                            end
+                            5'b01000:
+                            begin
+                                BUFFER_InAmount <= 1024;
+                            end
+                            5'b01001:
+                            begin
+                                BUFFER_InAmount <= 512;
+                            end
+                            5'b01010:
+                            begin
+                                BUFFER_InAmount <= 256;
+                            end
+                            5'b01011:
+                            begin
+                                BUFFER_InAmount <= 128;
+                            end
+                            5'b01100:
+                            begin
+                                BUFFER_InAmount <= 64;
+                            end
+                            5'b01101:
+                            begin
+                                BUFFER_InAmount <= 32;
+                            end
+                            5'b01110:
+                            begin
+                                BUFFER_InAmount <= 16;
+                            end
+                            5'b01111:
+                            begin
+                                BUFFER_InAmount <= 8;
+                            end
+                            default:
+                            begin
+                                BUFFER_InAmount <= 0;
+                            end
+                        endcase
+                    end
+                    default:
+                    begin
+                        Reg_RdEn <= 0;
+                        Reg_WrEn <= 0;
+                        Buffer_RdEn <= 0;
+                        BUFFER_InAmount <= 0;
+                    end
+                endcase
+            end
         end
     end
     
@@ -217,33 +228,41 @@ module SPI(
     begin
         new_instruction_strobe <= 0;
         new_data_strobe <= 0;
-        if (SlaveSel) 
-        begin //Command reset
+        if (reset)
+        begin
             SPI_InInstructionSixteenCounter <= 15;
             SPI_InBits <= 0;
         end
         else
         begin
-            if (!Buffer_RdEn && !Reg_RdEn) //This needs to be gated so will not change instruction if performing MISO. DEBUG: DOES THIS MATTER?
+            if (SlaveSel) 
+            begin //Command reset
+                SPI_InInstructionSixteenCounter <= 15;
+                SPI_InBits <= 0;
+            end
+            else
             begin
-                if (sck_posedge_pulse)
+                if (!Buffer_RdEn && !Reg_RdEn) //This needs to be gated so will not change instruction if performing MISO. DEBUG: DOES THIS MATTER?
                 begin
-                    SPI_InBits[SPI_InInstructionSixteenCounter] <= MOSI;
-                    
-                    if (SPI_InInstructionSixteenCounter != 0)
+                    if (sck_posedge_pulse)
                     begin
-                        SPI_InInstructionSixteenCounter <= SPI_InInstructionSixteenCounter - 1;
-                    end
-
-                    if (SPI_InInstructionSixteenCounter == 8)
-                    begin
-                        new_instruction_strobe <= 1; //High for one clock cycle //DEBUG: STROBE ON CLK NOT SPICLK
-                    end
-                    
-                    if (SPI_InInstructionSixteenCounter == 0)
-                    begin
-                        SPI_InBits[SPI_InInstructionSixteenCounter] <= MOSI; //Need this here in order to get 0th value. DEBUG: FIND A BETTER METHOD
-                        new_data_strobe <= 1;
+                        SPI_InBits[SPI_InInstructionSixteenCounter] <= MOSI;
+                        
+                        if (SPI_InInstructionSixteenCounter != 0)
+                        begin
+                            SPI_InInstructionSixteenCounter <= SPI_InInstructionSixteenCounter - 1;
+                        end
+    
+                        if (SPI_InInstructionSixteenCounter == 8)
+                        begin
+                            new_instruction_strobe <= 1; //High for one clock cycle //DEBUG: STROBE ON CLK NOT SPICLK
+                        end
+                        
+                        if (SPI_InInstructionSixteenCounter == 0)
+                        begin
+                            SPI_InBits[SPI_InInstructionSixteenCounter] <= MOSI; //Need this here in order to get 0th value. DEBUG: FIND A BETTER METHOD
+                            new_data_strobe <= 1;
+                        end
                     end
                 end
             end
@@ -261,17 +280,25 @@ module SPI(
     //Outputs
         //SPI_Cmd
         //SPI_Params
-        if (SlaveSel)
+        if (reset)
         begin
             SPI_Cmd <= 0;   
-            SPI_Params <= 0;
+            SPI_Params <= 0;    
         end
         else
         begin
-            if (new_instruction_strobe) //Will only be high 1 cycle
+            if (SlaveSel)
             begin
-               SPI_Cmd <= SPI_InBits[15:13];   
-               SPI_Params <= SPI_InBits[12:8];
+                SPI_Cmd <= 0;   
+                SPI_Params <= 0;
+            end
+            else
+            begin
+                if (new_instruction_strobe) //Will only be high 1 cycle
+                begin
+                   SPI_Cmd <= SPI_InBits[15:13];   
+                   SPI_Params <= SPI_InBits[12:8];
+                end
             end
         end
     end
@@ -288,16 +315,23 @@ module SPI(
         //SPI_Data
         //write_data_strobe- ANDed with WrEn in u_REGS
         write_data_strobe <= 0;
-        if (SlaveSel)
+        if (reset)
         begin
             SPI_Data <= 0;
         end
         else
         begin
-            if (new_data_strobe) //Will only be high 1 cycle
+            if (SlaveSel)
             begin
-                SPI_Data <= SPI_InBits[7:0];
-                write_data_strobe <= 1;
+                SPI_Data <= 0;
+            end
+            else
+            begin
+                if (new_data_strobe) //Will only be high 1 cycle
+                begin
+                    SPI_Data <= SPI_InBits[7:0];
+                    write_data_strobe <= 1;
+                end
             end
         end
     end
@@ -319,33 +353,42 @@ module SPI(
             //FIFO_OutRTR
         
         FIFO_OutRTR <= 0;
-        if (SlaveSel)
+        if (reset)
         begin
             SPI_OutEightCount <= 7;
             SPI_OutSixteenCount <= 4'hF;
-            MISO <= 0; //DEBUG: Default 0?
+            MISO <= 0; //DEBUG: Default 0?    
         end
-        else 
+        else
         begin
-            if (sck_negedge_pulse) //Drive on neg edge
+            if (SlaveSel)
             begin
-                if (Reg_RdEn)
+                SPI_OutEightCount <= 7;
+                SPI_OutSixteenCount <= 4'hF;
+                MISO <= 0; //DEBUG: Default 0?
+            end
+            else 
+            begin
+                if (sck_negedge_pulse) //Drive on neg edge
                 begin
-                    MISO <= Reg_DataOut[SPI_OutEightCount];//Why use two counters? 8 and 16? maybe just use one 16 count 
-                    if (SPI_OutEightCount > 0)
+                    if (Reg_RdEn)
                     begin
-                        SPI_OutEightCount <= SPI_OutEightCount - 1;
-                        //Dont reset here, wait till SlaveSel to reset
+                        MISO <= Reg_DataOut[SPI_OutEightCount];//Why use two counters? 8 and 16? maybe just use one 16 count 
+                        if (SPI_OutEightCount > 0)
+                        begin
+                            SPI_OutEightCount <= SPI_OutEightCount - 1;
+                            //Dont reset here, wait till SlaveSel to reset
+                        end
                     end
-                end
-                else if (Buffer_RdEn)
-                begin
-                    MISO <= FIFO_OutData[SPI_OutSixteenCount];
-                    if (SPI_OutSixteenCount == 0)
+                    else if (Buffer_RdEn)
                     begin
-                        FIFO_OutRTR <= 1;
+                        MISO <= FIFO_OutData[SPI_OutSixteenCount];
+                        if (SPI_OutSixteenCount == 0)
+                        begin
+                            FIFO_OutRTR <= 1;
+                        end
+                        SPI_OutSixteenCount <= SPI_OutSixteenCount - 1;
                     end
-                    SPI_OutSixteenCount <= SPI_OutSixteenCount - 1;
                 end
             end
         end

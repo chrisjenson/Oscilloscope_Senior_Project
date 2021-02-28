@@ -28,7 +28,14 @@ module DataSimulation(
         begin
             if (ADC_SampleClock_posedge_pulse)
             begin
-                SimData <= SimData + 1;
+                if (SimData > 100)
+                begin
+                    SimData <= 0;
+                end
+                else
+                begin
+                    SimData <= SimData + 1;
+                end
             end
         end
     end

@@ -12,14 +12,14 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="1189944136fs"></ZoomEndTime>
-      <Cursor1Time time="45000000fs"></Cursor1Time>
+      <ZoomEndTime time="4280000001fs"></ZoomEndTime>
+      <Cursor1Time time="21145000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="121"></NameColumnWidth>
+      <NameColumnWidth column_width="117"></NameColumnWidth>
       <ValueColumnWidth column_width="58"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="84" />
+   <WVObjectSize size="83" />
    <wvobject type="divider" fp_name="divider85">
       <obj_property name="label">Top</obj_property>
       <obj_property name="DisplayName">label</obj_property>
@@ -27,10 +27,6 @@
    <wvobject fp_name="/testbench/u_Top/reset" type="logic">
       <obj_property name="ElementShortName">reset</obj_property>
       <obj_property name="ObjectShortName">reset</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench/u_Top/DebugRegister" type="array">
-      <obj_property name="ElementShortName">DebugRegister[7:0]</obj_property>
-      <obj_property name="ObjectShortName">DebugRegister[7:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/testbench/u_Top/DebugSCLK" type="logic">
       <obj_property name="ElementShortName">DebugSCLK</obj_property>
@@ -104,10 +100,6 @@
    <wvobject fp_name="/testbench/u_Top/u_REGS/WrEn" type="logic">
       <obj_property name="ElementShortName">WrEn</obj_property>
       <obj_property name="ObjectShortName">WrEn</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench/u_Top/DebugRegister" type="array">
-      <obj_property name="ElementShortName">DebugRegister[7:0]</obj_property>
-      <obj_property name="ObjectShortName">DebugRegister[7:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/testbench/u_Top/u_REGS/registers" type="array">
       <obj_property name="ElementShortName">registers[13:0][7:0]</obj_property>
@@ -231,6 +223,10 @@
    <wvobject fp_name="/testbench/u_Top/u_ADCInterface/twoCounter" type="logic">
       <obj_property name="ElementShortName">twoCounter</obj_property>
       <obj_property name="ObjectShortName">twoCounter</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/u_Top/u_ADCInterface/RAMW_Data" type="array">
+      <obj_property name="ElementShortName">RAMW_Data[15:0]</obj_property>
+      <obj_property name="ObjectShortName">RAMW_Data[15:0]</obj_property>
    </wvobject>
    <wvobject type="divider" fp_name="divider74">
       <obj_property name="label">TimingGen</obj_property>

@@ -23,9 +23,9 @@ module Top(
     //For Debug
     input [7:0] DebugWriteRegister, //Switches
     output [7:0] DebugLEDRegister,
-    output DebugRamReading, //Debug Are we reading from the RAM
+    output DebugRamReading, //Debug Are we reading from the RAM? Triggered and on bit and read addr < Read qty
     output DebugRAMFullFlag,
-    output DebugBuffer_RdEn,
+    output DebugRAMReadRecieved, //Debug was a ram read command recieved
     output DebugTriggered,
     output DebugFIFOInXFC,
     output DebugFIFOOutXFC,
@@ -35,7 +35,6 @@ module Top(
     output DebugOnBit,
     output DebugMISO,
     output DebugSlaveSel,
-   // output [7:0] DebugSPI_Ins,
     output reg reset //For debug
     );
     
@@ -184,8 +183,9 @@ module Top(
         .reset(reset),
         .SCLK_Raw(SCLK_Raw),
         //Debug
-        .DebugBuffer_RdEn(DebugBuffer_RdEn),
-        .DebugNotSlaveSel(DebugNotSlaveSel),      
+        .DebugRAMReadRecieved(DebugRAMReadRecieved),
+        .DebugNotSlaveSel(DebugNotSlaveSel),  
+        .DebugSlaveSel(DebugSlaveSel),    
         .DebugMOSI(DebugMOSI),          
         .DebugSCLK(DebugSCLK),
         //.DebugSPI_Ins(DebugSPI_Ins),         

@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Fri Feb 19 18:02:25 2021
+| Date         : Sat Feb 27 19:16:51 2021
 | Host         : MSI running 64-bit major release  (build 9200)
 | Command      : report_methodology -file Top_methodology_drc_routed.rpt -pb Top_methodology_drc_routed.pb -rpx Top_methodology_drc_routed.rpx
 | Design       : Top
@@ -23,11 +23,11 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 29
+             Violations found: 28
 +-----------+----------+-------------------------------+------------+
 | Rule      | Severity | Description                   | Violations |
 +-----------+----------+-------------------------------+------------+
-| TIMING-18 | Warning  | Missing input or output delay | 29         |
+| TIMING-18 | Warning  | Missing input or output delay | 28         |
 +-----------+----------+-------------------------------+------------+
 
 2. REPORT DETAILS
@@ -99,80 +99,75 @@ Related violations: <none>
 
 TIMING-18#14 Warning
 Missing input or output delay  
-An output delay is missing on DebugBuffer_RdEn relative to clock(s) clk
+An output delay is missing on DebugFIFOInXFC relative to clock(s) clk
 Related violations: <none>
 
 TIMING-18#15 Warning
 Missing input or output delay  
-An output delay is missing on DebugFIFOInXFC relative to clock(s) clk
+An output delay is missing on DebugFIFOOutXFC relative to clock(s) clk
 Related violations: <none>
 
 TIMING-18#16 Warning
 Missing input or output delay  
-An output delay is missing on DebugFIFOOutXFC relative to clock(s) clk
+An output delay is missing on DebugLEDRegister[0] relative to clock(s) clk
 Related violations: <none>
 
 TIMING-18#17 Warning
 Missing input or output delay  
-An output delay is missing on DebugLEDRegister[0] relative to clock(s) clk
+An output delay is missing on DebugLEDRegister[1] relative to clock(s) clk
 Related violations: <none>
 
 TIMING-18#18 Warning
 Missing input or output delay  
-An output delay is missing on DebugLEDRegister[1] relative to clock(s) clk
+An output delay is missing on DebugLEDRegister[2] relative to clock(s) clk
 Related violations: <none>
 
 TIMING-18#19 Warning
 Missing input or output delay  
-An output delay is missing on DebugLEDRegister[2] relative to clock(s) clk
+An output delay is missing on DebugLEDRegister[3] relative to clock(s) clk
 Related violations: <none>
 
 TIMING-18#20 Warning
 Missing input or output delay  
-An output delay is missing on DebugLEDRegister[3] relative to clock(s) clk
+An output delay is missing on DebugLEDRegister[4] relative to clock(s) clk
 Related violations: <none>
 
 TIMING-18#21 Warning
 Missing input or output delay  
-An output delay is missing on DebugLEDRegister[4] relative to clock(s) clk
+An output delay is missing on DebugLEDRegister[5] relative to clock(s) clk
 Related violations: <none>
 
 TIMING-18#22 Warning
 Missing input or output delay  
-An output delay is missing on DebugLEDRegister[5] relative to clock(s) clk
+An output delay is missing on DebugLEDRegister[6] relative to clock(s) clk
 Related violations: <none>
 
 TIMING-18#23 Warning
 Missing input or output delay  
-An output delay is missing on DebugLEDRegister[6] relative to clock(s) clk
+An output delay is missing on DebugLEDRegister[7] relative to clock(s) clk
 Related violations: <none>
 
 TIMING-18#24 Warning
 Missing input or output delay  
-An output delay is missing on DebugLEDRegister[7] relative to clock(s) clk
+An output delay is missing on DebugMISO relative to clock(s) clk
 Related violations: <none>
 
 TIMING-18#25 Warning
 Missing input or output delay  
-An output delay is missing on DebugMISO relative to clock(s) clk
+An output delay is missing on DebugRAMFullFlag relative to clock(s) clk
 Related violations: <none>
 
 TIMING-18#26 Warning
 Missing input or output delay  
-An output delay is missing on DebugRAMFullFlag relative to clock(s) clk
+An output delay is missing on DebugRamReading relative to clock(s) clk
 Related violations: <none>
 
 TIMING-18#27 Warning
 Missing input or output delay  
-An output delay is missing on DebugRamReading relative to clock(s) clk
-Related violations: <none>
-
-TIMING-18#28 Warning
-Missing input or output delay  
 An output delay is missing on MISO relative to clock(s) clk
 Related violations: <none>
 
-TIMING-18#29 Warning
+TIMING-18#28 Warning
 Missing input or output delay  
 An output delay is missing on reset relative to clock(s) clk
 Related violations: <none>

@@ -12,7 +12,7 @@ module RAM_ReadEngine(
     input [17:0] RAMW_WriteAddr,
     input SlaveSel,
     //FIFO
-    output DEBUGreading,
+    output reg DEBUGreading,
     
     output reg FIFO_InRTS,
     input FIFO_InRTR
@@ -23,7 +23,7 @@ module RAM_ReadEngine(
     //DEBUG Need to implement a Ring buffer
     wire reading; //DEBUG READING IS LOW 11/30/2020
     assign reading = (RAMR_ReadAddr < RAMR_Quantity) & SPI_ReadCommand & triggered;
-    assign DEBUGreading = reading;
+    //assign DEBUGreading = reading;
     always @(posedge clk)
     begin
     //Determing if RAM should be reading data
@@ -38,6 +38,7 @@ module RAM_ReadEngine(
         begin
             RAMR_ReadAddr <= 0;
             FIFO_InRTS <= 0;
+            DEBUGreading <= 0;
         end
         else
         begin
@@ -58,6 +59,10 @@ module RAM_ReadEngine(
             begin
                 FIFO_InRTS <= 0;
             end
+        end
+        if (reading)
+        begin
+            DEBUGreading <= 1;
         end
     end
     

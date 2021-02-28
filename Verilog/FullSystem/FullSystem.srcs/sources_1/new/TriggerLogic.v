@@ -52,7 +52,7 @@ module TriggerLogic(
             //triggered
         if (reset)
         begin
-            //Reset
+            triggered <= 0;
         end
         else
         begin
