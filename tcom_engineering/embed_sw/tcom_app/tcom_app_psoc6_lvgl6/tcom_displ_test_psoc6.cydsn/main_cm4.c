@@ -129,14 +129,6 @@ main( void )
         //write reg 4 all zeroes
         //cm4.TxBuffer[0] = 0b0100010000000000;  //011 01001 00000000
         
-        //Cy_GPIO_Write(Pin_1_PORT, Pin_1_NUM, 1);
-        
-        //while(1)
-        //{
-        //    while(!(Cy_SCB_SPI_GetTxFifoStatus(SPIM_HW) & CY_SCB_SPI_TX_EMPTY)){}
-        //    Cy_SCB_SPI_Write(SPIM_HW, cm4.TxBuffer[0]);
-        //}
-        
         CyDelay(3000);
         
        uint32_t NUM_TO_WRITE = 8; 
@@ -144,28 +136,25 @@ main( void )
         
         //loop to send each command in the txBuffer
         for(int i = 0; i < 1; ++i){
+            //Set slave select low for the commands
             ss_state = !ss_state;  Cy_GPIO_Write(SEL_PIN_PORT, SEL_PIN_NUM, ss_state);
-            
-            //while(!(Cy_SCB_SPI_GetTxFifoStatus(SPIM_HW) & CY_SCB_SPI_TX_EMPTY)){}
 
             Cy_SCB_SPI_ClearSlaveMasterStatus(SPIM_HW, CY_SCB_SPI_MASTER_DONE);
             Cy_SCB_SPI_Write(SPIM_HW, cm4.TxBuffer[i]);
             while(!(Cy_SCB_SPI_GetTxFifoStatus(SPIM_HW) & CY_SCB_SPI_TX_EMPTY)){}
             while(!(Cy_SCB_SPI_GetSlaveMasterStatus(SPIM_HW) & CY_SCB_SPI_MASTER_DONE)){}
-            //ss_state = !ss_state;  Cy_GPIO_Write(SEL_PIN_PORT, SEL_PIN_NUM, ss_state);
 
             // Clear out the RX FIFO
             while((Cy_SCB_SPI_GetNumInRxFifo(SPIM_HW) != 1)){}
             Cy_SCB_SPI_ReadArray(SPIM_HW, cm4.RxBuffer, 1);
 
-            //while(!(Cy_SCB_SPI_GetTxFifoStatus(SPIM_HW) & CY_SCB_SPI_TX_EMPTY)){}
-
-          
-            //These two lines work for reading the registers
-            //if((cm4.TxBuffer[i] >> 13) == 0b0000000000000001 || (cm4.TxBuffer[i] >> 13) == 0b0000000000000010){
-            //   while(!(Cy_SCB_SPI_GetRxFifoStatus(SPIM_HW) & CY_SCB_SPI_RX_NOT_EMPTY)){}
-            //    cm4.RxBuffer[0] = Cy_SCB_SPI_Read(SPIM_HW);
-            //}
+            /*
+            These two lines work for reading the registers
+            if((cm4.TxBuffer[i] >> 13) == 0b0000000000000001 || (cm4.TxBuffer[i] >> 13) == 0b0000000000000010){
+               while(!(Cy_SCB_SPI_GetRxFifoStatus(SPIM_HW) & CY_SCB_SPI_RX_NOT_EMPTY)){}
+                cm4.RxBuffer[0] = Cy_SCB_SPI_Read(SPIM_HW);
+            }
+            */
             
             //else{
             //1024/8
@@ -176,33 +165,15 @@ main( void )
                 Cy_SCB_SPI_WriteArray(SPIM_HW, cm4.TxBuffer, NUM_TO_WRITE);
                 while(!(Cy_SCB_SPI_GetTxFifoStatus(SPIM_HW) & CY_SCB_SPI_TX_EMPTY)){}
                 while(!(Cy_SCB_SPI_GetSlaveMasterStatus(SPIM_HW) & CY_SCB_SPI_MASTER_DONE)){}
-                // ss_state = !ss_state;  Cy_GPIO_Write(SEL_PIN_PORT, SEL_PIN_NUM, ss_state);
                 
-                //while((Cy_SCB_SPI_GetRxFifoStatus(SPIM_HW) & CY_SCB_SPI_RX_NOT_EMPTY)){
+                //read in bursts of NUM_TO_WRITE size
                 while((Cy_SCB_SPI_GetNumInRxFifo(SPIM_HW) != NUM_TO_WRITE)){}
                 Cy_SCB_SPI_ReadArray(SPIM_HW, cm4.RxBuffer, NUM_TO_WRITE);
-                //cm4.RxBuffer[i] = Cy_SCB_SPI_Read(SPIM_HW);
-                
-                // ss_state = !ss_state;  Cy_GPIO_Write(SEL_PIN_PORT, SEL_PIN_NUM, ss_state); 
-                
-                
-                    //cm4.RxBuffer[i] = Cy_SCB_SPI_Read(SPIM_HW);
-                
             }
-            //}
             
-            
-            //while(!(Cy_SCB_SPI_GetRxFifoStatus(SPIM_HW) & CY_SCB_SPI_RX_NOT_EMPTY)){}
-            //Cy_SCB_SPI_ReadArray(SPIM_HW, cm4.RxBuffer, 8);
-            
-            //cm4.RxBuffer[i] = Cy_SCB_SPI_Read(SPIM_HW,);
-            
+            //Reassert slave select
             Cy_GPIO_Write(SEL_PIN_PORT, SEL_PIN_NUM, 1);
-            //Clear the RxFifo for the next command
-            //Cy_SCB_SPI_ClearRxFifo(SPIM_HW);	
         }
-        
-        
         
         //Reset to avoid an infinite loop
         cm4.onBit = 0b00000000;
