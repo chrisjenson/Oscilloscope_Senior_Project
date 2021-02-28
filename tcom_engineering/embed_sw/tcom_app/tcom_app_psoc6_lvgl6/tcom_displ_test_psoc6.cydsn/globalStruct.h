@@ -28,7 +28,8 @@ struct SPI_parameters
     
     //Actual Buffers
     uint16_t TxBuffer[13];  //Commands To be Sent
-    uint16_t RxBuffer[1024];  // Data Read in
+    uint16_t RxBuffer[8];  // Read data in, SIZE SHOULD BE EQUAL TO NUM_TO_WRITE in main_cm4.c
+    uint8_t RamReadBuffer[2048];  // Ram Read data after being split
     
     //Temp buffer
     uint16_t RegBuffer[13];

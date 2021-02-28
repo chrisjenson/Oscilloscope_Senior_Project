@@ -131,8 +131,9 @@ main( void )
         
         CyDelay(3000);
         
-       uint32_t NUM_TO_WRITE = 8; 
-       int ss_state = 1;
+        uint32_t NUM_TO_WRITE = 8; 
+        int ss_state = 1;
+        uint16_t bufferIndex = 0; 
         
         //loop to send each command in the txBuffer
         for(int i = 0; i < 1; ++i){
@@ -157,8 +158,8 @@ main( void )
             */
             
             //else{
-            //1024/8
-            for(uint32_t count = 0; count < 1024/NUM_TO_WRITE; count++){
+            //1024/8, total number of samples divided by the size of bursts
+            for(uint32_t burst = 0; burst < 1024/NUM_TO_WRITE; burst++){
 
                 // Dummy write, to read data from FPGA
                 Cy_SCB_SPI_ClearSlaveMasterStatus(SPIM_HW, CY_SCB_SPI_MASTER_DONE);
@@ -169,8 +170,26 @@ main( void )
                 //read in bursts of NUM_TO_WRITE size
                 while((Cy_SCB_SPI_GetNumInRxFifo(SPIM_HW) != NUM_TO_WRITE)){}
                 Cy_SCB_SPI_ReadArray(SPIM_HW, cm4.RxBuffer, NUM_TO_WRITE);
+                
+                //Check if a ram read was performed so we can check if data has to be parsed
+                if((cm4.TxBuffer[i] >> 13) == 0b011){
+                    //for loop to split the read in data and then store appropriately in cm4.RamReadBuffer
+                    //NUM_TO_WRITE*2 because we are actually reading in 2 data points per buffer space
+                    for(uint16_t count = 0; count < NUM_TO_WRITE; count++){
+                        //spilt the data, dont need variables here but are helpful
+                        uint8_t firstSample = cm4.RxBuffer[count] >> 8; //right shift 8 to remove the second value
+                        uint8_t secondSample = cm4.RxBuffer[count] & 0b0000000011111111; //AND with 1's to only get the first 8 digits
+                        
+                        cm4.RamReadBuffer[bufferIndex] = firstSample;
+                        cm4.RamReadBuffer[bufferIndex + 1] = secondSample;
+                        
+                        bufferIndex += 2;
+                    }
+                }
+                else{
+                    //carry on as usual.... however that may be
+                }
             }
-            
             //Reassert slave select
             Cy_GPIO_Write(SEL_PIN_PORT, SEL_PIN_NUM, 1);
         }

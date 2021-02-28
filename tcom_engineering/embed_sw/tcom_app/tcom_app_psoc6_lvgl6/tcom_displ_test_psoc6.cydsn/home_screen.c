@@ -240,10 +240,10 @@ void home_screen()
     }
    
     //for(int i = cm4.windowMin; i < cm4.windowMax; ++i){
-    for(int i = 0; i < 256; ++i){
+    for(int i = 0; i < 128; ++i){
         //lv_chart_set_next(chart1, s1, points[i]);
         //lv_chart_set_next(chart1, s1, cm4.RxBuffer[i] + cm4.Offset);
-        lv_chart_set_next(chart1, s1, cm4.RxBuffer[i]);
+        lv_chart_set_next(chart1, s1, cm4.RamReadBuffer[i]);
     }
     
     
