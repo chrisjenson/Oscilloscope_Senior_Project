@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Sat Feb 27 19:15:51 2021
+| Date         : Fri Mar  5 18:07:07 2021
 | Host         : MSI running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file Top_control_sets_placed.rpt
 | Design       : Top
@@ -23,11 +23,11 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Total control sets                                       |    30 |
-|    Minimum number of control sets                        |    30 |
+| Total control sets                                       |    31 |
+|    Minimum number of control sets                        |    31 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |    56 |
+| Unused register locations in slices containing registers |    62 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -39,8 +39,8 @@ Table of Contents
 +--------------------+-------+
 |       Fanout       | Count |
 +--------------------+-------+
-| Total control sets |    30 |
-| >= 0 to < 4        |     3 |
+| Total control sets |    31 |
+| >= 0 to < 4        |     4 |
 | >= 4 to < 6        |     2 |
 | >= 6 to < 8        |     0 |
 | >= 8 to < 10       |    17 |
@@ -58,51 +58,52 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              32 |           15 |
+| No           | No                    | No                     |              30 |           16 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |              46 |           18 |
-| Yes          | No                    | No                     |              16 |            3 |
+| No           | Yes                   | No                     |              49 |           13 |
+| Yes          | No                    | No                     |               0 |            0 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |             202 |           74 |
+| Yes          | Yes                   | No                     |             227 |           91 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 4. Detailed Control Set Information
 -----------------------------------
 
-+----------------+--------------------------------------------------+-------------------------------------+------------------+----------------+
-|  Clock Signal  |                   Enable Signal                  |           Set/Reset Signal          | Slice Load Count | Bel Load Count |
-+----------------+--------------------------------------------------+-------------------------------------+------------------+----------------+
-|  clk_IBUF_BUFG | u_RAM_WriteEngine/DebugRAMFullFlag_i_1_n_0       | reset_OBUF                          |                1 |              1 |
-|  clk_IBUF_BUFG | reset_OBUF                                       | u_SPI/reading                       |                1 |              1 |
-|  clk_IBUF_BUFG | u_SPI/MISO9_out                                  | u_SPI/MISO_i_1_n_0                  |                1 |              2 |
-|  clk_IBUF_BUFG | u_SPI/SPI_InInstructionSixteenCounter[3]_i_1_n_0 | SlaveSel_IBUF                       |                1 |              4 |
-|  clk_IBUF_BUFG | u_SPI/SPI_OutSixteenCount                        | u_SPI/MISO_i_1_n_0                  |                1 |              4 |
-|  clk_IBUF_BUFG | u_SPI/new_data_strobe                            | SlaveSel_IBUF                       |                5 |              8 |
-|  clk_IBUF_BUFG | u_SPI/new_instruction_strobe                     | SlaveSel_IBUF                       |                2 |              8 |
-|  clk_IBUF_BUFG | u_SPI/SPI_Params_reg[2]_0[0]                     | reset_OBUF                          |                3 |              8 |
-|  clk_IBUF_BUFG | u_SPI/E[0]                                       | reset_OBUF                          |                4 |              8 |
-|  clk_IBUF_BUFG | u_SPI/SPI_Params_reg[4]_2[0]                     | reset_OBUF                          |                2 |              8 |
-|  clk_IBUF_BUFG | u_SPI/SPI_Params_reg[3]_0[0]                     | reset_OBUF                          |                5 |              8 |
-|  clk_IBUF_BUFG | u_SPI/SPI_Params_reg[4]_0[0]                     | reset_OBUF                          |                2 |              8 |
-|  clk_IBUF_BUFG | u_SPI/SPI_Params_reg[4]_1[0]                     | reset_OBUF                          |                2 |              8 |
-|  clk_IBUF_BUFG | u_SPI/SPI_Params_reg[3]_1[0]                     | reset_OBUF                          |                3 |              8 |
-|  clk_IBUF_BUFG | u_SPI/SPI_Params_reg[4]_3[0]                     | reset_OBUF                          |                2 |              8 |
-|  clk_IBUF_BUFG | u_SPI/SPI_Params_reg[4]_4[0]                     | reset_OBUF                          |                4 |              8 |
-|  clk_IBUF_BUFG | u_SPI/SPI_Params_reg[4]_6[0]                     | reset_OBUF                          |                3 |              8 |
-|  clk_IBUF_BUFG | u_SPI/SPI_Params_reg[4]_8[0]                     | reset_OBUF                          |                4 |              8 |
-|  clk_IBUF_BUFG | u_ADCInterface/ConcatRAMData[7]                  |                                     |                1 |              8 |
-|  clk_IBUF_BUFG | u_SPI/SPI_Params_reg[4]_7[0]                     | reset_OBUF                          |                2 |              8 |
-|  clk_IBUF_BUFG | u_DataSimulation/E[0]                            |                                     |                2 |              8 |
-|  clk_IBUF_BUFG |                                                  | reset_OBUF                          |                6 |              9 |
-|  clk_IBUF_BUFG | u_TimingGen/ADC_SampleClock_reg_0[0]             | u_DataSimulation/SimData[9]_i_1_n_0 |                3 |             10 |
-|  clk_IBUF_BUFG | u_SPI/SPI_Params_reg[4]_5[0]                     | reset_OBUF                          |                9 |             16 |
-|  clk_IBUF_BUFG | u_DataSimulation/ADC_SampleClock_p1_reg_0[0]     | reset_OBUF                          |                3 |             16 |
-|  clk_IBUF_BUFG | u_REGS/RAMW_En                                   | reset_OBUF                          |                5 |             18 |
-|  clk_IBUF_BUFG | u_SPI/FIFO_NumInFIFO_reg[2][0]                   | reset_OBUF                          |                6 |             18 |
-|  clk_IBUF_BUFG | u_RAM_ReadEngine/DebugFIFOInXFC_OBUF             |                                     |                3 |             24 |
-|  clk_IBUF_BUFG |                                                  |                                     |               15 |             32 |
-|  clk_IBUF_BUFG |                                                  | SlaveSel_IBUF                       |               12 |             37 |
-+----------------+--------------------------------------------------+-------------------------------------+------------------+----------------+
++----------------+----------------------------------------------+-------------------------------------+------------------+----------------+
+|  Clock Signal  |                 Enable Signal                |           Set/Reset Signal          | Slice Load Count | Bel Load Count |
++----------------+----------------------------------------------+-------------------------------------+------------------+----------------+
+|  clk_IBUF_BUFG | reset_OBUF                                   | u_SPI/reading                       |                1 |              1 |
+|  clk_IBUF_BUFG | u_SPI/DebugRAMReadRecieved7_out              | reset_OBUF                          |                1 |              1 |
+|  clk_IBUF_BUFG | u_RAM_WriteEngine/DebugRAMFullFlag_i_1_n_0   | reset_OBUF                          |                1 |              1 |
+|  clk_IBUF_BUFG | u_SPI/MISO9_out                              | u_SPI/new_data_strobe_i_1_n_0       |                1 |              2 |
+|  clk_IBUF_BUFG | u_SPI/SPI_OutSixteenCount[3]_i_1_n_0         | u_SPI/new_data_strobe_i_1_n_0       |                1 |              4 |
+|  clk_IBUF_BUFG | u_SPI/SPI_InInstructionSixteenCounter        | u_SPI/new_data_strobe_i_1_n_0       |                1 |              4 |
+|  clk_IBUF_BUFG | u_SPI/E[0]                                   | reset_OBUF                          |                4 |              8 |
+|  clk_IBUF_BUFG | u_SPI/SPI_Params_reg[2]_4[0]                 | reset_OBUF                          |                3 |              8 |
+|  clk_IBUF_BUFG | u_SPI/SPI_Params_reg[4]_1[0]                 | reset_OBUF                          |                3 |              8 |
+|  clk_IBUF_BUFG | u_SPI/SPI_Params_reg[2]_1[0]                 | reset_OBUF                          |                2 |              8 |
+|  clk_IBUF_BUFG | u_SPI/SPI_Params_reg[2]_7[0]                 | reset_OBUF                          |                5 |              8 |
+|  clk_IBUF_BUFG | u_SPI/SPI_Params_reg[2]_3[0]                 | reset_OBUF                          |                3 |              8 |
+|  clk_IBUF_BUFG | u_SPI/SPI_Params_reg[2]_0[0]                 | reset_OBUF                          |                2 |              8 |
+|  clk_IBUF_BUFG | u_SPI/SPI_Params_reg[2]_6[0]                 | reset_OBUF                          |                4 |              8 |
+|  clk_IBUF_BUFG | u_SPI/SPI_Params_reg[4]_3[0]                 | reset_OBUF                          |                4 |              8 |
+|  clk_IBUF_BUFG | u_SPI/SPI_Params_reg[2]_5[0]                 | reset_OBUF                          |                6 |              8 |
+|  clk_IBUF_BUFG | u_SPI/SPI_Params_reg[4]_2[0]                 | reset_OBUF                          |                4 |              8 |
+|  clk_IBUF_BUFG | u_SPI/SPI_Params_reg[4]_4[0]                 | reset_OBUF                          |                3 |              8 |
+|  clk_IBUF_BUFG | u_SPI/SPI_Params_reg[2]_2[0]                 | reset_OBUF                          |                3 |              8 |
+|  clk_IBUF_BUFG | u_SPI/new_instruction_strobe                 | u_SPI/new_data_strobe_i_1_n_0       |                2 |              8 |
+|  clk_IBUF_BUFG | u_SPI/new_data_strobe                        | u_SPI/new_data_strobe_i_1_n_0       |                2 |              8 |
+|  clk_IBUF_BUFG | u_ADCInterface/ConcatRAMData[7]              | reset_OBUF                          |                3 |              8 |
+|  clk_IBUF_BUFG |                                              | reset_OBUF                          |                4 |              9 |
+|  clk_IBUF_BUFG | u_TimingGen/E[0]                             | u_DataSimulation/SimData[9]_i_1_n_0 |                3 |             10 |
+|  clk_IBUF_BUFG | u_SPI/SPI_Params_reg[4]_0[0]                 | reset_OBUF                          |                8 |             16 |
+|  clk_IBUF_BUFG | u_SPI/Buffer_RdEn_reg_0[0]                   | reset_OBUF                          |                8 |             18 |
+|  clk_IBUF_BUFG | u_RAM_WriteEngine/RAMW_WriteAddr0            | reset_OBUF                          |                5 |             18 |
+|  clk_IBUF_BUFG | u_Buffer_FIFO/DebugFIFOInXFC_OBUF            |                                     |                3 |             24 |
+|  clk_IBUF_BUFG | u_DataSimulation/ADC_SampleClock_p1_reg_0[0] | reset_OBUF                          |                8 |             24 |
+|  clk_IBUF_BUFG |                                              |                                     |               16 |             30 |
+|  clk_IBUF_BUFG |                                              | u_SPI/new_data_strobe_i_1_n_0       |                9 |             40 |
++----------------+----------------------------------------------+-------------------------------------+------------------+----------------+
 
 

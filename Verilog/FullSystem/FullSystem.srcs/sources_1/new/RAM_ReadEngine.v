@@ -5,24 +5,39 @@ module RAM_ReadEngine(
     input clk,
     input reset,
     //Ram Read
-    input triggered,
     input SPI_ReadCommand,
     output reg [17:0] RAMR_ReadAddr, //Port B on RAM, current read location
     input [17:0] RAMR_Quantity,
     input [17:0] RAMW_WriteAddr,
     input SlaveSel,
+    
+    input onBit,
     //FIFO
+    output reading,
     output reg DEBUGreading,
+    output reg RAMReadDone,
     
     output reg FIFO_InRTS,
     input FIFO_InRTR
     );
+    reg [17:0] readRemaining;
+    ///////////////////////////////////////////////////
+    wire SPI_ReadCommandPosEdgePulse;
+    reg SPI_ReadCommand_p1;
+    
+    always @(posedge clk)
+    begin
+        SPI_ReadCommand_p1 <= SPI_ReadCommand;
+    end
+    
+    assign SPI_ReadCommandPosEdgePulse = SPI_ReadCommand & ~SPI_ReadCommand_p1;
+    ///////////////////////////////////////////////////
+    
     
     wire FIFO_InXFC;
     assign FIFO_InXFC = FIFO_InRTS & FIFO_InRTR;
     //DEBUG Need to implement a Ring buffer
-    wire reading; //DEBUG READING IS LOW 11/30/2020
-    assign reading = (RAMR_ReadAddr < RAMR_Quantity) & SPI_ReadCommand & triggered;
+    assign reading = !RAMReadDone & SPI_ReadCommand & onBit; //& (RAMR_ReadAddr < RAMR_Quantity)
     //assign DEBUGreading = reading;
     always @(posedge clk)
     begin
@@ -63,6 +78,40 @@ module RAM_ReadEngine(
         if (reading)
         begin
             DEBUGreading <= 1;
+        end
+    end
+    always @(posedge clk)
+    begin
+    //Determing if RAM is done
+    //Inputs
+        //Reset
+        //SlaveSelNegEdgePulse
+        //FIFO_InXFC
+    //Outputs
+        //leftToRead - how many more data points will be going on
+        //RAMReadDone - data read done
+        if (reset)
+        begin
+            RAMReadDone <= 0;
+        end
+        else
+        begin
+            if (SPI_ReadCommandPosEdgePulse)
+            begin //Set initial value
+                readRemaining <= RAMR_Quantity;
+                RAMReadDone <= 0;
+            end
+            if (FIFO_InXFC)
+            begin
+                if (readRemaining == 0)
+                begin
+                    RAMReadDone <= 1;
+                end
+                else
+                begin
+                    readRemaining <= readRemaining - 1;
+                end
+            end
         end
     end
     

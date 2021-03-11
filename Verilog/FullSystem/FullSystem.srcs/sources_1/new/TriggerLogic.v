@@ -11,8 +11,11 @@ module TriggerLogic(
         input [7:0] TriggerThreshold,
         input [7:0] ADC_InData,
 
-        output reg triggered        
+        output reg Triggered        
     );
+
+    reg TriggerThreshold_p1;
+    reg TriggerType_p1;
     
     wire getNewData;
     assign getNewData = ADC_SampleClock_posedge_pulse & onBit;
@@ -28,10 +31,14 @@ module TriggerLogic(
             //RAMW_En
         //Outputs
             //ADC_InData_p1
+            //TriggerType_p1
+            //TriggerThreshold_p1
     begin
         if (reset)
         begin
             ADC_InData_p1 <= 0;
+            TriggerType_p1 <= 0;
+            TriggerThreshold_p1 <= 0;
         end
         else
         begin
@@ -39,6 +46,9 @@ module TriggerLogic(
             begin //New input
                 ADC_InData_p1 <= ADC_InData;
             end
+            
+            TriggerType_p1 <= TriggerType;
+            TriggerThreshold_p1 <= TriggerThreshold;
         end
     end
     
@@ -52,31 +62,30 @@ module TriggerLogic(
             //triggered
         if (reset)
         begin
-            triggered <= 0;
+            Triggered <= 0;
         end
         else
         begin
-            if (getNewData)
+            if ((TriggerType_p1 != TriggerType) || (TriggerThreshold_p1 != TriggerThreshold))
             begin
-                //DEBUG: TRIGGERED MUST STAY HIGH EVEN IF GOES BELOW VALUE AGAIN
+                Triggered <= 0;
+            end
+            else if (getNewData)
+            begin
                 if (TriggerType[1:0] == 0)
                 begin 
                     //Rising
                     if (ADC_InData_p1 < ADC_InData)
                     begin
-                        triggered <= 1;
+                        Triggered <= 1;
                     end
-//                    else
-//                    begin
-//                        triggered <= 0;
-//                    end
                 end
                 else if (TriggerType[1:0] == 1)
                 begin
                     //Falling
                     if (ADC_InData_p1 > ADC_InData)
                     begin
-                        triggered <= 1;
+                        Triggered <= 1;
                     end
 //                    else
 //                    begin
@@ -89,23 +98,19 @@ module TriggerLogic(
                     if (TriggerType[2] == 0)
                     //above
                     begin
-                        if (ADC_InData > {TriggerThreshold, 2'b00})
+                        if (ADC_InData > TriggerThreshold)
                         begin
-                            triggered <= 1;
+                            Triggered <= 1;
                         end
                     end
                     else
                     //below
                     begin
-                        if (ADC_InData < {TriggerThreshold, 2'b00})
+                        if (ADC_InData < TriggerThreshold)
                         begin
-                            triggered <= 1;
+                            Triggered <= 1;
                        end
                     end
-                    
-                end
-                else
-                begin
                     
                 end
             end

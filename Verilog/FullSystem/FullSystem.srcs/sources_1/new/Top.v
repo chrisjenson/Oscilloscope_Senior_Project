@@ -55,7 +55,6 @@ module Top(
     /////////////////////
     
     wire onBit;
-    //assign onBit = 1'b1;
     reg reset_p1;
     //reg reset;
     always @(posedge clk)
@@ -88,27 +87,28 @@ module Top(
         .ADC_BitSelect(ADC_BitSelect),
         .RAMW_Data(RAMW_Data)
     );
+    wire reading;
     
     wire [17:0] RAMW_WriteAddr;
+    wire [17:0] RAMR_ReadAddr;
+
     wire RAMW_En;
     wire [7:0] TriggerType;
     wire [7:0] TriggerThreshold;
     
-    wire triggered; //From triggermanagement
     
-    assign triggered = 1;
-    assign DebugTriggered = triggered;
-   // assign RAMR_Quantity = 4096; //DEBUG: FROM SPI COMMAND
+    wire Triggered; //From triggermanagement
+    
+    //assign Triggered = 1;
+    assign DebugTriggered = Triggered;
     TriggerLogic u_TriggerLogic(
         .clk(clk),
         .reset(reset),
         .TriggerType(TriggerType), //From Regs
         .TriggerThreshold(TriggerThreshold), //From Regs
-        //.triggered(triggered),
+        .Triggered(Triggered),
         .onBit(onBit), 
         
-        //.ADC_SampleClock(ADC_SampleClock),
-        //.RAMW_En(RAMW_En), //High when writing data to RAM
         .ADC_SampleClock_posedge_pulse(ADC_SampleClock_posedge_pulse),
         .ADC_InData(ADC_InData) //10 bits input- pre bit selection
     );
@@ -118,18 +118,19 @@ module Top(
         .reset(reset),
         .ADC_SampleClock(ADC_SampleClock),
         .RAMW_WriteAddr(RAMW_WriteAddr), //Port A on RAM
+        .RAMR_ReadAddr(RAMR_ReadAddr),
         .RAMW_En(RAMW_En),
         .DebugRAMFullFlag(DebugRAMFullFlag),
+        .reading(reading),
         .onBit(onBit) //Use this to gate everything, should come from regs
     );
     
-    wire [17:0] RAMR_ReadAddr;
     wire [15:0] RAMR_Data;
     wire SPI_ReadCommand; //from spi
     wire [17:0] RAMR_Quantity;
     wire FIFO_InRTS;
     wire FIFO_InRTR;
-    
+    wire RAMReadDone;
     
     
     RAM_ReadEngine u_RAM_ReadEngine(
@@ -137,12 +138,15 @@ module Top(
         .reset(reset),
         //Ram Read
         .DEBUGreading(DebugRamReading),
-        .triggered(triggered), //input, gates read
+        //.Triggered(Triggered), //input, gates read
         .RAMR_ReadAddr(RAMR_ReadAddr), //Port B on RAM, current read location
         .RAMW_WriteAddr(RAMW_WriteAddr), //Know where writing vurrently to read half below half above
         .RAMR_Quantity(RAMR_Quantity), //output from spi, gates read
+        .RAMReadDone(RAMReadDone),
         .SPI_ReadCommand(SPI_ReadCommand), //Input, gates read
         .SlaveSel(SlaveSel),
+        .reading(reading),
+        .onBit(onBit),
         //FIFO
         .FIFO_InRTS(FIFO_InRTS),
         .FIFO_InRTR(FIFO_InRTR)
@@ -215,7 +219,9 @@ module Top(
         .DebugLEDRegister(DebugLEDRegister), //Output
         .TriggerType(TriggerType),
         .TriggerThreshold(TriggerThreshold),
-        .onBit(onBit)
+        .Triggered(Triggered),
+        .onBit(onBit),
+        .RAMReadDone(RAMReadDone)
     );
     
     

@@ -8,6 +8,10 @@ module RAM_WriteEngine(
     //Write
     output reg [17:0] RAMW_WriteAddr, //Port A on RAM
     output RAMW_En,
+    //For Ring Buffer
+    input reading,
+    input [17:0] RAMR_ReadAddr,
+
     //DEBUG
     output reg DebugRAMFullFlag
     );
@@ -57,7 +61,35 @@ module RAM_WriteEngine(
     
     
     //End section
-    //////////////////////////////////////////////////////////////    
+    //////////////////////////////////////////////////////////////   
+    //RING BUFFER 
+    reg ringBufferValid;
+
+    always @(posedge clk)
+    begin
+    //Dont allow write addr to pass read addr 
+    //Inputs
+        //reset
+        //RAMW_WriteAddr
+        //RAMR_ReadAddr
+    //Outputs
+        //ringBufferValid
+        if (reset)
+        begin
+            ringBufferValid <= 0;
+        end
+        else
+        begin
+            if ((reading) && (RAMW_WriteAddr >= RAMR_ReadAddr))
+            begin //Good
+                ringBufferValid <= 0;
+            end
+            else
+            begin
+                ringBufferValid <= 1;
+            end
+        end
+    end
     //////////////////////////////////////////////////////////////    
     //Write Section
     assign RAMW_En = onBit & ADC_SampleClock_secondposedge_pulse; //DEBUG:Need to make this its own process and delay by one word..
@@ -76,9 +108,13 @@ module RAM_WriteEngine(
         end
         else
         begin
-            if (RAMW_En) //Buffer_DataIn in is set on negedge
+            if (RAMW_En && ringBufferValid) //Buffer_DataIn in is set on negedge
             begin
-                RAMW_WriteAddr <= RAMW_WriteAddr + 1;
+                //if(RAMW_WriteAddr < 1024)//DEBUG REMOVE THIS IF
+                //begin
+                    RAMW_WriteAddr <= RAMW_WriteAddr + 1;
+                //end 
+                
             end
         end
     end

@@ -106,7 +106,7 @@ module testbench();
     initial
     begin  
         commandArray[0] = 16'b0000000000000000;
-        commandArray[1] = 16'b0000000000000000;
+        commandArray[1] = 16'b0100011000000001; //trigger on falling edge
         commandArray[2] = 16'b0110110111111111; //cmd = Read Ram, params = 01111 -> (8 x 16 bits out), data = x... PARAMS = 00100 -> (1024 X 16 out)
         commandArray[3] = 16'b0000000000000000;                                      //If changing number of data points being read (1024) need to change OneZeroTwoFourCounter below
         commandArray[4] = 16'b0110110111111111; //cmd = Read, params = 4, data = x

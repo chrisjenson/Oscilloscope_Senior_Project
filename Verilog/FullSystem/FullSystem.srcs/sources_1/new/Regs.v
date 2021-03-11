@@ -9,16 +9,23 @@ module Regs(
     input RdEn,
     input [4:0] Regs_Addr,
     output reg [7:0] Read_Data,
+    
+    //RAMReadDone
+    input RAMReadDone,
+    
     //For debug
     input [7:0] DebugWriteRegister,
     output [7:0] DebugLEDRegister,
     
-    
+    //Triggers
     output [7:0] TriggerType,
     output [7:0] TriggerThreshold,
+    input Triggered,
+    //ADC Decimation
     output [1:0] SampleDecimationFactor,
+    //Turns off write engine and read engine
     output onBit,
-    //output reset,
+    
    output [1:0] IRSHighLow,
    output [3:0] Offset,
    output [1:0] ShiftControlRegister
@@ -27,7 +34,7 @@ module Regs(
     //INPUT need an input for the write only register with the on-bit
     //also a read only bit
     
-    reg [7:0] registers [13:0];
+    reg [7:0] registers [15:0];
     assign DebugLEDRegister = registers[4]; //LEDs
     
     assign TriggerThreshold = registers[7];
@@ -52,28 +59,40 @@ module Regs(
             registers[11] <= 8'b00000000; //IRS_High and Low
             registers[12] <= 8'b00000000; //Offset
             registers[13] <= 8'b00000000; //Shift Control Register
+            registers[14] <= 8'b00000000; //Gain
+            registers[15] <= 8'b00000000; //Triggered
             
-            /* data display test
-            registers[0] <= 8'b00010000; //B
-            registers[1] <= 8'b00100000; //C
-            registers[2] <= 8'b01000000; //S
-            registers[3] <= 8'b01000000; //Version ID
-            registers[4] <= 8'b00100000; //scratch R/W reg LEDs- Debug register
-
-            registers[6] <= 8'b00001000; //Trigger and Trigger slope
-            registers[7] <= 8'b00001000; //Sample Decimation
-            registers[8] <= 8'b00010000; //on-bit
-            registers[9] <= 8'b00100000; //reset
-            registers[10] <= 8'b01000000; //IRS_High and Low
-            registers[11] <= 8'b01000000; //Offset
-            registers[12] <= 8'b00100000; //Shift Control Register
-            */
         end
         else
         begin
             if (WrEn)
             begin 
                 registers[Regs_Addr] <= Write_Data;
+            end
+            if (Triggered == 1)
+            begin
+                registers[15] = 8'b00000001;
+            end
+            else if (RAMReadDone)
+            begin
+                registers[6] <= 8'b00000000; //Trigger and Trigger slope
+                registers[7] <= 8'b00000000; //Trigger Threshold Value
+                registers[15] <= 8'b00000000; //Triggered
+            end
+            
+        end
+    end
+    always @(posedge clk)
+    begin
+        if (reset)
+        begin 
+            
+        end
+        else
+        begin
+            if (RAMReadDone)
+            begin
+                
             end
         end
     end
