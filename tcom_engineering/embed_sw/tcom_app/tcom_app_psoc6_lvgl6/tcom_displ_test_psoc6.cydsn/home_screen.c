@@ -4,17 +4,11 @@
 #include "globalStruct.h"
 #include "lvgl.h"
 #include "home_screen.h"
-//#include "breath_activity.h"
-//#include "time_date_activity.h"
 #include "slider_activity.h"
 #include "math.h"
 
-//static lv_obj_t * slider_label;
-
 const uint8_t tcnj_blue[] = { 41, 63, 111 };
 const uint8_t tcnj_gold[] = { 166, 122, 0 };
-
-char offset_str[3];
 
 static lv_obj_t * offsetLabel;
 static lv_obj_t * triggerLabel;
@@ -22,96 +16,135 @@ static lv_obj_t * horiLabel1;
 static lv_obj_t * vertLabel1;
 static lv_obj_t * windowLabel;
 
-uint8_t zeros = 0b00000000;
+int startup = 0;
+
+static void chart_actions()
+{    
+    const int chart_width = 280;
+    const int chart_heigth = 200;
+    const int chart_vertPos = 20;
+    const int chart_horiPos = 20;  
+    
+
+    static lv_obj_t *chart1;        //declaring the chart
+    if(startup == 1){
+        lv_obj_del(chart1);
+    }   
+    /* Display chart                         */        
+    chart1 = lv_chart_create(lv_scr_act(), NULL);                     //Add a chart to the current screen
+    lv_obj_set_pos(chart1, chart_horiPos, chart_vertPos);             /*Set its position*/
+    lv_obj_set_size(chart1, chart_width, chart_heigth);               /*Set its size*/ 
+    
+    //GIVE IMPACT BASED ON THE VERT AND HORI SCALE
+    lv_chart_set_div_line_count(chart1, 3, 4);                        //sets the grid lines
+    lv_chart_set_point_count(chart1, 128);                              //setting the number of points on the chart
+    lv_chart_set_type(chart1, LV_CHART_TYPE_POINT);                    //set graph to points, as opposed to lines    
+    
+    //Have the chart only display the current serie
+    lv_chart_series_t * s1 = lv_chart_add_series(chart1, lv_color_hex(0x01a2b1));
+    
+    lv_chart_clear_serie(chart1, s1);
+    lv_chart_refresh(chart1);
+    
+    
+    
+    /*
+    // Need to calculate the desired indexes in RxBuffer, Based on HoriScale
+    cm4.windowMin = cm4.windowPos - 100;
+    cm4.windowMax = cm4.windowPos + 100;
+    
+    if(cm4.windowMin - 100 < 0){
+        cm4.windowMax = (cm4.windowMin * -1) + cm4.windowMax;
+        cm4.windowMin = 0;
+    }
+    //if(windowMax + 100 > pow(2, cm4.HoriScale + 6)){
+    if(cm4.windowMax + 100 > 1024){
+        //windowMin = windowMin - (windowMax - pow(2, cm4.HoriScale + 6)); 
+        cm4.windowMin = cm4.windowMin - (cm4.windowMax - 1024); 
+        //windowMax = pow(2, cm4.HoriScale + 6); 
+        cm4.windowMax = 1024; 
+    }
+   */
+
+    //for(int i = cm4.windowMin; i < cm4.windowMax; ++i){
+    for(int i = 0; i < 128; ++i){
+        lv_chart_set_next(chart1, s1, cm4.RamReadBuffer[i] + cm4.Offset);
+        //lv_chart_set_next(chart1, s1, cm4.RamReadBuffer[i]);
+    }   
+    startup = 1;
+}
 
 static void sw_event_handler(lv_obj_t * obj, lv_event_t event)
 {
-    if(event == LV_EVENT_VALUE_CHANGED) {
+    if(event == (LV_EVENT_VALUE_CHANGED)) {
         printf("State: %s\n", lv_sw_get_state(obj) ? "On" : "Off");
         //cm4.onBit = !cm4.onBit;
     }
 }
-
 static void offset_slider_event_cb(lv_obj_t * slider, lv_event_t event)
 {
-    if(event == LV_EVENT_VALUE_CHANGED) {
+    if(event == (LV_EVENT_VALUE_CHANGED)) {
         static char buf[4]; /* max 3 bytes for number plus 1 null terminating byte */
         snprintf(buf, 4, "%u", lv_slider_get_value(slider));
         lv_label_set_text(offsetLabel, buf);
-        //int temp = (int)(buf);          //type cast the new slider value to an integer
-        //cm4.Offset = (zeros | temp);    //stores the new slider value in the global structure
         cm4.Offset = lv_slider_get_value(slider);
+        chart_actions();    //call to update the chart
     }
 }
 static void trigger_slider_event_cb(lv_obj_t * slider, lv_event_t event)
 {
-    if(event == LV_EVENT_VALUE_CHANGED) {
+    if(event == (LV_EVENT_VALUE_CHANGED)) {
         static char buf[4]; /* max 3 bytes for number plus 1 null terminating byte */
         snprintf(buf, 4, "%u", lv_slider_get_value(slider));
         lv_label_set_text(triggerLabel, buf);
-        //int temp = (int)(buf);          //type cast the new slider value to an integer
-        //cm4.Trigger = (zeros | temp);    //stores the new slider value in the global structure
         cm4.Trigger = lv_slider_get_value(slider);
+        chart_actions();    //call to update the chart
     }
 }
 static void hori_slider_event_cb(lv_obj_t * slider, lv_event_t event)
 {
-    if(event == LV_EVENT_VALUE_CHANGED) {
+    if(event == (LV_EVENT_VALUE_CHANGED)) {
         static char buf[4]; /* max 3 bytes for number plus 1 null terminating byte */
         snprintf(buf, 4, "%u", lv_slider_get_value(slider));
         lv_label_set_text(horiLabel1, buf);
-        //int temp = (int)(buf);          //type cast the new slider value to an integer
-        //cm4.HoriScale = (zeros | temp);    //stores the new slider value in the global structure
         cm4.HoriScale = lv_slider_get_value(slider);
+        chart_actions();    //call to update the chart
     }
 }
 static void verti_slider_event_cb(lv_obj_t * slider, lv_event_t event)
 {
-    if(event == LV_EVENT_VALUE_CHANGED) {
+    if(event == (LV_EVENT_VALUE_CHANGED)) {
         static char buf[4]; /* max 3 bytes for number plus 1 null terminating byte */
         snprintf(buf, 4, "%u", lv_slider_get_value(slider));
         lv_label_set_text(vertLabel1, buf);
-        //int temp = (int)(buf);          //type cast the new slider value to an integer
-        //cm4.VertScale = (zeros | temp);    //stores the new slider value in the global structure
         cm4.VertScale = lv_slider_get_value(slider);
+        chart_actions();    //call to update the chart
     }
 }
 static void window_slider_event_cb(lv_obj_t * slider, lv_event_t event)
 {
-    if(event == LV_EVENT_VALUE_CHANGED) {
+    if(event == (LV_EVENT_VALUE_CHANGED)) {
         static char buf[6]; /* max 3 bytes for number plus 1 null terminating byte */
         snprintf(buf, 6, "%u", lv_slider_get_value(slider));
         lv_label_set_text(windowLabel, buf);
-        //int temp = (int)(buf);          //type cast the new slider value to an integer
-        //cm4.windowPos = (zeros | temp);    //stores the new slider value in the global structure
         cm4.windowPos = lv_slider_get_value(slider);
+        chart_actions();    //call to update the chart
     }
 }
 
 void home_screen()
-{
-  
-    const int chart_width = 280;
-    const int chart_heigth = 200;
-    const int chart_vertPos = 20;
-    const int chart_horiPos = 20;      
-    
-    //static lv_obj_t *my_label;
-    //static lv_style_t *lbl_style;
-    
-    static lv_obj_t *chart1;        //declaring the chart
-    
+{    
     /* First Slider: Offset */
     lv_obj_t * offsetSlider = lv_slider_create(lv_scr_act(), NULL);
     lv_obj_set_pos(offsetSlider, 20, 295);                         /*Set its position*/
     lv_obj_set_size(offsetSlider, 130, 30);                        /*Set its size*/
-    lv_slider_set_value(offsetSlider, 5, LV_ANIM_ON);
+    lv_slider_set_value(offsetSlider, 0, LV_ANIM_ON);
     lv_obj_set_event_cb(offsetSlider, offset_slider_event_cb);
     lv_slider_set_range(offsetSlider, 0, 10);
         
             /* Create a label below the slider */
             offsetLabel = lv_label_create(lv_scr_act(), NULL);
-            lv_label_set_text(offsetLabel, "5");
+            lv_label_set_text(offsetLabel, "0");
             lv_obj_set_auto_realign(offsetLabel, true);
             lv_obj_align(offsetLabel, offsetSlider, LV_ALIGN_OUT_BOTTOM_MID, 0, 0);
         
@@ -188,7 +221,7 @@ void home_screen()
             lv_label_set_text(vertLabel2, "Vert. Scale: ");
             lv_obj_align(vertLabel2, vertSlider, LV_ALIGN_OUT_TOP_MID, 0, 0);
     
-            
+        
             
     /* Fifth Slider: Horizontal Window      Control Range of Points shown */
     lv_obj_t * windowSlider = lv_slider_create(lv_scr_act(), NULL);
@@ -204,49 +237,11 @@ void home_screen()
             lv_label_set_text(windowLabel, "512");
             lv_obj_set_auto_realign(windowLabel, true);
             lv_obj_align(windowLabel, windowSlider, LV_ALIGN_OUT_BOTTOM_MID, 0, 0);
-    
             
             
-    /* Display chart                         */        
-    chart1 = lv_chart_create(lv_scr_act(), NULL);                     //Add a chart to the current screen
-    //lv_obj_set_style(chart1, &style_box);                           //sets the style
-    lv_obj_set_pos(chart1, chart_horiPos, chart_vertPos);             /*Set its position*/
-    lv_obj_set_size(chart1, chart_width, chart_heigth);               /*Set its size*/   
-    
-    //GIVE IMPACT BASED ON THE VERT AND HORI SCALE
-    lv_chart_set_div_line_count(chart1, 3, 4);                        //sets the grid lines
-    
-    lv_chart_set_point_count(chart1, 256);                              //setting the number of points on the chart
-    lv_chart_set_type(chart1, LV_CHART_TYPE_POINT);                    //set graph to points, as opposed to lines
-                                                                      
-
-    lv_chart_series_t * s1 = lv_chart_add_series(chart1, lv_color_hex(0x01a2b1));
-    
-    // Need to calculate the desired indexes in RxBuffer, Based on HoriScale
-    //always show 200 points, those points based on the window
-    cm4.windowMin = cm4.windowPos - 100;
-    cm4.windowMax = cm4.windowPos + 100;
-    
-    if(cm4.windowMin - 100 < 0){
-        cm4.windowMax = (cm4.windowMin * -1) + cm4.windowMax;
-        cm4.windowMin = 0;
-    }
-    //if(windowMax + 100 > pow(2, cm4.HoriScale + 6)){
-    if(cm4.windowMax + 100 > 1024){
-        //windowMin = windowMin - (windowMax - pow(2, cm4.HoriScale + 6)); 
-        cm4.windowMin = cm4.windowMin - (cm4.windowMax - 1024); 
-        //windowMax = pow(2, cm4.HoriScale + 6); 
-        cm4.windowMax = 1024; 
-    }
-   
-    //for(int i = cm4.windowMin; i < cm4.windowMax; ++i){
-    for(int i = 0; i < 128; ++i){
-        //lv_chart_set_next(chart1, s1, points[i]);
-        //lv_chart_set_next(chart1, s1, cm4.RxBuffer[i] + cm4.Offset);
-        lv_chart_set_next(chart1, s1, cm4.RamReadBuffer[i]);
-    }
-    
-    
+    //Draw the ogriginal chart... should be empty or zeroes
+    chart_actions();
+            
     
     //Adding an on/off switch 
     lv_obj_t * sw1 = lv_sw_create(lv_scr_act(), NULL);

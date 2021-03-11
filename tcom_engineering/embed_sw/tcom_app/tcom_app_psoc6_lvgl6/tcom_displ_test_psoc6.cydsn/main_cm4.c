@@ -159,7 +159,8 @@ main( void )
             
             //else{
             //1024/8, total number of samples divided by the size of bursts
-            for(uint32_t burst = 0; burst < 1024/NUM_TO_WRITE; burst++){
+            //512 because we are reading in  2 samples every time
+            for(uint32_t burst = 0; burst < 512/NUM_TO_WRITE; burst++){
 
                 // Dummy write, to read data from FPGA
                 Cy_SCB_SPI_ClearSlaveMasterStatus(SPIM_HW, CY_SCB_SPI_MASTER_DONE);
