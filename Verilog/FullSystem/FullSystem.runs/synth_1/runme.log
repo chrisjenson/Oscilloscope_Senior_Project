@@ -3,293 +3,143 @@
     with args -log Top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source Top.tcl
 
 
-****** Vivado v2019.1 (64-bit)
-  **** SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
-  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+****** Vivado v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 
 source Top.tcl -notrace
 Command: synth_design -top Top -part xc7a100tcsg324-1
 Starting synth_design
+INFO: [IP_Flow 19-2162] IP 'blk_mem_gen_0' is locked:
+* IP definition 'Block Memory Generator (8.4)' for IP 'blk_mem_gen_0' (customized with software release 2019.1) has a different revision in the IP Catalog.
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
-INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 14312 
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 13528
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 728.363 ; gain = 177.516
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1017.910 ; gain = 0.000
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'Top' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/Top.v:12]
-INFO: [Synth 8-6157] synthesizing module 'DataSimulation' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/DataSimulation.v:3]
-INFO: [Synth 8-6155] done synthesizing module 'DataSimulation' (1#1) [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/DataSimulation.v:3]
-INFO: [Synth 8-6157] synthesizing module 'TimingGen' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/TimingGen.v:3]
-INFO: [Synth 8-6155] done synthesizing module 'TimingGen' (2#1) [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/TimingGen.v:3]
-INFO: [Synth 8-6157] synthesizing module 'ADCInterface' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/ADCInterface.v:3]
-INFO: [Synth 8-6155] done synthesizing module 'ADCInterface' (3#1) [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/ADCInterface.v:3]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/Top.v:104]
-INFO: [Synth 8-6157] synthesizing module 'TriggerLogic' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/TriggerLogic.v:3]
-INFO: [Synth 8-6155] done synthesizing module 'TriggerLogic' (4#1) [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/TriggerLogic.v:3]
-WARNING: [Synth 8-689] width (10) of port connection 'ADC_InData' does not match port width (8) of module 'TriggerLogic' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/Top.v:113]
-WARNING: [Synth 8-7023] instance 'u_TriggerLogic' of module 'TriggerLogic' has 8 connections declared, but only 7 given [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/Top.v:104]
-INFO: [Synth 8-6157] synthesizing module 'RAM_WriteEngine' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/RAM_WriteEngine.v:3]
-INFO: [Synth 8-6155] done synthesizing module 'RAM_WriteEngine' (5#1) [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/RAM_WriteEngine.v:3]
-INFO: [Synth 8-6157] synthesizing module 'RAM_ReadEngine' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/RAM_ReadEngine.v:4]
-INFO: [Synth 8-6155] done synthesizing module 'RAM_ReadEngine' (6#1) [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/RAM_ReadEngine.v:4]
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_0' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.runs/synth_1/.Xil/Vivado-15376-MSI/realtime/blk_mem_gen_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_0' (7#1) [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.runs/synth_1/.Xil/Vivado-15376-MSI/realtime/blk_mem_gen_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'SPI' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/SPI.v:3]
-WARNING: [Synth 8-3848] Net DebugSlaveSel in module/entity SPI does not have driver. [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/SPI.v:14]
-INFO: [Synth 8-6155] done synthesizing module 'SPI' (8#1) [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/SPI.v:3]
-WARNING: [Synth 8-7023] instance 'u_SPI' of module 'SPI' has 22 connections declared, but only 21 given [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/Top.v:180]
-INFO: [Synth 8-6157] synthesizing module 'Regs' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/Regs.v:4]
-WARNING: [Synth 8-3848] Net SampleDecimationFactor in module/entity Regs does not have driver. [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/Regs.v:20]
-WARNING: [Synth 8-3848] Net IRSHighLow in module/entity Regs does not have driver. [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/Regs.v:24]
-WARNING: [Synth 8-3848] Net Offset in module/entity Regs does not have driver. [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/Regs.v:25]
-WARNING: [Synth 8-3848] Net ShiftControlRegister in module/entity Regs does not have driver. [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/Regs.v:26]
-INFO: [Synth 8-6155] done synthesizing module 'Regs' (9#1) [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/Regs.v:4]
-WARNING: [Synth 8-7023] instance 'u_REGS' of module 'Regs' has 16 connections declared, but only 12 given [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/Top.v:208]
-INFO: [Synth 8-6157] synthesizing module 'Buffer_FIFO' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/Buffer_FIFO.v:3]
-INFO: [Synth 8-6157] synthesizing module 'FIFO_RAM' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/FIFO_RAM.v:3]
-INFO: [Synth 8-6155] done synthesizing module 'FIFO_RAM' (10#1) [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/FIFO_RAM.v:3]
-INFO: [Synth 8-6155] done synthesizing module 'Buffer_FIFO' (11#1) [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/Buffer_FIFO.v:3]
-WARNING: [Synth 8-3848] Net DebugOnBit in module/entity Top does not have driver. [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/Top.v:35]
-INFO: [Synth 8-6155] done synthesizing module 'Top' (12#1) [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/Top.v:12]
-WARNING: [Synth 8-3917] design Top has port DebugTriggered driven by constant 1
-WARNING: [Synth 8-3331] design Regs has unconnected port SampleDecimationFactor[1]
-WARNING: [Synth 8-3331] design Regs has unconnected port SampleDecimationFactor[0]
-WARNING: [Synth 8-3331] design Regs has unconnected port IRSHighLow[1]
-WARNING: [Synth 8-3331] design Regs has unconnected port IRSHighLow[0]
-WARNING: [Synth 8-3331] design Regs has unconnected port Offset[3]
-WARNING: [Synth 8-3331] design Regs has unconnected port Offset[2]
-WARNING: [Synth 8-3331] design Regs has unconnected port Offset[1]
-WARNING: [Synth 8-3331] design Regs has unconnected port Offset[0]
-WARNING: [Synth 8-3331] design Regs has unconnected port ShiftControlRegister[1]
-WARNING: [Synth 8-3331] design Regs has unconnected port ShiftControlRegister[0]
-WARNING: [Synth 8-3331] design SPI has unconnected port DebugSlaveSel
-WARNING: [Synth 8-3331] design RAM_ReadEngine has unconnected port RAMW_WriteAddr[17]
-WARNING: [Synth 8-3331] design RAM_ReadEngine has unconnected port RAMW_WriteAddr[16]
-WARNING: [Synth 8-3331] design RAM_ReadEngine has unconnected port RAMW_WriteAddr[15]
-WARNING: [Synth 8-3331] design RAM_ReadEngine has unconnected port RAMW_WriteAddr[14]
-WARNING: [Synth 8-3331] design RAM_ReadEngine has unconnected port RAMW_WriteAddr[13]
-WARNING: [Synth 8-3331] design RAM_ReadEngine has unconnected port RAMW_WriteAddr[12]
-WARNING: [Synth 8-3331] design RAM_ReadEngine has unconnected port RAMW_WriteAddr[11]
-WARNING: [Synth 8-3331] design RAM_ReadEngine has unconnected port RAMW_WriteAddr[10]
-WARNING: [Synth 8-3331] design RAM_ReadEngine has unconnected port RAMW_WriteAddr[9]
-WARNING: [Synth 8-3331] design RAM_ReadEngine has unconnected port RAMW_WriteAddr[8]
-WARNING: [Synth 8-3331] design RAM_ReadEngine has unconnected port RAMW_WriteAddr[7]
-WARNING: [Synth 8-3331] design RAM_ReadEngine has unconnected port RAMW_WriteAddr[6]
-WARNING: [Synth 8-3331] design RAM_ReadEngine has unconnected port RAMW_WriteAddr[5]
-WARNING: [Synth 8-3331] design RAM_ReadEngine has unconnected port RAMW_WriteAddr[4]
-WARNING: [Synth 8-3331] design RAM_ReadEngine has unconnected port RAMW_WriteAddr[3]
-WARNING: [Synth 8-3331] design RAM_ReadEngine has unconnected port RAMW_WriteAddr[2]
-WARNING: [Synth 8-3331] design RAM_ReadEngine has unconnected port RAMW_WriteAddr[1]
-WARNING: [Synth 8-3331] design RAM_ReadEngine has unconnected port RAMW_WriteAddr[0]
-WARNING: [Synth 8-3331] design TriggerLogic has unconnected port TriggerType[7]
-WARNING: [Synth 8-3331] design TriggerLogic has unconnected port TriggerType[6]
-WARNING: [Synth 8-3331] design TriggerLogic has unconnected port TriggerType[5]
-WARNING: [Synth 8-3331] design TriggerLogic has unconnected port TriggerType[4]
-WARNING: [Synth 8-3331] design TriggerLogic has unconnected port TriggerType[3]
-WARNING: [Synth 8-3331] design ADCInterface has unconnected port ADC_DataIn[9]
-WARNING: [Synth 8-3331] design ADCInterface has unconnected port ADC_DataIn[8]
-WARNING: [Synth 8-3331] design ADCInterface has unconnected port ADC_BitSelect[1]
-WARNING: [Synth 8-3331] design ADCInterface has unconnected port ADC_BitSelect[0]
-WARNING: [Synth 8-3331] design Top has unconnected port DebugOnBit
+INFO: [Synth 8-6157] synthesizing module 'Top' [C:/Users/tmj32/Documents/TCNJ/Senior_Project/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/Top.v:12]
+INFO: [Synth 8-6157] synthesizing module 'DataSimulation' [C:/Users/tmj32/Documents/TCNJ/Senior_Project/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/DataSimulation.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'DataSimulation' (1#1) [C:/Users/tmj32/Documents/TCNJ/Senior_Project/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/DataSimulation.v:3]
+INFO: [Synth 8-6157] synthesizing module 'TimingGen' [C:/Users/tmj32/Documents/TCNJ/Senior_Project/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/TimingGen.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'TimingGen' (2#1) [C:/Users/tmj32/Documents/TCNJ/Senior_Project/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/TimingGen.v:3]
+INFO: [Synth 8-6157] synthesizing module 'ADCInterface' [C:/Users/tmj32/Documents/TCNJ/Senior_Project/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/ADCInterface.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'ADCInterface' (3#1) [C:/Users/tmj32/Documents/TCNJ/Senior_Project/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/ADCInterface.v:3]
+INFO: [Synth 8-6157] synthesizing module 'TriggerLogic' [C:/Users/tmj32/Documents/TCNJ/Senior_Project/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/TriggerLogic.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'TriggerLogic' (4#1) [C:/Users/tmj32/Documents/TCNJ/Senior_Project/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/TriggerLogic.v:3]
+WARNING: [Synth 8-689] width (10) of port connection 'ADC_InData' does not match port width (8) of module 'TriggerLogic' [C:/Users/tmj32/Documents/TCNJ/Senior_Project/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/Top.v:113]
+INFO: [Synth 8-6157] synthesizing module 'RAM_WriteEngine' [C:/Users/tmj32/Documents/TCNJ/Senior_Project/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/RAM_WriteEngine.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'RAM_WriteEngine' (5#1) [C:/Users/tmj32/Documents/TCNJ/Senior_Project/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/RAM_WriteEngine.v:3]
+INFO: [Synth 8-6157] synthesizing module 'RAM_ReadEngine' [C:/Users/tmj32/Documents/TCNJ/Senior_Project/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/RAM_ReadEngine.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'RAM_ReadEngine' (6#1) [C:/Users/tmj32/Documents/TCNJ/Senior_Project/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/RAM_ReadEngine.v:4]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_0' [C:/Users/tmj32/Documents/TCNJ/Senior_Project/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.runs/synth_1/.Xil/Vivado-7884-MSI/realtime/blk_mem_gen_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_0' (7#1) [C:/Users/tmj32/Documents/TCNJ/Senior_Project/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.runs/synth_1/.Xil/Vivado-7884-MSI/realtime/blk_mem_gen_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'SPI' [C:/Users/tmj32/Documents/TCNJ/Senior_Project/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/SPI.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'SPI' (8#1) [C:/Users/tmj32/Documents/TCNJ/Senior_Project/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/SPI.v:3]
+WARNING: [Synth 8-7071] port 'DebugSPI_Ins' of module 'SPI' is unconnected for instance 'u_SPI' [C:/Users/tmj32/Documents/TCNJ/Senior_Project/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/Top.v:182]
+WARNING: [Synth 8-7023] instance 'u_SPI' of module 'SPI' has 22 connections declared, but only 21 given [C:/Users/tmj32/Documents/TCNJ/Senior_Project/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/Top.v:182]
+INFO: [Synth 8-6157] synthesizing module 'Regs' [C:/Users/tmj32/Documents/TCNJ/Senior_Project/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/Regs.v:4]
+WARNING: [Synth 8-6090] variable 'registers' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/tmj32/Documents/TCNJ/Senior_Project/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/Regs.v:74]
+INFO: [Synth 8-6155] done synthesizing module 'Regs' (9#1) [C:/Users/tmj32/Documents/TCNJ/Senior_Project/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/Regs.v:4]
+WARNING: [Synth 8-7071] port 'SampleDecimationFactor' of module 'Regs' is unconnected for instance 'u_REGS' [C:/Users/tmj32/Documents/TCNJ/Senior_Project/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/Top.v:210]
+WARNING: [Synth 8-7071] port 'IRSHighLow' of module 'Regs' is unconnected for instance 'u_REGS' [C:/Users/tmj32/Documents/TCNJ/Senior_Project/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/Top.v:210]
+WARNING: [Synth 8-7071] port 'Offset' of module 'Regs' is unconnected for instance 'u_REGS' [C:/Users/tmj32/Documents/TCNJ/Senior_Project/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/Top.v:210]
+WARNING: [Synth 8-7071] port 'ShiftControlRegister' of module 'Regs' is unconnected for instance 'u_REGS' [C:/Users/tmj32/Documents/TCNJ/Senior_Project/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/Top.v:210]
+WARNING: [Synth 8-7023] instance 'u_REGS' of module 'Regs' has 18 connections declared, but only 14 given [C:/Users/tmj32/Documents/TCNJ/Senior_Project/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/Top.v:210]
+INFO: [Synth 8-6157] synthesizing module 'Buffer_FIFO' [C:/Users/tmj32/Documents/TCNJ/Senior_Project/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/Buffer_FIFO.v:3]
+INFO: [Synth 8-6157] synthesizing module 'FIFO_RAM' [C:/Users/tmj32/Documents/TCNJ/Senior_Project/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/FIFO_RAM.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'FIFO_RAM' (10#1) [C:/Users/tmj32/Documents/TCNJ/Senior_Project/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/FIFO_RAM.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'Buffer_FIFO' (11#1) [C:/Users/tmj32/Documents/TCNJ/Senior_Project/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/Buffer_FIFO.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'Top' (12#1) [C:/Users/tmj32/Documents/TCNJ/Senior_Project/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/Top.v:12]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 795.297 ; gain = 244.449
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 1017.910 ; gain = 0.000
 ---------------------------------------------------------------------------------
-
-Report Check Netlist: 
-+------+------------------+-------+---------+-------+------------------+
-|      |Item              |Errors |Warnings |Status |Description       |
-+------+------------------+-------+---------+-------+------------------+
-|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
-+------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 795.297 ; gain = 244.449
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 1017.910 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 795.297 ; gain = 244.449
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 1017.910 ; gain = 0.000
 ---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.027 . Memory (MB): peak = 1017.910 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [d:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'u_blk_mem_gen_0'
-Finished Parsing XDC File [d:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'u_blk_mem_gen_0'
-Parsing XDC File [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/lp_constraints.xdc]
-Finished Parsing XDC File [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/lp_constraints.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/lp_constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Top_propImpl.xdc].
+Parsing XDC File [c:/Users/tmj32/Documents/TCNJ/Senior_Project/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'u_blk_mem_gen_0'
+Finished Parsing XDC File [c:/Users/tmj32/Documents/TCNJ/Senior_Project/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'u_blk_mem_gen_0'
+Parsing XDC File [C:/Users/tmj32/Documents/TCNJ/Senior_Project/Oscilloscope_Senior_Project/Verilog/FullSystem/lp_constraints.xdc]
+Finished Parsing XDC File [C:/Users/tmj32/Documents/TCNJ/Senior_Project/Oscilloscope_Senior_Project/Verilog/FullSystem/lp_constraints.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/tmj32/Documents/TCNJ/Senior_Project/Oscilloscope_Senior_Project/Verilog/FullSystem/lp_constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Top_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/Top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 915.039 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1082.680 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 915.039 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.084 . Memory (MB): peak = 1082.680 ; gain = 0.000
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'u_blk_mem_gen_0' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 924.340 ; gain = 373.492
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:19 . Memory (MB): peak = 1090.875 ; gain = 72.965
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 924.340 ; gain = 373.492
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:19 . Memory (MB): peak = 1090.875 ; gain = 72.965
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property DONT_TOUCH = true for u_blk_mem_gen_0. (constraint file  auto generated constraint, line ).
+Applied set_property KEEP_HIERARCHY = SOFT for u_blk_mem_gen_0. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 924.340 ; gain = 373.492
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:20 . Memory (MB): peak = 1090.875 ; gain = 72.965
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 924.340 ; gain = 373.492
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:20 . Memory (MB): peak = 1090.875 ; gain = 72.965
 ---------------------------------------------------------------------------------
-
-Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     18 Bit       Adders := 1     
-	   2 Input     10 Bit       Adders := 1     
-	   2 Input      4 Bit       Adders := 2     
-	   2 Input      3 Bit       Adders := 3     
-	   2 Input      2 Bit       Adders := 3     
-	   2 Input      1 Bit       Adders := 1     
+	   2 Input   18 Bit       Adders := 2     
+	   2 Input   10 Bit       Adders := 1     
+	   2 Input    4 Bit       Adders := 2     
+	   2 Input    3 Bit       Adders := 3     
+	   2 Input    2 Bit       Adders := 3     
+	   2 Input    1 Bit       Adders := 1     
 +---Registers : 
-	               18 Bit    Registers := 2     
+	               18 Bit    Registers := 3     
 	               16 Bit    Registers := 3     
 	               10 Bit    Registers := 1     
-	                8 Bit    Registers := 17    
+	                8 Bit    Registers := 18    
 	                5 Bit    Registers := 1     
 	                4 Bit    Registers := 2     
 	                3 Bit    Registers := 3     
 	                2 Bit    Registers := 3     
-	                1 Bit    Registers := 28    
+	                1 Bit    Registers := 32    
 +---Muxes : 
-	   2 Input     18 Bit        Muxes := 2     
-	  20 Input     18 Bit        Muxes := 1     
-	   3 Input     16 Bit        Muxes := 1     
-	   2 Input     16 Bit        Muxes := 2     
-	   2 Input      8 Bit        Muxes := 3     
-	   2 Input      3 Bit        Muxes := 3     
-	   2 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 37    
-	   4 Input      1 Bit        Muxes := 4     
+	   2 Input   18 Bit        Muxes := 4     
+	  20 Input   18 Bit        Muxes := 1     
+	   3 Input   16 Bit        Muxes := 1     
+	   2 Input   16 Bit        Muxes := 2     
+	   2 Input    8 Bit        Muxes := 10    
+	   2 Input    3 Bit        Muxes := 3     
+	   2 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 50    
+	   4 Input    1 Bit        Muxes := 4     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start RTL Hierarchical Component Statistics 
----------------------------------------------------------------------------------
-Hierarchical RTL Component report 
-Module Top 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 2     
-Module DataSimulation 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     10 Bit       Adders := 1     
-+---Registers : 
-	               10 Bit    Registers := 1     
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module TimingGen 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input      2 Bit       Adders := 1     
-+---Registers : 
-	                2 Bit    Registers := 1     
-	                1 Bit    Registers := 2     
-+---Muxes : 
-	   2 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 1     
-Module ADCInterface 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input      1 Bit       Adders := 1     
-+---Registers : 
-	               16 Bit    Registers := 2     
-	                1 Bit    Registers := 2     
-+---Muxes : 
-	   3 Input     16 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 1     
-Module TriggerLogic 
-Detailed RTL Component Info : 
-+---Registers : 
-	                8 Bit    Registers := 1     
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-	   4 Input      1 Bit        Muxes := 1     
-Module RAM_WriteEngine 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 4     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module RAM_ReadEngine 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     18 Bit       Adders := 1     
-+---Registers : 
-	               18 Bit    Registers := 1     
-	                1 Bit    Registers := 2     
-+---Muxes : 
-	   2 Input     18 Bit        Muxes := 2     
-	   2 Input      1 Bit        Muxes := 2     
-Module SPI 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input      4 Bit       Adders := 2     
-	   2 Input      3 Bit       Adders := 1     
-+---Registers : 
-	               18 Bit    Registers := 1     
-	               16 Bit    Registers := 1     
-	                8 Bit    Registers := 1     
-	                5 Bit    Registers := 1     
-	                4 Bit    Registers := 2     
-	                3 Bit    Registers := 2     
-	                1 Bit    Registers := 14    
-+---Muxes : 
-	  20 Input     18 Bit        Muxes := 1     
-	   2 Input     16 Bit        Muxes := 2     
-	   2 Input      1 Bit        Muxes := 13    
-	   4 Input      1 Bit        Muxes := 3     
-Module Regs 
-Detailed RTL Component Info : 
-+---Registers : 
-	                8 Bit    Registers := 15    
-+---Muxes : 
-	   2 Input      8 Bit        Muxes := 3     
-	   2 Input      1 Bit        Muxes := 14    
-Module Buffer_FIFO 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input      3 Bit       Adders := 2     
-	   2 Input      2 Bit       Adders := 2     
-+---Registers : 
-	                3 Bit    Registers := 1     
-	                2 Bit    Registers := 2     
-+---Muxes : 
-	   2 Input      3 Bit        Muxes := 3     
-	   2 Input      1 Bit        Muxes := 3     
----------------------------------------------------------------------------------
-Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Part Resource Summary
@@ -303,84 +153,56 @@ Finished Part Resource Summary
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
-Warning: Parallel synthesis criteria is not met 
-INFO: [Synth 8-4471] merging register 'u_TimingGen/ADC_SampleClock_p1_reg' into 'u_DataSimulation/ADC_SampleClock_p1_reg' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/TimingGen.v:45]
-INFO: [Synth 8-4471] merging register 'u_ADCInterface/ADC_SampleClock_p1_reg' into 'u_DataSimulation/ADC_SampleClock_p1_reg' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/ADCInterface.v:26]
-INFO: [Synth 8-4471] merging register 'u_RAM_WriteEngine/ADC_SampleClock_p1_reg' into 'u_DataSimulation/ADC_SampleClock_p1_reg' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/RAM_WriteEngine.v:31]
-WARNING: [Synth 8-3917] design Top has port DebugTriggered driven by constant 1
-WARNING: [Synth 8-3331] design Top has unconnected port DebugOnBit
-WARNING: [Synth 8-3331] design Top has unconnected port DebugSlaveSel
-INFO: [Synth 8-3886] merging instance 'u_SPI/BUFFER_InAmount_reg[0]' (FDR) to 'u_SPI/BUFFER_InAmount_reg[1]'
-INFO: [Synth 8-3886] merging instance 'u_SPI/BUFFER_InAmount_reg[1]' (FDR) to 'u_SPI/BUFFER_InAmount_reg[2]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_SPI/BUFFER_InAmount_reg[2] )
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 924.340 ; gain = 373.492
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:26 . Memory (MB): peak = 1090.875 ; gain = 72.965
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Start ROM, RAM, DSP and Shift Register Reporting
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 
-Distributed RAM: Preliminary Mapping  Report (see note below)
-+------------+-----------------------------------------+-----------+----------------------+--------------+
-|Module Name | RTL Object                              | Inference | Size (Depth x Width) | Primitives   | 
-+------------+-----------------------------------------+-----------+----------------------+--------------+
-|Top         | u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg | Implied   | 4 x 16               | RAM32M x 3   | 
-+------------+-----------------------------------------+-----------+----------------------+--------------+
+Distributed RAM: Preliminary Mapping	Report (see note below)
++------------+-----------------------------------------+-----------+----------------------+-------------+
+|Module Name | RTL Object                              | Inference | Size (Depth x Width) | Primitives  | 
++------------+-----------------------------------------+-----------+----------------------+-------------+
+|Top         | u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg | Implied   | 4 x 16               | RAM32M x 3	 | 
++------------+-----------------------------------------+-----------+----------------------+-------------+
 
 Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
 ---------------------------------------------------------------------------------
-Finished ROM, RAM, DSP and Shift Register Reporting
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
-
-Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 924.340 ; gain = 373.492
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:32 . Memory (MB): peak = 1090.875 ; gain = 72.965
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 942.453 ; gain = 391.605
+Finished Timing Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:36 . Memory (MB): peak = 1093.570 ; gain = 75.660
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Start ROM, RAM, DSP and Shift Register Reporting
----------------------------------------------------------------------------------
-
-Distributed RAM: Final Mapping  Report
-+------------+-----------------------------------------+-----------+----------------------+--------------+
-|Module Name | RTL Object                              | Inference | Size (Depth x Width) | Primitives   | 
-+------------+-----------------------------------------+-----------+----------------------+--------------+
-|Top         | u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg | Implied   | 4 x 16               | RAM32M x 3   | 
-+------------+-----------------------------------------+-----------+----------------------+--------------+
-
----------------------------------------------------------------------------------
-Finished ROM, RAM, DSP and Shift Register Reporting
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 
-Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
+Distributed RAM: Final Mapping	Report
++------------+-----------------------------------------+-----------+----------------------+-------------+
+|Module Name | RTL Object                              | Inference | Size (Depth x Width) | Primitives  | 
++------------+-----------------------------------------+-----------+----------------------+-------------+
+|Top         | u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg | Implied   | 4 x 16               | RAM32M x 3	 | 
++------------+-----------------------------------------+-----------+----------------------+-------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 942.453 ; gain = 391.605
+Finished Technology Mapping : Time (s): cpu = 00:00:29 ; elapsed = 00:00:36 . Memory (MB): peak = 1108.262 ; gain = 90.352
 ---------------------------------------------------------------------------------
-
-Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start IO Insertion
 ---------------------------------------------------------------------------------
@@ -397,50 +219,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 942.453 ; gain = 391.605
+Finished IO Insertion : Time (s): cpu = 00:00:33 ; elapsed = 00:00:40 . Memory (MB): peak = 1108.262 ; gain = 90.352
 ---------------------------------------------------------------------------------
-
-Report Check Netlist: 
-+------+------------------+-------+---------+-------+------------------+
-|      |Item              |Errors |Warnings |Status |Description       |
-+------+------------------+-------+---------+-------+------------------+
-|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
-+------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 942.453 ; gain = 391.605
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:33 ; elapsed = 00:00:40 . Memory (MB): peak = 1108.262 ; gain = 90.352
 ---------------------------------------------------------------------------------
-
-Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 942.453 ; gain = 391.605
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:33 ; elapsed = 00:00:40 . Memory (MB): peak = 1108.262 ; gain = 90.352
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 942.453 ; gain = 391.605
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:33 ; elapsed = 00:00:40 . Memory (MB): peak = 1108.262 ; gain = 90.352
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 942.453 ; gain = 391.605
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:33 ; elapsed = 00:00:40 . Memory (MB): peak = 1108.262 ; gain = 90.352
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 942.453 ; gain = 391.605
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:33 ; elapsed = 00:00:40 . Memory (MB): peak = 1108.262 ; gain = 90.352
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -454,66 +263,48 @@ Report BlackBoxes:
 +------+--------------+----------+
 
 Report Cell Usage: 
-+------+--------------+------+
-|      |Cell          |Count |
-+------+--------------+------+
-|1     |blk_mem_gen_0 |     1|
-|2     |BUFG          |     1|
-|3     |CARRY4        |    15|
-|4     |LUT1          |     7|
-|5     |LUT2          |     8|
-|6     |LUT3          |    26|
-|7     |LUT4          |    46|
-|8     |LUT5          |    67|
-|9     |LUT6          |    62|
-|10    |MUXF7         |    18|
-|11    |MUXF8         |     9|
-|12    |RAM32M        |     3|
-|13    |FDRE          |   258|
-|14    |FDSE          |    30|
-|15    |IBUF          |    13|
-|16    |OBUF          |    21|
-|17    |OBUFT         |     2|
-+------+--------------+------+
-
-Report Instance Areas: 
-+------+--------------------+----------------+------+
-|      |Instance            |Module          |Cells |
-+------+--------------------+----------------+------+
-|1     |top                 |                |   602|
-|2     |  u_ADCInterface    |ADCInterface    |    34|
-|3     |  u_Buffer_FIFO     |Buffer_FIFO     |    26|
-|4     |    u_FIFO_RAM      |FIFO_RAM        |    10|
-|5     |  u_DataSimulation  |DataSimulation  |    29|
-|6     |  u_RAM_ReadEngine  |RAM_ReadEngine  |    45|
-|7     |  u_RAM_WriteEngine |RAM_WriteEngine |    43|
-|8     |  u_REGS            |Regs            |   179|
-|9     |  u_SPI             |SPI             |   184|
-|10    |  u_TimingGen       |TimingGen       |     5|
-+------+--------------------+----------------+------+
++------+------------+------+
+|      |Cell        |Count |
++------+------------+------+
+|1     |blk_mem_gen |     1|
+|2     |BUFG        |     1|
+|3     |CARRY4      |    22|
+|4     |LUT1        |    24|
+|5     |LUT2        |    34|
+|6     |LUT3        |    29|
+|7     |LUT4        |    79|
+|8     |LUT5        |    52|
+|9     |LUT6        |   128|
+|10    |MUXF7       |    21|
+|11    |MUXF8       |     5|
+|12    |RAM32M      |     3|
+|13    |FDRE        |   297|
+|14    |FDSE        |    30|
+|15    |IBUF        |    13|
+|16    |OBUF        |    21|
+|17    |OBUFT       |     2|
++------+------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 942.453 ; gain = 391.605
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:33 ; elapsed = 00:00:40 . Memory (MB): peak = 1108.262 ; gain = 90.352
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 3 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:20 ; elapsed = 00:00:25 . Memory (MB): peak = 942.453 ; gain = 262.562
-Synthesis Optimization Complete : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 942.453 ; gain = 391.605
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:24 ; elapsed = 00:00:36 . Memory (MB): peak = 1108.262 ; gain = 17.387
+Synthesis Optimization Complete : Time (s): cpu = 00:00:34 ; elapsed = 00:00:40 . Memory (MB): peak = 1108.262 ; gain = 90.352
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 45 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 1114.953 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 51 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 942.453 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1114.953 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 3 instances were transformed.
-  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 3 instances
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 3 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-42 Infos, 55 Warnings, 0 Critical Warnings and 0 Errors encountered.
+40 Infos, 10 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 942.453 ; gain = 648.230
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 942.453 ; gain = 0.000
-WARNING: [Constraints 18-5210] No constraints selected for write.
-Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
-INFO: [Common 17-1381] The checkpoint 'D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.runs/synth_1/Top.dcp' has been generated.
+synth_design: Time (s): cpu = 00:00:40 ; elapsed = 00:00:57 . Memory (MB): peak = 1114.953 ; gain = 97.043
+INFO: [Common 17-1381] The checkpoint 'C:/Users/tmj32/Documents/TCNJ/Senior_Project/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.runs/synth_1/Top.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Top_utilization_synth.rpt -pb Top_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Fri Mar  5 18:05:52 2021...
+INFO: [Common 17-206] Exiting Vivado at Fri Mar 12 12:16:50 2021...

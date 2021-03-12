@@ -3,7 +3,7 @@
 # 
 # Vivado(TM)
 # runme.sh: a Vivado-generated Runs Script for UNIX
-# Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+# Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 # 
 
 echo "This script was generated under a different operating system."
@@ -11,9 +11,9 @@ echo "Please update the PATH and LD_LIBRARY_PATH variables below, before executi
 exit
 
 if [ -z "$PATH" ]; then
-  PATH=D:/Xilinx/SDK/2019.1/bin;D:/Xilinx/Vivado/2019.1/ids_lite/ISE/bin/nt64;D:/Xilinx/Vivado/2019.1/ids_lite/ISE/lib/nt64:D:/Xilinx/Vivado/2019.1/bin
+  PATH=D:/Applications/Vivado/2020.2/ids_lite/ISE/bin/nt64;D:/Applications/Vivado/2020.2/ids_lite/ISE/lib/nt64:D:/Applications/Vivado/2020.2/bin
 else
-  PATH=D:/Xilinx/SDK/2019.1/bin;D:/Xilinx/Vivado/2019.1/ids_lite/ISE/bin/nt64;D:/Xilinx/Vivado/2019.1/ids_lite/ISE/lib/nt64:D:/Xilinx/Vivado/2019.1/bin:$PATH
+  PATH=D:/Applications/Vivado/2020.2/ids_lite/ISE/bin/nt64;D:/Applications/Vivado/2020.2/ids_lite/ISE/lib/nt64:D:/Applications/Vivado/2020.2/bin:$PATH
 fi
 export PATH
 
@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.runs/synth_1'
+HD_PWD='C:/Users/tmj32/Documents/TCNJ/Senior_Project/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
