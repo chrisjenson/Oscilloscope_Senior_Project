@@ -98,8 +98,8 @@ main( void )
     cm4.IRS = 0b00000000;
     cm4.Offset = 0b00000000;
     cm4.Gain = 0b00000000;       //goes to Shannon
-    cm4.HoriScale = 0b00000000;
-    cm4.VertScale = 0b00000000;
+    cm4.HoriScale = 0b00000100;
+    cm4.VertScale = 0b00000010;
     cm4.onBit = 0b00000000;
     cm4.windowPos = 512;
     

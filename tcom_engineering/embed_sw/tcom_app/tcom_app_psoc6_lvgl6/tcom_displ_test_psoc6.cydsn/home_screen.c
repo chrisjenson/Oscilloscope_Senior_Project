@@ -30,14 +30,17 @@ static void chart_actions()
     if(startup == 1){
         lv_obj_del(chart1);
     }   
+    
     /* Display chart                         */        
     chart1 = lv_chart_create(lv_scr_act(), NULL);                     //Add a chart to the current screen
     lv_obj_set_pos(chart1, chart_horiPos, chart_vertPos);             /*Set its position*/
     lv_obj_set_size(chart1, chart_width, chart_heigth);               /*Set its size*/ 
     
     //GIVE IMPACT BASED ON THE VERT AND HORI SCALE
-    lv_chart_set_div_line_count(chart1, 3, 4);                        //sets the grid lines
-    lv_chart_set_point_count(chart1, 128);                              //setting the number of points on the chart
+    lv_chart_set_div_line_count(chart1, cm4.HoriScale+2, cm4.VertScale+2);  //sets the grid lines, hori, verti
+    
+    //GIVE IMPACT BASED ON THE VERT AND HORI SCALE
+    lv_chart_set_point_count(chart1, cm4.windowSize);                              //setting the number of points on the chart
     lv_chart_set_type(chart1, LV_CHART_TYPE_POINT);                    //set graph to points, as opposed to lines    
     
     //Have the chart only display the current serie
@@ -47,33 +50,36 @@ static void chart_actions()
     lv_chart_refresh(chart1);
     
     
-    
-    /*
     // Need to calculate the desired indexes in RxBuffer, Based on HoriScale
-    cm4.windowMin = cm4.windowPos - 100;
-    cm4.windowMax = cm4.windowPos + 100;
+    int windowMin = cm4.windowPos - 64;
+    int windowMax = cm4.windowPos + 64;
     
-    if(cm4.windowMin - 100 < 0){
-        cm4.windowMax = (cm4.windowMin * -1) + cm4.windowMax;
-        cm4.windowMin = 0;
+    if(windowMin < 0){
+        windowMax = (windowMin * -1) + windowMax;
+        windowMin = 0;
     }
     //if(windowMax + 100 > pow(2, cm4.HoriScale + 6)){
-    if(cm4.windowMax + 100 > 1024){
+    if(windowMax > 1024){
         //windowMin = windowMin - (windowMax - pow(2, cm4.HoriScale + 6)); 
-        cm4.windowMin = cm4.windowMin - (cm4.windowMax - 1024); 
+        windowMin = windowMin - (windowMax - 1024); 
         //windowMax = pow(2, cm4.HoriScale + 6); 
-        cm4.windowMax = 1024; 
+        windowMax = 1024; 
     }
-   */
 
-    //for(int i = cm4.windowMin; i < cm4.windowMax; ++i){
-    for(int i = 0; i < 128; ++i){
+    //draw the series
+    for(int i = windowMin; i < windowMax; ++i){
         lv_chart_set_next(chart1, s1, cm4.RamReadBuffer[i] + cm4.Offset);
-        //lv_chart_set_next(chart1, s1, cm4.RamReadBuffer[i]);
     }   
     startup = 1;
 }
 
+static void roller_event(lv_obj_t * obj, lv_event_t event)
+{
+    if(event == (LV_EVENT_VALUE_CHANGED)) {
+        char buf[32];
+        lv_roller_get_selected_str(obj, buf, sizeof(buf));
+    }
+}
 static void sw_event_handler(lv_obj_t * obj, lv_event_t event)
 {
     if(event == (LV_EVENT_VALUE_CHANGED)) {
@@ -185,11 +191,11 @@ void home_screen()
     lv_obj_set_size(horiSlider, 130, 30);                        /*Set its size*/
     lv_slider_set_value(horiSlider, 4, LV_ANIM_ON);
     lv_obj_set_event_cb(horiSlider, hori_slider_event_cb);
-    lv_slider_set_range(horiSlider, 0, 10);                      // 11 options for the 11 different data size posibilites
+    lv_slider_set_range(horiSlider, 0, 8);                      // 11 options for the 11 different data size posibilites
     
             /* Create a label below the slider */
             horiLabel1 = lv_label_create(lv_scr_act(), NULL);
-            lv_label_set_text(horiLabel1, "5");
+            lv_label_set_text(horiLabel1, "4");
             lv_obj_set_auto_realign(horiLabel1, true);
             lv_obj_align(horiLabel1, horiSlider, LV_ALIGN_OUT_BOTTOM_MID, 0, 0);
             
@@ -205,13 +211,13 @@ void home_screen()
     lv_obj_t * vertSlider = lv_slider_create(lv_scr_act(), NULL);
     lv_obj_set_pos(vertSlider, 170, 375);                         /*Set its position*/
     lv_obj_set_size(vertSlider, 130, 30);                        /*Set its size*/
-    lv_slider_set_value(vertSlider, 5, LV_ANIM_ON);
+    lv_slider_set_value(vertSlider, 2, LV_ANIM_ON);
     lv_obj_set_event_cb(vertSlider, verti_slider_event_cb);
-    lv_slider_set_range(vertSlider, 0, 10);
+    lv_slider_set_range(vertSlider, 0, 4);
     
             /* Create a label below the slider */
             vertLabel1 = lv_label_create(lv_scr_act(), NULL);
-            lv_label_set_text(vertLabel1, "5");
+            lv_label_set_text(vertLabel1, "2");
             lv_obj_set_auto_realign(vertLabel1, true);
             lv_obj_align(vertLabel1, vertSlider, LV_ALIGN_OUT_BOTTOM_MID, 0, 0);
             
@@ -240,6 +246,7 @@ void home_screen()
             
             
     //Draw the ogriginal chart... should be empty or zeroes
+    cm4.windowSize = 128;
     chart_actions();
             
     
@@ -256,4 +263,17 @@ void home_screen()
     lv_label_set_text(switchLabel, "On\\Off");
     //lv_obj_set_pos(switchLabel, 15, 445);
     lv_obj_align(switchLabel, sw1, LV_ALIGN_OUT_LEFT_MID, 0, 0);
+    
+    
+    
+    //Adding a drop down menu for the trigger slope
+    lv_obj_t * roller1 = lv_roller_create(lv_scr_act(),NULL);
+    lv_roller_set_options(roller1, "Rising\n"
+                                  "Falling\n"
+                                  "Threshold",
+                                  LV_ROLLER_MODE_INIFINITE);
+    lv_roller_set_visible_row_count(roller1, 3);
+    lv_obj_set_pos(roller1, 170, 440);                         /*Set its position*/
+    lv_obj_set_event_cb(roller1, roller_event);
+   
 }

@@ -17,10 +17,9 @@ struct SPI_parameters
     uint8_t IRS;
     uint8_t Offset;
     
-    //uint16_t windowPos;
-    int windowPos;
-    int windowMin;
-    int windowMax;    
+    //saves where in the buffer we are for display;
+    int windowPos; 
+    int windowSize; 
     
     uint8_t HoriScale;
     uint8_t VertScale;
@@ -28,12 +27,8 @@ struct SPI_parameters
     
     //Actual Buffers
     uint16_t TxBuffer[13];  //Commands To be Sent
-    uint16_t RxBuffer[8];  // Read data in, SIZE SHOULD BE EQUAL TO NUM_TO_WRITE in main_cm4.c
-    uint8_t RamReadBuffer[1024];  // Ram Read data after being split can be 2048
-    
-    //Temp buffer
-    uint16_t RegBuffer[13];
-
+    int16_t RxBuffer[8];  // Read data in, SIZE SHOULD BE EQUAL TO NUM_TO_WRITE in main_cm4.c
+    int8_t RamReadBuffer[1024];  // Ram Read data after being split can be 2048
 };
 struct SPI_parameters cm4;
 
