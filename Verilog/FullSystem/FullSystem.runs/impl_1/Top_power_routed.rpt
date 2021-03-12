@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date             : Fri Mar  5 18:08:04 2021
+| Date             : Thu Mar 11 20:57:54 2021
 | Host             : MSI running 64-bit major release  (build 9200)
 | Command          : report_power -file Top_power_routed.rpt -pb Top_power_summary_routed.pb -rpx Top_power_routed.rpx
 | Design           : Top
@@ -52,15 +52,15 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.006 |        3 |       --- |             --- |
-| Slice Logic              |    <0.001 |     1715 |       --- |             --- |
-|   LUT as Logic           |    <0.001 |      695 |     63400 |            1.10 |
-|   Register               |    <0.001 |      306 |    126800 |            0.24 |
-|   CARRY4                 |    <0.001 |       15 |     15850 |            0.09 |
-|   F7/F8 Muxes            |    <0.001 |      219 |     63400 |            0.35 |
+| Clocks                   |     0.007 |        3 |       --- |             --- |
+| Slice Logic              |    <0.001 |     1892 |       --- |             --- |
+|   LUT as Logic           |    <0.001 |      816 |     63400 |            1.29 |
+|   CARRY4                 |    <0.001 |       22 |     15850 |            0.14 |
+|   Register               |    <0.001 |      345 |    126800 |            0.27 |
+|   F7/F8 Muxes            |    <0.001 |      218 |     63400 |            0.34 |
 |   LUT as Distributed RAM |    <0.001 |       12 |     19000 |            0.06 |
-|   Others                 |     0.000 |      403 |       --- |             --- |
-| Signals                  |     0.001 |     1787 |       --- |             --- |
+|   Others                 |     0.000 |      405 |       --- |             --- |
+| Signals                  |     0.001 |     1927 |       --- |             --- |
 | Block RAM                |     0.004 |      128 |       135 |           94.81 |
 | I/O                      |     0.005 |       36 |       210 |           17.14 |
 | Static Power             |     0.103 |          |           |                 |
@@ -74,7 +74,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.029 |       0.011 |      0.018 |
+| Vccint    |       1.000 |     0.029 |       0.012 |      0.018 |
 | Vccaux    |       1.800 |     0.018 |       0.000 |      0.018 |
 | Vcco33    |       3.300 |     0.005 |       0.001 |      0.004 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -146,9 +146,9 @@ Table of Contents
 | Top                    |     0.016 |
 |   u_REGS               |     0.002 |
 |   u_SPI                |     0.001 |
-|   u_blk_mem_gen_0      |     0.006 |
-|     U0                 |     0.006 |
-|       inst_blk_mem_gen |     0.006 |
+|   u_blk_mem_gen_0      |     0.005 |
+|     U0                 |     0.005 |
+|       inst_blk_mem_gen |     0.005 |
 +------------------------+-----------+
 
 
