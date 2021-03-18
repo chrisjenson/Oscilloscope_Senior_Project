@@ -62,38 +62,10 @@ module RAM_WriteEngine(
     
     
     //End section
-    //////////////////////////////////////////////////////////////   
-    //RING BUFFER 
-    reg ringBufferValid;
 
-    always @(*) //DEBUG: always @* to fix the jumping issue on MCU?
-    begin
-    //Dont allow write addr to pass read addr 
-    //Inputs
-        //reset
-        //RAMW_WriteAddr
-        //RAMR_ReadAddr
-    //Outputs
-        //ringBufferValid
-        if (reset)
-        begin
-            ringBufferValid = 0;
-        end
-        else
-        begin
-            if ((reading) && (RAMW_WriteAddr == RAMR_ReadAddr)) 
-            begin //dont write
-                ringBufferValid = 0;
-            end
-            else
-            begin
-                ringBufferValid = 1;
-            end
-        end
-    end
     //////////////////////////////////////////////////////////////    
     //Write Section
-    assign RAMW_En = onBit & ADC_SampleClock_secondposedge_pulse; //DEBUG:Need to make this its own process and delay by one word..
+    assign RAMW_En = onBit & ADC_SampleClock_secondposedge_pulse && !((reading) && (RAMW_WriteAddr == RAMR_ReadAddr)); //DEBUG:Need to make this its own process and delay by one word..
     
     always @(posedge clk)
     begin
@@ -109,7 +81,7 @@ module RAM_WriteEngine(
         end
         else
         begin
-            if (RAMW_En && ringBufferValid) //Buffer_DataIn is set on negedge
+            if (RAMW_En && !((reading) && (RAMW_WriteAddr == RAMR_ReadAddr)) ) //Write and enable and if (in reading state and write address == read address
             begin
                 //if(RAMW_WriteAddr < 1024)//DEBUG REMOVE THIS IF
                 //begin

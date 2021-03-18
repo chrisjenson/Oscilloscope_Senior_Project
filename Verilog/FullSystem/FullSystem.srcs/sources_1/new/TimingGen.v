@@ -25,7 +25,7 @@ module TimingGen(
         end
         else
         begin
-            if (twoCounter == 4)
+            if (twoCounter == 2)
             begin
                 ADC_SampleClock <= ~ADC_SampleClock;
                 twoCounter <= 0;

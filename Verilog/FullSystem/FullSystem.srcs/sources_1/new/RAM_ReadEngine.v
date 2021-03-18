@@ -70,7 +70,7 @@ module RAM_ReadEngine(
                 RAMR_ReadAddr <= 0; //If not reading, address is 0;
             end
             
-            if (Triggered_PosEdgePulse)
+            if (SPI_ReadCommandPosEdgePulse)
             begin
                 RAMR_ReadAddr <= TriggeredAddress - (RAMR_Quantity/2);
             end

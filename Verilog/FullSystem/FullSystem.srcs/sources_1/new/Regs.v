@@ -52,7 +52,7 @@ module Regs(
             registers[4] <= 8'b01010101; //scratch R/W reg LEDs- Debug register
 
             registers[6] <= 8'b00000010; //Trigger and Trigger slope
-            registers[7] <= 8'b00100000; //Trigger Threshold Value
+            registers[7] <= 8'b00001000; //Trigger Threshold Value
             registers[8] <= 8'b00000000; //Sample Decimation
             registers[9] <= 8'b00000001; //on-bit
             registers[10] <= 8'b00000000; //reset

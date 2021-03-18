@@ -71,7 +71,7 @@ module TriggerLogic(
         end
         else
         begin
-            if ((TriggerType_p1 != TriggerType) || (TriggerThreshold_p1 != TriggerThreshold)) //If a change in trigger control regs
+            if ((TriggerType_p1 != TriggerType) || (TriggerThreshold_p1 != TriggerThreshold) || (RAMReadDone)) //If a change in trigger control regs
             begin
                 TriggeredAddress <= 0;
                 Triggered <= 0;
