@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date             : Wed Mar 17 22:15:21 2021
+| Date             : Thu Mar 18 15:13:32 2021
 | Host             : MSI running 64-bit major release  (build 9200)
 | Command          : report_power -file Top_power_routed.rpt -pb Top_power_summary_routed.pb -rpx Top_power_routed.rpx
 | Design           : Top
@@ -53,14 +53,14 @@ Table of Contents
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |     0.007 |        3 |       --- |             --- |
-| Slice Logic              |    <0.001 |     2005 |       --- |             --- |
-|   LUT as Logic           |    <0.001 |      784 |     63400 |            1.24 |
+| Slice Logic              |    <0.001 |     1864 |       --- |             --- |
+|   LUT as Logic           |    <0.001 |      720 |     63400 |            1.14 |
+|   CARRY4                 |    <0.001 |       33 |     15850 |            0.21 |
+|   Register               |    <0.001 |      370 |    126800 |            0.29 |
 |   LUT as Distributed RAM |    <0.001 |       12 |     19000 |            0.06 |
-|   CARRY4                 |    <0.001 |       25 |     15850 |            0.16 |
-|   Register               |    <0.001 |      383 |    126800 |            0.30 |
 |   F7/F8 Muxes            |    <0.001 |      217 |     63400 |            0.34 |
 |   Others                 |     0.000 |      405 |       --- |             --- |
-| Signals                  |     0.001 |     2024 |       --- |             --- |
+| Signals                  |    <0.001 |     1890 |       --- |             --- |
 | Block RAM                |     0.004 |      128 |       135 |           94.81 |
 | I/O                      |     0.003 |       36 |       210 |           17.14 |
 | Static Power             |     0.103 |          |           |                 |
@@ -74,7 +74,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.030 |       0.012 |      0.018 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.029 |       0.011 |      0.018 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.018 |       0.000 |      0.018 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.005 |       0.001 |      0.004 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |

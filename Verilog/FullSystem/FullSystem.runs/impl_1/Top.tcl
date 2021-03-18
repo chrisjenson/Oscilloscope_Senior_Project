@@ -17,7 +17,7 @@ proc create_report { reportName command } {
   }
 }
 namespace eval ::optrace {
-  variable script "D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.runs/impl_1/Top.tcl"
+  variable script "C:/Users/tmj32/Documents/TCNJ/Senior_Project/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.runs/impl_1/Top.tcl"
   variable category "vivado_impl"
 }
 
@@ -123,23 +123,24 @@ set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
   set_param chipscope.maxJobs 2
+  set_param xicom.use_bs_reader 1
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xc7a100tcsg324-1
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
 OPTRACE "create in-memory project" END { }
 OPTRACE "set parameters" START { }
-  set_property webtalk.parent_dir D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.cache/wt [current_project]
-  set_property parent.project_path D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.xpr [current_project]
-  set_property ip_output_repo D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.cache/ip [current_project]
+  set_property webtalk.parent_dir C:/Users/tmj32/Documents/TCNJ/Senior_Project/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.cache/wt [current_project]
+  set_property parent.project_path C:/Users/tmj32/Documents/TCNJ/Senior_Project/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.xpr [current_project]
+  set_property ip_output_repo C:/Users/tmj32/Documents/TCNJ/Senior_Project/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES XPM_MEMORY [current_project]
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
-  add_files -quiet D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.runs/synth_1/Top.dcp
-  read_ip -quiet D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci
+  add_files -quiet C:/Users/tmj32/Documents/TCNJ/Senior_Project/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.runs/synth_1/Top.dcp
+  read_ip -quiet C:/Users/tmj32/Documents/TCNJ/Senior_Project/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci
 OPTRACE "read constraints: implementation" START { }
-  read_xdc D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/lp_constraints.xdc
+  read_xdc C:/Users/tmj32/Documents/TCNJ/Senior_Project/Oscilloscope_Senior_Project/Verilog/FullSystem/lp_constraints.xdc
 OPTRACE "read constraints: implementation" END { }
 OPTRACE "add files" END { }
 OPTRACE "link_design" START { }

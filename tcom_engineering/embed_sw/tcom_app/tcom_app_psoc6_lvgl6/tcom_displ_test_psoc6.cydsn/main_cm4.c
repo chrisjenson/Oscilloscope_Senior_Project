@@ -101,7 +101,7 @@ main( void )
     cm4.HoriScale = 0b00000111;//default 7 for 280/40 
     cm4.VertScale = 0b00000101;//default 5 for 200/40
     cm4.onBit = 0b00000000;
-    cm4.windowPos = 512;
+    cm4.windowPos = 1024;
     
     
     //if(cm4.onBit == 0b00000001)
@@ -160,7 +160,7 @@ main( void )
             //else{
             //1024/8, total number of samples divided by the size of bursts
             //512 because we are reading in  2 samples every time
-            for(uint32_t burst = 0; burst < 512/NUM_TO_WRITE; burst++){
+            for(uint32_t burst = 0; burst < 1024/NUM_TO_WRITE; burst++){
 
                 // Dummy write, to read data from FPGA
                 Cy_SCB_SPI_ClearSlaveMasterStatus(SPIM_HW, CY_SCB_SPI_MASTER_DONE);

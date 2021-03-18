@@ -65,27 +65,27 @@ static void chart_actions()
     
     //determine horizontal limits of the chart 
     switch(cm4.HoriScale){
-    case 3 :
+    case 5 :
         windowSize = 100;
         break;
-    case 4 :
+    case 6 :
         windowSize = 200;
         break;
-    case 5 :
+    case 7 :
         windowSize = 500;
         break;
-    case 6 :
+    case 8 :
         windowSize = 1000;
         break;
-    case 7 :
+    case 9 :
         windowSize = 2000;
         break;
     default:
-        windowSize = 100;
+        windowSize = 500;
         break;
     }    
     lv_chart_set_point_count(chart1, windowSize);                  //setting the number of points on the chart
-    lv_chart_set_type(chart1, LV_CHART_TYPE_POINT);                    //set graph to points, as opposed to lines    
+    lv_chart_set_type(chart1, LV_CHART_TYPE_LINE);                    //set graph to points, as opposed to lines    
     
     //Add series to the chart
     lv_chart_series_t * s1 = lv_chart_add_series(chart1, lv_color_hex(0x01a2b1));
@@ -99,14 +99,14 @@ static void chart_actions()
     
     //handle negative edge cases
     if(bufferFirst < 0){
-        bufferFirst = 0;
         bufferLast = windowSize;
+        bufferFirst = 0;
     }
     
     //handle overflow edge cases
-    if(bufferLast < 2048){
-        bufferLast = 2048;
+    if(bufferLast > 2048){
         bufferFirst = 2048 - windowSize;
+        bufferLast = 2048;
     }    
 
     //draw the series
@@ -327,13 +327,12 @@ void home_screen()
         
             
     /* Fifth Slider: Horizontal Window      Control Range of Points shown */
-    cm4.windowPos = 1024;
     lv_obj_t * windowSlider = lv_slider_create(lv_scr_act(), NULL);
     lv_obj_set_pos(windowSlider, 20, 225);                         /*Set its position*/
     lv_obj_set_size(windowSlider, 280, 30);                        /*Set its size*/
     lv_obj_set_event_cb(windowSlider, window_slider_event_cb);
     lv_slider_set_range(windowSlider, 0, 2048);        
-    lv_slider_set_value(windowSlider, 1024, LV_ANIM_ON);
+    lv_slider_set_value(windowSlider, cm4.windowPos, LV_ANIM_ON);
     
             
     //Adding an on/off switch 

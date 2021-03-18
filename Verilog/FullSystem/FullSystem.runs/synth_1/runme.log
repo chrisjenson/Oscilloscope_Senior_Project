@@ -17,127 +17,108 @@ INFO: [IP_Flow 19-2162] IP 'blk_mem_gen_0' is locked:
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
-
-*** Running vivado
-    with args -log Top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source Top.tcl
-
-
-
-****** Vivado v2020.2 (64-bit)
-  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
-  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
-
-source Top.tcl -notrace
-Command: synth_design -top Top -part xc7a100tcsg324-1
-Starting synth_design
-INFO: [IP_Flow 19-2162] IP 'blk_mem_gen_0' is locked:
-* IP definition 'Block Memory Generator (8.4)' for IP 'blk_mem_gen_0' (customized with software release 2019.1) has a different revision in the IP Catalog.
-Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
-INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
-INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 8984
+INFO: [Synth 8-7075] Helper process launched with PID 16176
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1017.387 ; gain = 0.000
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1018.887 ; gain = 0.000
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'Top' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/Top.v:11]
-INFO: [Synth 8-6157] synthesizing module 'DataSimulation' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/DataSimulation.v:3]
-INFO: [Synth 8-6155] done synthesizing module 'DataSimulation' (1#1) [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/DataSimulation.v:3]
-INFO: [Synth 8-6157] synthesizing module 'TimingGen' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/TimingGen.v:3]
-INFO: [Synth 8-6155] done synthesizing module 'TimingGen' (2#1) [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/TimingGen.v:3]
-INFO: [Synth 8-6157] synthesizing module 'ADCInterface' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/ADCInterface.v:3]
-INFO: [Synth 8-6155] done synthesizing module 'ADCInterface' (3#1) [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/ADCInterface.v:3]
-INFO: [Synth 8-6157] synthesizing module 'TriggerLogic' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/TriggerLogic.v:3]
-INFO: [Synth 8-6155] done synthesizing module 'TriggerLogic' (4#1) [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/TriggerLogic.v:3]
-WARNING: [Synth 8-689] width (10) of port connection 'ADC_InData' does not match port width (8) of module 'TriggerLogic' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/Top.v:111]
-INFO: [Synth 8-6157] synthesizing module 'RAM_WriteEngine' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/RAM_WriteEngine.v:3]
-INFO: [Synth 8-6155] done synthesizing module 'RAM_WriteEngine' (5#1) [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/RAM_WriteEngine.v:3]
-INFO: [Synth 8-6157] synthesizing module 'RAM_ReadEngine' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/RAM_ReadEngine.v:4]
-INFO: [Synth 8-6155] done synthesizing module 'RAM_ReadEngine' (6#1) [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/RAM_ReadEngine.v:4]
-WARNING: [Synth 8-7071] port 'RAMW_WriteAddr' of module 'RAM_ReadEngine' is unconnected for instance 'u_RAM_ReadEngine' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/Top.v:138]
-WARNING: [Synth 8-7023] instance 'u_RAM_ReadEngine' of module 'RAM_ReadEngine' has 15 connections declared, but only 14 given [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/Top.v:138]
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_0' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.runs/synth_1/.Xil/Vivado-820-MSI/realtime/blk_mem_gen_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_0' (7#1) [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.runs/synth_1/.Xil/Vivado-820-MSI/realtime/blk_mem_gen_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'SPI' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/SPI.v:3]
-INFO: [Synth 8-6155] done synthesizing module 'SPI' (8#1) [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/SPI.v:3]
-WARNING: [Synth 8-7071] port 'DebugSPI_Ins' of module 'SPI' is unconnected for instance 'u_SPI' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/Top.v:184]
-WARNING: [Synth 8-7023] instance 'u_SPI' of module 'SPI' has 22 connections declared, but only 21 given [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/Top.v:184]
-INFO: [Synth 8-6157] synthesizing module 'Regs' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/Regs.v:4]
-WARNING: [Synth 8-6090] variable 'registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/Regs.v:74]
-INFO: [Synth 8-6155] done synthesizing module 'Regs' (9#1) [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/Regs.v:4]
-WARNING: [Synth 8-7071] port 'SampleDecimationFactor' of module 'Regs' is unconnected for instance 'u_REGS' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/Top.v:212]
-WARNING: [Synth 8-7071] port 'IRSHighLow' of module 'Regs' is unconnected for instance 'u_REGS' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/Top.v:212]
-WARNING: [Synth 8-7071] port 'Offset' of module 'Regs' is unconnected for instance 'u_REGS' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/Top.v:212]
-WARNING: [Synth 8-7071] port 'ShiftControlRegister' of module 'Regs' is unconnected for instance 'u_REGS' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/Top.v:212]
-WARNING: [Synth 8-7023] instance 'u_REGS' of module 'Regs' has 18 connections declared, but only 14 given [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/Top.v:212]
-INFO: [Synth 8-6157] synthesizing module 'Buffer_FIFO' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/Buffer_FIFO.v:3]
-INFO: [Synth 8-6157] synthesizing module 'FIFO_RAM' [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/FIFO_RAM.v:3]
-INFO: [Synth 8-6155] done synthesizing module 'FIFO_RAM' (10#1) [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/FIFO_RAM.v:3]
-INFO: [Synth 8-6155] done synthesizing module 'Buffer_FIFO' (11#1) [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/Buffer_FIFO.v:3]
-INFO: [Synth 8-6155] done synthesizing module 'Top' (12#1) [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/Top.v:11]
+INFO: [Synth 8-6157] synthesizing module 'Top' [C:/Users/tmj32/Documents/TCNJ/Senior_Project/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/Top.v:11]
+INFO: [Synth 8-6157] synthesizing module 'DataSimulation' [C:/Users/tmj32/Documents/TCNJ/Senior_Project/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/DataSimulation.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'DataSimulation' (1#1) [C:/Users/tmj32/Documents/TCNJ/Senior_Project/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/DataSimulation.v:3]
+INFO: [Synth 8-6157] synthesizing module 'TimingGen' [C:/Users/tmj32/Documents/TCNJ/Senior_Project/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/TimingGen.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'TimingGen' (2#1) [C:/Users/tmj32/Documents/TCNJ/Senior_Project/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/TimingGen.v:3]
+INFO: [Synth 8-6157] synthesizing module 'ADCInterface' [C:/Users/tmj32/Documents/TCNJ/Senior_Project/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/ADCInterface.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'ADCInterface' (3#1) [C:/Users/tmj32/Documents/TCNJ/Senior_Project/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/ADCInterface.v:3]
+INFO: [Synth 8-6157] synthesizing module 'TriggerLogic' [C:/Users/tmj32/Documents/TCNJ/Senior_Project/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/TriggerLogic.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'TriggerLogic' (4#1) [C:/Users/tmj32/Documents/TCNJ/Senior_Project/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/TriggerLogic.v:3]
+WARNING: [Synth 8-689] width (10) of port connection 'ADC_InData' does not match port width (8) of module 'TriggerLogic' [C:/Users/tmj32/Documents/TCNJ/Senior_Project/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/Top.v:112]
+INFO: [Synth 8-6157] synthesizing module 'RAM_WriteEngine' [C:/Users/tmj32/Documents/TCNJ/Senior_Project/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/RAM_WriteEngine.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'RAM_WriteEngine' (5#1) [C:/Users/tmj32/Documents/TCNJ/Senior_Project/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/RAM_WriteEngine.v:3]
+INFO: [Synth 8-6157] synthesizing module 'RAM_ReadEngine' [C:/Users/tmj32/Documents/TCNJ/Senior_Project/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/RAM_ReadEngine.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'RAM_ReadEngine' (6#1) [C:/Users/tmj32/Documents/TCNJ/Senior_Project/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/RAM_ReadEngine.v:4]
+WARNING: [Synth 8-7071] port 'RAMW_WriteAddr' of module 'RAM_ReadEngine' is unconnected for instance 'u_RAM_ReadEngine' [C:/Users/tmj32/Documents/TCNJ/Senior_Project/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/Top.v:139]
+WARNING: [Synth 8-7023] instance 'u_RAM_ReadEngine' of module 'RAM_ReadEngine' has 15 connections declared, but only 14 given [C:/Users/tmj32/Documents/TCNJ/Senior_Project/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/Top.v:139]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_0' [C:/Users/tmj32/Documents/TCNJ/Senior_Project/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.runs/synth_1/.Xil/Vivado-14828-MSI/realtime/blk_mem_gen_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_0' (7#1) [C:/Users/tmj32/Documents/TCNJ/Senior_Project/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.runs/synth_1/.Xil/Vivado-14828-MSI/realtime/blk_mem_gen_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'SPI' [C:/Users/tmj32/Documents/TCNJ/Senior_Project/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/SPI.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'SPI' (8#1) [C:/Users/tmj32/Documents/TCNJ/Senior_Project/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/SPI.v:3]
+WARNING: [Synth 8-7071] port 'DebugSPI_Ins' of module 'SPI' is unconnected for instance 'u_SPI' [C:/Users/tmj32/Documents/TCNJ/Senior_Project/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/Top.v:185]
+WARNING: [Synth 8-7023] instance 'u_SPI' of module 'SPI' has 22 connections declared, but only 21 given [C:/Users/tmj32/Documents/TCNJ/Senior_Project/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/Top.v:185]
+INFO: [Synth 8-6157] synthesizing module 'Regs' [C:/Users/tmj32/Documents/TCNJ/Senior_Project/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/Regs.v:4]
+WARNING: [Synth 8-6090] variable 'registers' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/tmj32/Documents/TCNJ/Senior_Project/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/Regs.v:74]
+INFO: [Synth 8-6155] done synthesizing module 'Regs' (9#1) [C:/Users/tmj32/Documents/TCNJ/Senior_Project/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/Regs.v:4]
+WARNING: [Synth 8-7071] port 'SampleDecimationFactor' of module 'Regs' is unconnected for instance 'u_REGS' [C:/Users/tmj32/Documents/TCNJ/Senior_Project/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/Top.v:213]
+WARNING: [Synth 8-7071] port 'IRSHighLow' of module 'Regs' is unconnected for instance 'u_REGS' [C:/Users/tmj32/Documents/TCNJ/Senior_Project/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/Top.v:213]
+WARNING: [Synth 8-7071] port 'Offset' of module 'Regs' is unconnected for instance 'u_REGS' [C:/Users/tmj32/Documents/TCNJ/Senior_Project/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/Top.v:213]
+WARNING: [Synth 8-7071] port 'ShiftControlRegister' of module 'Regs' is unconnected for instance 'u_REGS' [C:/Users/tmj32/Documents/TCNJ/Senior_Project/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/Top.v:213]
+WARNING: [Synth 8-7023] instance 'u_REGS' of module 'Regs' has 18 connections declared, but only 14 given [C:/Users/tmj32/Documents/TCNJ/Senior_Project/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/Top.v:213]
+INFO: [Synth 8-6157] synthesizing module 'Buffer_FIFO' [C:/Users/tmj32/Documents/TCNJ/Senior_Project/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/Buffer_FIFO.v:3]
+INFO: [Synth 8-6157] synthesizing module 'FIFO_RAM' [C:/Users/tmj32/Documents/TCNJ/Senior_Project/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/FIFO_RAM.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'FIFO_RAM' (10#1) [C:/Users/tmj32/Documents/TCNJ/Senior_Project/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/FIFO_RAM.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'Buffer_FIFO' (11#1) [C:/Users/tmj32/Documents/TCNJ/Senior_Project/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/Buffer_FIFO.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'Top' (12#1) [C:/Users/tmj32/Documents/TCNJ/Senior_Project/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/Top.v:11]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1017.387 ; gain = 0.000
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 1018.887 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 1017.387 ; gain = 0.000
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:11 . Memory (MB): peak = 1018.887 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 1017.387 ; gain = 0.000
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:11 . Memory (MB): peak = 1018.887 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 1017.387 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.029 . Memory (MB): peak = 1018.887 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [d:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'u_blk_mem_gen_0'
-Finished Parsing XDC File [d:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'u_blk_mem_gen_0'
-Parsing XDC File [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/lp_constraints.xdc]
-WARNING: [Vivado 12-584] No ports matched 'ADC_InData[8]'. [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/lp_constraints.xdc:138]
-WARNING: [Vivado 12-584] No ports matched 'ADC_InData[9]'. [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/lp_constraints.xdc:139]
-WARNING: [Vivado 12-584] No ports matched 'ADC_InData[0]'. [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/lp_constraints.xdc:144]
-WARNING: [Vivado 12-584] No ports matched 'ADC_InData[1]'. [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/lp_constraints.xdc:145]
-WARNING: [Vivado 12-584] No ports matched 'ADC_InData[2]'. [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/lp_constraints.xdc:146]
-WARNING: [Vivado 12-584] No ports matched 'ADC_InData[3]'. [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/lp_constraints.xdc:147]
-WARNING: [Vivado 12-584] No ports matched 'ADC_InData[4]'. [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/lp_constraints.xdc:148]
-WARNING: [Vivado 12-584] No ports matched 'ADC_InData[5]'. [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/lp_constraints.xdc:149]
-WARNING: [Vivado 12-584] No ports matched 'ADC_InData[6]'. [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/lp_constraints.xdc:150]
-WARNING: [Vivado 12-584] No ports matched 'ADC_InData[7]'. [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/lp_constraints.xdc:151]
-Finished Parsing XDC File [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/lp_constraints.xdc]
-WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/lp_constraints.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/Top_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/lp_constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Top_propImpl.xdc].
+Parsing XDC File [c:/Users/tmj32/Documents/TCNJ/Senior_Project/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'u_blk_mem_gen_0'
+Finished Parsing XDC File [c:/Users/tmj32/Documents/TCNJ/Senior_Project/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'u_blk_mem_gen_0'
+Parsing XDC File [C:/Users/tmj32/Documents/TCNJ/Senior_Project/Oscilloscope_Senior_Project/Verilog/FullSystem/lp_constraints.xdc]
+WARNING: [Vivado 12-584] No ports matched 'ADC_InData[8]'. [C:/Users/tmj32/Documents/TCNJ/Senior_Project/Oscilloscope_Senior_Project/Verilog/FullSystem/lp_constraints.xdc:138]
+WARNING: [Vivado 12-584] No ports matched 'ADC_InData[9]'. [C:/Users/tmj32/Documents/TCNJ/Senior_Project/Oscilloscope_Senior_Project/Verilog/FullSystem/lp_constraints.xdc:139]
+WARNING: [Vivado 12-584] No ports matched 'ADC_InData[0]'. [C:/Users/tmj32/Documents/TCNJ/Senior_Project/Oscilloscope_Senior_Project/Verilog/FullSystem/lp_constraints.xdc:144]
+WARNING: [Vivado 12-584] No ports matched 'ADC_InData[1]'. [C:/Users/tmj32/Documents/TCNJ/Senior_Project/Oscilloscope_Senior_Project/Verilog/FullSystem/lp_constraints.xdc:145]
+WARNING: [Vivado 12-584] No ports matched 'ADC_InData[2]'. [C:/Users/tmj32/Documents/TCNJ/Senior_Project/Oscilloscope_Senior_Project/Verilog/FullSystem/lp_constraints.xdc:146]
+WARNING: [Vivado 12-584] No ports matched 'ADC_InData[3]'. [C:/Users/tmj32/Documents/TCNJ/Senior_Project/Oscilloscope_Senior_Project/Verilog/FullSystem/lp_constraints.xdc:147]
+WARNING: [Vivado 12-584] No ports matched 'ADC_InData[4]'. [C:/Users/tmj32/Documents/TCNJ/Senior_Project/Oscilloscope_Senior_Project/Verilog/FullSystem/lp_constraints.xdc:148]
+WARNING: [Vivado 12-584] No ports matched 'ADC_InData[5]'. [C:/Users/tmj32/Documents/TCNJ/Senior_Project/Oscilloscope_Senior_Project/Verilog/FullSystem/lp_constraints.xdc:149]
+WARNING: [Vivado 12-584] No ports matched 'ADC_InData[6]'. [C:/Users/tmj32/Documents/TCNJ/Senior_Project/Oscilloscope_Senior_Project/Verilog/FullSystem/lp_constraints.xdc:150]
+WARNING: [Vivado 12-584] No ports matched 'ADC_InData[7]'. [C:/Users/tmj32/Documents/TCNJ/Senior_Project/Oscilloscope_Senior_Project/Verilog/FullSystem/lp_constraints.xdc:151]
+Finished Parsing XDC File [C:/Users/tmj32/Documents/TCNJ/Senior_Project/Oscilloscope_Senior_Project/Verilog/FullSystem/lp_constraints.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/Users/tmj32/Documents/TCNJ/Senior_Project/Oscilloscope_Senior_Project/Verilog/FullSystem/lp_constraints.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/Top_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/tmj32/Documents/TCNJ/Senior_Project/Oscilloscope_Senior_Project/Verilog/FullSystem/lp_constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Top_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/Top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1105.137 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1107.887 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.077 . Memory (MB): peak = 1105.137 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.059 . Memory (MB): peak = 1107.887 ; gain = 0.000
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'u_blk_mem_gen_0' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 1112.016 ; gain = 94.629
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:20 . Memory (MB): peak = 1110.980 ; gain = 92.094
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 1112.016 ; gain = 94.629
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:20 . Memory (MB): peak = 1110.980 ; gain = 92.094
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 Applied set_property KEEP_HIERARCHY = SOFT for u_blk_mem_gen_0. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 1112.016 ; gain = 94.629
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:20 . Memory (MB): peak = 1110.980 ; gain = 92.094
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 1112.016 ; gain = 94.629
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:22 . Memory (MB): peak = 1110.980 ; gain = 92.094
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -145,7 +126,6 @@ Start RTL Component Statistics
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input   18 Bit       Adders := 2     
-	   2 Input   10 Bit       Adders := 1     
 	   2 Input    7 Bit       Adders := 1     
 	   2 Input    4 Bit       Adders := 2     
 	   2 Input    3 Bit       Adders := 3     
@@ -161,17 +141,18 @@ Detailed RTL Component Info :
 	                4 Bit    Registers := 2     
 	                3 Bit    Registers := 3     
 	                2 Bit    Registers := 2     
-	                1 Bit    Registers := 30    
+	                1 Bit    Registers := 29    
 +---Muxes : 
 	   2 Input   18 Bit        Muxes := 11    
 	   4 Input   18 Bit        Muxes := 1     
 	  20 Input   18 Bit        Muxes := 1     
 	   3 Input   16 Bit        Muxes := 1     
 	   2 Input   16 Bit        Muxes := 2     
-	   2 Input    8 Bit        Muxes := 12    
+	   2 Input   10 Bit        Muxes := 2     
+	   2 Input    8 Bit        Muxes := 6     
 	   2 Input    7 Bit        Muxes := 1     
 	   2 Input    3 Bit        Muxes := 3     
-	   2 Input    1 Bit        Muxes := 63    
+	   2 Input    1 Bit        Muxes := 54    
 	   4 Input    1 Bit        Muxes := 6     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
@@ -189,7 +170,7 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:25 . Memory (MB): peak = 1112.016 ; gain = 94.629
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:26 . Memory (MB): peak = 1110.980 ; gain = 92.094
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -210,13 +191,13 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:31 . Memory (MB): peak = 1112.016 ; gain = 94.629
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:32 . Memory (MB): peak = 1110.980 ; gain = 92.094
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:34 . Memory (MB): peak = 1113.844 ; gain = 96.457
+Finished Timing Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:35 . Memory (MB): peak = 1110.980 ; gain = 92.094
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -236,7 +217,7 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:29 ; elapsed = 00:00:35 . Memory (MB): peak = 1119.180 ; gain = 101.793
+Finished Technology Mapping : Time (s): cpu = 00:00:28 ; elapsed = 00:00:35 . Memory (MB): peak = 1114.613 ; gain = 95.727
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -254,37 +235,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:33 ; elapsed = 00:00:39 . Memory (MB): peak = 1119.180 ; gain = 101.793
+Finished IO Insertion : Time (s): cpu = 00:00:32 ; elapsed = 00:00:39 . Memory (MB): peak = 1114.613 ; gain = 95.727
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:33 ; elapsed = 00:00:39 . Memory (MB): peak = 1119.180 ; gain = 101.793
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:32 ; elapsed = 00:00:39 . Memory (MB): peak = 1114.613 ; gain = 95.727
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:33 ; elapsed = 00:00:39 . Memory (MB): peak = 1119.180 ; gain = 101.793
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:32 ; elapsed = 00:00:39 . Memory (MB): peak = 1114.613 ; gain = 95.727
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:33 ; elapsed = 00:00:39 . Memory (MB): peak = 1119.180 ; gain = 101.793
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:32 ; elapsed = 00:00:39 . Memory (MB): peak = 1114.613 ; gain = 95.727
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:33 ; elapsed = 00:00:39 . Memory (MB): peak = 1119.180 ; gain = 101.793
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:32 ; elapsed = 00:00:39 . Memory (MB): peak = 1114.613 ; gain = 95.727
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:33 ; elapsed = 00:00:39 . Memory (MB): peak = 1119.180 ; gain = 101.793
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:32 ; elapsed = 00:00:39 . Memory (MB): peak = 1114.613 ; gain = 95.727
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -303,35 +284,35 @@ Report Cell Usage:
 +------+------------+------+
 |1     |blk_mem_gen |     1|
 |2     |BUFG        |     1|
-|3     |CARRY4      |    25|
+|3     |CARRY4      |    33|
 |4     |LUT1        |    23|
-|5     |LUT2        |    34|
-|6     |LUT3        |    63|
-|7     |LUT4        |    63|
-|8     |LUT5        |    37|
-|9     |LUT6        |   199|
+|5     |LUT2        |    50|
+|6     |LUT3        |    66|
+|7     |LUT4        |    34|
+|8     |LUT5        |    48|
+|9     |LUT6        |   190|
 |10    |MUXF7       |    20|
 |11    |MUXF8       |     5|
 |12    |RAM32M      |     3|
-|13    |FDRE        |   335|
-|14    |FDSE        |    30|
+|13    |FDRE        |   320|
+|14    |FDSE        |    32|
 |15    |IBUF        |    13|
 |16    |OBUF        |    21|
 |17    |OBUFT       |     2|
 +------+------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:33 ; elapsed = 00:00:39 . Memory (MB): peak = 1119.180 ; gain = 101.793
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:32 ; elapsed = 00:00:39 . Memory (MB): peak = 1114.613 ; gain = 95.727
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:23 ; elapsed = 00:00:35 . Memory (MB): peak = 1119.180 ; gain = 7.164
-Synthesis Optimization Complete : Time (s): cpu = 00:00:33 ; elapsed = 00:00:39 . Memory (MB): peak = 1119.180 ; gain = 101.793
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:22 ; elapsed = 00:00:34 . Memory (MB): peak = 1114.613 ; gain = 3.633
+Synthesis Optimization Complete : Time (s): cpu = 00:00:33 ; elapsed = 00:00:39 . Memory (MB): peak = 1114.613 ; gain = 95.727
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 1125.055 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 53 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 1114.613 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 61 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1125.055 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1114.613 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 3 instances were transformed.
   RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 3 instances
@@ -339,7 +320,7 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 INFO: [Common 17-83] Releasing license: Synthesis
 40 Infos, 23 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:39 ; elapsed = 00:00:47 . Memory (MB): peak = 1125.055 ; gain = 107.668
-INFO: [Common 17-1381] The checkpoint 'D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.runs/synth_1/Top.dcp' has been generated.
+synth_design: Time (s): cpu = 00:00:39 ; elapsed = 00:00:57 . Memory (MB): peak = 1114.613 ; gain = 95.727
+INFO: [Common 17-1381] The checkpoint 'C:/Users/tmj32/Documents/TCNJ/Senior_Project/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.runs/synth_1/Top.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Top_utilization_synth.rpt -pb Top_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed Mar 17 22:12:51 2021...
+INFO: [Common 17-206] Exiting Vivado at Thu Mar 18 15:11:18 2021...
