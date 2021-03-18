@@ -327,6 +327,7 @@ void home_screen()
         
             
     /* Fifth Slider: Horizontal Window      Control Range of Points shown */
+    cm4.windowPos = 1024;
     lv_obj_t * windowSlider = lv_slider_create(lv_scr_act(), NULL);
     lv_obj_set_pos(windowSlider, 20, 225);                         /*Set its position*/
     lv_obj_set_size(windowSlider, 280, 30);                        /*Set its size*/
@@ -335,10 +336,6 @@ void home_screen()
     lv_slider_set_value(windowSlider, 1024, LV_ANIM_ON);
     
             
-    //Draw the ogriginal chart... should be empty or zeroes
-    chart_actions();
-            
-    
     //Adding an on/off switch 
     lv_obj_t * sw1 = lv_sw_create(lv_scr_act(), NULL);
     lv_obj_align(sw1, NULL, LV_ALIGN_CENTER, 0, -50);
@@ -373,5 +370,8 @@ void home_screen()
     lv_roller_set_visible_row_count(roller2, 1);
     lv_obj_set_pos(roller2, 115, 425);                         /*Set its position*/
     lv_obj_set_event_cb(roller2, roller2_event);
-   
+    
+    
+    //Draw the ogriginal chart... should be empty or zeroes
+    chart_actions();
 }
