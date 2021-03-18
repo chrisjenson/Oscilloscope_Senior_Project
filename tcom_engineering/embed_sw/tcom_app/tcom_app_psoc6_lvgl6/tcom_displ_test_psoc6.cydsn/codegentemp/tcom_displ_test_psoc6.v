@@ -1,6 +1,6 @@
 // ======================================================================
 // tcom_displ_test_psoc6.v generated from TopDesign.cysch
-// 02/24/2021 at 21:13
+// 03/18/2021 at 00:00
 // This file is auto generated. ANY EDITS YOU MAKE MAY BE LOST WHEN THIS FILE IS REGENERATED!!!
 // ======================================================================
 

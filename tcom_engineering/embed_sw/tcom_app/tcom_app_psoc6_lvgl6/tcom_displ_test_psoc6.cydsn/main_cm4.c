@@ -98,8 +98,8 @@ main( void )
     cm4.IRS = 0b00000000;
     cm4.Offset = 0b00000000;
     cm4.Gain = 0b00000000;       //goes to Shannon
-    cm4.HoriScale = 0b00000100;
-    cm4.VertScale = 0b00000010;
+    cm4.HoriScale = 0b00000111;//default 7 for 280/40 
+    cm4.VertScale = 0b00000101;//default 5 for 200/40
     cm4.onBit = 0b00000000;
     cm4.windowPos = 512;
     
@@ -121,9 +121,9 @@ main( void )
         //construct write commmand for updating on-bit in register 9
         cm4.TxBuffer[2] = 0b0100100100000000;     //010 01001 00000000
         
-        //Send a read ram command to read 512x2 samples 
+        //Send a read ram command to read 1024x2 samples 
         //cm4.TxBuffer[0] = 0b011000000000000; //| cm4.HoriScale;     //011 01001 00000000
-        cm4.TxBuffer[0] = 0b0110100100000000;  //011 01001 00000000
+        cm4.TxBuffer[0] = 0b0110100000000000;  //011 01001 00000000
         
         
         //write reg 4 all zeroes
