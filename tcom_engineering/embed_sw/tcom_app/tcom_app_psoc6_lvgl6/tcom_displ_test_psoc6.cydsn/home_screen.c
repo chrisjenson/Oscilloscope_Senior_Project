@@ -114,7 +114,8 @@ static void chart_actions()
     //voltage = ((code*0.5)/128)+1.45
     for(int i = bufferFirst; i < bufferLast; ++i){
         /*        |---------code to voltage equation-----------------|* show decimals| + internal offset to avoid negatives */
-        voltage = (((cm4.RamReadBuffer[i]*0.5)/128)+1.45 + cm4.Offset)*100 + 355;
+        voltage = (((cm4.RamReadBuffer[i]*0.5)/128)+1.45)*100;
+        voltage = voltage + cm4.Offset + 355;
         lv_chart_set_next(chart1, s1, voltage);
     }   
     startup = 1;
