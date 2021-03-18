@@ -106,11 +106,12 @@ module testbench();
     initial
     begin  
         commandArray[0] = 16'b0000000000000000;
-        commandArray[1] = 16'b0100011000000001; //trigger on falling edge
-        commandArray[2] = 16'b0110110111111111; //cmd = Read Ram, params = 01111 -> (8 x 16 bits out), data = x... PARAMS = 00100 -> (1024 X 16 out)
+        commandArray[1] = 16'b0000000000000000;
+        //commandArray[1] = 16'b0100011000000001; //trigger on falling edge
+        commandArray[2] = 16'b0110110111111111; //cmd = Read Ram
         commandArray[3] = 16'b0000000000000000;                                      //If changing number of data points being read (1024) need to change OneZeroTwoFourCounter below
-        commandArray[4] = 16'b0110110111111111; //cmd = Read, params = 4, data = x
-        commandArray[5] = 16'b0110110111111111; //cmd = write, params = 4, data = 8'hF0
+        //commandArray[4] = 16'b0110110111111111; //cmd = Read, params = 4, data = x
+        //commandArray[5] = 16'b0110110111111111; //cmd = write, params = 4, data = 8'hF0
         commandArray[6] = 16'b0000000000000000;
         commandArray[7] = 16'b0000000000000000;
         
@@ -150,11 +151,11 @@ module testbench();
             begin
                 commandDone <= 0;
                 #100;
-                if (commandNum == 2)
+                if (commandNum == 3)
                 begin
-                    reset <= 1;
-                    #10
-                    reset <= 0;
+                 //   reset <= 1;
+                 //   #10
+                //    reset <= 0;
                 end
                 commandNum <= commandNum + 1;
                 SlaveSel <= 0;
@@ -186,7 +187,7 @@ module testbench();
                     if (index == 0)
                     begin //For testing, read 1024 data values.
                         index <= 15;
-                        if (RAMReadCounter == 31) //# TRANSFERS OF 16 BITS OF DATA
+                        if (RAMReadCounter == 31) //# TRANSFERS OF 16 sets OF DATA
                         begin
                             #40 //wait 40 after ram read is done
                             SlaveSel <= 1;
@@ -252,6 +253,19 @@ module testbench();
         end
     end
     
+     //Simulate data input on hardware
+    wire [9:0] ADC_InData;
+    
+    DataSimulation u_DataSimulation(
+        .ADC_SampleClock(ADC_SampleClock),
+        .clk(clk),
+        .reset(reset),
+        .SimData(ADC_InData)
+    );
+    /////////////////////
+    
+    
+    
     Top u_Top(
         .clk(clk),
         .rst_(~reset),
@@ -260,7 +274,7 @@ module testbench();
         .SlaveSel(SlaveSel),
         .SCLK_Raw(SCLK),
         //ADC Interface
-        //.ADC_InData(stimInData),
+        //.ADC_InData(ADC_InData),
         .ADC_SampleClock(ADC_SampleClock)
     );
 endmodule

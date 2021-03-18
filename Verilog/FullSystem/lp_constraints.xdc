@@ -135,20 +135,20 @@ set_property -dict { PACKAGE_PIN F6    IOSTANDARD LVCMOS33 } [get_ports { ADC_Sa
 #set_property -dict { PACKAGE_PIN J3    IOSTANDARD LVCMOS33 } [get_ports { out[21]}]; #IO_L22P_T3_35 Sch=jc[8]
 #set_property -dict { PACKAGE_PIN J4    IOSTANDARD LVCMOS33 } [get_ports { out[22]}]; #IO_L21P_T3_DQS_35 Sch=jc[9]
 
-###set_property -dict { PACKAGE_PIN G6    IOSTANDARD LVCMOS33 } [get_ports { ADC_InData[8] }]; #IO_L19P_T3_35 Sch=jc[4]
-###set_property -dict { PACKAGE_PIN E6    IOSTANDARD LVCMOS33 } [get_ports { ADC_InData[9] }]; #IO_L5P_T0_AD13P_35 Sch=jc[10]
+set_property -dict { PACKAGE_PIN G6    IOSTANDARD LVCMOS33 } [get_ports { ADC_InData[8] }]; #IO_L19P_T3_35 Sch=jc[4]
+set_property -dict { PACKAGE_PIN E6    IOSTANDARD LVCMOS33 } [get_ports { ADC_InData[9] }]; #IO_L5P_T0_AD13P_35 Sch=jc[10]
 
 
 ##Pmod Header JD
 
-###set_property -dict { PACKAGE_PIN H4    IOSTANDARD LVCMOS33 } [get_ports { ADC_InData[0] }]; #IO_L21N_T3_DQS_35 Sch=jd[1]
-###set_property -dict { PACKAGE_PIN H1    IOSTANDARD LVCMOS33 } [get_ports { ADC_InData[1] }]; #IO_L17P_T2_35 Sch=jd[2]
-###set_property -dict { PACKAGE_PIN G1    IOSTANDARD LVCMOS33 } [get_ports { ADC_InData[2] }]; #IO_L17N_T2_35 Sch=jd[3]
-###set_property -dict { PACKAGE_PIN G3    IOSTANDARD LVCMOS33 } [get_ports { ADC_InData[3] }]; #IO_L20N_T3_35 Sch=jd[4]
-###set_property -dict { PACKAGE_PIN H2    IOSTANDARD LVCMOS33 } [get_ports { ADC_InData[4] }]; #IO_L15P_T2_DQS_35 Sch=jd[7]
-###set_property -dict { PACKAGE_PIN G4    IOSTANDARD LVCMOS33 } [get_ports { ADC_InData[5] }]; #IO_L20P_T3_35 Sch=jd[8]
-###set_property -dict { PACKAGE_PIN G2    IOSTANDARD LVCMOS33 } [get_ports { ADC_InData[6] }]; #IO_L15N_T2_DQS_35 Sch=jd[9]
-###set_property -dict { PACKAGE_PIN F3    IOSTANDARD LVCMOS33 } [get_ports { ADC_InData[7] }]; #IO_L13N_T2_MRCC_35 Sch=jd[10]
+set_property -dict { PACKAGE_PIN H4    IOSTANDARD LVCMOS33 } [get_ports { ADC_InData[0] }]; #IO_L21N_T3_DQS_35 Sch=jd[1]
+set_property -dict { PACKAGE_PIN H1    IOSTANDARD LVCMOS33 } [get_ports { ADC_InData[1] }]; #IO_L17P_T2_35 Sch=jd[2]
+set_property -dict { PACKAGE_PIN G1    IOSTANDARD LVCMOS33 } [get_ports { ADC_InData[2] }]; #IO_L17N_T2_35 Sch=jd[3]
+set_property -dict { PACKAGE_PIN G3    IOSTANDARD LVCMOS33 } [get_ports { ADC_InData[3] }]; #IO_L20N_T3_35 Sch=jd[4]
+set_property -dict { PACKAGE_PIN H2    IOSTANDARD LVCMOS33 } [get_ports { ADC_InData[4] }]; #IO_L15P_T2_DQS_35 Sch=jd[7]
+set_property -dict { PACKAGE_PIN G4    IOSTANDARD LVCMOS33 } [get_ports { ADC_InData[5] }]; #IO_L20P_T3_35 Sch=jd[8]
+set_property -dict { PACKAGE_PIN G2    IOSTANDARD LVCMOS33 } [get_ports { ADC_InData[6] }]; #IO_L15N_T2_DQS_35 Sch=jd[9]
+set_property -dict { PACKAGE_PIN F3    IOSTANDARD LVCMOS33 } [get_ports { ADC_InData[7] }]; #IO_L13N_T2_MRCC_35 Sch=jd[10]
 
 
 ##Pmod Header JXADC

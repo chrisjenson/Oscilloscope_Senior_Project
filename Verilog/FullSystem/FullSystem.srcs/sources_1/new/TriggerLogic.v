@@ -6,16 +6,19 @@ module TriggerLogic(
        // input ADC_SampleClock,
         input ADC_SampleClock_posedge_pulse,
         input onBit,
+        input RAMReadDone,
         
         input [7:0] TriggerType,
         input [7:0] TriggerThreshold,
         input [7:0] ADC_InData,
 
-        output reg Triggered        
+        output reg Triggered,
+        input [17:0] WriteAddress,
+        output reg [17:0] TriggeredAddress        
     );
 
-    reg TriggerThreshold_p1;
-    reg TriggerType_p1;
+    reg [7:0] TriggerThreshold_p1;
+    reg [7:0] TriggerType_p1;
     
     wire getNewData;
     assign getNewData = ADC_SampleClock_posedge_pulse & onBit;
@@ -60,62 +63,70 @@ module TriggerLogic(
             //RAMW_En
         //Outputs
             //triggered
+            //TriggeredAddress 
         if (reset)
         begin
             Triggered <= 0;
+            TriggeredAddress <= 0;
         end
         else
         begin
-            if ((TriggerType_p1 != TriggerType) || (TriggerThreshold_p1 != TriggerThreshold))
+            if ((TriggerType_p1 != TriggerType) || (TriggerThreshold_p1 != TriggerThreshold)) //If a change in trigger control regs
             begin
+                TriggeredAddress <= 0;
                 Triggered <= 0;
             end
-            else if (getNewData)
+            if (!Triggered)//If we are not in triggered state
             begin
-                if (TriggerType[1:0] == 0)
-                begin 
-                    //Rising
-                    if (ADC_InData_p1 < ADC_InData)
-                    begin
-                        Triggered <= 1;
-                    end
-                end
-                else if (TriggerType[1:0] == 1)
+                if (getNewData)
                 begin
-                    //Falling
-                    if (ADC_InData_p1 > ADC_InData)
-                    begin
-                        Triggered <= 1;
-                    end
-//                    else
-//                    begin
-//                        triggered <= 0;
-//                    end
-                end
-                else if (TriggerType[1:0] == 2)
-                begin
-                    //Threshold
-                    if (TriggerType[2] == 0)
-                    //above
-                    begin
-                        if (ADC_InData > TriggerThreshold)
+                    if (TriggerType[1:0] == 0)
+                    begin 
+                        //Rising
+                        if (ADC_InData_p1 < ADC_InData)
                         begin
                             Triggered <= 1;
+                            TriggeredAddress <= WriteAddress;
                         end
                     end
-                    else
-                    //below
+                    else if (TriggerType[1:0] == 1)
                     begin
-                        if (ADC_InData < TriggerThreshold)
+                        //Falling
+                        if (ADC_InData_p1 > ADC_InData)
                         begin
                             Triggered <= 1;
-                       end
+                            TriggeredAddress <= WriteAddress;
+                        end
+    //                    else
+    //                    begin
+    //                        triggered <= 0;
+    //                    end
                     end
-                    
+                    else if (TriggerType[1:0] == 2)
+                    begin
+                        //Threshold
+                        if (TriggerType[2] == 0)
+                        //above
+                        begin
+                            if (ADC_InData > TriggerThreshold)
+                            begin
+                                Triggered <= 1;
+                                TriggeredAddress <= WriteAddress;
+                            end
+                        end
+                        else
+                        //below
+                        begin
+                            if (ADC_InData < TriggerThreshold)
+                            begin
+                                Triggered <= 1;
+                                TriggeredAddress <= WriteAddress;
+                           end
+                        end
+                        
+                    end
                 end
             end
-        end
+        end        
     end
-    
-    
 endmodule

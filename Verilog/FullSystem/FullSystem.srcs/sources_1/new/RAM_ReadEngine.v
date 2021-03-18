@@ -18,18 +18,25 @@ module RAM_ReadEngine(
     output reg RAMReadDone,
     
     output reg FIFO_InRTS,
-    input FIFO_InRTR
+    input FIFO_InRTR,
+    
+    input Triggered,
+    input [17:0] TriggeredAddress
     );
     reg [17:0] readRemaining;
     ///////////////////////////////////////////////////
     wire SPI_ReadCommandPosEdgePulse;
+    wire Triggered_PosEdgePulse;
     reg SPI_ReadCommand_p1;
+    reg Triggered_p1;
     
     always @(posedge clk)
     begin
         SPI_ReadCommand_p1 <= SPI_ReadCommand;
+        Triggered_p1 <= Triggered;
     end
     
+    assign Triggered_PosEdgePulse = Triggered & ~Triggered_p1;
     assign SPI_ReadCommandPosEdgePulse = SPI_ReadCommand & ~SPI_ReadCommand_p1;
     ///////////////////////////////////////////////////
     
@@ -37,7 +44,7 @@ module RAM_ReadEngine(
     wire FIFO_InXFC;
     assign FIFO_InXFC = FIFO_InRTS & FIFO_InRTR;
     //DEBUG Need to implement a Ring buffer
-    assign reading = !RAMReadDone & SPI_ReadCommand & onBit; //& (RAMR_ReadAddr < RAMR_Quantity)
+    assign reading = !RAMReadDone & SPI_ReadCommand & onBit;
     //assign DEBUGreading = reading;
     always @(posedge clk)
     begin
@@ -62,7 +69,12 @@ module RAM_ReadEngine(
             begin
                 RAMR_ReadAddr <= 0; //If not reading, address is 0;
             end
-            if (reading)
+            
+            if (Triggered_PosEdgePulse)
+            begin
+                RAMR_ReadAddr <= TriggeredAddress - (RAMR_Quantity/2);
+            end
+            else if (reading) //dont read when there is a positive edge pulse to set addresses 
             begin
                 FIFO_InRTS <= 1;
                 if (FIFO_InXFC)

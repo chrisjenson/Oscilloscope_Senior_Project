@@ -8,7 +8,7 @@ module TimingGen(
     output ADC_SampleClock_negedge_pulse
     );
     
-    reg [1:0] twoCounter;
+    reg [6:0] twoCounter;
     
     always @(posedge clk)
     begin
@@ -25,7 +25,7 @@ module TimingGen(
         end
         else
         begin
-            if (twoCounter == 2'b01)
+            if (twoCounter == 4)
             begin
                 ADC_SampleClock <= ~ADC_SampleClock;
                 twoCounter <= 0;

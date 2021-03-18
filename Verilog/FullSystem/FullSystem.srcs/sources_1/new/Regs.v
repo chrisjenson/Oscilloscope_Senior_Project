@@ -51,8 +51,8 @@ module Regs(
             registers[3] <= 8'b01010101; //Version ID
             registers[4] <= 8'b01010101; //scratch R/W reg LEDs- Debug register
 
-            registers[6] <= 8'b00000000; //Trigger and Trigger slope
-            registers[7] <= 8'b00000000; //Trigger Threshold Value
+            registers[6] <= 8'b00000010; //Trigger and Trigger slope
+            registers[7] <= 8'b00100000; //Trigger Threshold Value
             registers[8] <= 8'b00000000; //Sample Decimation
             registers[9] <= 8'b00000001; //on-bit
             registers[10] <= 8'b00000000; //reset
@@ -75,14 +75,14 @@ module Regs(
             end
             else if (RAMReadDone)
             begin
-                registers[6] <= 8'b00000000; //Trigger and Trigger slope
+               /* registers[6] <= 8'b00000000; //Trigger and Trigger slope
                 registers[7] <= 8'b00000000; //Trigger Threshold Value
-                registers[15] <= 8'b00000000; //Triggered
+                registers[15] <= 8'b00000000; //Triggered*/
             end
             
         end
     end
-    always @(posedge clk)
+    /*always @(posedge clk)
     begin
         if (reset)
         begin 
@@ -95,7 +95,7 @@ module Regs(
                 
             end
         end
-    end
+    end*/
     always @(*)
     begin
         if (RdEn) //DEBUG: Shouldnt matter what read data value is when not reading

@@ -1,7 +1,6 @@
 `timescale 1ns / 1ps
 /*
 Tasks to do:
-    -Output test to MCU
     -Input test with DAB
     -All control value form regsiters need to be assigned
     -Trigger logic needs to be implemented
@@ -30,9 +29,10 @@ module Top(
     output DebugFIFOInXFC,
     output DebugFIFOOutXFC,
     output DebugNotSlaveSel,
+    output DebugOnBit,
+
     output DebugMOSI,
     output DebugSCLK,
-    output DebugOnBit,
     output DebugMISO,
     output DebugSlaveSel,
     output reg reset //For debug
@@ -42,8 +42,6 @@ module Top(
     //To comment this out, uncomment input [9:0] ADC_InData and comment everything below
     //Also uncomment in constraints
     //Uncomment in TB
-    
-    //Simulate data input on hardware
     wire [9:0] ADC_InData;
     
     DataSimulation u_DataSimulation(
@@ -52,8 +50,7 @@ module Top(
         .reset(reset),
         .SimData(ADC_InData)
     );
-    /////////////////////
-    
+   
     wire onBit;
     reg reset_p1;
     //reg reset;
@@ -91,12 +88,13 @@ module Top(
     
     wire [17:0] RAMW_WriteAddr;
     wire [17:0] RAMR_ReadAddr;
+    wire [17:0] TriggeredAddress;
 
     wire RAMW_En;
     wire [7:0] TriggerType;
     wire [7:0] TriggerThreshold;
     
-    
+    wire RAMReadDone;
     wire Triggered; //From triggermanagement
     
     //assign Triggered = 1;
@@ -108,9 +106,13 @@ module Top(
         .TriggerThreshold(TriggerThreshold), //From Regs
         .Triggered(Triggered),
         .onBit(onBit), 
+        .RAMReadDone(RAMReadDone),
         
         .ADC_SampleClock_posedge_pulse(ADC_SampleClock_posedge_pulse),
-        .ADC_InData(ADC_InData) //10 bits input- pre bit selection
+        .ADC_InData(ADC_InData), //10 bits input- pre bit selection
+        
+        .WriteAddress(RAMW_WriteAddr),
+        .TriggeredAddress(TriggeredAddress)
     );
     
     RAM_WriteEngine u_RAM_WriteEngine(
@@ -122,7 +124,8 @@ module Top(
         .RAMW_En(RAMW_En),
         .DebugRAMFullFlag(DebugRAMFullFlag),
         .reading(reading),
-        .onBit(onBit) //Use this to gate everything, should come from regs
+        .onBit(onBit), //Use this to gate everything, should come from regs
+        .TriggeredAddress(TriggeredAddress)
     );
     
     wire [15:0] RAMR_Data;
@@ -130,7 +133,7 @@ module Top(
     wire [17:0] RAMR_Quantity;
     wire FIFO_InRTS;
     wire FIFO_InRTR;
-    wire RAMReadDone;
+ 
     
     
     RAM_ReadEngine u_RAM_ReadEngine(
@@ -138,9 +141,7 @@ module Top(
         .reset(reset),
         //Ram Read
         .DEBUGreading(DebugRamReading),
-        //.Triggered(Triggered), //input, gates read
         .RAMR_ReadAddr(RAMR_ReadAddr), //Port B on RAM, current read location
-        .RAMW_WriteAddr(RAMW_WriteAddr), //Know where writing vurrently to read half below half above
         .RAMR_Quantity(RAMR_Quantity), //output from spi, gates read
         .RAMReadDone(RAMReadDone),
         .SPI_ReadCommand(SPI_ReadCommand), //Input, gates read
@@ -149,7 +150,9 @@ module Top(
         .onBit(onBit),
         //FIFO
         .FIFO_InRTS(FIFO_InRTS),
-        .FIFO_InRTR(FIFO_InRTR)
+        .FIFO_InRTR(FIFO_InRTR),
+        .Triggered(Triggered),
+        .TriggeredAddress(TriggeredAddress)
     );
     
    wire [1:0] wea; //RAM requires 2 bit enable

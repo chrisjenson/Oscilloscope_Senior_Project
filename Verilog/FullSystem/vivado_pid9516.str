@@ -3724,3 +3724,342 @@ selectCodeEditor("TriggerLogic.v", 261, 359); // cl (w, cl)
 // Elapsed time: 106 seconds
 selectCodeEditor("TriggerLogic.v", 345, 307); // cl (w, cl)
 // HMemoryUtils.trashcanNow. Engine heap size: 808 MB. GUI used memory: 69 MB. Current time: 3/11/21, 10:30:25 AM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 808 MB. GUI used memory: 69 MB. Current time: 3/11/21, 11:00:25 AM EST
+// WARNING: HEventQueue.dispatchEvent() is taking  899776 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  9142760 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1377 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 808 MB. GUI used memory: 69 MB. Current time: 3/11/21, 2:00:00 PM EST
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 808 MB. GUI used memory: 69 MB. Current time: 3/11/21, 2:30:00 PM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 808 MB. GUI used memory: 69 MB. Current time: 3/11/21, 3:00:01 PM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 808 MB. GUI used memory: 69 MB. Current time: 3/11/21, 3:30:00 PM EST
+// Elapsed time: 19079 seconds
+selectCodeEditor("TriggerLogic.v", 690, 124); // cl (w, cl)
+// HMemoryUtils.trashcanNow. Engine heap size: 808 MB. GUI used memory: 69 MB. Current time: 3/11/21, 4:00:01 PM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 808 MB. GUI used memory: 69 MB. Current time: 3/11/21, 4:30:01 PM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 808 MB. GUI used memory: 69 MB. Current time: 3/11/21, 5:00:01 PM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 808 MB. GUI used memory: 69 MB. Current time: 3/11/21, 5:30:02 PM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 808 MB. GUI used memory: 70 MB. Current time: 3/11/21, 6:00:02 PM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 808 MB. GUI used memory: 69 MB. Current time: 3/11/21, 6:30:02 PM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 808 MB. GUI used memory: 69 MB. Current time: 3/11/21, 7:00:02 PM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 808 MB. GUI used memory: 69 MB. Current time: 3/11/21, 7:30:03 PM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 808 MB. GUI used memory: 69 MB. Current time: 3/11/21, 8:00:03 PM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 808 MB. GUI used memory: 69 MB. Current time: 3/11/21, 8:30:03 PM EST
+// Elapsed time: 19301 seconds
+selectCodeEditor("TriggerLogic.v", 301, 299); // cl (w, cl)
+// Elapsed time: 11 seconds
+selectCodeEditor("TriggerLogic.v", 133, 215); // cl (w, cl)
+// Elapsed time: 58 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, cl)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (cl): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// by (cl):  Resetting Runs : addNotify
+dismissDialog("Synthesis is Out-of-date"); // A (cl)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+dismissDialog("Resetting Runs"); // by (cl)
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// by (cl):  Generate Bitstream : addNotify
+// TclEventType: RUN_LAUNCH
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 4 
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Thu Mar 11 20:54:29 2021] Launched synth_1... Run output will be captured here: D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.runs/synth_1/runme.log [Thu Mar 11 20:54:29 2021] Launched impl_1... Run output will be captured here: D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // by (cl)
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// ah (cl): Bitstream Generation Completed: addNotify
+// Elapsed time: 250 seconds
+selectRadioButton(PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER, "Open Hardware Manager"); // a (Q, ah)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+// Tcl Command: 'load_features labtools'
+// TclEventType: LOAD_FEATURE
+// by (cl):  Open Hardware Manager : addNotify
+// TclEventType: HW_SESSION_OPEN
+// WARNING: HEventQueue.dispatchEvent() is taking  1045 ms.
+// Tcl Message: open_hw 
+dismissDialog("Open Hardware Manager"); // by (cl)
+selectButton(PAResourceOtoP.ProgramDebugTab_OPEN_TARGET, "Open target"); // h (cS, cl)
+selectMenuItem(PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET, "Auto Connect"); // ah (an, cl)
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET
+// by (cl):  Auto Connect : addNotify
+// Tcl Message: connect_hw_server 
+// Tcl Message: INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121 
+// Tcl Message: INFO: [Labtools 27-2222] Launching hw_server... 
+// Tcl Message: INFO: [Labtools 27-2221] Launch Output:  ****** Xilinx hw_server v2019.1   **** Build date : May 24 2019 at 15:13:31     ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.   
+// TclEventType: HW_SERVER_UPDATE
+// Tcl Message: connect_hw_server: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 1379.453 ; gain = 0.000 
+// TclEventType: HW_TARGET_CHANGE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_ADD
+// TclEventType: HW_TARGET_UPDATE
+// WARNING: HEventQueue.dispatchEvent() is taking  4643 ms.
+// Tcl Message: open_hw_target 
+// Tcl Message: INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292745191A 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,694 MB. GUI used memory: 73 MB. Current time: 3/11/21, 8:59:02 PM EST
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.runs/impl_1/Top.bit} [get_hw_devices xc7a100t_0] 
+// Tcl Message: current_hw_device [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1435] Device xc7a100t (JTAG device index = 0) is not programmed (DONE status = 0). 
+// [Engine Memory]: 1,697 MB (+925093kb) [28:06:59]
+// Elapsed time: 11 seconds
+dismissDialog("Auto Connect"); // by (cl)
+selectButton(PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, "Program device"); // h (cS, cl)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bC (cl): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a (bC)
+// by (cl):  Program Device : addNotify
+// TclEventType: HW_DEVICE_CHANGE
+dismissDialog("Program Device"); // bC (cl)
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a100t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.runs/impl_1/Top.bit} [get_hw_devices xc7a100t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'I' command handler elapsed time: 5 seconds
+dismissDialog("Program Device"); // by (cl)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,707 MB. GUI used memory: 73 MB. Current time: 3/11/21, 8:59:34 PM EST
+// Elapsed time: 1383 seconds
+selectCodeEditor("Top.v", 356, 194); // cl (w, cl)
+// Elapsed time: 14 seconds
+selectCodeEditor("Top.v", 149, 292); // cl (w, cl)
+selectCodeEditor("Top.v", 147, 366); // cl (w, cl)
+selectCodeEditor("Top.v", 148, 366, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("Top.v", 148, 366); // cl (w, cl)
+selectCodeEditor("Top.v", 406, 404); // cl (w, cl)
+selectCodeEditor("Top.v", 144, 373); // cl (w, cl)
+selectCodeEditor("Top.v", 144, 373, false, false, false, false, true); // cl (w, cl) - Double Click
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "SPI.v", 5); // k (j, cl)
+selectCodeEditor("SPI.v", 193, 190); // cl (w, cl)
+selectCodeEditor("SPI.v", 193, 190, false, false, false, false, true); // cl (w, cl) - Double Click
+// Elapsed time: 44 seconds
+selectCodeEditor("SPI.v", 300, 249); // cl (w, cl)
+// Elapsed time: 11 seconds
+selectButton(PAResourceTtoZ.TaskBanner_CLOSE, (String) null); // k (aA, cl)
+closeTask("Program and Debug", "Hardware Manager", "DesignTask.PROGRAM_DEBUG");
+// A (cl): Confirm Close: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (A)
+// by (cl):  Close Hardware Manager : addNotify
+// TclEventType: HW_OBJECT_DELETE
+dismissDialog("Confirm Close"); // A (cl)
+// TclEventType: HW_SERVER_CLOSE
+// TclEventType: HW_SYSMON_DELETE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_TARGET_UPDATE
+// TclEventType: DEBUG_PROBE_DELETE
+// Tcl Message: close_hw 
+// TclEventType: DEBUG_PROBE_DELETE
+// TclEventType: HW_SESSION_CLOSE
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 525, 519); // n (o, cl)Waveform: addNotify
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 525, 519); // n (o, cl)Waveform: addNotify
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 525, 519); // n (o, cl)Waveform: addNotify
+// WARNING: HEventQueue.dispatchEvent() is taking  1640 ms.
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+dismissDialog("Close Hardware Manager"); // by (cl)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,732 MB. GUI used memory: 73 MB. Current time: 3/11/21, 9:23:43 PM EST
+// Elapsed time: 137 seconds
+selectCodeEditor("TriggerLogic.v", 220, 190); // cl (w, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "RAM_ReadEngine.v", 2); // k (j, cl)
+selectCodeEditor("RAM_ReadEngine.v", 334, 85); // cl (w, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Regs.v", 1); // k (j, cl)
+selectCodeEditor("Regs.v", 433, 225); // cl (w, cl)
+selectCodeEditor("Regs.v", 223, 285); // cl (w, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Top.v", 0); // k (j, cl)
+selectCodeEditor("Top.v", 232, 130); // cl (w, cl)
+// Elapsed time: 84 seconds
+selectCodeEditor("Top.v", 582, 379); // cl (w, cl)
+selectCodeEditor("Top.v", 190, 11); // cl (w, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "testbench_behav.wcfg", 7); // k (j, cl)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 12); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, lp_constraints.xdc]", 14, false); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, lp_constraints.xdc]", 14, false, false, false, false, false, true); // B (F, cl) - Double Click
+selectCodeEditor("lp_constraints.xdc", 535, 133); // cl (w, cl)
+selectCodeEditor("lp_constraints.xdc", 535, 133, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("lp_constraints.xdc", 550, 183); // cl (w, cl)
+selectCodeEditor("lp_constraints.xdc", 550, 183, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("lp_constraints.xdc", 557, 168); // cl (w, cl)
+selectCodeEditor("lp_constraints.xdc", 557, 168, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("lp_constraints.xdc", 519, 140); // cl (w, cl)
+// Elapsed time: 31 seconds
+selectCodeEditor("lp_constraints.xdc", 453, 56); // cl (w, cl)
+selectCodeEditor("lp_constraints.xdc", 213, 56); // cl (w, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Regs.v", 1); // k (j, cl)
+selectCodeEditor("Regs.v", 181, 157); // cl (w, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "RAM_ReadEngine.v", 2); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "TriggerLogic.v", 3); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ADCInterface.v", 4); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "lp_constraints.xdc", 8); // k (j, cl)
+// Elapsed time: 26 seconds
+selectCodeEditor("lp_constraints.xdc", 463, 164); // cl (w, cl)
+selectCodeEditor("lp_constraints.xdc", 557, 231); // cl (w, cl)
+selectCodeEditor("lp_constraints.xdc", 557, 231, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("lp_constraints.xdc", 557, 239); // cl (w, cl)
+selectCodeEditor("lp_constraints.xdc", 557, 239, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("lp_constraints.xdc", 560, 254); // cl (w, cl)
+selectCodeEditor("lp_constraints.xdc", 560, 254, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("lp_constraints.xdc", 564, 297); // cl (w, cl)
+selectCodeEditor("lp_constraints.xdc", 571, 277); // cl (w, cl)
+selectCodeEditor("lp_constraints.xdc", 571, 277, false, false, false, false, true); // cl (w, cl) - Double Click
+// Elapsed time: 35 seconds
+selectCodeEditor("lp_constraints.xdc", 305, 415); // cl (w, cl)
+selectCodeEditor("lp_constraints.xdc", 118, 409); // cl (w, cl)
+selectCodeEditor("lp_constraints.xdc", 95, 402); // cl (w, cl)
+selectCodeEditor("lp_constraints.xdc", 104, 400); // cl (w, cl)
+// Elapsed time: 27 seconds
+selectCodeEditor("lp_constraints.xdc", 521, 345); // cl (w, cl)
+selectCodeEditor("lp_constraints.xdc", 521, 345, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("lp_constraints.xdc", 552, 352); // cl (w, cl)
+selectCodeEditor("lp_constraints.xdc", 514, 346); // cl (w, cl)
+selectCodeEditor("lp_constraints.xdc", 514, 346, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("lp_constraints.xdc", 529, 346); // cl (w, cl)
+selectCodeEditor("lp_constraints.xdc", 529, 346, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("lp_constraints.xdc", 532, 478); // cl (w, cl)
+selectCodeEditor("lp_constraints.xdc", 532, 478, false, false, false, false, true); // cl (w, cl) - Double Click
+// Elapsed time: 359 seconds
+selectCodeEditor("lp_constraints.xdc", 538, 466); // cl (w, cl)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,746 MB. GUI used memory: 74 MB. Current time: 3/11/21, 9:53:43 PM EST
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 635 ms to process. Increasing delay to 2000 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 1017 ms. Increasing delay to 3051 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 1,746 MB. GUI used memory: 73 MB. Current time: 3/11/21, 10:23:44 PM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 1,746 MB. GUI used memory: 74 MB. Current time: 3/11/21, 10:53:44 PM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 1,746 MB. GUI used memory: 73 MB. Current time: 3/11/21, 11:23:45 PM EST
+// Elapsed time: 7238 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager, Open Target]", 22, false); // u (O, cl)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HW_TARGET
+selectMenuItem(PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET, "Auto Connect"); // ah (an, cl)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+// by (cl):  Open Hardware Manager : addNotify
+// TclEventType: HW_SESSION_OPEN
+// Tcl Message: open_hw 
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET
+dismissDialog("Open Hardware Manager"); // by (cl)
+// by (cl):  Auto Connect : addNotify
+// Tcl Message: connect_hw_server 
+// Tcl Message: INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121 
+// Tcl Message: INFO: [Labtools 27-2222] Launching hw_server... 
+// Tcl Message: INFO: [Labtools 27-2221] Launch Output:  ****** Xilinx hw_server v2019.1   **** Build date : May 24 2019 at 15:13:31     ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.   
+// TclEventType: HW_SERVER_UPDATE
+// Tcl Message: connect_hw_server: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 2140.238 ; gain = 0.000 
+// TclEventType: HW_TARGET_CHANGE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_ADD
+// TclEventType: HW_TARGET_UPDATE
+// Tcl Message: open_hw_target 
+// Tcl Message: INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292745191A 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.runs/impl_1/Top.bit} [get_hw_devices xc7a100t_0] 
+// Tcl Message: current_hw_device [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1435] Device xc7a100t (JTAG device index = 0) is not programmed (DONE status = 0). 
+dismissDialog("Auto Connect"); // by (cl)
+// Elapsed time: 28 seconds
+selectCodeEditor("Top.v", 178, 362); // cl (w, cl)
+selectButton(PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, "Program device"); // h (cS, cl)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bC (cl): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a (bC)
+// by (cl):  Program Device : addNotify
+// TclEventType: HW_DEVICE_CHANGE
+dismissDialog("Program Device"); // bC (cl)
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a100t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.runs/impl_1/Top.bit} [get_hw_devices xc7a100t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'I' command handler elapsed time: 4 seconds
+dismissDialog("Program Device"); // by (cl)
+// Elapsed time: 132 seconds
+selectCodeEditor("Top.v", 203, 282); // cl (w, cl)
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_SYSMON_DELETE
+// TclEventType: HW_TARGET_UPDATE
+// TclEventType: DEBUG_PROBE_DELETE
+// Tcl Message: ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210292745191A 
+// n (cl): Close Hardware Target: addNotify
+// Elapsed time: 45 seconds
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f (n)
+dismissDialog("Close Hardware Target"); // n (cl)
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// TclEventType: HW_SERVER_UPDATE
+// WARNING: HEventQueue.dispatchEvent() is taking  899238 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 1,746 MB. GUI used memory: 78 MB. Current time: 3/12/21, 12:07:28 AM EST
+// WARNING: HEventQueue.dispatchEvent() is taking  3650 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 3650 ms to process. Increasing delay to 2000 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  561825 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 1,746 MB. GUI used memory: 78 MB. Current time: 3/12/21, 12:37:28 AM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 1,746 MB. GUI used memory: 78 MB. Current time: 3/12/21, 1:10:56 AM EST
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 1654 ms. Increasing delay to 4000 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  627793 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 628645 ms. Increasing delay to 1885935 ms.

@@ -1,14 +1,19 @@
 #-----------------------------------------------------------
-# Vivado v2019.1 (64-bit)
-# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
-# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Tue Feb 23 14:44:30 2021
-# Process ID: 5696
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Fri Mar 12 20:26:06 2021
+# Process ID: 12284
 # Current directory: D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent28708 D:\SeniorProject\Oscilloscope_Senior_Project\Verilog\FullSystem\FullSystem.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11272 D:\SeniorProject\Oscilloscope_Senior_Project\Verilog\FullSystem\FullSystem.xpr
 # Log file: D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/vivado.log
 # Journal file: D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem\vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.xpr
 update_compile_order -fileset sources_1
+launch_simulation
+open_wave_config D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/testbench_behav.wcfg
+source testbench.tcl
+run .1 ms
+close_sim
