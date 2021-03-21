@@ -21,6 +21,7 @@ module Regs(
     output [7:0] TriggerType,
     output [7:0] TriggerThreshold,
     input Triggered,
+    input TriggerWriteDone,
     //ADC Decimation
     output [1:0] SampleDecimationFactor,
     //Turns off write engine and read engine
@@ -60,7 +61,7 @@ module Regs(
             registers[12] <= 8'b00000000; //Offset
             registers[13] <= 8'b00000000; //Shift Control Register
             registers[14] <= 8'b00000000; //Gain
-            registers[15] <= 8'b00000000; //Triggered
+            registers[15] <= 8'b00000000; //Triggered & TriggerWriteDone
             
         end
         else
@@ -71,7 +72,11 @@ module Regs(
             end
             if (Triggered == 1)
             begin
-                registers[15] = 8'b00000001;
+                registers[15][0] = 1'b1;
+            end
+            if (TriggerWriteDone == 1)
+            begin
+                registers[15][1] = 1'b1;
             end
             else if (RAMReadDone)
             begin

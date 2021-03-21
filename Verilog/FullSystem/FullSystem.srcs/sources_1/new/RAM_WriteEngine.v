@@ -12,7 +12,9 @@ module RAM_WriteEngine(
     //For Ring Buffer
     input reading,
     input [17:0] RAMR_ReadAddr,
-
+    output reg TriggerWriteDone,
+    input Triggered,
+    input RAMReadDone,
     //DEBUG
     output reg DebugRAMFullFlag
     );
@@ -62,10 +64,18 @@ module RAM_WriteEngine(
     
     
     //End section
-
+    ///////////////////////
+    //Ring Buffer
+    reg RingBufferInvalid;
+    always @(*)
+    //Input
+    //Output
+    begin
+        RingBufferInvalid = ((reading) && (RAMW_WriteAddr == RAMR_ReadAddr));
+    end
     //////////////////////////////////////////////////////////////    
     //Write Section
-    assign RAMW_En = onBit & ADC_SampleClock_secondposedge_pulse && !((reading) && (RAMW_WriteAddr == RAMR_ReadAddr)); //DEBUG:Need to make this its own process and delay by one word..
+    assign RAMW_En = onBit & ADC_SampleClock_secondposedge_pulse && !TriggerWriteDone && !RingBufferInvalid; //DEBUG:Need to make this its own process and delay by one word..
     
     always @(posedge clk)
     begin
@@ -81,37 +91,36 @@ module RAM_WriteEngine(
         end
         else
         begin
-            if (RAMW_En && !((reading) && (RAMW_WriteAddr == RAMR_ReadAddr)) ) //Write and enable and if (in reading state and write address == read address
+            if (RAMW_En && !RingBufferInvalid ) //Write and enable and if (in reading state and write address == read address
             begin
-                //if(RAMW_WriteAddr < 1024)//DEBUG REMOVE THIS IF
-                //begin
-                    RAMW_WriteAddr <= RAMW_WriteAddr + 1;
-                //end 
-                
+                RAMW_WriteAddr <= RAMW_WriteAddr + 1;                
             end
         end
     end
-    
+    //////////////////////////////////////////////
+    //Control TriggerWriteDone
+    //Debug: Always @ (*)?????
     always @(posedge clk)
     begin
-    //Ram deubg output
-    //Inputs
-        //Reset
-        //RAMW_En
-    //Outputs
-        //RAMW_WriteAddr
         if (reset)
         begin
-            DebugRAMFullFlag <= 0;
+            TriggerWriteDone <= 0;
         end
         else
         begin
-            if (RAMW_WriteAddr >= 262143) //Buffer_DataIn in is set on negedge
-            begin
-                DebugRAMFullFlag <= 1;
+            if (Triggered)
+                begin
+                if (RAMW_WriteAddr == (TriggeredAddress + 262144)) //262144
+                begin
+                    TriggerWriteDone <= 1;
+                end
+                else if (RAMReadDone)
+                begin
+                //Get ready  for next trigger
+                    TriggerWriteDone <= 0;
+                end
             end
         end
     end
 
-  
 endmodule

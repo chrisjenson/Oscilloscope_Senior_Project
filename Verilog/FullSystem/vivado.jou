@@ -29,3 +29,67 @@ set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
 set_property PROGRAM.FILE {D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.runs/impl_1/Top.bit} [get_hw_devices xc7a100t_0]
 program_hw_devices [get_hw_devices xc7a100t_0]
 refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+close_hw_manager
+launch_simulation
+open_wave_config D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/testbench_behav.wcfg
+source testbench.tcl
+run .25 ms
+relaunch_sim
+close_sim
+launch_simulation
+open_wave_config D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/testbench_behav.wcfg
+source testbench.tcl
+run 250 ns
+run 250 ns
+run 250 ns
+run 250 ns
+run 250 ns
+run 250 ns
+relaunch_sim
+save_wave_config {D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/testbench_behav.wcfg}
+close_sim
+launch_simulation
+open_wave_config D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/testbench_behav.wcfg
+source testbench.tcl
+run 250 ns
+run 250 ns
+run 250 ns
+relaunch_sim
+close_sim
+launch_simulation
+open_wave_config D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/testbench_behav.wcfg
+source testbench.tcl
+run 250 ns
+run 250 ns
+run 250 ns
+run 250 ns
+run 250 ns
+run 250 ns
+run 250 ns
+run 250 ns
+run 250 ns
+run 250 ns
+run 2500 ns
+save_wave_config {D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/testbench_behav.wcfg}
+close_sim
+launch_simulation
+open_wave_config D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/testbench_behav.wcfg
+source testbench.tcl
+run 2500 ns
+run 2500 ns
+run 2500 ns
+run 2500 ns
+run 2500 ns
+run 25000 ns
+close_sim
+launch_simulation
+open_wave_config D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/testbench_behav.wcfg
+source testbench.tcl
+run 25000 ns
+relaunch_sim
+run 25000 ns
+relaunch_sim
+run 25000 ns
+run 25000 ns
+save_wave_config {D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/testbench_behav.wcfg}
+close_sim

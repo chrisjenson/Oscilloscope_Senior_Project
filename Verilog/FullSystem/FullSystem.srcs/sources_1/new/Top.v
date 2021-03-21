@@ -96,6 +96,7 @@ module Top(
     
     wire RAMReadDone;
     wire Triggered; //From triggermanagement
+    wire TriggerWriteDone;
     
     //assign Triggered = 1;
     assign DebugTriggered = Triggered;
@@ -124,6 +125,9 @@ module Top(
         .RAMW_En(RAMW_En),
         .DebugRAMFullFlag(DebugRAMFullFlag),
         .reading(reading),
+        .TriggerWriteDone(TriggerWriteDone),
+        .Triggered(Triggered),
+        .RAMReadDone(RAMReadDone),
         .onBit(onBit), //Use this to gate everything, should come from regs
         .TriggeredAddress(TriggeredAddress)
     );
@@ -223,6 +227,7 @@ module Top(
         .TriggerType(TriggerType),
         .TriggerThreshold(TriggerThreshold),
         .Triggered(Triggered),
+        .TriggerWriteDone(TriggerWriteDone),
         .onBit(onBit),
         .RAMReadDone(RAMReadDone)
     );
