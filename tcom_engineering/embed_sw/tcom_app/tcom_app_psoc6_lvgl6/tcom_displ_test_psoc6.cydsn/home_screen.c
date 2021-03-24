@@ -146,6 +146,8 @@ static void sw_event_handler(lv_obj_t * obj, lv_event_t event)
         //cm4.onBit = !cm4.onBit;
     }
 }
+
+//NOTE: this function does not scale correctly, probably because of the 355 internal offset
 static void offset_slider_event_cb(lv_obj_t * slider, lv_event_t event)
 {
     if(event == (LV_EVENT_VALUE_CHANGED)) {
