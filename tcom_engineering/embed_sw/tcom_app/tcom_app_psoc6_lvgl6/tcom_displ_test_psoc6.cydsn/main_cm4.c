@@ -90,7 +90,7 @@ main( void )
     cm4.ChrisReg = 0b01000011;
     cm4.ShannonReg = 0b01010011;
     cm4.VersionID = 0b00000001;
-    cm4.Trigger = 0b00000000;
+    cm4.Trigger = 0b00000010110101010;
     cm4.TriggerSlope = 0b00000000;
     cm4.SampleRate = 0b00000000;
     cm4.onBit = 0b00000000;

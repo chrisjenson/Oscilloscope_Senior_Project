@@ -6,6 +6,7 @@
 #include "home_screen.h"
 #include "slider_activity.h"
 #include "math.h"
+#include "string.h"
 
 const uint8_t tcnj_blue[] = { 41, 63, 111 };
 const uint8_t tcnj_gold[] = { 166, 122, 0 };
@@ -89,8 +90,10 @@ static void chart_actions()
     
     //Add series to the chart
     lv_chart_series_t * s1 = lv_chart_add_series(chart1, lv_color_hex(0x01a2b1));
+    lv_chart_series_t * s2 = lv_chart_add_series(chart1, lv_color_hex(0xCC));
     
     lv_chart_clear_serie(chart1, s1);
+    lv_chart_clear_serie(chart1, s2);
     lv_chart_refresh(chart1);
     
     // Need to calculate the desired indexes in RxBuffer, Based on HoriScale
@@ -117,6 +120,7 @@ static void chart_actions()
         voltage = (((cm4.RamReadBuffer[i]*0.5)/128)+1.45)*100;
         voltage = voltage + cm4.Offset + 355;
         lv_chart_set_next(chart1, s1, voltage);
+        lv_chart_set_next(chart1, s2, cm4.Trigger + 355);
     }   
     startup = 1;
 }
@@ -145,20 +149,24 @@ static void sw_event_handler(lv_obj_t * obj, lv_event_t event)
 static void offset_slider_event_cb(lv_obj_t * slider, lv_event_t event)
 {
     if(event == (LV_EVENT_VALUE_CHANGED)) {
-        static char buf[4]; /* max 3 bytes for number plus 1 null terminating byte */
-        snprintf(buf, 4, "%u", lv_slider_get_value(slider));
+        static char buf[8]; /* max 3 bytes for number plus 1 null terminating byte */
+        static char units[4] = "mV";
+        snprintf(buf, 8, "%d", lv_slider_get_value(slider)-100);
+        strcat(buf, units);
         lv_label_set_text(offsetLabel, buf);
-        cm4.Offset = lv_slider_get_value(slider);
+        cm4.Offset = lv_slider_get_value(slider)-100;
         chart_actions();    //call to update the chart
     }
 }
 static void trigger_slider_event_cb(lv_obj_t * slider, lv_event_t event)
 {
     if(event == (LV_EVENT_VALUE_CHANGED)) {
-        static char buf[4]; /* max 3 bytes for number plus 1 null terminating byte */
-        snprintf(buf, 4, "%u", lv_slider_get_value(slider));
+        static char buf[8]; /* max 3 bytes for number plus 1 null terminating byte */
+        static char units[4] = "mV";
+        snprintf(buf, 8, "%u", lv_slider_get_value(slider));
+        strcat(buf, units);
         lv_label_set_text(triggerLabel, buf);
-        cm4.Trigger = lv_slider_get_value(slider);
+        cm4.Trigger = lv_slider_get_value(slider)/10; //scaled down for the chart
         chart_actions();    //call to update the chart
     }
 }
@@ -241,15 +249,15 @@ void home_screen()
     lv_obj_t * offsetSlider = lv_slider_create(lv_scr_act(), NULL);
     lv_obj_set_pos(offsetSlider, 20, 290);                         /*Set its position*/
     lv_obj_set_size(offsetSlider, 130, 30);                        /*Set its size*/
-    lv_slider_set_value(offsetSlider, 0, LV_ANIM_ON);
     lv_obj_set_event_cb(offsetSlider, offset_slider_event_cb);
-    lv_slider_set_range(offsetSlider, 0, 100);
+    lv_slider_set_range(offsetSlider, 0, 200);
+    lv_slider_set_value(offsetSlider, 100, LV_ANIM_ON);
 
             /* Create a label below the slider */
             offsetLabel = lv_label_create(lv_scr_act(), NULL);
-            lv_label_set_text(offsetLabel, "0");
+            lv_label_set_text(offsetLabel, "0mV");
             lv_obj_set_auto_realign(offsetLabel, true);
-            lv_obj_align(offsetLabel, offsetSlider, LV_ALIGN_OUT_TOP_MID, 0, 0);
+            lv_obj_align(offsetLabel, offsetSlider, LV_ALIGN_OUT_TOP_RIGHT, 0, 0);
         
             /* Create a label above the slider */
         	lv_obj_t* offsetLabel2 = lv_label_create(lv_scr_act(), NULL);
@@ -265,8 +273,8 @@ void home_screen()
     lv_obj_set_pos(triggerSlider, 170, 290);                         /*Set its position*/
     lv_obj_set_size(triggerSlider, 130, 30);                        /*Set its size*/
     lv_obj_set_event_cb(triggerSlider, trigger_slider_event_cb);
-    lv_slider_set_range(triggerSlider, 375, 625);
-    lv_slider_set_value(triggerSlider, 500, LV_ANIM_ON);
+    lv_slider_set_range(triggerSlider, 800, 2100);
+    lv_slider_set_value(triggerSlider, 1450, LV_ANIM_ON);
             
             /* Create a label below the slider */
             triggerLabel = lv_label_create(lv_scr_act(), NULL);
@@ -344,7 +352,7 @@ void home_screen()
     
     lv_obj_t * switchLabel = lv_label_create(lv_scr_act(), NULL);
 	lv_obj_set_drag(switchLabel, false);
-    lv_label_set_text(switchLabel, "On\\Off");
+    lv_label_set_text(switchLabel, "Run\\Stop");
     //lv_obj_set_pos(switchLabel, 15, 445);
     lv_obj_align(switchLabel, sw1, LV_ALIGN_OUT_TOP_MID, 0, 0);
     
