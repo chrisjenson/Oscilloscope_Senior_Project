@@ -120,7 +120,7 @@ static void chart_actions()
         /*        |------code to voltage equation-------|* show decimals| */
         voltage = (((cm4.RamReadBuffer[i]*0.5)/128)+1.45)*100;
         /*       |orginal|+|user offset|+|internal offset to account for negatives|*/
-        voltage = voltage + cm4.Offset + 355;
+        voltage = voltage + cm4.Offset/15 + 355;
         lv_chart_set_next(chart1, s1, voltage);
         lv_chart_set_next(chart1, s2, cm4.Trigger + 355);
     }   
@@ -149,16 +149,16 @@ static void sw_event_handler(lv_obj_t * obj, lv_event_t event)
     }
 }
 
-//NOTE: this function does not scale correctly, probably because of the 355 internal offset
+//NOTE: this function does not scale correctly
 static void offset_slider_event_cb(lv_obj_t * slider, lv_event_t event)
 {
     if(event == (LV_EVENT_VALUE_CHANGED)) {
         static char buf[8]; /* max 3 bytes for number plus 1 null terminating byte */
         static char units[4] = "mV";
-        snprintf(buf, 8, "%d", lv_slider_get_value(slider)-100);
+        snprintf(buf, 8, "%d", lv_slider_get_value(slider)-1000);
         strcat(buf, units);
         lv_label_set_text(offsetLabel, buf);
-        cm4.Offset = lv_slider_get_value(slider)-100;
+        cm4.Offset = lv_slider_get_value(slider)-1000;
         chart_actions();    //call to update the chart
     }
 }
@@ -254,8 +254,8 @@ void home_screen()
     lv_obj_set_pos(offsetSlider, 20, 290);                         /*Set its position*/
     lv_obj_set_size(offsetSlider, 130, 30);                        /*Set its size*/
     lv_obj_set_event_cb(offsetSlider, offset_slider_event_cb);
-    lv_slider_set_range(offsetSlider, 0, 200);
-    lv_slider_set_value(offsetSlider, 100, LV_ANIM_ON);
+    lv_slider_set_range(offsetSlider, 0, 2000);
+    lv_slider_set_value(offsetSlider, 1000, LV_ANIM_ON);
 
             /* Create a label below the slider */
             offsetLabel = lv_label_create(lv_scr_act(), NULL);
