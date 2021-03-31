@@ -10,7 +10,9 @@ struct SPI_parameters
     
     uint8_t VersionID;
     uint16_t Trigger;
+    uint8_t TriggerCode;    
     uint8_t TriggerSlope;
+    uint8_t TriggerEvent;
     uint8_t SampleRate;
     uint8_t onBit;
     uint8_t Reset;

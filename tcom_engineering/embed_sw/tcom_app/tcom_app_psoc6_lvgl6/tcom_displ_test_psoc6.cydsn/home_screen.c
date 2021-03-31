@@ -113,9 +113,14 @@ static void chart_actions()
         bufferLast = 2048;
     }    
 
-    //draw the series
     double voltage = 0; //convert the code from brian to voltage using:
     //voltage = ((code*0.5)/128)+1.45
+
+    double triggerTemp = cm4.Trigger/1000;
+    cm4.TriggerCode = (((triggerTemp-1.45)/0.5)*128); //convert the voltage from trigger to code using:
+    //triggerCode = ((voltage -1.45)/0.5)*128
+
+    //draw the series
     for(int i = bufferFirst; i < bufferLast; ++i){
         /*        |------code to voltage equation-------|* show decimals| */
         voltage = (((cm4.RamReadBuffer[i]*0.5)/128)+1.45)*100;
@@ -132,6 +137,16 @@ static void roller1_event(lv_obj_t * obj, lv_event_t event)
     if(event == (LV_EVENT_VALUE_CHANGED)) {
         char buf[32];
         lv_roller_get_selected_str(obj, buf, sizeof(buf));
+        
+        if(strcmp("Falling", buf) == 0){
+            cm4.TriggerSlope = 0b00000000;
+        }
+        else if(strcmp("Rising", buf) == 0){
+            cm4.TriggerSlope = 0b00000001;
+        }
+        else if(strcmp("Threshold", buf) == 0){
+            cm4.TriggerSlope = 0b00000011;
+        }
     }
 }
 static void roller2_event(lv_obj_t * obj, lv_event_t event)
@@ -369,8 +384,8 @@ void home_screen()
     lv_obj_set_pos(rollerLabel, 155, 410);
     
     lv_obj_t * roller1 = lv_roller_create(lv_scr_act(),NULL);
-    lv_roller_set_options(roller1, "Rising\n"
-                                   "Falling\n"
+    lv_roller_set_options(roller1, "Falling\n"
+                                   "Rising\n"
                                    "Threshold",
                                    LV_ROLLER_MODE_INIFINITE);
     lv_roller_set_visible_row_count(roller1, 1);
