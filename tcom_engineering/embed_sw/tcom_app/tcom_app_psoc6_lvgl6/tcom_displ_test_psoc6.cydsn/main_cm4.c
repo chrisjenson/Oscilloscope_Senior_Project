@@ -131,9 +131,11 @@ main( void )
     uint16_t bufferIndex = 0; 
     
     //loop to send each command in the txBuffer
-    for(int i = 0; i < 5; ++i){
+    //for(int i = 0; i < 5; ++i){ //change back for full operations
+    for(int i = 4; i < 5; ++i){
         //if there is no trigger event then it will skip over the read ram command
-        if((i < 4) || (cm4.TriggerEvent == 1)){
+        //if((i < 4) || (cm4.TriggerEvent == 1)){ //change back for full operations
+        if((i == 4) || (cm4.TriggerEvent == 1)){
             //Set slave select low for the commands
             ss_state = !ss_state;  Cy_GPIO_Write(SEL_PIN_PORT, SEL_PIN_NUM, ss_state);
 
@@ -162,7 +164,7 @@ main( void )
                 
                 //Check the result of the second command which checks for trigger from FPGA
                 if(i == 3){
-                    cm4.TriggerEvent = cm4.RxBuffer[count] >> 8;    
+                    cm4.TriggerEvent = cm4.RxBuffer[0] >> 8;    
                 }
 
                 //Check if a ram read was performed so we can check if data has to be parsed
