@@ -90,8 +90,10 @@ main( void )
     cm4.ChrisReg = 0b01000011;
     cm4.ShannonReg = 0b01010011;
     cm4.VersionID = 0b00000001;
-    cm4.Trigger = 0b00000000;
+    cm4.Trigger = 0b00000010110101010;
+    cm4.TriggerCode = 0b00000000;
     cm4.TriggerSlope = 0b00000000;
+    cm4.TriggerEvent = 0b00000000;
     cm4.SampleRate = 0b00000000;
     cm4.onBit = 0b00000000;
     cm4.Reset = 0b00000000;
@@ -103,40 +105,37 @@ main( void )
     cm4.onBit = 0b00000000;
     cm4.windowPos = 1024;
     
+  
     
-    //if(cm4.onBit == 0b00000001)
-    //{
-        //construct write commmand for updating offset in register 11
-        cm4.TxBuffer[0] = 0b0100101100000000 | cm4.Offset;     //010 01011 00000000
-        
-        //construct write commmand for updating trigger in register 4
-        cm4.TxBuffer[1] = 0b0100010000000000 | cm4.Trigger;     //010 00100 00000000
-        
-        //construct write commmand for updating gain in register 14
-        cm4.TxBuffer[2] = 0b0100111000000000 | cm4.Gain;     //010 01110 00000000
-        
-        //construct read RAM command, or with HoriScale to determine the sample size
-        //cm4.TxBuffer[3] = 0b0110000000000000 | cm4.HoriScale;     //011 00000 00000000
-        
-        //construct write commmand for updating on-bit in register 9
-        cm4.TxBuffer[2] = 0b0100100100000000;     //010 01001 00000000
-        
-        //Send a read ram command to read 1024x2 samples 
-        //cm4.TxBuffer[0] = 0b011000000000000; //| cm4.HoriScale;     //011 01001 00000000
-        cm4.TxBuffer[0] = 0b0110100000000000;  //011 01001 00000000
-        
-        
-        //write reg 4 all zeroes
-        //cm4.TxBuffer[0] = 0b0100010000000000;  //011 01001 00000000
-        
-        CyDelay(3000);
-        
-        uint32_t NUM_TO_WRITE = 8; 
-        int ss_state = 1;
-        uint16_t bufferIndex = 0; 
-        
-        //loop to send each command in the txBuffer
-        for(int i = 0; i < 1; ++i){
+    //------------------START SPI CODE---------------------------------
+    //construct write commmand for updating trigger in register 4
+    //cm4.TxBuffer[0] = 0b0100010000000000 | cm4.TriggerCode;     //010 00100 00000000
+    cm4.TxBuffer[0] = 0b0100010000000000;     //010 00100 00000000
+    
+    //construct write commmand for updating trigger slope in register 6
+    //cm4.TxBuffer[1] = 0b0100011000000000 | cm4.TriggerSlope;     //010 00110 00000000
+    cm4.TxBuffer[1] = 0b0100011000000000;     //010 00110 00000000
+
+    //construct write commmand for updating on-bit in register 9
+    //cm4.TxBuffer[2] = 0b0100100100000000 | cm4.onBit;     //010 01001 00000000
+    cm4.TxBuffer[2] = 0b0100100100000000;     //010 01001 00000000
+    
+    //construct read commmand for checking a trigger event in register 15
+    cm4.TxBuffer[3] = 0b0010111100000000;     //001 01111 00000000
+    
+    //Send a read ram command to read 1024x2 samples 
+    cm4.TxBuffer[4] = 0b0110100000000000;  //011 01001 00000000
+    
+    uint32_t NUM_TO_WRITE = 8; 
+    int ss_state = 1;
+    uint16_t bufferIndex = 0; 
+    
+    //loop to send each command in the txBuffer
+    //for(int i = 0; i < 5; ++i){ //change back for full operations
+    for(int i = 4; i < 5; ++i){
+        //if there is no trigger event then it will skip over the read ram command
+        //if((i < 4) || (cm4.TriggerEvent == 1)){ //change back for full operations
+        if((i == 4) || (cm4.TriggerEvent == 1)){
             //Set slave select low for the commands
             ss_state = !ss_state;  Cy_GPIO_Write(SEL_PIN_PORT, SEL_PIN_NUM, ss_state);
 
@@ -149,17 +148,8 @@ main( void )
             while((Cy_SCB_SPI_GetNumInRxFifo(SPIM_HW) != 1)){}
             Cy_SCB_SPI_ReadArray(SPIM_HW, cm4.RxBuffer, 1);
 
-            /*
-            These two lines work for reading the registers
-            if((cm4.TxBuffer[i] >> 13) == 0b0000000000000001 || (cm4.TxBuffer[i] >> 13) == 0b0000000000000010){
-               while(!(Cy_SCB_SPI_GetRxFifoStatus(SPIM_HW) & CY_SCB_SPI_RX_NOT_EMPTY)){}
-                cm4.RxBuffer[0] = Cy_SCB_SPI_Read(SPIM_HW);
-            }
-            */
-            
-            //else{
-            //1024/8, total number of samples divided by the size of bursts
-            //512 because we are reading in  2 samples every time
+            //1024/NUMBER OF BURSTS, total number of samples divided by the size of bursts
+            //1024 because we are reading in  2 samples every time
             for(uint32_t burst = 0; burst < 1024/NUM_TO_WRITE; burst++){
 
                 // Dummy write, to read data from FPGA
@@ -172,6 +162,11 @@ main( void )
                 while((Cy_SCB_SPI_GetNumInRxFifo(SPIM_HW) != NUM_TO_WRITE)){}
                 Cy_SCB_SPI_ReadArray(SPIM_HW, cm4.RxBuffer, NUM_TO_WRITE);
                 
+                //Check the result of the second command which checks for trigger from FPGA
+                if(i == 3){
+                    cm4.TriggerEvent = cm4.RxBuffer[0] >> 8;    
+                }
+
                 //Check if a ram read was performed so we can check if data has to be parsed
                 if((cm4.TxBuffer[i] >> 13) == 0b011){
                     //for loop to split the read in data and then store appropriately in cm4.RamReadBuffer
@@ -185,20 +180,15 @@ main( void )
                         cm4.RamReadBuffer[bufferIndex + 1] = secondSample;
                         
                         bufferIndex += 2;
+                        cm4.TriggerEvent = 0; //lower the flag for next time
                     }
                 }
-                else{
-                    //carry on as usual.... however that may be
-                }
             }
-            //Reassert slave select
-            Cy_GPIO_Write(SEL_PIN_PORT, SEL_PIN_NUM, 1);
         }
-        
-        //Reset to avoid an infinite loop
-        cm4.onBit = 0b00000000;
-    //}
-    // END SPI CODE //
+        //Reassert slave select
+        Cy_GPIO_Write(SEL_PIN_PORT, SEL_PIN_NUM, 1);
+    }
+    //-------------------END SPI CODE---------------------------------------------//
     
     
         
@@ -207,12 +197,11 @@ main( void )
         
        
     
-     home_screen();
+    home_screen();
     
     while (1)
     {
         lv_task_handler();
-        //btn_anime();
         
         CyDelay(5);
     }

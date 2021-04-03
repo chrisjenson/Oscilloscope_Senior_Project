@@ -9,13 +9,15 @@ struct SPI_parameters
     uint8_t ShannonReg;
     
     uint8_t VersionID;
-    uint8_t Trigger;
+    uint16_t Trigger;
+    uint8_t TriggerCode;    
     uint8_t TriggerSlope;
+    uint8_t TriggerEvent;
     uint8_t SampleRate;
     uint8_t onBit;
     uint8_t Reset;
     uint8_t IRS;
-    uint8_t Offset;
+    int16_t Offset;
     
     //saves where in the buffer we are for display;
     int windowPos; 

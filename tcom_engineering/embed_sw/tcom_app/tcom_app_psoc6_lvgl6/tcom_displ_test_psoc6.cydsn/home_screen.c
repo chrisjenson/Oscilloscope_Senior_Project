@@ -6,6 +6,7 @@
 #include "home_screen.h"
 #include "slider_activity.h"
 #include "math.h"
+#include "string.h"
 
 const uint8_t tcnj_blue[] = { 41, 63, 111 };
 const uint8_t tcnj_gold[] = { 166, 122, 0 };
@@ -33,7 +34,8 @@ static void chart_actions()
     
     /* Display chart                         */        
     chart1 = lv_chart_create(lv_scr_act(), NULL);                     //Add a chart to the current screen
-    lv_obj_set_pos(chart1, chart_horiPos, chart_vertPos);             /*Set its position*/
+    //lv_obj_set_pos(chart1, chart_horiPos, chart_vertPos);             /*Set its position*/
+    lv_obj_set_pos(chart1, chart_horiPos, 50); 
     lv_obj_set_size(chart1, chart_width, chart_heigth);               /*Set its size*/ 
     
     //sets the grid lines, hori, verti
@@ -89,11 +91,13 @@ static void chart_actions()
     
     //Add series to the chart
     lv_chart_series_t * s1 = lv_chart_add_series(chart1, lv_color_hex(0x01a2b1));
+    lv_chart_series_t * s2 = lv_chart_add_series(chart1, lv_color_hex(0xCC));
     
     lv_chart_clear_serie(chart1, s1);
+    lv_chart_clear_serie(chart1, s2);
     lv_chart_refresh(chart1);
     
-    // Need to calculate the desired indexes in RxBuffer, Based on HoriScale
+    // Need to calculate the desired indexes in RxBuffer, Based on HoriScale => window size
     int bufferFirst = cm4.windowPos - windowSize/2;
     int bufferLast = cm4.windowPos + windowSize/2;
     
@@ -109,14 +113,21 @@ static void chart_actions()
         bufferLast = 2048;
     }    
 
-    //draw the series
     double voltage = 0; //convert the code from brian to voltage using:
     //voltage = ((code*0.5)/128)+1.45
+
+    double triggerTemp = cm4.Trigger/1000;
+    cm4.TriggerCode = (((triggerTemp-1.45)/0.5)*128); //convert the voltage from trigger to code using:
+    //triggerCode = ((voltage -1.45)/0.5)*128
+
+    //draw the series
     for(int i = bufferFirst; i < bufferLast; ++i){
-        /*        |---------code to voltage equation-----------------|* show decimals| + internal offset to avoid negatives */
+        /*        |------code to voltage equation-------|* show decimals| */
         voltage = (((cm4.RamReadBuffer[i]*0.5)/128)+1.45)*100;
-        voltage = voltage + cm4.Offset + 355;
+        /*       |orginal|+|user offset|+|internal offset to account for negatives|*/
+        voltage = voltage + cm4.Offset/15 + 355;
         lv_chart_set_next(chart1, s1, voltage);
+        lv_chart_set_next(chart1, s2, cm4.Trigger + 355);
     }   
     startup = 1;
 }
@@ -126,6 +137,16 @@ static void roller1_event(lv_obj_t * obj, lv_event_t event)
     if(event == (LV_EVENT_VALUE_CHANGED)) {
         char buf[32];
         lv_roller_get_selected_str(obj, buf, sizeof(buf));
+        
+        if(strcmp("Falling", buf) == 0){
+            cm4.TriggerSlope = 0b00000000;
+        }
+        else if(strcmp("Rising", buf) == 0){
+            cm4.TriggerSlope = 0b00000001;
+        }
+        else if(strcmp("Threshold", buf) == 0){
+            cm4.TriggerSlope = 0b00000011;
+        }
     }
 }
 static void roller2_event(lv_obj_t * obj, lv_event_t event)
@@ -142,23 +163,29 @@ static void sw_event_handler(lv_obj_t * obj, lv_event_t event)
         //cm4.onBit = !cm4.onBit;
     }
 }
+
+//NOTE: this function does not scale correctly
 static void offset_slider_event_cb(lv_obj_t * slider, lv_event_t event)
 {
     if(event == (LV_EVENT_VALUE_CHANGED)) {
-        static char buf[4]; /* max 3 bytes for number plus 1 null terminating byte */
-        snprintf(buf, 4, "%u", lv_slider_get_value(slider));
+        static char buf[8]; /* max 3 bytes for number plus 1 null terminating byte */
+        static char units[4] = "mV";
+        snprintf(buf, 8, "%d", lv_slider_get_value(slider)-1000);
+        strcat(buf, units);
         lv_label_set_text(offsetLabel, buf);
-        cm4.Offset = lv_slider_get_value(slider);
+        cm4.Offset = lv_slider_get_value(slider)-1000;
         chart_actions();    //call to update the chart
     }
 }
 static void trigger_slider_event_cb(lv_obj_t * slider, lv_event_t event)
 {
     if(event == (LV_EVENT_VALUE_CHANGED)) {
-        static char buf[4]; /* max 3 bytes for number plus 1 null terminating byte */
-        snprintf(buf, 4, "%u", lv_slider_get_value(slider));
+        static char buf[8]; /* max 3 bytes for number plus 1 null terminating byte */
+        static char units[4] = "mV";
+        snprintf(buf, 8, "%u", lv_slider_get_value(slider));
+        strcat(buf, units);
         lv_label_set_text(triggerLabel, buf);
-        cm4.Trigger = lv_slider_get_value(slider);
+        cm4.Trigger = lv_slider_get_value(slider)/10; //scaled down for the chart
         chart_actions();    //call to update the chart
     }
 }
@@ -173,19 +200,19 @@ static void hori_slider_event_cb(lv_obj_t * slider, lv_event_t event)
         switch(cm4.HoriScale){
 
             case 5 :
-                snprintf(buf, 10, "100mV");
+                snprintf(buf, 10, "100mS");
                 break;
             case 6 :
-                snprintf(buf, 10, "200mV");
+                snprintf(buf, 10, "200mS");
                 break;
             case 7 :
-                snprintf(buf, 10, "500mV");
+                snprintf(buf, 10, "500mS");
                 break;            
             case 8 :
-                snprintf(buf, 10, "1V");
+                snprintf(buf, 10, "1S");
                 break;
             case 9 :
-                snprintf(buf, 10, "2V");
+                snprintf(buf, 10, "2S");
                 break;
             default:
                 snprintf(buf, 10, "Hello World");
@@ -241,15 +268,15 @@ void home_screen()
     lv_obj_t * offsetSlider = lv_slider_create(lv_scr_act(), NULL);
     lv_obj_set_pos(offsetSlider, 20, 290);                         /*Set its position*/
     lv_obj_set_size(offsetSlider, 130, 30);                        /*Set its size*/
-    lv_slider_set_value(offsetSlider, 0, LV_ANIM_ON);
     lv_obj_set_event_cb(offsetSlider, offset_slider_event_cb);
-    lv_slider_set_range(offsetSlider, 0, 100);
+    lv_slider_set_range(offsetSlider, 0, 2000);
+    lv_slider_set_value(offsetSlider, 1000, LV_ANIM_ON);
 
             /* Create a label below the slider */
             offsetLabel = lv_label_create(lv_scr_act(), NULL);
-            lv_label_set_text(offsetLabel, "0");
+            lv_label_set_text(offsetLabel, "0mV");
             lv_obj_set_auto_realign(offsetLabel, true);
-            lv_obj_align(offsetLabel, offsetSlider, LV_ALIGN_OUT_TOP_MID, 0, 0);
+            lv_obj_align(offsetLabel, offsetSlider, LV_ALIGN_OUT_TOP_RIGHT, 0, 0);
         
             /* Create a label above the slider */
         	lv_obj_t* offsetLabel2 = lv_label_create(lv_scr_act(), NULL);
@@ -262,11 +289,11 @@ void home_screen()
             
     /* Second Slider: Trigger */
     lv_obj_t * triggerSlider = lv_slider_create(lv_scr_act(), NULL);
-    lv_obj_set_pos(triggerSlider, 170, 290);                         /*Set its position*/
+    lv_obj_set_pos(triggerSlider, 170, 365);                         /*Set its position*/ // 170,290
     lv_obj_set_size(triggerSlider, 130, 30);                        /*Set its size*/
     lv_obj_set_event_cb(triggerSlider, trigger_slider_event_cb);
-    lv_slider_set_range(triggerSlider, 375, 625);
-    lv_slider_set_value(triggerSlider, 500, LV_ANIM_ON);
+    lv_slider_set_range(triggerSlider, 800, 2100);
+    lv_slider_set_value(triggerSlider, 1450, LV_ANIM_ON);
             
             /* Create a label below the slider */
             triggerLabel = lv_label_create(lv_scr_act(), NULL);
@@ -292,7 +319,7 @@ void home_screen()
     
             /* Create a label below the slider */
             horiLabel1 = lv_label_create(lv_scr_act(), NULL);
-            lv_label_set_text(horiLabel1, "500mV");
+            lv_label_set_text(horiLabel1, "500mS");
             lv_obj_set_auto_realign(horiLabel1, true);
             lv_obj_align(horiLabel1, horiSlider, LV_ALIGN_OUT_TOP_RIGHT, 0, 0);
             
@@ -306,7 +333,7 @@ void home_screen()
             
     /* Fourth Slider: Vert. Scale */
     lv_obj_t * vertSlider = lv_slider_create(lv_scr_act(), NULL);
-    lv_obj_set_pos(vertSlider, 170, 365);                         /*Set its position*/
+    lv_obj_set_pos(vertSlider, 170, 290);                         /*Set its position*/ // 170, 365
     lv_obj_set_size(vertSlider, 130, 30);                        /*Set its size*/
     lv_slider_set_value(vertSlider, 5, LV_ANIM_ON);
     lv_obj_set_event_cb(vertSlider, verti_slider_event_cb);
@@ -328,7 +355,7 @@ void home_screen()
             
     /* Fifth Slider: Horizontal Window      Control Range of Points shown */
     lv_obj_t * windowSlider = lv_slider_create(lv_scr_act(), NULL);
-    lv_obj_set_pos(windowSlider, 20, 225);                         /*Set its position*/
+    lv_obj_set_pos(windowSlider, 20, 10);                         /*Set its position 20, 225*/
     lv_obj_set_size(windowSlider, 280, 30);                        /*Set its size*/
     lv_obj_set_event_cb(windowSlider, window_slider_event_cb);
     lv_slider_set_range(windowSlider, 0, 2048);        
@@ -344,16 +371,21 @@ void home_screen()
     
     lv_obj_t * switchLabel = lv_label_create(lv_scr_act(), NULL);
 	lv_obj_set_drag(switchLabel, false);
-    lv_label_set_text(switchLabel, "On\\Off");
+    lv_label_set_text(switchLabel, "Run\\Stop");
     //lv_obj_set_pos(switchLabel, 15, 445);
     lv_obj_align(switchLabel, sw1, LV_ALIGN_OUT_TOP_MID, 0, 0);
     
     
     
     //Adding a drop down menu for the trigger slope
+    lv_obj_t * rollerLabel = lv_label_create(lv_scr_act(), NULL);
+	lv_obj_set_drag(rollerLabel, false);
+    lv_label_set_text(rollerLabel, "Trigger Settings:");
+    lv_obj_set_pos(rollerLabel, 155, 410);
+    
     lv_obj_t * roller1 = lv_roller_create(lv_scr_act(),NULL);
-    lv_roller_set_options(roller1, "Rising\n"
-                                   "Falling\n"
+    lv_roller_set_options(roller1, "Falling\n"
+                                   "Rising\n"
                                    "Threshold",
                                    LV_ROLLER_MODE_INIFINITE);
     lv_roller_set_visible_row_count(roller1, 1);
