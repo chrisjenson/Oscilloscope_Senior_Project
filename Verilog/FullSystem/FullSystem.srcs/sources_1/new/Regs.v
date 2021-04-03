@@ -52,10 +52,10 @@ module Regs(
             registers[3] <= 8'b01010101; //Version ID
             registers[4] <= 8'b01010101; //scratch R/W reg LEDs- Debug register
 
-            registers[6] <= 8'b00000010; //Trigger and Trigger slope
-            registers[7] <= 8'b00001000; //Trigger Threshold Value
+            registers[6] <= 8'b00000000; //Trigger and Trigger slope
+            registers[7] <= 8'b00000000; //Trigger Threshold Value
             registers[8] <= 8'b00000000; //Sample Decimation
-            registers[9] <= 8'b00000001; //on-bit
+            registers[9] <= 8'b00000000; //on-bit
             registers[10] <= 8'b00000000; //reset
             registers[11] <= 8'b00000000; //IRS_High and Low
             registers[12] <= 8'b00000000; //Offset
@@ -80,6 +80,7 @@ module Regs(
             end
             else if (RAMReadDone)
             begin
+                registers[9] <= 8'b00000000; //On bit
                /* registers[6] <= 8'b00000000; //Trigger and Trigger slope
                 registers[7] <= 8'b00000000; //Trigger Threshold Value
                 registers[15] <= 8'b00000000; //Triggered*/

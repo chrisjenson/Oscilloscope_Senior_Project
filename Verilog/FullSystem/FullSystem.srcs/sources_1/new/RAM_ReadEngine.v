@@ -43,7 +43,6 @@ module RAM_ReadEngine(
     
     wire FIFO_InXFC;
     assign FIFO_InXFC = FIFO_InRTS & FIFO_InRTR;
-    //DEBUG Need to implement a Ring buffer
     assign reading = !RAMReadDone & SPI_ReadCommand & onBit;
     //assign DEBUGreading = reading;
     always @(posedge clk)

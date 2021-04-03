@@ -54,7 +54,7 @@ module TriggerLogic(
             TriggerThreshold_p1 <= TriggerThreshold;
         end
     end
-    
+    //DEBUG We need to give MCU control as to when to enter WaitForTriggerState
     always @(posedge clk)
     begin
     //Determines if trigger has happened
@@ -70,9 +70,9 @@ module TriggerLogic(
             TriggeredAddress <= 0;
         end
         else
-        begin
-            if ((TriggerType_p1 != TriggerType) || (TriggerThreshold_p1 != TriggerThreshold) || (RAMReadDone)) //If a change in trigger control regs
-            begin
+        begin //Use on bit here to begin writing
+            if ((RAMReadDone)) //If a change in trigger control regs
+            begin 
                 TriggeredAddress <= 0;
                 Triggered <= 0;
             end
@@ -83,24 +83,26 @@ module TriggerLogic(
                     if (TriggerType[1:0] == 0)
                     begin 
                         //Rising
-                        if (ADC_InData_p1 < ADC_InData)
+                        if (ADC_InData > TriggerThreshold)
                         begin
-                            Triggered <= 1;
-                            TriggeredAddress <= WriteAddress;
-                        end
+                            if (ADC_InData_p1 < ADC_InData)
+                            begin
+                                Triggered <= 1;
+                                TriggeredAddress <= WriteAddress;
+                            end
+                        end                        
                     end
                     else if (TriggerType[1:0] == 1)
                     begin
                         //Falling
-                        if (ADC_InData_p1 > ADC_InData)
+                        if (ADC_InData > TriggerThreshold)
                         begin
-                            Triggered <= 1;
-                            TriggeredAddress <= WriteAddress;
+                            if (ADC_InData_p1 > ADC_InData)
+                            begin
+                                Triggered <= 1;
+                                TriggeredAddress <= WriteAddress;
+                            end
                         end
-    //                    else
-    //                    begin
-    //                        triggered <= 0;
-    //                    end
                     end
                     else if (TriggerType[1:0] == 2)
                     begin

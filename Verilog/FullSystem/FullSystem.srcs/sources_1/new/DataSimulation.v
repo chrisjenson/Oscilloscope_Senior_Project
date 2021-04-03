@@ -3,6 +3,7 @@
 module DataSimulation(
     input clk,
     input ADC_SampleClock,
+    input SimDataHigh,
     input reset,
     output reg [9:0] SimData
     );
@@ -29,7 +30,17 @@ module DataSimulation(
         begin
             if (ADC_SampleClock_posedge_pulse)
             begin
-                counter <= counter + 1;
+                //COMMENT FOR SIM
+                if (SimDataHigh)
+                begin
+                    SimData <= 150;
+                end
+                else
+                begin
+                    SimData <= 0;
+                end
+                //UNCOMMENT FOR SIM
+                /*counter <= counter + 1;
                 if (counter < 25)
                 begin
                     SimData <= 0;
@@ -42,7 +53,7 @@ module DataSimulation(
                 begin
                     SimData <= 150;
                     counter <= 0;
-                end
+                end*/
             end
         end
     end

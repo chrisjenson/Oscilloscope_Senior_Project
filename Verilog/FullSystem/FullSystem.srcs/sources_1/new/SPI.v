@@ -47,6 +47,13 @@ module SPI(
     wire sck_posedge_pulse;
     wire sck_negedge_pulse;
     
+    //State machine for on bit
+    //always@posedge
+    //Gate with regwriteenPosEdge & currentaddress == 9 (9th cycle)
+        //Gate with SpiData(0) 
+            //onbit gets 1
+        //Once done capturing from triger
+            //onbit goes to 0
     
     reg new_word_strobe;
     
@@ -119,7 +126,7 @@ module SPI(
                     3'b010: //Write- MOSI 8 bits in
                     begin
                         Reg_RdEn <= 0;
-                        Reg_WrEn <= 1;
+                        Reg_WrEn <= 1;// regWriteEnPosEdge- Special state machine 
                         Buffer_RdEn <= 0;
                         BUFFER_InAmount <= 0;
                     end

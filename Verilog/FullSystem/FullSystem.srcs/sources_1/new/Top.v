@@ -2,7 +2,6 @@
 /*
 Tasks to do:
     -Input test with DAB
-    -All control value form regsiters need to be assigned
     -Trigger logic needs to be implemented
     -Debug improvements
     -Bit selection
@@ -20,6 +19,9 @@ module Top(
     input SCLK_Raw, 
     output MISO,    //D18
     //For Debug
+    
+    input SimDataHigh,
+    output SimDataHighLED,
     input [7:0] DebugWriteRegister, //Switches
     output [7:0] DebugLEDRegister,
     output DebugRamReading, //Debug Are we reading from the RAM? Triggered and on bit and read addr < Read qty
@@ -37,7 +39,7 @@ module Top(
     output DebugSlaveSel,
     output reg reset //For debug
     );
-    
+    assign SimDataHighLED = SimDataHigh;
     //////////////////////////
     //To comment this out, uncomment input [9:0] ADC_InData and comment everything below
     //Also uncomment in constraints
@@ -47,6 +49,7 @@ module Top(
     DataSimulation u_DataSimulation(
         .ADC_SampleClock(ADC_SampleClock),
         .clk(clk),
+        .SimDataHigh(SimDataHigh),
         .reset(reset),
         .SimData(ADC_InData)
     );
