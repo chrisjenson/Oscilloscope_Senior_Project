@@ -31,6 +31,7 @@ module DataSimulation(
             if (ADC_SampleClock_posedge_pulse)
             begin
                 //COMMENT FOR SIM
+                
                 if (SimDataHigh)
                 begin
                     SimData <= 150;

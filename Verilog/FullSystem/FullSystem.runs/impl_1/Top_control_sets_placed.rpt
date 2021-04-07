@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date         : Thu Mar 18 15:12:34 2021
+| Date         : Wed Apr  7 15:42:13 2021
 | Host         : MSI running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file Top_control_sets_placed.rpt
 | Design       : Top
@@ -23,11 +23,11 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Total control sets                                       |    32 |
-|    Minimum number of control sets                        |    32 |
+| Total control sets                                       |    30 |
+|    Minimum number of control sets                        |    30 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |    62 |
+| Unused register locations in slices containing registers |    54 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -39,15 +39,15 @@ Table of Contents
 +--------------------+-------+
 |       Fanout       | Count |
 +--------------------+-------+
-| Total control sets |    32 |
-| >= 0 to < 4        |     4 |
+| Total control sets |    30 |
+| >= 0 to < 4        |     3 |
 | >= 4 to < 6        |     2 |
-| >= 6 to < 8        |     0 |
-| >= 8 to < 10       |    16 |
+| >= 6 to < 8        |     1 |
+| >= 8 to < 10       |    15 |
 | >= 10 to < 12      |     0 |
 | >= 12 to < 14      |     0 |
 | >= 14 to < 16      |     0 |
-| >= 16              |    10 |
+| >= 16              |     9 |
 +--------------------+-------+
 * Control sets can be remapped at either synth_design or opt_design
 
@@ -58,53 +58,51 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              31 |           20 |
+| No           | No                    | No                     |              30 |           18 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |              77 |           28 |
-| Yes          | No                    | No                     |              18 |            8 |
+| No           | Yes                   | No                     |              56 |           26 |
+| Yes          | No                    | No                     |              18 |            6 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |             244 |           95 |
+| Yes          | Yes                   | No                     |             210 |          109 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 4. Detailed Control Set Information
 -----------------------------------
 
-+----------------+--------------------------------------------------+-------------------------------------+------------------+----------------+--------------+
-|  Clock Signal  |                   Enable Signal                  |           Set/Reset Signal          | Slice Load Count | Bel Load Count | Bels / Slice |
-+----------------+--------------------------------------------------+-------------------------------------+------------------+----------------+--------------+
-|  clk_IBUF_BUFG | u_RAM_WriteEngine/DebugRAMFullFlag_i_1_n_0       | reset_OBUF                          |                1 |              1 |         1.00 |
-|  clk_IBUF_BUFG | u_SPI/DebugRAMReadRecieved_i_1_n_0               | reset_OBUF                          |                1 |              1 |         1.00 |
-|  clk_IBUF_BUFG | reset_OBUF                                       | u_SPI/reading                       |                1 |              1 |         1.00 |
-|  clk_IBUF_BUFG | u_SPI/MISO9_out                                  | u_SPI/new_data_strobe_i_1_n_0       |                1 |              2 |         2.00 |
-|  clk_IBUF_BUFG | u_SPI/SPI_OutSixteenCount[3]_i_1_n_0             | u_SPI/new_data_strobe_i_1_n_0       |                1 |              4 |         4.00 |
-|  clk_IBUF_BUFG | u_SPI/SPI_InInstructionSixteenCounter[3]_i_1_n_0 | u_SPI/new_data_strobe_i_1_n_0       |                1 |              4 |         4.00 |
-|  clk_IBUF_BUFG | u_SPI/new_data_strobe                            | u_SPI/new_data_strobe_i_1_n_0       |                2 |              8 |         4.00 |
-|  clk_IBUF_BUFG | u_SPI/new_instruction_strobe                     | u_SPI/new_data_strobe_i_1_n_0       |                3 |              8 |         2.67 |
-|  clk_IBUF_BUFG | u_SPI/E[0]                                       | reset_OBUF                          |                2 |              8 |         4.00 |
-|  clk_IBUF_BUFG | u_SPI/SPI_Params_reg[2]_0[0]                     | reset_OBUF                          |                4 |              8 |         2.00 |
-|  clk_IBUF_BUFG | u_SPI/SPI_Params_reg[4]_1[0]                     | reset_OBUF                          |                4 |              8 |         2.00 |
-|  clk_IBUF_BUFG | u_SPI/SPI_Params_reg[4]_6[0]                     | reset_OBUF                          |                4 |              8 |         2.00 |
-|  clk_IBUF_BUFG | u_SPI/SPI_Params_reg[4]_7[0]                     | reset_OBUF                          |                3 |              8 |         2.67 |
-|  clk_IBUF_BUFG | u_SPI/SPI_Params_reg[3]_0[0]                     | reset_OBUF                          |                6 |              8 |         1.33 |
-|  clk_IBUF_BUFG | u_SPI/SPI_Params_reg[4]_2[0]                     | reset_OBUF                          |                4 |              8 |         2.00 |
-|  clk_IBUF_BUFG | u_SPI/SPI_Params_reg[3]_2[0]                     | reset_OBUF                          |                3 |              8 |         2.67 |
-|  clk_IBUF_BUFG | u_SPI/SPI_Params_reg[3]_3[0]                     | reset_OBUF                          |                3 |              8 |         2.67 |
-|  clk_IBUF_BUFG | u_SPI/SPI_Params_reg[4]_4[0]                     | reset_OBUF                          |                2 |              8 |         4.00 |
-|  clk_IBUF_BUFG | u_SPI/SPI_Params_reg[4]_0[0]                     | reset_OBUF                          |                3 |              8 |         2.67 |
-|  clk_IBUF_BUFG | u_SPI/SPI_Params_reg[3]_1[0]                     | reset_OBUF                          |                5 |              8 |         1.60 |
-|  clk_IBUF_BUFG | u_SPI/SPI_Params_reg[4]_3[0]                     | reset_OBUF                          |                3 |              8 |         2.67 |
-|  clk_IBUF_BUFG | u_SPI/SPI_Params_reg[4]_8[0]                     | reset_OBUF                          |                3 |              8 |         2.67 |
-|  clk_IBUF_BUFG | u_SPI/SPI_Params_reg[4]_5[0]                     | reset_OBUF                          |                6 |             16 |         2.67 |
-|  clk_IBUF_BUFG | u_RAM_WriteEngine/RAMW_WriteAddr0                | reset_OBUF                          |                5 |             18 |         3.60 |
-|  clk_IBUF_BUFG | u_RAM_ReadEngine/RAMR_ReadAddr[17]_i_1_n_0       | reset_OBUF                          |                6 |             18 |         3.00 |
-|  clk_IBUF_BUFG | u_RAM_ReadEngine/readRemaining[17]_i_1_n_0       |                                     |                8 |             18 |         2.25 |
-|  clk_IBUF_BUFG | u_TriggerLogic/TriggeredAddress[17]_i_1_n_0      | reset_OBUF                          |               10 |             19 |         1.90 |
-|  clk_IBUF_BUFG | u_RAM_ReadEngine/DebugFIFOInXFC_OBUF             |                                     |                3 |             24 |         8.00 |
-|  clk_IBUF_BUFG |                                                  |                                     |               20 |             31 |         1.55 |
-|  clk_IBUF_BUFG | u_TimingGen/ADC_SampleClock_posedge_pulse        | u_DataSimulation/counter[0]_i_1_n_0 |                8 |             32 |         4.00 |
-|  clk_IBUF_BUFG |                                                  | reset_OBUF                          |               13 |             37 |         2.85 |
-|  clk_IBUF_BUFG |                                                  | u_SPI/new_data_strobe_i_1_n_0       |               15 |             40 |         2.67 |
-+----------------+--------------------------------------------------+-------------------------------------+------------------+----------------+--------------+
++----------------+--------------------------------------------------+-------------------------------+------------------+----------------+--------------+
+|  Clock Signal  |                   Enable Signal                  |        Set/Reset Signal       | Slice Load Count | Bel Load Count | Bels / Slice |
++----------------+--------------------------------------------------+-------------------------------+------------------+----------------+--------------+
+|  clk_IBUF_BUFG | reset_OBUF                                       | u_SPI/reading                 |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG | u_SPI/DebugRAMReadRecieved_i_1_n_0               | reset_OBUF                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG | u_SPI/MISO9_out                                  | u_SPI/new_data_strobe_i_1_n_0 |                1 |              2 |         2.00 |
+|  clk_IBUF_BUFG | u_SPI/SPI_InInstructionSixteenCounter[3]_i_1_n_0 | u_SPI/new_data_strobe_i_1_n_0 |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG | u_SPI/SPI_OutSixteenCount[3]_i_1_n_0             | u_SPI/new_data_strobe_i_1_n_0 |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG | u_SPI/SPI_Params_reg[2]_2[0]                     | reset_OBUF                    |                5 |              7 |         1.40 |
+|  clk_IBUF_BUFG | u_SPI/SPI_Params_reg[4]_7[0]                     | reset_OBUF                    |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG | u_SPI/SPI_Params_reg[4]_6[0]                     | reset_OBUF                    |                6 |              8 |         1.33 |
+|  clk_IBUF_BUFG | u_SPI/SPI_Params_reg[4]_5[0]                     | reset_OBUF                    |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG | u_SPI/new_instruction_strobe                     | u_SPI/new_data_strobe_i_1_n_0 |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG | u_SPI/new_data_strobe                            | u_SPI/new_data_strobe_i_1_n_0 |                5 |              8 |         1.60 |
+|  clk_IBUF_BUFG | u_SPI/reset_reg                                  | reset_OBUF                    |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG | u_SPI/SPI_Params_reg[2]_0[0]                     | reset_OBUF                    |                1 |              8 |         8.00 |
+|  clk_IBUF_BUFG | u_SPI/SPI_Params_reg[3]_2[0]                     | reset_OBUF                    |                6 |              8 |         1.33 |
+|  clk_IBUF_BUFG | u_SPI/SPI_Params_reg[4]_3[0]                     | reset_OBUF                    |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG | u_SPI/SPI_Params_reg[3]_0[0]                     | reset_OBUF                    |                6 |              8 |         1.33 |
+|  clk_IBUF_BUFG | u_SPI/SPI_Params_reg[3]_1[0]                     | reset_OBUF                    |                7 |              8 |         1.14 |
+|  clk_IBUF_BUFG | u_SPI/SPI_Params_reg[2]_1[0]                     | reset_OBUF                    |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG | u_SPI/SPI_Params_reg[4]_0[0]                     | reset_OBUF                    |                6 |              8 |         1.33 |
+|  clk_IBUF_BUFG | u_SPI/SPI_Params_reg[4]_1[0]                     | reset_OBUF                    |                7 |              8 |         1.14 |
+|  clk_IBUF_BUFG | u_SPI/SPI_Params_reg[4]_2[0]                     | reset_OBUF                    |                7 |              8 |         1.14 |
+|  clk_IBUF_BUFG |                                                  | reset_OBUF                    |               10 |             16 |         1.60 |
+|  clk_IBUF_BUFG | u_SPI/SPI_Params_reg[4]_4[0]                     | reset_OBUF                    |                7 |             16 |         2.29 |
+|  clk_IBUF_BUFG | u_RAM_WriteEngine/RAMW_WriteAddr0                | reset_OBUF                    |                5 |             18 |         3.60 |
+|  clk_IBUF_BUFG | u_RAM_ReadEngine/RAMR_ReadAddr[17]_i_1_n_0       | reset_OBUF                    |                6 |             18 |         3.00 |
+|  clk_IBUF_BUFG | u_RAM_ReadEngine/readRemaining[17]_i_1_n_0       |                               |                6 |             18 |         3.00 |
+|  clk_IBUF_BUFG | u_REGS/E[0]                                      | reset_OBUF                    |               11 |             19 |         1.73 |
+|  clk_IBUF_BUFG | u_RAM_ReadEngine/DebugFIFOInXFC_OBUF             |                               |                3 |             24 |         8.00 |
+|  clk_IBUF_BUFG |                                                  |                               |               18 |             30 |         1.67 |
+|  clk_IBUF_BUFG |                                                  | u_SPI/new_data_strobe_i_1_n_0 |               16 |             40 |         2.50 |
++----------------+--------------------------------------------------+-------------------------------+------------------+----------------+--------------+
 
 

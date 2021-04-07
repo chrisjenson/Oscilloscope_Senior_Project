@@ -25,7 +25,7 @@ module testbench();
     reg SCLK;
     reg [1:0] SCLKCount;
     
-    reg MISO;
+    wire MISO;
     reg MOSI;
     reg SlaveSel;
     
@@ -43,15 +43,22 @@ module testbench();
                 end
             end
         end
+        else
+        begin
+            SCLKCount  <= 0;
+            SCLK <= 1;
+        end
     end
     ///////////////////////////////////////////////////
-    reg [15:0] commandArray[3:0];
+    reg [15:0] commandArray[5:0];
     initial
     begin  
         commandArray[0] = 16'b0000000000000000; //Do nothing
         commandArray[1] = 16'b0100011000000000; //Write 0 to reg 6, rising edge trigger
         commandArray[2] = 16'b0100011100001111; //Write 15 to reg 7, Threshold of 15
-        commandArray[3] = 16'b0110100011111111; //cmd = Read Ram, 2048 data points
+        commandArray[3] = 16'b0100100100000001; //Write 1 to reg 9, On
+        commandArray[4] = 16'b0010111100000000; //read reg 15[1], triggered
+        commandArray[5] = 16'b0110100011111111; //cmd = Read Ram, 2048 data points
     end 
     
     reg [7:0] MCUStorage [524287:0];
@@ -94,22 +101,22 @@ module testbench();
     end
     
     reg [2:0] SPICommandIndex;
+    reg CommandDonePulse;
 
-    always @(posedge SCLK)
+
+    always @(posedge clk)
     begin
+        //Drive SPICommandIndex
         if (reset)
         begin
-            SPICommandIndex <= 0;
+            SPICommandIndex <= 1;
         end
         else
         begin 
-            case (State)
-                SSetup: 
-                begin
-                
-                end
-            
-            endcase
+            if (CommandDonePulse)
+            begin
+                SPICommandIndex <= SPICommandIndex + 1;    
+            end 
         end
     end
     
@@ -209,6 +216,30 @@ module testbench();
     reg [7:0] DataPoint;
     reg [7:0] DataPointDone;
     
+
+    
+    always @(posedge clk)
+    begin
+        if (reset)
+        begin
+            SPICounter <= 15;
+            CommandDonePulse <= 0;
+            SlaveSel <= 1;
+            #20
+            SlaveSel <= 0;
+        end
+        else
+        begin
+            if (CommandDonePulse)
+            begin
+                SlaveSel <= 1; 
+                CommandDonePulse <= 0;
+                #50
+                SlaveSel <= 0;                             
+            end
+        end
+    end    
+    
     always @(posedge SCLK)
     begin
         if (reset)
@@ -229,34 +260,22 @@ module testbench();
                     end
                     if (SPICounter == 0)
                     begin
-                        RegReadData <= RegReadArray;
-                        SlaveSel <= 1;
+                        RegReadData <= RegReadArray; //DEBUG DOES THIS GET LAST VALUE?
                     end
                 end
-                else if (SPICMD == 3'b010) //Write
-                begin
-                    if (SPICounter == 0)
-                    begin
-                        SlaveSel <= 1;
-                    end
-                end
+                
                 else if (SPICMD == 3'b011) //RAM Read
                 begin
-                    if (SPICounter == 7)
+                    if (SPICounter <= 7)
                     begin
                         DataPoint[SPICounter] <= MISO;
-                        SPICounter <= SPICounter - 1;
                     end
                     if (SPICounter == 0)
                     begin
-                        DataPointDone <= DataPoint;
-                        MCUStorage[RAMReadsRemaining] = DataPointDone;
+                        
+                        MCUStorage[RAMReadsRemaining] <= {DataPoint, MISO}; //DEBUG, WILL THIS GET LAST ONE twice????
                         SPICounter <= 7;
                         RAMReadsRemaining <= RAMReadsRemaining - 1;
-                        if (RAMReadsRemaining == 0)
-                        begin
-                            SlaveSel <= 1;
-                        end
                     end
                 end        
             end
@@ -265,7 +284,55 @@ module testbench();
                 SPICounter <= 15;
                 RAMDataPointRead <= 7;
                 RAMReadsRemaining <= RAMReadTransfers;
+                RegReadData <= 0;
+                DataPoint <= 0;
             end
+        end
+    end
+    
+    
+    always @(posedge SCLK)
+    begin
+        //Drive SlaveSel
+        if (reset)
+        begin
+            
+        end
+        else
+        begin
+            if (!SlaveSel)
+            begin
+                if (SPICMD == 3'b001) //Read
+                begin
+                    if (RegReadData == 2)//Triggered;
+                    begin
+                        //SlaveSel <= 1; //Go to next command
+                        CommandDonePulse <= 1;
+                    end
+                end     
+                else if (SPICMD == 3'b011) //Write
+                begin       
+                    if (RAMReadsRemaining == 0)
+                    begin
+                        //SlaveSel <= 1; //Next command
+                        CommandDonePulse <= 1;
+                    end
+                end
+                else if (SPICMD == 3'b010) //Write
+                begin
+                    if (SPICounter == 0)
+                    begin
+                        //SlaveSel <= 1; //Next command
+                        CommandDonePulse <= 1;
+                    end
+                end
+                else //bad command
+                begin
+                    //SlaveSel <= 1;
+                    CommandDonePulse <= 1; 
+                end 
+            end
+            
         end
     end
     
@@ -276,6 +343,7 @@ module testbench();
         .MOSI_Raw(MOSI),
         .SlaveSel(SlaveSel),
         .SCLK_Raw(SCLK),
+        .MISO(MISO),
         //ADC Interface
         //.ADC_InData(ADC_InData),
         .ADC_SampleClock(ADC_SampleClock)
