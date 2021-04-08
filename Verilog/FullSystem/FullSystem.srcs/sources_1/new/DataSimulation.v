@@ -31,7 +31,7 @@ module DataSimulation(
             if (ADC_SampleClock_posedge_pulse)
             begin
                 //COMMENT FOR SIM
-                
+                /*
                 if (SimDataHigh)
                 begin
                     SimData <= 150;
@@ -39,7 +39,7 @@ module DataSimulation(
                 else
                 begin
                     SimData <= 0;
-                end
+                end*/
                 //UNCOMMENT FOR SIM
                 /*counter <= counter + 1;
                 if (counter < 25)
@@ -55,6 +55,14 @@ module DataSimulation(
                     SimData <= 150;
                     counter <= 0;
                 end*/
+                counter <= counter + 1;
+                SimData <= 0; //counter
+                if (counter == 255)
+                begin
+                    SimData <= 0;
+                    counter <= 0;
+                end
+                
             end
         end
     end

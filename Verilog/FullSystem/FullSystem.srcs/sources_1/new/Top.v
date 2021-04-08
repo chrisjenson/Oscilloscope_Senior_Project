@@ -4,14 +4,14 @@ Tasks to do:
     -Input test with DAB
     -Trigger logic needs to be implemented
     -Debug improvements
-    -Bit selection
+    -Bit selection!!! There are issues
 */
 
 module Top(
     input clk,
     input rst_, //HIGH BY DEFAULT ON HARDWARE
     //Frontend
-    //input [9:0] ADC_InData, //Uncomment this for TB
+    //input [9:0] ADC_InData,
     output ADC_SampleClock,
     //SPI
     input MOSI_Raw, //C17
@@ -30,8 +30,10 @@ module Top(
     output DebugTriggered,
     output DebugFIFOInXFC,
     output DebugFIFOOutXFC,
-    output DebugNotSlaveSel,
     output DebugOnBit,
+    output DebugNotSlaveSel,
+    output onBit,
+    output RAMReadDone,
 
     output DebugMOSI,
     output DebugSCLK,
@@ -54,7 +56,7 @@ module Top(
         .SimData(ADC_InData)
     );
    
-    wire onBit;
+    //wire onBit;
     reg reset_p1;
     //reg reset;
     always @(posedge clk)
@@ -97,7 +99,7 @@ module Top(
     wire [7:0] TriggerType;
     wire [7:0] TriggerThreshold;
     
-    wire RAMReadDone;
+    //wire RAMReadDone;
     wire Triggered; //From triggermanagement
     wire TriggerWriteDone;
     
@@ -235,6 +237,7 @@ module Top(
         .RAMReadDone(RAMReadDone)
     );
     
+    assign DebugOnBit = onBit;
     
     Buffer_FIFO u_Buffer_FIFO(
         .FIFO_OutRTR(FIFO_OutRTR), //Input from SPI

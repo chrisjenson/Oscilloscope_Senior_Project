@@ -104,12 +104,11 @@ module testbench();
     reg CommandDonePulse;
 
 
-    always @(posedge clk)
+    always @(posedge SCLK)
     begin
         //Drive SPICommandIndex
         if (reset)
         begin
-            SPICommandIndex <= 1;
         end
         else
         begin 
@@ -216,25 +215,35 @@ module testbench();
     reg [7:0] DataPoint;
     reg [7:0] DataPointDone;
     
-
+    //wire CommandDonePulsePosEdge;
+    //wire CommandDonePulse_p1;
+    //assign CommandDonePulsePosEdge = CommandDonePulse & ~CommandDonePulse_p1;
     
-    always @(posedge clk)
+    initial
+    begin
+        
+        SPICounter <= 15;
+        CommandDonePulse <= 0;
+        SlaveSel <= 1;
+        SPICommandIndex <= 1;
+
+        #20
+        SlaveSel <= 0;
+        
+    end
+    always @(posedge SCLK)    
     begin
         if (reset)
         begin
-            SPICounter <= 15;
-            CommandDonePulse <= 0;
-            SlaveSel <= 1;
-            #20
-            SlaveSel <= 0;
+        
         end
         else
         begin
             if (CommandDonePulse)
             begin
+                
                 SlaveSel <= 1; 
-                CommandDonePulse <= 0;
-                #50
+                #500
                 SlaveSel <= 0;                             
             end
         end
@@ -248,44 +257,54 @@ module testbench();
         end
         else
         begin
-            if (!SlaveSel)
+            if (CommandDonePulse)
             begin
-                MOSI <= commandArray[SPICommandIndex][SPICounter];
-                SPICounter <= SPICounter - 1;
-                if (SPICMD == 3'b001) //Read
-                begin
-                    if (SPICounter <= 7)
-                    begin
-                        RegReadArray[SPICounter] <= MISO;
-                    end
-                    if (SPICounter == 0)
-                    begin
-                        RegReadData <= RegReadArray; //DEBUG DOES THIS GET LAST VALUE?
-                    end
-                end
-                
-                else if (SPICMD == 3'b011) //RAM Read
-                begin
-                    if (SPICounter <= 7)
-                    begin
-                        DataPoint[SPICounter] <= MISO;
-                    end
-                    if (SPICounter == 0)
-                    begin
-                        
-                        MCUStorage[RAMReadsRemaining] <= {DataPoint, MISO}; //DEBUG, WILL THIS GET LAST ONE twice????
-                        SPICounter <= 7;
-                        RAMReadsRemaining <= RAMReadsRemaining - 1;
-                    end
-                end        
-            end
-            else //SS high
-            begin
+                CommandDonePulse <= 0;
                 SPICounter <= 15;
-                RAMDataPointRead <= 7;
-                RAMReadsRemaining <= RAMReadTransfers;
-                RegReadData <= 0;
-                DataPoint <= 0;
+            end
+            else
+            begin
+                if (!SlaveSel)
+                begin
+                    MOSI <= commandArray[SPICommandIndex][SPICounter];
+                    SPICounter <= SPICounter - 1;
+                    if (SPICMD == 3'b001) //Read
+                    begin
+                        if (SPICounter <= 7)
+                        begin
+                            RegReadArray[SPICounter] <= MISO;
+                        end
+                        if (SPICounter == 0)
+                        begin
+                            RegReadData <= RegReadArray; //DEBUG DOES THIS GET LAST VALUE?
+                            SlaveSel <= 1; 
+                            #1000 SlaveSel <= 0; 
+                        end
+                    end
+                    
+                    else if (SPICMD == 3'b011) //RAM Read
+                    begin
+                        if (SPICounter <= 7)
+                        begin
+                            DataPoint[SPICounter] <= MISO;
+                        end
+                        if (SPICounter == 0)
+                        begin
+                            
+                            MCUStorage[RAMReadsRemaining] <= {DataPoint, MISO}; //DEBUG, WILL THIS GET LAST ONE twice????
+                            SPICounter <= 7;
+                            RAMReadsRemaining <= RAMReadsRemaining - 1;
+                        end
+                    end        
+                end
+                else //SS high
+                begin
+                    SPICounter <= 15;
+                    RAMDataPointRead <= 7;
+                    RAMReadsRemaining <= RAMReadTransfers;
+                    RegReadData <= 0;
+                    DataPoint <= 0;
+                end
             end
         end
     end
@@ -304,13 +323,13 @@ module testbench();
             begin
                 if (SPICMD == 3'b001) //Read
                 begin
-                    if (RegReadData == 2)//Triggered;
+                    if (RegReadData == 1)//Triggered;
                     begin
                         //SlaveSel <= 1; //Go to next command
                         CommandDonePulse <= 1;
                     end
                 end     
-                else if (SPICMD == 3'b011) //Write
+                else if (SPICMD == 3'b011) //Ram Read
                 begin       
                     if (RAMReadsRemaining == 0)
                     begin
@@ -320,7 +339,7 @@ module testbench();
                 end
                 else if (SPICMD == 3'b010) //Write
                 begin
-                    if (SPICounter == 0)
+                if (SPICounter == 0)
                     begin
                         //SlaveSel <= 1; //Next command
                         CommandDonePulse <= 1;

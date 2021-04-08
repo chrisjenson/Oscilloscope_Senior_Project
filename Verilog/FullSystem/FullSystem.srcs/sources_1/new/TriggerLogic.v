@@ -10,7 +10,7 @@ module TriggerLogic(
         
         input [7:0] TriggerType,
         input [7:0] TriggerThreshold,
-        input [7:0] ADC_InData,
+        input [9:0] ADC_InData,
 
         output reg Triggered,
         input [17:0] WriteAddress,

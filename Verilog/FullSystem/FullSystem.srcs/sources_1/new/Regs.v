@@ -70,20 +70,21 @@ module Regs(
             begin 
                 registers[Regs_Addr] <= Write_Data;
             end
-            if (Triggered == 1)
-            begin
-                registers[15][0] = 1'b1;
-            end
+            //if (Triggered == 1)
+            //begin
+            //    registers[15][0] <= 1'b1;
+            //end
             if (TriggerWriteDone == 1)
             begin
-                registers[15][1] = 1'b1;
+                registers[15][0] <= 1'b1;
             end
             else if (RAMReadDone)
             begin
                 registers[9] <= 8'b00000000; //On bit
                /* registers[6] <= 8'b00000000; //Trigger and Trigger slope
                 registers[7] <= 8'b00000000; //Trigger Threshold Value
-                registers[15] <= 8'b00000000; //Triggered*/
+                */
+                registers[15] <= 8'b00000000; //Triggered
             end
             
         end

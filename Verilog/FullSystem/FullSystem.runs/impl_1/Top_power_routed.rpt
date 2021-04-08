@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date             : Wed Apr  7 15:43:17 2021
+| Date             : Wed Apr  7 17:27:59 2021
 | Host             : MSI running 64-bit major release  (build 9200)
 | Command          : report_power -file Top_power_routed.rpt -pb Top_power_summary_routed.pb -rpx Top_power_routed.rpx
 | Design           : Top
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.117        |
+| Total On-Chip Power (W)  | 0.118        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.014        |
+| Dynamic (W)              | 0.015        |
 | Device Static (W)        | 0.103        |
 | Effective TJA (C/W)      | 4.6          |
 | Max Ambient (C)          | 84.5         |
@@ -53,18 +53,18 @@ Table of Contents
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |     0.006 |        3 |       --- |             --- |
-| Slice Logic              |    <0.001 |     1716 |       --- |             --- |
-|   LUT as Logic           |    <0.001 |      665 |     63400 |            1.05 |
-|   CARRY4                 |    <0.001 |       22 |     15850 |            0.14 |
-|   Register               |    <0.001 |      314 |    126800 |            0.25 |
+| Slice Logic              |    <0.001 |     1702 |       --- |             --- |
+|   LUT as Logic           |    <0.001 |      610 |     63400 |            0.96 |
+|   CARRY4                 |    <0.001 |       25 |     15850 |            0.16 |
+|   Register               |    <0.001 |      323 |    126800 |            0.25 |
 |   LUT as Distributed RAM |    <0.001 |       12 |     19000 |            0.06 |
-|   F7/F8 Muxes            |    <0.001 |      217 |     63400 |            0.34 |
-|   Others                 |     0.000 |      403 |       --- |             --- |
-| Signals                  |    <0.001 |     1773 |       --- |             --- |
+|   F7/F8 Muxes            |    <0.001 |      219 |     63400 |            0.35 |
+|   Others                 |     0.000 |      405 |       --- |             --- |
+| Signals                  |    <0.001 |     1731 |       --- |             --- |
 | Block RAM                |     0.004 |      128 |       135 |           94.81 |
-| I/O                      |     0.003 |       36 |       210 |           17.14 |
+| I/O                      |     0.004 |       39 |       210 |           18.57 |
 | Static Power             |     0.103 |          |           |                 |
-| Total                    |     0.117 |          |           |                 |
+| Total                    |     0.118 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -143,7 +143,7 @@ Table of Contents
 +------------------------+-----------+
 | Name                   | Power (W) |
 +------------------------+-----------+
-| Top                    |     0.014 |
+| Top                    |     0.015 |
 |   u_REGS               |     0.002 |
 |   u_SPI                |     0.001 |
 |   u_blk_mem_gen_0      |     0.006 |

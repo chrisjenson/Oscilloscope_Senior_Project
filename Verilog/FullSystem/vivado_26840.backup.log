@@ -1,0 +1,73 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Wed Apr  7 15:27:20 2021
+# Process ID: 26840
+# Current directory: D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent24096 D:\SeniorProject\Oscilloscope_Senior_Project\Verilog\FullSystem\FullSystem.xpr
+# Log file: D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/vivado.log
+# Journal file: D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2020.2/data/ip'.
+WARNING: [IP_Flow 19-2162] IP 'blk_mem_gen_0' is locked:
+* IP definition 'Block Memory Generator (8.4)' for IP 'blk_mem_gen_0' (customized with software release 2019.1) has a different revision in the IP Catalog.
+open_project: Time (s): cpu = 00:00:22 ; elapsed = 00:00:16 . Memory (MB): peak = 1000.625 ; gain = 0.000
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Wed Apr  7 15:29:04 2021] Launched synth_1...
+Run output will be captured here: D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.runs/synth_1/runme.log
+[Wed Apr  7 15:29:05 2021] Launched impl_1...
+Run output will be captured here: D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.runs/impl_1/runme.log
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Wed Apr  7 15:34:45 2021] Launched synth_1...
+Run output will be captured here: D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.runs/synth_1/runme.log
+[Wed Apr  7 15:34:45 2021] Launched impl_1...
+Run output will be captured here: D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Wed Apr  7 15:40:08 2021] Launched synth_1...
+Run output will be captured here: D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.runs/synth_1/runme.log
+[Wed Apr  7 15:40:08 2021] Launched impl_1...
+Run output will be captured here: D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Wed Apr  7 15:51:54 2021] Launched synth_1...
+Run output will be captured here: D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.runs/synth_1/runme.log
+[Wed Apr  7 15:51:54 2021] Launched impl_1...
+Run output will be captured here: D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Wed Apr  7 16:03:06 2021] Launched synth_1...
+Run output will be captured here: D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.runs/synth_1/runme.log
+[Wed Apr  7 16:03:06 2021] Launched impl_1...
+Run output will be captured here: D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+[Wed Apr  7 16:11:28 2021] Launched synth_1...
+Run output will be captured here: D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 4
+[Wed Apr  7 16:12:24 2021] Launched impl_1...
+Run output will be captured here: D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Wed Apr  7 16:15:16 2021] Launched impl_1...
+Run output will be captured here: D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Wed Apr  7 16:18:55 2021] Launched synth_1...
+Run output will be captured here: D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.runs/synth_1/runme.log
+[Wed Apr  7 16:18:55 2021] Launched impl_1...
+Run output will be captured here: D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.runs/impl_1/runme.log
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Apr  7 16:22:29 2021...

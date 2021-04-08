@@ -36,8 +36,8 @@ set_property -dict { PACKAGE_PIN V10   IOSTANDARD LVCMOS33 } [get_ports { SimDat
 
 set_property -dict { PACKAGE_PIN H17   IOSTANDARD LVCMOS33 } [get_ports { DebugNotSlaveSel }]; #IO_L18P_T2_A24_15 Sch=led[0] //DebugRegister[0] 
 set_property -dict { PACKAGE_PIN K15   IOSTANDARD LVCMOS33 } [get_ports { DebugRAMFullFlag }]; #IO_L24P_T3_RS1_15 Sch=led[1]
-#set_property -dict { PACKAGE_PIN J13   IOSTANDARD LVCMOS33 } [get_ports { DebugOnBit }]; #IO_L17N_T2_A25_15 Sch=led[2]
-#set_property -dict { PACKAGE_PIN N14   IOSTANDARD LVCMOS33 } [get_ports { DebugTriggered }]; #IO_L8P_T1_D11_14 Sch=led[3]
+#set_property -dict { PACKAGE_PIN J13   IOSTANDARD LVCMOS33 } [get_ports {  }]; #IO_L17N_T2_A25_15 Sch=led[2]
+set_property -dict { PACKAGE_PIN N14   IOSTANDARD LVCMOS33 } [get_ports { DebugRamReading }]; #IO_L8P_T1_D11_14 Sch=led[3]
 set_property -dict { PACKAGE_PIN R18   IOSTANDARD LVCMOS33 } [get_ports { DebugRAMReadRecieved }]; #IO_L7P_T1_D09_14 Sch=led[4]
 set_property -dict { PACKAGE_PIN V17   IOSTANDARD LVCMOS33 } [get_ports { SimDataHighLED }]; #IO_L18N_T2_A11_D27_14 Sch=led[5]
 #set_property -dict { PACKAGE_PIN U17   IOSTANDARD LVCMOS33 } [get_ports { DebugRegister[6] }]; #IO_L17P_T2_A14_D30_14 Sch=led[6]
@@ -52,10 +52,10 @@ set_property -dict { PACKAGE_PIN V12   IOSTANDARD LVCMOS33 } [get_ports { DebugL
 set_property -dict { PACKAGE_PIN V11   IOSTANDARD LVCMOS33 } [get_ports { DebugLEDRegister[7] }]; #IO_L21N_T3_DQS_A06_D22_14 Sch=led[15]
 
 set_property -dict { PACKAGE_PIN R12   IOSTANDARD LVCMOS33 } [get_ports { DebugTriggered }]; #IO_L5P_T0_D06_14 Sch=led16_b
-#set_property -dict { PACKAGE_PIN M16   IOSTANDARD LVCMOS33 } [get_ports {  }]; #IO_L10P_T1_D14_14 Sch=led16_g
-#set_property -dict { PACKAGE_PIN N15   IOSTANDARD LVCMOS33 } [get_ports { LED16_R }]; #IO_L11P_T1_SRCC_14 Sch=led16_r
+#set_property -dict { PACKAGE_PIN M16   IOSTANDARD LVCMOS33 } [get_ports { RAMReadDone }]; #IO_L10P_T1_D14_14 Sch=led16_g
+set_property -dict { PACKAGE_PIN N15   IOSTANDARD LVCMOS33 } [get_ports { RAMReadDone }]; #IO_L11P_T1_SRCC_14 Sch=led16_r
 #set_property -dict { PACKAGE_PIN G14   IOSTANDARD LVCMOS33 } [get_ports { DebugTriggered }]; #IO_L15N_T2_DQS_ADV_B_15 Sch=led17_b
-set_property -dict { PACKAGE_PIN R11   IOSTANDARD LVCMOS33 } [get_ports { DebugOnBit }]; #IO_0_14 Sch=led17_g
+set_property -dict { PACKAGE_PIN R11   IOSTANDARD LVCMOS33 } [get_ports { onBit }]; #IO_0_14 Sch=led17_g
 #set_property -dict { PACKAGE_PIN N16   IOSTANDARD LVCMOS33 } [get_ports { LED17_R }]; #IO_L11N_T1_SRCC_14 Sch=led17_r
 
 
@@ -121,7 +121,7 @@ set_property -dict { PACKAGE_PIN F16   IOSTANDARD LVCMOS33 } [get_ports { DebugM
 set_property -dict { PACKAGE_PIN G16   IOSTANDARD LVCMOS33 } [get_ports { DebugSCLK }]; #IO_L13N_T2_MRCC_15 Sch=jb[3]
 set_property -dict { PACKAGE_PIN H14   IOSTANDARD LVCMOS33 } [get_ports { DebugMISO }]; #IO_L15P_T2_DQS_15 Sch=jb[4]
 set_property -dict { PACKAGE_PIN E16   IOSTANDARD LVCMOS33 } [get_ports { reset }]; #IO_L11N_T1_SRCC_15 Sch=jb[7]
-#set_property -dict { PACKAGE_PIN F13   IOSTANDARD LVCMOS33 } [get_ports { DebugFlag2 }]; #IO_L5P_T0_AD9P_15 Sch=jb[8]
+set_property -dict { PACKAGE_PIN F13   IOSTANDARD LVCMOS33 } [get_ports { DebugOnBit }]; #IO_L5P_T0_AD9P_15 Sch=jb[8]
 set_property -dict { PACKAGE_PIN G13   IOSTANDARD LVCMOS33 } [get_ports { DebugFIFOInXFC }]; #IO_0_15 Sch=jb[9]
 set_property -dict { PACKAGE_PIN H16   IOSTANDARD LVCMOS33 } [get_ports { DebugFIFOOutXFC }]; #IO_L13P_T2_MRCC_15 Sch=jb[10]
 
@@ -262,16 +262,3 @@ set_property -dict { PACKAGE_PIN F3    IOSTANDARD LVCMOS33 } [get_ports { ADC_In
 #set_property -dict { PACKAGE_PIN L14   IOSTANDARD LVCMOS33 } [get_ports { QSPI_DQ[2] }]; #IO_L2P_T0_D02_14 Sch=qspi_dq[2]
 #set_property -dict { PACKAGE_PIN M14   IOSTANDARD LVCMOS33 } [get_ports { QSPI_DQ[3] }]; #IO_L2N_T0_D03_14 Sch=qspi_dq[3]
 #set_property -dict { PACKAGE_PIN L13   IOSTANDARD LVCMOS33 } [get_ports { QSPI_CSN }]; #IO_L6P_T0_FCS_B_14 Sch=qspi_csn
-
-
-
-
-
-
-
-
-
-
-
-
-

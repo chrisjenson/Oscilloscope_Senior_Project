@@ -17,12 +17,18 @@ set_property src_info {type:XDC file:1 line:23 export:INPUT save:INPUT read:READ
 set_property -dict { PACKAGE_PIN U18   IOSTANDARD LVCMOS33 } [get_ports { DebugWriteRegister[6] }]; #IO_L17N_T2_A13_D29_14 Sch=sw[6]
 set_property src_info {type:XDC file:1 line:24 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN R13   IOSTANDARD LVCMOS33 } [get_ports { DebugWriteRegister[7] }]; #IO_L5N_T0_D07_14 Sch=sw[7]
+set_property src_info {type:XDC file:1 line:32 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN V10   IOSTANDARD LVCMOS33 } [get_ports { SimDataHigh }]; #IO_L21P_T3_DQS_14 Sch=sw[15]
 set_property src_info {type:XDC file:1 line:37 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN H17   IOSTANDARD LVCMOS33 } [get_ports { DebugNotSlaveSel }]; #IO_L18P_T2_A24_15 Sch=led[0] //DebugRegister[0]
 set_property src_info {type:XDC file:1 line:38 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN K15   IOSTANDARD LVCMOS33 } [get_ports { DebugRAMFullFlag }]; #IO_L24P_T3_RS1_15 Sch=led[1]
+set_property src_info {type:XDC file:1 line:40 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN N14   IOSTANDARD LVCMOS33 } [get_ports { DebugRamReading }]; #IO_L8P_T1_D11_14 Sch=led[3]
 set_property src_info {type:XDC file:1 line:41 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN R18   IOSTANDARD LVCMOS33 } [get_ports { DebugRAMReadRecieved }]; #IO_L7P_T1_D09_14 Sch=led[4]
+set_property src_info {type:XDC file:1 line:42 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN V17   IOSTANDARD LVCMOS33 } [get_ports { SimDataHighLED }]; #IO_L18N_T2_A11_D27_14 Sch=led[5]
 set_property src_info {type:XDC file:1 line:45 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN V16   IOSTANDARD LVCMOS33 } [get_ports { DebugLEDRegister[0] }]; #IO_L16N_T2_A15_D31_14 Sch=led[8]
 set_property src_info {type:XDC file:1 line:46 export:INPUT save:INPUT read:READ} [current_design]
@@ -42,7 +48,7 @@ set_property -dict { PACKAGE_PIN V11   IOSTANDARD LVCMOS33 } [get_ports { DebugL
 set_property src_info {type:XDC file:1 line:54 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN R12   IOSTANDARD LVCMOS33 } [get_ports { DebugTriggered }]; #IO_L5P_T0_D06_14 Sch=led16_b
 set_property src_info {type:XDC file:1 line:58 export:INPUT save:INPUT read:READ} [current_design]
-set_property -dict { PACKAGE_PIN R11   IOSTANDARD LVCMOS33 } [get_ports { DebugOnBit }]; #IO_0_14 Sch=led17_g
+set_property -dict { PACKAGE_PIN R11   IOSTANDARD LVCMOS33 } [get_ports { onBit }]; #IO_0_14 Sch=led17_g
 set_property src_info {type:XDC file:1 line:86 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN C12   IOSTANDARD LVCMOS33 } [get_ports { rst_ }]; #IO_L3P_T0_DQS_AD1P_15 Sch=cpu_resetn
 set_property src_info {type:XDC file:1 line:107 export:INPUT save:INPUT read:READ} [current_design]
@@ -63,6 +69,8 @@ set_property src_info {type:XDC file:1 line:122 export:INPUT save:INPUT read:REA
 set_property -dict { PACKAGE_PIN H14   IOSTANDARD LVCMOS33 } [get_ports { DebugMISO }]; #IO_L15P_T2_DQS_15 Sch=jb[4]
 set_property src_info {type:XDC file:1 line:123 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN E16   IOSTANDARD LVCMOS33 } [get_ports { reset }]; #IO_L11N_T1_SRCC_15 Sch=jb[7]
+set_property src_info {type:XDC file:1 line:124 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN F13   IOSTANDARD LVCMOS33 } [get_ports { DebugOnBit }]; #IO_L5P_T0_AD9P_15 Sch=jb[8]
 set_property src_info {type:XDC file:1 line:125 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN G13   IOSTANDARD LVCMOS33 } [get_ports { DebugFIFOInXFC }]; #IO_0_15 Sch=jb[9]
 set_property src_info {type:XDC file:1 line:126 export:INPUT save:INPUT read:READ} [current_design]
