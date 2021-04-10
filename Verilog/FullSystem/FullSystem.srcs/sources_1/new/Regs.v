@@ -77,10 +77,11 @@ module Regs(
             if (TriggerWriteDone == 1)
             begin
                 registers[15][0] <= 1'b1;
+                registers[9] <= 8'b00000000; //On bit
             end
             else if (RAMReadDone)
             begin
-                registers[9] <= 8'b00000000; //On bit
+                
                /* registers[6] <= 8'b00000000; //Trigger and Trigger slope
                 registers[7] <= 8'b00000000; //Trigger Threshold Value
                 */

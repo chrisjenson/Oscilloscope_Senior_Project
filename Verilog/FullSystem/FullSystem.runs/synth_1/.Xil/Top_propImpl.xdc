@@ -47,6 +47,8 @@ set_property src_info {type:XDC file:1 line:52 export:INPUT save:INPUT read:READ
 set_property -dict { PACKAGE_PIN V11   IOSTANDARD LVCMOS33 } [get_ports { DebugLEDRegister[7] }]; #IO_L21N_T3_DQS_A06_D22_14 Sch=led[15]
 set_property src_info {type:XDC file:1 line:54 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN R12   IOSTANDARD LVCMOS33 } [get_ports { DebugTriggered }]; #IO_L5P_T0_D06_14 Sch=led16_b
+set_property src_info {type:XDC file:1 line:56 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN N15   IOSTANDARD LVCMOS33 } [get_ports { RAMReadDone }]; #IO_L11P_T1_SRCC_14 Sch=led16_r
 set_property src_info {type:XDC file:1 line:58 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN R11   IOSTANDARD LVCMOS33 } [get_ports { onBit }]; #IO_0_14 Sch=led17_g
 set_property src_info {type:XDC file:1 line:86 export:INPUT save:INPUT read:READ} [current_design]

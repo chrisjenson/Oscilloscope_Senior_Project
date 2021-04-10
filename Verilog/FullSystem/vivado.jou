@@ -2,10 +2,10 @@
 # Vivado v2020.2 (64-bit)
 # SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Wed Apr  7 18:08:48 2021
-# Process ID: 30840
+# Start of session at: Fri Apr  9 21:21:03 2021
+# Process ID: 30648
 # Current directory: D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent31040 D:\SeniorProject\Oscilloscope_Senior_Project\Verilog\FullSystem\FullSystem.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent22008 D:\SeniorProject\Oscilloscope_Senior_Project\Verilog\FullSystem\FullSystem.xpr
 # Log file: D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/vivado.log
 # Journal file: D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem\vivado.jou
 #-----------------------------------------------------------
@@ -15,67 +15,4 @@ update_compile_order -fileset sources_1
 launch_simulation
 open_wave_config D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/testbench_behav.wcfg
 source testbench.tcl
-close_sim
-launch_simulation
-open_wave_config D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/testbench_behav.wcfg
-source testbench.tcl
-update_compile_order -fileset sim_1
-launch_simulation
-launch_simulation
-launch_simulation
-launch_simulation
-update_compile_order -fileset sim_1
-close_sim
-launch_simulation
-open_wave_config D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/testbench_behav.wcfg
-source testbench.tcl
-close_sim
-launch_simulation
-open_wave_config D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/testbench_behav.wcfg
-source testbench.tcl
-close_sim
-launch_simulation
-open_wave_config D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/testbench_behav.wcfg
-source testbench.tcl
-close_sim
-launch_simulation
-open_wave_config D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/testbench_behav.wcfg
-source testbench.tcl
-close_sim
-launch_simulation
-open_wave_config D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/testbench_behav.wcfg
-source testbench.tcl
-close_sim
-launch_simulation
-open_wave_config D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/testbench_behav.wcfg
-source testbench.tcl
-close_sim
-launch_simulation
-open_wave_config D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/testbench_behav.wcfg
-source testbench.tcl
-run 25000 ns
-run 250000 ns
-close_sim
-launch_simulation
-open_wave_config D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/testbench_behav.wcfg
-source testbench.tcl
-run 250000 ns
-run 250 ms
-run 250 ms
-close_sim
-launch_simulation
-open_wave_config D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/testbench_behav.wcfg
-source testbench.tcl
-run 250 ms
-run 2.50 ms
-close_sim
-launch_simulation
-open_wave_config D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/testbench_behav.wcfg
-source testbench.tcl
-run 2.50 ms
-close_sim
-launch_simulation
-open_wave_config D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/testbench_behav.wcfg
-source testbench.tcl
-run 2.50 ms
-run 2.50 ms
+save_wave_config {D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/testbench_behav.wcfg}

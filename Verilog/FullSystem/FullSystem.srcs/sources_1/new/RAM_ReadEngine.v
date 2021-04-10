@@ -11,7 +11,7 @@ module RAM_ReadEngine(
     input [17:0] RAMW_WriteAddr,
     input SlaveSel,
     
-    input onBit,
+    //input onBit,
     //FIFO
     output reading,
     output reg DEBUGreading,
@@ -26,6 +26,7 @@ module RAM_ReadEngine(
     reg [17:0] readRemaining;
     ///////////////////////////////////////////////////
     wire SPI_ReadCommandPosEdgePulse;
+    wire SPI_ReadCommandNegEdgePulse;
     wire Triggered_PosEdgePulse;
     reg SPI_ReadCommand_p1;
     reg Triggered_p1;
@@ -38,12 +39,13 @@ module RAM_ReadEngine(
     
     assign Triggered_PosEdgePulse = Triggered & ~Triggered_p1;
     assign SPI_ReadCommandPosEdgePulse = SPI_ReadCommand & ~SPI_ReadCommand_p1;
+    assign SPI_ReadCommandNegEdgePulse = ~SPI_ReadCommand & SPI_ReadCommand_p1;
     ///////////////////////////////////////////////////
     
     
     wire FIFO_InXFC;
     assign FIFO_InXFC = FIFO_InRTS & FIFO_InRTR;
-    assign reading = !RAMReadDone & SPI_ReadCommand & onBit;
+    assign reading = !RAMReadDone & SPI_ReadCommand; //&& onBit
     //assign DEBUGreading = reading;
     always @(posedge clk)
     begin
@@ -122,6 +124,10 @@ module RAM_ReadEngine(
                 begin
                     readRemaining <= readRemaining - 1;
                 end
+            end
+            if (SPI_ReadCommandNegEdgePulse)
+            begin
+                RAMReadDone <= 0;
             end
         end
     end

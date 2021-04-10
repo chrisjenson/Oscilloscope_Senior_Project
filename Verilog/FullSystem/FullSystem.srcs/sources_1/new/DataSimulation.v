@@ -56,7 +56,7 @@ module DataSimulation(
                     counter <= 0;
                 end*/
                 counter <= counter + 1;
-                SimData <= 0; //counter
+                SimData <= counter;
                 if (counter == 255)
                 begin
                     SimData <= 0;

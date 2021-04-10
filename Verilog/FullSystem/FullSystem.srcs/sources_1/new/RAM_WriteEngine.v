@@ -75,8 +75,8 @@ module RAM_WriteEngine(
     end
     //////////////////////////////////////////////////////////////    
     //Write Section
-    assign RAMW_En = onBit & ADC_SampleClock_secondposedge_pulse && !TriggerWriteDone && !RingBufferInvalid; //DEBUG:Need to make this its own process and delay by one word..
-    
+    assign RAMW_En = onBit & ADC_SampleClock_secondposedge_pulse  && !RingBufferInvalid; //DEBUG:Need to make this its own process and delay by one word..
+    //!TriggerWriteDone^
     always @(posedge clk)
     begin
     //Signal Ram to write
@@ -100,6 +100,9 @@ module RAM_WriteEngine(
     //////////////////////////////////////////////
     //Control TriggerWriteDone
     //Debug: Always @ (*)?????
+    wire [17:0] TriggerStopAddr;
+    assign TriggerStopAddr = TriggeredAddress + 262143;
+    
     always @(posedge clk)
     begin
         if (reset)
@@ -110,7 +113,7 @@ module RAM_WriteEngine(
         begin
             if (Triggered)
                 begin
-                if (RAMW_WriteAddr == (TriggeredAddress + 262144)) //262144
+                if (RAMW_WriteAddr == TriggerStopAddr)
                 begin
                     TriggerWriteDone <= 1;
                 end
@@ -119,6 +122,10 @@ module RAM_WriteEngine(
                 //Get ready  for next trigger
                     TriggerWriteDone <= 0;
                 end
+            end
+            else
+            begin
+                TriggerWriteDone <= 0;
             end
         end
     end

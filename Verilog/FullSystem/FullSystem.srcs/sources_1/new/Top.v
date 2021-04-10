@@ -156,7 +156,7 @@ module Top(
         .SPI_ReadCommand(SPI_ReadCommand), //Input, gates read
         .SlaveSel(SlaveSel),
         .reading(reading),
-        .onBit(onBit),
+        //.onBit(onBit),
         //FIFO
         .FIFO_InRTS(FIFO_InRTS),
         .FIFO_InRTR(FIFO_InRTR),

@@ -95,7 +95,7 @@ module TriggerLogic(
                     else if (TriggerType[1:0] == 1)
                     begin
                         //Falling
-                        if (ADC_InData > TriggerThreshold)
+                        if ((ADC_InData > TriggerThreshold) || (ADC_InData_p1 > TriggerThreshold))
                         begin
                             if (ADC_InData_p1 > ADC_InData)
                             begin

@@ -50,15 +50,19 @@ module testbench();
         end
     end
     ///////////////////////////////////////////////////
-    reg [15:0] commandArray[5:0];
+    reg [15:0] commandArray[9:0];
     initial
     begin  
         commandArray[0] = 16'b0000000000000000; //Do nothing
-        commandArray[1] = 16'b0100011000000000; //Write 0 to reg 6, rising edge trigger
+        commandArray[1] = 16'b0100011000000001; //Write 1 to reg 6, falling edge trigger
         commandArray[2] = 16'b0100011100001111; //Write 15 to reg 7, Threshold of 15
         commandArray[3] = 16'b0100100100000001; //Write 1 to reg 9, On
         commandArray[4] = 16'b0010111100000000; //read reg 15[1], triggered
         commandArray[5] = 16'b0110100011111111; //cmd = Read Ram, 2048 data points
+        commandArray[6] = 16'b0100011100001111; //Write 15 to reg 7, Threshold of 15
+        commandArray[7] = 16'b0100100100000001; //Write 1 to reg 9, On
+        commandArray[8] = 16'b0010111100000000; //read reg 15[1], triggered
+        commandArray[9] = 16'b0110100011111111; //cmd = Read Ram, 2048 data points
     end 
     
     reg [7:0] MCUStorage [524287:0];
@@ -100,7 +104,7 @@ module testbench();
         end
     end
     
-    reg [2:0] SPICommandIndex;
+    reg [63:0] SPICommandIndex;
     reg CommandDonePulse;
 
 
@@ -214,6 +218,9 @@ module testbench();
     reg [63:0] RAMReadsRemaining;
     reg [7:0] DataPoint;
     reg [7:0] DataPointDone;
+    reg [2:0] RAMReadCounter;
+    reg RAMReadCommand;
+
     
     //wire CommandDonePulsePosEdge;
     //wire CommandDonePulse_p1;
@@ -221,11 +228,12 @@ module testbench();
     
     initial
     begin
-        
+        RAMReadCommand <= 0;
         SPICounter <= 15;
         CommandDonePulse <= 0;
         SlaveSel <= 1;
         SPICommandIndex <= 1;
+        RAMReadCounter <= 7;
 
         #20
         SlaveSel <= 0;
@@ -248,6 +256,26 @@ module testbench();
             end
         end
     end    
+    
+    reg RAMReadCommand_p1;
+    wire RAMReadCommandPosEdgePulse;
+    always @(posedge clk)
+    begin
+        RAMReadCommand_p1 <= RAMReadCommand;
+        if (RAMReadCommandPosEdgePulse)
+        begin
+            RAMReadsRemaining <= RAMReadTransfers;
+        end
+        if (SPICMD == 3'b011)
+        begin
+            RAMReadCommand <= 1;
+        end
+        else
+        begin
+            RAMReadCommand <= 0;
+        end
+    end    
+    assign RAMReadCommandPosEdgePulse = !RAMReadCommand_p1 && RAMReadCommand;
     
     always @(posedge SCLK)
     begin
@@ -278,32 +306,43 @@ module testbench();
                         begin
                             RegReadData <= RegReadArray; //DEBUG DOES THIS GET LAST VALUE?
                             SlaveSel <= 1; 
-                            #1000 SlaveSel <= 0; 
+                            #30 SlaveSel <= 0; 
+                        end
+                        else
+                        begin
+                            RegReadData <= 0;
                         end
                     end
-                    
-                    else if (SPICMD == 3'b011) //RAM Read
+                    else
                     begin
-                        if (SPICounter <= 7)
+                        RegReadArray <= 0;
+                        RegReadData <= 0;
+                    end
+                    
+                    if (SPICMD == 3'b011) //RAM Read
+                    begin
+                        RAMReadCounter <= RAMReadCounter - 1;
+                        DataPoint[RAMReadCounter] <= MISO;
+                        
+                        if (RAMReadCounter == 0)
                         begin
-                            DataPoint[SPICounter] <= MISO;
-                        end
-                        if (SPICounter == 0)
-                        begin
-                            
                             MCUStorage[RAMReadsRemaining] <= {DataPoint, MISO}; //DEBUG, WILL THIS GET LAST ONE twice????
-                            SPICounter <= 7;
+                            DataPointDone <= {DataPoint, MISO}; 
+                            RAMReadCounter <= 7;
                             RAMReadsRemaining <= RAMReadsRemaining - 1;
                         end
-                    end        
+                    end
+                           
                 end
                 else //SS high
                 begin
                     SPICounter <= 15;
                     RAMDataPointRead <= 7;
-                    RAMReadsRemaining <= RAMReadTransfers;
+                    RegReadArray <= 0;
+                    //
                     RegReadData <= 0;
                     DataPoint <= 0;
+                    //CommandDonePulse <= 0;
                 end
             end
         end
@@ -321,35 +360,38 @@ module testbench();
         begin
             if (!SlaveSel)
             begin
-                if (SPICMD == 3'b001) //Read
+                if (!CommandDonePulse)
                 begin
-                    if (RegReadData == 1)//Triggered;
+                    if (SPICMD == 3'b001) //Read
                     begin
-                        //SlaveSel <= 1; //Go to next command
-                        CommandDonePulse <= 1;
+                        if (RegReadData == 1)//Triggered;
+                        begin
+                            //SlaveSel <= 1; //Go to next command
+                            CommandDonePulse <= 1;
+                        end
+                    end     
+                    else if (SPICMD == 3'b011) //Ram Read
+                    begin       
+                        if (RAMReadsRemaining == 0)
+                        begin
+                            //SlaveSel <= 1; //Next command
+                            CommandDonePulse <= 1;
+                        end
                     end
-                end     
-                else if (SPICMD == 3'b011) //Ram Read
-                begin       
-                    if (RAMReadsRemaining == 0)
+                    else if (SPICMD == 3'b010) //Write
                     begin
-                        //SlaveSel <= 1; //Next command
-                        CommandDonePulse <= 1;
+                    if (SPICounter == 0)
+                        begin
+                            //SlaveSel <= 1; //Next command
+                            CommandDonePulse <= 1;
+                        end
                     end
-                end
-                else if (SPICMD == 3'b010) //Write
-                begin
-                if (SPICounter == 0)
+                    else //bad command
                     begin
-                        //SlaveSel <= 1; //Next command
-                        CommandDonePulse <= 1;
-                    end
-                end
-                else //bad command
-                begin
-                    //SlaveSel <= 1;
-                    CommandDonePulse <= 1; 
-                end 
+                        //SlaveSel <= 1;
+                        CommandDonePulse <= 1; 
+                    end 
+                end                
             end
             
         end
