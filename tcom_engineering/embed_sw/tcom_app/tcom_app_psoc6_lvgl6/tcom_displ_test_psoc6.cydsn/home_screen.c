@@ -116,8 +116,10 @@ static void chart_actions()
     double voltage = 0; //convert the code from brian to voltage using:
     //voltage = ((code*0.5)/128)+1.45
 
-    double triggerTemp = cm4.Trigger/1000;
-    cm4.TriggerCode = (((triggerTemp-1.45)/0.5)*128); //convert the voltage from trigger to code using:
+    double triggerTemp = cm4.Trigger/100;
+    cm4.signedTriggerCode = (((triggerTemp-1.45)/0.5)*128); //convert the voltage from trigger to code using:
+    cm4.TriggerCode = 0b00000000;
+    cm4.TriggerCode = cm4.TriggerCode | cm4.signedTriggerCode;
     //triggerCode = ((voltage -1.45)/0.5)*128
 
     //draw the series
@@ -138,10 +140,10 @@ static void roller1_event(lv_obj_t * obj, lv_event_t event)
         char buf[32];
         lv_roller_get_selected_str(obj, buf, sizeof(buf));
         
-        if(strcmp("Falling", buf) == 0){
+        if(strcmp("Rising", buf) == 0){
             cm4.TriggerSlope = 0b00000000;
         }
-        else if(strcmp("Rising", buf) == 0){
+        else if(strcmp("Falling", buf) == 0){
             cm4.TriggerSlope = 0b00000001;
         }
         else if(strcmp("Threshold", buf) == 0){
@@ -292,12 +294,12 @@ void home_screen()
     lv_obj_set_pos(triggerSlider, 170, 365);                         /*Set its position*/ // 170,290
     lv_obj_set_size(triggerSlider, 130, 30);                        /*Set its size*/
     lv_obj_set_event_cb(triggerSlider, trigger_slider_event_cb);
-    lv_slider_set_range(triggerSlider, 800, 2100);
-    lv_slider_set_value(triggerSlider, 1450, LV_ANIM_ON);
+    lv_slider_set_range(triggerSlider, 900, 1900);
+    lv_slider_set_value(triggerSlider, 1400, LV_ANIM_ON);
             
             /* Create a label below the slider */
             triggerLabel = lv_label_create(lv_scr_act(), NULL);
-            lv_label_set_text(triggerLabel, "1450mV");
+            lv_label_set_text(triggerLabel, "1400mV");
             lv_obj_set_auto_realign(triggerLabel, true);
             lv_obj_align(triggerLabel, triggerSlider, LV_ALIGN_OUT_TOP_RIGHT, 0, 0);
             
@@ -384,8 +386,8 @@ void home_screen()
     lv_obj_set_pos(rollerLabel, 155, 410);
     
     lv_obj_t * roller1 = lv_roller_create(lv_scr_act(),NULL);
-    lv_roller_set_options(roller1, "Falling\n"
-                                   "Rising\n"
+    lv_roller_set_options(roller1, "Rising\n"
+                                   "Falling\n"
                                    "Threshold",
                                    LV_ROLLER_MODE_INIFINITE);
     lv_roller_set_visible_row_count(roller1, 1);
