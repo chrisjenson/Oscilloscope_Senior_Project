@@ -109,13 +109,15 @@ main( void )
     //------------------START SPI CODE---------------------------------
     //construct write commmand for updating trigger in register 7
     //cm4.TxBuffer[0] = 0b0100011100000000 | cm4.TriggerCode;     //010 00111 00000000
-    cm4.TxBuffer[0] = 0b0100011100001000;     //010 00111 00000000
+    cm4.TxBuffer[0] = 0b0100011100000111;     //010 00111 00000000
     
     //construct write commmand for updating trigger slope in register 6
     cm4.TxBuffer[1] = 0b0100011000000000 | cm4.TriggerSlope;     //010 00110 00000000
-
+    //cm4.TxBuffer[1] = 0b0100011100000111;
+    
     //construct write commmand for updating on-bit in register 9
     cm4.TxBuffer[2] = 0b0100100100000000 | cm4.onBit;     //010 01001 00000000
+    //cm4.TxBuffer[2] = 0b0100011100001000;
     
     //construct read commmand for checking a trigger event in register 15
     cm4.TxBuffer[3] = 0b0010111100000000;     //001 01111 00000000
@@ -144,11 +146,11 @@ main( void )
                 while(!(Cy_SCB_SPI_GetTxFifoStatus(SPIM_HW) & CY_SCB_SPI_TX_EMPTY)){}
                 while(!(Cy_SCB_SPI_GetSlaveMasterStatus(SPIM_HW) & CY_SCB_SPI_MASTER_DONE)){}
 
+                ss_state = !ss_state;  Cy_GPIO_Write(SEL_PIN_PORT, SEL_PIN_NUM, ss_state);
+                
                 //Check the result of the second command which checks for trigger from FPGA
                 while(!(Cy_SCB_SPI_GetRxFifoStatus(SPIM_HW) & CY_SCB_SPI_RX_NOT_EMPTY)){}
                 cm4.TriggerEvent = Cy_SCB_SPI_Read(SPIM_HW);      
-                    
-                ss_state = !ss_state;  Cy_GPIO_Write(SEL_PIN_PORT, SEL_PIN_NUM, ss_state);
             }
         }
         else{
@@ -158,15 +160,20 @@ main( void )
             Cy_SCB_SPI_ClearSlaveMasterStatus(SPIM_HW, CY_SCB_SPI_MASTER_DONE);
             Cy_SCB_SPI_Write(SPIM_HW, cm4.TxBuffer[i]);
             while(!(Cy_SCB_SPI_GetTxFifoStatus(SPIM_HW) & CY_SCB_SPI_TX_EMPTY)){}
-            while(!(Cy_SCB_SPI_GetSlaveMasterStatus(SPIM_HW) & CY_SCB_SPI_MASTER_DONE)){}
-
+            while(!(Cy_SCB_SPI_GetSlaveMasterStatus(SPIM_HW) & CY_SCB_SPI_MASTER_DONE)){};
+            
             // Clear out the RX FIFO
             while((Cy_SCB_SPI_GetNumInRxFifo(SPIM_HW) != 1)){}
             Cy_SCB_SPI_ReadArray(SPIM_HW, cm4.RxBuffer, 1);
+            
+            if((cm4.TxBuffer[i] >> 13) != 0b011){
+                ss_state = !ss_state;  Cy_GPIO_Write(SEL_PIN_PORT, SEL_PIN_NUM, ss_state);
+            }
 
             //1024/NUMBER OF BURSTS, total number of samples divided by the size of bursts
             //1024 because we are reading in  2 samples every time
-            for(uint32_t burst = 0; burst < 1024/NUM_TO_WRITE; burst++){
+            if((cm4.TxBuffer[i] >> 13) == 0b011){
+                for(uint32_t burst = 0; burst < 1024/NUM_TO_WRITE; burst++){
 
                 // Dummy write, to read data from FPGA
                 Cy_SCB_SPI_ClearSlaveMasterStatus(SPIM_HW, CY_SCB_SPI_MASTER_DONE);
@@ -179,7 +186,7 @@ main( void )
                 Cy_SCB_SPI_ReadArray(SPIM_HW, cm4.RxBuffer, NUM_TO_WRITE);
 
                 //Check if a ram read was performed so we can check if data has to be parsed
-                if((cm4.TxBuffer[i] >> 13) == 0b011){
+                
                     //for loop to split the read in data and then store appropriately in cm4.RamReadBuffer
                     //NUM_TO_WRITE*2 because we are actually reading in 2 data points per buffer space
                     for(uint16_t count = 0; count < NUM_TO_WRITE; count++){
@@ -194,8 +201,9 @@ main( void )
                         cm4.TriggerEvent = 0; //lower the flag for next time
                     }
                 }
+                ss_state = !ss_state;  Cy_GPIO_Write(SEL_PIN_PORT, SEL_PIN_NUM, ss_state);
             }
-            ss_state = !ss_state;  Cy_GPIO_Write(SEL_PIN_PORT, SEL_PIN_NUM, ss_state);
+            //ss_state = !ss_state;  Cy_GPIO_Write(SEL_PIN_PORT, SEL_PIN_NUM, ss_state);
         }    
     //Reassert slave select
     Cy_GPIO_Write(SEL_PIN_PORT, SEL_PIN_NUM, 1);
