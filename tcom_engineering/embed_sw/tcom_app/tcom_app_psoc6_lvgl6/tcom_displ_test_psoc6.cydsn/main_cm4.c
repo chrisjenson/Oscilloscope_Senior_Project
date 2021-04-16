@@ -29,11 +29,27 @@ void Interrupt_Handler_DISP_TICK(void)
     DISP_TICK_TIMER_ClearInterrupt(CY_TCPWM_INT_ON_TC);
 }
 
+void update_globalStruct(void){
+    //construct write commmand for updating trigger in register 7
+    cm4.TxBuffer[0] = 0b0100011100000000 | cm4.TriggerCode;     //010 00111 00000000
+    
+    //construct write commmand for updating trigger slope in register 6
+    cm4.TxBuffer[1] = 0b0100011000000000 | cm4.TriggerSlope;     //010 00110 00000000
+    
+    //construct write commmand for updating on-bit in register 9
+    cm4.TxBuffer[2] = 0b0100100100000000 | cm4.onBit;     //010 01001 00000000
+    
+    //construct read commmand for checking a trigger event in register 15
+    cm4.TxBuffer[3] = 0b0010111100000000;     //001 01111 00000000
+    
+    //Send a read ram command to read 1024x2 samples 
+    cm4.TxBuffer[4] = 0b0110100000000000;  //011 01001 00000000
+}
+
 extern cy_stc_scb_i2c_context_t I2C_MASTER_context;
 
 
-int
-main( void )
+int main( void )
 {
     GPIO_PRT_Type   *port_addr;
     
@@ -82,7 +98,7 @@ main( void )
     // P6_2 (Backlight control)
     CY_SET_REG32(&port_addr->OUT, _CLR_SET_FLD32U(port_addr->OUT, GPIO_PRT_OUT_OUT2, 1u));
     
-    Cy_GPIO_Write(SEL_PIN_PORT, SEL_PIN_NUM, 1);
+    Cy_GPIO_Write(SEL_PIN_PORT, SEL_PIN_NUM, 1);    //Drive slave select high at start of application
     
     // INITIALIZE THE STRUCT VALUES
     //struct SPI_parameters cm4;
@@ -94,37 +110,19 @@ main( void )
     cm4.TriggerCode = 0b00001101;       //default trigger of 1500mV
     cm4.TriggerSlope = 0b00000000;
     cm4.TriggerEvent = 0b00000000;
-    cm4.SampleRate = 0b00000000;
     cm4.onBit = 0b00000000;
     cm4.Reset = 0b00000000;
-    cm4.IRS = 0b00000000;
     cm4.Offset = 0b00000000;
     cm4.Gain = 0b00000000;       //goes to Shannon
     cm4.HoriScale = 0b00000111;//default 7 for 280/40 
     cm4.VertScale = 0b00000101;//default 5 for 200/40
     cm4.onBit = 0b00000001;
     cm4.windowPos = 1024;
-
     
     //------------------START SPI CODE---------------------------------
-    //construct write commmand for updating trigger in register 7
-    cm4.TxBuffer[0] = 0b0100011100000000 | cm4.TriggerCode;     //010 00111 00000000
-    
-    //construct write commmand for updating trigger slope in register 6
-    cm4.TxBuffer[1] = 0b0100011000000000 | cm4.TriggerSlope;     //010 00110 00000000
-    
-    //construct write commmand for updating on-bit in register 9
-    cm4.TxBuffer[2] = 0b0100100100000000 | cm4.onBit;     //010 01001 00000000
-    
-    //construct read commmand for checking a trigger event in register 15
-    cm4.TxBuffer[3] = 0b0010111100000000;     //001 01111 00000000
-    
-    //Send a read ram command to read 1024x2 samples 
-    cm4.TxBuffer[4] = 0b0110100000000000;  //011 01001 00000000
-    
     uint32_t NUM_TO_WRITE = 32; 
-    int ss_state = 1;
     uint16_t bufferIndex = 0; 
+    int ss_state = 1; 
     
     //loop to send each command in the txBuffer
     for(int i = 0; i < 5; ++i){ 
@@ -133,6 +131,7 @@ main( void )
             //Read onbit from FPGA until there is a trigger event
             case 3: 
                 while(cm4.TriggerEvent != 0b00000001){
+                    update_globalStruct(); //update commands with values from the global struct
                     ss_state = !ss_state;  Cy_GPIO_Write(SEL_PIN_PORT, SEL_PIN_NUM, ss_state);  //Set slave select low for the commands
 
                     Cy_SCB_SPI_ClearSlaveMasterStatus(SPIM_HW, CY_SCB_SPI_MASTER_DONE);
@@ -140,7 +139,7 @@ main( void )
                     while(!(Cy_SCB_SPI_GetTxFifoStatus(SPIM_HW) & CY_SCB_SPI_TX_EMPTY)){}
                     while(!(Cy_SCB_SPI_GetSlaveMasterStatus(SPIM_HW) & CY_SCB_SPI_MASTER_DONE)){}
 
-                    ss_state = !ss_state;  Cy_GPIO_Write(SEL_PIN_PORT, SEL_PIN_NUM, ss_state);  //Set slave select low for the commands
+                    ss_state = !ss_state;  Cy_GPIO_Write(SEL_PIN_PORT, SEL_PIN_NUM, ss_state);  //Set slave select high for the next command
                     
                     //Check the result of the second command which checks for trigger from FPGA
                     while(!(Cy_SCB_SPI_GetRxFifoStatus(SPIM_HW) & CY_SCB_SPI_RX_NOT_EMPTY)){}
@@ -150,6 +149,7 @@ main( void )
             
             //performing a RAM READ
             case 4:     
+                update_globalStruct(); //update commands with values from the global struct
                 ss_state = !ss_state;  Cy_GPIO_Write(SEL_PIN_PORT, SEL_PIN_NUM, ss_state);  //Set slave select low for the commands
 
                 //send the command
@@ -190,11 +190,12 @@ main( void )
                         cm4.TriggerEvent = 0; //lower the flag for next time
                     }    
                 }
-                ss_state = !ss_state;  Cy_GPIO_Write(SEL_PIN_PORT, SEL_PIN_NUM, ss_state);  //Set slave select low for the commands
+                ss_state = !ss_state;  Cy_GPIO_Write(SEL_PIN_PORT, SEL_PIN_NUM, ss_state);  //Set slave select high for the next command
                 break;                
             
             //writing values to FPGA, dont care about return values
             default:    
+                update_globalStruct(); //update commands with values from the global struct
                 ss_state = !ss_state;  Cy_GPIO_Write(SEL_PIN_PORT, SEL_PIN_NUM, ss_state);  //Set slave select low for the commands
 
                 //send the command
@@ -207,7 +208,7 @@ main( void )
                 while((Cy_SCB_SPI_GetNumInRxFifo(SPIM_HW) != 1)){}
                 Cy_SCB_SPI_ReadArray(SPIM_HW, cm4.RxBuffer, 1);
                 
-                ss_state = !ss_state;  Cy_GPIO_Write(SEL_PIN_PORT, SEL_PIN_NUM, ss_state);  //Set slave select low for the commands
+                ss_state = !ss_state;  Cy_GPIO_Write(SEL_PIN_PORT, SEL_PIN_NUM, ss_state);  //Set slave select high for the next command
                 break;
         } 
     //Ensure that slave select is high

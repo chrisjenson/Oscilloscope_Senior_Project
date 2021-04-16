@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccrMNLVz.s 			page 1
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccKMzZ2b.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccrMNLVz.s 			page 1
   55 003c FF3F     		.short	16383
   56 003e EC41     		.short	16876
   57 0040 D443     		.short	17364
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccrMNLVz.s 			page 2
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccKMzZ2b.s 			page 2
 
 
   58 0042 B645     		.short	17846
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccrMNLVz.s 			page 1
  112 00ae D27F     		.short	32722
  113 00b0 EB7F     		.short	32747
  114 00b2 FA7F     		.short	32762
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccrMNLVz.s 			page 3
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccKMzZ2b.s 			page 3
 
 
  115 00b4 FF7F     		.short	32767
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccrMNLVz.s 			page 1
   45:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_misc/lv_math.c ****  * Return with sinus of an angle
   46:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_misc/lv_math.c ****  * @param angle
   47:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_misc/lv_math.c ****  * @return sinus of 'angle'. sin(-90) = -32767, sin(90) = 32767
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccrMNLVz.s 			page 4
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccKMzZ2b.s 			page 4
 
 
   48:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_misc/lv_math.c ****  */
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccrMNLVz.s 			page 1
  169 0046 B7F90630 		ldrsh	r3, [r7, #6]
  170 004a 244A     		ldr	r2, .L8+4
  171 004c 32F81330 		ldrh	r3, [r2, r3, lsl #1]	@ movhi
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccrMNLVz.s 			page 5
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccKMzZ2b.s 			page 5
 
 
  172 0050 FB81     		strh	r3, [r7, #14]	@ movhi
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccrMNLVz.s 			page 1
  218              		.loc 1 65 0
  219 00aa FB88     		ldrh	r3, [r7, #6]
  220 00ac C3F5B473 		rsb	r3, r3, #360
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccrMNLVz.s 			page 6
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccKMzZ2b.s 			page 6
 
 
  221 00b0 9BB2     		uxth	r3, r3
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccrMNLVz.s 			page 1
   80:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_misc/lv_math.c ****  */
   81:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_misc/lv_math.c **** int32_t lv_bezier3(uint32_t t, int32_t u0, int32_t u1, int32_t u2, int32_t u3)
   82:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_misc/lv_math.c **** {
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccrMNLVz.s 			page 7
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccKMzZ2b.s 			page 7
 
 
  261              		.loc 1 82 0
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccrMNLVz.s 			page 1
  308 004a 02FB03F3 		mul	r3, r2, r3
  309 004e 9B0A     		lsrs	r3, r3, #10
  310 0050 3B62     		str	r3, [r7, #32]
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccrMNLVz.s 			page 8
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccKMzZ2b.s 			page 8
 
 
   90:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_misc/lv_math.c ****     uint32_t v2 = ((uint32_t)3 * t_rem2 * t * u1) >> 20;
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccrMNLVz.s 			page 1
  359              	.LFE1:
  360              		.size	lv_bezier3, .-lv_bezier3
  361              		.section	.text.lv_atan2,"ax",%progbits
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccrMNLVz.s 			page 9
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccKMzZ2b.s 			page 9
 
 
  362              		.align	2
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccrMNLVz.s 			page 1
  126:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_misc/lv_math.c ****     if(x < 0) {
  386              		.loc 1 126 0
  387 000e 7B68     		ldr	r3, [r7, #4]
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccrMNLVz.s 			page 10
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccKMzZ2b.s 			page 10
 
 
  388 0010 002B     		cmp	r3, #0
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccrMNLVz.s 			page 1
  429 004c D21A     		subs	r2, r2, r3
  430 004e 7B69     		ldr	r3, [r7, #20]
  431 0050 B2FBF3F3 		udiv	r3, r2, r3
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccrMNLVz.s 			page 11
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccKMzZ2b.s 			page 11
 
 
  432 0054 BB61     		str	r3, [r7, #24]
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccrMNLVz.s 			page 1
  475 0094 0133     		adds	r3, r3, #1
  476 0096 BB77     		strb	r3, [r7, #30]
  477              	.L19:
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccrMNLVz.s 			page 12
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccKMzZ2b.s 			page 12
 
 
  151:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_misc/lv_math.c ****         if(tempdegree <= 37) comp++;
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccrMNLVz.s 			page 1
  525 00d6 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
  526 00d8 0E2B     		cmp	r3, #14
  527 00da 02D9     		bls	.L22
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccrMNLVz.s 			page 13
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccKMzZ2b.s 			page 13
 
 
  528              		.loc 1 157 0 is_stmt 0 discriminator 1
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccrMNLVz.s 			page 1
  569              	.L27:
  171:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_misc/lv_math.c ****     } else { // else is +Y
  172:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_misc/lv_math.c ****         if(negflag & 0x01)   // if +Y -X
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccrMNLVz.s 			page 14
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccKMzZ2b.s 			page 14
 
 
  570              		.loc 1 172 0
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccrMNLVz.s 			page 1
  612              		.cfi_offset 7, -4
  613 0002 85B0     		sub	sp, sp, #20
  614              		.cfi_def_cfa_offset 24
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccrMNLVz.s 			page 15
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccKMzZ2b.s 			page 15
 
 
  615 0004 00AF     		add	r7, sp, #0
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccrMNLVz.s 			page 1
  660              	.L36:
  194:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_misc/lv_math.c ****         }
  195:..\..\..\lvgl\version_6.1.2\lvgl\src\lv_misc/lv_math.c ****         root >>= 1;
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccrMNLVz.s 			page 16
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccKMzZ2b.s 			page 16
 
 
  661              		.loc 1 195 0
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccrMNLVz.s 			page 1
  710 0027 06       		.byte	0x6
  711 0028 D7020000 		.4byte	.LASF0
  712 002c 02       		.uleb128 0x2
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccrMNLVz.s 			page 17
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccKMzZ2b.s 			page 17
 
 
  713 002d 01       		.byte	0x1
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccrMNLVz.s 			page 1
  767 0093 5D010000 		.4byte	.LASF12
  768 0097 03       		.uleb128 0x3
  769 0098 81010000 		.4byte	.LASF13
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccrMNLVz.s 			page 18
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccKMzZ2b.s 			page 18
 
 
  770 009c 03       		.byte	0x3
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccrMNLVz.s 			page 1
  824 010b 91       		.byte	0x91
  825 010c 76       		.sleb128 -10
  826 010d 00       		.byte	0
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccrMNLVz.s 			page 19
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccKMzZ2b.s 			page 19
 
 
  827 010e 05       		.uleb128 0x5
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccrMNLVz.s 			page 1
  881 016e B8000000 		.4byte	0xb8
  882 0172 02       		.uleb128 0x2
  883 0173 91       		.byte	0x91
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccrMNLVz.s 			page 20
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccKMzZ2b.s 			page 20
 
 
  884 0174 74       		.sleb128 -12
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccrMNLVz.s 			page 1
  938 01cf 02       		.uleb128 0x2
  939 01d0 91       		.byte	0x91
  940 01d1 58       		.sleb128 -40
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccrMNLVz.s 			page 21
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccKMzZ2b.s 			page 21
 
 
  941 01d2 07       		.uleb128 0x7
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccrMNLVz.s 			page 1
  995 0233 75       		.byte	0x75
  996 0234 2C000000 		.4byte	0x2c
  997 0238 02       		.uleb128 0x2
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccrMNLVz.s 			page 22
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccKMzZ2b.s 			page 22
 
 
  998 0239 91       		.byte	0x91
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccrMNLVz.s 			page 1
  1052 029a 3E010000 		.4byte	.LASF33
  1053 029e 01       		.byte	0x1
  1054 029f BB       		.byte	0xbb
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccrMNLVz.s 			page 23
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccKMzZ2b.s 			page 23
 
 
  1055 02a0 B8000000 		.4byte	0xb8
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccrMNLVz.s 			page 1
  1109 001b 0E       		.uleb128 0xe
  1110 001c 00       		.byte	0
  1111 001d 00       		.byte	0
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccrMNLVz.s 			page 24
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccKMzZ2b.s 			page 24
 
 
  1112 001e 03       		.uleb128 0x3
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccrMNLVz.s 			page 1
  1166 0055 03       		.uleb128 0x3
  1167 0056 0E       		.uleb128 0xe
  1168 0057 3A       		.uleb128 0x3a
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccrMNLVz.s 			page 25
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccKMzZ2b.s 			page 25
 
 
  1169 0058 0B       		.uleb128 0xb
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccrMNLVz.s 			page 1
  1223 008e 0A       		.uleb128 0xa
  1224 008f 01       		.uleb128 0x1
  1225 0090 01       		.byte	0x1
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccrMNLVz.s 			page 26
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccKMzZ2b.s 			page 26
 
 
  1226 0091 49       		.uleb128 0x49
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccrMNLVz.s 			page 1
  1280              	.Ldebug_line0:
  1281 0000 3B020000 		.section	.debug_str,"MS",%progbits,1
  1281      02004A01 
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccrMNLVz.s 			page 27
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccKMzZ2b.s 			page 27
 
 
  1281      00000201 
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccrMNLVz.s 			page 1
  1306 00a8 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m4 -mfloat-abi=s"
  1306      20726576 
  1306      6973696F 
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccrMNLVz.s 			page 28
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccKMzZ2b.s 			page 28
 
 
  1306      6E203233 
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccrMNLVz.s 			page 1
  1327      636F7065 
  1327      5F53656E 
  1327      696F725F 
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccrMNLVz.s 			page 29
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccKMzZ2b.s 			page 29
 
 
  1328 01e7 645F7377 		.ascii	"d_sw\\tcom_app\\tcom_app_psoc6_lvgl6\\tcom_displ_te"
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccrMNLVz.s 			page 1
  1353              	.LASF16:
  1354 02b3 75696E74 		.ascii	"uint32_t\000"
  1354      33325F74 
-ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccrMNLVz.s 			page 30
+ARM GAS  C:\Users\tmj32\AppData\Local\Temp\ccKMzZ2b.s 			page 30
 
 
  1354      00

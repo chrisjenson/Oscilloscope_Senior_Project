@@ -10,21 +10,21 @@
 
 const uint8_t tcnj_blue[] = { 41, 63, 111 };
 const uint8_t tcnj_gold[] = { 166, 122, 0 };
+const uint display_leftAlign = 20; 
 
 static lv_obj_t * offsetLabel;
 static lv_obj_t * triggerLabel;
 static lv_obj_t * horiLabel1;
 static lv_obj_t * vertLabel1;
-//static lv_obj_t * windowLabel;
 
 int startup = 0;
 
+//function that builds the chart
 static void chart_actions()
 {    
     const int chart_width = 280;
     const int chart_heigth = 200;
-    const int chart_vertPos = 20;
-    const int chart_horiPos = 20; 
+    
     int windowSize;
     
     static lv_obj_t *chart1;        //declaring the chart
@@ -34,57 +34,54 @@ static void chart_actions()
     
     /* Display chart                         */        
     chart1 = lv_chart_create(lv_scr_act(), NULL);                     //Add a chart to the current screen
-    //lv_obj_set_pos(chart1, chart_horiPos, chart_vertPos);             /*Set its position*/
-    lv_obj_set_pos(chart1, chart_horiPos, 50); 
+    lv_obj_set_pos(chart1, display_leftAlign, 50); 
     lv_obj_set_size(chart1, chart_width, chart_heigth);               /*Set its size*/ 
     
     //sets the grid lines, hori, verti
     lv_chart_set_div_line_count(chart1, 7, 5);
     
     //determine the vertical limits of the chart
-    //lv_chart_set_range(chart1, y_min, y_max);
     switch(cm4.VertScale){
-    case 3 :
-        lv_chart_set_range(chart1, 475, 525);
-        break;
-    case 4 :
-        lv_chart_set_range(chart1, 450, 550);
-        break;
-    case 5 :
-        lv_chart_set_range(chart1, 375, 625);
-        break;
-    case 6 :
-        lv_chart_set_range(chart1, 250, 750);
-        break;
-    case 7 :
-        lv_chart_set_range(chart1, 0, 1000);
-        break;
-    default:
-        lv_chart_set_range(chart1, 0, 100);
-        break;
+        case 3 :
+            lv_chart_set_range(chart1, 475, 525);
+            break;
+        case 4 :
+            lv_chart_set_range(chart1, 450, 550);
+            break;
+        case 5 :
+            lv_chart_set_range(chart1, 375, 625);
+            break;
+        case 6 :
+            lv_chart_set_range(chart1, 250, 750);
+            break;
+        case 7 :
+            lv_chart_set_range(chart1, 0, 1000);
+            break;
+        default:
+            lv_chart_set_range(chart1, 0, 100);
+            break;
     }
-    
     
     //determine horizontal limits of the chart 
     switch(cm4.HoriScale){
-    case 5 :
-        windowSize = 100;
-        break;
-    case 6 :
-        windowSize = 200;
-        break;
-    case 7 :
-        windowSize = 500;
-        break;
-    case 8 :
-        windowSize = 1000;
-        break;
-    case 9 :
-        windowSize = 2000;
-        break;
-    default:
-        windowSize = 500;
-        break;
+        case 5 :
+            windowSize = 100;
+            break;
+        case 6 :
+            windowSize = 200;
+            break;
+        case 7 :
+            windowSize = 500;
+            break;
+        case 8 :
+            windowSize = 1000;
+            break;
+        case 9 :
+            windowSize = 2000;
+            break;
+        default:
+            windowSize = 500;
+            break;
     }    
     lv_chart_set_point_count(chart1, windowSize);                  //setting the number of points on the chart
     lv_chart_set_type(chart1, LV_CHART_TYPE_LINE);                    //set graph to points, as opposed to lines    
@@ -114,13 +111,13 @@ static void chart_actions()
     }    
 
     double voltage = 0; //convert the code from brian to voltage using:
-    //voltage = ((code*0.5)/128)+1.45
+    //FUNCTION: voltage = ((code*0.5)/128)+1.45
 
     double triggerTemp = cm4.Trigger/100;
     cm4.signedTriggerCode = (((triggerTemp-1.45)/0.5)*128); //convert the voltage from trigger to code using:
     cm4.TriggerCode = 0b00000000;
     cm4.TriggerCode = cm4.TriggerCode | cm4.signedTriggerCode;
-    //triggerCode = ((voltage -1.45)/0.5)*128
+    //FUNCTION: triggerCode = ((voltage -1.45)/0.5)*128
 
     //draw the series
     for(int i = bufferFirst; i < bufferLast; ++i){
@@ -256,9 +253,6 @@ static void verti_slider_event_cb(lv_obj_t * slider, lv_event_t event)
 static void window_slider_event_cb(lv_obj_t * slider, lv_event_t event)
 {
     if(event == (LV_EVENT_VALUE_CHANGED)) {
-        //static char buf[6]; /* max 3 bytes for number plus 1 null terminating byte */
-        //snprintf(buf, 6, "%u", lv_slider_get_value(slider));
-        //lv_label_set_text(windowLabel, buf);
         cm4.windowPos = lv_slider_get_value(slider);
         chart_actions();    //call to update the chart
     }
@@ -268,7 +262,7 @@ void home_screen()
 {   
     /* First Slider: Offset */
     lv_obj_t * offsetSlider = lv_slider_create(lv_scr_act(), NULL);
-    lv_obj_set_pos(offsetSlider, 20, 290);                         /*Set its position*/
+    lv_obj_set_pos(offsetSlider, display_leftAlign, 290);                         /*Set its position*/
     lv_obj_set_size(offsetSlider, 130, 30);                        /*Set its size*/
     lv_obj_set_event_cb(offsetSlider, offset_slider_event_cb);
     lv_slider_set_range(offsetSlider, 0, 2000);
@@ -313,7 +307,7 @@ void home_screen()
             
     /* Third Slider: Hori. Scale */
     lv_obj_t * horiSlider = lv_slider_create(lv_scr_act(), NULL);
-    lv_obj_set_pos(horiSlider, 20, 365);                         /*Set its position*/
+    lv_obj_set_pos(horiSlider, display_leftAlign, 365);                         /*Set its position*/
     lv_obj_set_size(horiSlider, 130, 30);                        /*Set its size*/
     lv_slider_set_value(horiSlider, 7, LV_ANIM_ON);
     lv_obj_set_event_cb(horiSlider, hori_slider_event_cb);
@@ -368,13 +362,12 @@ void home_screen()
     lv_obj_t * sw1 = lv_sw_create(lv_scr_act(), NULL);
     lv_obj_align(sw1, NULL, LV_ALIGN_CENTER, 0, -50);
     lv_obj_set_event_cb(sw1, sw_event_handler);
-    lv_obj_set_pos(sw1, 20, 430);                         /*Set its position*/
+    lv_obj_set_pos(sw1, display_leftAlign, 430);                         /*Set its position*/
     lv_obj_set_size(sw1, 90, 30);               /*Set its size*/ 
     
     lv_obj_t * switchLabel = lv_label_create(lv_scr_act(), NULL);
 	lv_obj_set_drag(switchLabel, false);
     lv_label_set_text(switchLabel, "Run\\Stop");
-    //lv_obj_set_pos(switchLabel, 15, 445);
     lv_obj_align(switchLabel, sw1, LV_ALIGN_OUT_TOP_MID, 0, 0);
     
     
