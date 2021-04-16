@@ -91,7 +91,7 @@ main( void )
     cm4.ShannonReg = 0b01010011;
     cm4.VersionID = 0b00000001;
     cm4.Trigger = 0b0000010101111000;
-    cm4.TriggerCode = 0b11110011;
+    cm4.TriggerCode = 0b00001101;       //default trigger of 1500mV
     cm4.TriggerSlope = 0b00000000;
     cm4.TriggerEvent = 0b00000000;
     cm4.SampleRate = 0b00000000;
@@ -108,8 +108,8 @@ main( void )
     
     //------------------START SPI CODE---------------------------------
     //construct write commmand for updating trigger in register 7
-    //cm4.TxBuffer[0] = 0b0100011100000000 | cm4.TriggerCode;     //010 00111 00000000
-    cm4.TxBuffer[0] = 0b0100011100000111;     //010 00111 00000000
+    cm4.TxBuffer[0] = 0b0100011100000000 | cm4.TriggerCode;     //010 00111 00000000
+    //cm4.TxBuffer[0] = 0b0100011100000111;     //010 00111 00000000
     
     //construct write commmand for updating trigger slope in register 6
     cm4.TxBuffer[1] = 0b0100011000000000 | cm4.TriggerSlope;     //010 00110 00000000

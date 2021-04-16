@@ -295,11 +295,11 @@ void home_screen()
     lv_obj_set_size(triggerSlider, 130, 30);                        /*Set its size*/
     lv_obj_set_event_cb(triggerSlider, trigger_slider_event_cb);
     lv_slider_set_range(triggerSlider, 900, 1900);
-    lv_slider_set_value(triggerSlider, 1400, LV_ANIM_ON);
+    lv_slider_set_value(triggerSlider, 1500, LV_ANIM_ON);
             
             /* Create a label below the slider */
             triggerLabel = lv_label_create(lv_scr_act(), NULL);
-            lv_label_set_text(triggerLabel, "1400mV");
+            lv_label_set_text(triggerLabel, "1500mV");
             lv_obj_set_auto_realign(triggerLabel, true);
             lv_obj_align(triggerLabel, triggerSlider, LV_ALIGN_OUT_TOP_RIGHT, 0, 0);
             
