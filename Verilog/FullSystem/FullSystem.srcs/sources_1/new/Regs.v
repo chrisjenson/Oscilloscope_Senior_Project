@@ -36,11 +36,11 @@ module Regs(
     //also a read only bit
     
     reg [7:0] registers [15:0];
-    assign DebugLEDRegister = registers[4]; //LEDs
+    assign DebugLEDRegister = registers[7]; //4 //LEDs
     
     assign TriggerThreshold = registers[7];
     assign TriggerType = registers[6];
-    assign onBit = registers[9][0];
+    assign onBit = registers[9][0]; //9
     always @(posedge clk)
     begin
         registers[5] <= DebugWriteRegister; //8'b11111111; //Scratch W reg- Switches

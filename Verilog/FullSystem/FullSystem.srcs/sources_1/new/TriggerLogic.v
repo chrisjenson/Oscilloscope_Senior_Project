@@ -9,8 +9,8 @@ module TriggerLogic(
         input RAMReadDone,
         
         input [7:0] TriggerType,
-        input [7:0] TriggerThreshold,
-        input [9:0] ADC_InData,
+        input signed [7:0] TriggerThreshold,
+        input signed [9:0] ADC_InData,
 
         output reg Triggered,
         input [17:0] WriteAddress,

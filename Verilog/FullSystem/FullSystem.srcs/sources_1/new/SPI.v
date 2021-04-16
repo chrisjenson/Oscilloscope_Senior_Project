@@ -251,7 +251,7 @@ module SPI(
             begin
                 if (!Buffer_RdEn && !Reg_RdEn) //This needs to be gated so will not change instruction if performing MISO. DEBUG: DOES THIS MATTER?
                 begin
-                    if (sck_posedge_pulse)
+                    if (sck_posedge_pulse) //sck_posedge_pulse
                     begin
                         SPI_InBits[SPI_InInstructionSixteenCounter] <= MOSI;
                         
@@ -267,8 +267,9 @@ module SPI(
                         
                         if (SPI_InInstructionSixteenCounter == 0)
                         begin
-                            SPI_InBits[SPI_InInstructionSixteenCounter] <= MOSI; //Need this here in order to get 0th value. DEBUG: FIND A BETTER METHOD
+                            //SPI_InBits[SPI_InInstructionSixteenCounter] <= MOSI; //Need this here in order to get 0th value. DEBUG: FIND A BETTER METHOD
                             new_data_strobe <= 1;
+                            //Add lock here to prevent constant rewrite of reg at bit 0 if SS stays low? Not really necassry but be on lookout
                         end
                     end
                 end

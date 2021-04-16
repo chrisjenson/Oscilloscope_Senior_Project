@@ -31,16 +31,17 @@ module DataSimulation(
             if (ADC_SampleClock_posedge_pulse)
             begin
                 //COMMENT FOR SIM
-                /*
+                //SWITCH
                 if (SimDataHigh)
                 begin
-                    SimData <= 150;
+                    SimData <= 64;
                 end
                 else
                 begin
                     SimData <= 0;
-                end*/
-                //UNCOMMENT FOR SIM
+                end
+                
+                //SQUARE WAVE
                 /*counter <= counter + 1;
                 if (counter < 25)
                 begin
@@ -55,13 +56,16 @@ module DataSimulation(
                     SimData <= 150;
                     counter <= 0;
                 end*/
+                
+                //RAMP
+                /*
                 counter <= counter + 1;
                 SimData <= counter;
                 if (counter == 255)
                 begin
                     SimData <= 0;
                     counter <= 0;
-                end
+                end*/
                 
             end
         end

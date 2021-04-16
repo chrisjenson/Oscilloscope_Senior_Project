@@ -28,11 +28,13 @@ module Top(
     output DebugRAMFullFlag,
     output DebugRAMReadRecieved, //Debug was a ram read command recieved
     output DebugTriggered,
+    output DebugTriggerWriteDone,
     output DebugFIFOInXFC,
     output DebugFIFOOutXFC,
     output DebugOnBit,
+    output DebugOnBit2,
     output DebugNotSlaveSel,
-    output onBit,
+    output DebugReset,
     output RAMReadDone,
 
     output DebugMOSI,
@@ -41,7 +43,12 @@ module Top(
     output DebugSlaveSel,
     output reg reset //For debug
     );
+    wire onBit;
+
     assign SimDataHighLED = SimDataHigh;
+    assign DebugOnBit = onBit;
+    assign DebugOnBit2 = onBit;
+    assign DebugReset = rst_;
     //////////////////////////
     //To comment this out, uncomment input [9:0] ADC_InData and comment everything below
     //Also uncomment in constraints
@@ -105,6 +112,8 @@ module Top(
     
     //assign Triggered = 1;
     assign DebugTriggered = Triggered;
+    assign DebugTriggerWriteDone = TriggerWriteDone;
+
     TriggerLogic u_TriggerLogic(
         .clk(clk),
         .reset(reset),
@@ -237,7 +246,6 @@ module Top(
         .RAMReadDone(RAMReadDone)
     );
     
-    assign DebugOnBit = onBit;
     
     Buffer_FIFO u_Buffer_FIFO(
         .FIFO_OutRTR(FIFO_OutRTR), //Input from SPI

@@ -101,7 +101,7 @@ module RAM_WriteEngine(
     //Control TriggerWriteDone
     //Debug: Always @ (*)?????
     wire [17:0] TriggerStopAddr;
-    assign TriggerStopAddr = TriggeredAddress + 262143;
+    assign TriggerStopAddr = TriggeredAddress + 131071; //131072??
     
     always @(posedge clk)
     begin

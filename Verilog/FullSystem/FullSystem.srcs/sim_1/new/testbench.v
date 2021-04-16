@@ -54,11 +54,11 @@ module testbench();
     initial
     begin  
         commandArray[0] = 16'b0000000000000000; //Do nothing
-        commandArray[1] = 16'b0100011000000001; //Write 1 to reg 6, falling edge trigger
+        commandArray[1] = 16'b0100011000000000; //Write 0 to reg 6, rising edge trigger
         commandArray[2] = 16'b0100011100001111; //Write 15 to reg 7, Threshold of 15
         commandArray[3] = 16'b0100100100000001; //Write 1 to reg 9, On
-        commandArray[4] = 16'b0010111100000000; //read reg 15[1], triggered
-        commandArray[5] = 16'b0110100011111111; //cmd = Read Ram, 2048 data points
+        commandArray[4] = 16'b0010111100000000; //read reg 15[0], triggered
+        commandArray[5] = 16'b0110100011111111; //cmd = Read Ram, 1024 data points
         commandArray[6] = 16'b0100011100001111; //Write 15 to reg 7, Threshold of 15
         commandArray[7] = 16'b0100100100000001; //Write 1 to reg 9, On
         commandArray[8] = 16'b0010111100000000; //read reg 15[1], triggered
@@ -397,6 +397,13 @@ module testbench();
         end
     end
     
+    
+    reg SimDataHigh;
+    initial 
+    begin
+        SimDataHigh = 0;
+        #100000000 SimDataHigh = 1;
+    end
     Top u_Top(
         .clk(clk),
         .rst_(~reset),
@@ -407,7 +414,8 @@ module testbench();
         .MISO(MISO),
         //ADC Interface
         //.ADC_InData(ADC_InData),
-        .ADC_SampleClock(ADC_SampleClock)
+        .ADC_SampleClock(ADC_SampleClock),
+        .SimDataHigh(SimDataHigh)
     );
 endmodule
     
