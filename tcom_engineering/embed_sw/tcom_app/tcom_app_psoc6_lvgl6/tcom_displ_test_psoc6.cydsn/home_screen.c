@@ -131,6 +131,7 @@ static void chart_actions()
     startup = 1;
 }
 
+//roller for trigger slope: rising, falling, threshold
 static void roller1_event(lv_obj_t * obj, lv_event_t event)
 {
     if(event == (LV_EVENT_VALUE_CHANGED)) {
@@ -146,20 +147,42 @@ static void roller1_event(lv_obj_t * obj, lv_event_t event)
         else if(strcmp("Threshold", buf) == 0){
             cm4.TriggerSlope = 0b00000011;
         }
+        else{
+            cm4.TriggerSlope = 0b00000000; //assume rising if there is an error
+        }
     }
 }
+
+//roller for trigger mode: single, auto, normal
 static void roller2_event(lv_obj_t * obj, lv_event_t event)
 {
     if(event == (LV_EVENT_VALUE_CHANGED)) {
         char buf[32];
         lv_roller_get_selected_str(obj, buf, sizeof(buf));
+        
+        //NOTE THAT THESE VALUES NEVER GET WRITEN TO THE SPI COMMAND BECAUSE ONLY SINGLE IS CURRENTLY SUPPORTED
+        if(strcmp("Single", buf) == 0){
+            cm4.TriggerMode = 0b00000000;
+        }
+        else if(strcmp("Auto", buf) == 0){
+            cm4.TriggerMode = 0b00000001;
+        }
+        else if(strcmp("Normal", buf) == 0){
+            cm4.TriggerMode = 0b00000011;
+        }
+        else{
+            cm4.TriggerMode = 0b00000000; //assume single if there is an error
+        }
     }
 }
+
+//switch for if the sweep should be armed or not
 static void sw_event_handler(lv_obj_t * obj, lv_event_t event)
 {
     if(event == (LV_EVENT_VALUE_CHANGED)) {
-        printf("State: %s\n", lv_sw_get_state(obj) ? "On" : "Off");
-        //cm4.onBit = !cm4.onBit;
+        //printf("State: %s\n", lv_sw_get_state(obj) ? "Run" : "Stop");
+        cm4.Armed = lv_sw_get_state(obj);
+        //cm4.Armed = !cm4.Armed;
     }
 }
 
@@ -367,7 +390,7 @@ void home_screen()
     
     lv_obj_t * switchLabel = lv_label_create(lv_scr_act(), NULL);
 	lv_obj_set_drag(switchLabel, false);
-    lv_label_set_text(switchLabel, "Run\\Stop");
+    lv_label_set_text(switchLabel, "Stop\\Run");
     lv_obj_align(switchLabel, sw1, LV_ALIGN_OUT_TOP_MID, 0, 0);
     
     
