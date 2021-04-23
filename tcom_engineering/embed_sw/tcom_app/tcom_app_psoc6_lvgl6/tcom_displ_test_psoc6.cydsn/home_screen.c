@@ -20,7 +20,7 @@ static lv_obj_t * vertLabel1;
 int startup = 0;
 
 //function that builds the chart
-static void chart_actions()
+void chart_actions()
 {    
     const int chart_width = 280;
     const int chart_heigth = 200;
@@ -112,7 +112,8 @@ static void chart_actions()
 
     double voltage = 0; //convert the code from brian to voltage using:
     //FUNCTION: voltage = ((code*0.5)/128)+1.45
-
+    double triggerLine = 0;
+    
     double triggerTemp = cm4.Trigger/100;
     cm4.signedTriggerCode = (((triggerTemp-1.45)/0.5)*128); //convert the voltage from trigger to code using:
     cm4.TriggerCode = 0b00000000;
@@ -123,10 +124,13 @@ static void chart_actions()
     for(int i = bufferFirst; i < bufferLast; ++i){
         /*        |------code to voltage equation-------|* show decimals| */
         voltage = (((cm4.RamReadBuffer[i]*0.5)/128)+1.45)*100;
+        
         /*       |orginal|+|user offset|+|internal offset to account for negatives|*/
         voltage = voltage + cm4.Offset/15 + 355;
+        triggerLine = cm4.Trigger + 355 + cm4.Offset/15;
+        
         lv_chart_set_next(chart1, s1, voltage);
-        lv_chart_set_next(chart1, s2, cm4.Trigger + 355);
+        lv_chart_set_next(chart1, s2, triggerLine);
     }   
     startup = 1;
 }
