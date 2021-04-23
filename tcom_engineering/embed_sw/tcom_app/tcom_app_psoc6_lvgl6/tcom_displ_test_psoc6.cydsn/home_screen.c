@@ -115,7 +115,7 @@ void chart_actions()
     double triggerLine = 0;
     
     double triggerTemp = cm4.Trigger/100;
-    cm4.signedTriggerCode = (((triggerTemp-1.45)/0.5)*128); //convert the voltage from trigger to code using:
+    cm4.signedTriggerCode = round((((triggerTemp-1.45)/0.5)*128)); //convert the voltage from trigger to code using:
     cm4.TriggerCode = 0b00000000;
     cm4.TriggerCode = cm4.TriggerCode | cm4.signedTriggerCode;
     //FUNCTION: triggerCode = ((voltage -1.45)/0.5)*128

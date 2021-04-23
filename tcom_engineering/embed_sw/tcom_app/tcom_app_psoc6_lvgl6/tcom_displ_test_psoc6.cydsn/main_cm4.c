@@ -149,7 +149,8 @@ int main( void )
                 switch(i){  //act based on the command
                     //Read onbit from FPGA until there is a trigger event
                     case 3: 
-                        while((cm4.TriggerEvent != 0b00000001) && (cm4.Armed == 1)){
+                        //while(cm4.TriggerEvent != 0b00000001){
+                        while((cm4.TriggerEvent != 0b00000001) && (cm4.Armed == 1)){    
                             update_globalStruct(); //update commands with values from the global struct
                             ss_state = !ss_state;  Cy_GPIO_Write(SEL_PIN_PORT, SEL_PIN_NUM, ss_state);  //Set slave select low for the commands
 
@@ -170,6 +171,7 @@ int main( void )
                     case 4:     
                         update_globalStruct(); //update commands with values from the global struct
                         ss_state = !ss_state;  Cy_GPIO_Write(SEL_PIN_PORT, SEL_PIN_NUM, ss_state);  //Set slave select low for the commands
+                        bufferIndex = 0;    //reset starting location of ram read buffer
 
                         //send the command
                         Cy_SCB_SPI_ClearSlaveMasterStatus(SPIM_HW, CY_SCB_SPI_MASTER_DONE);
@@ -233,7 +235,16 @@ int main( void )
             //Ensure that slave select is high
             Cy_GPIO_Write(SEL_PIN_PORT, SEL_PIN_NUM, 1);
             }
+            
+            if(cm4.TriggerMode == 0b00000000){      //single mode
+                cm4.Armed = 0;
+            }
+            else if(cm4.TriggerMode == 0b00000011){ //normal mode
+                //do nothing
+            }
+            
             chart_actions();    //call to update the chart with the read in data
+            
         }    
         
         else{ //single sweep is not armed 
@@ -243,6 +254,6 @@ int main( void )
         //-------------------END SPI CODE---------------------------------------------//
         
         
-        CyDelay(5);
+        //CyDelay(5);
     }
 }
