@@ -8,6 +8,9 @@
 #include "math.h"
 #include "string.h"
 
+#define RAM_READ_SIZE       (2048)  //the size of the buffer holding incoming samples
+#define RAM_READ_SPLIT      (1024)  //Ram_read_size divided by 2
+
 const uint8_t tcnj_blue[] = { 41, 63, 111 };
 const uint8_t tcnj_gold[] = { 166, 122, 0 };
 const uint display_leftAlign = 20; 
@@ -105,9 +108,9 @@ void chart_actions()
     }
     
     //handle overflow edge cases
-    if(bufferLast > 2048){
-        bufferFirst = 2048 - windowSize;
-        bufferLast = 2048;
+    if(bufferLast > RAM_READ_SIZE){
+        bufferFirst = RAM_READ_SIZE - windowSize;
+        bufferLast = RAM_READ_SIZE;
     }    
 
     double voltage = 0; //convert the code from brian to voltage using:

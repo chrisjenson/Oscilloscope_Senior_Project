@@ -14,6 +14,7 @@
 
 #define RAM_READ_SIZE       (2048)  //the size of the buffer holding incoming samples
 #define RAM_READ_SPLIT      (1024)  //Ram_read_size divided by 2
+#define NUM_TO_WRITE        (32)    //MUST MATCH the size of RxBuffer
 
 uint32 msec_cnt = 0;
 
@@ -125,8 +126,7 @@ int main( void )
     cm4.VertScale = 0b00000101;//default 5 for 200/40
     cm4.onBit = 0b00000001;
     cm4.windowPos = RAM_READ_SPLIT;
-    
-    uint32_t NUM_TO_WRITE = 32; 
+   
     uint16_t bufferIndex = 0; 
     int ss_state = 1; 
     
@@ -149,7 +149,6 @@ int main( void )
                 switch(i){  //act based on the command
                     //Read onbit from FPGA until there is a trigger event
                     case 3: 
-                        //while(cm4.TriggerEvent != 0b00000001){
                         while((cm4.TriggerEvent != 0b00000001) && (cm4.Armed == 1)){    
                             update_globalStruct(); //update commands with values from the global struct
                             ss_state = !ss_state;  Cy_GPIO_Write(SEL_PIN_PORT, SEL_PIN_NUM, ss_state);  //Set slave select low for the commands
@@ -236,10 +235,14 @@ int main( void )
             Cy_GPIO_Write(SEL_PIN_PORT, SEL_PIN_NUM, 1);
             }
             
+            //Trigger mode implementation, control the rearming of the sweep
             if(cm4.TriggerMode == 0b00000000){      //single mode
                 cm4.Armed = 0;
             }
             else if(cm4.TriggerMode == 0b00000011){ //normal mode
+                //do nothing
+            }
+            else {  //auto trigger, NOT IMPLEMENTED
                 //do nothing
             }
             
