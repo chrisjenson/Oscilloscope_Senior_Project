@@ -53,7 +53,7 @@ set_property -dict { PACKAGE_PIN V11   IOSTANDARD LVCMOS33 } [get_ports { DEBUGA
 
 #set_property -dict { PACKAGE_PIN R12   IOSTANDARD LVCMOS33 } [get_ports { DebugTriggered }]; #IO_L5P_T0_D06_14 Sch=led16_b
 #set_property -dict { PACKAGE_PIN M16   IOSTANDARD LVCMOS33 } [get_ports { RAMReadDone }]; #IO_L10P_T1_D14_14 Sch=led16_g
-set_property -dict { PACKAGE_PIN N15   IOSTANDARD LVCMOS33 } [get_ports { RAMReadDone }]; #IO_L11P_T1_SRCC_14 Sch=led16_r
+#set_property -dict { PACKAGE_PIN N15   IOSTANDARD LVCMOS33 } [get_ports { RAMReadDone }]; #IO_L11P_T1_SRCC_14 Sch=led16_r
 #set_property -dict { PACKAGE_PIN G14   IOSTANDARD LVCMOS33 } [get_ports { DebugTriggered }]; #IO_L15N_T2_DQS_ADV_B_15 Sch=led17_b
 set_property -dict { PACKAGE_PIN R11   IOSTANDARD LVCMOS33 } [get_ports { DebugOnBit }]; #IO_0_14 Sch=led17_g
 #set_property -dict { PACKAGE_PIN N16   IOSTANDARD LVCMOS33 } [get_ports { LED17_R }]; #IO_L11N_T1_SRCC_14 Sch=led17_r
@@ -109,7 +109,7 @@ set_property -dict { PACKAGE_PIN D18   IOSTANDARD LVCMOS33 } [get_ports { MISO  
 set_property -dict { PACKAGE_PIN E18   IOSTANDARD LVCMOS33 } [get_ports { SlaveSel }]; #IO_L21P_T3_DQS_15 Sch=ja[3]
 set_property -dict { PACKAGE_PIN G17   IOSTANDARD LVCMOS33 } [get_ports { SCLK_Raw     }]; #IO_L18N_T2_A23_15 Sch=ja[4]
 #set_property -dict { PACKAGE_PIN D17   IOSTANDARD LVCMOS33 } [get_ports { DebugSlaveSel    }]; #IO_L16N_T2_A27_15 Sch=ja[7]
-#set_property -dict { PACKAGE_PIN E17   IOSTANDARD LVCMOS33 } [get_ports { DebugMOSI }]; #IO_L16P_T2_A28_15 Sch=ja[8]
+set_property -dict { PACKAGE_PIN E17   IOSTANDARD LVCMOS33 } [get_ports { DebugFIFOOutXFC }]; #IO_L16P_T2_A28_15 Sch=ja[8]
 set_property -dict { PACKAGE_PIN F18   IOSTANDARD LVCMOS33 } [get_ports { DebugReset }]; #IO_L22N_T3_A16_15 Sch=ja[9]
 set_property -dict { PACKAGE_PIN G18   IOSTANDARD LVCMOS33 } [get_ports { DebugTriggerWriteDone }]; #IO_L22P_T3_A17_15 Sch=ja[10]
 
@@ -122,15 +122,15 @@ set_property -dict { PACKAGE_PIN G16   IOSTANDARD LVCMOS33 } [get_ports { DebugS
 set_property -dict { PACKAGE_PIN H14   IOSTANDARD LVCMOS33 } [get_ports { DebugMISO }]; #IO_L15P_T2_DQS_15 Sch=jb[4]
 set_property -dict { PACKAGE_PIN E16   IOSTANDARD LVCMOS33 } [get_ports { reset }]; #IO_L11N_T1_SRCC_15 Sch=jb[7]
 set_property -dict { PACKAGE_PIN F13   IOSTANDARD LVCMOS33 } [get_ports { DebugOnBit2 }]; #IO_L5P_T0_AD9P_15 Sch=jb[8]
-set_property -dict { PACKAGE_PIN G13   IOSTANDARD LVCMOS33 } [get_ports { DebugFIFOInXFC }]; #IO_0_15 Sch=jb[9]
-set_property -dict { PACKAGE_PIN H16   IOSTANDARD LVCMOS33 } [get_ports { DebugFIFOOutXFC }]; #IO_L13P_T2_MRCC_15 Sch=jb[10]
+set_property -dict { PACKAGE_PIN G13   IOSTANDARD LVCMOS33 } [get_ports { RAMReadDone }]; #IO_0_15 Sch=jb[9]
+set_property -dict { PACKAGE_PIN H16   IOSTANDARD LVCMOS33 } [get_ports { DEBUGTriggeredReg }]; #IO_L13P_T2_MRCC_15 Sch=jb[10]
 
 
 ##Pmod Header JC
 
 set_property -dict { PACKAGE_PIN K1    IOSTANDARD LVCMOS33 } [get_ports { DebugTriggered }]; #IO_L23N_T3_35 Sch=jc[1]
 set_property -dict { PACKAGE_PIN F6    IOSTANDARD LVCMOS33 } [get_ports { ADC_SampleClock }]; #IO_L19N_T3_VREF_35 Sch=jc[2]
-#set_property -dict { PACKAGE_PIN J2    IOSTANDARD LVCMOS33 } [get_ports { out[18]}]; #IO_L22N_T3_35 Sch=jc[3]
+set_property -dict { PACKAGE_PIN J2    IOSTANDARD LVCMOS33 } [get_ports { DebugFIFOInXFC}]; #IO_L22N_T3_35 Sch=jc[3]
 #set_property -dict { PACKAGE_PIN E7    IOSTANDARD LVCMOS33 } [get_ports { out[20]}]; #IO_L6P_T0_35 Sch=jc[7]
 #set_property -dict { PACKAGE_PIN J3    IOSTANDARD LVCMOS33 } [get_ports { out[21]}]; #IO_L22P_T3_35 Sch=jc[8]
 #set_property -dict { PACKAGE_PIN J4    IOSTANDARD LVCMOS33 } [get_ports { out[22]}]; #IO_L21P_T3_DQS_35 Sch=jc[9]

@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date         : Fri Apr 23 11:36:49 2021
+| Date         : Fri Apr 23 14:36:55 2021
 | Host         : MSI running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -max_paths 10 -file Top_timing_summary_routed.rpt -pb Top_timing_summary_routed.pb -rpx Top_timing_summary_routed.rpx -warn_on_violation
 | Design       : Top
@@ -44,7 +44,7 @@ Table of Contents
 3. checking pulse_width_clock (0)
 4. checking unconstrained_internal_endpoints (0)
 5. checking no_input_delay (22)
-6. checking no_output_delay (13)
+6. checking no_output_delay (14)
 7. checking multiple_clock (0)
 8. checking generated_clocks (0)
 9. checking loops (0)
@@ -81,9 +81,9 @@ Table of Contents
  There are 0 input ports with no input delay but user has a false path constraint.
 
 
-6. checking no_output_delay (13)
+6. checking no_output_delay (14)
 --------------------------------
- There are 13 ports with no output delay specified. (HIGH)
+ There are 14 ports with no output delay specified. (HIGH)
 
  There are 0 ports with no output delay but user has a false path constraint
 
@@ -128,7 +128,7 @@ Table of Contents
 
     WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
     -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
-      0.301        0.000                      0                 5641        0.043        0.000                      0                 5641        3.750        0.000                       0                   693  
+      0.583        0.000                      0                 5461        0.032        0.000                      0                 5461        3.750        0.000                       0                   627  
 
 
 All user specified timing constraints are met.
@@ -151,7 +151,7 @@ clk    {0.000 5.000}      10.000          100.000
 
 Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
 -----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
-clk                 0.301        0.000                      0                 5641        0.043        0.000                      0                 5641        3.750        0.000                       0                   693  
+clk                 0.583        0.000                      0                 5461        0.032        0.000                      0                 5461        3.750        0.000                       0                   627  
 
 
 ------------------------------------------------------------------------------------------------
@@ -182,136 +182,28 @@ Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing 
 From Clock:  clk
   To Clock:  clk
 
-Setup :            0  Failing Endpoints,  Worst Slack        0.301ns,  Total Violation        0.000ns
-Hold  :            0  Failing Endpoints,  Worst Slack        0.043ns,  Total Violation        0.000ns
+Setup :            0  Failing Endpoints,  Worst Slack        0.583ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.032ns,  Total Violation        0.000ns
 PW    :            0  Failing Endpoints,  Worst Slack        3.750ns,  Total Violation        0.000ns
 ---------------------------------------------------------------------------------------------------
 
 
 Max Delay Paths
 --------------------------------------------------------------------------------------
-Slack (MET) :             0.301ns  (required time - arrival time)
-  Source:                 u_RAM_ReadEngine/RAMR_ReadAddr_reg[2]/C
+Slack (MET) :             0.583ns  (required time - arrival time)
+  Source:                 u_RAM_ReadEngine/RAMR_ReadAddr_reg[8]/C
                             (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[20].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/ADDRBWRADDR[5]
+  Destination:            u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/ADDRBWRADDR[11]
                             (rising edge-triggered cell RAMB36E1 clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             clk
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            10.000ns  (clk rise@10.000ns - clk rise@0.000ns)
-  Data Path Delay:        9.240ns  (logic 0.456ns (4.935%)  route 8.784ns (95.065%))
+  Data Path Delay:        8.902ns  (logic 0.456ns (5.122%)  route 8.446ns (94.878%))
   Logic Levels:           0  
-  Clock Path Skew:        0.141ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    5.189ns = ( 15.189 - 10.000 ) 
-    Source Clock Delay      (SCD):    5.227ns
-    Clock Pessimism Removal (CPR):    0.180ns
-  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter     (TSJ):    0.071ns
-    Total Input Jitter      (TIJ):    0.000ns
-    Discrete Jitter          (DJ):    0.000ns
-    Phase Error              (PE):    0.000ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock clk rise edge)        0.000     0.000 r  
-    E3                                                0.000     0.000 r  clk (IN)
-                         net (fo=0)                   0.000     0.000    clk
-    E3                   IBUF (Prop_ibuf_I_O)         1.482     1.482 r  clk_IBUF_inst/O
-                         net (fo=1, routed)           2.025     3.506    clk_IBUF
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.602 r  clk_IBUF_BUFG_inst/O
-                         net (fo=692, routed)         1.625     5.227    u_RAM_ReadEngine/clk_IBUF_BUFG
-    SLICE_X37Y101        FDRE                                         r  u_RAM_ReadEngine/RAMR_ReadAddr_reg[2]/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X37Y101        FDRE (Prop_fdre_C_Q)         0.456     5.683 r  u_RAM_ReadEngine/RAMR_ReadAddr_reg[2]/Q
-                         net (fo=130, routed)         8.784    14.467    u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[20].ram.r/prim_noinit.ram/addrb[2]
-    RAMB36_X2Y2          RAMB36E1                                     r  u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[20].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/ADDRBWRADDR[5]
-  -------------------------------------------------------------------    -------------------
-
-                         (clock clk rise edge)       10.000    10.000 r  
-    E3                                                0.000    10.000 r  clk (IN)
-                         net (fo=0)                   0.000    10.000    clk
-    E3                   IBUF (Prop_ibuf_I_O)         1.411    11.411 r  clk_IBUF_inst/O
-                         net (fo=1, routed)           1.920    13.331    clk_IBUF
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    13.422 r  clk_IBUF_BUFG_inst/O
-                         net (fo=692, routed)         1.766    15.189    u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[20].ram.r/prim_noinit.ram/clka
-    RAMB36_X2Y2          RAMB36E1                                     r  u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[20].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/CLKBWRCLK
-                         clock pessimism              0.180    15.369    
-                         clock uncertainty           -0.035    15.333    
-    RAMB36_X2Y2          RAMB36E1 (Setup_ramb36e1_CLKBWRCLK_ADDRBWRADDR[5])
-                                                     -0.566    14.767    u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[20].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram
-  -------------------------------------------------------------------
-                         required time                         14.767    
-                         arrival time                         -14.467    
-  -------------------------------------------------------------------
-                         slack                                  0.301    
-
-Slack (MET) :             0.635ns  (required time - arrival time)
-  Source:                 u_RAM_ReadEngine/RAMR_ReadAddr_reg[2]/C
-                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[28].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/ADDRBWRADDR[5]
-                            (rising edge-triggered cell RAMB36E1 clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Path Group:             clk
-  Path Type:              Setup (Max at Slow Process Corner)
-  Requirement:            10.000ns  (clk rise@10.000ns - clk rise@0.000ns)
-  Data Path Delay:        8.902ns  (logic 0.456ns (5.123%)  route 8.446ns (94.877%))
-  Logic Levels:           0  
-  Clock Path Skew:        0.137ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    5.185ns = ( 15.185 - 10.000 ) 
-    Source Clock Delay      (SCD):    5.227ns
-    Clock Pessimism Removal (CPR):    0.180ns
-  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter     (TSJ):    0.071ns
-    Total Input Jitter      (TIJ):    0.000ns
-    Discrete Jitter          (DJ):    0.000ns
-    Phase Error              (PE):    0.000ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock clk rise edge)        0.000     0.000 r  
-    E3                                                0.000     0.000 r  clk (IN)
-                         net (fo=0)                   0.000     0.000    clk
-    E3                   IBUF (Prop_ibuf_I_O)         1.482     1.482 r  clk_IBUF_inst/O
-                         net (fo=1, routed)           2.025     3.506    clk_IBUF
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.602 r  clk_IBUF_BUFG_inst/O
-                         net (fo=692, routed)         1.625     5.227    u_RAM_ReadEngine/clk_IBUF_BUFG
-    SLICE_X37Y101        FDRE                                         r  u_RAM_ReadEngine/RAMR_ReadAddr_reg[2]/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X37Y101        FDRE (Prop_fdre_C_Q)         0.456     5.683 r  u_RAM_ReadEngine/RAMR_ReadAddr_reg[2]/Q
-                         net (fo=130, routed)         8.446    14.129    u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[28].ram.r/prim_noinit.ram/addrb[2]
-    RAMB36_X2Y3          RAMB36E1                                     r  u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[28].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/ADDRBWRADDR[5]
-  -------------------------------------------------------------------    -------------------
-
-                         (clock clk rise edge)       10.000    10.000 r  
-    E3                                                0.000    10.000 r  clk (IN)
-                         net (fo=0)                   0.000    10.000    clk
-    E3                   IBUF (Prop_ibuf_I_O)         1.411    11.411 r  clk_IBUF_inst/O
-                         net (fo=1, routed)           1.920    13.331    clk_IBUF
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    13.422 r  clk_IBUF_BUFG_inst/O
-                         net (fo=692, routed)         1.762    15.185    u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[28].ram.r/prim_noinit.ram/clka
-    RAMB36_X2Y3          RAMB36E1                                     r  u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[28].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/CLKBWRCLK
-                         clock pessimism              0.180    15.365    
-                         clock uncertainty           -0.035    15.329    
-    RAMB36_X2Y3          RAMB36E1 (Setup_ramb36e1_CLKBWRCLK_ADDRBWRADDR[5])
-                                                     -0.566    14.763    u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[28].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram
-  -------------------------------------------------------------------
-                         required time                         14.763    
-                         arrival time                         -14.129    
-  -------------------------------------------------------------------
-                         slack                                  0.635    
-
-Slack (MET) :             0.642ns  (required time - arrival time)
-  Source:                 u_RAM_ReadEngine/RAMR_ReadAddr_reg[2]/C
-                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[22].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/ADDRBWRADDR[5]
-                            (rising edge-triggered cell RAMB36E1 clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Path Group:             clk
-  Path Type:              Setup (Max at Slow Process Corner)
-  Requirement:            10.000ns  (clk rise@10.000ns - clk rise@0.000ns)
-  Data Path Delay:        8.851ns  (logic 0.456ns (5.152%)  route 8.395ns (94.848%))
-  Logic Levels:           0  
-  Clock Path Skew:        0.094ns (DCD - SCD + CPR)
+  Clock Path Skew:        0.086ns (DCD - SCD + CPR)
     Destination Clock Delay (DCD):    5.142ns = ( 15.142 - 10.000 ) 
-    Source Clock Delay      (SCD):    5.227ns
-    Clock Pessimism Removal (CPR):    0.180ns
+    Source Clock Delay      (SCD):    5.243ns
+    Clock Pessimism Removal (CPR):    0.187ns
   Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
     Total Input Jitter      (TIJ):    0.000ns
@@ -326,12 +218,12 @@ Slack (MET) :             0.642ns  (required time - arrival time)
     E3                   IBUF (Prop_ibuf_I_O)         1.482     1.482 r  clk_IBUF_inst/O
                          net (fo=1, routed)           2.025     3.506    clk_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.602 r  clk_IBUF_BUFG_inst/O
-                         net (fo=692, routed)         1.625     5.227    u_RAM_ReadEngine/clk_IBUF_BUFG
-    SLICE_X37Y101        FDRE                                         r  u_RAM_ReadEngine/RAMR_ReadAddr_reg[2]/C
+                         net (fo=626, routed)         1.640     5.243    u_RAM_ReadEngine/clk_IBUF_BUFG
+    SLICE_X41Y99         FDRE                                         r  u_RAM_ReadEngine/RAMR_ReadAddr_reg[8]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X37Y101        FDRE (Prop_fdre_C_Q)         0.456     5.683 r  u_RAM_ReadEngine/RAMR_ReadAddr_reg[2]/Q
-                         net (fo=130, routed)         8.395    14.078    u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[22].ram.r/prim_noinit.ram/addrb[2]
-    RAMB36_X1Y0          RAMB36E1                                     r  u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[22].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/ADDRBWRADDR[5]
+    SLICE_X41Y99         FDRE (Prop_fdre_C_Q)         0.456     5.699 r  u_RAM_ReadEngine/RAMR_ReadAddr_reg[8]/Q
+                         net (fo=130, routed)         8.446    14.145    u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/prim_noinit.ram/addrb[8]
+    RAMB36_X1Y0          RAMB36E1                                     r  u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/ADDRBWRADDR[11]
   -------------------------------------------------------------------    -------------------
 
                          (clock clk rise edge)       10.000    10.000 r  
@@ -340,32 +232,32 @@ Slack (MET) :             0.642ns  (required time - arrival time)
     E3                   IBUF (Prop_ibuf_I_O)         1.411    11.411 r  clk_IBUF_inst/O
                          net (fo=1, routed)           1.920    13.331    clk_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    13.422 r  clk_IBUF_BUFG_inst/O
-                         net (fo=692, routed)         1.719    15.142    u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[22].ram.r/prim_noinit.ram/clka
-    RAMB36_X1Y0          RAMB36E1                                     r  u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[22].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/CLKBWRCLK
-                         clock pessimism              0.180    15.322    
-                         clock uncertainty           -0.035    15.286    
-    RAMB36_X1Y0          RAMB36E1 (Setup_ramb36e1_CLKBWRCLK_ADDRBWRADDR[5])
-                                                     -0.566    14.720    u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[22].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram
+                         net (fo=626, routed)         1.719    15.142    u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/prim_noinit.ram/clka
+    RAMB36_X1Y0          RAMB36E1                                     r  u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/CLKBWRCLK
+                         clock pessimism              0.187    15.329    
+                         clock uncertainty           -0.035    15.293    
+    RAMB36_X1Y0          RAMB36E1 (Setup_ramb36e1_CLKBWRCLK_ADDRBWRADDR[11])
+                                                     -0.566    14.727    u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram
   -------------------------------------------------------------------
-                         required time                         14.720    
-                         arrival time                         -14.078    
+                         required time                         14.727    
+                         arrival time                         -14.145    
   -------------------------------------------------------------------
-                         slack                                  0.642    
+                         slack                                  0.583    
 
 Slack (MET) :             0.652ns  (required time - arrival time)
-  Source:                 u_ADCInterface/RAMW_Data_reg[15]/C
+  Source:                 u_RAM_WriteEngine/RAMW_WriteAddr_reg[11]/C
                             (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[68].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/DIADI[7]
+  Destination:            u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/ADDRARDADDR[14]
                             (rising edge-triggered cell RAMB36E1 clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             clk
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            10.000ns  (clk rise@10.000ns - clk rise@0.000ns)
-  Data Path Delay:        8.676ns  (logic 0.456ns (5.256%)  route 8.220ns (94.744%))
+  Data Path Delay:        8.897ns  (logic 0.456ns (5.125%)  route 8.441ns (94.875%))
   Logic Levels:           0  
-  Clock Path Skew:        0.101ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    5.134ns = ( 15.134 - 10.000 ) 
+  Clock Path Skew:        0.150ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.192ns = ( 15.192 - 10.000 ) 
     Source Clock Delay      (SCD):    5.221ns
-    Clock Pessimism Removal (CPR):    0.188ns
+    Clock Pessimism Removal (CPR):    0.180ns
   Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
     Total Input Jitter      (TIJ):    0.000ns
@@ -380,12 +272,12 @@ Slack (MET) :             0.652ns  (required time - arrival time)
     E3                   IBUF (Prop_ibuf_I_O)         1.482     1.482 r  clk_IBUF_inst/O
                          net (fo=1, routed)           2.025     3.506    clk_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.602 r  clk_IBUF_BUFG_inst/O
-                         net (fo=692, routed)         1.619     5.221    u_ADCInterface/clk_IBUF_BUFG
-    SLICE_X47Y102        FDRE                                         r  u_ADCInterface/RAMW_Data_reg[15]/C
+                         net (fo=626, routed)         1.619     5.221    u_RAM_WriteEngine/clk_IBUF_BUFG
+    SLICE_X45Y104        FDRE                                         r  u_RAM_WriteEngine/RAMW_WriteAddr_reg[11]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X47Y102        FDRE (Prop_fdre_C_Q)         0.456     5.677 r  u_ADCInterface/RAMW_Data_reg[15]/Q
-                         net (fo=64, routed)          8.220    13.898    u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[68].ram.r/prim_noinit.ram/dina[7]
-    RAMB36_X1Y38         RAMB36E1                                     r  u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[68].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/DIADI[7]
+    SLICE_X45Y104        FDRE (Prop_fdre_C_Q)         0.456     5.677 r  u_RAM_WriteEngine/RAMW_WriteAddr_reg[11]/Q
+                         net (fo=133, routed)         8.441    14.118    u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/prim_noinit.ram/addra[11]
+    RAMB36_X2Y0          RAMB36E1                                     r  u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/ADDRARDADDR[14]
   -------------------------------------------------------------------    -------------------
 
                          (clock clk rise edge)       10.000    10.000 r  
@@ -394,193 +286,31 @@ Slack (MET) :             0.652ns  (required time - arrival time)
     E3                   IBUF (Prop_ibuf_I_O)         1.411    11.411 r  clk_IBUF_inst/O
                          net (fo=1, routed)           1.920    13.331    clk_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    13.422 r  clk_IBUF_BUFG_inst/O
-                         net (fo=692, routed)         1.712    15.134    u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[68].ram.r/prim_noinit.ram/clka
-    RAMB36_X1Y38         RAMB36E1                                     r  u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[68].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/CLKARDCLK
-                         clock pessimism              0.188    15.322    
-                         clock uncertainty           -0.035    15.287    
-    RAMB36_X1Y38         RAMB36E1 (Setup_ramb36e1_CLKARDCLK_DIADI[7])
-                                                     -0.737    14.550    u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[68].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram
+                         net (fo=626, routed)         1.769    15.192    u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/prim_noinit.ram/clka
+    RAMB36_X2Y0          RAMB36E1                                     r  u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/CLKARDCLK
+                         clock pessimism              0.180    15.372    
+                         clock uncertainty           -0.035    15.336    
+    RAMB36_X2Y0          RAMB36E1 (Setup_ramb36e1_CLKARDCLK_ADDRARDADDR[14])
+                                                     -0.566    14.770    u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram
   -------------------------------------------------------------------
-                         required time                         14.550    
-                         arrival time                         -13.898    
+                         required time                         14.770    
+                         arrival time                         -14.118    
   -------------------------------------------------------------------
                          slack                                  0.652    
 
-Slack (MET) :             0.719ns  (required time - arrival time)
-  Source:                 u_ADCInterface/RAMW_Data_reg[12]/C
+Slack (MET) :             0.734ns  (required time - arrival time)
+  Source:                 u_RAM_WriteEngine/RAMW_WriteAddr_reg[7]/C
                             (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[106].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/DIADI[4]
+  Destination:            u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[88].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/ADDRARDADDR[10]
                             (rising edge-triggered cell RAMB36E1 clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             clk
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            10.000ns  (clk rise@10.000ns - clk rise@0.000ns)
-  Data Path Delay:        8.606ns  (logic 0.518ns (6.019%)  route 8.088ns (93.981%))
+  Data Path Delay:        8.779ns  (logic 0.456ns (5.194%)  route 8.323ns (94.806%))
   Logic Levels:           0  
-  Clock Path Skew:        0.098ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    5.131ns = ( 15.131 - 10.000 ) 
+  Clock Path Skew:        0.114ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.156ns = ( 15.156 - 10.000 ) 
     Source Clock Delay      (SCD):    5.221ns
-    Clock Pessimism Removal (CPR):    0.188ns
-  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter     (TSJ):    0.071ns
-    Total Input Jitter      (TIJ):    0.000ns
-    Discrete Jitter          (DJ):    0.000ns
-    Phase Error              (PE):    0.000ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock clk rise edge)        0.000     0.000 r  
-    E3                                                0.000     0.000 r  clk (IN)
-                         net (fo=0)                   0.000     0.000    clk
-    E3                   IBUF (Prop_ibuf_I_O)         1.482     1.482 r  clk_IBUF_inst/O
-                         net (fo=1, routed)           2.025     3.506    clk_IBUF
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.602 r  clk_IBUF_BUFG_inst/O
-                         net (fo=692, routed)         1.619     5.221    u_ADCInterface/clk_IBUF_BUFG
-    SLICE_X46Y102        FDRE                                         r  u_ADCInterface/RAMW_Data_reg[12]/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X46Y102        FDRE (Prop_fdre_C_Q)         0.518     5.739 r  u_ADCInterface/RAMW_Data_reg[12]/Q
-                         net (fo=64, routed)          8.088    13.827    u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[106].ram.r/prim_noinit.ram/dina[4]
-    RAMB36_X1Y37         RAMB36E1                                     r  u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[106].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/DIADI[4]
-  -------------------------------------------------------------------    -------------------
-
-                         (clock clk rise edge)       10.000    10.000 r  
-    E3                                                0.000    10.000 r  clk (IN)
-                         net (fo=0)                   0.000    10.000    clk
-    E3                   IBUF (Prop_ibuf_I_O)         1.411    11.411 r  clk_IBUF_inst/O
-                         net (fo=1, routed)           1.920    13.331    clk_IBUF
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    13.422 r  clk_IBUF_BUFG_inst/O
-                         net (fo=692, routed)         1.709    15.131    u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[106].ram.r/prim_noinit.ram/clka
-    RAMB36_X1Y37         RAMB36E1                                     r  u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[106].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/CLKARDCLK
-                         clock pessimism              0.188    15.319    
-                         clock uncertainty           -0.035    15.284    
-    RAMB36_X1Y37         RAMB36E1 (Setup_ramb36e1_CLKARDCLK_DIADI[4])
-                                                     -0.737    14.547    u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[106].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram
-  -------------------------------------------------------------------
-                         required time                         14.547    
-                         arrival time                         -13.827    
-  -------------------------------------------------------------------
-                         slack                                  0.719    
-
-Slack (MET) :             0.726ns  (required time - arrival time)
-  Source:                 u_ADCInterface/RAMW_Data_reg[15]/C
-                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[98].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/DIADI[7]
-                            (rising edge-triggered cell RAMB36E1 clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Path Group:             clk
-  Path Type:              Setup (Max at Slow Process Corner)
-  Requirement:            10.000ns  (clk rise@10.000ns - clk rise@0.000ns)
-  Data Path Delay:        8.651ns  (logic 0.456ns (5.271%)  route 8.195ns (94.729%))
-  Logic Levels:           0  
-  Clock Path Skew:        0.149ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    5.182ns = ( 15.182 - 10.000 ) 
-    Source Clock Delay      (SCD):    5.221ns
-    Clock Pessimism Removal (CPR):    0.188ns
-  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter     (TSJ):    0.071ns
-    Total Input Jitter      (TIJ):    0.000ns
-    Discrete Jitter          (DJ):    0.000ns
-    Phase Error              (PE):    0.000ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock clk rise edge)        0.000     0.000 r  
-    E3                                                0.000     0.000 r  clk (IN)
-                         net (fo=0)                   0.000     0.000    clk
-    E3                   IBUF (Prop_ibuf_I_O)         1.482     1.482 r  clk_IBUF_inst/O
-                         net (fo=1, routed)           2.025     3.506    clk_IBUF
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.602 r  clk_IBUF_BUFG_inst/O
-                         net (fo=692, routed)         1.619     5.221    u_ADCInterface/clk_IBUF_BUFG
-    SLICE_X47Y102        FDRE                                         r  u_ADCInterface/RAMW_Data_reg[15]/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X47Y102        FDRE (Prop_fdre_C_Q)         0.456     5.677 r  u_ADCInterface/RAMW_Data_reg[15]/Q
-                         net (fo=64, routed)          8.195    13.872    u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[98].ram.r/prim_noinit.ram/dina[7]
-    RAMB36_X2Y37         RAMB36E1                                     r  u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[98].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/DIADI[7]
-  -------------------------------------------------------------------    -------------------
-
-                         (clock clk rise edge)       10.000    10.000 r  
-    E3                                                0.000    10.000 r  clk (IN)
-                         net (fo=0)                   0.000    10.000    clk
-    E3                   IBUF (Prop_ibuf_I_O)         1.411    11.411 r  clk_IBUF_inst/O
-                         net (fo=1, routed)           1.920    13.331    clk_IBUF
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    13.422 r  clk_IBUF_BUFG_inst/O
-                         net (fo=692, routed)         1.760    15.182    u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[98].ram.r/prim_noinit.ram/clka
-    RAMB36_X2Y37         RAMB36E1                                     r  u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[98].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/CLKARDCLK
-                         clock pessimism              0.188    15.370    
-                         clock uncertainty           -0.035    15.335    
-    RAMB36_X2Y37         RAMB36E1 (Setup_ramb36e1_CLKARDCLK_DIADI[7])
-                                                     -0.737    14.598    u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[98].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram
-  -------------------------------------------------------------------
-                         required time                         14.598    
-                         arrival time                         -13.872    
-  -------------------------------------------------------------------
-                         slack                                  0.726    
-
-Slack (MET) :             0.744ns  (required time - arrival time)
-  Source:                 u_ADCInterface/RAMW_Data_reg[13]/C
-                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[74].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/DIADI[5]
-                            (rising edge-triggered cell RAMB36E1 clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Path Group:             clk
-  Path Type:              Setup (Max at Slow Process Corner)
-  Requirement:            10.000ns  (clk rise@10.000ns - clk rise@0.000ns)
-  Data Path Delay:        8.407ns  (logic 0.478ns (5.686%)  route 7.929ns (94.314%))
-  Logic Levels:           0  
-  Clock Path Skew:        0.094ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    5.127ns = ( 15.127 - 10.000 ) 
-    Source Clock Delay      (SCD):    5.221ns
-    Clock Pessimism Removal (CPR):    0.188ns
-  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter     (TSJ):    0.071ns
-    Total Input Jitter      (TIJ):    0.000ns
-    Discrete Jitter          (DJ):    0.000ns
-    Phase Error              (PE):    0.000ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock clk rise edge)        0.000     0.000 r  
-    E3                                                0.000     0.000 r  clk (IN)
-                         net (fo=0)                   0.000     0.000    clk
-    E3                   IBUF (Prop_ibuf_I_O)         1.482     1.482 r  clk_IBUF_inst/O
-                         net (fo=1, routed)           2.025     3.506    clk_IBUF
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.602 r  clk_IBUF_BUFG_inst/O
-                         net (fo=692, routed)         1.619     5.221    u_ADCInterface/clk_IBUF_BUFG
-    SLICE_X46Y102        FDRE                                         r  u_ADCInterface/RAMW_Data_reg[13]/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X46Y102        FDRE (Prop_fdre_C_Q)         0.478     5.699 r  u_ADCInterface/RAMW_Data_reg[13]/Q
-                         net (fo=64, routed)          7.929    13.628    u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[74].ram.r/prim_noinit.ram/dina[5]
-    RAMB36_X1Y36         RAMB36E1                                     r  u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[74].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/DIADI[5]
-  -------------------------------------------------------------------    -------------------
-
-                         (clock clk rise edge)       10.000    10.000 r  
-    E3                                                0.000    10.000 r  clk (IN)
-                         net (fo=0)                   0.000    10.000    clk
-    E3                   IBUF (Prop_ibuf_I_O)         1.411    11.411 r  clk_IBUF_inst/O
-                         net (fo=1, routed)           1.920    13.331    clk_IBUF
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    13.422 r  clk_IBUF_BUFG_inst/O
-                         net (fo=692, routed)         1.705    15.127    u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[74].ram.r/prim_noinit.ram/clka
-    RAMB36_X1Y36         RAMB36E1                                     r  u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[74].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/CLKARDCLK
-                         clock pessimism              0.188    15.315    
-                         clock uncertainty           -0.035    15.280    
-    RAMB36_X1Y36         RAMB36E1 (Setup_ramb36e1_CLKARDCLK_DIADI[5])
-                                                     -0.908    14.372    u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[74].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram
-  -------------------------------------------------------------------
-                         required time                         14.372    
-                         arrival time                         -13.628    
-  -------------------------------------------------------------------
-                         slack                                  0.744    
-
-Slack (MET) :             0.752ns  (required time - arrival time)
-  Source:                 u_RAM_WriteEngine/RAMW_WriteAddr_reg[8]/C
-                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[22].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/ADDRARDADDR[11]
-                            (rising edge-triggered cell RAMB36E1 clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Path Group:             clk
-  Path Type:              Setup (Max at Slow Process Corner)
-  Requirement:            10.000ns  (clk rise@10.000ns - clk rise@0.000ns)
-  Data Path Delay:        8.739ns  (logic 0.518ns (5.927%)  route 8.221ns (94.073%))
-  Logic Levels:           0  
-  Clock Path Skew:        0.092ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    5.141ns = ( 15.141 - 10.000 ) 
-    Source Clock Delay      (SCD):    5.228ns
     Clock Pessimism Removal (CPR):    0.180ns
   Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
@@ -596,12 +326,12 @@ Slack (MET) :             0.752ns  (required time - arrival time)
     E3                   IBUF (Prop_ibuf_I_O)         1.482     1.482 r  clk_IBUF_inst/O
                          net (fo=1, routed)           2.025     3.506    clk_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.602 r  clk_IBUF_BUFG_inst/O
-                         net (fo=692, routed)         1.626     5.228    u_RAM_WriteEngine/clk_IBUF_BUFG
-    SLICE_X30Y101        FDRE                                         r  u_RAM_WriteEngine/RAMW_WriteAddr_reg[8]/C
+                         net (fo=626, routed)         1.619     5.221    u_RAM_WriteEngine/clk_IBUF_BUFG
+    SLICE_X45Y103        FDRE                                         r  u_RAM_WriteEngine/RAMW_WriteAddr_reg[7]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X30Y101        FDRE (Prop_fdre_C_Q)         0.518     5.746 r  u_RAM_WriteEngine/RAMW_WriteAddr_reg[8]/Q
-                         net (fo=133, routed)         8.221    13.967    u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[22].ram.r/prim_noinit.ram/addra[8]
-    RAMB36_X1Y0          RAMB36E1                                     r  u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[22].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/ADDRARDADDR[11]
+    SLICE_X45Y103        FDRE (Prop_fdre_C_Q)         0.456     5.677 r  u_RAM_WriteEngine/RAMW_WriteAddr_reg[7]/Q
+                         net (fo=133, routed)         8.323    14.000    u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[88].ram.r/prim_noinit.ram/addra[7]
+    RAMB36_X0Y1          RAMB36E1                                     r  u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[88].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/ADDRARDADDR[10]
   -------------------------------------------------------------------    -------------------
 
                          (clock clk rise edge)       10.000    10.000 r  
@@ -610,31 +340,85 @@ Slack (MET) :             0.752ns  (required time - arrival time)
     E3                   IBUF (Prop_ibuf_I_O)         1.411    11.411 r  clk_IBUF_inst/O
                          net (fo=1, routed)           1.920    13.331    clk_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    13.422 r  clk_IBUF_BUFG_inst/O
-                         net (fo=692, routed)         1.718    15.141    u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[22].ram.r/prim_noinit.ram/clka
-    RAMB36_X1Y0          RAMB36E1                                     r  u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[22].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/CLKARDCLK
+                         net (fo=626, routed)         1.733    15.156    u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[88].ram.r/prim_noinit.ram/clka
+    RAMB36_X0Y1          RAMB36E1                                     r  u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[88].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/CLKARDCLK
+                         clock pessimism              0.180    15.336    
+                         clock uncertainty           -0.035    15.300    
+    RAMB36_X0Y1          RAMB36E1 (Setup_ramb36e1_CLKARDCLK_ADDRARDADDR[10])
+                                                     -0.566    14.734    u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[88].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram
+  -------------------------------------------------------------------
+                         required time                         14.734    
+                         arrival time                         -14.000    
+  -------------------------------------------------------------------
+                         slack                                  0.734    
+
+Slack (MET) :             0.735ns  (required time - arrival time)
+  Source:                 u_RAM_WriteEngine/RAMW_WriteAddr_reg[7]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/ADDRARDADDR[10]
+                            (rising edge-triggered cell RAMB36E1 clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk rise@10.000ns - clk rise@0.000ns)
+  Data Path Delay:        8.763ns  (logic 0.456ns (5.204%)  route 8.307ns (94.796%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.099ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.141ns = ( 15.141 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.221ns
+    Clock Pessimism Removal (CPR):    0.180ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         1.482     1.482 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.025     3.506    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.602 r  clk_IBUF_BUFG_inst/O
+                         net (fo=626, routed)         1.619     5.221    u_RAM_WriteEngine/clk_IBUF_BUFG
+    SLICE_X45Y103        FDRE                                         r  u_RAM_WriteEngine/RAMW_WriteAddr_reg[7]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X45Y103        FDRE (Prop_fdre_C_Q)         0.456     5.677 r  u_RAM_WriteEngine/RAMW_WriteAddr_reg[7]/Q
+                         net (fo=133, routed)         8.307    13.985    u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/prim_noinit.ram/addra[7]
+    RAMB36_X1Y0          RAMB36E1                                     r  u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/ADDRARDADDR[10]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)       10.000    10.000 r  
+    E3                                                0.000    10.000 r  clk (IN)
+                         net (fo=0)                   0.000    10.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         1.411    11.411 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.920    13.331    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    13.422 r  clk_IBUF_BUFG_inst/O
+                         net (fo=626, routed)         1.718    15.141    u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/prim_noinit.ram/clka
+    RAMB36_X1Y0          RAMB36E1                                     r  u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/CLKARDCLK
                          clock pessimism              0.180    15.321    
                          clock uncertainty           -0.035    15.285    
-    RAMB36_X1Y0          RAMB36E1 (Setup_ramb36e1_CLKARDCLK_ADDRARDADDR[11])
-                                                     -0.566    14.719    u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[22].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram
+    RAMB36_X1Y0          RAMB36E1 (Setup_ramb36e1_CLKARDCLK_ADDRARDADDR[10])
+                                                     -0.566    14.719    u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram
   -------------------------------------------------------------------
                          required time                         14.719    
-                         arrival time                         -13.967    
+                         arrival time                         -13.985    
   -------------------------------------------------------------------
-                         slack                                  0.752    
+                         slack                                  0.735    
 
-Slack (MET) :             0.758ns  (required time - arrival time)
-  Source:                 u_ADCInterface/RAMW_Data_reg[0]/C
+Slack (MET) :             0.839ns  (required time - arrival time)
+  Source:                 u_ADCInterface/RAMW_Data_reg[6]/C
                             (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[26].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/DIADI[0]
+  Destination:            u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/DIADI[6]
                             (rising edge-triggered cell RAMB36E1 clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             clk
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            10.000ns  (clk rise@10.000ns - clk rise@0.000ns)
-  Data Path Delay:        8.619ns  (logic 0.456ns (5.291%)  route 8.163ns (94.709%))
+  Data Path Delay:        8.363ns  (logic 0.419ns (5.010%)  route 7.944ns (94.990%))
   Logic Levels:           0  
   Clock Path Skew:        0.149ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    5.192ns = ( 15.192 - 10.000 ) 
-    Source Clock Delay      (SCD):    5.222ns
+    Destination Clock Delay (DCD):    5.191ns = ( 15.191 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.221ns
     Clock Pessimism Removal (CPR):    0.180ns
   Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
@@ -650,12 +434,12 @@ Slack (MET) :             0.758ns  (required time - arrival time)
     E3                   IBUF (Prop_ibuf_I_O)         1.482     1.482 r  clk_IBUF_inst/O
                          net (fo=1, routed)           2.025     3.506    clk_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.602 r  clk_IBUF_BUFG_inst/O
-                         net (fo=692, routed)         1.620     5.222    u_ADCInterface/clk_IBUF_BUFG
-    SLICE_X45Y101        FDRE                                         r  u_ADCInterface/RAMW_Data_reg[0]/C
+                         net (fo=626, routed)         1.619     5.221    u_ADCInterface/clk_IBUF_BUFG
+    SLICE_X43Y105        FDRE                                         r  u_ADCInterface/RAMW_Data_reg[6]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X45Y101        FDRE (Prop_fdre_C_Q)         0.456     5.678 r  u_ADCInterface/RAMW_Data_reg[0]/Q
-                         net (fo=64, routed)          8.163    13.842    u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[26].ram.r/prim_noinit.ram/dina[0]
-    RAMB36_X2Y0          RAMB36E1                                     r  u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[26].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/DIADI[0]
+    SLICE_X43Y105        FDRE (Prop_fdre_C_Q)         0.419     5.640 r  u_ADCInterface/RAMW_Data_reg[6]/Q
+                         net (fo=64, routed)          7.944    13.584    u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/dina[6]
+    RAMB36_X2Y1          RAMB36E1                                     r  u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/DIADI[6]
   -------------------------------------------------------------------    -------------------
 
                          (clock clk rise edge)       10.000    10.000 r  
@@ -664,30 +448,138 @@ Slack (MET) :             0.758ns  (required time - arrival time)
     E3                   IBUF (Prop_ibuf_I_O)         1.411    11.411 r  clk_IBUF_inst/O
                          net (fo=1, routed)           1.920    13.331    clk_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    13.422 r  clk_IBUF_BUFG_inst/O
-                         net (fo=692, routed)         1.769    15.192    u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[26].ram.r/prim_noinit.ram/clka
-    RAMB36_X2Y0          RAMB36E1                                     r  u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[26].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/CLKARDCLK
-                         clock pessimism              0.180    15.372    
-                         clock uncertainty           -0.035    15.336    
-    RAMB36_X2Y0          RAMB36E1 (Setup_ramb36e1_CLKARDCLK_DIADI[0])
-                                                     -0.737    14.599    u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[26].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram
+                         net (fo=626, routed)         1.768    15.191    u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/clka
+    RAMB36_X2Y1          RAMB36E1                                     r  u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/CLKARDCLK
+                         clock pessimism              0.180    15.371    
+                         clock uncertainty           -0.035    15.335    
+    RAMB36_X2Y1          RAMB36E1 (Setup_ramb36e1_CLKARDCLK_DIADI[6])
+                                                     -0.912    14.423    u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram
   -------------------------------------------------------------------
-                         required time                         14.599    
-                         arrival time                         -13.842    
+                         required time                         14.423    
+                         arrival time                         -13.584    
   -------------------------------------------------------------------
-                         slack                                  0.758    
+                         slack                                  0.839    
 
-Slack (MET) :             0.763ns  (required time - arrival time)
-  Source:                 u_ADCInterface/RAMW_Data_reg[15]/C
+Slack (MET) :             0.850ns  (required time - arrival time)
+  Source:                 u_RAM_ReadEngine/RAMR_ReadAddr_reg[2]/C
                             (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[64].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/DIADI[7]
+  Destination:            u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[16].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/ADDRBWRADDR[5]
                             (rising edge-triggered cell RAMB36E1 clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             clk
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            10.000ns  (clk rise@10.000ns - clk rise@0.000ns)
-  Data Path Delay:        8.566ns  (logic 0.456ns (5.323%)  route 8.110ns (94.677%))
+  Data Path Delay:        8.661ns  (logic 0.456ns (5.265%)  route 8.205ns (94.735%))
   Logic Levels:           0  
-  Clock Path Skew:        0.102ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    5.135ns = ( 15.135 - 10.000 ) 
+  Clock Path Skew:        0.112ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.154ns = ( 15.154 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.221ns
+    Clock Pessimism Removal (CPR):    0.180ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         1.482     1.482 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.025     3.506    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.602 r  clk_IBUF_BUFG_inst/O
+                         net (fo=626, routed)         1.619     5.221    u_RAM_ReadEngine/clk_IBUF_BUFG
+    SLICE_X47Y102        FDRE                                         r  u_RAM_ReadEngine/RAMR_ReadAddr_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X47Y102        FDRE (Prop_fdre_C_Q)         0.456     5.677 r  u_RAM_ReadEngine/RAMR_ReadAddr_reg[2]/Q
+                         net (fo=130, routed)         8.205    13.883    u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[16].ram.r/prim_noinit.ram/addrb[2]
+    RAMB36_X0Y2          RAMB36E1                                     r  u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[16].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/ADDRBWRADDR[5]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)       10.000    10.000 r  
+    E3                                                0.000    10.000 r  clk (IN)
+                         net (fo=0)                   0.000    10.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         1.411    11.411 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.920    13.331    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    13.422 r  clk_IBUF_BUFG_inst/O
+                         net (fo=626, routed)         1.731    15.154    u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[16].ram.r/prim_noinit.ram/clka
+    RAMB36_X0Y2          RAMB36E1                                     r  u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[16].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/CLKBWRCLK
+                         clock pessimism              0.180    15.334    
+                         clock uncertainty           -0.035    15.298    
+    RAMB36_X0Y2          RAMB36E1 (Setup_ramb36e1_CLKBWRCLK_ADDRBWRADDR[5])
+                                                     -0.566    14.732    u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[16].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram
+  -------------------------------------------------------------------
+                         required time                         14.732    
+                         arrival time                         -13.883    
+  -------------------------------------------------------------------
+                         slack                                  0.850    
+
+Slack (MET) :             0.856ns  (required time - arrival time)
+  Source:                 u_ADCInterface/RAMW_Data_reg[13]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[106].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/DIADI[5]
+                            (rising edge-triggered cell RAMB36E1 clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk rise@10.000ns - clk rise@0.000ns)
+  Data Path Delay:        8.379ns  (logic 0.518ns (6.182%)  route 7.861ns (93.818%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.007ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.039ns = ( 15.039 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.220ns
+    Clock Pessimism Removal (CPR):    0.188ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         1.482     1.482 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.025     3.506    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.602 r  clk_IBUF_BUFG_inst/O
+                         net (fo=626, routed)         1.618     5.220    u_ADCInterface/clk_IBUF_BUFG
+    SLICE_X46Y105        FDRE                                         r  u_ADCInterface/RAMW_Data_reg[13]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X46Y105        FDRE (Prop_fdre_C_Q)         0.518     5.738 r  u_ADCInterface/RAMW_Data_reg[13]/Q
+                         net (fo=64, routed)          7.861    13.599    u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[106].ram.r/prim_noinit.ram/dina[5]
+    RAMB36_X3Y25         RAMB36E1                                     r  u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[106].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/DIADI[5]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)       10.000    10.000 r  
+    E3                                                0.000    10.000 r  clk (IN)
+                         net (fo=0)                   0.000    10.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         1.411    11.411 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.920    13.331    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    13.422 r  clk_IBUF_BUFG_inst/O
+                         net (fo=626, routed)         1.617    15.039    u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[106].ram.r/prim_noinit.ram/clka
+    RAMB36_X3Y25         RAMB36E1                                     r  u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[106].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/CLKARDCLK
+                         clock pessimism              0.188    15.227    
+                         clock uncertainty           -0.035    15.192    
+    RAMB36_X3Y25         RAMB36E1 (Setup_ramb36e1_CLKARDCLK_DIADI[5])
+                                                     -0.737    14.455    u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[106].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram
+  -------------------------------------------------------------------
+                         required time                         14.455    
+                         arrival time                         -13.599    
+  -------------------------------------------------------------------
+                         slack                                  0.856    
+
+Slack (MET) :             0.858ns  (required time - arrival time)
+  Source:                 u_ADCInterface/RAMW_Data_reg[8]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[106].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/DIADI[0]
+                            (rising edge-triggered cell RAMB36E1 clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk rise@10.000ns - clk rise@0.000ns)
+  Data Path Delay:        8.204ns  (logic 0.419ns (5.107%)  route 7.785ns (94.893%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.006ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.039ns = ( 15.039 - 10.000 ) 
     Source Clock Delay      (SCD):    5.221ns
     Clock Pessimism Removal (CPR):    0.188ns
   Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
@@ -704,12 +596,12 @@ Slack (MET) :             0.763ns  (required time - arrival time)
     E3                   IBUF (Prop_ibuf_I_O)         1.482     1.482 r  clk_IBUF_inst/O
                          net (fo=1, routed)           2.025     3.506    clk_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.602 r  clk_IBUF_BUFG_inst/O
-                         net (fo=692, routed)         1.619     5.221    u_ADCInterface/clk_IBUF_BUFG
-    SLICE_X47Y102        FDRE                                         r  u_ADCInterface/RAMW_Data_reg[15]/C
+                         net (fo=626, routed)         1.619     5.221    u_ADCInterface/clk_IBUF_BUFG
+    SLICE_X43Y105        FDRE                                         r  u_ADCInterface/RAMW_Data_reg[8]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X47Y102        FDRE (Prop_fdre_C_Q)         0.456     5.677 r  u_ADCInterface/RAMW_Data_reg[15]/Q
-                         net (fo=64, routed)          8.110    13.788    u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[64].ram.r/prim_noinit.ram/dina[7]
-    RAMB36_X1Y39         RAMB36E1                                     r  u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[64].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/DIADI[7]
+    SLICE_X43Y105        FDRE (Prop_fdre_C_Q)         0.419     5.640 r  u_ADCInterface/RAMW_Data_reg[8]/Q
+                         net (fo=64, routed)          7.785    13.426    u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[106].ram.r/prim_noinit.ram/dina[0]
+    RAMB36_X3Y25         RAMB36E1                                     r  u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[106].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/DIADI[0]
   -------------------------------------------------------------------    -------------------
 
                          (clock clk rise edge)       10.000    10.000 r  
@@ -718,17 +610,125 @@ Slack (MET) :             0.763ns  (required time - arrival time)
     E3                   IBUF (Prop_ibuf_I_O)         1.411    11.411 r  clk_IBUF_inst/O
                          net (fo=1, routed)           1.920    13.331    clk_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    13.422 r  clk_IBUF_BUFG_inst/O
-                         net (fo=692, routed)         1.713    15.135    u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[64].ram.r/prim_noinit.ram/clka
-    RAMB36_X1Y39         RAMB36E1                                     r  u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[64].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/CLKARDCLK
-                         clock pessimism              0.188    15.323    
-                         clock uncertainty           -0.035    15.288    
-    RAMB36_X1Y39         RAMB36E1 (Setup_ramb36e1_CLKARDCLK_DIADI[7])
-                                                     -0.737    14.551    u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[64].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram
+                         net (fo=626, routed)         1.617    15.039    u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[106].ram.r/prim_noinit.ram/clka
+    RAMB36_X3Y25         RAMB36E1                                     r  u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[106].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/CLKARDCLK
+                         clock pessimism              0.188    15.227    
+                         clock uncertainty           -0.035    15.192    
+    RAMB36_X3Y25         RAMB36E1 (Setup_ramb36e1_CLKARDCLK_DIADI[0])
+                                                     -0.909    14.283    u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[106].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram
   -------------------------------------------------------------------
-                         required time                         14.551    
-                         arrival time                         -13.788    
+                         required time                         14.283    
+                         arrival time                         -13.426    
   -------------------------------------------------------------------
-                         slack                                  0.763    
+                         slack                                  0.858    
+
+Slack (MET) :             0.864ns  (required time - arrival time)
+  Source:                 u_ADCInterface/RAMW_Data_reg[11]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[69].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/DIADI[3]
+                            (rising edge-triggered cell RAMB36E1 clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk rise@10.000ns - clk rise@0.000ns)
+  Data Path Delay:        8.379ns  (logic 0.518ns (6.182%)  route 7.861ns (93.818%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.016ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.056ns = ( 15.056 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.220ns
+    Clock Pessimism Removal (CPR):    0.180ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         1.482     1.482 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.025     3.506    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.602 r  clk_IBUF_BUFG_inst/O
+                         net (fo=626, routed)         1.618     5.220    u_ADCInterface/clk_IBUF_BUFG
+    SLICE_X46Y105        FDRE                                         r  u_ADCInterface/RAMW_Data_reg[11]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X46Y105        FDRE (Prop_fdre_C_Q)         0.518     5.738 r  u_ADCInterface/RAMW_Data_reg[11]/Q
+                         net (fo=64, routed)          7.861    13.600    u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[69].ram.r/prim_noinit.ram/dina[3]
+    RAMB36_X3Y15         RAMB36E1                                     r  u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[69].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/DIADI[3]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)       10.000    10.000 r  
+    E3                                                0.000    10.000 r  clk (IN)
+                         net (fo=0)                   0.000    10.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         1.411    11.411 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.920    13.331    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    13.422 r  clk_IBUF_BUFG_inst/O
+                         net (fo=626, routed)         1.634    15.056    u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[69].ram.r/prim_noinit.ram/clka
+    RAMB36_X3Y15         RAMB36E1                                     r  u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[69].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/CLKARDCLK
+                         clock pessimism              0.180    15.236    
+                         clock uncertainty           -0.035    15.201    
+    RAMB36_X3Y15         RAMB36E1 (Setup_ramb36e1_CLKARDCLK_DIADI[3])
+                                                     -0.737    14.464    u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[69].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram
+  -------------------------------------------------------------------
+                         required time                         14.464    
+                         arrival time                         -13.600    
+  -------------------------------------------------------------------
+                         slack                                  0.864    
+
+Slack (MET) :             0.865ns  (required time - arrival time)
+  Source:                 u_ADCInterface/RAMW_Data_reg[10]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[113].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/DIADI[2]
+                            (rising edge-triggered cell RAMB36E1 clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk rise@10.000ns - clk rise@0.000ns)
+  Data Path Delay:        8.380ns  (logic 0.518ns (6.182%)  route 7.862ns (93.818%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.017ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.050ns = ( 15.050 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.221ns
+    Clock Pessimism Removal (CPR):    0.188ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         1.482     1.482 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.025     3.506    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.602 r  clk_IBUF_BUFG_inst/O
+                         net (fo=626, routed)         1.619     5.221    u_ADCInterface/clk_IBUF_BUFG
+    SLICE_X42Y106        FDRE                                         r  u_ADCInterface/RAMW_Data_reg[10]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X42Y106        FDRE (Prop_fdre_C_Q)         0.518     5.739 r  u_ADCInterface/RAMW_Data_reg[10]/Q
+                         net (fo=64, routed)          7.862    13.601    u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[113].ram.r/prim_noinit.ram/dina[2]
+    RAMB36_X3Y21         RAMB36E1                                     r  u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[113].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/DIADI[2]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)       10.000    10.000 r  
+    E3                                                0.000    10.000 r  clk (IN)
+                         net (fo=0)                   0.000    10.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         1.411    11.411 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.920    13.331    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    13.422 r  clk_IBUF_BUFG_inst/O
+                         net (fo=626, routed)         1.628    15.050    u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[113].ram.r/prim_noinit.ram/clka
+    RAMB36_X3Y21         RAMB36E1                                     r  u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[113].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/CLKARDCLK
+                         clock pessimism              0.188    15.238    
+                         clock uncertainty           -0.035    15.203    
+    RAMB36_X3Y21         RAMB36E1 (Setup_ramb36e1_CLKARDCLK_DIADI[2])
+                                                     -0.737    14.466    u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[113].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram
+  -------------------------------------------------------------------
+                         required time                         14.466    
+                         arrival time                         -13.601    
+  -------------------------------------------------------------------
+                         slack                                  0.865    
 
 
 
@@ -736,19 +736,19 @@ Slack (MET) :             0.763ns  (required time - arrival time)
 
 Min Delay Paths
 --------------------------------------------------------------------------------------
-Slack (MET) :             0.043ns  (arrival time - required time)
-  Source:                 u_Buffer_FIFO/FIFO_WPTR_reg[1]/C
+Slack (MET) :             0.032ns  (arrival time - required time)
+  Source:                 u_Buffer_FIFO/FIFO_WPTR_reg[0]/C
                             (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_12_15/RAMA/WADR1
+  Destination:            u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_6_11/RAMA/WADR0
                             (rising edge-triggered cell RAMD32 clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             clk
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
-  Data Path Delay:        0.557ns  (logic 0.128ns (22.993%)  route 0.429ns (77.007%))
+  Data Path Delay:        0.603ns  (logic 0.141ns (23.373%)  route 0.462ns (76.627%))
   Logic Levels:           0  
-  Clock Path Skew:        0.259ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    1.989ns
-    Source Clock Delay      (SCD):    1.479ns
+  Clock Path Skew:        0.261ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.998ns
+    Source Clock Delay      (SCD):    1.486ns
     Clock Pessimism Removal (CPR):    0.250ns
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -759,12 +759,12 @@ Slack (MET) :             0.043ns  (arrival time - required time)
     E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  clk_IBUF_inst/O
                          net (fo=1, routed)           0.644     0.894    clk_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.920 r  clk_IBUF_BUFG_inst/O
-                         net (fo=692, routed)         0.560     1.479    u_Buffer_FIFO/clk_IBUF_BUFG
-    SLICE_X49Y106        FDRE                                         r  u_Buffer_FIFO/FIFO_WPTR_reg[1]/C
+                         net (fo=626, routed)         0.567     1.486    u_Buffer_FIFO/clk_IBUF_BUFG
+    SLICE_X48Y97         FDRE                                         r  u_Buffer_FIFO/FIFO_WPTR_reg[0]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X49Y106        FDRE (Prop_fdre_C_Q)         0.128     1.607 r  u_Buffer_FIFO/FIFO_WPTR_reg[1]/Q
-                         net (fo=25, routed)          0.429     2.036    u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_12_15/ADDRD1
-    SLICE_X54Y112        RAMD32                                       r  u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_12_15/RAMA/WADR1
+    SLICE_X48Y97         FDRE (Prop_fdre_C_Q)         0.141     1.627 r  u_Buffer_FIFO/FIFO_WPTR_reg[0]/Q
+                         net (fo=26, routed)          0.462     2.090    u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_6_11/ADDRD0
+    SLICE_X54Y90         RAMD32                                       r  u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_6_11/RAMA/WADR0
   -------------------------------------------------------------------    -------------------
 
                          (clock clk rise edge)        0.000     0.000 r  
@@ -773,30 +773,30 @@ Slack (MET) :             0.043ns  (arrival time - required time)
     E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  clk_IBUF_inst/O
                          net (fo=1, routed)           0.699     1.136    clk_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.165 r  clk_IBUF_BUFG_inst/O
-                         net (fo=692, routed)         0.823     1.989    u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_12_15/WCLK
-    SLICE_X54Y112        RAMD32                                       r  u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_12_15/RAMA/CLK
-                         clock pessimism             -0.250     1.738    
-    SLICE_X54Y112        RAMD32 (Hold_ramd32_CLK_WADR1)
-                                                      0.255     1.993    u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_12_15/RAMA
+                         net (fo=626, routed)         0.833     1.998    u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_6_11/WCLK
+    SLICE_X54Y90         RAMD32                                       r  u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_6_11/RAMA/CLK
+                         clock pessimism             -0.250     1.747    
+    SLICE_X54Y90         RAMD32 (Hold_ramd32_CLK_WADR0)
+                                                      0.310     2.057    u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_6_11/RAMA
   -------------------------------------------------------------------
-                         required time                         -1.993    
-                         arrival time                           2.036    
+                         required time                         -2.057    
+                         arrival time                           2.090    
   -------------------------------------------------------------------
-                         slack                                  0.043    
+                         slack                                  0.032    
 
-Slack (MET) :             0.043ns  (arrival time - required time)
-  Source:                 u_Buffer_FIFO/FIFO_WPTR_reg[1]/C
+Slack (MET) :             0.032ns  (arrival time - required time)
+  Source:                 u_Buffer_FIFO/FIFO_WPTR_reg[0]/C
                             (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_12_15/RAMA_D1/WADR1
+  Destination:            u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_6_11/RAMA_D1/WADR0
                             (rising edge-triggered cell RAMD32 clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             clk
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
-  Data Path Delay:        0.557ns  (logic 0.128ns (22.993%)  route 0.429ns (77.007%))
+  Data Path Delay:        0.603ns  (logic 0.141ns (23.373%)  route 0.462ns (76.627%))
   Logic Levels:           0  
-  Clock Path Skew:        0.259ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    1.989ns
-    Source Clock Delay      (SCD):    1.479ns
+  Clock Path Skew:        0.261ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.998ns
+    Source Clock Delay      (SCD):    1.486ns
     Clock Pessimism Removal (CPR):    0.250ns
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -807,12 +807,12 @@ Slack (MET) :             0.043ns  (arrival time - required time)
     E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  clk_IBUF_inst/O
                          net (fo=1, routed)           0.644     0.894    clk_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.920 r  clk_IBUF_BUFG_inst/O
-                         net (fo=692, routed)         0.560     1.479    u_Buffer_FIFO/clk_IBUF_BUFG
-    SLICE_X49Y106        FDRE                                         r  u_Buffer_FIFO/FIFO_WPTR_reg[1]/C
+                         net (fo=626, routed)         0.567     1.486    u_Buffer_FIFO/clk_IBUF_BUFG
+    SLICE_X48Y97         FDRE                                         r  u_Buffer_FIFO/FIFO_WPTR_reg[0]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X49Y106        FDRE (Prop_fdre_C_Q)         0.128     1.607 r  u_Buffer_FIFO/FIFO_WPTR_reg[1]/Q
-                         net (fo=25, routed)          0.429     2.036    u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_12_15/ADDRD1
-    SLICE_X54Y112        RAMD32                                       r  u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_12_15/RAMA_D1/WADR1
+    SLICE_X48Y97         FDRE (Prop_fdre_C_Q)         0.141     1.627 r  u_Buffer_FIFO/FIFO_WPTR_reg[0]/Q
+                         net (fo=26, routed)          0.462     2.090    u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_6_11/ADDRD0
+    SLICE_X54Y90         RAMD32                                       r  u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_6_11/RAMA_D1/WADR0
   -------------------------------------------------------------------    -------------------
 
                          (clock clk rise edge)        0.000     0.000 r  
@@ -821,30 +821,30 @@ Slack (MET) :             0.043ns  (arrival time - required time)
     E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  clk_IBUF_inst/O
                          net (fo=1, routed)           0.699     1.136    clk_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.165 r  clk_IBUF_BUFG_inst/O
-                         net (fo=692, routed)         0.823     1.989    u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_12_15/WCLK
-    SLICE_X54Y112        RAMD32                                       r  u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_12_15/RAMA_D1/CLK
-                         clock pessimism             -0.250     1.738    
-    SLICE_X54Y112        RAMD32 (Hold_ramd32_CLK_WADR1)
-                                                      0.255     1.993    u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_12_15/RAMA_D1
+                         net (fo=626, routed)         0.833     1.998    u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_6_11/WCLK
+    SLICE_X54Y90         RAMD32                                       r  u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_6_11/RAMA_D1/CLK
+                         clock pessimism             -0.250     1.747    
+    SLICE_X54Y90         RAMD32 (Hold_ramd32_CLK_WADR0)
+                                                      0.310     2.057    u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_6_11/RAMA_D1
   -------------------------------------------------------------------
-                         required time                         -1.993    
-                         arrival time                           2.036    
+                         required time                         -2.057    
+                         arrival time                           2.090    
   -------------------------------------------------------------------
-                         slack                                  0.043    
+                         slack                                  0.032    
 
-Slack (MET) :             0.043ns  (arrival time - required time)
-  Source:                 u_Buffer_FIFO/FIFO_WPTR_reg[1]/C
+Slack (MET) :             0.032ns  (arrival time - required time)
+  Source:                 u_Buffer_FIFO/FIFO_WPTR_reg[0]/C
                             (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_12_15/RAMB/WADR1
+  Destination:            u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_6_11/RAMB/WADR0
                             (rising edge-triggered cell RAMD32 clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             clk
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
-  Data Path Delay:        0.557ns  (logic 0.128ns (22.993%)  route 0.429ns (77.007%))
+  Data Path Delay:        0.603ns  (logic 0.141ns (23.373%)  route 0.462ns (76.627%))
   Logic Levels:           0  
-  Clock Path Skew:        0.259ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    1.989ns
-    Source Clock Delay      (SCD):    1.479ns
+  Clock Path Skew:        0.261ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.998ns
+    Source Clock Delay      (SCD):    1.486ns
     Clock Pessimism Removal (CPR):    0.250ns
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -855,12 +855,12 @@ Slack (MET) :             0.043ns  (arrival time - required time)
     E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  clk_IBUF_inst/O
                          net (fo=1, routed)           0.644     0.894    clk_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.920 r  clk_IBUF_BUFG_inst/O
-                         net (fo=692, routed)         0.560     1.479    u_Buffer_FIFO/clk_IBUF_BUFG
-    SLICE_X49Y106        FDRE                                         r  u_Buffer_FIFO/FIFO_WPTR_reg[1]/C
+                         net (fo=626, routed)         0.567     1.486    u_Buffer_FIFO/clk_IBUF_BUFG
+    SLICE_X48Y97         FDRE                                         r  u_Buffer_FIFO/FIFO_WPTR_reg[0]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X49Y106        FDRE (Prop_fdre_C_Q)         0.128     1.607 r  u_Buffer_FIFO/FIFO_WPTR_reg[1]/Q
-                         net (fo=25, routed)          0.429     2.036    u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_12_15/ADDRD1
-    SLICE_X54Y112        RAMD32                                       r  u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_12_15/RAMB/WADR1
+    SLICE_X48Y97         FDRE (Prop_fdre_C_Q)         0.141     1.627 r  u_Buffer_FIFO/FIFO_WPTR_reg[0]/Q
+                         net (fo=26, routed)          0.462     2.090    u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_6_11/ADDRD0
+    SLICE_X54Y90         RAMD32                                       r  u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_6_11/RAMB/WADR0
   -------------------------------------------------------------------    -------------------
 
                          (clock clk rise edge)        0.000     0.000 r  
@@ -869,30 +869,30 @@ Slack (MET) :             0.043ns  (arrival time - required time)
     E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  clk_IBUF_inst/O
                          net (fo=1, routed)           0.699     1.136    clk_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.165 r  clk_IBUF_BUFG_inst/O
-                         net (fo=692, routed)         0.823     1.989    u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_12_15/WCLK
-    SLICE_X54Y112        RAMD32                                       r  u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_12_15/RAMB/CLK
-                         clock pessimism             -0.250     1.738    
-    SLICE_X54Y112        RAMD32 (Hold_ramd32_CLK_WADR1)
-                                                      0.255     1.993    u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_12_15/RAMB
+                         net (fo=626, routed)         0.833     1.998    u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_6_11/WCLK
+    SLICE_X54Y90         RAMD32                                       r  u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_6_11/RAMB/CLK
+                         clock pessimism             -0.250     1.747    
+    SLICE_X54Y90         RAMD32 (Hold_ramd32_CLK_WADR0)
+                                                      0.310     2.057    u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_6_11/RAMB
   -------------------------------------------------------------------
-                         required time                         -1.993    
-                         arrival time                           2.036    
+                         required time                         -2.057    
+                         arrival time                           2.090    
   -------------------------------------------------------------------
-                         slack                                  0.043    
+                         slack                                  0.032    
 
-Slack (MET) :             0.043ns  (arrival time - required time)
-  Source:                 u_Buffer_FIFO/FIFO_WPTR_reg[1]/C
+Slack (MET) :             0.032ns  (arrival time - required time)
+  Source:                 u_Buffer_FIFO/FIFO_WPTR_reg[0]/C
                             (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_12_15/RAMB_D1/WADR1
+  Destination:            u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_6_11/RAMB_D1/WADR0
                             (rising edge-triggered cell RAMD32 clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             clk
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
-  Data Path Delay:        0.557ns  (logic 0.128ns (22.993%)  route 0.429ns (77.007%))
+  Data Path Delay:        0.603ns  (logic 0.141ns (23.373%)  route 0.462ns (76.627%))
   Logic Levels:           0  
-  Clock Path Skew:        0.259ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    1.989ns
-    Source Clock Delay      (SCD):    1.479ns
+  Clock Path Skew:        0.261ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.998ns
+    Source Clock Delay      (SCD):    1.486ns
     Clock Pessimism Removal (CPR):    0.250ns
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -903,12 +903,12 @@ Slack (MET) :             0.043ns  (arrival time - required time)
     E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  clk_IBUF_inst/O
                          net (fo=1, routed)           0.644     0.894    clk_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.920 r  clk_IBUF_BUFG_inst/O
-                         net (fo=692, routed)         0.560     1.479    u_Buffer_FIFO/clk_IBUF_BUFG
-    SLICE_X49Y106        FDRE                                         r  u_Buffer_FIFO/FIFO_WPTR_reg[1]/C
+                         net (fo=626, routed)         0.567     1.486    u_Buffer_FIFO/clk_IBUF_BUFG
+    SLICE_X48Y97         FDRE                                         r  u_Buffer_FIFO/FIFO_WPTR_reg[0]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X49Y106        FDRE (Prop_fdre_C_Q)         0.128     1.607 r  u_Buffer_FIFO/FIFO_WPTR_reg[1]/Q
-                         net (fo=25, routed)          0.429     2.036    u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_12_15/ADDRD1
-    SLICE_X54Y112        RAMD32                                       r  u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_12_15/RAMB_D1/WADR1
+    SLICE_X48Y97         FDRE (Prop_fdre_C_Q)         0.141     1.627 r  u_Buffer_FIFO/FIFO_WPTR_reg[0]/Q
+                         net (fo=26, routed)          0.462     2.090    u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_6_11/ADDRD0
+    SLICE_X54Y90         RAMD32                                       r  u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_6_11/RAMB_D1/WADR0
   -------------------------------------------------------------------    -------------------
 
                          (clock clk rise edge)        0.000     0.000 r  
@@ -917,30 +917,30 @@ Slack (MET) :             0.043ns  (arrival time - required time)
     E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  clk_IBUF_inst/O
                          net (fo=1, routed)           0.699     1.136    clk_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.165 r  clk_IBUF_BUFG_inst/O
-                         net (fo=692, routed)         0.823     1.989    u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_12_15/WCLK
-    SLICE_X54Y112        RAMD32                                       r  u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_12_15/RAMB_D1/CLK
-                         clock pessimism             -0.250     1.738    
-    SLICE_X54Y112        RAMD32 (Hold_ramd32_CLK_WADR1)
-                                                      0.255     1.993    u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_12_15/RAMB_D1
+                         net (fo=626, routed)         0.833     1.998    u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_6_11/WCLK
+    SLICE_X54Y90         RAMD32                                       r  u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_6_11/RAMB_D1/CLK
+                         clock pessimism             -0.250     1.747    
+    SLICE_X54Y90         RAMD32 (Hold_ramd32_CLK_WADR0)
+                                                      0.310     2.057    u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_6_11/RAMB_D1
   -------------------------------------------------------------------
-                         required time                         -1.993    
-                         arrival time                           2.036    
+                         required time                         -2.057    
+                         arrival time                           2.090    
   -------------------------------------------------------------------
-                         slack                                  0.043    
+                         slack                                  0.032    
 
-Slack (MET) :             0.043ns  (arrival time - required time)
-  Source:                 u_Buffer_FIFO/FIFO_WPTR_reg[1]/C
+Slack (MET) :             0.032ns  (arrival time - required time)
+  Source:                 u_Buffer_FIFO/FIFO_WPTR_reg[0]/C
                             (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_12_15/RAMC/WADR1
+  Destination:            u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_6_11/RAMC/WADR0
                             (rising edge-triggered cell RAMD32 clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             clk
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
-  Data Path Delay:        0.557ns  (logic 0.128ns (22.993%)  route 0.429ns (77.007%))
+  Data Path Delay:        0.603ns  (logic 0.141ns (23.373%)  route 0.462ns (76.627%))
   Logic Levels:           0  
-  Clock Path Skew:        0.259ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    1.989ns
-    Source Clock Delay      (SCD):    1.479ns
+  Clock Path Skew:        0.261ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.998ns
+    Source Clock Delay      (SCD):    1.486ns
     Clock Pessimism Removal (CPR):    0.250ns
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -951,12 +951,12 @@ Slack (MET) :             0.043ns  (arrival time - required time)
     E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  clk_IBUF_inst/O
                          net (fo=1, routed)           0.644     0.894    clk_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.920 r  clk_IBUF_BUFG_inst/O
-                         net (fo=692, routed)         0.560     1.479    u_Buffer_FIFO/clk_IBUF_BUFG
-    SLICE_X49Y106        FDRE                                         r  u_Buffer_FIFO/FIFO_WPTR_reg[1]/C
+                         net (fo=626, routed)         0.567     1.486    u_Buffer_FIFO/clk_IBUF_BUFG
+    SLICE_X48Y97         FDRE                                         r  u_Buffer_FIFO/FIFO_WPTR_reg[0]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X49Y106        FDRE (Prop_fdre_C_Q)         0.128     1.607 r  u_Buffer_FIFO/FIFO_WPTR_reg[1]/Q
-                         net (fo=25, routed)          0.429     2.036    u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_12_15/ADDRD1
-    SLICE_X54Y112        RAMD32                                       r  u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_12_15/RAMC/WADR1
+    SLICE_X48Y97         FDRE (Prop_fdre_C_Q)         0.141     1.627 r  u_Buffer_FIFO/FIFO_WPTR_reg[0]/Q
+                         net (fo=26, routed)          0.462     2.090    u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_6_11/ADDRD0
+    SLICE_X54Y90         RAMD32                                       r  u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_6_11/RAMC/WADR0
   -------------------------------------------------------------------    -------------------
 
                          (clock clk rise edge)        0.000     0.000 r  
@@ -965,30 +965,30 @@ Slack (MET) :             0.043ns  (arrival time - required time)
     E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  clk_IBUF_inst/O
                          net (fo=1, routed)           0.699     1.136    clk_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.165 r  clk_IBUF_BUFG_inst/O
-                         net (fo=692, routed)         0.823     1.989    u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_12_15/WCLK
-    SLICE_X54Y112        RAMD32                                       r  u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_12_15/RAMC/CLK
-                         clock pessimism             -0.250     1.738    
-    SLICE_X54Y112        RAMD32 (Hold_ramd32_CLK_WADR1)
-                                                      0.255     1.993    u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_12_15/RAMC
+                         net (fo=626, routed)         0.833     1.998    u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_6_11/WCLK
+    SLICE_X54Y90         RAMD32                                       r  u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_6_11/RAMC/CLK
+                         clock pessimism             -0.250     1.747    
+    SLICE_X54Y90         RAMD32 (Hold_ramd32_CLK_WADR0)
+                                                      0.310     2.057    u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_6_11/RAMC
   -------------------------------------------------------------------
-                         required time                         -1.993    
-                         arrival time                           2.036    
+                         required time                         -2.057    
+                         arrival time                           2.090    
   -------------------------------------------------------------------
-                         slack                                  0.043    
+                         slack                                  0.032    
 
-Slack (MET) :             0.043ns  (arrival time - required time)
-  Source:                 u_Buffer_FIFO/FIFO_WPTR_reg[1]/C
+Slack (MET) :             0.032ns  (arrival time - required time)
+  Source:                 u_Buffer_FIFO/FIFO_WPTR_reg[0]/C
                             (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_12_15/RAMC_D1/WADR1
+  Destination:            u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_6_11/RAMC_D1/WADR0
                             (rising edge-triggered cell RAMD32 clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             clk
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
-  Data Path Delay:        0.557ns  (logic 0.128ns (22.993%)  route 0.429ns (77.007%))
+  Data Path Delay:        0.603ns  (logic 0.141ns (23.373%)  route 0.462ns (76.627%))
   Logic Levels:           0  
-  Clock Path Skew:        0.259ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    1.989ns
-    Source Clock Delay      (SCD):    1.479ns
+  Clock Path Skew:        0.261ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.998ns
+    Source Clock Delay      (SCD):    1.486ns
     Clock Pessimism Removal (CPR):    0.250ns
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -999,12 +999,12 @@ Slack (MET) :             0.043ns  (arrival time - required time)
     E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  clk_IBUF_inst/O
                          net (fo=1, routed)           0.644     0.894    clk_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.920 r  clk_IBUF_BUFG_inst/O
-                         net (fo=692, routed)         0.560     1.479    u_Buffer_FIFO/clk_IBUF_BUFG
-    SLICE_X49Y106        FDRE                                         r  u_Buffer_FIFO/FIFO_WPTR_reg[1]/C
+                         net (fo=626, routed)         0.567     1.486    u_Buffer_FIFO/clk_IBUF_BUFG
+    SLICE_X48Y97         FDRE                                         r  u_Buffer_FIFO/FIFO_WPTR_reg[0]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X49Y106        FDRE (Prop_fdre_C_Q)         0.128     1.607 r  u_Buffer_FIFO/FIFO_WPTR_reg[1]/Q
-                         net (fo=25, routed)          0.429     2.036    u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_12_15/ADDRD1
-    SLICE_X54Y112        RAMD32                                       r  u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_12_15/RAMC_D1/WADR1
+    SLICE_X48Y97         FDRE (Prop_fdre_C_Q)         0.141     1.627 r  u_Buffer_FIFO/FIFO_WPTR_reg[0]/Q
+                         net (fo=26, routed)          0.462     2.090    u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_6_11/ADDRD0
+    SLICE_X54Y90         RAMD32                                       r  u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_6_11/RAMC_D1/WADR0
   -------------------------------------------------------------------    -------------------
 
                          (clock clk rise edge)        0.000     0.000 r  
@@ -1013,30 +1013,30 @@ Slack (MET) :             0.043ns  (arrival time - required time)
     E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  clk_IBUF_inst/O
                          net (fo=1, routed)           0.699     1.136    clk_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.165 r  clk_IBUF_BUFG_inst/O
-                         net (fo=692, routed)         0.823     1.989    u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_12_15/WCLK
-    SLICE_X54Y112        RAMD32                                       r  u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_12_15/RAMC_D1/CLK
-                         clock pessimism             -0.250     1.738    
-    SLICE_X54Y112        RAMD32 (Hold_ramd32_CLK_WADR1)
-                                                      0.255     1.993    u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_12_15/RAMC_D1
+                         net (fo=626, routed)         0.833     1.998    u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_6_11/WCLK
+    SLICE_X54Y90         RAMD32                                       r  u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_6_11/RAMC_D1/CLK
+                         clock pessimism             -0.250     1.747    
+    SLICE_X54Y90         RAMD32 (Hold_ramd32_CLK_WADR0)
+                                                      0.310     2.057    u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_6_11/RAMC_D1
   -------------------------------------------------------------------
-                         required time                         -1.993    
-                         arrival time                           2.036    
+                         required time                         -2.057    
+                         arrival time                           2.090    
   -------------------------------------------------------------------
-                         slack                                  0.043    
+                         slack                                  0.032    
 
-Slack (MET) :             0.043ns  (arrival time - required time)
-  Source:                 u_Buffer_FIFO/FIFO_WPTR_reg[1]/C
+Slack (MET) :             0.032ns  (arrival time - required time)
+  Source:                 u_Buffer_FIFO/FIFO_WPTR_reg[0]/C
                             (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_12_15/RAMD/ADR1
+  Destination:            u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_6_11/RAMD/ADR0
                             (rising edge-triggered cell RAMS32 clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             clk
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
-  Data Path Delay:        0.557ns  (logic 0.128ns (22.993%)  route 0.429ns (77.007%))
+  Data Path Delay:        0.603ns  (logic 0.141ns (23.373%)  route 0.462ns (76.627%))
   Logic Levels:           0  
-  Clock Path Skew:        0.259ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    1.989ns
-    Source Clock Delay      (SCD):    1.479ns
+  Clock Path Skew:        0.261ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.998ns
+    Source Clock Delay      (SCD):    1.486ns
     Clock Pessimism Removal (CPR):    0.250ns
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -1047,12 +1047,12 @@ Slack (MET) :             0.043ns  (arrival time - required time)
     E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  clk_IBUF_inst/O
                          net (fo=1, routed)           0.644     0.894    clk_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.920 r  clk_IBUF_BUFG_inst/O
-                         net (fo=692, routed)         0.560     1.479    u_Buffer_FIFO/clk_IBUF_BUFG
-    SLICE_X49Y106        FDRE                                         r  u_Buffer_FIFO/FIFO_WPTR_reg[1]/C
+                         net (fo=626, routed)         0.567     1.486    u_Buffer_FIFO/clk_IBUF_BUFG
+    SLICE_X48Y97         FDRE                                         r  u_Buffer_FIFO/FIFO_WPTR_reg[0]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X49Y106        FDRE (Prop_fdre_C_Q)         0.128     1.607 r  u_Buffer_FIFO/FIFO_WPTR_reg[1]/Q
-                         net (fo=25, routed)          0.429     2.036    u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_12_15/ADDRD1
-    SLICE_X54Y112        RAMS32                                       r  u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_12_15/RAMD/ADR1
+    SLICE_X48Y97         FDRE (Prop_fdre_C_Q)         0.141     1.627 r  u_Buffer_FIFO/FIFO_WPTR_reg[0]/Q
+                         net (fo=26, routed)          0.462     2.090    u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_6_11/ADDRD0
+    SLICE_X54Y90         RAMS32                                       r  u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_6_11/RAMD/ADR0
   -------------------------------------------------------------------    -------------------
 
                          (clock clk rise edge)        0.000     0.000 r  
@@ -1061,30 +1061,30 @@ Slack (MET) :             0.043ns  (arrival time - required time)
     E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  clk_IBUF_inst/O
                          net (fo=1, routed)           0.699     1.136    clk_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.165 r  clk_IBUF_BUFG_inst/O
-                         net (fo=692, routed)         0.823     1.989    u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_12_15/WCLK
-    SLICE_X54Y112        RAMS32                                       r  u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_12_15/RAMD/CLK
-                         clock pessimism             -0.250     1.738    
-    SLICE_X54Y112        RAMS32 (Hold_rams32_CLK_ADR1)
-                                                      0.255     1.993    u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_12_15/RAMD
+                         net (fo=626, routed)         0.833     1.998    u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_6_11/WCLK
+    SLICE_X54Y90         RAMS32                                       r  u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_6_11/RAMD/CLK
+                         clock pessimism             -0.250     1.747    
+    SLICE_X54Y90         RAMS32 (Hold_rams32_CLK_ADR0)
+                                                      0.310     2.057    u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_6_11/RAMD
   -------------------------------------------------------------------
-                         required time                         -1.993    
-                         arrival time                           2.036    
+                         required time                         -2.057    
+                         arrival time                           2.090    
   -------------------------------------------------------------------
-                         slack                                  0.043    
+                         slack                                  0.032    
 
-Slack (MET) :             0.043ns  (arrival time - required time)
-  Source:                 u_Buffer_FIFO/FIFO_WPTR_reg[1]/C
+Slack (MET) :             0.032ns  (arrival time - required time)
+  Source:                 u_Buffer_FIFO/FIFO_WPTR_reg[0]/C
                             (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_12_15/RAMD_D1/ADR1
+  Destination:            u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_6_11/RAMD_D1/ADR0
                             (rising edge-triggered cell RAMS32 clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             clk
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
-  Data Path Delay:        0.557ns  (logic 0.128ns (22.993%)  route 0.429ns (77.007%))
+  Data Path Delay:        0.603ns  (logic 0.141ns (23.373%)  route 0.462ns (76.627%))
   Logic Levels:           0  
-  Clock Path Skew:        0.259ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    1.989ns
-    Source Clock Delay      (SCD):    1.479ns
+  Clock Path Skew:        0.261ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.998ns
+    Source Clock Delay      (SCD):    1.486ns
     Clock Pessimism Removal (CPR):    0.250ns
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -1095,12 +1095,12 @@ Slack (MET) :             0.043ns  (arrival time - required time)
     E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  clk_IBUF_inst/O
                          net (fo=1, routed)           0.644     0.894    clk_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.920 r  clk_IBUF_BUFG_inst/O
-                         net (fo=692, routed)         0.560     1.479    u_Buffer_FIFO/clk_IBUF_BUFG
-    SLICE_X49Y106        FDRE                                         r  u_Buffer_FIFO/FIFO_WPTR_reg[1]/C
+                         net (fo=626, routed)         0.567     1.486    u_Buffer_FIFO/clk_IBUF_BUFG
+    SLICE_X48Y97         FDRE                                         r  u_Buffer_FIFO/FIFO_WPTR_reg[0]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X49Y106        FDRE (Prop_fdre_C_Q)         0.128     1.607 r  u_Buffer_FIFO/FIFO_WPTR_reg[1]/Q
-                         net (fo=25, routed)          0.429     2.036    u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_12_15/ADDRD1
-    SLICE_X54Y112        RAMS32                                       r  u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_12_15/RAMD_D1/ADR1
+    SLICE_X48Y97         FDRE (Prop_fdre_C_Q)         0.141     1.627 r  u_Buffer_FIFO/FIFO_WPTR_reg[0]/Q
+                         net (fo=26, routed)          0.462     2.090    u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_6_11/ADDRD0
+    SLICE_X54Y90         RAMS32                                       r  u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_6_11/RAMD_D1/ADR0
   -------------------------------------------------------------------    -------------------
 
                          (clock clk rise edge)        0.000     0.000 r  
@@ -1109,78 +1109,30 @@ Slack (MET) :             0.043ns  (arrival time - required time)
     E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  clk_IBUF_inst/O
                          net (fo=1, routed)           0.699     1.136    clk_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.165 r  clk_IBUF_BUFG_inst/O
-                         net (fo=692, routed)         0.823     1.989    u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_12_15/WCLK
-    SLICE_X54Y112        RAMS32                                       r  u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_12_15/RAMD_D1/CLK
-                         clock pessimism             -0.250     1.738    
-    SLICE_X54Y112        RAMS32 (Hold_rams32_CLK_ADR1)
-                                                      0.255     1.993    u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_12_15/RAMD_D1
+                         net (fo=626, routed)         0.833     1.998    u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_6_11/WCLK
+    SLICE_X54Y90         RAMS32                                       r  u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_6_11/RAMD_D1/CLK
+                         clock pessimism             -0.250     1.747    
+    SLICE_X54Y90         RAMS32 (Hold_rams32_CLK_ADR0)
+                                                      0.310     2.057    u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_6_11/RAMD_D1
   -------------------------------------------------------------------
-                         required time                         -1.993    
-                         arrival time                           2.036    
+                         required time                         -2.057    
+                         arrival time                           2.090    
   -------------------------------------------------------------------
-                         slack                                  0.043    
+                         slack                                  0.032    
 
-Slack (MET) :             0.068ns  (arrival time - required time)
-  Source:                 u_RAM_WriteEngine/RAMW_WriteAddr_reg[0]_replica_5/C
+Slack (MET) :             0.060ns  (arrival time - required time)
+  Source:                 u_ADCInterface/RAMW_Data_reg[14]/C
                             (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[60].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/ADDRARDADDR[3]
+  Destination:            u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[109].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/DIADI[6]
                             (rising edge-triggered cell RAMB36E1 clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             clk
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
-  Data Path Delay:        0.308ns  (logic 0.141ns (45.725%)  route 0.167ns (54.275%))
+  Data Path Delay:        0.685ns  (logic 0.164ns (23.941%)  route 0.521ns (76.059%))
   Logic Levels:           0  
-  Clock Path Skew:        0.057ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    2.041ns
-    Source Clock Delay      (SCD):    1.483ns
-    Clock Pessimism Removal (CPR):    0.500ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock clk rise edge)        0.000     0.000 r  
-    E3                                                0.000     0.000 r  clk (IN)
-                         net (fo=0)                   0.000     0.000    clk
-    E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  clk_IBUF_inst/O
-                         net (fo=1, routed)           0.644     0.894    clk_IBUF
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.920 r  clk_IBUF_BUFG_inst/O
-                         net (fo=692, routed)         0.564     1.483    u_RAM_WriteEngine/clk_IBUF_BUFG
-    SLICE_X63Y64         FDRE                                         r  u_RAM_WriteEngine/RAMW_WriteAddr_reg[0]_replica_5/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X63Y64         FDRE (Prop_fdre_C_Q)         0.141     1.624 r  u_RAM_WriteEngine/RAMW_WriteAddr_reg[0]_replica_5/Q
-                         net (fo=18, routed)          0.167     1.792    u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[60].ram.r/prim_noinit.ram/RAMW_WriteAddr[0]_repN_5_alias
-    RAMB36_X1Y12         RAMB36E1                                     r  u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[60].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/ADDRARDADDR[3]
-  -------------------------------------------------------------------    -------------------
-
-                         (clock clk rise edge)        0.000     0.000 r  
-    E3                                                0.000     0.000 r  clk (IN)
-                         net (fo=0)                   0.000     0.000    clk
-    E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  clk_IBUF_inst/O
-                         net (fo=1, routed)           0.699     1.136    clk_IBUF
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.165 r  clk_IBUF_BUFG_inst/O
-                         net (fo=692, routed)         0.876     2.041    u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[60].ram.r/prim_noinit.ram/clka
-    RAMB36_X1Y12         RAMB36E1                                     r  u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[60].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/CLKARDCLK
-                         clock pessimism             -0.500     1.541    
-    RAMB36_X1Y12         RAMB36E1 (Hold_ramb36e1_CLKARDCLK_ADDRARDADDR[3])
-                                                      0.183     1.724    u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[60].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram
-  -------------------------------------------------------------------
-                         required time                         -1.724    
-                         arrival time                           1.792    
-  -------------------------------------------------------------------
-                         slack                                  0.068    
-
-Slack (MET) :             0.068ns  (arrival time - required time)
-  Source:                 u_SPI/BUFFER_InAmount_reg[8]/C
-                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            u_RAM_ReadEngine/readRemaining_reg[8]/D
-                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Path Group:             clk
-  Path Type:              Hold (Min at Fast Process Corner)
-  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
-  Data Path Delay:        0.465ns  (logic 0.227ns (48.829%)  route 0.238ns (51.171%))
-  Logic Levels:           1  (LUT5=1)
-  Clock Path Skew:        0.277ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    2.007ns
-    Source Clock Delay      (SCD):    1.484ns
+  Clock Path Skew:        0.329ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.054ns
+    Source Clock Delay      (SCD):    1.479ns
     Clock Pessimism Removal (CPR):    0.245ns
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -1191,14 +1143,12 @@ Slack (MET) :             0.068ns  (arrival time - required time)
     E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  clk_IBUF_inst/O
                          net (fo=1, routed)           0.644     0.894    clk_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.920 r  clk_IBUF_BUFG_inst/O
-                         net (fo=692, routed)         0.565     1.484    u_SPI/clk_IBUF_BUFG
-    SLICE_X35Y102        FDRE                                         r  u_SPI/BUFFER_InAmount_reg[8]/C
+                         net (fo=626, routed)         0.560     1.479    u_ADCInterface/clk_IBUF_BUFG
+    SLICE_X46Y106        FDRE                                         r  u_ADCInterface/RAMW_Data_reg[14]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X35Y102        FDRE (Prop_fdre_C_Q)         0.128     1.612 r  u_SPI/BUFFER_InAmount_reg[8]/Q
-                         net (fo=3, routed)           0.238     1.850    u_RAM_ReadEngine/readRemaining_reg[17]_1[5]
-    SLICE_X34Y98         LUT5 (Prop_lut5_I2_O)        0.099     1.949 r  u_RAM_ReadEngine/readRemaining[8]_i_1/O
-                         net (fo=1, routed)           0.000     1.949    u_RAM_ReadEngine/readRemaining[8]_i_1_n_0
-    SLICE_X34Y98         FDRE                                         r  u_RAM_ReadEngine/readRemaining_reg[8]/D
+    SLICE_X46Y106        FDRE (Prop_fdre_C_Q)         0.164     1.643 r  u_ADCInterface/RAMW_Data_reg[14]/Q
+                         net (fo=64, routed)          0.521     2.164    u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[109].ram.r/prim_noinit.ram/dina[6]
+    RAMB36_X0Y19         RAMB36E1                                     r  u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[109].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/DIADI[6]
   -------------------------------------------------------------------    -------------------
 
                          (clock clk rise edge)        0.000     0.000 r  
@@ -1207,15 +1157,63 @@ Slack (MET) :             0.068ns  (arrival time - required time)
     E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  clk_IBUF_inst/O
                          net (fo=1, routed)           0.699     1.136    clk_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.165 r  clk_IBUF_BUFG_inst/O
-                         net (fo=692, routed)         0.842     2.007    u_RAM_ReadEngine/clk_IBUF_BUFG
-    SLICE_X34Y98         FDRE                                         r  u_RAM_ReadEngine/readRemaining_reg[8]/C
-                         clock pessimism             -0.245     1.761    
-    SLICE_X34Y98         FDRE (Hold_fdre_C_D)         0.120     1.881    u_RAM_ReadEngine/readRemaining_reg[8]
+                         net (fo=626, routed)         0.889     2.054    u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[109].ram.r/prim_noinit.ram/clka
+    RAMB36_X0Y19         RAMB36E1                                     r  u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[109].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/CLKARDCLK
+                         clock pessimism             -0.245     1.809    
+    RAMB36_X0Y19         RAMB36E1 (Hold_ramb36e1_CLKARDCLK_DIADI[6])
+                                                      0.296     2.105    u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[109].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram
   -------------------------------------------------------------------
-                         required time                         -1.881    
-                         arrival time                           1.949    
+                         required time                         -2.105    
+                         arrival time                           2.164    
   -------------------------------------------------------------------
-                         slack                                  0.068    
+                         slack                                  0.060    
+
+Slack (MET) :             0.078ns  (arrival time - required time)
+  Source:                 u_SPI/SPI_Data_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            u_REGS/registers_reg[9][0]_lopt_replica_2/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.414ns  (logic 0.164ns (39.608%)  route 0.250ns (60.392%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.266ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.002ns
+    Source Clock Delay      (SCD):    1.490ns
+    Clock Pessimism Removal (CPR):    0.245ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.644     0.894    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.920 r  clk_IBUF_BUFG_inst/O
+                         net (fo=626, routed)         0.571     1.490    u_SPI/clk_IBUF_BUFG
+    SLICE_X30Y96         FDRE                                         r  u_SPI/SPI_Data_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X30Y96         FDRE (Prop_fdre_C_Q)         0.164     1.654 r  u_SPI/SPI_Data_reg[0]/Q
+                         net (fo=18, routed)          0.250     1.904    u_REGS/registers_reg[7][7]_4[0]
+    SLICE_X28Y100        FDRE                                         r  u_REGS/registers_reg[9][0]_lopt_replica_2/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.699     1.136    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.165 r  clk_IBUF_BUFG_inst/O
+                         net (fo=626, routed)         0.837     2.002    u_REGS/clk_IBUF_BUFG
+    SLICE_X28Y100        FDRE                                         r  u_REGS/registers_reg[9][0]_lopt_replica_2/C
+                         clock pessimism             -0.245     1.756    
+    SLICE_X28Y100        FDRE (Hold_fdre_C_D)         0.070     1.826    u_REGS/registers_reg[9][0]_lopt_replica_2
+  -------------------------------------------------------------------
+                         required time                         -1.826    
+                         arrival time                           1.904    
+  -------------------------------------------------------------------
+                         slack                                  0.078    
 
 
 
@@ -1228,37 +1226,37 @@ Waveform(ns):       { 0.000 5.000 }
 Period(ns):         10.000
 Sources:            { clk }
 
-Check Type        Corner  Lib Pin             Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location       Pin
-Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            2.576         10.000      7.424      RAMB36_X3Y27   u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[104].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/CLKARDCLK
-Min Period        n/a     RAMB36E1/CLKBWRCLK  n/a            2.576         10.000      7.424      RAMB36_X3Y27   u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[104].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/CLKBWRCLK
-Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            2.576         10.000      7.424      RAMB36_X0Y18   u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[112].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/CLKARDCLK
-Min Period        n/a     RAMB36E1/CLKBWRCLK  n/a            2.576         10.000      7.424      RAMB36_X0Y18   u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[112].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/CLKBWRCLK
-Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            2.576         10.000      7.424      RAMB36_X0Y17   u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[120].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/CLKARDCLK
-Min Period        n/a     RAMB36E1/CLKBWRCLK  n/a            2.576         10.000      7.424      RAMB36_X0Y17   u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[120].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/CLKBWRCLK
-Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            2.576         10.000      7.424      RAMB36_X2Y23   u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[13].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/CLKARDCLK
-Min Period        n/a     RAMB36E1/CLKBWRCLK  n/a            2.576         10.000      7.424      RAMB36_X2Y23   u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[13].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/CLKBWRCLK
-Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            2.576         10.000      7.424      RAMB36_X2Y4    u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[21].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/CLKARDCLK
-Min Period        n/a     RAMB36E1/CLKBWRCLK  n/a            2.576         10.000      7.424      RAMB36_X2Y4    u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[21].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/CLKBWRCLK
-Low Pulse Width   Slow    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X56Y100  u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_6_11/RAMA/CLK
-Low Pulse Width   Slow    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X56Y100  u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_6_11/RAMA_D1/CLK
-Low Pulse Width   Slow    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X56Y100  u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_6_11/RAMB/CLK
-Low Pulse Width   Slow    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X56Y100  u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_6_11/RAMB_D1/CLK
-Low Pulse Width   Slow    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X56Y100  u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_6_11/RAMC/CLK
-Low Pulse Width   Slow    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X56Y100  u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_6_11/RAMC_D1/CLK
-Low Pulse Width   Slow    RAMS32/CLK          n/a            1.250         5.000       3.750      SLICE_X56Y100  u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_6_11/RAMD/CLK
-Low Pulse Width   Slow    RAMS32/CLK          n/a            1.250         5.000       3.750      SLICE_X56Y100  u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_6_11/RAMD_D1/CLK
-Low Pulse Width   Fast    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X56Y90   u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_0_5/RAMA/CLK
-Low Pulse Width   Fast    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X56Y90   u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_0_5/RAMA_D1/CLK
-High Pulse Width  Slow    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X54Y112  u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_12_15/RAMA/CLK
-High Pulse Width  Slow    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X54Y112  u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_12_15/RAMA_D1/CLK
-High Pulse Width  Slow    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X54Y112  u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_12_15/RAMB/CLK
-High Pulse Width  Slow    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X54Y112  u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_12_15/RAMB_D1/CLK
-High Pulse Width  Slow    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X54Y112  u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_12_15/RAMC/CLK
-High Pulse Width  Slow    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X54Y112  u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_12_15/RAMC_D1/CLK
-High Pulse Width  Slow    RAMS32/CLK          n/a            1.250         5.000       3.750      SLICE_X54Y112  u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_12_15/RAMD/CLK
-High Pulse Width  Slow    RAMS32/CLK          n/a            1.250         5.000       3.750      SLICE_X54Y112  u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_12_15/RAMD_D1/CLK
-High Pulse Width  Slow    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X56Y90   u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_0_5/RAMA/CLK
-High Pulse Width  Fast    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X56Y90   u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_0_5/RAMA/CLK
+Check Type        Corner  Lib Pin             Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location      Pin
+Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            2.576         10.000      7.424      RAMB36_X3Y26  u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[104].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/CLKARDCLK
+Min Period        n/a     RAMB36E1/CLKBWRCLK  n/a            2.576         10.000      7.424      RAMB36_X3Y26  u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[104].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/CLKBWRCLK
+Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            2.576         10.000      7.424      RAMB36_X1Y21  u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[112].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/CLKARDCLK
+Min Period        n/a     RAMB36E1/CLKBWRCLK  n/a            2.576         10.000      7.424      RAMB36_X1Y21  u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[112].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/CLKBWRCLK
+Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            2.576         10.000      7.424      RAMB36_X3Y20  u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[120].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/CLKARDCLK
+Min Period        n/a     RAMB36E1/CLKBWRCLK  n/a            2.576         10.000      7.424      RAMB36_X3Y20  u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[120].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/CLKBWRCLK
+Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            2.576         10.000      7.424      RAMB36_X2Y6   u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[13].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/CLKARDCLK
+Min Period        n/a     RAMB36E1/CLKBWRCLK  n/a            2.576         10.000      7.424      RAMB36_X2Y6   u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[13].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/CLKBWRCLK
+Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            2.576         10.000      7.424      RAMB36_X0Y8   u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[21].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/CLKARDCLK
+Min Period        n/a     RAMB36E1/CLKBWRCLK  n/a            2.576         10.000      7.424      RAMB36_X0Y8   u_blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[21].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/CLKBWRCLK
+Low Pulse Width   Slow    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X54Y95  u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_0_5/RAMA/CLK
+Low Pulse Width   Slow    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X54Y95  u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_0_5/RAMA_D1/CLK
+Low Pulse Width   Slow    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X54Y95  u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_0_5/RAMB/CLK
+Low Pulse Width   Slow    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X54Y95  u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_0_5/RAMB_D1/CLK
+Low Pulse Width   Slow    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X54Y95  u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_0_5/RAMC/CLK
+Low Pulse Width   Slow    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X54Y95  u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_0_5/RAMC_D1/CLK
+Low Pulse Width   Slow    RAMS32/CLK          n/a            1.250         5.000       3.750      SLICE_X54Y95  u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_0_5/RAMD/CLK
+Low Pulse Width   Slow    RAMS32/CLK          n/a            1.250         5.000       3.750      SLICE_X54Y95  u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_0_5/RAMD_D1/CLK
+Low Pulse Width   Fast    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X54Y95  u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_0_5/RAMA/CLK
+Low Pulse Width   Fast    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X54Y95  u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_0_5/RAMA_D1/CLK
+High Pulse Width  Slow    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X54Y95  u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_0_5/RAMA/CLK
+High Pulse Width  Fast    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X54Y95  u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_0_5/RAMA/CLK
+High Pulse Width  Slow    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X54Y95  u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_0_5/RAMA_D1/CLK
+High Pulse Width  Fast    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X54Y95  u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_0_5/RAMA_D1/CLK
+High Pulse Width  Slow    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X54Y95  u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_0_5/RAMB/CLK
+High Pulse Width  Fast    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X54Y95  u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_0_5/RAMB/CLK
+High Pulse Width  Slow    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X54Y95  u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_0_5/RAMB_D1/CLK
+High Pulse Width  Fast    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X54Y95  u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_0_5/RAMB_D1/CLK
+High Pulse Width  Slow    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X54Y95  u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_0_5/RAMC/CLK
+High Pulse Width  Fast    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X54Y95  u_Buffer_FIFO/u_FIFO_RAM/dataBuffer_reg_0_3_0_5/RAMC/CLK
 
 
 

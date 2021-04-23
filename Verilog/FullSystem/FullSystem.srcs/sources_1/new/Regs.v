@@ -29,15 +29,17 @@ module Regs(
     
    output [1:0] IRSHighLow,
    output [3:0] Offset,
-   output [1:0] ShiftControlRegister
+   output [1:0] ShiftControlRegister,
+   output DEBUGTriggeredReg
     
     );
     //INPUT need an input for the write only register with the on-bit
     //also a read only bit
     
     reg [7:0] registers [15:0];
-    assign DebugLEDRegister = registers[7]; //4 //LEDs
     
+    assign DebugLEDRegister = registers[7]; //4 //LEDs
+    assign DEBUGTriggeredReg = registers[15][0];
     assign TriggerThreshold = registers[7];
     assign TriggerType = registers[6];
     assign onBit = registers[9][0]; //9
