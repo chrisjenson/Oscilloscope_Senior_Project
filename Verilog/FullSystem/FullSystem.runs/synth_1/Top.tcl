@@ -70,8 +70,6 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param chipscope.maxJobs 2
-set_param xicom.use_bs_reader 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a100tcsg324-1
 
@@ -91,7 +89,6 @@ OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib {
   D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/ADCInterface.v
   D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/Buffer_FIFO.v
-  D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/DataSimulation.v
   D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/FIFO_RAM.v
   D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/RAM_ReadEngine.v
   D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.srcs/sources_1/new/RAM_WriteEngine.v

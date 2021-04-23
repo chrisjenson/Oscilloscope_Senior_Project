@@ -1,0 +1,262 @@
+/*
+
+Xilinx Vivado v2020.2 (64-bit) [Major: 2020, Minor: 2]
+SW Build: 3064766 on Wed Nov 18 09:12:45 MST 2020
+IP Build: 3064653 on Wed Nov 18 14:17:31 MST 2020
+
+Process ID (PID): 30648
+License: Customer
+Mode: GUI Mode
+
+Current time: 	Fri Apr 23 11:21:11 EDT 2021
+Time zone: 	Eastern Standard Time (America/New_York)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 8
+
+Screen size: 1920x1080
+Screen resolution (DPI): 100
+Available screens: 1
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+Scale size: 12
+
+Java version: 	11.0.2 64-bit
+Java home: 	D:/Xilinx/Vivado/2020.2/tps/win64/jre11.0.2
+Java executable location: 	D:/Xilinx/Vivado/2020.2/tps/win64/jre11.0.2/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	Brian Worts
+User home directory: C:/Users/Brian Worts
+User working directory: D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: D:/Xilinx/Vivado
+HDI_APPROOT: D:/Xilinx/Vivado/2020.2
+RDI_DATADIR: D:/Xilinx/Vivado/2020.2/data
+RDI_BINDIR: D:/Xilinx/Vivado/2020.2/bin
+
+Vivado preferences file location: C:/Users/Brian Worts/AppData/Roaming/Xilinx/Vivado/2020.2/vivado.xml
+Vivado preferences directory: C:/Users/Brian Worts/AppData/Roaming/Xilinx/Vivado/2020.2/
+Vivado layouts directory: C:/Users/Brian Worts/AppData/Roaming/Xilinx/Vivado/2020.2/data/layouts
+PlanAhead jar file location: 	D:/Xilinx/Vivado/2020.2/lib/classes/planAhead.jar
+Vivado log file location: 	D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/vivado.log
+Vivado journal file location: 	D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/vivado.jou
+Engine tmp dir: 	D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/.Xil/Vivado-30648-MSI
+
+Xilinx Environment Variables
+----------------------------
+XILINX: D:/Xilinx/Vivado/2020.2/ids_lite/ISE
+XILINX_DSP: D:/Xilinx/Vivado/2020.2/ids_lite/ISE
+XILINX_HLS: D:/Xilinx/Vitis_HLS/2020.2
+XILINX_PLANAHEAD: D:/Xilinx/Vivado/2020.2
+XILINX_VIVADO: D:/Xilinx/Vivado/2020.2
+XILINX_VIVADO_HLS: D:/Xilinx/Vivado/2020.2
+
+
+GUI allocated memory:	128 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 1,022 MB
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// bz (cr):  Open Project : addNotify
+// Opening Vivado Project: D:\SeniorProject\Oscilloscope_Senior_Project\Verilog\FullSystem\FullSystem.xpr. Version: Vivado v2020.2 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.xpr 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,022 MB. GUI used memory: 53 MB. Current time: 4/23/21, 11:21:12 AM EDT
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 58 MB (+57997kb) [00:00:41]
+// [Engine Memory]: 1,022 MB (+920398kb) [00:00:41]
+// [GUI Memory]: 91 MB (+31399kb) [00:00:42]
+// [GUI Memory]: 96 MB (+1134kb) [00:00:45]
+// WARNING: HEventQueue.dispatchEvent() is taking  7704 ms.
+// Tcl Message: open_project D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2020.2/data/ip'. 
+// WARNING: HEventQueue.dispatchEvent() is taking  1656 ms.
+// Tcl Message: open_project: Time (s): cpu = 00:00:26 ; elapsed = 00:00:23 . Memory (MB): peak = 994.301 ; gain = 0.000 
+// Project name: FullSystem; location: D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem; part: xc7a100tcsg324-1
+// [GUI Memory]: 101 MB (+457kb) [00:00:51]
+dismissDialog("Open Project"); // bz
+// Tcl Command: 'rdi::info_commands {device::*}'
+// Tcl Command: 'rdi::info_commands {debug::*}'
+// Tcl Command: 'rdi::info_commands {*}'
+// Tcl Message: update_compile_order -fileset sources_1 
+// [GUI Memory]: 131 MB (+26173kb) [00:01:00]
+// Elapsed time: 10 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 4); // D
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1]", 5); // D
+// PAPropertyPanels.initPanels (DataSimulation.v) elapsed time: 0.2s
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, DataSimulation (DataSimulation.v)]", 7, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, DataSimulation (DataSimulation.v)]", 7, false, false, false, false, false, true); // D - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, testbench (testbench.v)]", 6, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, testbench (testbench.v)]", 6, true, false, false, false, false, true); // D - Double Click - Node
+// [GUI Memory]: 138 MB (+35kb) [00:01:13]
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 4, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 4, true, false, false, false, false, true); // D - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, DataSimulation (DataSimulation.v)]", 2, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, DataSimulation (DataSimulation.v)]", 2, false, false, false, false, false, true); // D - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, DataSimulation (DataSimulation.v)]", 2, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, DataSimulation (DataSimulation.v)]", 2, false, false, false, false, false, true); // D - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 3, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 3, true, false, false, false, false, true); // D - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, lp_constraints.xdc]", 5, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, lp_constraints.xdc]", 5, false, false, false, false, false, true); // D - Double Click
+// Elapsed time: 10 seconds
+selectCodeEditor("lp_constraints.xdc", 278, 402); // bP
+// Elapsed time: 76 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager]", 21, true); // u - Node
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+// Tcl Command: 'load_features labtools'
+// TclEventType: LOAD_FEATURE
+// bz (cr):  Open Hardware Manager : addNotify
+// TclEventType: HW_SESSION_OPEN
+// [GUI Memory]: 147 MB (+2080kb) [00:02:50]
+// WARNING: HEventQueue.dispatchEvent() is taking  2136 ms.
+// Tcl Message: open_hw_manager 
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+// 'Q' command handler elapsed time: 3 seconds
+dismissDialog("Open Hardware Manager"); // bz
+// WARNING: HTimer (StateMonitor Timer) is taking 954ms to process. Increasing delay to 4000 ms.
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking 300ms to process. Increasing delay to 2000 ms.
+// Elapsed time: 151 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "lp_constraints.xdc", 2); // m
+// Elapsed time: 291 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (cr): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a
+// bz (cr):  Resetting Runs : addNotify
+dismissDialog("Synthesis is Out-of-date"); // A
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// 'cA' command handler elapsed time: 3 seconds
+dismissDialog("Resetting Runs"); // bz
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// bz (cr):  Generate Bitstream : addNotify
+// TclEventType: RUN_LAUNCH
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 4 
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: [Fri Apr 23 11:31:05 2021] Launched synth_1... Run output will be captured here: D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.runs/synth_1/runme.log [Fri Apr 23 11:31:05 2021] Launched impl_1... Run output will be captured here: D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bz
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// Elapsed time: 388 seconds
+selectButton(PAResourceOtoP.ProgramDebugTab_OPEN_TARGET, "Open target"); // h
+selectMenuItem(PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET, "Auto Connect"); // ak
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET
+// bz (cr):  Auto Connect : addNotify
+// Tcl Message: connect_hw_server -allow_non_jtag 
+// Tcl Message: INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121 
+// Tcl Message: INFO: [Labtools 27-2222] Launching hw_server... 
+// Tcl Message: INFO: [Labtools 27-2221] Launch Output:  ****** Xilinx hw_server v2020.2   **** Build date : Nov 18 2020 at 10:01:48     ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.   
+// TclEventType: HW_SERVER_UPDATE
+// Tcl Message: INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042 
+// Tcl Message: INFO: [Labtools 27-3417] Launching cs_server... 
+// TclEventType: HW_SERVER_UPDATE
+// Tcl Message: INFO: [Labtools 27-2221] Launch Output:   ******** Xilinx cs_server v2020.2   ****** Build date   : Nov 03 2020-16:02:56     **** Build number : 2020.2.1604437376       ** Copyright 2017-2020 Xilinx, Inc. All Rights Reserved.    
+// Tcl Message: connect_hw_server: Time (s): cpu = 00:00:02 ; elapsed = 00:00:18 . Memory (MB): peak = 994.301 ; gain = 0.000 
+// TclEventType: HW_TARGET_CHANGE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_ADD
+// TclEventType: HW_TARGET_UPDATE
+// WARNING: HEventQueue.dispatchEvent() is taking  6848 ms.
+// Tcl Message: open_hw_target 
+// Tcl Message: INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292745191A 
+// HMemoryUtils.trashcanNow. Engine heap size: 2,335 MB. GUI used memory: 83 MB. Current time: 4/23/21, 11:38:01 AM EDT
+// Tcl Message: open_hw_target: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2366.891 ; gain = 1372.590 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.runs/impl_1/Top.bit} [get_hw_devices xc7a100t_0] 
+// Tcl Message: current_hw_device [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// [Engine Memory]: 2,336 MB (+1323623kb) [00:17:16]
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1435] Device xc7a100t (JTAG device index = 0) is not programmed (DONE status = 0). 
+// Elapsed time: 26 seconds
+dismissDialog("Auto Connect"); // bz
+selectButton(PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, "Program device"); // h
+// PAPropertyPanels.initPanels (xc7a100t_0) elapsed time: 0.2s
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bC (cr): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a
+// bz (cr):  Program Device : addNotify
+// TclEventType: HW_DEVICE_CHANGE
+dismissDialog("Program Device"); // bC
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a100t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {D:/SeniorProject/Oscilloscope_Senior_Project/Verilog/FullSystem/FullSystem.runs/impl_1/Top.bit} [get_hw_devices xc7a100t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'I' command handler elapsed time: 5 seconds
+dismissDialog("Program Device"); // bz
