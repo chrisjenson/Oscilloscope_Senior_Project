@@ -106,6 +106,7 @@ module RAM_ReadEngine(
         if (reset)
         begin
             RAMReadDone <= 0;
+            //readRemaining <= 0;
         end
         else
         begin
@@ -128,6 +129,14 @@ module RAM_ReadEngine(
             if (SPI_ReadCommandNegEdgePulse)
             begin
                 RAMReadDone <= 0;
+            end
+        end
+        if (reading)
+        begin
+            if (SlaveSel)
+            begin
+                readRemaining <= 0;
+                RAMReadDone <= 1;
             end
         end
     end

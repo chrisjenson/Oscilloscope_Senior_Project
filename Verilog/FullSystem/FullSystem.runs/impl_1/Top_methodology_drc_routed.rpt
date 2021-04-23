@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date         : Fri Apr 23 11:36:46 2021
+| Date         : Fri Apr 23 14:36:53 2021
 | Host         : MSI running 64-bit major release  (build 9200)
 | Command      : report_methodology -file Top_methodology_drc_routed.rpt -pb Top_methodology_drc_routed.pb -rpx Top_methodology_drc_routed.rpx
 | Design       : Top
@@ -23,11 +23,11 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 35
+             Violations found: 36
 +-----------+----------+-------------------------------+------------+
 | Rule      | Severity | Description                   | Violations |
 +-----------+----------+-------------------------------+------------+
-| TIMING-18 | Warning  | Missing input or output delay | 35         |
+| TIMING-18 | Warning  | Missing input or output delay | 36         |
 +-----------+----------+-------------------------------+------------+
 
 2. REPORT DETAILS
@@ -149,60 +149,65 @@ Related violations: <none>
 
 TIMING-18#24 Warning
 Missing input or output delay  
-An output delay is missing on DebugFIFOInXFC relative to clock(s) clk
+An output delay is missing on DEBUGTriggeredReg relative to clock(s) clk
 Related violations: <none>
 
 TIMING-18#25 Warning
 Missing input or output delay  
-An output delay is missing on DebugFIFOOutXFC relative to clock(s) clk
+An output delay is missing on DebugFIFOInXFC relative to clock(s) clk
 Related violations: <none>
 
 TIMING-18#26 Warning
 Missing input or output delay  
-An output delay is missing on DebugMISO relative to clock(s) clk
+An output delay is missing on DebugFIFOOutXFC relative to clock(s) clk
 Related violations: <none>
 
 TIMING-18#27 Warning
 Missing input or output delay  
-An output delay is missing on DebugOnBit relative to clock(s) clk
+An output delay is missing on DebugMISO relative to clock(s) clk
 Related violations: <none>
 
 TIMING-18#28 Warning
 Missing input or output delay  
-An output delay is missing on DebugOnBit2 relative to clock(s) clk
+An output delay is missing on DebugOnBit relative to clock(s) clk
 Related violations: <none>
 
 TIMING-18#29 Warning
 Missing input or output delay  
-An output delay is missing on DebugRAMReadRecieved relative to clock(s) clk
+An output delay is missing on DebugOnBit2 relative to clock(s) clk
 Related violations: <none>
 
 TIMING-18#30 Warning
 Missing input or output delay  
-An output delay is missing on DebugRamReading relative to clock(s) clk
+An output delay is missing on DebugRAMReadRecieved relative to clock(s) clk
 Related violations: <none>
 
 TIMING-18#31 Warning
 Missing input or output delay  
-An output delay is missing on DebugTriggerWriteDone relative to clock(s) clk
+An output delay is missing on DebugRamReading relative to clock(s) clk
 Related violations: <none>
 
 TIMING-18#32 Warning
 Missing input or output delay  
-An output delay is missing on DebugTriggered relative to clock(s) clk
+An output delay is missing on DebugTriggerWriteDone relative to clock(s) clk
 Related violations: <none>
 
 TIMING-18#33 Warning
 Missing input or output delay  
-An output delay is missing on MISO relative to clock(s) clk
+An output delay is missing on DebugTriggered relative to clock(s) clk
 Related violations: <none>
 
 TIMING-18#34 Warning
 Missing input or output delay  
-An output delay is missing on RAMReadDone relative to clock(s) clk
+An output delay is missing on MISO relative to clock(s) clk
 Related violations: <none>
 
 TIMING-18#35 Warning
+Missing input or output delay  
+An output delay is missing on RAMReadDone relative to clock(s) clk
+Related violations: <none>
+
+TIMING-18#36 Warning
 Missing input or output delay  
 An output delay is missing on reset relative to clock(s) clk
 Related violations: <none>

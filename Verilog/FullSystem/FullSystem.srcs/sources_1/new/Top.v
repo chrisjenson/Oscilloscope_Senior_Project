@@ -24,7 +24,7 @@ module Top(
     output SimDataHighLED,
     input [7:0] DebugWriteRegister, //Switches
     //output [7:0] DebugLEDRegister,
-    output [7:0] DEBUGADCInData,
+    output [9:0] DEBUGADCInData,
     output DebugRamReading, //Debug Are we reading from the RAM? Triggered and on bit and read addr < Read qty
     output DebugRAMFullFlag,
     output DebugRAMReadRecieved, //Debug was a ram read command recieved
@@ -37,6 +37,7 @@ module Top(
     output DebugNotSlaveSel,
     output DebugReset,
     output RAMReadDone,
+    output DEBUGTriggeredReg,
 
     output DebugMOSI,
     output DebugSCLK,
@@ -45,7 +46,7 @@ module Top(
     output reg reset //For debug
     );
     wire onBit;
-    wire [9:0] DEBUGADCInData;
+    //wire [9:0] DEBUGADCInData;
     assign DEBUGADCInData = ADC_InData;
 
     assign SimDataHighLED = SimDataHigh;
@@ -246,7 +247,8 @@ module Top(
         .Triggered(Triggered),
         .TriggerWriteDone(TriggerWriteDone),
         .onBit(onBit),
-        .RAMReadDone(RAMReadDone)
+        .RAMReadDone(RAMReadDone),
+        .DEBUGTriggeredReg(DEBUGTriggeredReg)
     );
     
     
