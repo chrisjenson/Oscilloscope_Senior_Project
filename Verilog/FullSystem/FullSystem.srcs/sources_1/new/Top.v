@@ -11,7 +11,7 @@ module Top(
     input clk,
     input rst_, //HIGH BY DEFAULT ON HARDWARE
     //Frontend
-    //input [9:0] ADC_InData,
+    input [9:0] ADC_InData,
     output ADC_SampleClock,
     //SPI
     input MOSI_Raw, //C17
@@ -23,7 +23,8 @@ module Top(
     input SimDataHigh,
     output SimDataHighLED,
     input [7:0] DebugWriteRegister, //Switches
-    output [7:0] DebugLEDRegister,
+    //output [7:0] DebugLEDRegister,
+    output [7:0] DEBUGADCInData,
     output DebugRamReading, //Debug Are we reading from the RAM? Triggered and on bit and read addr < Read qty
     output DebugRAMFullFlag,
     output DebugRAMReadRecieved, //Debug was a ram read command recieved
@@ -44,6 +45,8 @@ module Top(
     output reg reset //For debug
     );
     wire onBit;
+    wire [9:0] DEBUGADCInData;
+    assign DEBUGADCInData = ADC_InData;
 
     assign SimDataHighLED = SimDataHigh;
     assign DebugOnBit = onBit;
@@ -53,8 +56,8 @@ module Top(
     //To comment this out, uncomment input [9:0] ADC_InData and comment everything below
     //Also uncomment in constraints
     //Uncomment in TB
-    wire [9:0] ADC_InData;
-    
+    //wire [9:0] ADC_InData;
+    /*
     DataSimulation u_DataSimulation(
         .ADC_SampleClock(ADC_SampleClock),
         .clk(clk),
@@ -62,7 +65,7 @@ module Top(
         .reset(reset),
         .SimData(ADC_InData)
     );
-   
+   */
     //wire onBit;
     reg reset_p1;
     //reg reset;
