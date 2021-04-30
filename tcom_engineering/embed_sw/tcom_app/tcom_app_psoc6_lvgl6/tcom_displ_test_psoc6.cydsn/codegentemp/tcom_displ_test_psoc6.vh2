@@ -2,7 +2,7 @@
 --	Conversion of tcom_displ_test_psoc6.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Fri Apr 16 18:38:45 2021
+--	Fri Apr 30 13:06:09 2021
 --
 
 USE cypress.cypress.all;
@@ -703,7 +703,7 @@ PORT9_PIN0:cy_mxs40_gpio_v1_0
 		id=>"84d45b05-d23b-4fcd-98cb-414e3a04b3eb/b68e5b9d-7828-482d-a282-930f990e3b3e",
 		source_clock_id=>"",
 		divisor=>0,
-		period=>"62500000",
+		period=>"25000000",
 		is_direct=>'0',
 		is_digital=>'0')
 	PORT MAP(clock_out=>\SPIM:Net_847\,

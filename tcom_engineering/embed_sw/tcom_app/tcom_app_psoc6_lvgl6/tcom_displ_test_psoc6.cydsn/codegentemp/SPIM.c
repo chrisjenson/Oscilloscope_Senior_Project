@@ -47,7 +47,7 @@ cy_stc_scb_spi_config_t const SPIM_config =
     .subMode  = CY_SCB_SPI_MOTOROLA,
     .sclkMode = CY_SCB_SPI_CPHA1_CPOL1,
 
-    .oversample = 16UL,
+    .oversample = 4UL,
 
     .rxDataWidth              = 16UL,
     .txDataWidth              = 16UL,
