@@ -37,13 +37,13 @@ void update_globalStruct(void){
     lv_task_handler();      //get the newest info and update everything
     
     //construct write commmand for updating trigger in register 7
-    cm4.TxBuffer[0] = 0b0100011100000000 | cm4.TriggerCode;     //010 00111 00000000
+    cm4.TxBuffer[0] = 0b0100011100000000 | (0b0000000011111111 & cm4.TriggerCode);     //010 00111 00000000
     
     //construct write commmand for updating trigger slope in register 6
-    cm4.TxBuffer[1] = 0b0100011000000000 | cm4.TriggerSlope;     //010 00110 00000000
+    cm4.TxBuffer[1] = 0b0100011000000000 | (0b0000000011111111 & cm4.TriggerSlope);     //010 00110 00000000
     
     //construct write commmand for updating on-bit in register 9
-    cm4.TxBuffer[2] = 0b0100100100000000 | cm4.onBit;     //010 01001 00000000
+    cm4.TxBuffer[2] = 0b0100100100000000 | (0b0000000011111111 & cm4.onBit);     //010 01001 00000000
     
     //construct read commmand for checking a trigger event in register 15
     cm4.TxBuffer[3] = 0b0010111100000000;     //001 01111 00000000
@@ -126,7 +126,7 @@ int main( void )
     cm4.VertScale = 0b00000101;//default 5 for 200/40
     cm4.onBit = 0b00000001;
     cm4.windowPos = RAM_READ_SPLIT;
-   
+    
     uint16_t bufferIndex = 0; 
     int ss_state = 1; 
     

@@ -1,6 +1,6 @@
 # Component constraints for C:\Users\tmj32\Documents\TCNJ\Senior_Project\Oscilloscope_Senior_Project\tcom_engineering\embed_sw\tcom_app\tcom_app_psoc6_lvgl6\tcom_displ_test_psoc6.cydsn\TopDesign\TopDesign.cysch
 # Project: C:\Users\tmj32\Documents\TCNJ\Senior_Project\Oscilloscope_Senior_Project\tcom_engineering\embed_sw\tcom_app\tcom_app_psoc6_lvgl6\tcom_displ_test_psoc6.cydsn\tcom_displ_test_psoc6.cyprj
-# Date: Fri, 30 Apr 2021 17:06:07 GMT
+# Date: Fri, 30 Apr 2021 19:09:46 GMT
 # LCD_INTERFACE
 # False paths present for both 8 and 16 bits Graphic LCD Interface configurations 
 expr {(8) == 8 ?
