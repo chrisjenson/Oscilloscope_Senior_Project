@@ -23,8 +23,8 @@ module Top(
     input SimDataHigh,
     output SimDataHighLED,
     input [7:0] DebugWriteRegister, //Switches
-    //output [7:0] DebugLEDRegister,
-    output [9:0] DEBUGADCInData,
+    output [7:0] DebugLEDRegister,
+    //output [9:0] DEBUGADCInData,
     output DebugRamReading, //Debug Are we reading from the RAM? Triggered and on bit and read addr < Read qty
     output DebugRAMFullFlag,
     output DebugRAMReadRecieved, //Debug was a ram read command recieved
@@ -46,8 +46,9 @@ module Top(
     output reg reset //For debug
     );
     wire onBit;
-    //wire [9:0] DEBUGADCInData;
+    wire [9:0] DEBUGADCInData;
     assign DEBUGADCInData = ADC_InData;
+    
 
     assign SimDataHighLED = SimDataHigh;
     assign DebugOnBit = onBit;
